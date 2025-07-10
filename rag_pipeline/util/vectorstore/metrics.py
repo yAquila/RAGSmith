@@ -112,6 +112,27 @@ class RetrievalMetrics:
         return dcg / idcg if idcg > 0 else 0.0
     
     @staticmethod
+    def calculate_mrr(retrieved_docs: List[str], relevant_docs: List[str]) -> float:
+        """
+        Calculate Mean Reciprocal Rank (MRR)
+        
+        Args:
+            retrieved_docs: List of retrieved document IDs
+            relevant_docs: List of relevant document IDs
+            
+        Returns:
+            MRR score
+        """
+        if not relevant_docs:
+            return 0.0
+        
+        for i, doc in enumerate(retrieved_docs):
+            if doc in relevant_docs:
+                return 1.0 / (i + 1)
+        
+        return 0.0
+    
+    @staticmethod
     def calculate_all_metrics(retrieved_docs: List[str], relevant_docs: List[str], 
                             k_values: List[int] = [1, 3, 5, 10]) -> Dict[str, float]:
         """
@@ -133,5 +154,6 @@ class RetrievalMetrics:
             metrics[f'ndcg@{k}'] = RetrievalMetrics.calculate_ndcg_at_k(retrieved_docs, relevant_docs, k)
         
         metrics['map'] = RetrievalMetrics.calculate_ap(retrieved_docs, relevant_docs)
+        metrics['mrr'] = RetrievalMetrics.calculate_mrr(retrieved_docs, relevant_docs)
         
         return metrics 

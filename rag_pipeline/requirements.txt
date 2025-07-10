@@ -1,3 +1,8 @@
+# Core ML/AI dependencies
+torch>=2.0.0  # Core tensor operations with CUDA support
+sentence-transformers  # For embeddings and cross-encoders
+transformers  # For model loading and inference
+
 # FastAPI and web framework
 fastapi
 uvicorn[standard]
@@ -10,6 +15,8 @@ numpy
 # LLM and AI libraries
 langchain
 langchain-community
+langchain-core
+langchain-openai
 ollama
 
 # Evaluation metrics
@@ -20,7 +27,6 @@ sacrebleu
 
 # Vector database
 qdrant-client
-sentence-transformers
 
 # Code execution
 docker
@@ -39,6 +45,7 @@ alembic
 # Testing
 pytest
 pytest-asyncio
+pytest-cov
 
 # Other utilities
 jinja2
@@ -64,30 +71,14 @@ uvicorn[standard]
 # For file handling
 openpyxl
 
-# Additional dependencies that might be needed by modular_benchmark
-scikit-learn
-sentence-transformers
-openai
-anthropic
-requests
-nltk
-rouge-score
-sacrebleu
+# Additional dependencies for text processing
 python-Levenshtein
 
-# LangChain dependencies (required by modular_benchmark)
-langchain
-langchain-community
-langchain-core
-langchain-openai
+# Anthropic API (optional)
+anthropic
 
-# For testing (optional)
-pytest
-pytest-asyncio
-pytest-cov
-
-# For evaluation
-evaluate
+# OpenAI API (optional)  
+openai
 
 # For PDF report generation
 reportlab

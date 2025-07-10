@@ -65,13 +65,23 @@ services:
     restart: unless-stopped
     volumes:
       - ./rag_pipeline:/app
+      - rag_pipeline_reranker_cache:/root/.cache/rag_pipeline/reranker_models  # Persistent cache for reranker models
     depends_on:
       - qdrant2
       - ollama-gpu-3
     environment:
       - QDRANT_URL=http://qdrant2:6333
       - OLLAMA_API_URL=http://ollama-gpu-3:11434/api
-      
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['2']  # GPU for reranker acceleration - change if using different GPU
+              capabilities: [gpu]
+    # Uncomment to test GPU and cache setup:
+    # command: ["python", "test_docker_setup.py"]
+
   qdrant2:
     image: qdrant/qdrant
     container_name: qdrant2
@@ -104,5 +114,6 @@ volumes:
   ollama_storage_3:
   #postgresql_storage:
   rag_pipeline_qdrant_storage:
+  rag_pipeline_reranker_cache:
   #benchmark_uploads:  # Volume for temporary dataset uploads
   #benchmark_history:  # Volume for persistent benchmark run history
