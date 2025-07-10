@@ -1,0 +1,93 @@
+# FastAPI and web framework
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Data processing
+pandas
+numpy
+
+# LLM and AI libraries
+langchain
+langchain-community
+ollama
+
+# Evaluation metrics
+evaluate
+rouge-score
+nltk
+sacrebleu
+
+# Vector database
+qdrant-client
+sentence-transformers
+
+# Code execution
+docker
+
+# Utilities
+python-dotenv
+Pillow
+requests
+aiofiles
+
+# Database
+sqlalchemy
+psycopg2-binary
+alembic
+
+# Testing
+pytest
+pytest-asyncio
+
+# Other utilities
+jinja2
+pydantic
+markdown
+beautifulsoup4
+
+# Scientific computing for retrieval metrics
+scikit-learn
+
+# For async operations
+asyncio
+
+# For logging
+structlog
+
+# For validation
+email-validator
+
+# For CORS
+uvicorn[standard]
+
+# For file handling
+openpyxl
+
+# Additional dependencies that might be needed by modular_benchmark
+scikit-learn
+sentence-transformers
+openai
+anthropic
+requests
+nltk
+rouge-score
+sacrebleu
+python-Levenshtein
+
+# LangChain dependencies (required by modular_benchmark)
+langchain
+langchain-community
+langchain-core
+langchain-openai
+
+# For testing (optional)
+pytest
+pytest-asyncio
+pytest-cov
+
+# For evaluation
+evaluate
+
+# For PDF report generation
+reportlab

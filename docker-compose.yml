@@ -1,0 +1,108 @@
+networks:
+  rag_pipeline_network:
+
+x-ollama: &service-ollama
+  image: ollama/ollama:latest
+  container_name: ollama-gpu-3
+  networks: ['rag_pipeline_network']
+  restart: unless-stopped
+  ports:
+    - 11435:11434
+  volumes:
+    - ./ollama_storage_3:/root/.ollama
+
+services:
+  # postgres:
+  #   image: postgres:16-alpine
+  #   networks: ['rag_pipeline_network']
+  #   environment:
+  #     POSTGRES_USER: user
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_DB: ollama_chat
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - ./postgresql_storage/:/var/lib/postgresql/data
+  
+  # backend:
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   container_name: backend
+  #   networks: ['rag_pipeline_network']
+  #   volumes:
+  #     - ./backend:/app
+  #     - benchmark_uploads:/tmp/benchmark_uploads
+  #     - benchmark_history:/app/data/history
+  #   ports:
+  #     - "8000:8000"
+  #   environment:
+  #     - DATABASE_URL=postgresql://user:password@postgres:5432/ollama_chat
+  #     - OLLAMA_API_URL=http://ollama-gpu:11434/api
+  #     - QDRANT_URL=http://qdrant:6333
+
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile
+  #   container_name: frontend
+  #   networks: ['rag_pipeline_network']
+  #   volumes:
+  #     - ./frontend:/app
+  #     - /app/node_modules
+  #   ports:
+  #     - "5173:5173"
+  #   environment:
+  #     - ENVIRONMENT=development
+  #     - REACT_APP_API_URL=http://localhost:8000
+
+  rag_pipeline:
+    build:
+      context: ./rag_pipeline
+      dockerfile: Dockerfile
+    container_name: rag_pipeline
+    networks: ['rag_pipeline_network']
+    restart: unless-stopped
+    volumes:
+      - ./rag_pipeline:/app
+    depends_on:
+      - qdrant2
+      - ollama-gpu-3
+    environment:
+      - QDRANT_URL=http://qdrant2:6333
+      - OLLAMA_API_URL=http://ollama-gpu-3:11434/api
+      
+  qdrant2:
+    image: qdrant/qdrant
+    container_name: qdrant2
+    networks: ['rag_pipeline_network']
+    restart: unless-stopped
+    ports:
+      - 6335:6333
+    volumes:
+      - rag_pipeline_qdrant_storage:/qdrant/storage
+      
+  ollama-gpu-3:
+    <<: *service-ollama
+    container_name: ollama-gpu-3
+    networks: ['rag_pipeline_network']
+    ports:
+      - "11435:11434"
+    volumes:
+      - ./ollama_storage_3:/root/.ollama
+    logging:
+      driver: "none"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['3']
+              capabilities: [gpu]
+
+volumes:
+  ollama_storage_3:
+  #postgresql_storage:
+  rag_pipeline_qdrant_storage:
+  #benchmark_uploads:  # Volume for temporary dataset uploads
+  #benchmark_history:  # Volume for persistent benchmark run history
