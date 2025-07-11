@@ -80,5 +80,8 @@ anthropic
 # OpenAI API (optional)  
 openai
 
+# Google Generative AI (for Gemini API)
+google-generativeai
+
 # For PDF report generation
 reportlab

@@ -21,8 +21,6 @@ class RAGEvaluator:
         """Setup evaluation utilities"""
         try:
             # Setup LLM evaluator for generation
-            from util.api.ollama_client import OllamaUtil
-            self.llm_evaluator = OllamaUtil
             
             # Setup semantic similarity evaluator
             from util.comparison.semantic_comparison import SemanticComparison
@@ -198,7 +196,14 @@ Ground Truth: {ground_truth}
 
 Return format: {{"score": 0.85}}"""
             
-            response = self.llm_evaluator.get_ollama_response(self.config.eval_llm_model, eval_prompt)
+            # Patch: Use Gemini or Ollama based on model name
+            from util.api.gemini_client import GeminiUtil
+            from util.api.ollama_client import OllamaUtil
+            model = self.config.eval_llm_model
+            if model.lower().startswith("gemini"):
+                response = GeminiUtil.get_gemini_response(model, eval_prompt)
+            else:
+                response = OllamaUtil.get_ollama_response(model, eval_prompt)
             
             if isinstance(response, dict):
                 response_text = response.get('response', '')

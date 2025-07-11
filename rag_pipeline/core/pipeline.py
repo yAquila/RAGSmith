@@ -46,8 +46,9 @@ class RAGPipeline:
         # Initialize generation components for each LLM model
         for llm_model in self.config.llm_models:
             try:
+                component_type = "gemini" if llm_model.lower().startswith("gemini") else "ollama"
                 component = ComponentFactory.create_generation_component(
-                    llm_model, self.config
+                    llm_model, self.config, component_type
                 )
                 self.generation_components[llm_model] = component
                 logger.info(f"Initialized generation component for {llm_model}")

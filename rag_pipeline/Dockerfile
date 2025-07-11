@@ -20,4 +20,4 @@ RUN mkdir -p /root/.cache/rag_pipeline/reranker_models && \
 COPY . .
 
 # Default to super-quick test (30 seconds)
-CMD ["python", "main.py", "--super-quick"] 
+CMD ["python", "main.py", "--full"] 

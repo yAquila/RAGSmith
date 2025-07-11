@@ -214,7 +214,7 @@ RANKING:"""
             logger.info(f"LLM reranking {len(documents)} documents with {self.model_name}")
             
             # Get ranking from LLM
-            response = self.ollama_client.get_ollama_response(
+            response = self.ollama_client.(
                 model=self.model_name,
                 prompt=prompt
             )
