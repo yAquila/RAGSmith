@@ -66,6 +66,60 @@ results = await pipeline.run_evaluation()
 pipeline.print_results_summary(results)
 ```
 
+### Using Gemini Models
+
+The pipeline now supports Google's Gemini models as an alternative to Ollama:
+
+```python
+import asyncio
+from core.components import ComponentFactory
+from core.config import RAGConfig
+
+# Set your Gemini API key
+import os
+os.environ["GEMINI_API_KEY"] = "your-api-key-here"
+
+# Create Gemini generation component
+config = RAGConfig()
+gemini_gen = ComponentFactory.create_generation_component(
+    "gemini-1.5-flash",  # Model name
+    config,
+    "gemini"  # Component type
+)
+
+# Generate response
+result = await gemini_gen.generate(
+    query="What is machine learning?",
+    context="Machine learning is a subset of AI...",
+    embedding_model="test-embedding"
+)
+
+print(result.generated_answer)
+```
+
+**Available Gemini Models:**
+- `gemini-1.5-flash`: Fast, good for most tasks
+- `gemini-1.5-pro`: More capable, slower
+- `gemini-2.0-flash-exp`: Experimental, very fast
+- `gemini-2.0-pro`: Most capable, slowest
+
+**Model Name Mapping:**
+- Your existing `gemini3:4b` maps to `gemini-1.5-flash`
+- Your existing `gemini3:2b` maps to `gemini-1.5-flash`
+
+**Free Tier Limits:**
+- 100 requests per day with Gemini API key
+- 1,000 requests per day with Google account authentication
+
+**Testing Gemini Integration:**
+```bash
+# Test the integration
+python test_gemini_integration.py
+
+# Run example usage
+python example_gemini_usage.py
+```
+
 ### Command Line Usage
 
 ```bash
@@ -304,6 +358,26 @@ class CustomGeneration(GenerationComponent):
     async def generate(self, query: str, context: str, embedding_model: str) -> GenerationResult:
         # Your custom generation logic
         pass
+```
+
+### Using Different LLM Providers
+
+The pipeline supports multiple LLM providers through the component factory:
+
+```python
+# Ollama (local models)
+ollama_gen = ComponentFactory.create_generation_component(
+    "llama3.2:1b", config, "ollama"
+)
+
+# Gemini (Google cloud models)
+gemini_gen = ComponentFactory.create_generation_component(
+    "gemini-1.5-flash", config, "gemini"
+)
+
+# Both use the same interface
+result = await ollama_gen.generate(query, context, embedding_model)
+result = await gemini_gen.generate(query, context, embedding_model)
 ```
 
 ### RAG Techniques

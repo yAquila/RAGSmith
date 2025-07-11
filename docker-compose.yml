@@ -72,6 +72,7 @@ services:
     environment:
       - QDRANT_URL=http://qdrant2:6333
       - OLLAMA_API_URL=http://ollama-gpu-3:11434/api
+      - GEMINI_API_KEY=AIzaSyDK4g-vjiopNs4hP1pVEOgrn4iZWgoTkS0
     deploy:
       resources:
         reservations:

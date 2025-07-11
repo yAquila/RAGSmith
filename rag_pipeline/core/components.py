@@ -319,6 +319,81 @@ Answer:"""
                 error=str(e)
             )
 
+
+class GeminiGeneration(GenerationComponent):
+    """Gemini-based text generation"""
+    
+    def __init__(self, llm_model: str, config: RAGConfig):
+        super().__init__(llm_model, config)
+        self._setup_client()
+    
+    def _setup_client(self):
+        """Setup Gemini client"""
+        try:
+            from util.api.gemini_client import GeminiUtil
+            self.client = GeminiUtil
+        except Exception as e:
+            logger.error(f"Failed to setup Gemini client: {e}")
+            raise
+    
+    def _create_rag_prompt(self, query: str, context: str) -> str:
+        """Create a RAG prompt from query and context"""
+        if not context.strip():
+            return f"Question: {query}\n\nAnswer:"
+        
+        return f"""Context Information:
+{context}
+
+Based on the context information provided above, please answer the following question. If the context doesn't contain enough information to answer the question, please state that clearly.
+
+Question: {query}
+
+Answer:"""
+    
+    async def generate(self, query: str, context: str, embedding_model: str) -> GenerationResult:
+        """Generate answer using LLM with retrieved context"""
+        start_time = time.time()
+        
+        try:
+            prompt = self._create_rag_prompt(query, context)
+            
+            # Call Gemini API
+            response = self.client.get_gemini_response(self.llm_model, prompt)
+            
+            # Extract response text and metrics
+            if isinstance(response, dict):
+                generated_text = response.get('response', '')
+                tokens_per_second = response.get('tps')
+                token_count = response.get('eval_count')
+            else:
+                generated_text = str(response)
+                tokens_per_second = None
+                token_count = None
+            
+            return GenerationResult(
+                query=query,
+                context=context,
+                generated_answer=generated_text,
+                llm_model=self.llm_model,
+                embedding_model=embedding_model,
+                generation_time=time.time() - start_time,
+                token_count=token_count,
+                tokens_per_second=tokens_per_second
+            )
+            
+        except Exception as e:
+            logger.error(f"Generation failed for {self.llm_model}: {e}")
+            return GenerationResult(
+                query=query,
+                context=context,
+                generated_answer="",
+                llm_model=self.llm_model,
+                embedding_model=embedding_model,
+                generation_time=time.time() - start_time,
+                error=str(e)
+            )
+
+
 # Component Factory for easy extension
 class ComponentFactory:
     """Factory for creating RAG components"""
@@ -338,5 +413,7 @@ class ComponentFactory:
         """Create a generation component"""
         if component_type == "ollama":
             return OllamaGeneration(llm_model, config)
+        elif component_type == "gemini":
+            return GeminiGeneration(llm_model, config)
         else:
             raise ValueError(f"Unknown generation component type: {component_type}") 
