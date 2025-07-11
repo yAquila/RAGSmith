@@ -1,0 +1,365 @@
+"""
+Configuration classes for the Advanced RAG Modular Framework
+
+This module defines configuration classes for each category in the RAG pipeline.
+Each category has its own configuration class to manage technique-specific settings.
+"""
+
+from pydantic import BaseModel, Field
+from typing import Optional, Dict, Any, List, Union
+from dataclasses import dataclass
+
+
+# ==================== CATEGORY CONFIGURATIONS ====================
+
+class PreEmbeddingConfig(BaseModel):
+    """Configuration for pre-embedding techniques"""
+    enabled: bool = True
+    technique: str = "none"  # Options: "none", "contextual_chunk_headers", "different_chunking", "parent_document", "hype"
+    
+    # Common settings
+    chunk_size: int = 512
+    chunk_overlap: int = 50
+    
+    # Contextual Chunk Headers settings
+    add_headers: bool = False
+    header_template: str = "Document Section: {title}\nContext: {context}\n\n"
+    
+    # Different Chunking Strategies settings
+    chunking_strategy: str = "fixed"  # Options: "fixed", "semantic", "sentence", "paragraph"
+    min_chunk_size: int = 100
+    max_chunk_size: int = 1000
+    
+    # Parent Document Retriever settings
+    parent_chunk_size: int = 2048
+    child_chunk_size: int = 512
+    
+    # HyPE (Hypothetical Passage Embeddings) settings
+    use_hypothetical_passages: bool = False
+    generate_synthetic_queries: bool = False
+    synthetic_queries_per_doc: int = 3
+
+
+class QueryExpansionConfig(BaseModel):
+    """Configuration for query expansion/refinement techniques"""
+    enabled: bool = True
+    techniques: List[str] = ["none"]  # Can use multiple: ["none", "multi_query", "rag_fusion", "hyde", "decomposition"]
+    
+    # Simple Multi-Query settings
+    num_expanded_queries: int = 3
+    expansion_template: str = "Generate {num} different ways to ask: {query}"
+    
+    # RAG Fusion settings
+    fusion_weights: List[float] = [0.5, 0.3, 0.2]
+    fusion_method: str = "weighted"  # Options: "weighted", "rrf", "max"
+    
+    # HyDE (Hypothetical Document Embeddings) settings
+    generate_hypothetical_docs: bool = False
+    num_hypothetical_docs: int = 1
+    hyde_template: str = "Write a passage that answers: {query}"
+    
+    # Decomposition settings
+    decompose_complex_queries: bool = False
+    max_subqueries: int = 3
+    decomposition_template: str = "Break down this query into simpler sub-questions: {query}"
+    
+    # Semantic Routing settings
+    use_semantic_routing: bool = False
+    routing_threshold: float = 0.8
+    route_templates: Dict[str, str] = {}
+
+
+class RetrievalConfig(BaseModel):
+    """Configuration for retrieval techniques"""
+    enabled: bool = True
+    techniques: List[str] = ["simple_vector_rag"]  # Can combine: ["simple_vector_rag", "keyword_search", "hybrid_cc", "hybrid_rrf"]
+    
+    # Common settings
+    top_k: int = 10
+    score_threshold: float = 0.5
+    
+    # Simple VectorRAG settings
+    embedding_model: str = "sentence-transformers/all-mpnet-base-v2"
+    similarity_metric: str = "cosine"  # Options: "cosine", "euclidean", "dot_product"
+    
+    # Keyword Search (BM25) settings
+    use_bm25: bool = False
+    bm25_k1: float = 1.2
+    bm25_b: float = 0.75
+    
+    # Hybrid Cross-encoder settings
+    use_hybrid_cc: bool = False
+    hybrid_alpha: float = 0.5  # Weight for semantic vs keyword search
+    
+    # Hybrid RRF (Reciprocal Rank Fusion) settings
+    use_hybrid_rrf: bool = False
+    rrf_k: int = 60
+    rrf_weights: Dict[str, float] = {"semantic": 0.7, "keyword": 0.3}
+
+
+class PassageAugmentConfig(BaseModel):
+    """Configuration for passage augmentation techniques"""
+    enabled: bool = True
+    technique: str = "none"  # Options: "none", "prev_next_augmenter", "relevant_segment_extraction"
+    
+    # Prev-Next Augmenter settings
+    include_previous: bool = False
+    include_next: bool = False
+    context_window: int = 1  # Number of chunks before/after
+    
+    # Relevant Segment Extraction settings
+    extract_segments: bool = False
+    segment_max_length: int = 200
+    relevance_threshold: float = 0.6
+
+
+class PassageRerankConfig(BaseModel):
+    """Configuration for passage reranking techniques"""
+    enabled: bool = True
+    techniques: List[str] = ["none"]  # Can combine: ["none", "cross_encoder", "llm_rerank", "parallel_rerank"]
+    
+    # Cross-Encoder settings
+    cross_encoder_model: str = "BAAI/bge-reranker-v2-m3"
+    cross_encoder_top_k: int = 5
+    cross_encoder_batch_size: int = 32
+    cross_encoder_force_cpu: bool = False
+    cross_encoder_cache_dir: Optional[str] = None
+    
+    # LLM Rerank settings
+    llm_rerank_model: str = "gpt-3.5-turbo"
+    llm_rerank_top_k: int = 5
+    llm_rerank_template: str = "Rank these passages by relevance to the query: {query}\n\nPassages:\n{passages}"
+    llm_rerank_max_tokens: int = 2048
+    llm_rerank_temperature: float = 0.1
+    
+    # Parallel Rerank settings (combines CE + LLM)
+    parallel_ensemble_method: str = "weighted"  # Options: "weighted", "average", "max"
+    ce_weight: float = 0.7
+    llm_weight: float = 0.3
+    
+    # Other/Special Rerank settings
+    use_special_rerank: bool = False
+    special_rerank_method: str = "custom"
+
+
+class PassageFilterConfig(BaseModel):
+    """Configuration for passage filtering techniques"""
+    enabled: bool = True
+    techniques: List[str] = ["simple_threshold"]  # Can combine: ["simple_threshold", "similarity_threshold", "tree_summarize", "llm_summarize", "window_replacement"]
+    
+    # Simple threshold (top_k) settings - CURRENTLY IMPLEMENTED
+    top_k: int = 5
+    
+    # Similarity threshold settings
+    similarity_threshold: float = 0.7
+    min_passages: int = 1
+    max_passages: int = 10
+    
+    # Tree Summarize settings
+    use_tree_summarize: bool = False
+    tree_chunk_size: int = 1000
+    summarize_template: str = "Summarize the key information from these passages: {passages}"
+    
+    # LLM Summarize/Refining settings
+    use_llm_filter: bool = False
+    llm_filter_model: str = "gpt-3.5-turbo"
+    filter_prompt: str = "Filter these passages to keep only those relevant to: {query}\n\nPassages:\n{passages}"
+    
+    # Window Replacement settings
+    use_window_replacement: bool = False
+    window_size: int = 3
+    replacement_strategy: str = "best"  # Options: "best", "random", "diverse"
+
+
+class PassageCompressConfig(BaseModel):
+    """Configuration for passage compression techniques"""
+    enabled: bool = True
+    technique: str = "none"  # Options: "none", "tree_summarize", "long_context", "multi_llm_ensemble", "multi_llm_fusion", "window_replacement", "step_back"
+    
+    # Tree Summarize settings
+    tree_summarize_chunk_size: int = 2000
+    tree_summarize_overlap: int = 200
+    tree_levels: int = 3
+    
+    # Long Context Readers settings
+    use_long_context: bool = False
+    context_length_limit: int = 8192
+    compression_ratio: float = 0.5
+    
+    # Multi-LLM Model Ensemble settings
+    ensemble_models: List[str] = []
+    ensemble_method: str = "voting"  # Options: "voting", "weighted", "consensus"
+    
+    # Multi-LLM Model Fusion settings
+    fusion_models: List[str] = []
+    fusion_weights: List[float] = []
+    
+    # Window Replacement settings
+    window_size: int = 512
+    stride: int = 256
+    
+    # Step-back Prompting settings
+    use_step_back: bool = False
+    step_back_template: str = "What are the key concepts related to: {query}"
+
+
+class PromptMakerConfig(BaseModel):
+    """Configuration for prompt construction techniques"""
+    enabled: bool = True
+    technique: str = "simple_listing"  # Options: "simple_listing", "multi_llm_ensemble", "multi_llm_fusion"
+    
+    # Simple Listing settings - CURRENTLY IMPLEMENTED
+    template: str = "Context:\n{context}\n\nQuestion: {query}\n\nAnswer:"
+    separator: str = "\n\n"
+    include_doc_numbers: bool = True
+    include_scores: bool = False
+    
+    # Multi-LLM Model Ensemble settings
+    ensemble_models: List[str] = []
+    ensemble_prompts: List[str] = []
+    ensemble_weights: List[float] = []
+    
+    # Multi-LLM Model Fusion settings
+    fusion_models: List[str] = []
+    fusion_strategy: str = "concatenate"  # Options: "concatenate", "interleave", "best"
+
+
+class GeneratorConfig(BaseModel):
+    """Configuration for generation techniques"""
+    enabled: bool = True
+    model: str = "gpt-3.5-turbo"  # CURRENTLY IMPLEMENTED: supports ollama and gemini models
+    
+    # Generation settings
+    max_tokens: int = 500
+    temperature: float = 0.1
+    top_p: float = 1.0
+    top_k: Optional[int] = None
+    frequency_penalty: float = 0.0
+    presence_penalty: float = 0.0
+    
+    # Provider-specific settings
+    provider: str = "ollama"  # Options: "ollama", "gemini", "openai", "anthropic"
+    base_url: Optional[str] = None
+    api_key: Optional[str] = None
+    
+    # Advanced settings
+    use_system_prompt: bool = True
+    system_prompt: str = "You are a helpful assistant that answers questions based on the provided context."
+    stream: bool = False
+    timeout: int = 30
+
+
+class PostGenerationConfig(BaseModel):
+    """Configuration for post-generation techniques"""
+    enabled: bool = True
+    technique: str = "none"  # Options: "none", "reflection_revising"
+    
+    # Reflection and Revising settings
+    use_reflection: bool = False
+    reflection_model: str = "gpt-3.5-turbo"
+    reflection_prompt: str = "Review and improve this answer: {answer}\n\nOriginal question: {query}\nContext: {context}"
+    max_revisions: int = 2
+    
+    # Quality checks
+    check_hallucination: bool = False
+    check_relevance: bool = False
+    relevance_threshold: float = 0.8
+    
+    # Answer formatting
+    format_answer: bool = False
+    output_format: str = "text"  # Options: "text", "markdown", "json"
+
+
+# ==================== UNIFIED RAG CONFIGURATION ====================
+
+class RAGConfig(BaseModel):
+    """Unified configuration for the entire RAG pipeline"""
+    
+    # Category configurations
+    pre_embedding: PreEmbeddingConfig = Field(default_factory=PreEmbeddingConfig)
+    query_expansion: QueryExpansionConfig = Field(default_factory=QueryExpansionConfig)
+    retrieval: RetrievalConfig = Field(default_factory=RetrievalConfig)
+    passage_augment: PassageAugmentConfig = Field(default_factory=PassageAugmentConfig)
+    passage_rerank: PassageRerankConfig = Field(default_factory=PassageRerankConfig)
+    passage_filter: PassageFilterConfig = Field(default_factory=PassageFilterConfig)
+    passage_compress: PassageCompressConfig = Field(default_factory=PassageCompressConfig)
+    prompt_maker: PromptMakerConfig = Field(default_factory=PromptMakerConfig)
+    generator: GeneratorConfig = Field(default_factory=GeneratorConfig)
+    post_generation: PostGenerationConfig = Field(default_factory=PostGenerationConfig)
+    
+    # Global settings
+    pipeline_name: str = "advanced_rag_pipeline"
+    enable_logging: bool = True
+    log_level: str = "INFO"
+    enable_timing: bool = True
+    
+    # Evaluation settings
+    enable_evaluation: bool = True
+    evaluation_metrics: List[str] = ["recall", "precision", "f1", "semantic_similarity", "llm_score"]
+    
+    # Dataset settings
+    dataset_path: Optional[str] = None
+    max_test_cases: Optional[int] = None
+    eval_batch_size: int = 10
+    
+    # Performance settings
+    parallel_execution: bool = True
+    max_workers: int = 4
+    cache_enabled: bool = True
+    cache_dir: Optional[str] = None
+    
+    def get_enabled_techniques(self) -> Dict[str, List[str]]:
+        """Get all enabled techniques across categories"""
+        enabled = {}
+        
+        if self.pre_embedding.enabled:
+            enabled["pre_embedding"] = [self.pre_embedding.technique]
+        
+        if self.query_expansion.enabled:
+            enabled["query_expansion"] = self.query_expansion.techniques
+        
+        if self.retrieval.enabled:
+            enabled["retrieval"] = self.retrieval.techniques
+        
+        if self.passage_augment.enabled:
+            enabled["passage_augment"] = [self.passage_augment.technique]
+        
+        if self.passage_rerank.enabled:
+            enabled["passage_rerank"] = self.passage_rerank.techniques
+        
+        if self.passage_filter.enabled:
+            enabled["passage_filter"] = self.passage_filter.techniques
+        
+        if self.passage_compress.enabled:
+            enabled["passage_compress"] = [self.passage_compress.technique]
+        
+        if self.prompt_maker.enabled:
+            enabled["prompt_maker"] = [self.prompt_maker.technique]
+        
+        if self.generator.enabled:
+            enabled["generator"] = [self.generator.model]
+        
+        if self.post_generation.enabled:
+            enabled["post_generation"] = [self.post_generation.technique]
+        
+        return enabled
+    
+    def create_technique_combinations(self) -> List[Dict[str, str]]:
+        """Create all possible combinations of enabled techniques"""
+        from itertools import product
+        
+        enabled = self.get_enabled_techniques()
+        
+        # Generate combinations (for now, just return single combination per category)
+        combinations = []
+        
+        # For categories that allow multiple techniques, we'll create separate combinations
+        # For now, just use the first technique in each category
+        combination = {}
+        for category, techniques in enabled.items():
+            if techniques:
+                combination[category] = techniques[0]
+        
+        combinations.append(combination)
+        
+        return combinations 
