@@ -5,7 +5,7 @@ from typing import List, Dict, Any, Optional
 
 from .models import (
     RAGTestCase, RetrievalResult, GenerationResult, 
-    RAGMetrics, RAGEvaluationResult, RAGConfig
+    RAGMetrics, RAGEvaluationResult
 )
 
 logger = logging.getLogger(__name__)
