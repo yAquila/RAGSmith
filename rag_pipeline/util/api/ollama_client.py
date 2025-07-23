@@ -49,13 +49,7 @@ class OllamaUtil:
     def get_ollama_response(model, prompt):
         """
         Get response from Ollama model.
-        
-        Args:
-            model: Name of the model to use
-            prompt: Input prompt for the model
-            
-        Returns:
-            Model response text or None if error occurred
+        Returns a dict with keys: response, prompt_tokens, eval_count, tps
         """
         # Use environment variable or fallback to default
         ollama_api_url = os.getenv("OLLAMA_API_URL", "http://ollama-gpu-3:11435/api")
@@ -78,6 +72,7 @@ class OllamaUtil:
             
             # Calculate TPS with error handling
             tps = None
+            prompt_tokens = data.get("prompt_eval_count")
             eval_count = data.get("eval_count")
             eval_duration = data.get("eval_duration")
             
@@ -92,8 +87,6 @@ class OllamaUtil:
                 logger.warning(f"Cannot calculate TPS - eval_count: {eval_count}, eval_duration: {eval_duration}")
             
             response_text = data.get("response")
-            result = {"response": response_text, "tps": tps}
-            # INSERT_YOUR_CODE
             # Remove <think>...</think> sections from the response, if present
             import re
             if response_text:
@@ -101,8 +94,17 @@ class OllamaUtil:
                 response_text = re.sub(r"<think>.*?</think>", "", response_text, flags=re.DOTALL)
                 # Optionally, strip leading/trailing whitespace
                 response_text = response_text.strip()
-                result["response"] = response_text
-            return result
+            # Fallback: estimate tokens if not present
+            if prompt_tokens is None:
+                prompt_tokens = len(prompt.split())
+            if eval_count is None and response_text:
+                eval_count = len(response_text.split())
+            return {
+                "response": response_text,
+                "prompt_tokens": prompt_tokens,
+                "eval_count": eval_count,
+                "tps": tps
+            }
         except requests.exceptions.RequestException as e:
             logger.error(f"Error connecting to Ollama server: {e}")
             logger.error("Please ensure Ollama is running and the model is pulled.")

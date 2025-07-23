@@ -32,49 +32,6 @@ class ModelCombination:
         name_parts.append(self.llm_model)
         return " + ".join(name_parts)
 
-@dataclass
-class RAGConfig:
-    """Configuration for RAG pipeline evaluation"""
-    # Models to test
-    embedding_models: List[str]
-    llm_models: List[str]
-    eval_llm_model: str  # Model used for evaluation
-    
-    # Retrieval settings
-    retrieval_k: int = 10
-    retrieval_threshold: float = 0.5
-    
-    # Cross-encoder reranking settings
-    rerank_model: Optional[str] = None  # e.g., 'BAAI/bge-reranker-v2-m3', if None skip cross-encoder reranking
-    rerank_top_k: int = 5  # Number of top documents to keep after cross-encoder reranking
-    test_with_and_without_reranking: bool = True  # If True and rerank_model is set, test both with and without cross-encoder reranking
-    rerank_cache_dir: Optional[str] = None  # Directory to cache reranker models (if None, uses default ~/.cache/rag_pipeline/reranker_models)
-    rerank_force_cpu: bool = False  # If True, force reranker to use CPU instead of GPU
-    
-    # LLM reranking settings
-    llm_rerank_model: Optional[str] = None  # e.g., 'llama3.2:1b', if None skip LLM reranking
-    llm_rerank_top_k: int = 5  # Number of top documents to keep after LLM reranking
-    test_with_and_without_llm_reranking: bool = True  # If True and llm_rerank_model is set, test both with and without LLM reranking
-    llm_rerank_max_tokens: int = 2048  # Max tokens for LLM reranking
-    llm_rerank_temperature: float = 0.1  # Temperature for LLM reranking
-    
-    # Generation settings
-    max_tokens: int = 500
-    temperature: float = 0.1
-    
-    # Evaluation settings
-    eval_batch_size: int = 10
-    
-    # Dataset settings
-    dataset_path: Optional[str] = None
-    max_test_cases: Optional[int] = None
-
-    # Parallel reranking settings
-    enable_parallel_reranking: bool = True  # If True, create parallel combination when both rerankers are enabled
-    rerank_ensemble_method: str = "weighted"  # "weighted", "average", "max"
-    ce_rerank_weight: float = 0.7  # Weight for cross-encoder scores in ensemble
-    llm_rerank_weight: float = 0.3  # Weight for LLM scores in ensemble
-
 class RAGTestCase(BaseModel):
     """Individual test case for RAG evaluation"""
     id: str
@@ -86,19 +43,23 @@ class RAGTestCase(BaseModel):
 class RetrievalResult(BaseModel):
     """Result from retrieval component"""
     query: str
-    retrieved_docs: List[Dict[str, Any]]  # [{"doc_id": str, "content": str, "score": float, "rerank_score": float?, "llm_rerank_score": float?}]
+    retrieved_docs: List[Dict[str, Any]]  # [{"doc_id": str, "content": str, "score": float, ...}]
     embedding_model: str
-    retrieval_time: float
-    rerank_model: Optional[str] = None  # Cross-encoder model used for reranking (if any)
-    rerank_time: float = 0.0  # Time spent on cross-encoder reranking
-    reranked: bool = False  # Whether documents were reranked with cross-encoder
-    llm_rerank_model: Optional[str] = None  # LLM model used for reranking (if any)
-    llm_rerank_time: float = 0.0  # Time spent on LLM reranking
-    llm_reranked: bool = False  # Whether documents were reranked with LLM
-    # NEW: Parallel reranking fields
-    parallel_reranked: bool = False  # Whether parallel reranking was applied
-    ensemble_time: float = 0.0  # Time spent on ensemble combination
-    ensemble_method: Optional[str] = None  # Method used for ensemble
+    # Canonical per-component timing fields
+    pre_embedding_time: float = 0.0
+    query_expansion_time: float = 0.0
+    retrieval_time: float = 0.0
+    passage_augment_time: float = 0.0
+    passage_rerank_time: float = 0.0
+    passage_filter_time: float = 0.0
+    passage_compress_time: float = 0.0
+    prompt_maker_time: float = 0.0
+    generation_time: float = 0.0
+    post_generation_time: float = 0.0
+    # Token counts
+    embedding_token_counts: Dict[str, float] = {}
+    llm_input_token_counts: Dict[str, float] = {}
+    llm_output_token_counts: Dict[str, float] = {}
     error: Optional[str] = None
 
 class GenerationResult(BaseModel):
@@ -108,9 +69,21 @@ class GenerationResult(BaseModel):
     generated_answer: str
     llm_model: str
     embedding_model: str  # Which embedding model provided the context
-    generation_time: float
-    token_count: Optional[int] = None
-    tokens_per_second: Optional[float] = None
+    # Canonical per-component timing fields
+    pre_embedding_time: float = 0.0
+    query_expansion_time: float = 0.0
+    retrieval_time: float = 0.0
+    passage_augment_time: float = 0.0
+    passage_rerank_time: float = 0.0
+    passage_filter_time: float = 0.0
+    passage_compress_time: float = 0.0
+    prompt_maker_time: float = 0.0
+    generation_time: float = 0.0
+    post_generation_time: float = 0.0
+    # Token counts
+    embedding_token_counts: Dict[str, float] = {}
+    llm_input_token_counts: Dict[str, float] = {}
+    llm_output_token_counts: Dict[str, float] = {}
     error: Optional[str] = None
 
 class RAGMetrics(BaseModel):
@@ -138,42 +111,43 @@ class RAGEvaluationResult(BaseModel):
     embedding_model: str
     llm_model: str
     test_case_id: str
-    
-    # Components results
+    combo_name: Optional[str] = None
     retrieval_result: RetrievalResult
     generation_result: GenerationResult
-    
-    # Evaluation metrics
     metrics: RAGMetrics
-    
     # Timing breakdown
     retrieval_eval_time: float  # Time spent evaluating retrieval
     generation_eval_time: float  # Time spent evaluating generation
     total_eval_time: float  # Total evaluation time
+    # Canonical per-component timing fields
+    pre_embedding_time: float = 0.0
+    query_expansion_time: float = 0.0
+    retrieval_time: float = 0.0
+    passage_augment_time: float = 0.0
+    passage_rerank_time: float = 0.0
+    passage_filter_time: float = 0.0
+    passage_compress_time: float = 0.0
+    prompt_maker_time: float = 0.0
+    generation_time: float = 0.0
+    post_generation_time: float = 0.0
+    # Token counts
+    embedding_token_counts: Dict[str, float] = {}
+    llm_input_token_counts: Dict[str, float] = {}
+    llm_output_token_counts: Dict[str, float] = {}
     error: Optional[str] = None
 
 class RAGBenchmarkResult(BaseModel):
     """Aggregated results for entire benchmark"""
     config: Dict[str, Any]  # Configuration used
-    
-    # Individual results
     individual_results: List[RAGEvaluationResult]
-    
-    # Aggregated metrics by model combination
     aggregated_metrics: Dict[str, Dict[str, Any]]  # {f"{emb_model}_{llm_model}": metrics}
-    
-    # Summary statistics
     total_test_cases: int
     successful_cases: int
     failed_cases: int
     total_runtime: float
-    
-    # Timing breakdown
-    total_retrieval_prediction_time: float
-    total_generation_prediction_time: float
+    # Timing breakdown (only evaluation times remain)
     total_retrieval_evaluation_time: float
     total_generation_evaluation_time: float
-    
     # Best performing combinations
     best_retrieval_combo: Optional[str] = None
     best_generation_combo: Optional[str] = None

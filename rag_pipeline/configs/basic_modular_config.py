@@ -11,16 +11,16 @@ This configuration uses only the currently implemented techniques (green backgro
 This is equivalent to your current system but using the new modular framework.
 """
 
-from rag_pipeline.core.modular_configs import (
-    RAGConfig, PreEmbeddingConfig, QueryExpansionConfig, RetrievalConfig,
+from core.modular_configs import (
+    ModularRAGConfig, PreEmbeddingConfig, QueryExpansionConfig, RetrievalConfig,
     PassageAugmentConfig, PassageRerankConfig, PassageFilterConfig,
     PassageCompressConfig, PromptMakerConfig, GeneratorConfig, PostGenerationConfig
 )
 
-def get_basic_config() -> RAGConfig:
+def get_basic_config() -> ModularRAGConfig:
     """Get basic configuration using only currently implemented techniques"""
     
-    return RAGConfig(
+    return ModularRAGConfig(
         # Pipeline settings
         pipeline_name="basic_modular_rag",
         enable_logging=True,
@@ -89,8 +89,8 @@ def get_basic_config() -> RAGConfig:
         # Generator: ✅ LLM model (currently implemented)
         generator=GeneratorConfig(
             enabled=True,
-            model="gemini-2.0-flash",
-            provider="gemini",
+            model="gemma3:4b",
+            provider="ollama",
             max_tokens=500,
             temperature=0.1
         ),
@@ -113,7 +113,7 @@ def get_basic_config() -> RAGConfig:
     )
 
 
-def get_gemma_config() -> RAGConfig:
+def get_gemma_config() -> ModularRAGConfig:
     """Basic config using Gemma instead of Gemini"""
     
     config = get_basic_config()
@@ -125,7 +125,7 @@ def get_gemma_config() -> RAGConfig:
     return config
 
 
-def get_no_rerank_config() -> RAGConfig:
+def get_no_rerank_config() -> ModularRAGConfig:
     """Basic config without reranking for faster execution"""
     
     config = get_basic_config()
@@ -143,7 +143,7 @@ def get_no_rerank_config() -> RAGConfig:
 if __name__ == "__main__":
     # Example usage
     import asyncio
-    from rag_pipeline.core.modular_pipeline import ModularRAGPipeline
+    from core.modular_pipeline import ModularRAGPipeline
     
     async def test_basic_config():
         """Test the basic configuration"""

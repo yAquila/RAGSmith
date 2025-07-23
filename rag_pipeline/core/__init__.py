@@ -14,7 +14,6 @@ Main classes:
 """
 
 from .models import (
-    RAGConfig,
     RAGTestCase,
     RetrievalResult,
     GenerationResult,
@@ -24,26 +23,20 @@ from .models import (
     RAGDocument
 )
 
-from .components import (
-    RetrievalComponent,
-    GenerationComponent,
-    VectorStoreRetrieval,
-    OllamaGeneration,
-    ComponentFactory
-)
+from .modular_pipeline import ModularRAGPipeline
+
+from .modular_configs import ModularRAGConfig
 
 from .evaluator import RAGEvaluator
 from .dataset import RAGDataset
-from .pipeline import RAGPipeline
 
 __all__ = [
     # Core pipeline
-    'RAGPipeline',
-    
+    'ModularRAGPipeline',
     # Configuration and data models
-    'RAGConfig',
     'RAGTestCase',
     'RAGDocument',
+    'ModularRAGConfig',
     
     # Result models
     'RetrievalResult',
@@ -51,13 +44,6 @@ __all__ = [
     'RAGMetrics',
     'RAGEvaluationResult',
     'RAGBenchmarkResult',
-    
-    # Components
-    'RetrievalComponent',
-    'GenerationComponent',
-    'VectorStoreRetrieval',
-    'OllamaGeneration',
-    'ComponentFactory',
     
     # Supporting classes
     'RAGEvaluator',

@@ -15,7 +15,8 @@ import logging
 import time
 from typing import List, Optional
 
-from core import RAGPipeline, RAGConfig
+from core import ModularRAGPipeline, ModularRAGConfig
+from configs.basic_modular_config import get_basic_config   
 
 # Configure logging
 logging.basicConfig(
@@ -27,96 +28,160 @@ logger = logging.getLogger(__name__)
 async def run_rag_evaluation():
     """Run RAG evaluation with multiple model combinations"""
     
-    # Configuration for RAG evaluation
-    config = RAGConfig(
-        # Models to test
-        embedding_models=[
-            #"nomic-embed-text", 
-            "mxbai-embed-large"
+    # Configuration for Modular RAG evaluation
+    from core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PromptMakerConfig
+    from core.modular_pipeline import ModularRAGPipeline
+    
+    # Example ModularRAGConfig with multiple generator configs
+    config = ModularRAGConfig(
+        pipeline_name="multi-generator-test",
+        enable_logging=True,
+        log_level="INFO",
+        enable_timing=True,
+
+        # Retrieval: one config
+        retrieval=[
+            RetrievalConfig(
+                name="mxbai-cosine",
+                enabled=True,
+                technique="simple_vector_rag",
+                top_k=10,
+                embedding_model="mxbai-embed-large",
+                similarity_metric="cosine"
+            ),
+            # RetrievalConfig(
+            #     name="nomic-cosine",
+            #     enabled=True,
+            #     technique="simple_vector_rag",
+            #     top_k=10,
+            #     embedding_model="nomic-embed-text",
+            #     similarity_metric="cosine"
+            # )
         ],
-        llm_models=[
-            "gemini-2.0-flash",
-            "gemma3:4b"
+
+        # Passage filter: one config
+        passage_filter=[
+            PassageFilterConfig(
+                name="simple_threshold",
+                enabled=True,
+                technique="simple_threshold",
+                top_k=10,
+            ),
+            PassageFilterConfig(
+                name="similarity_threshold",
+                enabled=True,
+                technique="similarity_threshold",
+                similarity_threshold=0.65,
+                min_passages=1,
+                max_passages=10,
+            ),
         ],
-        eval_llm_model="gemini-2.0-flash",  # Model used for LLM-based evaluation
-        
-        # Retrieval settings
-        retrieval_k=10,
-        retrieval_threshold=0.5,
-        
-        # Cross-encoder reranking settings (optional)
-        rerank_model="BAAI/bge-reranker-v2-m3",  # Set to None to disable cross-encoder reranking
-        rerank_top_k=5,  # Keep top 5 after cross-encoder reranking
-        test_with_and_without_reranking=True,  # Test both with and without cross-encoder reranking
-        rerank_cache_dir=None,  # Use default cache directory
-        rerank_force_cpu=False,  # Use GPU if available
-        
-        # LLM reranking settings (optional)
-        # llm_rerank_model="gemma3:4b",  # Set to None to disable LLM reranking
-        # llm_rerank_top_k=5,  # Keep top 5 after LLM reranking
-        # test_with_and_without_llm_reranking=True,  # Test both with and without LLM reranking
-        # llm_rerank_max_tokens=2048,  # Max tokens for LLM reranking
-        # llm_rerank_temperature=0.1,  # Temperature for LLM reranking
-        
-        # Generation settings
-        max_tokens=500,
-        temperature=0.1,
-        
-        # Evaluation settings
-        eval_batch_size=5,  # Process 5 test cases at a time
-        max_test_cases=5,  
-        
-        # Dataset settings
-        dataset_path=None, 
-        
-        # Parallel reranking settings
-        # enable_parallel_reranking=True,  # Enable parallel reranking
-        # rerank_ensemble_method="weighted",  # Use weighted ensemble
-        # ce_rerank_weight=0.7,  # Higher weight for cross-encoder
-        # llm_rerank_weight=0.3,  # Lower weight for LLM
+
+        # Prompt maker: one config
+        prompt_maker=[
+            PromptMakerConfig(
+                name="simple_listing",
+                enabled=True,
+                technique="simple_listing"
+            )
+        ],
+
+        # Generator: two configs
+        generator=[
+            GeneratorConfig(
+                name="llama3.2:1b-t0.3",
+                enabled=True,
+                model="llama3.2:1b",
+                temperature=0.3,
+                provider="ollama",
+                max_tokens=500
+            )
+        ],
+
+        # Passage rerank: (optional, can add more configs)
+        passage_rerank=[
+            PassageRerankConfig(
+                name="ce_rerank_bge",
+                enabled=True,
+                technique="cross_encoder",
+                cross_encoder_top_k=5,
+                cross_encoder_model="BAAI/bge-reranker-v2-m3",
+            ), 
+            PassageRerankConfig(
+                name="llm_rerank_gemma",
+                enabled=True,
+                technique="llm_rerank",
+                llm_rerank_top_k=5,
+                llm_rerank_model="gemma3:4b",
+            ),
+            # PassageRerankConfig(
+            #     name="cellm_parallel_rerank",
+            #     enabled=True,
+            #     technique="cellm_parallel_rerank",
+            #     ce_model="BAAI/bge-reranker-v2-m3",
+            #     llm_model="gemma3:4b",
+            #     top_k=5,
+            #     parallel_ensemble_method="weighted",
+            #     ce_weight=0.7,
+            #     llm_weight=0.3,
+            #     ce_force_cpu=False,
+            #     llm_max_tokens=2048,
+            #     llm_temperature=0.1,
+            # ),
+            PassageRerankConfig(
+                name="no_rerank",
+                enabled=True,
+                technique="none",
+            )
+        ],
+
+        # Other categories as empty lists
+        pre_embedding=[],
+        query_expansion=[],
+        passage_augment=[],
+        passage_compress=[],
+        post_generation=[],
+
+        # Dataset/global settings
+        dataset_path=None,
+        max_test_cases=2,
+        eval_batch_size=1,
+        parallel_execution=True,
+        max_workers=4,
+        cache_enabled=True
     )
     
-    # Create and run pipeline
-    pipeline = RAGPipeline(config)
-    
     try:
-        logger.info("Starting RAG evaluation...")
+        logger.info("Starting Modular RAG evaluation...")
         start_time = time.time()
-        
-        # Run evaluation
-        results = await pipeline.run_evaluation()
-        
-        # Print detailed results
-        pipeline.print_results_summary(results)
-        
-        # Save results to markdown file
+
+        # Run evaluation (uses all config combinations)
+        results = await ModularRAGPipeline.run_evaluation({}, config)
+
+        # Print results (can be improved for modular combos)
+        # logger.info(f"Results: {results}")
         await save_markdown_results(results)
-        
+
         logger.info(f"Evaluation completed in {time.time() - start_time:.2f}s")
         return results
-        
+
     except Exception as e:
         logger.error(f"Evaluation failed: {e}")
         import traceback
         logger.error(traceback.format_exc())
         raise
 
-async def save_markdown_results(results, filename: Optional[str] = None):
-    """Save evaluation results to Markdown file"""
+async def save_markdown_results(results, filename: str = None):
+    """Save evaluation results to Markdown file using generate_markdown_report."""
     from datetime import datetime
-    
     if not filename:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"rag_evaluation_results_{timestamp}.md"
-    
     try:
         markdown_content = generate_markdown_report(results)
-        
         with open(filename, 'w') as f:
             f.write(markdown_content)
-        
         logger.info(f"Results saved to {filename}")
-        
     except Exception as e:
         logger.warning(f"Failed to save results: {e}")
 
@@ -161,27 +226,77 @@ def generate_markdown_report(results) -> str:
     markdown += _format_detailed_metrics(aggregated_metrics)
     markdown += "\n\n"
     
+    # Token count breakdown
+    markdown += "## 🔢 TOKEN COUNT BREAKDOWN (AVERAGE PER COMPONENT):\n\n"
+    for combo, metrics in aggregated_metrics.items():
+        markdown += f"**{combo}:**\n"
+        for key, pretty in [
+            ("embedding_token_counts", "Embedding Tokens"),
+            ("llm_input_token_counts", "LLM Input Tokens"),
+            ("llm_output_token_counts", "LLM Output Tokens")
+        ]:
+            token_counts = metrics.get(key, {})
+            if token_counts:
+                markdown += f"  - {pretty}:\n"
+                for comp, val in token_counts.items():
+                    markdown += f"    - {comp}: {val:.1f}\n"
+    markdown += "\n"
+    
     # Timing breakdown
-    total_retr_pred_time = results.total_retrieval_prediction_time
-    total_gen_pred_time = results.total_generation_prediction_time
-    total_retr_eval_time = results.total_retrieval_evaluation_time
-    total_gen_eval_time = results.total_generation_evaluation_time
-    
-    total_prediction_time = total_retr_pred_time + total_gen_pred_time
-    total_evaluation_time = total_retr_eval_time + total_gen_eval_time
-    
+    # Sum per-component times across all individual_results
+    timing_keys_ordered = [
+        ('pre_embedding_time', 'Pre-embedding'),
+        ('query_expansion_time', 'Query Expansion'),
+        ('retrieval_time', 'Retrieval'),
+        ('passage_augment_time', 'Passage Augment'),
+        ('passage_rerank_time', 'Passage Rerank'),
+        ('passage_filter_time', 'Passage Filter'),
+        ('passage_compress_time', 'Passage Compress'),
+        ('prompt_maker_time', 'Prompt Maker'),
+        ('generation_time', 'Generation'),
+        ('post_generation_time', 'Post-generation'),
+    ]
     markdown += "## ⏱️ TIMING BREAKDOWN:\n\n"
     markdown += "**Prediction Times:**\n"
-    markdown += f"  - Retrieval: {total_retr_pred_time:.2f}s\n"
-    markdown += f"  - Generation: {total_gen_pred_time:.2f}s\n"
-    markdown += f"  - Total Prediction: {total_prediction_time:.2f}s\n\n"
+    # Evaluation times
+    total_retr_eval_time = sum(getattr(r, 'retrieval_eval_time', 0.0) for r in results.individual_results)
+    total_gen_eval_time = sum(getattr(r, 'generation_eval_time', 0.0) for r in results.individual_results)
+    total_evaluation_time = total_retr_eval_time + total_gen_eval_time
+    
+    sum_times = {}
+    for key, _ in timing_keys_ordered:
+        vals = [metrics.get(key, 0.0) for metrics in aggregated_metrics.values() if metrics.get(key, 0.0) > 0]
+        if vals:
+            sum_times[key] = sum(vals)
+
+    for key, pretty in timing_keys_ordered:
+        if key in sum_times:
+            markdown += f"- {pretty}: {sum_times[key]:.3f}s\n"
+    markdown += f"- Total Prediction Time: {sum(sum_times.values()):.3f}s\n"
+    markdown += "\n"
+    
     
     markdown += "**Evaluation Times:**\n"
     markdown += f"  - Retrieval: {total_retr_eval_time:.2f}s\n"
     markdown += f"  - Generation: {total_gen_eval_time:.2f}s\n"
     markdown += f"  - Total Evaluation: {total_evaluation_time:.2f}s\n\n"
-    
     markdown += f"**Pipeline Total:** {total_runtime:.2f}s\n\n"
+
+    # Canonical timing keys and pretty names from modular_pipeline.py
+    timing_keys_ordered = [
+        ('pre_embedding_time', 'Pre-embedding'),
+        ('query_expansion_time', 'Query Expansion'),
+        ('retrieval_time', 'Retrieval'),
+        ('passage_augment_time', 'Passage Augment'),
+        ('passage_rerank_time', 'Passage Rerank'),
+        ('passage_filter_time', 'Passage Filter'),
+        ('passage_compress_time', 'Passage Compress'),
+        ('prompt_maker_time', 'Prompt Maker'),
+        ('generation_time', 'Generation'),
+        ('post_generation_time', 'Post-generation'),
+    ]
+
+    # Compute averages for each timing key
     
     # Footer
     markdown += "---\n\n"
@@ -192,27 +307,7 @@ def generate_markdown_report(results) -> str:
 
 def _format_model_combinations_list(aggregated_metrics) -> str:
     """Format the list of model combinations tested."""
-    lines = []
-    for combo in aggregated_metrics.keys():
-        # Parse combination key that may include multiple rerank models (using || delimiter)
-        combo_parts = combo.split('||')
-        if len(combo_parts) == 2:
-            # Format: embedding_model||llm_model (no reranking)
-            emb_model, llm_model = combo_parts
-            lines.append(f"  • {emb_model} + {llm_model}")
-        elif len(combo_parts) == 3:
-            # Format: embedding_model||rerank_model||llm_model (single reranking)
-            emb_model, rerank_model, llm_model = combo_parts
-            lines.append(f"  • {emb_model} + {rerank_model} + {llm_model}")
-        elif len(combo_parts) == 4:
-            # Format: embedding_model||ce_rerank||llm_rerank||llm_model (dual reranking)
-            emb_model, ce_rerank, llm_rerank, llm_model = combo_parts
-            lines.append(f"  • {emb_model} + {ce_rerank} + {llm_rerank} + {llm_model}")
-        else:
-            # Fallback for unexpected format
-            lines.append(f"  • {combo.replace('||', ' + ')}")
-    
-    return "\n".join(lines)
+    return "\n".join(["  • " + combo for combo in aggregated_metrics.keys()])
 
 
 def _format_detailed_metrics(aggregated_metrics) -> str:
@@ -220,25 +315,8 @@ def _format_detailed_metrics(aggregated_metrics) -> str:
     lines = []
     
     for combo, metrics in aggregated_metrics.items():
-        # Parse combination key for display
-        combo_parts = combo.split('||')
-        if len(combo_parts) == 2:
-            # Format: embedding_model||llm_model (no reranking)
-            emb_model, llm_model = combo_parts
-            combo_display = f"{emb_model} + {llm_model}"
-        elif len(combo_parts) == 3:
-            # Format: embedding_model||rerank_model||llm_model (single reranking)
-            emb_model, rerank_model, llm_model = combo_parts
-            combo_display = f"{emb_model} + {rerank_model} + {llm_model}"
-        elif len(combo_parts) == 4:
-            # Format: embedding_model||ce_rerank||llm_rerank||llm_model (dual reranking)
-            emb_model, ce_rerank, llm_rerank, llm_model = combo_parts
-            combo_display = f"{emb_model} + {ce_rerank} + {llm_rerank} + {llm_model}"
-        else:
-            # Fallback for unexpected format
-            combo_display = combo.replace('||', ' + ')
-        
-        lines.append(f"\n**{combo_display}:**")
+    
+        lines.append(f"\n**{combo}:**")
         
         # Retrieval metrics
         eval_k = metrics.get('eval_k', 10)
@@ -247,17 +325,6 @@ def _format_detailed_metrics(aggregated_metrics) -> str:
         ndcg = metrics.get('ndcg_at_k', 0.0)
         mrr = metrics.get('mrr', 0.0)
         lines.append(f"  Retrieval: R@{eval_k}={recall:.3f}, mAP={map_score:.3f}, nDCG@{eval_k}={ndcg:.3f}, MRR={mrr:.3f}")
-        
-        # Reranking info
-        if metrics.get('reranked', False):
-            rerank_model = metrics.get('rerank_model', 'N/A')
-            rerank_time = metrics.get('rerank_time', 0.0)
-            lines.append(f"  Cross-encoder Reranking: Model={rerank_model}, Avg Time={rerank_time:.3f}s")
-        
-        if metrics.get('llm_reranked', False):
-            llm_rerank_model = metrics.get('llm_rerank_model', 'N/A')
-            llm_rerank_time = metrics.get('llm_rerank_time', 0.0)
-            lines.append(f"  LLM Reranking: Model={llm_rerank_model}, Avg Time={llm_rerank_time:.3f}s")
         
         # Generation metrics
         llm_score = metrics.get('llm_score', 0.0)
@@ -276,21 +343,45 @@ def _format_detailed_metrics(aggregated_metrics) -> str:
         lines.append(f"  Success Rate: {success_rate:.1%}")
         
         # Timing info
-        retr_pred_time = metrics.get('retrieval_prediction_time', 0.0)
-        gen_pred_time = metrics.get('generation_prediction_time', 0.0)
-        lines.append(f"  Avg Prediction Times: Retrieval={retr_pred_time:.3f}s, Generation={gen_pred_time:.3f}s")
+        pre_embedding_time = metrics.get('pre_embedding_time', 0.0)
+        query_expansion_time = metrics.get('query_expansion_time', 0.0)
+        retrieval_time = metrics.get('retrieval_time', 0.0)
+        passage_augment_time = metrics.get('passage_augment_time', 0.0)
+        passage_rerank_time = metrics.get('passage_rerank_time', 0.0)
+        passage_filter_time = metrics.get('passage_filter_time', 0.0)
+        passage_compress_time = metrics.get('passage_compress_time', 0.0)
+        prompt_maker_time = metrics.get('prompt_maker_time', 0.0)
+        generation_time = metrics.get('generation_time', 0.0)
+        post_generation_time = metrics.get('post_generation_time', 0.0)
         
-        # Rerank timing
-        if metrics.get('reranked', False) or metrics.get('llm_reranked', False):
-            rerank_time_str = ""
-            if metrics.get('reranked', False):
-                rerank_time_str += f"CE: {metrics.get('rerank_time', 0.0):.3f}s"
-            if metrics.get('llm_reranked', False):
-                if rerank_time_str:
-                    rerank_time_str += ", "
-                rerank_time_str += f"LLM: {metrics.get('llm_rerank_time', 0.0):.3f}s"
-            lines.append(f"  Avg Rerank Times: {rerank_time_str}")
-        
+        # Only show prediction times for components with time > 0
+        pred_times = [
+            ("Pre-embedding", pre_embedding_time),
+            ("Query Expansion", query_expansion_time),
+            ("Retrieval", retrieval_time),
+            ("Passage Augment", passage_augment_time),
+            ("Passage Rerank", passage_rerank_time),
+            ("Passage Filter", passage_filter_time),
+            ("Passage Compress", passage_compress_time),
+            ("Prompt Maker", prompt_maker_time),
+            ("Generation", generation_time),
+            ("Post-generation", post_generation_time),
+        ]
+        shown_pred_times = [f"{name}={val:.3f}s" for name, val in pred_times if val > 0]
+        if shown_pred_times:
+            lines.append(f"  Avg Prediction Times: {', '.join(shown_pred_times)}")
+        total_pred_time = sum(val for _, val in pred_times)
+        if total_pred_time > 0:
+            lines.append(f"  Total Prediction Time: {total_pred_time:.3f}s")
+        # Token counts per component
+        for key, pretty in [
+            ("embedding_token_counts", "Embedding Tokens"),
+            ("llm_input_token_counts", "LLM Input Tokens"),
+            ("llm_output_token_counts", "LLM Output Tokens")
+        ]:
+            token_counts = metrics.get(key, {})
+            if token_counts:
+                lines.append(f"  {pretty}:{sum(token_counts.values()):.1f}")
         # Evaluation timing
         retr_eval_time = metrics.get('retrieval_evaluation_time', 0.0)
         gen_eval_time = metrics.get('generation_evaluation_time', 0.0)
@@ -354,6 +445,8 @@ def run_quick_test():
     pipeline = RAGPipeline(config)
     return asyncio.run(pipeline.run_evaluation())
 
+
+
 def main():
     """Main entry point"""
     
@@ -391,8 +484,16 @@ def main():
             except Exception as e:
                 print(f"❌ Quick test failed: {e}")
                 return 1
-                
-        else:
+        elif arg == "--basic-modular":
+            # Basic modular test mode (1-2 minutes)
+            try:
+                results = asyncio.run(demo_basic_framework())
+                print(f"\n✅ Basic modular test completed successfully!")
+                print(f"Best combination: {results.best_overall_combo}")
+            except Exception as e:
+                print(f"❌ Basic modular test failed: {e}")
+                return 1
+        elif arg == "--full":
             # Full evaluation mode (10+ minutes)
             try:
                 results = asyncio.run(run_rag_evaluation())
@@ -400,6 +501,14 @@ def main():
                 print(f"Best overall combination: {results.best_overall_combo}")
             except Exception as e:
                 print(f"❌ Evaluation failed: {e}")
+                return 1
+        else:
+            try:
+                results = asyncio.run(demo_basic_framework())
+                print(f"\n✅ Basic modular test completed successfully!")
+                print(f"Best combination: {results.best_overall_combo}")
+            except Exception as e:
+                print(f"❌ Basic modular test failed: {e}")
                 return 1
     time.sleep(1000000)
     return 0

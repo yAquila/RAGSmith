@@ -14,6 +14,7 @@ from dataclasses import dataclass
 
 class PreEmbeddingConfig(BaseModel):
     """Configuration for pre-embedding techniques"""
+    name: str = ""
     enabled: bool = True
     technique: str = "none"  # Options: "none", "contextual_chunk_headers", "different_chunking", "parent_document", "hype"
     
@@ -42,8 +43,9 @@ class PreEmbeddingConfig(BaseModel):
 
 class QueryExpansionConfig(BaseModel):
     """Configuration for query expansion/refinement techniques"""
+    name: str = ""
     enabled: bool = True
-    techniques: List[str] = ["none"]  # Can use multiple: ["none", "multi_query", "rag_fusion", "hyde", "decomposition"]
+    technique: str = "none"  # Can use multiple: ["none", "multi_query", "rag_fusion", "hyde", "decomposition"]
     
     # Simple Multi-Query settings
     num_expanded_queries: int = 3
@@ -71,8 +73,9 @@ class QueryExpansionConfig(BaseModel):
 
 class RetrievalConfig(BaseModel):
     """Configuration for retrieval techniques"""
+    name: str = ""
     enabled: bool = True
-    techniques: List[str] = ["simple_vector_rag"]  # Can combine: ["simple_vector_rag", "keyword_search", "hybrid_cc", "hybrid_rrf"]
+    technique: str = "simple_vector_rag"  # Can combine: ["simple_vector_rag", "keyword_search", "hybrid_cc", "hybrid_rrf"]
     
     # Common settings
     top_k: int = 10
@@ -99,6 +102,7 @@ class RetrievalConfig(BaseModel):
 
 class PassageAugmentConfig(BaseModel):
     """Configuration for passage augmentation techniques"""
+    name: str = ""
     enabled: bool = True
     technique: str = "none"  # Options: "none", "prev_next_augmenter", "relevant_segment_extraction"
     
@@ -115,8 +119,10 @@ class PassageAugmentConfig(BaseModel):
 
 class PassageRerankConfig(BaseModel):
     """Configuration for passage reranking techniques"""
+    name: str = ""
     enabled: bool = True
-    techniques: List[str] = ["none"]  # Can combine: ["none", "cross_encoder", "llm_rerank", "parallel_rerank"]
+    technique: str = "none"  # Can combine: ["none", "cross_encoder", "llm_rerank", "parallel_rerank"]
+    top_k: int = 5
     
     # Cross-Encoder settings
     cross_encoder_model: str = "BAAI/bge-reranker-v2-m3"
@@ -144,8 +150,9 @@ class PassageRerankConfig(BaseModel):
 
 class PassageFilterConfig(BaseModel):
     """Configuration for passage filtering techniques"""
+    name: str = ""
     enabled: bool = True
-    techniques: List[str] = ["simple_threshold"]  # Can combine: ["simple_threshold", "similarity_threshold", "tree_summarize", "llm_summarize", "window_replacement"]
+    technique: str = "simple_threshold"  # Can combine: ["simple_threshold", "similarity_threshold", "tree_summarize", "llm_summarize", "window_replacement"]
     
     # Simple threshold (top_k) settings - CURRENTLY IMPLEMENTED
     top_k: int = 5
@@ -173,6 +180,7 @@ class PassageFilterConfig(BaseModel):
 
 class PassageCompressConfig(BaseModel):
     """Configuration for passage compression techniques"""
+    name: str = ""
     enabled: bool = True
     technique: str = "none"  # Options: "none", "tree_summarize", "long_context", "multi_llm_ensemble", "multi_llm_fusion", "window_replacement", "step_back"
     
@@ -205,6 +213,7 @@ class PassageCompressConfig(BaseModel):
 
 class PromptMakerConfig(BaseModel):
     """Configuration for prompt construction techniques"""
+    name: str = ""
     enabled: bool = True
     technique: str = "simple_listing"  # Options: "simple_listing", "multi_llm_ensemble", "multi_llm_fusion"
     
@@ -226,8 +235,9 @@ class PromptMakerConfig(BaseModel):
 
 class GeneratorConfig(BaseModel):
     """Configuration for generation techniques"""
+    name: str = ""
     enabled: bool = True
-    model: str = "gpt-3.5-turbo"  # CURRENTLY IMPLEMENTED: supports ollama and gemini models
+    model: str = "gemma3:4b"  # CURRENTLY IMPLEMENTED: supports ollama and gemini models
     
     # Generation settings
     max_tokens: int = 500
@@ -251,6 +261,7 @@ class GeneratorConfig(BaseModel):
 
 class PostGenerationConfig(BaseModel):
     """Configuration for post-generation techniques"""
+    name: str = ""
     enabled: bool = True
     technique: str = "none"  # Options: "none", "reflection_revising"
     
@@ -272,20 +283,20 @@ class PostGenerationConfig(BaseModel):
 
 # ==================== UNIFIED RAG CONFIGURATION ====================
 
-class RAGConfig(BaseModel):
-    """Unified configuration for the entire RAG pipeline"""
+class ModularRAGConfig(BaseModel):
+    """Unified configuration for the entire RAG pipeline (all categories are lists of configs)"""
     
     # Category configurations
-    pre_embedding: PreEmbeddingConfig = Field(default_factory=PreEmbeddingConfig)
-    query_expansion: QueryExpansionConfig = Field(default_factory=QueryExpansionConfig)
-    retrieval: RetrievalConfig = Field(default_factory=RetrievalConfig)
-    passage_augment: PassageAugmentConfig = Field(default_factory=PassageAugmentConfig)
-    passage_rerank: PassageRerankConfig = Field(default_factory=PassageRerankConfig)
-    passage_filter: PassageFilterConfig = Field(default_factory=PassageFilterConfig)
-    passage_compress: PassageCompressConfig = Field(default_factory=PassageCompressConfig)
-    prompt_maker: PromptMakerConfig = Field(default_factory=PromptMakerConfig)
-    generator: GeneratorConfig = Field(default_factory=GeneratorConfig)
-    post_generation: PostGenerationConfig = Field(default_factory=PostGenerationConfig)
+    pre_embedding: List[PreEmbeddingConfig] = Field(default_factory=list)
+    query_expansion: List[QueryExpansionConfig] = Field(default_factory=list)
+    retrieval: List[RetrievalConfig] = Field(default_factory=list)
+    passage_augment: List[PassageAugmentConfig] = Field(default_factory=list)
+    passage_rerank: List[PassageRerankConfig] = Field(default_factory=list)
+    passage_filter: List[PassageFilterConfig] = Field(default_factory=list)
+    passage_compress: List[PassageCompressConfig] = Field(default_factory=list)
+    prompt_maker: List[PromptMakerConfig] = Field(default_factory=list)
+    generator: List[GeneratorConfig] = Field(default_factory=list)
+    post_generation: List[PostGenerationConfig] = Field(default_factory=list)
     
     # Global settings
     pipeline_name: str = "advanced_rag_pipeline"
@@ -296,6 +307,7 @@ class RAGConfig(BaseModel):
     # Evaluation settings
     enable_evaluation: bool = True
     evaluation_metrics: List[str] = ["recall", "precision", "f1", "semantic_similarity", "llm_score"]
+    llm_eval_model: str = "gemma3:4b"
     
     # Dataset settings
     dataset_path: Optional[str] = None
@@ -308,58 +320,29 @@ class RAGConfig(BaseModel):
     cache_enabled: bool = True
     cache_dir: Optional[str] = None
     
-    def get_enabled_techniques(self) -> Dict[str, List[str]]:
-        """Get all enabled techniques across categories"""
-        enabled = {}
-        
-        if self.pre_embedding.enabled:
-            enabled["pre_embedding"] = [self.pre_embedding.technique]
-        
-        if self.query_expansion.enabled:
-            enabled["query_expansion"] = self.query_expansion.techniques
-        
-        if self.retrieval.enabled:
-            enabled["retrieval"] = self.retrieval.techniques
-        
-        if self.passage_augment.enabled:
-            enabled["passage_augment"] = [self.passage_augment.technique]
-        
-        if self.passage_rerank.enabled:
-            enabled["passage_rerank"] = self.passage_rerank.techniques
-        
-        if self.passage_filter.enabled:
-            enabled["passage_filter"] = self.passage_filter.techniques
-        
-        if self.passage_compress.enabled:
-            enabled["passage_compress"] = [self.passage_compress.technique]
-        
-        if self.prompt_maker.enabled:
-            enabled["prompt_maker"] = [self.prompt_maker.technique]
-        
-        if self.generator.enabled:
-            enabled["generator"] = [self.generator.model]
-        
-        if self.post_generation.enabled:
-            enabled["post_generation"] = [self.post_generation.technique]
-        
-        return enabled
     
-    def create_technique_combinations(self) -> List[Dict[str, str]]:
-        """Create all possible combinations of enabled techniques"""
+    def create_config_combinations(self) -> List[Dict[str, Any]]:
+        """Create all possible combinations of enabled configs (full Cartesian product)"""
         from itertools import product
-        
-        enabled = self.get_enabled_techniques()
-        
-        # Generate combinations (for now, just return single combination per category)
-        combinations = []
-        
-        # For categories that allow multiple techniques, we'll create separate combinations
-        # For now, just use the first technique in each category
-        combination = {}
-        for category, techniques in enabled.items():
-            if techniques:
-                combination[category] = techniques[0]
-        
-        combinations.append(combination)
-        
-        return combinations 
+        categories = [
+            ("pre_embedding", self.pre_embedding),
+            ("query_expansion", self.query_expansion),
+            ("retrieval", self.retrieval),
+            ("passage_augment", self.passage_augment),
+            ("passage_rerank", self.passage_rerank),
+            ("passage_filter", self.passage_filter),
+            ("passage_compress", self.passage_compress),
+            ("prompt_maker", self.prompt_maker),
+            ("generator", self.generator),
+            ("post_generation", self.post_generation),
+        ]
+        # Only include categories with at least one enabled config
+        filtered = [(cat, [cfg for cfg in cfgs if getattr(cfg, 'enabled', True)]) for cat, cfgs in categories if any(getattr(cfg, 'enabled', True) for cfg in cfgs)]
+        if not filtered:
+            return []
+        cat_names = [cat for cat, cfgs in filtered]
+        cfg_lists = [cfgs for cat, cfgs in filtered]
+        combos = []
+        for prod in product(*cfg_lists):
+            combos.append({cat: cfg for cat, cfg in zip(cat_names, prod)})
+        return combos 

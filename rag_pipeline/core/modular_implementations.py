@@ -30,15 +30,15 @@ logger = logging.getLogger(__name__)
 class NonePreEmbedding(PreEmbeddingComponent):
     """No pre-embedding processing - pass documents through unchanged"""
     
-    async def process_documents(self, documents: List[Document]) -> List[Document]:
+    async def process_documents(self, documents: List[Document]):
         """Pass documents through unchanged"""
-        return documents
+        return documents, 0.0, 0.0, 0.0
 
 
 class ContextualChunkHeaders(PreEmbeddingComponent):
     """Add contextual headers to document chunks"""
     
-    async def process_documents(self, documents: List[Document]) -> List[Document]:
+    async def process_documents(self, documents: List[Document]):
         """Add contextual headers to documents"""
         processed = []
         for doc in documents:
@@ -56,7 +56,7 @@ class ContextualChunkHeaders(PreEmbeddingComponent):
                 processed.append(processed_doc)
             else:
                 processed.append(doc)
-        return processed
+        return processed, 0.0, 0.0, 0.0
 
 
 # ==================== QUERY EXPANSION IMPLEMENTATIONS ====================
@@ -64,20 +64,20 @@ class ContextualChunkHeaders(PreEmbeddingComponent):
 class NoneQueryExpansion(QueryExpansionComponent):
     """No query expansion - return original query"""
     
-    async def expand_query(self, query: str) -> Query:
+    async def expand_query(self, query: str):
         """Return original query unchanged"""
         return Query(
             original_text=query,
             processed_text=query,
             expanded_queries=None,
             metadata={}
-        )
+        ), 0.0, 0.0, 0.0
 
 
 class SimpleMultiQuery(QueryExpansionComponent):
     """Generate multiple variations of the query"""
     
-    async def expand_query(self, query: str) -> Query:
+    async def expand_query(self, query: str):
         """Generate multiple query variations"""
         # For now, just create simple variations
         # In a full implementation, this would use an LLM
@@ -93,7 +93,7 @@ class SimpleMultiQuery(QueryExpansionComponent):
             processed_text=query,
             expanded_queries=expanded_queries,
             metadata={"technique": "simple_multi_query"}
-        )
+        ), 0.0, 0.0, 0.0
 
 
 # ==================== RETRIEVAL IMPLEMENTATIONS ====================
@@ -109,8 +109,8 @@ class SimpleVectorRAG(RetrievalComponent):
     def _setup_vectorstore(self):
         """Setup the vector store"""
         try:
-            from ..util.vectorstore.qdrant_store import QdrantVectorStore
-            from ..util.vectorstore.dataset_utils import generate_dataset_hash_from_file
+            from util.vectorstore.qdrant_store import QdrantVectorStore
+            from util.vectorstore.dataset_utils import generate_dataset_hash_from_file
             import os
             
             # Use embedding model from config
@@ -132,7 +132,7 @@ class SimpleVectorRAG(RetrievalComponent):
             logger.error(f"Failed to setup vectorstore: {e}")
             raise
     
-    async def retrieve(self, query: Query, k: Optional[int] = None) -> List[Document]:
+    async def retrieve(self, query: Query, k: Optional[int] = None):
         """Retrieve documents using vector similarity search"""
         k = k or self.config.get("top_k", 10)
         
@@ -154,11 +154,13 @@ class SimpleVectorRAG(RetrievalComponent):
                 )
                 documents.append(doc)
             
-            return documents
+            # Embedding token count: sum of tokens in all retrieved documents
+            embedding_token_count = len(query_text.split())
+            return documents, float(embedding_token_count), 0.0, 0.0
             
         except Exception as e:
             logger.error(f"Retrieval failed: {e}")
-            return []
+            return [], 0.0, 0.0, 0.0
     
     async def index_documents(self, documents: List[Document]) -> bool:
         """Index documents in the vector store"""
@@ -185,12 +187,12 @@ class SimpleVectorRAG(RetrievalComponent):
 class KeywordSearchBM25(RetrievalComponent):
     """BM25-based keyword search retrieval"""
     
-    async def retrieve(self, query: Query, k: Optional[int] = None) -> List[Document]:
+    async def retrieve(self, query: Query, k: Optional[int] = None):
         """Retrieve documents using BM25 keyword search"""
         # Placeholder implementation
         # In a full implementation, this would use libraries like rank_bm25
         logger.warning("KeywordSearchBM25 not fully implemented yet")
-        return []
+        return [], 0.0, 0.0, 0.0
     
     async def index_documents(self, documents: List[Document]) -> bool:
         """Index documents for BM25 search"""
@@ -204,20 +206,19 @@ class KeywordSearchBM25(RetrievalComponent):
 class NonePassageAugment(PassageAugmentComponent):
     """No passage augmentation - pass documents through unchanged"""
     
-    async def augment_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def augment_passages(self, documents: List[Document], query: Query):
         """Pass documents through unchanged"""
-        return documents
+        return documents, 0.0, 0.0, 0.0
 
 
 class PrevNextAugmenter(PassageAugmentComponent):
     """Augment passages with previous and next chunks"""
     
-    async def augment_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def augment_passages(self, documents: List[Document], query: Query):
         """Augment passages with surrounding context"""
         # Placeholder implementation
-        # In a full implementation, this would fetch neighboring chunks
         logger.warning("PrevNextAugmenter not fully implemented yet")
-        return documents
+        return documents, 0.0, 0.0, 0.0
 
 
 # ==================== PASSAGE RERANK IMPLEMENTATIONS ====================
@@ -225,18 +226,18 @@ class PrevNextAugmenter(PassageAugmentComponent):
 class NonePassageRerank(PassageRerankComponent):
     """No reranking - pass documents through unchanged"""
     
-    async def rerank_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def rerank_passages(self, documents: List[Document], query: Query):
         """Pass documents through unchanged"""
-        return documents
+        return documents, 0.0, 0.0, 0.0
 
 
 class CrossEncoderRerank(PassageRerankComponent):
     """✅ CURRENTLY IMPLEMENTED - Cross-encoder based reranking"""
     
-    async def rerank_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def rerank_passages(self, documents: List[Document], query: Query):
         """Rerank documents using cross-encoder model"""
         try:
-            from ..util.rerank.reranker import get_reranker
+            from util.rerank.reranker import get_reranker
             
             # Get reranker configuration
             model_name = self.config.get("cross_encoder_model", "BAAI/bge-reranker-v2-m3")
@@ -260,31 +261,27 @@ class CrossEncoderRerank(PassageRerankComponent):
             # Perform reranking
             reranked_docs = reranker.rerank_documents(query.processed_text, docs_for_rerank, top_k=top_k)
             
-            # Convert back to Document objects
-            result_documents = []
-            for doc_data in reranked_docs:
-                doc = Document(
-                    doc_id=doc_data.get("doc_id", ""),
-                    content=doc_data.get("content", ""),
-                    score=doc_data.get("score", 0.0),
-                    metadata=doc_data.get("metadata", {})
-                )
-                result_documents.append(doc)
-            
-            return result_documents
+            # Embedding token count: sum of tokens in all input docs
+            embedding_token_count = sum(len(doc["content"].split()) for doc in docs_for_rerank)
+            return [Document(
+                doc_id=doc_data.get("doc_id", ""),
+                content=doc_data.get("content", ""),
+                score=doc_data.get("score", 0.0),
+                metadata=doc_data.get("metadata", {})
+            ) for doc_data in reranked_docs], float(embedding_token_count), 0.0, 0.0
             
         except Exception as e:
             logger.error(f"Cross-encoder reranking failed: {e}")
-            return documents
+            return documents, 0.0, 0.0, 0.0
 
 
 class LLMRerank(PassageRerankComponent):
     """✅ CURRENTLY IMPLEMENTED - LLM-based reranking"""
     
-    async def rerank_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def rerank_passages(self, documents: List[Document], query: Query):
         """Rerank documents using LLM"""
         try:
-            from ..util.rerank.llm_reranker import get_llm_reranker
+            from util.rerank.llm_reranker import get_llm_reranker
             
             # Get LLM reranker configuration
             model_name = self.config.get("llm_rerank_model", "gpt-3.5-turbo")
@@ -311,23 +308,77 @@ class LLMRerank(PassageRerankComponent):
             
             # Perform reranking
             reranked_docs = llm_reranker.rerank_documents(query.processed_text, docs_for_rerank, top_k=top_k)
-            
-            # Convert back to Document objects
-            result_documents = []
-            for doc_data in reranked_docs:
-                doc = Document(
-                    doc_id=doc_data.get("doc_id", ""),
-                    content=doc_data.get("content", ""),
-                    score=doc_data.get("score", 0.0),
-                    metadata=doc_data.get("metadata", {})
-                )
-                result_documents.append(doc)
-            
-            return result_documents
+            llm_input_token_count = len(query.processed_text.split()) + sum(len(doc["content"].split()) for doc in docs_for_rerank)
+            llm_output_token_count = len(str(reranked_docs).split())
+            return [Document(
+                doc_id=doc_data.get("doc_id", ""),
+                content=doc_data.get("content", ""),
+                score=doc_data.get("score", 0.0),
+                metadata=doc_data.get("metadata", {})
+            ) for doc_data in reranked_docs], 0.0, llm_input_token_count, llm_output_token_count
             
         except Exception as e:
             logger.error(f"LLM reranking failed: {e}")
-            return documents
+            return documents, 0.0, 0.0, 0.0
+
+class CELLM_ParallelRerank(PassageRerankComponent):
+    """✅ CURRENTLY IMPLEMENTED - CELLM-based parallel reranking"""
+    
+    async def rerank_passages(self, documents: List[Document], query: Query):
+        """Rerank documents using CELLM-based parallel reranking"""
+        try:
+            from util.rerank.parallel_reranker import get_parallel_reranker
+            
+            # Get reranker configuration
+            ce_model = self.config.get("ce_model", "BAAI/bge-reranker-v2-m3")
+            llm_model = self.config.get("llm_model", "gemma3:4b")
+            ensemble_method = self.config.get("parallel_ensemble_method", "weighted")
+            ce_weight = self.config.get("ce_weight", 0.7)
+            llm_weight = self.config.get("llm_weight", 0.3)
+            top_k = self.config.get("top_k", 5)
+            ce_cache_dir = self.config.get("cross_encoder_cache_dir")
+            ce_force_cpu = self.config.get("cross_encoder_force_cpu", False)
+            llm_max_tokens = self.config.get("llm_max_tokens", 2048)
+            llm_temperature = self.config.get("llm_temperature", 0.1)
+
+            # Initialize parallel reranker
+            reranker = get_parallel_reranker(
+                ce_model=ce_model,
+                llm_model=llm_model,
+                ensemble_method=ensemble_method,
+                ce_weight=ce_weight,
+                llm_weight=llm_weight,
+                ce_cache_dir=ce_cache_dir,
+                ce_force_cpu=ce_force_cpu,
+                llm_max_tokens=llm_max_tokens,
+                llm_temperature=llm_temperature
+            )
+
+            # Convert documents to format expected by existing reranker
+            docs_for_rerank = []
+            for doc in documents:
+                docs_for_rerank.append({
+                    "doc_id": doc.doc_id,
+                    "content": doc.content,
+                    "score": doc.score or 0.0,
+                    "metadata": doc.metadata or {}
+                })
+
+
+            reranked_docs, _ = reranker.rerank_documents(query.processed_text, docs_for_rerank, top_k=top_k)
+            ce_embedding_token_count = len(query.processed_text.split()) + sum(len(doc["content"].split()) for doc in docs_for_rerank)
+            llm_input_token_count = len(query.processed_text.split()) + sum(len(doc["content"].split()) for doc in docs_for_rerank)
+            llm_output_token_count = len(str(reranked_docs).split())
+            return [Document(
+                doc_id=doc_data.get("doc_id", ""),
+                content=doc_data.get("content", ""),
+                score=doc_data.get("score", 0.0),
+                metadata=doc_data.get("metadata", {})
+            ) for doc_data in reranked_docs], ce_embedding_token_count, llm_input_token_count, llm_output_token_count
+
+        except Exception as e:
+            logger.error(f"CELLM-based parallel reranking failed: {e}")
+            return documents, 0.0, 0.0, 0.0
 
 
 # ==================== PASSAGE FILTER IMPLEMENTATIONS ====================
@@ -335,24 +386,25 @@ class LLMRerank(PassageRerankComponent):
 class SimpleThresholdFilter(PassageFilterComponent):
     """✅ CURRENTLY IMPLEMENTED - Simple top-k threshold filtering"""
     
-    async def filter_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def filter_passages(self, documents: List[Document], query: Query):
         """Filter documents by keeping top-k by score"""
         top_k = self.config.get("top_k", 5)
         
         # Sort documents by score (descending) and take top k
         sorted_docs = sorted(documents, key=lambda d: d.score or 0.0, reverse=True)
-        return sorted_docs[:top_k]
+        return sorted_docs[:top_k], 0.0, 0.0, 0.0
 
 
 class SimilarityThresholdFilter(PassageFilterComponent):
     """Filter documents by similarity threshold"""
     
-    async def filter_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def filter_passages(self, documents: List[Document], query: Query):
         """Filter documents by similarity threshold"""
         threshold = self.config.get("similarity_threshold", 0.7)
         min_passages = self.config.get("min_passages", 1)
         max_passages = self.config.get("max_passages", 10)
         
+        logger.info(f"Docs have scores: {[doc.score for doc in documents]}")
         # Filter by threshold
         filtered = [doc for doc in documents if (doc.score or 0.0) >= threshold]
         
@@ -360,9 +412,9 @@ class SimilarityThresholdFilter(PassageFilterComponent):
         if len(filtered) < min_passages:
             sorted_docs = sorted(documents, key=lambda d: d.score or 0.0, reverse=True)
             filtered = sorted_docs[:min_passages]
-        
+        logger.info(f"Filtered passages: {len(filtered)}")
         # Ensure we don't exceed max_passages
-        return filtered[:max_passages]
+        return filtered[:max_passages], 0.0, 0.0, 0.0
 
 
 # ==================== PASSAGE COMPRESS IMPLEMENTATIONS ====================
@@ -370,19 +422,19 @@ class SimilarityThresholdFilter(PassageFilterComponent):
 class NonePassageCompress(PassageCompressComponent):
     """No passage compression - pass documents through unchanged"""
     
-    async def compress_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def compress_passages(self, documents: List[Document], query: Query):
         """Pass documents through unchanged"""
-        return documents
+        return documents, 0.0, 0.0, 0.0
 
 
 class TreeSummarize(PassageCompressComponent):
     """Compress passages using tree summarization"""
     
-    async def compress_passages(self, documents: List[Document], query: Query) -> List[Document]:
+    async def compress_passages(self, documents: List[Document], query: Query):
         """Compress documents using tree summarization"""
         # Placeholder implementation
         logger.warning("TreeSummarize not fully implemented yet")
-        return documents
+        return documents, 0.0, 0.0, 0.0
 
 
 # ==================== PROMPT MAKER IMPLEMENTATIONS ====================
@@ -390,7 +442,7 @@ class TreeSummarize(PassageCompressComponent):
 class SimpleListingPromptMaker(PromptMakerComponent):
     """✅ CURRENTLY IMPLEMENTED - Simple listing of documents in prompt"""
     
-    async def make_prompt(self, query: Query, documents: List[Document]) -> str:
+    async def make_prompt(self, query: Query, documents: List[Document]):
         """Create a simple prompt by listing documents"""
         template = self.config.get("template", "Context:\n{context}\n\nQuestion: {query}\n\nAnswer:")
         separator = self.config.get("separator", "\n\n")
@@ -414,17 +466,18 @@ class SimpleListingPromptMaker(PromptMakerComponent):
         
         # Format final prompt
         prompt = template.format(context=context, query=query.processed_text)
-        return prompt
+        return prompt, 0.0, 0.0, 0.0
 
 
 class MultiLLMEnsemblePromptMaker(PromptMakerComponent):
     """Create multiple prompts for ensemble generation"""
     
-    async def make_prompt(self, query: Query, documents: List[Document]) -> str:
+    async def make_prompt(self, query: Query, documents: List[Document]):
         """Create ensemble prompts"""
         # Placeholder implementation
         logger.warning("MultiLLMEnsemblePromptMaker not fully implemented yet")
-        return await SimpleListingPromptMaker(self.config).make_prompt(query, documents)
+        prompt, _, _, _ = await SimpleListingPromptMaker(self.config).make_prompt(query, documents)
+        return prompt, 0.0, 0.0, 0.0
 
 
 # ==================== GENERATOR IMPLEMENTATIONS ====================
@@ -443,10 +496,10 @@ class LLMGenerator(GeneratorComponent):
         
         try:
             if provider.lower() == "ollama":
-                from ..util.api.ollama_client import OllamaUtil
+                from util.api.ollama_client import OllamaUtil
                 self.client = OllamaUtil
             elif provider.lower() == "gemini":
-                from ..util.api.gemini_client import GeminiUtil
+                from util.api.gemini_client import GeminiUtil
                 self.client = GeminiUtil
             else:
                 raise ValueError(f"Unsupported provider: {provider}")
@@ -455,26 +508,30 @@ class LLMGenerator(GeneratorComponent):
             logger.error(f"Failed to setup {provider} client: {e}")
             raise
     
-    async def generate(self, prompt: str, query: Query) -> str:
-        """Generate answer using LLM"""
+    async def generate(self, prompt: str, query: Query):
+        """Generate answer using LLM. Returns (generated_text, prompt_tokens, eval_count)"""
         try:
             model = self.config.get("model", "gpt-3.5-turbo")
-            
-            # Call the appropriate client
             if self.config.get("provider", "ollama").lower() == "ollama":
                 response = self.client.get_ollama_response(model, prompt)
+                if isinstance(response, dict):
+                    return (
+                        response.get('response', ''),
+                        0.0,
+                        float(response.get('prompt_tokens', len(prompt.split()))),
+                        float(response.get('eval_count', 0))
+                    )
+                else:
+                    return (str(response), 0.0, float(len(prompt.split())), float(len(str(response).split())))
             else:  # gemini
                 response = self.client.get_gemini_response(model, prompt)
-            
-            # Extract response text
-            if isinstance(response, dict):
-                return response.get('response', '')
-            else:
-                return str(response)
-                
+                if isinstance(response, dict):
+                    return (response.get('response', ''), 0.0, float(len(prompt.split())), float(len(response.get('response', '').split())))
+                else:
+                    return (str(response), 0.0, float(len(prompt.split())), float(len(str(response).split())))
         except Exception as e:
             logger.error(f"Generation failed: {e}")
-            return ""
+            return ("", 0.0, float(len(prompt.split())), 0.0)
 
 
 # ==================== POST-GENERATION IMPLEMENTATIONS ====================
@@ -482,19 +539,19 @@ class LLMGenerator(GeneratorComponent):
 class NonePostGeneration(PostGenerationComponent):
     """No post-generation processing - return answer unchanged"""
     
-    async def post_process(self, generated_answer: str, query: Query, context: Context) -> str:
+    async def post_process(self, generated_answer: str, query: Query, context: Context):
         """Return answer unchanged"""
-        return generated_answer
+        return generated_answer, 0.0, 0.0, 0.0
 
 
 class ReflectionRevising(PostGenerationComponent):
     """Refine answer using reflection and revising"""
     
-    async def post_process(self, generated_answer: str, query: Query, context: Context) -> str:
+    async def post_process(self, generated_answer: str, query: Query, context: Context):
         """Post-process answer using reflection"""
         # Placeholder implementation
         logger.warning("ReflectionRevising not fully implemented yet")
-        return generated_answer
+        return generated_answer, 0.0, 0.0, 0.0
 
 
 # ==================== COMPONENT REGISTRY ====================
@@ -521,6 +578,7 @@ COMPONENT_REGISTRY = {
         "none": NonePassageRerank,
         "cross_encoder": CrossEncoderRerank,
         "llm_rerank": LLMRerank,
+        "cellm_parallel_rerank": CELLM_ParallelRerank,
     },
     "passage_filter": {
         "simple_threshold": SimpleThresholdFilter,

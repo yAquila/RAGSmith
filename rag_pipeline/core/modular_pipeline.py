@@ -18,8 +18,11 @@ from .modular_framework import (
     PassageCompressComponent, PromptMakerComponent, GeneratorComponent,
     PostGenerationComponent, Document, Query, Context, RAGExecutionResult
 )
-from .modular_configs import RAGConfig
+from .modular_configs import ModularRAGConfig
 from .modular_implementations import COMPONENT_REGISTRY
+from .dataset import RAGDataset
+from .evaluator import RAGEvaluator
+from core.models import RetrievalResult, GenerationResult, RAGMetrics
 
 logger = logging.getLogger(__name__)
 
@@ -73,126 +76,43 @@ class ModularRAGPipeline:
     using configurable components for each stage.
     """
     
-    def __init__(self, config: RAGConfig):
-        self.config = config
+    def __init__(self, config_dict: dict, global_config: ModularRAGConfig = None):
+        """
+        config_dict: dict mapping category name to config object for this run
+        global_config: the full ModularRAGConfig (for dataset/global settings)
+        """
+        self.config_dict = config_dict
+        self.global_config = global_config
         self.factory = ModularComponentFactory()
-        
+        # Use dataset/global settings from global_config if provided
+        dataset_path = global_config.dataset_path if global_config else None
+        self.dataset = RAGDataset(dataset_path)
+        # self.evaluator = RAGEvaluator(global_config if global_config else config_dict)  # REMOVE THIS LINE
         # Initialize components
         self.components = {}
         self._initialize_components()
-        
         # Setup logging
-        if config.enable_logging:
-            logging.basicConfig(level=getattr(logging, config.log_level))
+        if global_config and global_config.enable_logging:
+            logging.basicConfig(level=getattr(logging, global_config.log_level))
     
     def _initialize_components(self):
-        """Initialize all enabled components based on configuration"""
+        """Initialize all enabled components based on config_dict"""
         logger.info("Initializing modular RAG components...")
-        
-        # Pre-embedding
-        if self.config.pre_embedding.enabled:
-            self.components["pre_embedding"] = self.factory.create_component(
-                "pre_embedding",
-                self.config.pre_embedding.technique,
-                asdict(self.config.pre_embedding)
-            )
-        
-        # Query expansion
-        if self.config.query_expansion.enabled:
-            # For techniques that support multiple, create instances for each
-            techniques = self.config.query_expansion.techniques
-            if len(techniques) == 1:
-                self.components["query_expansion"] = self.factory.create_component(
-                    "query_expansion",
-                    techniques[0],
-                    asdict(self.config.query_expansion)
+        for category, cfg in self.config_dict.items():
+            if hasattr(cfg, "enabled") and not cfg.enabled:
+                continue
+            if hasattr(cfg, "technique"):
+                self.components[category] = self.factory.create_component(
+                    category, cfg.technique, cfg.dict()
+                )
+            elif hasattr(cfg, "model"):
+                self.components[category] = self.factory.create_component(
+                    category, "llm", cfg.dict()
                 )
             else:
-                # For multiple techniques, use the first one for now
-                # In the future, this could support chaining multiple expansions
-                self.components["query_expansion"] = self.factory.create_component(
-                    "query_expansion",
-                    techniques[0],
-                    asdict(self.config.query_expansion)
+                self.components[category] = self.factory.create_component(
+                    category, getattr(cfg, "technique", "none"), cfg.dict()
                 )
-        
-        # Retrieval
-        if self.config.retrieval.enabled:
-            # For retrieval, we support multiple techniques that can be combined
-            techniques = self.config.retrieval.techniques
-            self.components["retrieval"] = self.factory.create_component(
-                "retrieval",
-                techniques[0],  # Use first technique for now
-                asdict(self.config.retrieval)
-            )
-        
-        # Passage augment
-        if self.config.passage_augment.enabled:
-            self.components["passage_augment"] = self.factory.create_component(
-                "passage_augment",
-                self.config.passage_augment.technique,
-                asdict(self.config.passage_augment)
-            )
-        
-        # Passage rerank
-        if self.config.passage_rerank.enabled:
-            # Support multiple reranking techniques
-            techniques = self.config.passage_rerank.techniques
-            self.components["passage_rerank"] = []
-            for technique in techniques:
-                if technique != "none":
-                    component = self.factory.create_component(
-                        "passage_rerank",
-                        technique,
-                        asdict(self.config.passage_rerank)
-                    )
-                    self.components["passage_rerank"].append(component)
-        
-        # Passage filter
-        if self.config.passage_filter.enabled:
-            techniques = self.config.passage_filter.techniques
-            self.components["passage_filter"] = []
-            for technique in techniques:
-                if technique != "none":
-                    component = self.factory.create_component(
-                        "passage_filter",
-                        technique,
-                        asdict(self.config.passage_filter)
-                    )
-                    self.components["passage_filter"].append(component)
-        
-        # Passage compress
-        if self.config.passage_compress.enabled:
-            self.components["passage_compress"] = self.factory.create_component(
-                "passage_compress",
-                self.config.passage_compress.technique,
-                asdict(self.config.passage_compress)
-            )
-        
-        # Prompt maker
-        if self.config.prompt_maker.enabled:
-            self.components["prompt_maker"] = self.factory.create_component(
-                "prompt_maker",
-                self.config.prompt_maker.technique,
-                asdict(self.config.prompt_maker)
-            )
-        
-        # Generator
-        if self.config.generator.enabled:
-            self.components["generator"] = self.factory.create_component(
-                "generator",
-                "llm",  # Only LLM generator for now
-                asdict(self.config.generator)
-            )
-        
-        # Post-generation
-        if self.config.post_generation.enabled:
-            self.components["post_generation"] = self.factory.create_component(
-                "post_generation",
-                self.config.post_generation.technique,
-                asdict(self.config.post_generation)
-            )
-        
         logger.info(f"Initialized {len(self.components)} component categories")
     
     async def execute_pipeline(self, query: str, documents: Optional[List[Document]] = None) -> RAGExecutionResult:
@@ -212,13 +132,22 @@ class ModularRAGPipeline:
         try:
             # Initialize result tracking
             components_used = {}
+            embedding_token_counts = {}
+            llm_input_token_counts = {}
+            llm_output_token_counts = {}
             
             # Step 1: Pre-embedding (document preprocessing)
             if documents and "pre_embedding" in self.components:
                 step_start = time.time()
-                documents = await self.components["pre_embedding"].process_documents(documents)
+                documents, emb_count, llm_in_count, llm_out_count = await self.components["pre_embedding"].process_documents(documents)
+                if emb_count > 0.0:
+                    embedding_token_counts["pre_embedding"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["pre_embedding"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["pre_embedding"] = llm_out_count
                 timing_info["pre_embedding_time"] = time.time() - step_start
-                components_used["pre_embedding"] = self.config.pre_embedding.technique
+                components_used["pre_embedding"] = self.config_dict["pre_embedding"].technique
                 logger.debug(f"Pre-embedding completed in {timing_info['pre_embedding_time']:.3f}s")
             else:
                 timing_info["pre_embedding_time"] = 0.0
@@ -226,9 +155,15 @@ class ModularRAGPipeline:
             # Step 2: Query expansion/refinement
             if "query_expansion" in self.components:
                 step_start = time.time()
-                processed_query = await self.components["query_expansion"].expand_query(query)
+                processed_query, emb_count, llm_in_count, llm_out_count = await self.components["query_expansion"].expand_query(query)
+                if emb_count > 0.0:
+                    embedding_token_counts["query_expansion"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["query_expansion"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["query_expansion"] = llm_out_count
                 timing_info["query_expansion_time"] = time.time() - step_start
-                components_used["query_expansion"] = self.config.query_expansion.techniques[0]
+                components_used["query_expansion"] = self.config_dict["query_expansion"].technique
                 logger.debug(f"Query expansion completed in {timing_info['query_expansion_time']:.3f}s")
             else:
                 processed_query = Query(original_text=query, processed_text=query)
@@ -244,12 +179,18 @@ class ModularRAGPipeline:
                     await self.components["retrieval"].index_documents(documents)
                 
                 # Retrieve relevant documents
-                retrieved_documents = await self.components["retrieval"].retrieve(
+                retrieved_documents, emb_count, llm_in_count, llm_out_count = await self.components["retrieval"].retrieve(
                     processed_query, 
-                    k=self.config.retrieval.top_k
+                    k=self.config_dict["retrieval"].top_k
                 )
+                if emb_count > 0.0:
+                    embedding_token_counts["retrieval"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["retrieval"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["retrieval"] = llm_out_count
                 timing_info["retrieval_time"] = time.time() - step_start
-                components_used["retrieval"] = self.config.retrieval.techniques[0]
+                components_used["retrieval"] = self.config_dict["retrieval"].technique
                 logger.debug(f"Retrieval completed in {timing_info['retrieval_time']:.3f}s, found {len(retrieved_documents)} documents")
             else:
                 timing_info["retrieval_time"] = 0.0
@@ -257,11 +198,17 @@ class ModularRAGPipeline:
             # Step 4: Passage augmentation
             if "passage_augment" in self.components and retrieved_documents:
                 step_start = time.time()
-                retrieved_documents = await self.components["passage_augment"].augment_passages(
+                retrieved_documents, emb_count, llm_in_count, llm_out_count = await self.components["passage_augment"].augment_passages(
                     retrieved_documents, processed_query
                 )
+                if emb_count > 0.0:
+                    embedding_token_counts["passage_augment"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["passage_augment"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["passage_augment"] = llm_out_count
                 timing_info["passage_augment_time"] = time.time() - step_start
-                components_used["passage_augment"] = self.config.passage_augment.technique
+                components_used["passage_augment"] = self.config_dict["passage_augment"].technique
                 logger.debug(f"Passage augmentation completed in {timing_info['passage_augment_time']:.3f}s")
             else:
                 timing_info["passage_augment_time"] = 0.0
@@ -269,10 +216,15 @@ class ModularRAGPipeline:
             # Step 5: Passage reranking (can have multiple rerankers)
             if "passage_rerank" in self.components and retrieved_documents:
                 step_start = time.time()
-                for reranker in self.components["passage_rerank"]:
-                    retrieved_documents = await reranker.rerank_passages(retrieved_documents, processed_query)
+                retrieved_documents, emb_count, llm_in_count, llm_out_count = await self.components["passage_rerank"].rerank_passages(retrieved_documents, processed_query)
+                if emb_count > 0.0:
+                    embedding_token_counts["passage_rerank"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["passage_rerank"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["passage_rerank"] = llm_out_count
                 timing_info["passage_rerank_time"] = time.time() - step_start
-                components_used["passage_rerank"] = self.config.passage_rerank.techniques
+                components_used["passage_rerank"] = self.config_dict["passage_rerank"].technique
                 logger.debug(f"Passage reranking completed in {timing_info['passage_rerank_time']:.3f}s")
             else:
                 timing_info["passage_rerank_time"] = 0.0
@@ -280,10 +232,15 @@ class ModularRAGPipeline:
             # Step 6: Passage filtering (can have multiple filters)
             if "passage_filter" in self.components and retrieved_documents:
                 step_start = time.time()
-                for filter_component in self.components["passage_filter"]:
-                    retrieved_documents = await filter_component.filter_passages(retrieved_documents, processed_query)
+                retrieved_documents, emb_count, llm_in_count, llm_out_count = await self.components["passage_filter"].filter_passages(retrieved_documents, processed_query)
+                if emb_count > 0.0:
+                    embedding_token_counts["passage_filter"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["passage_filter"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["passage_filter"] = llm_out_count
                 timing_info["passage_filter_time"] = time.time() - step_start
-                components_used["passage_filter"] = self.config.passage_filter.techniques
+                components_used["passage_filter"] = self.config_dict["passage_filter"].technique
                 logger.debug(f"Passage filtering completed in {timing_info['passage_filter_time']:.3f}s, kept {len(retrieved_documents)} documents")
             else:
                 timing_info["passage_filter_time"] = 0.0
@@ -292,11 +249,17 @@ class ModularRAGPipeline:
             final_documents = retrieved_documents
             if "passage_compress" in self.components and retrieved_documents:
                 step_start = time.time()
-                final_documents = await self.components["passage_compress"].compress_passages(
+                final_documents, emb_count, llm_in_count, llm_out_count = await self.components["passage_compress"].compress_passages(
                     retrieved_documents, processed_query
                 )
+                if emb_count > 0.0:
+                    embedding_token_counts["passage_compress"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["passage_compress"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["passage_compress"] = llm_out_count
                 timing_info["passage_compress_time"] = time.time() - step_start
-                components_used["passage_compress"] = self.config.passage_compress.technique
+                components_used["passage_compress"] = self.config_dict["passage_compress"].technique
                 logger.debug(f"Passage compression completed in {timing_info['passage_compress_time']:.3f}s")
             else:
                 timing_info["passage_compress_time"] = 0.0
@@ -305,20 +268,41 @@ class ModularRAGPipeline:
             prompt = ""
             if "prompt_maker" in self.components:
                 step_start = time.time()
-                prompt = await self.components["prompt_maker"].make_prompt(processed_query, final_documents)
+                prompt, emb_count, llm_in_count, llm_out_count = await self.components["prompt_maker"].make_prompt(processed_query, final_documents)
+                if emb_count > 0.0:
+                    embedding_token_counts["prompt_maker"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["prompt_maker"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["prompt_maker"] = llm_out_count
                 timing_info["prompt_maker_time"] = time.time() - step_start
-                components_used["prompt_maker"] = self.config.prompt_maker.technique
+                components_used["prompt_maker"] = self.config_dict["prompt_maker"].technique
                 logger.debug(f"Prompt making completed in {timing_info['prompt_maker_time']:.3f}s")
             else:
                 timing_info["prompt_maker_time"] = 0.0
             
             # Step 9: Generation
             generated_answer = ""
-            if "generator" in self.components and prompt:
-                step_start = time.time()
-                generated_answer = await self.components["generator"].generate(prompt, processed_query)
+            gen_prompt_tokens = 0
+            gen_eval_count = 0
+            step_start = time.time()
+            if "generator" in self.components:
+                if prompt:
+                    gen_result = await self.components["generator"].generate(prompt, processed_query)
+                    if isinstance(gen_result, tuple) and len(gen_result) == 4:
+                        generated_answer, emb_count, gen_prompt_tokens, gen_eval_count = gen_result
+                        if emb_count > 0.0:
+                            embedding_token_counts["generation"] = emb_count
+                        if gen_prompt_tokens > 0.0:
+                            llm_input_token_counts["generation"] = gen_prompt_tokens
+                        if gen_eval_count > 0.0:
+                            llm_output_token_counts["generation"] = gen_eval_count
+                    else:
+                        generated_answer = gen_result if isinstance(gen_result, str) else ""
+                else:
+                    logger.warning("Prompt is empty, skipping generation step.")
                 timing_info["generation_time"] = time.time() - step_start
-                components_used["generator"] = self.config.generator.model
+                components_used["generator"] = self.config_dict["generator"].model
                 logger.debug(f"Generation completed in {timing_info['generation_time']:.3f}s")
             else:
                 timing_info["generation_time"] = 0.0
@@ -328,11 +312,17 @@ class ModularRAGPipeline:
             if "post_generation" in self.components and generated_answer:
                 step_start = time.time()
                 context = Context(documents=final_documents, formatted_text=prompt)
-                final_answer = await self.components["post_generation"].post_process(
+                final_answer, emb_count, llm_in_count, llm_out_count = await self.components["post_generation"].post_process(
                     generated_answer, processed_query, context
                 )
+                if emb_count > 0.0:
+                    embedding_token_counts["post_generation"] = emb_count
+                if llm_in_count > 0.0:
+                    llm_input_token_counts["post_generation"] = llm_in_count
+                if llm_out_count > 0.0:
+                    llm_output_token_counts["post_generation"] = llm_out_count
                 timing_info["post_generation_time"] = time.time() - step_start
-                components_used["post_generation"] = self.config.post_generation.technique
+                components_used["post_generation"] = self.config_dict["post_generation"].technique
                 logger.debug(f"Post-generation completed in {timing_info['post_generation_time']:.3f}s")
             else:
                 timing_info["post_generation_time"] = 0.0
@@ -351,7 +341,10 @@ class ModularRAGPipeline:
                 final_answer=final_answer,
                 components_used=components_used,
                 total_time=total_time,
-                **timing_info
+                **timing_info,
+                embedding_token_counts=embedding_token_counts,
+                llm_input_token_counts=llm_input_token_counts,
+                llm_output_token_counts=llm_output_token_counts
             )
             
             logger.info(f"Pipeline execution completed in {total_time:.3f}s")
@@ -372,10 +365,206 @@ class ModularRAGPipeline:
                 total_time=time.time() - start_time
             )
     
+    @staticmethod
+    def build_combo_name(config_dict: dict) -> str:
+        """Build a combination name as 'category:name + ...' ignoring None names"""
+        parts = []
+        for cat, cfg in config_dict.items():
+            n = getattr(cfg, "name", None)
+            if n:
+                parts.append(f"{cat}:{n}")
+        return " + ".join(parts)
+
+    @staticmethod
+    async def run_evaluation(config_combo: dict, global_config: ModularRAGConfig) -> Any:
+        """
+        Run evaluation for all technique combinations, aggregate results, and find best combos.
+        Returns a RAGBenchmarkResult (or similar structure).
+        """
+        import copy
+        from .models import RAGTestCase, RetrievalResult, GenerationResult, RAGEvaluationResult, RAGBenchmarkResult
+        import time
+
+        start_time = time.time()
+        logger.info("Starting modular RAG evaluation pipeline...")
+
+        # Load dataset and test cases
+        dataset = RAGDataset(global_config.dataset_path)
+        test_cases = dataset.get_test_cases(global_config.max_test_cases)
+        documents = dataset.get_documents()
+        validation_result = dataset.validate_dataset()
+        if not validation_result["valid"]:
+            logger.error(f"Dataset validation failed: {validation_result['issues']}")
+            raise ValueError(f"Invalid dataset: {validation_result['issues']}")
+        logger.info(f"Loaded {len(test_cases)} test cases and {len(documents)} documents")
+
+        # Generate all technique combinations
+        technique_combos = global_config.create_config_combinations()
+        logger.info(f"Testing {len(technique_combos)} technique combinations:")
+        for combo in technique_combos:
+            logger.debug(f"  - {combo}")
+
+        all_results = []
+        for combo in technique_combos:
+            combo_name = ModularRAGPipeline.build_combo_name(combo)
+            pipeline = ModularRAGPipeline.from_config_combo(combo, global_config)
+            batch_size = global_config.eval_batch_size
+            evaluator = RAGEvaluator(combo, global_config)
+            for i in range(0, len(test_cases), batch_size):
+                batch = test_cases[i:i + batch_size]
+                for test_case in batch:
+                    try:
+                        exec_result = await pipeline.execute_pipeline(test_case.query, documents)
+                        retrieved_docs = [
+                            {"doc_id": doc.doc_id, "content": doc.content, "score": getattr(doc, 'score', None)}
+                            for doc in exec_result.retrieved_documents
+                        ]
+                        retrieval_result = RetrievalResult(
+                            query=test_case.query,
+                            retrieved_docs=retrieved_docs,
+                            embedding_model=getattr(combo["retrieval"], 'embedding_model', 'unknown'),
+                            pre_embedding_time=getattr(exec_result, 'pre_embedding_time', 0.0),
+                            query_expansion_time=getattr(exec_result, 'query_expansion_time', 0.0),
+                            retrieval_time=getattr(exec_result, 'retrieval_time', 0.0),
+                            passage_augment_time=getattr(exec_result, 'passage_augment_time', 0.0),
+                            passage_rerank_time=getattr(exec_result, 'passage_rerank_time', 0.0),
+                            passage_filter_time=getattr(exec_result, 'passage_filter_time', 0.0),
+                            passage_compress_time=getattr(exec_result, 'passage_compress_time', 0.0),
+                            prompt_maker_time=getattr(exec_result, 'prompt_maker_time', 0.0),
+                            generation_time=getattr(exec_result, 'generation_time', 0.0),
+                            post_generation_time=getattr(exec_result, 'post_generation_time', 0.0),
+                            embedding_token_counts=getattr(exec_result, 'embedding_token_counts', {}),
+                            llm_input_token_counts=getattr(exec_result, 'llm_input_token_counts', {}),
+                            llm_output_token_counts=getattr(exec_result, 'llm_output_token_counts', {}),
+                            error=None
+                        )
+                        generation_result = GenerationResult(
+                            query=test_case.query,
+                            context=exec_result.prompt,
+                            generated_answer=exec_result.generated_answer,
+                            llm_model=getattr(combo["generator"], 'model', 'unknown'),
+                            embedding_model=getattr(combo["retrieval"], 'embedding_model', 'unknown'),
+                            pre_embedding_time=getattr(exec_result, 'pre_embedding_time', 0.0),
+                            query_expansion_time=getattr(exec_result, 'query_expansion_time', 0.0),
+                            retrieval_time=getattr(exec_result, 'retrieval_time', 0.0),
+                            passage_augment_time=getattr(exec_result, 'passage_augment_time', 0.0),
+                            passage_rerank_time=getattr(exec_result, 'passage_rerank_time', 0.0),
+                            passage_filter_time=getattr(exec_result, 'passage_filter_time', 0.0),
+                            passage_compress_time=getattr(exec_result, 'passage_compress_time', 0.0),
+                            prompt_maker_time=getattr(exec_result, 'prompt_maker_time', 0.0),
+                            generation_time=getattr(exec_result, 'generation_time', 0.0),
+                            post_generation_time=getattr(exec_result, 'post_generation_time', 0.0),
+                            embedding_token_counts=getattr(exec_result, 'embedding_token_counts', {}),
+                            llm_input_token_counts=getattr(exec_result, 'llm_input_token_counts', {}),
+                            llm_output_token_counts=getattr(exec_result, 'llm_output_token_counts', {}),
+                            error=None
+                        )
+                        eval_result = await evaluator.evaluate_single_case(
+                            test_case, retrieval_result, generation_result
+                        )
+                        # Attach combo_name to the result for aggregation
+                        eval_result.combo_name = combo_name
+                        all_results.append(eval_result)
+                    except Exception as e:
+                        logger.error(f"Failed to process test case {test_case.id} for combo {combo}: {e}")
+                        error_result = RAGEvaluationResult(
+                            embedding_model=getattr(combo["retrieval"], 'embedding_model', 'unknown'),
+                            llm_model=getattr(combo["generator"], 'model', 'unknown'),
+                            test_case_id=test_case.id,
+                            retrieval_result=RetrievalResult(
+                                query=test_case.query,
+                                retrieved_docs=[],
+                                embedding_model=getattr(combo["retrieval"], 'embedding_model', 'unknown'),
+                                retrieval_time=0.0
+                            ),
+                            generation_result=GenerationResult(
+                                query=test_case.query,
+                                context="",
+                                generated_answer="",
+                                llm_model=getattr(combo["generator"], 'model', 'unknown'),
+                                embedding_model=getattr(combo["retrieval"], 'embedding_model', 'unknown'),
+                                generation_time=0.0
+                            ),
+                            metrics=RAGMetrics(
+                                recall_at_k=0.0, map_score=0.0, ndcg_at_k=0.0, mrr=0.0, eval_k=0,
+                                llm_score=0.0, semantic_similarity=0.0,
+                                retrieval_score=0.0, generation_score=0.0, overall_score=0.0
+                            ),
+                            retrieval_eval_time=0.0,
+                            generation_eval_time=0.0,
+                            total_eval_time=0.0,
+                            error=str(e)
+                        )
+                        error_result.combo_name = combo_name
+                        all_results.append(error_result)
+        # Aggregate results by combo_name
+        from collections import defaultdict
+        results_by_combo = defaultdict(list)
+        for r in all_results:
+            results_by_combo[getattr(r, 'combo_name', 'unknown')].append(r)
+        # Use the first evaluator for aggregation (all evaluators are equivalent for aggregation)
+        aggregated_metrics = {}
+        for combo_name, results in results_by_combo.items():
+            aggregated_metrics[combo_name] = await evaluator.aggregate_results(results)
+        # Find best performing combinations (reuse logic from previous pipeline)
+        def _find_best_combinations(aggregated_metrics):
+            if not aggregated_metrics:
+                return {}
+            best_combinations = {}
+            best_retrieval_score = -1
+            best_retrieval_combo = None
+            best_generation_score = -1
+            best_generation_combo = None
+            best_overall_score = -1
+            best_overall_combo = None
+            for combo, metrics in aggregated_metrics.items():
+                retrieval_score = metrics.get('retrieval_score', 0)
+                generation_score = metrics.get('generation_score', 0)
+                if retrieval_score > best_retrieval_score:
+                    best_retrieval_score = retrieval_score
+                    best_retrieval_combo = combo
+                if generation_score > best_generation_score:
+                    best_generation_score = generation_score
+                    best_generation_combo = combo
+                overall_score = metrics.get('overall_score', 0)
+                if overall_score > best_overall_score:
+                    best_overall_score = overall_score
+                    best_overall_combo = combo
+            return {
+                'retrieval': best_retrieval_combo,
+                'generation': best_generation_combo,
+                'overall': best_overall_combo
+            }
+        best_combos = _find_best_combinations(aggregated_metrics)
+        # Timing breakdown
+        successful_results = [r for r in all_results if not getattr(r, 'error', None)]
+        # Only evaluation times are aggregated here
+        total_retrieval_evaluation_time = sum(getattr(r, 'retrieval_eval_time', 0.0) for r in successful_results)
+        total_generation_evaluation_time = sum(getattr(r, 'generation_eval_time', 0.0) for r in successful_results)
+        total_runtime = time.time() - start_time
+        benchmark_result = RAGBenchmarkResult(
+            config=global_config.dict() if hasattr(global_config, 'dict') else str(global_config),
+            individual_results=all_results,
+            aggregated_metrics=aggregated_metrics,
+            total_test_cases=len(test_cases),
+            successful_cases=len(successful_results),
+            failed_cases=len(all_results) - len(successful_results),
+            total_runtime=total_runtime,
+            total_retrieval_evaluation_time=total_retrieval_evaluation_time,
+            total_generation_evaluation_time=total_generation_evaluation_time,
+            best_retrieval_combo=best_combos.get('retrieval'),
+            best_generation_combo=best_combos.get('generation'),
+            best_overall_combo=best_combos.get('overall')
+        )
+        logger.info(f"Modular RAG evaluation completed in {total_runtime:.2f}s")
+        logger.info(f"Success rate: {len(successful_results)}/{len(all_results)} ({len(successful_results)/len(all_results)*100:.1f}%)")
+        logger.info(f"Best overall combination: {best_combos.get('overall')}")
+        return benchmark_result
+    
     def get_pipeline_info(self) -> Dict[str, Any]:
         """Get information about the configured pipeline"""
         info = {
-            "pipeline_name": self.config.pipeline_name,
+            "pipeline_name": self.global_config.pipeline_name if self.global_config else "N/A",
             "enabled_components": {},
             "component_details": {}
         }
@@ -400,18 +589,18 @@ class ModularRAGPipeline:
         }
         
         # Check if at least retrieval and generator are enabled
-        if not self.config.retrieval.enabled:
+        if not self.config_dict["retrieval"].enabled:
             validation_result["errors"].append("Retrieval component must be enabled")
             validation_result["valid"] = False
         
-        if not self.config.generator.enabled:
+        if not self.config_dict["generator"].enabled:
             validation_result["errors"].append("Generator component must be enabled")
             validation_result["valid"] = False
         
         # Check for conflicting configurations
-        if (self.config.passage_rerank.enabled and 
-            "cross_encoder" in self.config.passage_rerank.techniques and
-            "llm_rerank" in self.config.passage_rerank.techniques):
+        if (self.config_dict["passage_rerank"].enabled and 
+            "cross_encoder" in self.config_dict["passage_rerank"].technique and
+            "llm_rerank" in self.config_dict["passage_rerank"].technique):
             validation_result["warnings"].append(
                 "Both cross-encoder and LLM reranking enabled - may slow down pipeline"
             )
@@ -421,25 +610,21 @@ class ModularRAGPipeline:
                         "passage_rerank", "passage_filter", "passage_compress", 
                         "prompt_maker", "post_generation"]:
             
-            config_obj = getattr(self.config, category)
+            config_obj = getattr(self.global_config, category) if self.global_config else getattr(self.config_dict, category)
             if config_obj.enabled:
                 available = self.factory.get_available_techniques(category)
                 
-                if hasattr(config_obj, 'techniques'):
-                    # Multiple techniques supported
-                    for technique in config_obj.techniques:
-                        if technique not in available:
-                            validation_result["errors"].append(
-                                f"Unknown technique '{technique}' for {category}. Available: {available}"
-                            )
-                            validation_result["valid"] = False
-                else:
-                    # Single technique
-                    technique = config_obj.technique
-                    if technique not in available:
-                        validation_result["errors"].append(
-                            f"Unknown technique '{technique}' for {category}. Available: {available}"
-                        )
-                        validation_result["valid"] = False
+                
+                technique = config_obj.technique
+                if technique not in available:
+                    validation_result["errors"].append(
+                        f"Unknown technique '{technique}' for {category}. Available: {available}"
+                    )
+                    validation_result["valid"] = False
         
         return validation_result 
+
+    @staticmethod
+    def from_config_combo(config_combo: dict, global_config: ModularRAGConfig):
+        """Convenience constructor for a pipeline from a config combo and global config"""
+        return ModularRAGPipeline(config_combo, global_config) 
