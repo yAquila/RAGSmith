@@ -364,7 +364,18 @@ class RAGExecutionResult:
     
     # Component information
     components_used: Dict[str, str] = None
+    timing_info: Optional[Dict[str, float]] = None
+    # Token counts
+    embedding_token_counts: Dict[str, float] = None
+    llm_input_token_counts: Dict[str, float] = None
+    llm_output_token_counts: Dict[str, float] = None
     
     def __post_init__(self):
         if self.components_used is None:
-            self.components_used = {} 
+            self.components_used = {}
+        if self.embedding_token_counts is None:
+            self.embedding_token_counts = {}
+        if self.llm_input_token_counts is None:
+            self.llm_input_token_counts = {}
+        if self.llm_output_token_counts is None:
+            self.llm_output_token_counts = {} 

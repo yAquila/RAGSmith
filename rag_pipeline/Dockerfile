@@ -18,6 +18,6 @@ RUN mkdir -p /root/.cache/rag_pipeline/reranker_models && \
 
 # Copy application code
 COPY . .
-
+ENV PYTHONPATH=/app
 # Default to super-quick test (30 seconds)
-CMD ["python", "main.py", "--full"] 
+CMD ["python","-m","rag_pipeline.main", "--full"] 

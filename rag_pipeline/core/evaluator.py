@@ -13,21 +13,22 @@ logger = logging.getLogger(__name__)
 class RAGEvaluator:
     """Evaluates both retrieval and generation components of RAG pipeline"""
     
-    def __init__(self, config: RAGConfig):
-        self.config = config
+    def __init__(self, config_dict: dict, global_config=None):
+        self.config_dict = config_dict  # Per-run config (one config per category)
+        self.global_config = global_config  # Global ModularRAGConfig
         self._setup_evaluators()
     
     def _setup_evaluators(self):
         """Setup evaluation utilities"""
         try:
-            # Setup LLM evaluator for generation
-            
-            # Setup semantic similarity evaluator
+            # Setup semantic similarity evaluator using the retrieval config for this run
             from util.comparison.semantic_comparison import SemanticComparison
-            # Use the first embedding model for evaluation similarity
-            eval_embedding_model = self.config.embedding_models[0] if self.config.embedding_models else "nomic-embed-text"
+            retrieval_cfg = self.config_dict.get('retrieval', None)
+            if retrieval_cfg and getattr(retrieval_cfg, 'embedding_model', None):
+                eval_embedding_model = retrieval_cfg.embedding_model
+            else:
+                eval_embedding_model = "nomic-embed-text"
             self.semantic_evaluator = SemanticComparison(eval_embedding_model)
-            
         except Exception as e:
             logger.error(f"Failed to setup evaluators: {e}")
             raise
@@ -64,7 +65,7 @@ class RAGEvaluator:
                 map_score=retrieval_metrics['map_score'],
                 ndcg_at_k=retrieval_metrics['ndcg_at_k'],
                 mrr=retrieval_metrics['mrr'],
-                eval_k=retrieval_metrics.get('eval_k', self.config.retrieval_k),
+                eval_k=retrieval_metrics.get('eval_k', self.config_dict['retrieval'].top_k),
                 
                 # Generation metrics
                 llm_score=generation_metrics['llm_score'],
@@ -102,7 +103,7 @@ class RAGEvaluator:
                 retrieval_result=retrieval_result,
                 generation_result=generation_result,
                 metrics=RAGMetrics(
-                    recall_at_k=0.0, map_score=0.0, ndcg_at_k=0.0, mrr=0.0, eval_k=self.config.retrieval_k,
+                    recall_at_k=0.0, map_score=0.0, ndcg_at_k=0.0, mrr=0.0, eval_k=self.config_dict['retrieval'].top_k,
                     llm_score=0.0, semantic_similarity=0.0,
                     retrieval_score=0.0, generation_score=0.0, overall_score=0.0
                 ),
@@ -127,17 +128,14 @@ class RAGEvaluator:
             
             # Determine the appropriate k value based on which reranking methods were applied
             # Priority: LLM reranking > Cross-encoder reranking > No reranking
-            if hasattr(retrieval_result, 'llm_reranked') and retrieval_result.llm_reranked:
-                # Use llm_rerank_top_k since LLM reranking was applied (highest priority)
-                eval_k = self.config.llm_rerank_top_k
-                logger.debug(f"Using llm_rerank_top_k={eval_k} for evaluation since LLM reranking was applied")
-            elif retrieval_result.reranked:
-                # Use rerank_top_k since cross-encoder reranking was applied
-                eval_k = self.config.rerank_top_k
-                logger.debug(f"Using rerank_top_k={eval_k} for evaluation since cross-encoder reranking was applied")
+            if 'passage_rerank' in self.config_dict and hasattr(self.config_dict['passage_rerank'], 'llm_rerank_top_k'):
+                eval_k = self.config_dict['passage_rerank'].llm_rerank_top_k
+                logger.debug(f"Using llm_rerank_top_k={eval_k} for evaluation since LLM reranking config is present")
+            elif 'passage_rerank' in self.config_dict and hasattr(self.config_dict['passage_rerank'], 'cross_encoder_top_k'):
+                eval_k = self.config_dict['passage_rerank'].cross_encoder_top_k
+                logger.debug(f"Using cross_encoder_top_k={eval_k} for evaluation since cross-encoder reranking config is present")
             else:
-                # Use retrieval_k for non-reranked results
-                eval_k = self.config.retrieval_k
+                eval_k = self.config_dict['retrieval'].top_k
                 logger.debug(f"Using retrieval_k={eval_k} for evaluation since no reranking was applied")
             
             # Use existing metrics calculation
@@ -152,7 +150,6 @@ class RAGEvaluator:
                 'mrr': metrics.get('mrr', 0.0),
                 'eval_k': eval_k  # Store the k value used for evaluation
             }
-            
         except Exception as e:
             logger.error(f"Retrieval evaluation failed: {e}")
             return {'recall_at_k': 0.0, 'map_score': 0.0, 'ndcg_at_k': 0.0, 'mrr': 0.0}
@@ -179,7 +176,6 @@ class RAGEvaluator:
                 'llm_score': llm_score,
                 'semantic_similarity': semantic_score
             }
-            
         except Exception as e:
             logger.error(f"Generation evaluation failed: {e}")
             return {'llm_score': 0.0, 'semantic_similarity': 0.0}
@@ -199,7 +195,7 @@ Return format: {{"score": 0.85}}"""
             # Patch: Use Gemini or Ollama based on model name
             from util.api.gemini_client import GeminiUtil
             from util.api.ollama_client import OllamaUtil
-            model = self.config.eval_llm_model
+            model = getattr(self.global_config, 'llm_eval_model', None) or getattr(self.config_dict.get('generator', None), 'model', 'gemma3:4b')
             if model.lower().startswith("gemini"):
                 response = GeminiUtil.get_gemini_response(model, eval_prompt)
             else:
@@ -259,83 +255,79 @@ Return format: {{"score": 0.85}}"""
         overall_score = (retrieval_weight * retrieval_score) + (generation_weight * generation_score)
         return overall_score
     
-    async def aggregate_results(self, results: List[RAGEvaluationResult]) -> Dict[str, Dict[str, float]]:
-        """Aggregate results by model combination"""
-        aggregated = {}
-        
-        # Group by model combination (including both types of reranking information)
-        by_combination = {}
-        for result in results:
-            # Build combination key including both cross-encoder and LLM reranking
-            # Use || as delimiter to avoid conflicts with model names that contain underscores, slashes, etc.
-            key_parts = [result.embedding_model]
-            
-            # Add cross-encoder reranking if applied
-            if result.retrieval_result.reranked and result.retrieval_result.rerank_model:
-                key_parts.append(result.retrieval_result.rerank_model)
-            
-            # Add LLM reranking if applied
-            if (hasattr(result.retrieval_result, 'llm_reranked') and 
-                result.retrieval_result.llm_reranked and 
-                hasattr(result.retrieval_result, 'llm_rerank_model') and
-                result.retrieval_result.llm_rerank_model):
-                key_parts.append(f"LLM-rerank({result.retrieval_result.llm_rerank_model})")
-            
-            key_parts.append(result.llm_model)
-            combo_key = "||".join(key_parts)
-            
-            if combo_key not in by_combination:
-                by_combination[combo_key] = []
-            by_combination[combo_key].append(result)
-        
-        # Calculate averages for each combination
-        for combo_key, combo_results in by_combination.items():
-            if not combo_results:
-                continue
-                
-            # Filter successful results
-            successful_results = [r for r in combo_results if not r.error]
-            
-            if not successful_results:
-                aggregated[combo_key] = {
-                    'recall_at_k': 0.0, 'map_score': 0.0, 'ndcg_at_k': 0.0, 'mrr': 0.0, 'eval_k': self.config.retrieval_k,
-                    'llm_score': 0.0, 'semantic_similarity': 0.0,
-                    'retrieval_score': 0.0, 'generation_score': 0.0, 'overall_score': 0.0,
-                    'retrieval_prediction_time': 0.0, 'generation_prediction_time': 0.0,
-                    'rerank_time': 0.0, 'reranked': False, 'rerank_model': None,
-                    'retrieval_evaluation_time': 0.0, 'generation_evaluation_time': 0.0,
-                    'total_eval_time': 0.0,
-                    'success_rate': 0.0, 'test_count': len(combo_results)
+    async def aggregate_results(self, results: List[RAGEvaluationResult]) -> Dict[str, float]:
+        """Aggregate results for a single combo_name (modular pipeline) or multiple combos (legacy)."""
+        # Canonical per-component timing keys
+        timing_keys = [
+            'pre_embedding_time', 'query_expansion_time', 'retrieval_time', 'passage_augment_time',
+            'passage_rerank_time', 'passage_filter_time', 'passage_compress_time', 'prompt_maker_time',
+            'generation_time', 'post_generation_time'
+        ]
+        # Canonical token count keys
+        token_keys = [
+            'embedding_token_counts', 'llm_input_token_counts', 'llm_output_token_counts'
+        ]
+        if results and all(hasattr(r, 'combo_name') for r in results):
+            combo_names = set(getattr(r, 'combo_name', None) for r in results)
+            if len(combo_names) == 1:
+                successful_results = [r for r in results if not r.error]
+                if not successful_results:
+                    return {
+                        'recall_at_k': 0.0, 'map_score': 0.0, 'ndcg_at_k': 0.0, 'mrr': 0.0, 'eval_k': self.config_dict['retrieval'].top_k,
+                        'llm_score': 0.0, 'semantic_similarity': 0.0,
+                        'retrieval_score': 0.0, 'generation_score': 0.0, 'overall_score': 0.0,
+                        **{k: 0.0 for k in timing_keys},
+                        'total_prediction_time': 0.0,
+                        'retrieval_evaluation_time': 0.0, 'generation_evaluation_time': 0.0, 'total_eval_time': 0.0,
+                        'success_rate': 0.0, 'test_count': len(results),
+                        'embedding_token_counts': {}, 'llm_input_token_counts': {}, 'llm_output_token_counts': {}
+                    }
+
+                avg_metrics = {
+                    'recall_at_k': sum(r.metrics.recall_at_k for r in successful_results) / len(successful_results),
+                    'map_score': sum(r.metrics.map_score for r in successful_results) / len(successful_results),
+                    'ndcg_at_k': sum(r.metrics.ndcg_at_k for r in successful_results) / len(successful_results),
+                    'mrr': sum(r.metrics.mrr for r in successful_results) / len(successful_results),
+                    'eval_k': successful_results[0].metrics.eval_k if successful_results else self.config_dict['retrieval'].top_k,
+                    'llm_score': sum(r.metrics.llm_score for r in successful_results) / len(successful_results),
+                    'semantic_similarity': sum(r.metrics.semantic_similarity for r in successful_results) / len(successful_results),
+                    'retrieval_score': sum(r.metrics.retrieval_score for r in successful_results) / len(successful_results),
+                    'generation_score': sum(r.metrics.generation_score for r in successful_results) / len(successful_results),
+                    'overall_score': sum(r.metrics.overall_score for r in successful_results) / len(successful_results),
                 }
-                continue
-            
-            # Calculate averages
-            avg_metrics = {
-                'recall_at_k': sum(r.metrics.recall_at_k for r in successful_results) / len(successful_results),
-                'map_score': sum(r.metrics.map_score for r in successful_results) / len(successful_results),
-                'ndcg_at_k': sum(r.metrics.ndcg_at_k for r in successful_results) / len(successful_results),
-                'mrr': sum(r.metrics.mrr for r in successful_results) / len(successful_results),
-                'eval_k': successful_results[0].metrics.eval_k if successful_results else self.config.retrieval_k,  # Use the eval_k from first result (should be same for all in combo)
-                'llm_score': sum(r.metrics.llm_score for r in successful_results) / len(successful_results),
-                'semantic_similarity': sum(r.metrics.semantic_similarity for r in successful_results) / len(successful_results),
-                'retrieval_score': sum(r.metrics.retrieval_score for r in successful_results) / len(successful_results),
-                'generation_score': sum(r.metrics.generation_score for r in successful_results) / len(successful_results),
-                'overall_score': sum(r.metrics.overall_score for r in successful_results) / len(successful_results),
-                'retrieval_prediction_time': sum(r.retrieval_result.retrieval_time for r in successful_results) / len(successful_results),
-                'generation_prediction_time': sum(r.generation_result.generation_time for r in successful_results) / len(successful_results),
-                'rerank_time': sum(r.retrieval_result.rerank_time for r in successful_results) / len(successful_results),
-                'reranked': any(r.retrieval_result.reranked for r in successful_results),
-                'rerank_model': successful_results[0].retrieval_result.rerank_model if successful_results else None,
-                'llm_rerank_time': sum(getattr(r.retrieval_result, 'llm_rerank_time', 0.0) for r in successful_results) / len(successful_results),
-                'llm_reranked': any(getattr(r.retrieval_result, 'llm_reranked', False) for r in successful_results),
-                'llm_rerank_model': successful_results[0].retrieval_result.llm_rerank_model if successful_results and hasattr(successful_results[0].retrieval_result, 'llm_rerank_model') else None,
-                'retrieval_evaluation_time': sum(r.retrieval_eval_time for r in successful_results) / len(successful_results),
-                'generation_evaluation_time': sum(r.generation_eval_time for r in successful_results) / len(successful_results),
-                'total_eval_time': sum(r.total_eval_time for r in successful_results) / len(successful_results),
-                'success_rate': len(successful_results) / len(combo_results),
-                'test_count': len(combo_results)
-            }
-            
-            aggregated[combo_key] = avg_metrics
-        
-        return aggregated 
+                # Per-component averages
+                for key in timing_keys:
+                    vals = [getattr(r.retrieval_result, key, 0.0) for r in successful_results]
+                    avg_metrics[key] = sum(vals) / len(vals) if vals else 0.0
+                # Total prediction time (sum of all per-component times)
+                total_pred_times = [sum(getattr(r.retrieval_result, k, 0.0) for k in timing_keys) for r in successful_results]
+                avg_metrics['total_prediction_time'] = sum(total_pred_times) / len(total_pred_times) if total_pred_times else 0.0
+                # Evaluation timing
+                avg_metrics['retrieval_evaluation_time'] = sum(r.retrieval_eval_time for r in successful_results) / len(successful_results)
+                avg_metrics['generation_evaluation_time'] = sum(r.generation_eval_time for r in successful_results) / len(successful_results)
+                avg_metrics['total_eval_time'] = sum(r.total_eval_time for r in successful_results) / len(successful_results)
+                avg_metrics['success_rate'] = len(successful_results) / len(results)
+                avg_metrics['test_count'] = len(results)
+                # Aggregate token counts per component
+                for token_key in token_keys:
+                    # Collect all component keys
+                    all_keys = set()
+                    for r in successful_results:
+                        d = getattr(r.retrieval_result, token_key, {})
+                        all_keys.update(d.keys())
+                        d2 = getattr(r.generation_result, token_key, {})
+                        all_keys.update(d2.keys())
+                    avg_token_counts = {}
+                    for comp in all_keys:
+                        vals = []
+                        for r in successful_results:
+                            v1 = getattr(r.retrieval_result, token_key, {}).get(comp, 0.0)
+                            v2 = getattr(r.generation_result, token_key, {}).get(comp, 0.0)
+                            if v1 > 0.0:
+                                vals.append(v1)
+                            if v2 > 0.0:
+                                vals.append(v2)
+                        avg_token_counts[comp] = sum(vals) / len(vals) if vals else 0.0
+                    avg_metrics[token_key] = avg_token_counts
+                return avg_metrics
+        return {}

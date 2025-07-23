@@ -186,13 +186,13 @@ async def demo_technique_showcase():
     print("🎯 Technique Showcase Demo")
     print("=" * 60)
     
-    from core.modular_configs import RAGConfig, RetrievalConfig, PassageRerankConfig, PassageFilterConfig, PromptMakerConfig, GeneratorConfig
+    from core.modular_configs import ModularRAGConfig, RetrievalConfig, PassageRerankConfig, PassageFilterConfig, PromptMakerConfig, GeneratorConfig
     
     # Show impact of different techniques
     test_query = "Explain deep learning"
     
     # Base configuration
-    base_config = RAGConfig(
+    base_config = ModularRAGConfig(
         retrieval=RetrievalConfig(
             enabled=True,
             techniques=["simple_vector_rag"],
@@ -212,14 +212,14 @@ async def demo_technique_showcase():
     # Test configurations
     test_configs = {
         "No Reranking": base_config,
-        "With Cross-Encoder": RAGConfig(
+        "With Cross-Encoder": ModularRAGConfig(
             **base_config.dict(),
             passage_rerank=PassageRerankConfig(
                 enabled=True,
                 techniques=["cross_encoder"]
             )
         ),
-        "With Filtering": RAGConfig(
+        "With Filtering": ModularRAGConfig(
             **base_config.dict(),
             passage_filter=PassageFilterConfig(
                 enabled=True,
