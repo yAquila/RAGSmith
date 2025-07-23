@@ -189,26 +189,33 @@ class PassageCompressConfig(BaseModel):
     tree_summarize_overlap: int = 200
     tree_levels: int = 3
     
-    # Long Context Readers settings
-    use_long_context: bool = False
-    context_length_limit: int = 8192
-    compression_ratio: float = 0.5
+    # LLM Summarize settings
+    provider: str = "ollama"
+    llm_summarize_model: str = "gemma3:4b"
+    llm_summarize_prompt: str = "Summarize the following document: {document}"
+    llm_summarize_max_tokens: int = 500
+    llm_summarize_temperature: float = 0.1
     
-    # Multi-LLM Model Ensemble settings
-    ensemble_models: List[str] = []
-    ensemble_method: str = "voting"  # Options: "voting", "weighted", "consensus"
+    # # Long Context Readers settings
+    # use_long_context: bool = False
+    # context_length_limit: int = 8192
+    # compression_ratio: float = 0.5
     
-    # Multi-LLM Model Fusion settings
-    fusion_models: List[str] = []
-    fusion_weights: List[float] = []
+    # # Multi-LLM Model Ensemble settings
+    # ensemble_models: List[str] = []
+    # ensemble_method: str = "voting"  # Options: "voting", "weighted", "consensus"
     
-    # Window Replacement settings
-    window_size: int = 512
-    stride: int = 256
+    # # Multi-LLM Model Fusion settings
+    # fusion_models: List[str] = []
+    # fusion_weights: List[float] = []
     
-    # Step-back Prompting settings
-    use_step_back: bool = False
-    step_back_template: str = "What are the key concepts related to: {query}"
+    # # Window Replacement settings
+    # window_size: int = 512
+    # stride: int = 256
+    
+    # # Step-back Prompting settings
+    # use_step_back: bool = False
+    # step_back_template: str = "What are the key concepts related to: {query}"
 
 
 class PromptMakerConfig(BaseModel):
@@ -223,22 +230,27 @@ class PromptMakerConfig(BaseModel):
     include_doc_numbers: bool = True
     include_scores: bool = False
     
-    # Multi-LLM Model Ensemble settings
-    ensemble_models: List[str] = []
-    ensemble_prompts: List[str] = []
-    ensemble_weights: List[float] = []
+    # # Multi-LLM Model Ensemble settings
+    # ensemble_models: List[str] = []
+    # ensemble_prompts: List[str] = []
+    # ensemble_weights: List[float] = []
     
-    # Multi-LLM Model Fusion settings
-    fusion_models: List[str] = []
-    fusion_strategy: str = "concatenate"  # Options: "concatenate", "interleave", "best"
+    # # Multi-LLM Model Fusion settings
+    # fusion_models: List[str] = []
+    # fusion_strategy: str = "concatenate"  # Options: "concatenate", "interleave", "best"
 
 
 class GeneratorConfig(BaseModel):
     """Configuration for generation techniques"""
     name: str = ""
     enabled: bool = True
+    technique: str = "llm"  # Options: "llm", "multi_llm"
     model: str = "gemma3:4b"  # CURRENTLY IMPLEMENTED: supports ollama and gemini models
-    
+
+    # Multi-LLM settings
+    models: List[str] = []
+    ensemble_llm_model: str = ""
+
     # Generation settings
     max_tokens: int = 500
     temperature: float = 0.1

@@ -1,3 +1,5 @@
 - Evaluator ı şöyle yapabiliriz belki: Her adımdan ya da bazı adımlardan sonra evaluation yapıp o adımın bir önceki adıma göre başarıyı ne kadar arttırdığına bakılabilir
 - MRR hesabıyla ilgili bir sıkıntı var sanki, hep 1.00 veriyo
 - İleride hızı ve kaynak kullanım verimini/gpu load verimini artırmak için aynı modeli kullanacak olan işlemleri art arda yapıp sonra diğer modele geçilebilir, bunlar farklı configlerde olsa bile kaydedilerek böyle bir şey yapılabilir
+- sonuçları grafikleştirmek lazım
+- 
