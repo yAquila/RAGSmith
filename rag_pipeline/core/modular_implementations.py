@@ -40,22 +40,7 @@ class ContextualChunkHeaders(PreEmbeddingComponent):
     
     async def process_documents(self, documents: List[Document]):
         """Add contextual headers to documents"""
-        processed = []
-        for doc in documents:
-            if self.config.get("add_headers", False):
-                template = self.config.get("header_template", "Document: {title}\n\n{content}")
-                title = doc.metadata.get("title", f"Document {doc.doc_id}") if doc.metadata else f"Document {doc.doc_id}"
-                
-                new_content = template.format(title=title, content=doc.content)
-                processed_doc = Document(
-                    doc_id=doc.doc_id,
-                    content=new_content,
-                    metadata=doc.metadata,
-                    score=doc.score
-                )
-                processed.append(processed_doc)
-            else:
-                processed.append(doc)
+        logger.warning("ContextualChunkHeaders not fully implemented yet")
         return processed, 0.0, 0.0, 0.0
 
 
@@ -436,6 +421,66 @@ class TreeSummarize(PassageCompressComponent):
         logger.warning("TreeSummarize not fully implemented yet")
         return documents, 0.0, 0.0, 0.0
 
+class LLMSummarize(PassageCompressComponent):
+    """Compress passages using LLM"""
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        self.client = None
+        self._setup_client()
+    
+    def _setup_client(self):
+        """Setup the appropriate LLM client"""
+        provider = self.config.get("provider", "ollama")
+        
+        try:
+            if provider.lower() == "ollama":
+                from util.api.ollama_client import OllamaUtil
+                self.client = OllamaUtil
+            elif provider.lower() == "gemini":
+                from util.api.gemini_client import GeminiUtil
+                self.client = GeminiUtil
+            else:
+                raise ValueError(f"Unsupported provider: {provider}")
+                
+        except Exception as e:
+            logger.error(f"Failed to setup {provider} client: {e}")
+            raise
+
+    async def compress_passages(self, documents: List[Document], query: Query):
+        """Compress documents using LLM"""
+        compressed_documents = []
+        total_prompt_tokens = 0
+        total_eval_count = 0
+        for doc in documents:
+            default_prompt = """
+You are an efficient Document Compressor. Your task is to read the document provided below and extract its key information.
+
+### Instructions
+1.  Identify and list the main facts, figures, names, and core concepts from the text.
+2.  Present these points as a concise, factual list.
+3.  Do not add any information, opinions, or interpretations not present in the original text.
+4.  The output should be a dense, information-rich summary.
+
+### Document to Compress
+{document}
+
+### Compressed Summary
+            """
+            prompt = self.config.get("prompt", default_prompt)
+            response = self.client.get_ollama_response(self.config.get("model", "gemma3:4b"), prompt.format(document=doc.content))
+            if isinstance(response, dict):
+                total_prompt_tokens += float(response.get('prompt_tokens', len(prompt.split())))
+                total_eval_count += float(response.get('eval_count', 0))
+                compressed_documents.append(Document(
+                    doc_id=doc.doc_id,
+                    content=response.get('response', ''),
+                    score=doc.score,
+                    metadata=doc.metadata
+                ))
+            else:
+                compressed_documents.append(doc)
+
+        return compressed_documents, 0.0, total_prompt_tokens, total_eval_count
 
 # ==================== PROMPT MAKER IMPLEMENTATIONS ====================
 
@@ -533,6 +578,124 @@ class LLMGenerator(GeneratorComponent):
             logger.error(f"Generation failed: {e}")
             return ("", 0.0, float(len(prompt.split())), 0.0)
 
+class MultiLLMGenerator(GeneratorComponent):
+    """Generate answer using multiple LLMs"""
+    
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        self.clients = {}
+        self._setup_client()
+    
+    def _setup_client(self):
+        """Setup the appropriate LLM client"""
+        models = self.config.get("models", ["llama3.2:1b", "gemma3:4b"])
+        ensemble_llm_model = self.config.get("ensemble_llm_model", "gemma3:4b")
+        if ensemble_llm_model.lower().startswith("gemini"):
+            from util.api.gemini_client import GeminiUtil
+            self.clients[ensemble_llm_model] = GeminiUtil
+        else:
+            from util.api.ollama_client import OllamaUtil
+            self.clients[ensemble_llm_model] = OllamaUtil
+
+        for model in models:
+            if model.lower().startswith("gemini"):
+                from util.api.gemini_client import GeminiUtil
+                self.clients[model] = GeminiUtil
+            else:
+                from util.api.ollama_client import OllamaUtil
+                self.clients[model] = OllamaUtil
+
+    async def generate(self, prompt: str, query: Query):
+        """
+        Generate answers using multiple LLMs. 
+        Returns a list of tuples: (generated_text, prompt_tokens, eval_count, model_name)
+        """
+        models = self.config.get("models", ["llama3.2:1b", "gemma3:4b"])
+        results = []
+        for model in models:
+            try:
+                client = self.clients.get(model)
+                if client is None:
+                    logger.error(f"No client found for model: {model}")
+                    results.append(("", 0.0, float(len(prompt.split())), 0.0, model))
+                    continue
+
+                if model.lower().startswith("gemini"):
+                    response = client.get_gemini_response(model, prompt)
+                    if isinstance(response, dict):
+                        generated_text = response.get('response', '')
+                        prompt_tokens = float(len(prompt.split()))
+                        eval_count = float(len(generated_text.split()))
+                        results.append((generated_text, 0.0, prompt_tokens, eval_count, model))
+                    else:
+                        results.append((str(response), 0.0, float(len(prompt.split())), 0.0, model))
+                else:  # ollama
+                    response = client.get_ollama_response(model, prompt)
+                    if isinstance(response, dict):
+                        generated_text = response.get('response', '')
+                        prompt_tokens = float(response.get('prompt_tokens', len(prompt.split())))
+                        eval_count = float(response.get('eval_count', len(generated_text.split())))
+                        results.append((generated_text, 0.0, prompt_tokens, eval_count, model))
+                    else:
+                        results.append((str(response), 0.0, float(len(prompt.split())), 0.0, model))
+            except Exception as e:
+                logger.error(f"Generation failed for model {model}: {e}")
+                results.append(("", 0.0, float(len(prompt.split())), 0.0, model))
+
+
+
+        original_prompt_with_context = prompt
+        total_prompt_tokens = sum([result[2] for result in results])
+        total_eval_count = sum([result[3] for result in results])
+        logger.info(f"Total prompt tokens: {total_prompt_tokens}")
+        logger.info(f"Total eval count: {total_eval_count}")
+        ensemble_prompt = """
+You are a response synthesizer. Your task is to create one high-quality final answer from several different drafts.
+
+**[THE ORIGINAL PROMPT]**
+---
+{original_prompt_with_context}
+---
+
+**[DRAFT RESPONSES TO COMBINE]**
+---
+"""
+
+        for draft_response in results:
+            ensemble_prompt += f"**Response from {draft_response[4]}:**\n{draft_response[0]}\n\n"
+
+        ensemble_prompt += """      
+---
+
+
+**[YOUR TASK]**
+1.  Read the **[THE ORIGINAL PROMPT]** to understand the user's goal.
+2.  Review each **[DRAFT RESPONSE]**.
+3.  Identify the best and most correct parts from all drafts.
+4.  Combine these best parts into a single, clear, and helpful answer.
+5.  Remove any repeated information.
+6.  Your output must ONLY be the final, combined answer. Do not add any explanation of your process.
+
+**[FINAL ANSWER]**
+
+"""
+        ensemble_llm_client = self.clients[self.config.get("ensemble_llm_model", "gemma3:4b")]
+        if self.config.get("ensemble_llm_model", "gemma3:4b").lower().startswith("gemini"):
+            ensemble_llm_response = ensemble_llm_client.get_gemini_response(self.config.get("ensemble_llm_model", "gemma3:4b"), ensemble_prompt)
+        else:
+            ensemble_llm_response = ensemble_llm_client.get_ollama_response(self.config.get("ensemble_llm_model", "gemma3:4b"), ensemble_prompt)
+        logger.debug(f"Ensemble LLM prompt: {ensemble_prompt}")
+        logger.debug(f"Ensemble LLM response: {ensemble_llm_response}")
+        if isinstance(ensemble_llm_response, dict):
+            ensemble_llm_generated_text = ensemble_llm_response.get('response', '')
+            ensemble_llm_prompt_tokens = float(ensemble_llm_response.get('prompt_tokens', len(ensemble_prompt.split())))
+            ensemble_llm_eval_count = float(ensemble_llm_response.get('eval_count', len(ensemble_llm_generated_text.split())))
+            logger.info(f"Ensemble LLM prompt tokens: {ensemble_llm_prompt_tokens}")
+            logger.info(f"Ensemble LLM eval count: {ensemble_llm_eval_count}")
+            return ensemble_llm_generated_text, 0.0, total_prompt_tokens + ensemble_llm_prompt_tokens, total_eval_count + ensemble_llm_eval_count
+        else:
+            return str(ensemble_llm_response), 0.0, total_prompt_tokens + float(len(ensemble_prompt.split())), total_eval_count + float(len(str(ensemble_llm_response).split()))
+
 
 # ==================== POST-GENERATION IMPLEMENTATIONS ====================
 
@@ -587,6 +750,7 @@ COMPONENT_REGISTRY = {
     "passage_compress": {
         "none": NonePassageCompress,
         "tree_summarize": TreeSummarize,
+        "llm_summarize": LLMSummarize,
     },
     "prompt_maker": {
         "simple_listing": SimpleListingPromptMaker,
@@ -594,6 +758,7 @@ COMPONENT_REGISTRY = {
     },
     "generator": {
         "llm": LLMGenerator,
+        "multi_llm": MultiLLMGenerator,
     },
     "post_generation": {
         "none": NonePostGeneration,

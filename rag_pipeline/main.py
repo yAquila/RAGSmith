@@ -29,7 +29,7 @@ async def run_rag_evaluation():
     """Run RAG evaluation with multiple model combinations"""
     
     # Configuration for Modular RAG evaluation
-    from core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PromptMakerConfig
+    from core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig
     from core.modular_pipeline import ModularRAGPipeline
     
     # Example ModularRAGConfig with multiple generator configs
@@ -58,62 +58,22 @@ async def run_rag_evaluation():
             #     similarity_metric="cosine"
             # )
         ],
-
-        # Passage filter: one config
-        passage_filter=[
-            PassageFilterConfig(
-                name="simple_threshold",
-                enabled=True,
-                technique="simple_threshold",
-                top_k=10,
-            ),
-            PassageFilterConfig(
-                name="similarity_threshold",
-                enabled=True,
-                technique="similarity_threshold",
-                similarity_threshold=0.65,
-                min_passages=1,
-                max_passages=10,
-            ),
-        ],
-
-        # Prompt maker: one config
-        prompt_maker=[
-            PromptMakerConfig(
-                name="simple_listing",
-                enabled=True,
-                technique="simple_listing"
-            )
-        ],
-
-        # Generator: two configs
-        generator=[
-            GeneratorConfig(
-                name="llama3.2:1b-t0.3",
-                enabled=True,
-                model="llama3.2:1b",
-                temperature=0.3,
-                provider="ollama",
-                max_tokens=500
-            )
-        ],
-
         # Passage rerank: (optional, can add more configs)
         passage_rerank=[
-            PassageRerankConfig(
-                name="ce_rerank_bge",
-                enabled=True,
-                technique="cross_encoder",
-                cross_encoder_top_k=5,
-                cross_encoder_model="BAAI/bge-reranker-v2-m3",
-            ), 
-            PassageRerankConfig(
-                name="llm_rerank_gemma",
-                enabled=True,
-                technique="llm_rerank",
-                llm_rerank_top_k=5,
-                llm_rerank_model="gemma3:4b",
-            ),
+            # PassageRerankConfig(
+            #     name="ce_rerank_bge",
+            #     enabled=True,
+            #     technique="cross_encoder",
+            #     cross_encoder_top_k=5,
+            #     cross_encoder_model="BAAI/bge-reranker-v2-m3",
+            # ), 
+            # PassageRerankConfig(
+            #     name="llm_rerank_gemma",
+            #     enabled=True,
+            #     technique="llm_rerank",
+            #     llm_rerank_top_k=5,
+            #     llm_rerank_model="gemma3:4b",
+            # ),
             # PassageRerankConfig(
             #     name="cellm_parallel_rerank",
             #     enabled=True,
@@ -135,17 +95,83 @@ async def run_rag_evaluation():
             )
         ],
 
+        # Passage filter: one config
+        passage_filter=[
+            PassageFilterConfig(
+                name="simple_threshold",
+                enabled=True,
+                technique="simple_threshold",
+                top_k=10,
+            )
+        ],
+        passage_compress=[
+            # PassageCompressConfig(
+            #     name="llm_summarize",
+            #     enabled=True,
+            #     technique="llm_summarize",
+            #     provider="ollama",
+            #     llm_summarize_model="gemma3:4b",
+            #     llm_summarize_max_tokens=500,
+            #     llm_summarize_temperature=0.1,
+            # ),
+            PassageCompressConfig(
+                name="no_compress",
+                enabled=True,
+                technique="none",
+            )
+        ],
+
+        # Prompt maker: one config
+        prompt_maker=[
+            PromptMakerConfig(
+                name="simple_listing",
+                enabled=True,
+                technique="simple_listing"
+            )
+        ],
+
+        # Generator: two configs
+        generator=[
+            GeneratorConfig(
+                name="llama3.2:1b-t0.3",
+                enabled=True,
+                technique="llm",
+                model="llama3.2:1b",
+                temperature=0.3,
+                provider="ollama",
+                max_tokens=500
+            ),
+            GeneratorConfig(
+                name="gemma3:4b-t0.1",
+                enabled=True,
+                technique="llm",
+                model="gemma3:4b",
+                temperature=0.1,
+                provider="ollama",
+                max_tokens=500
+            ),
+            GeneratorConfig(
+                name="multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemini-2.0-flash",
+                enabled=True,
+                technique="multi_llm",
+                models=["llama3.2:1b", "gemma3:4b"],
+                ensemble_llm_model="gemini-2.0-flash",
+            )
+        ],
+
+        
+
         # Other categories as empty lists
         pre_embedding=[],
         query_expansion=[],
         passage_augment=[],
-        passage_compress=[],
+        
         post_generation=[],
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=2,
-        eval_batch_size=1,
+        max_test_cases=20,
+        eval_batch_size=5,
         parallel_execution=True,
         max_workers=4,
         cache_enabled=True
