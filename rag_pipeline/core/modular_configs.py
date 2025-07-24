@@ -82,22 +82,24 @@ class RetrievalConfig(BaseModel):
     score_threshold: float = 0.5
     
     # Simple VectorRAG settings
-    embedding_model: str = "sentence-transformers/all-mpnet-base-v2"
+    embedding_model: str = "mxbai-embed-large"
     similarity_metric: str = "cosine"  # Options: "cosine", "euclidean", "dot_product"
     
     # Keyword Search (BM25) settings
-    use_bm25: bool = False
     bm25_k1: float = 1.2
     bm25_b: float = 0.75
+    remove_stopwords: bool = True
+    apply_stemming: bool = False
+    use_advanced_tokenization: bool = False
     
-    # Hybrid Cross-encoder settings
-    use_hybrid_cc: bool = False
-    hybrid_alpha: float = 0.5  # Weight for semantic vs keyword search
-    
-    # Hybrid RRF (Reciprocal Rank Fusion) settings
-    use_hybrid_rrf: bool = False
-    rrf_k: int = 60
-    rrf_weights: Dict[str, float] = {"semantic": 0.7, "keyword": 0.3}
+    # Hybrid Search settings
+    combination_method: str = "convex_combination"  # Options: "convex_combination", "reciprocal_rank_fusion"
+    vector_k: int = 10
+    keyword_k: int = 10
+    rrf_k: int = 60 # Only used for reciprocal rank fusion
+    alpha: float = 0.5  # Vector weight (0.0 = keyword only, 1.0 = vector only) # Only used for convex combination
+    normalize_before_combination: bool = True # Only used for convex combination
+    normalization_method: str = "minmax"  # Options: "minmax", "zscore" # Only used for convex combination
 
 
 class PassageAugmentConfig(BaseModel):

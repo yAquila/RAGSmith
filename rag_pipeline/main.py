@@ -56,7 +56,40 @@ async def run_rag_evaluation():
             #     top_k=10,
             #     embedding_model="nomic-embed-text",
             #     similarity_metric="cosine"
-            # )
+            # ),
+            RetrievalConfig(
+                name="bm25",
+                enabled=True,
+                technique="keyword_search_bm25",
+                top_k=10,
+                bm25_k1=1.2,
+                bm25_b=0.75,
+                remove_stopwords=True,
+                apply_stemming=False,
+                use_advanced_tokenization=False
+            ),
+            RetrievalConfig(
+                name="hybrid_search_cc",
+                enabled=True,
+                technique="hybrid_search",
+                top_k=10,
+                combination_method="convex_combination",
+                vector_k=10,
+                keyword_k=10,
+                alpha=0.5,
+                normalize_before_combination=True,
+                normalization_method="minmax"
+            ),
+            RetrievalConfig(
+                name="hybrid_search_rrf",
+                enabled=True,
+                technique="hybrid_search",
+                top_k=10,
+                combination_method="reciprocal_rank_fusion",
+                vector_k=10,
+                keyword_k=10,
+                rrf_k=60
+            )
         ],
         # Passage rerank: (optional, can add more configs)
         passage_rerank=[
@@ -198,7 +231,7 @@ async def run_rag_evaluation():
         raise
 
 async def save_markdown_results(results, filename: str = None):
-    """Save evaluation results to Markdown file using generate_markdown_report."""
+    """Save evaluation results to Markdown file using generate_markdown_report method."""
     from datetime import datetime
     if not filename:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

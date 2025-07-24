@@ -10,7 +10,7 @@ Currently implemented techniques (marked as ✅ in the original system):
 - LLM model (Generator)
 """
 
-import time
+import time, os, sys
 import logging
 from typing import List, Dict, Any, Optional, Union, TypedDict
 from abc import ABC, abstractmethod
@@ -144,7 +144,7 @@ class SimpleVectorRAG(RetrievalComponent):
             import os
             
             # Use embedding model from config
-            embedding_model = self.config.get("embedding_model", "sentence-transformers/all-mpnet-base-v2")
+            embedding_model = self.config.get("embedding_model", "mxbai-embed-large")
             
             # Use dataset path from config or default
             dataset_path = self.config.get("dataset_path")
@@ -229,26 +229,386 @@ class SimpleVectorRAG(RetrievalComponent):
 class KeywordSearchBM25(RetrievalComponent):
     """BM25-based keyword search retrieval"""
     
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        from util.retrieval_utils.bm25_utils import BM25IndexManager
+        self.index_manager = BM25IndexManager(config)
+        self._setup_bm25_index()
+    
+    def _setup_bm25_index(self):
+        """Setup the BM25 index"""
+        try:
+            from util.vectorstore.dataset_utils import generate_dataset_hash_from_file
+            
+            # Use dataset path from config or default
+            dataset_path = self.config.get("dataset_path")
+            if not dataset_path:
+                dataset_path = os.path.join(
+                    os.path.dirname(os.path.dirname(__file__)), 
+                    "default_datasets", 
+                    "retrieval_docs.csv"
+                )
+            
+            dataset_hash = generate_dataset_hash_from_file(dataset_path)
+            self.index_manager.setup_index_paths(dataset_hash, dataset_path)
+            
+            # Load existing index or create new one
+            if self.index_manager.load_existing_index():
+                logger.info("Loaded existing BM25 index")
+            else:
+                logger.info("Creating new BM25 index")
+                self._create_index_from_csv(dataset_path)
+                
+        except Exception as e:
+            logger.error(f"Failed to setup BM25 index: {e}")
+            raise
+    
+    def _create_index_from_csv(self, dataset_path: str):
+        """Create BM25 index from CSV dataset"""
+        import pandas as pd
+        
+        try:
+            df = pd.read_csv(dataset_path)
+            
+            documents = []
+            for _, row in df.iterrows():
+                doc = Document(
+                    doc_id=str(row.get('doc_id', '')),
+                    content=str(row.get('text', '')),
+                    metadata=row.to_dict()
+                )
+                documents.append(doc)
+            
+            return self.index_documents(documents)
+            
+        except Exception as e:
+            logger.error(f"Failed to create index from dataset: {e}")
+            return False
+    
+
     async def retrieve(self, query: Query, k: Optional[int] = None) -> RetrievalResult:
         """Retrieve documents using BM25 keyword search"""
-        # Placeholder implementation
-        # In a full implementation, this would use libraries like rank_bm25
-        logger.warning("KeywordSearchBM25 not fully implemented yet")
-        result = RetrievalResult(
-            documents=[],
-            embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
-        )
-        return result
+        k = k or self.config.get("top_k", 10)
+        
+        try:
+            # Perform search using index manager
+            query_text = query.processed_text
+            results = self.index_manager.search(query_text, k)
+            
+            # Convert to Document objects
+            documents = []
+            for result in results:
+                doc = Document(
+                    doc_id=result.get("doc_id", ""),
+                    content=result.get("content", ""),
+                    score=result.get("score", 0.0),
+                    metadata=result.get("metadata", {})
+                )
+                documents.append(doc)
+            
+            # Calculate token count for the query (simple split for consistency)
+            
+            result = RetrievalResult(
+                documents=documents,
+                embedding_token_count=0.0,
+                llm_input_token_count=0.0,
+                llm_output_token_count=0.0
+            )
+            return result
+            
+        except Exception as e:
+            logger.error(f"BM25 retrieval failed: {e}")
+            return RetrievalResult(
+                documents=[],
+                embedding_token_count=0.0,
+                llm_input_token_count=0.0,
+                llm_output_token_count=0.0
+            )
     
     async def index_documents(self, documents: List[Document]) -> bool:
         """Index documents for BM25 search"""
-        # Placeholder implementation
-        logger.warning("KeywordSearchBM25 indexing not fully implemented yet")
-        return False
+        try:
+            return self.index_manager.index_documents(documents)
+        except Exception as e:
+            logger.error(f"Failed to index documents: {e}")
+            return False
+    
+    def get_index_stats(self) -> Dict[str, Any]:
+        """Get statistics about the BM25 index"""
+        return self.index_manager.get_stats()
 
+from util.retrieval_utils.combination_utils import ScoreCombiner, RankFusionCombiner, HybridUtils
 
+class HybridSearch(RetrievalComponent):
+    """
+    Unified hybrid retrieval class supporting both Convex Combination (CC) and 
+    Reciprocal Rank Fusion (RRF) methods for combining vector and keyword search results.
+    """
+    
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        self.vector_retriever = None
+        self.keyword_retriever = None
+        self.combination_method = self.config.get("combination_method", "convex_combination")
+        self._setup_retrievers()
+    
+    def _setup_retrievers(self):
+        """Setup vector and keyword retrievers"""
+        try:
+            # Create vector retriever
+            self.vector_retriever = SimpleVectorRAG(self.config)
+            
+            self.keyword_retriever = KeywordSearchBM25(self.config)
+            
+            logger.info(f"Hybrid search initialized with combination method: {self.combination_method}")
+            
+        except Exception as e:
+            logger.error(f"Failed to setup hybrid retrievers: {e}")
+            raise
+    
+    async def retrieve(self, query: Query, k: Optional[int] = None) -> RetrievalResult:
+        """Retrieve documents using the configured hybrid approach"""
+        k = k or self.config.get("top_k", 10)
+        
+        try:
+            # Get retrieval parameters
+            vector_k = self.config.get("vector_k", k * 2)  # Retrieve more initially
+            keyword_k = self.config.get("keyword_k", k * 2)
+            
+            # Perform vector search
+            vector_result = await self.vector_retriever.retrieve(query, vector_k)
+            vector_results = []
+            for doc in vector_result.get('documents', []):
+                vector_results.append({
+                    'doc_id': doc.doc_id,
+                    'content': doc.content,
+                    'score': doc.score,
+                    'metadata': doc.metadata
+                })
+            
+            # Perform keyword search
+            keyword_result = await self.keyword_retriever.retrieve(query, keyword_k)
+            keyword_results = []
+            for doc in keyword_result.get('documents', []):
+                keyword_results.append({
+                    'doc_id': doc.doc_id,
+                    'content': doc.content,
+                    'score': doc.score,
+                    'metadata': doc.metadata
+                })
+            
+            # Combine results based on the configured method
+            if self.combination_method == "convex_combination":
+                combined_results = self._combine_with_convex_combination(vector_results, keyword_results)
+            else:  # reciprocal_rank_fusion
+                combined_results = self._combine_with_rrf(vector_results, keyword_results)
+            
+            # Filter to top k
+            top_results = HybridUtils.filter_top_k(combined_results, k)
+            
+            # Convert back to Document objects
+            documents = []
+            for result in top_results:
+                doc = Document(
+                    doc_id=result['doc_id'],
+                    content=result['content'],
+                    score=result['score'],
+                    metadata=result['metadata']
+                )
+                documents.append(doc)
+            
+            # Calculate token counts (sum from both retrievers)
+            total_embedding_tokens = (
+                vector_result.get('embedding_token_count', 0.0) + 
+                keyword_result.get('embedding_token_count', 0.0)
+            )
+            
+            # Create final result
+            result = RetrievalResult(
+                documents=documents,
+                embedding_token_count=total_embedding_tokens,
+                llm_input_token_count=0.0,
+                llm_output_token_count=0.0
+            )
+            
+            # Log combination statistics if debug mode is enabled
+            if self.config.get("debug_mode", False):
+                overlap_stats = HybridUtils.calculate_result_overlap(vector_results, keyword_results)
+                logger.info(f"Hybrid search ({self.combination_method}) stats: {overlap_stats}")
+            
+            return result
+            
+        except Exception as e:
+            logger.error(f"Hybrid search retrieval failed: {e}")
+            return RetrievalResult(
+                documents=[],
+                embedding_token_count=0.0,
+                llm_input_token_count=0.0,
+                llm_output_token_count=0.0
+            )
+    
+    def _combine_with_convex_combination(
+        self, 
+        vector_results: List[Dict[str, Any]], 
+        keyword_results: List[Dict[str, Any]]
+    ) -> List[Dict[str, Any]]:
+        """Combine results using convex combination"""
+        try:
+            alpha = self.config.get("alpha", 0.5)
+            normalize_before_combination = self.config.get("normalize_before_combination", True)
+            
+            # Normalize scores before combination if requested
+            if normalize_before_combination:
+                normalization_method = self.config.get("normalization_method", "minmax")
+                if normalization_method == "minmax":
+                    vector_results = HybridUtils.normalize_scores_minmax(vector_results)
+                    keyword_results = HybridUtils.normalize_scores_minmax(keyword_results)
+                elif normalization_method == "zscore":
+                    vector_results = HybridUtils.normalize_scores_zscore(vector_results)
+                    keyword_results = HybridUtils.normalize_scores_zscore(keyword_results)
+            
+            return ScoreCombiner.convex_combination(vector_results, keyword_results, alpha)
+            
+        except Exception as e:
+            logger.error(f"Convex combination failed: {e}")
+            return []
+    
+    def _combine_with_rrf(
+        self, 
+        vector_results: List[Dict[str, Any]], 
+        keyword_results: List[Dict[str, Any]]
+    ) -> List[Dict[str, Any]]:
+        """Combine results using Reciprocal Rank Fusion"""
+        try:
+            rrf_k = self.config.get("rrf_k", 60)
+            return RankFusionCombiner.reciprocal_rank_fusion(vector_results, keyword_results, rrf_k)
+            
+        except Exception as e:
+            logger.error(f"RRF combination failed: {e}")
+            return []
+    
+    async def index_documents(self, documents: List[Document]) -> bool:
+        """Index documents in both vector and keyword retrievers"""
+        try:
+            # Index in both retrievers
+            vector_success = await self.vector_retriever.index_documents(documents)
+            keyword_success = await self.keyword_retriever.index_documents(documents)
+            
+            # Return True only if both succeed
+            success = vector_success and keyword_success
+            
+            if success:
+                logger.info(f"Successfully indexed {len(documents)} documents in hybrid search system")
+            else:
+                logger.warning("Partial indexing failure in hybrid search system")
+            
+            return success
+            
+        except Exception as e:
+            logger.error(f"Failed to index documents in hybrid search: {e}")
+            return False
+    
+    def get_retriever_stats(self) -> Dict[str, Any]:
+        """Get statistics from both retrievers and hybrid configuration"""
+        try:
+            stats = {
+                'vector_stats': {},
+                'keyword_stats': {},
+                'hybrid_config': {
+                    'combination_method': self.combination_method,
+                    'vector_k': self.config.get("vector_k", self.config.get("top_k", 10) * 2),
+                    'keyword_k': self.config.get("keyword_k", self.config.get("top_k", 10) * 2),
+                }
+            }
+            
+            # Add method-specific parameters
+            if self.combination_method == "convex_combination":
+                stats['hybrid_config'].update({
+                    'alpha': self.config.get("alpha", 0.5),
+                    'normalize_before_combination': self.config.get("normalize_before_combination", True),
+                    'normalization_method': self.config.get("normalization_method", "minmax")
+                })
+            else:  # reciprocal_rank_fusion
+                stats['hybrid_config'].update({
+                    'rrf_k': self.config.get("rrf_k", 60)
+                })
+            
+            # Get vector stats if available
+            if hasattr(self.vector_retriever, 'get_index_stats'):
+                stats['vector_stats'] = self.vector_retriever.get_index_stats()
+            
+            # Get keyword stats if available
+            if hasattr(self.keyword_retriever, 'get_index_stats'):
+                stats['keyword_stats'] = self.keyword_retriever.get_index_stats()
+            
+            return stats
+            
+        except Exception as e:
+            logger.error(f"Failed to get retriever stats: {e}")
+            return {}
+    
+    
+    async def get_combination_analysis(self, query: Query, k: Optional[int] = None) -> Dict[str, Any]:
+        """
+        Analyze the combination process for debugging purposes.
+        Returns detailed information about how results were combined.
+        """
+        try:
+            k = k or self.config.get("top_k", 10)
+            vector_k = self.config.get("vector_k", k * 2)
+            keyword_k = self.config.get("keyword_k", k * 2)
+            
+            # Get individual results
+            vector_result = await self.vector_retriever.retrieve(query, vector_k)
+            keyword_result = await self.keyword_retriever.retrieve(query, keyword_k)
+            
+            vector_results = [
+                {'doc_id': doc.doc_id, 'content': doc.content, 'score': doc.score, 'metadata': doc.metadata}
+                for doc in vector_result.get('documents', [])
+            ]
+            keyword_results = [
+                {'doc_id': doc.doc_id, 'content': doc.content, 'score': doc.score, 'metadata': doc.metadata}
+                for doc in keyword_result.get('documents', [])
+            ]
+            
+            # Calculate overlap
+            overlap_stats = HybridUtils.calculate_result_overlap(vector_results, keyword_results)
+            
+            # Get combined results
+            if self.combination_method == "convex_combination":
+                combined_results = self._combine_with_convex_combination(vector_results, keyword_results)
+                method_params = {
+                    'alpha': self.config.get("alpha", 0.5),
+                    'normalize_before_combination': self.config.get("normalize_before_combination", True),
+                    'normalization_method': self.config.get("normalization_method", "minmax")
+                }
+            else:
+                combined_results = self._combine_with_rrf(vector_results, keyword_results)
+                method_params = {
+                    'rrf_k': self.config.get("rrf_k", 60)
+                }
+            
+            analysis = {
+                'query_text': query.processed_text,
+                'combination_method': self.combination_method,
+                'parameters': {
+                    'vector_k': vector_k,
+                    'keyword_k': keyword_k,
+                    'final_k': k,
+                    **method_params
+                },
+                'overlap_stats': overlap_stats,
+                'vector_top_5': [r['doc_id'] for r in vector_results[:5]],
+                'keyword_top_5': [r['doc_id'] for r in keyword_results[:5]],
+                'combined_top_5': [r['doc_id'] for r in combined_results[:5]],
+                'total_unique_docs': len(combined_results)
+            }
+            
+            return analysis
+            
+        except Exception as e:
+            logger.error(f"Failed to generate combination analysis: {e}")
+            return {}
 # ==================== PASSAGE AUGMENT IMPLEMENTATIONS ====================
 
 class PassageAugmentResult(TypedDict):
@@ -656,7 +1016,7 @@ You are an efficient Document Compressor. Your task is to read the document prov
 # ==================== PROMPT MAKER IMPLEMENTATIONS ====================
 
 class PromptMakerResult(TypedDict):
-    prompt: str
+    text: str
     embedding_token_count: float
     llm_input_token_count: float
     llm_output_token_count: float
@@ -689,7 +1049,7 @@ class SimpleListingPromptMaker(PromptMakerComponent):
         # Format final prompt
         prompt = template.format(context=context, query=query.processed_text)
         result = PromptMakerResult(
-            prompt=prompt,
+            text=prompt,
             embedding_token_count=0.0,
             llm_input_token_count=0.0,
             llm_output_token_count=0.0
@@ -705,7 +1065,7 @@ class MultiLLMEnsemblePromptMaker(PromptMakerComponent):
         # Placeholder implementation
         logger.warning("MultiLLMEnsemblePromptMaker not fully implemented yet")
         result = PromptMakerResult(
-            prompt=prompt,
+            text=prompt,
             embedding_token_count=0.0,
             llm_input_token_count=0.0,
             llm_output_token_count=0.0
@@ -716,7 +1076,7 @@ class MultiLLMEnsemblePromptMaker(PromptMakerComponent):
 # ==================== GENERATOR IMPLEMENTATIONS ====================
 
 class GeneratorResult(TypedDict):
-    generated_text: str
+    text: str
     embedding_token_count: float
     llm_input_token_count: float
     llm_output_token_count: float
@@ -756,7 +1116,7 @@ class LLMGenerator(GeneratorComponent):
                 response = self.client.get_ollama_response(model, prompt)
                 if isinstance(response, dict):
                     result = GeneratorResult(
-                        generated_text=response.get('response', ''),
+                        text=response.get('response', ''),
                         embedding_token_count=0.0,
                         llm_input_token_count=float(response.get('prompt_tokens', len(prompt.split()))),
                         llm_output_token_count=float(response.get('eval_count', 0))
@@ -764,7 +1124,7 @@ class LLMGenerator(GeneratorComponent):
                     return result
                 else:
                     result = GeneratorResult(
-                        generated_text=str(response),
+                        text=str(response),
                         embedding_token_count=0.0,
                         llm_input_token_count=float(len(prompt.split())),
                         llm_output_token_count=float(len(str(response).split()))
@@ -774,7 +1134,7 @@ class LLMGenerator(GeneratorComponent):
                 response = self.client.get_gemini_response(model, prompt)
                 if isinstance(response, dict):
                     result = GeneratorResult(
-                        generated_text=response.get('response', ''),
+                        text=response.get('response', ''),
                         embedding_token_count=0.0,
                         llm_input_token_count=float(len(prompt.split())),
                         llm_output_token_count=float(len(response.get('response', '').split()))
@@ -782,7 +1142,7 @@ class LLMGenerator(GeneratorComponent):
                     return result
                 else:
                     result = GeneratorResult(
-                        generated_text=str(response),
+                        text=str(response),
                         embedding_token_count=0.0,
                         llm_input_token_count=float(len(prompt.split())),
                         llm_output_token_count=float(len(str(response).split()))
@@ -791,7 +1151,7 @@ class LLMGenerator(GeneratorComponent):
         except Exception as e:
             logger.error(f"Generation failed: {e}")
             result = GeneratorResult(
-                generated_text="",
+                text="",
                 embedding_token_count=0.0,
                 llm_input_token_count=float(len(prompt.split())),
                 llm_output_token_count=0.0
@@ -914,7 +1274,7 @@ You are a response synthesizer. Your task is to create one high-quality final an
             logger.info(f"Ensemble LLM prompt tokens: {ensemble_llm_prompt_tokens}")
             logger.info(f"Ensemble LLM eval count: {ensemble_llm_eval_count}")
             result = GeneratorResult(
-                generated_text=ensemble_llm_generated_text,
+                text=ensemble_llm_generated_text,
                 embedding_token_count=0.0,
                 llm_input_token_count=total_prompt_tokens + ensemble_llm_prompt_tokens,
                 llm_output_token_count=total_eval_count + ensemble_llm_eval_count
@@ -922,7 +1282,7 @@ You are a response synthesizer. Your task is to create one high-quality final an
             return result
         else:
             result = GeneratorResult(
-                generated_text=str(ensemble_llm_response),
+                text=str(ensemble_llm_response),
                 embedding_token_count=0.0,
                 llm_input_token_count=total_prompt_tokens + len(ensemble_prompt.split()),
                 llm_output_token_count=total_eval_count + len(str(ensemble_llm_response).split())
@@ -933,7 +1293,7 @@ You are a response synthesizer. Your task is to create one high-quality final an
 # ==================== POST-GENERATION IMPLEMENTATIONS ====================
 
 class PostGenerationResult(TypedDict):
-    generated_text: str
+    text: str
     embedding_token_count: float
     llm_input_token_count: float
     llm_output_token_count: float
@@ -944,7 +1304,7 @@ class NonePostGeneration(PostGenerationComponent):
     async def post_process(self, generated_answer: str, query: Query, context: Context) -> PostGenerationResult:
         """Return answer unchanged"""
         result = PostGenerationResult(
-            generated_text=generated_answer,
+            text=generated_answer,
             embedding_token_count=0.0,
             llm_input_token_count=0.0,
             llm_output_token_count=0.0
@@ -960,7 +1320,7 @@ class ReflectionRevising(PostGenerationComponent):
         # Placeholder implementation
         logger.warning("ReflectionRevising not fully implemented yet")
         result = PostGenerationResult(
-            generated_text=generated_answer,
+            text=generated_answer,
             embedding_token_count=0.0,
             llm_input_token_count=0.0,
             llm_output_token_count=0.0
@@ -982,7 +1342,8 @@ COMPONENT_REGISTRY = {
     },
     "retrieval": {
         "simple_vector_rag": SimpleVectorRAG,
-        "keyword_search": KeywordSearchBM25,
+        "keyword_search_bm25": KeywordSearchBM25,
+        "hybrid_search": HybridSearch,
     },
     "passage_augment": {
         "none": NonePassageAugment,
