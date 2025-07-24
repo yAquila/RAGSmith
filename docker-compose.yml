@@ -64,7 +64,7 @@ services:
     networks: ['rag_pipeline_network']
     restart: unless-stopped
     volumes:
-      - ./rag_pipeline:/app
+      - .:/app
       - rag_pipeline_reranker_cache:/root/.cache/rag_pipeline/reranker_models  # Persistent cache for reranker models
     depends_on:
       - qdrant2

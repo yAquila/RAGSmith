@@ -139,8 +139,8 @@ class SimpleVectorRAG(RetrievalComponent):
     def _setup_vectorstore(self):
         """Setup the vector store"""
         try:
-            from util.vectorstore.qdrant_store import QdrantVectorStore
-            from util.vectorstore.dataset_utils import generate_dataset_hash_from_file
+            from rag_pipeline.util.vectorstore.qdrant_store import QdrantVectorStore
+            from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_file
             import os
             
             # Use embedding model from config
@@ -231,14 +231,14 @@ class KeywordSearchBM25(RetrievalComponent):
     
     def __init__(self, config: Dict[str, Any]):
         super().__init__(config)
-        from util.retrieval_utils.bm25_utils import BM25IndexManager
+        from rag_pipeline.util.retrieval_utils.bm25_utils import BM25IndexManager
         self.index_manager = BM25IndexManager(config)
         self._setup_bm25_index()
     
     def _setup_bm25_index(self):
         """Setup the BM25 index"""
         try:
-            from util.vectorstore.dataset_utils import generate_dataset_hash_from_file
+            from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_file
             
             # Use dataset path from config or default
             dataset_path = self.config.get("dataset_path")
@@ -337,7 +337,7 @@ class KeywordSearchBM25(RetrievalComponent):
         """Get statistics about the BM25 index"""
         return self.index_manager.get_stats()
 
-from util.retrieval_utils.combination_utils import ScoreCombiner, RankFusionCombiner, HybridUtils
+from rag_pipeline.util.retrieval_utils.combination_utils import ScoreCombiner, RankFusionCombiner, HybridUtils
 
 class HybridSearch(RetrievalComponent):
     """
@@ -675,7 +675,7 @@ class CrossEncoderRerank(PassageRerankComponent):
     async def rerank_passages(self, documents: List[Document], query: Query) -> PassageRerankResult:
         """Rerank documents using cross-encoder model"""
         try:
-            from util.rerank.reranker import get_reranker
+            from rag_pipeline.util.rerank.reranker import get_reranker
             
             # Get reranker configuration
             model_name = self.config.get("cross_encoder_model", "BAAI/bge-reranker-v2-m3")
@@ -731,7 +731,7 @@ class LLMRerank(PassageRerankComponent):
     async def rerank_passages(self, documents: List[Document], query: Query) -> PassageRerankResult:
         """Rerank documents using LLM"""
         try:
-            from util.rerank.llm_reranker import get_llm_reranker
+            from rag_pipeline.util.rerank.llm_reranker import get_llm_reranker
             
             # Get LLM reranker configuration
             model_name = self.config.get("llm_rerank_model", "gpt-3.5-turbo")
@@ -789,7 +789,7 @@ class CELLM_ParallelRerank(PassageRerankComponent):
     async def rerank_passages(self, documents: List[Document], query: Query) -> PassageRerankResult:
         """Rerank documents using CELLM-based parallel reranking"""
         try:
-            from util.rerank.parallel_reranker import get_parallel_reranker
+            from rag_pipeline.util.rerank.parallel_reranker import get_parallel_reranker
             
             # Get reranker configuration
             ce_model = self.config.get("ce_model", "BAAI/bge-reranker-v2-m3")
@@ -959,10 +959,10 @@ class LLMSummarize(PassageCompressComponent):
         
         try:
             if provider.lower() == "ollama":
-                from util.api.ollama_client import OllamaUtil
+                from rag_pipeline.util.api.ollama_client import OllamaUtil
                 self.client = OllamaUtil
             elif provider.lower() == "gemini":
-                from util.api.gemini_client import GeminiUtil
+                from rag_pipeline.util.api.gemini_client import GeminiUtil
                 self.client = GeminiUtil
             else:
                 raise ValueError(f"Unsupported provider: {provider}")
@@ -1096,10 +1096,10 @@ class LLMGenerator(GeneratorComponent):
         
         try:
             if provider.lower() == "ollama":
-                from util.api.ollama_client import OllamaUtil
+                from rag_pipeline.util.api.ollama_client import OllamaUtil
                 self.client = OllamaUtil
             elif provider.lower() == "gemini":
-                from util.api.gemini_client import GeminiUtil
+                from rag_pipeline.util.api.gemini_client import GeminiUtil
                 self.client = GeminiUtil
             else:
                 raise ValueError(f"Unsupported provider: {provider}")
@@ -1171,18 +1171,18 @@ class MultiLLMGenerator(GeneratorComponent):
         models = self.config.get("models", ["llama3.2:1b", "gemma3:4b"])
         ensemble_llm_model = self.config.get("ensemble_llm_model", "gemma3:4b")
         if ensemble_llm_model.lower().startswith("gemini"):
-            from util.api.gemini_client import GeminiUtil
+            from rag_pipeline.util.api.gemini_client import GeminiUtil
             self.clients[ensemble_llm_model] = GeminiUtil
         else:
-            from util.api.ollama_client import OllamaUtil
+            from rag_pipeline.util.api.ollama_client import OllamaUtil
             self.clients[ensemble_llm_model] = OllamaUtil
 
         for model in models:
             if model.lower().startswith("gemini"):
-                from util.api.gemini_client import GeminiUtil
+                from rag_pipeline.util.api.gemini_client import GeminiUtil
                 self.clients[model] = GeminiUtil
             else:
-                from util.api.ollama_client import OllamaUtil
+                from rag_pipeline.util.api.ollama_client import OllamaUtil
                 self.clients[model] = OllamaUtil
 
     async def generate(self, prompt: str, query: Query) -> GeneratorResult:

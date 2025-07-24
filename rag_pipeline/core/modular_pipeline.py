@@ -28,7 +28,7 @@ from .modular_implementations import (
 )
 from .dataset import RAGDataset
 from .evaluator import RAGEvaluator
-from core.models import RetrievalResult, GenerationResult, RAGMetrics
+from rag_pipeline.core.models import RetrievalResult, GenerationResult, RAGMetrics
 
 logger = logging.getLogger(__name__)
 
@@ -414,6 +414,7 @@ class ModularRAGPipeline:
             evaluator = RAGEvaluator(combo, global_config)
             for i in range(0, len(test_cases), batch_size):
                 batch = test_cases[i:i + batch_size]
+                logger.info(f"Processing batch {i//batch_size + 1} of {len(test_cases)//batch_size}")
                 for test_case in batch:
                     try:
                         exec_result = await pipeline.execute_pipeline(test_case.query, documents)

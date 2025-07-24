@@ -15,8 +15,8 @@ import logging
 import time
 from typing import List, Optional
 
-from core import ModularRAGPipeline, ModularRAGConfig
-from configs.basic_modular_config import get_basic_config   
+from rag_pipeline.core import ModularRAGPipeline, ModularRAGConfig
+from rag_pipeline.configs.basic_modular_config import get_basic_config   
 
 # Configure logging
 logging.basicConfig(
@@ -29,8 +29,8 @@ async def run_rag_evaluation():
     """Run RAG evaluation with multiple model combinations"""
     
     # Configuration for Modular RAG evaluation
-    from core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig
-    from core.modular_pipeline import ModularRAGPipeline
+    from rag_pipeline.core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig
+    from rag_pipeline.core.modular_pipeline import ModularRAGPipeline
     
     # Example ModularRAGConfig with multiple generator configs
     config = ModularRAGConfig(
@@ -203,7 +203,7 @@ async def run_rag_evaluation():
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=2,
+        max_test_cases=10,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,

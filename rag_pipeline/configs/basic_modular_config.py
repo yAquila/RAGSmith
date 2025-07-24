@@ -11,7 +11,7 @@ This configuration uses only the currently implemented techniques (green backgro
 This is equivalent to your current system but using the new modular framework.
 """
 
-from core.modular_configs import (
+from rag_pipeline.core.modular_configs import (
     ModularRAGConfig, PreEmbeddingConfig, QueryExpansionConfig, RetrievalConfig,
     PassageAugmentConfig, PassageRerankConfig, PassageFilterConfig,
     PassageCompressConfig, PromptMakerConfig, GeneratorConfig, PostGenerationConfig
@@ -143,7 +143,7 @@ def get_no_rerank_config() -> ModularRAGConfig:
 if __name__ == "__main__":
     # Example usage
     import asyncio
-    from core.modular_pipeline import ModularRAGPipeline
+    from rag_pipeline.core.modular_pipeline import ModularRAGPipeline
     
     async def test_basic_config():
         """Test the basic configuration"""
