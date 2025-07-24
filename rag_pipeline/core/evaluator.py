@@ -22,7 +22,7 @@ class RAGEvaluator:
         """Setup evaluation utilities"""
         try:
             # Setup semantic similarity evaluator using the retrieval config for this run
-            from util.comparison.semantic_comparison import SemanticComparison
+            from rag_pipeline.util.comparison.semantic_comparison import SemanticComparison
             retrieval_cfg = self.config_dict.get('retrieval', None)
             if retrieval_cfg and getattr(retrieval_cfg, 'embedding_model', None):
                 eval_embedding_model = retrieval_cfg.embedding_model
@@ -139,7 +139,7 @@ class RAGEvaluator:
                 logger.debug(f"Using retrieval_k={eval_k} for evaluation since no reranking was applied")
             
             # Use existing metrics calculation
-            from util.vectorstore.metrics import RetrievalMetrics
+            from rag_pipeline.util.vectorstore.metrics import RetrievalMetrics
             k_values = [eval_k]
             metrics = RetrievalMetrics.calculate_all_metrics(retrieved_doc_ids, relevant_doc_ids_str, k_values)
             
@@ -193,8 +193,8 @@ Ground Truth: {ground_truth}
 Return format: {{"score": 0.85}}"""
             
             # Patch: Use Gemini or Ollama based on model name
-            from util.api.gemini_client import GeminiUtil
-            from util.api.ollama_client import OllamaUtil
+            from rag_pipeline.util.api.gemini_client import GeminiUtil
+            from rag_pipeline.util.api.ollama_client import OllamaUtil
             model = getattr(self.global_config, 'llm_eval_model', None) or getattr(self.config_dict.get('generator', None), 'model', 'gemma3:4b')
             if model.lower().startswith("gemini"):
                 response = GeminiUtil.get_gemini_response(model, eval_prompt)

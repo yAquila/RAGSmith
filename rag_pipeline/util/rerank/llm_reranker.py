@@ -6,7 +6,7 @@ import logging
 import json
 import re
 from typing import List, Dict, Any, Optional
-from util.api.ollama_client import OllamaUtil
+from rag_pipeline.util.api.ollama_client import OllamaUtil
 
 logger = logging.getLogger(__name__)
 
