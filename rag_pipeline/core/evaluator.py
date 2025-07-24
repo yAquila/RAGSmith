@@ -27,7 +27,7 @@ class RAGEvaluator:
             if retrieval_cfg and getattr(retrieval_cfg, 'embedding_model', None):
                 eval_embedding_model = retrieval_cfg.embedding_model
             else:
-                eval_embedding_model = "nomic-embed-text"
+                eval_embedding_model = "mxbai-embed-large"
             self.semantic_evaluator = SemanticComparison(eval_embedding_model)
         except Exception as e:
             logger.error(f"Failed to setup evaluators: {e}")
