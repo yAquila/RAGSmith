@@ -20,6 +20,12 @@ from .modular_framework import (
 )
 from .modular_configs import ModularRAGConfig
 from .modular_implementations import COMPONENT_REGISTRY
+# Add TypedDict imports for result types
+from .modular_implementations import (
+    PreEmbeddingResult, QueryExpansionResult, RetrievalResult as RetrievalComponentResult,
+    PassageAugmentResult, PassageRerankResult, PassageFilterResult, PassageCompressResult,
+    PromptMakerResult, GeneratorResult, PostGenerationResult
+)
 from .dataset import RAGDataset
 from .evaluator import RAGEvaluator
 from core.models import RetrievalResult, GenerationResult, RAGMetrics
@@ -139,7 +145,12 @@ class ModularRAGPipeline:
             # Step 1: Pre-embedding (document preprocessing)
             if documents and "pre_embedding" in self.components:
                 step_start = time.time()
-                documents, emb_count, llm_in_count, llm_out_count = await self.components["pre_embedding"].process_documents(documents)
+                pre_embedding_result: PreEmbeddingResult = await self.components["pre_embedding"].process_documents(documents)
+                documents = pre_embedding_result.get('documents_to_embed', documents)
+                documents_for_metadata = pre_embedding_result.get('documents_for_metadata', [])
+                emb_count = pre_embedding_result.get('embedding_token_count', 0.0)
+                llm_in_count = pre_embedding_result.get('llm_input_token_count', 0.0)
+                llm_out_count = pre_embedding_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["pre_embedding"] = emb_count
                 if llm_in_count > 0.0:
@@ -155,7 +166,11 @@ class ModularRAGPipeline:
             # Step 2: Query expansion/refinement
             if "query_expansion" in self.components:
                 step_start = time.time()
-                processed_query, emb_count, llm_in_count, llm_out_count = await self.components["query_expansion"].expand_query(query)
+                query_expansion_result: QueryExpansionResult = await self.components["query_expansion"].expand_query(query)
+                processed_query = query_expansion_result.get('query', Query(original_text=query, processed_text=query))
+                emb_count = query_expansion_result.get('embedding_token_count', 0.0)
+                llm_in_count = query_expansion_result.get('llm_input_token_count', 0.0)
+                llm_out_count = query_expansion_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["query_expansion"] = emb_count
                 if llm_in_count > 0.0:
@@ -179,10 +194,14 @@ class ModularRAGPipeline:
                     await self.components["retrieval"].index_documents(documents)
                 
                 # Retrieve relevant documents
-                retrieved_documents, emb_count, llm_in_count, llm_out_count = await self.components["retrieval"].retrieve(
+                retrieval_result: RetrievalComponentResult = await self.components["retrieval"].retrieve(
                     processed_query, 
                     k=self.config_dict["retrieval"].top_k
                 )
+                retrieved_documents = retrieval_result.get('documents', [])
+                emb_count = retrieval_result.get('embedding_token_count', 0.0)
+                llm_in_count = retrieval_result.get('llm_input_token_count', 0.0)
+                llm_out_count = retrieval_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["retrieval"] = emb_count
                 if llm_in_count > 0.0:
@@ -198,9 +217,13 @@ class ModularRAGPipeline:
             # Step 4: Passage augmentation
             if "passage_augment" in self.components and retrieved_documents:
                 step_start = time.time()
-                retrieved_documents, emb_count, llm_in_count, llm_out_count = await self.components["passage_augment"].augment_passages(
+                passage_augment_result: PassageAugmentResult = await self.components["passage_augment"].augment_passages(
                     retrieved_documents, processed_query
                 )
+                retrieved_documents = passage_augment_result.get('documents', retrieved_documents)
+                emb_count = passage_augment_result.get('embedding_token_count', 0.0)
+                llm_in_count = passage_augment_result.get('llm_input_token_count', 0.0)
+                llm_out_count = passage_augment_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["passage_augment"] = emb_count
                 if llm_in_count > 0.0:
@@ -216,7 +239,11 @@ class ModularRAGPipeline:
             # Step 5: Passage reranking (can have multiple rerankers)
             if "passage_rerank" in self.components and retrieved_documents:
                 step_start = time.time()
-                retrieved_documents, emb_count, llm_in_count, llm_out_count = await self.components["passage_rerank"].rerank_passages(retrieved_documents, processed_query)
+                passage_rerank_result: PassageRerankResult = await self.components["passage_rerank"].rerank_passages(retrieved_documents, processed_query)
+                retrieved_documents = passage_rerank_result.get('documents', retrieved_documents)
+                emb_count = passage_rerank_result.get('embedding_token_count', 0.0)
+                llm_in_count = passage_rerank_result.get('llm_input_token_count', 0.0)
+                llm_out_count = passage_rerank_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["passage_rerank"] = emb_count
                 if llm_in_count > 0.0:
@@ -232,7 +259,11 @@ class ModularRAGPipeline:
             # Step 6: Passage filtering (can have multiple filters)
             if "passage_filter" in self.components and retrieved_documents:
                 step_start = time.time()
-                retrieved_documents, emb_count, llm_in_count, llm_out_count = await self.components["passage_filter"].filter_passages(retrieved_documents, processed_query)
+                passage_filter_result: PassageFilterResult = await self.components["passage_filter"].filter_passages(retrieved_documents, processed_query)
+                retrieved_documents = passage_filter_result.get('documents', retrieved_documents)
+                emb_count = passage_filter_result.get('embedding_token_count', 0.0)
+                llm_in_count = passage_filter_result.get('llm_input_token_count', 0.0)
+                llm_out_count = passage_filter_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["passage_filter"] = emb_count
                 if llm_in_count > 0.0:
@@ -249,9 +280,13 @@ class ModularRAGPipeline:
             final_documents = retrieved_documents
             if "passage_compress" in self.components and retrieved_documents:
                 step_start = time.time()
-                final_documents, emb_count, llm_in_count, llm_out_count = await self.components["passage_compress"].compress_passages(
+                passage_compress_result: PassageCompressResult = await self.components["passage_compress"].compress_passages(
                     retrieved_documents, processed_query
                 )
+                final_documents = passage_compress_result.get('documents', retrieved_documents)
+                emb_count = passage_compress_result.get('embedding_token_count', 0.0)
+                llm_in_count = passage_compress_result.get('llm_input_token_count', 0.0)
+                llm_out_count = passage_compress_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["passage_compress"] = emb_count
                 if llm_in_count > 0.0:
@@ -268,7 +303,11 @@ class ModularRAGPipeline:
             prompt = ""
             if "prompt_maker" in self.components:
                 step_start = time.time()
-                prompt, emb_count, llm_in_count, llm_out_count = await self.components["prompt_maker"].make_prompt(processed_query, final_documents)
+                prompt_maker_result: PromptMakerResult = await self.components["prompt_maker"].make_prompt(processed_query, final_documents)
+                prompt = prompt_maker_result.get('prompt', "")
+                emb_count = prompt_maker_result.get('embedding_token_count', 0.0)
+                llm_in_count = prompt_maker_result.get('llm_input_token_count', 0.0)
+                llm_out_count = prompt_maker_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["prompt_maker"] = emb_count
                 if llm_in_count > 0.0:
@@ -288,9 +327,12 @@ class ModularRAGPipeline:
             step_start = time.time()
             if "generator" in self.components:
                 if prompt:
-                    gen_result = await self.components["generator"].generate(prompt, processed_query)
-                    if isinstance(gen_result, tuple) and len(gen_result) == 4:
-                        generated_answer, emb_count, gen_prompt_tokens, gen_eval_count = gen_result
+                    gen_result: GeneratorResult = await self.components["generator"].generate(prompt, processed_query)
+                    if isinstance(gen_result, dict):
+                        generated_answer = gen_result.get('generated_text', "")
+                        emb_count = gen_result.get('embedding_token_count', 0.0)
+                        gen_prompt_tokens = gen_result.get('llm_input_token_count', 0.0)
+                        gen_eval_count = gen_result.get('llm_output_token_count', 0.0)
                         if emb_count > 0.0:
                             embedding_token_counts["generation"] = emb_count
                         if gen_prompt_tokens > 0.0:
@@ -312,9 +354,13 @@ class ModularRAGPipeline:
             if "post_generation" in self.components and generated_answer:
                 step_start = time.time()
                 context = Context(documents=final_documents, formatted_text=prompt)
-                final_answer, emb_count, llm_in_count, llm_out_count = await self.components["post_generation"].post_process(
+                post_generation_result: PostGenerationResult = await self.components["post_generation"].post_process(
                     generated_answer, processed_query, context
                 )
+                final_answer = post_generation_result.get('generated_text', generated_answer)
+                emb_count = post_generation_result.get('embedding_token_count', 0.0)
+                llm_in_count = post_generation_result.get('llm_input_token_count', 0.0)
+                llm_out_count = post_generation_result.get('llm_output_token_count', 0.0)
                 if emb_count > 0.0:
                     embedding_token_counts["post_generation"] = emb_count
                 if llm_in_count > 0.0:
