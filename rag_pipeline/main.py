@@ -132,15 +132,15 @@ async def run_rag_evaluation():
 
         # Generator: two configs
         generator=[
-            GeneratorConfig(
-                name="llama3.2:1b-t0.3",
-                enabled=True,
-                technique="llm",
-                model="llama3.2:1b",
-                temperature=0.3,
-                provider="ollama",
-                max_tokens=500
-            ),
+            # GeneratorConfig(
+            #     name="llama3.2:1b-t0.3",
+            #     enabled=True,
+            #     technique="llm",
+            #     model="llama3.2:1b",
+            #     temperature=0.3,
+            #     provider="ollama",
+            #     max_tokens=500
+            # ),
             GeneratorConfig(
                 name="gemma3:4b-t0.1",
                 enabled=True,
@@ -149,14 +149,14 @@ async def run_rag_evaluation():
                 temperature=0.1,
                 provider="ollama",
                 max_tokens=500
-            ),
-            GeneratorConfig(
-                name="multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemini-2.0-flash",
-                enabled=True,
-                technique="multi_llm",
-                models=["llama3.2:1b", "gemma3:4b"],
-                ensemble_llm_model="gemini-2.0-flash",
             )
+            # GeneratorConfig(
+            #     name="multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemini-2.0-flash",
+            #     enabled=True,
+            #     technique="multi_llm",
+            #     models=["llama3.2:1b", "gemma3:4b"],
+            #     ensemble_llm_model="gemini-2.0-flash",
+            # )
         ],
 
         
@@ -170,8 +170,8 @@ async def run_rag_evaluation():
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=20,
-        eval_batch_size=5,
+        max_test_cases=2,
+        eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,
         cache_enabled=True
