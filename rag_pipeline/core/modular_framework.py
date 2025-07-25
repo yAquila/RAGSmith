@@ -34,6 +34,14 @@ class Document:
     content: str
     metadata: Optional[Dict[str, Any]] = None
     score: Optional[float] = None
+    def to_dict(self):
+        """Convert Document to dictionary"""
+        return {
+            "doc_id": self.doc_id,
+            "content": self.content,
+            "metadata": self.metadata,
+            "score": self.score
+        }
 
 
 @dataclass

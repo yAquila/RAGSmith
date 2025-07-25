@@ -100,10 +100,24 @@ class SimpleMultiQuery(QueryExpansionComponent):
         # For now, just create simple variations
         # In a full implementation, this would use an LLM
         expanded_queries = [
-            query,
-            f"What is {query}?",
-            f"Tell me about {query}",
-            f"Explain {query}"
+            Query(
+                original_text=f"What is {query}?",
+                processed_text=f"What is {query}?",
+                expanded_queries=None,
+                metadata={}
+            ),
+            Query(
+                original_text=f"Tell me about {query}",
+                processed_text=f"Tell me about {query}",
+                expanded_queries=None,
+                metadata={}
+            ),
+            Query(
+                original_text=f"Explain {query}",
+                processed_text=f"Explain {query}",
+                expanded_queries=None,
+                metadata={}
+            )
         ][:self.config.get("num_expanded_queries", 3)]
         
         result = QueryExpansionResult(
@@ -371,12 +385,10 @@ class HybridSearch(RetrievalComponent):
         k = k or self.config.get("top_k", 10)
         
         try:
-            # Get retrieval parameters
-            vector_k = self.config.get("vector_k", k * 2)  # Retrieve more initially
-            keyword_k = self.config.get("keyword_k", k * 2)
-            
+            excessive_k = self.config.get("excessive_k", k * 3)
+
             # Perform vector search
-            vector_result = await self.vector_retriever.retrieve(query, vector_k)
+            vector_result = await self.vector_retriever.retrieve(query, excessive_k)
             vector_results = []
             for doc in vector_result.get('documents', []):
                 vector_results.append({
@@ -387,7 +399,7 @@ class HybridSearch(RetrievalComponent):
                 })
             
             # Perform keyword search
-            keyword_result = await self.keyword_retriever.retrieve(query, keyword_k)
+            keyword_result = await self.keyword_retriever.retrieve(query, excessive_k)
             keyword_results = []
             for doc in keyword_result.get('documents', []):
                 keyword_results.append({
@@ -400,8 +412,12 @@ class HybridSearch(RetrievalComponent):
             # Combine results based on the configured method
             if self.combination_method == "convex_combination":
                 combined_results = self._combine_with_convex_combination(vector_results, keyword_results)
-            else:  # reciprocal_rank_fusion
+            elif self.combination_method == "reciprocal_rank_fusion":
                 combined_results = self._combine_with_rrf(vector_results, keyword_results)
+            elif self.combination_method == "borda_count":
+                combined_results = self._combine_with_borda_count(vector_results, keyword_results)
+            else:
+                raise ValueError(f"Invalid combination method: {self.combination_method}")
             
             # Filter to top k
             top_results = HybridUtils.filter_top_k(combined_results, k)
@@ -454,21 +470,13 @@ class HybridSearch(RetrievalComponent):
     ) -> List[Dict[str, Any]]:
         """Combine results using convex combination"""
         try:
-            alpha = self.config.get("alpha", 0.5)
-            normalize_before_combination = self.config.get("normalize_before_combination", True)
-            
-            # Normalize scores before combination if requested
-            if normalize_before_combination:
-                normalization_method = self.config.get("normalization_method", "minmax")
-                if normalization_method == "minmax":
-                    vector_results = HybridUtils.normalize_scores_minmax(vector_results)
-                    keyword_results = HybridUtils.normalize_scores_minmax(keyword_results)
-                elif normalization_method == "zscore":
-                    vector_results = HybridUtils.normalize_scores_zscore(vector_results)
-                    keyword_results = HybridUtils.normalize_scores_zscore(keyword_results)
-            
-            return ScoreCombiner.convex_combination(vector_results, keyword_results, alpha)
-            
+            return HybridUtils.combine_with_convex_combination(
+                results_list=[vector_results, keyword_results],
+                method_names=["vector","keyword"],
+                weights=[self.config.get("alpha", 0.5),1-self.config.get("alpha", 0.5)],
+                normalization_method=self.config.get("normalization_method", "minmax"),
+                excessive_k=self.config.get("excessive_k", 60)
+                )
         except Exception as e:
             logger.error(f"Convex combination failed: {e}")
             return []
@@ -480,13 +488,32 @@ class HybridSearch(RetrievalComponent):
     ) -> List[Dict[str, Any]]:
         """Combine results using Reciprocal Rank Fusion"""
         try:
-            rrf_k = self.config.get("rrf_k", 60)
-            return RankFusionCombiner.reciprocal_rank_fusion(vector_results, keyword_results, rrf_k)
+            return HybridUtils.combine_with_rrf(
+                results_list=[vector_results, keyword_results],
+                method_names=["vector","keyword"],
+                excessive_k=self.config.get("excessive_k", 60)
+            )
             
         except Exception as e:
             logger.error(f"RRF combination failed: {e}")
             return []
     
+    def _combine_with_borda_count(
+        self, 
+        vector_results: List[Dict[str, Any]], 
+        keyword_results: List[Dict[str, Any]]
+    ) -> List[Dict[str, Any]]:
+        """Combine results using Borda count"""
+        try:
+            return HybridUtils.combine_with_borda_count(
+                results_list=[vector_results, keyword_results],
+                method_names=["vector","keyword"],
+                excessive_k=self.config.get("excessive_k", 60)
+            )
+        except Exception as e:
+            logger.error(f"Borda count combination failed: {e}")
+            return []
+
     async def index_documents(self, documents: List[Document]) -> bool:
         """Index documents in both vector and keyword retrievers"""
         try:
@@ -516,8 +543,7 @@ class HybridSearch(RetrievalComponent):
                 'keyword_stats': {},
                 'hybrid_config': {
                     'combination_method': self.combination_method,
-                    'vector_k': self.config.get("vector_k", self.config.get("top_k", 10) * 2),
-                    'keyword_k': self.config.get("keyword_k", self.config.get("top_k", 10) * 2),
+                    'excessive_k': self.config.get("excessive_k", 60)
                 }
             }
             
@@ -525,12 +551,11 @@ class HybridSearch(RetrievalComponent):
             if self.combination_method == "convex_combination":
                 stats['hybrid_config'].update({
                     'alpha': self.config.get("alpha", 0.5),
-                    'normalize_before_combination': self.config.get("normalize_before_combination", True),
                     'normalization_method': self.config.get("normalization_method", "minmax")
                 })
             else:  # reciprocal_rank_fusion
                 stats['hybrid_config'].update({
-                    'rrf_k': self.config.get("rrf_k", 60)
+                    'excessive_k': self.config.get("excessive_k", 60)
                 })
             
             # Get vector stats if available
@@ -547,7 +572,6 @@ class HybridSearch(RetrievalComponent):
             logger.error(f"Failed to get retriever stats: {e}")
             return {}
     
-    
     async def get_combination_analysis(self, query: Query, k: Optional[int] = None) -> Dict[str, Any]:
         """
         Analyze the combination process for debugging purposes.
@@ -555,12 +579,11 @@ class HybridSearch(RetrievalComponent):
         """
         try:
             k = k or self.config.get("top_k", 10)
-            vector_k = self.config.get("vector_k", k * 2)
-            keyword_k = self.config.get("keyword_k", k * 2)
+            excessive_k = self.config.get("excessive_k", k * 3)
             
             # Get individual results
-            vector_result = await self.vector_retriever.retrieve(query, vector_k)
-            keyword_result = await self.keyword_retriever.retrieve(query, keyword_k)
+            vector_result = await self.vector_retriever.retrieve(query, excessive_k)
+            keyword_result = await self.keyword_retriever.retrieve(query, excessive_k)
             
             vector_results = [
                 {'doc_id': doc.doc_id, 'content': doc.content, 'score': doc.score, 'metadata': doc.metadata}
@@ -579,21 +602,27 @@ class HybridSearch(RetrievalComponent):
                 combined_results = self._combine_with_convex_combination(vector_results, keyword_results)
                 method_params = {
                     'alpha': self.config.get("alpha", 0.5),
-                    'normalize_before_combination': self.config.get("normalize_before_combination", True),
-                    'normalization_method': self.config.get("normalization_method", "minmax")
+                    'normalization_method': self.config.get("normalization_method", "minmax"),
+                    'excessive_k': excessive_k
                 }
-            else:
+            elif self.combination_method == "reciprocal_rank_fusion":
                 combined_results = self._combine_with_rrf(vector_results, keyword_results)
                 method_params = {
-                    'rrf_k': self.config.get("rrf_k", 60)
+                    'excessive_k': excessive_k
                 }
+            elif self.combination_method == "borda_count":
+                combined_results = self._combine_with_borda_count(vector_results, keyword_results)
+                method_params = {
+                    'excessive_k': excessive_k
+                }
+            else:
+                raise ValueError(f"Invalid combination method: {self.combination_method}")
             
             analysis = {
                 'query_text': query.processed_text,
                 'combination_method': self.combination_method,
                 'parameters': {
-                    'vector_k': vector_k,
-                    'keyword_k': keyword_k,
+                    'excessive_k': excessive_k,
                     'final_k': k,
                     **method_params
                 },
@@ -609,6 +638,7 @@ class HybridSearch(RetrievalComponent):
         except Exception as e:
             logger.error(f"Failed to generate combination analysis: {e}")
             return {}
+
 # ==================== PASSAGE AUGMENT IMPLEMENTATIONS ====================
 
 class PassageAugmentResult(TypedDict):
@@ -1338,7 +1368,7 @@ COMPONENT_REGISTRY = {
     },
     "query_expansion": {
         "none": NoneQueryExpansion,
-        "multi_query": SimpleMultiQuery,
+        "simple_multi_query": SimpleMultiQuery,
     },
     "retrieval": {
         "simple_vector_rag": SimpleVectorRAG,

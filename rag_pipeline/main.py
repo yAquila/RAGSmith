@@ -29,7 +29,7 @@ async def run_rag_evaluation():
     """Run RAG evaluation with multiple model combinations"""
     
     # Configuration for Modular RAG evaluation
-    from rag_pipeline.core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig
+    from rag_pipeline.core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig, QueryExpansionConfig
     from rag_pipeline.core.modular_pipeline import ModularRAGPipeline
     
     # Example ModularRAGConfig with multiple generator configs
@@ -49,14 +49,14 @@ async def run_rag_evaluation():
                 embedding_model="mxbai-embed-large",
                 similarity_metric="cosine"
             ),
-            # RetrievalConfig(
-            #     name="nomic-cosine",
-            #     enabled=True,
-            #     technique="simple_vector_rag",
-            #     top_k=10,
-            #     embedding_model="nomic-embed-text",
-            #     similarity_metric="cosine"
-            # ),
+            RetrievalConfig(
+                name="nomic-cosine",
+                enabled=True,
+                technique="simple_vector_rag",
+                top_k=10,
+                embedding_model="nomic-embed-text",
+                similarity_metric="cosine"
+            ),
             RetrievalConfig(
                 name="bm25",
                 enabled=True,
@@ -74,10 +74,8 @@ async def run_rag_evaluation():
                 technique="hybrid_search",
                 top_k=10,
                 combination_method="convex_combination",
-                vector_k=10,
-                keyword_k=10,
-                alpha=0.5,
-                normalize_before_combination=True,
+                excessive_k=60,
+                alpha=0.7,
                 normalization_method="minmax"
             ),
             RetrievalConfig(
@@ -86,41 +84,47 @@ async def run_rag_evaluation():
                 technique="hybrid_search",
                 top_k=10,
                 combination_method="reciprocal_rank_fusion",
-                vector_k=10,
-                keyword_k=10,
-                rrf_k=60
+                excessive_k=60
+            ),
+            RetrievalConfig(
+                name="hybrid_search_borda",
+                enabled=True,
+                technique="hybrid_search",
+                top_k=10,
+                combination_method="borda_count",
+                excessive_k=60
             )
         ],
         # Passage rerank: (optional, can add more configs)
         passage_rerank=[
-            # PassageRerankConfig(
-            #     name="ce_rerank_bge",
-            #     enabled=True,
-            #     technique="cross_encoder",
-            #     cross_encoder_top_k=5,
-            #     cross_encoder_model="BAAI/bge-reranker-v2-m3",
-            # ), 
-            # PassageRerankConfig(
-            #     name="llm_rerank_gemma",
-            #     enabled=True,
-            #     technique="llm_rerank",
-            #     llm_rerank_top_k=5,
-            #     llm_rerank_model="gemma3:4b",
-            # ),
-            # PassageRerankConfig(
-            #     name="cellm_parallel_rerank",
-            #     enabled=True,
-            #     technique="cellm_parallel_rerank",
-            #     ce_model="BAAI/bge-reranker-v2-m3",
-            #     llm_model="gemma3:4b",
-            #     top_k=5,
-            #     parallel_ensemble_method="weighted",
-            #     ce_weight=0.7,
-            #     llm_weight=0.3,
-            #     ce_force_cpu=False,
-            #     llm_max_tokens=2048,
-            #     llm_temperature=0.1,
-            # ),
+            PassageRerankConfig(
+                name="ce_rerank_bge",
+                enabled=True,
+                technique="cross_encoder",
+                cross_encoder_top_k=5,
+                cross_encoder_model="BAAI/bge-reranker-v2-m3",
+            ), 
+            PassageRerankConfig(
+                name="llm_rerank_gemma",
+                enabled=True,
+                technique="llm_rerank",
+                llm_rerank_top_k=5,
+                llm_rerank_model="gemma3:4b",
+            ),
+            PassageRerankConfig(
+                name="cellm_parallel_rerank",
+                enabled=True,
+                technique="cellm_parallel_rerank",
+                ce_model="BAAI/bge-reranker-v2-m3",
+                llm_model="gemma3:4b",
+                top_k=5,
+                parallel_ensemble_method="weighted",
+                ce_weight=0.7,
+                llm_weight=0.3,
+                ce_force_cpu=False,
+                llm_max_tokens=2048,
+                llm_temperature=0.1,
+            ),
             PassageRerankConfig(
                 name="no_rerank",
                 enabled=True,
@@ -135,18 +139,25 @@ async def run_rag_evaluation():
                 enabled=True,
                 technique="simple_threshold",
                 top_k=10,
+            ),
+            PassageFilterConfig(
+                name="similarity_threshold",
+                enabled=True,
+                technique="similarity_threshold",
+                top_k=10,
+                similarity_threshold=0.6,
             )
         ],
         passage_compress=[
-            # PassageCompressConfig(
-            #     name="llm_summarize",
-            #     enabled=True,
-            #     technique="llm_summarize",
-            #     provider="ollama",
-            #     llm_summarize_model="gemma3:4b",
-            #     llm_summarize_max_tokens=500,
-            #     llm_summarize_temperature=0.1,
-            # ),
+            PassageCompressConfig(
+                name="llm_summarize",
+                enabled=True,
+                technique="llm_summarize",
+                provider="ollama",
+                llm_summarize_model="gemma3:4b",
+                llm_summarize_max_tokens=500,
+                llm_summarize_temperature=0.1,
+            ),
             PassageCompressConfig(
                 name="no_compress",
                 enabled=True,
@@ -165,15 +176,15 @@ async def run_rag_evaluation():
 
         # Generator: two configs
         generator=[
-            # GeneratorConfig(
-            #     name="llama3.2:1b-t0.3",
-            #     enabled=True,
-            #     technique="llm",
-            #     model="llama3.2:1b",
-            #     temperature=0.3,
-            #     provider="ollama",
-            #     max_tokens=500
-            # ),
+            GeneratorConfig(
+                name="llama3.2:1b-t0.3",
+                enabled=True,
+                technique="llm",
+                model="llama3.2:1b",
+                temperature=0.3,
+                provider="ollama",
+                max_tokens=500
+            ),
             GeneratorConfig(
                 name="gemma3:4b-t0.1",
                 enabled=True,
@@ -192,19 +203,36 @@ async def run_rag_evaluation():
             # )
         ],
 
-        
+        query_expansion=[
+            QueryExpansionConfig(
+                name="no_expansion",
+                enabled=True,
+                technique="none",
+            ),
+            QueryExpansionConfig(
+                name="simple_multi_query",
+                enabled=True,
+                technique="simple_multi_query",
+                num_expanded_queries=3,
+                combination_method="convex_combination",
+                normalization_method="minmax",
+                excessive_k=60
+            )
+        ],
+
 
         # Other categories as empty lists
         pre_embedding=[],
-        query_expansion=[],
+        
+
         passage_augment=[],
         
         post_generation=[],
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=3,
-        eval_batch_size=1,
+        max_test_cases=200,
+        eval_batch_size=10,
         parallel_execution=True,
         max_workers=4,
         cache_enabled=True
