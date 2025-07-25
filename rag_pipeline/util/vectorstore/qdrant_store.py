@@ -508,17 +508,23 @@ class QdrantVectorStore:
                     try:
                         text = row['text']
                         metadata_str = row['metadata']
-                        
+                        if isinstance(metadata_str, str):
+                            
                         # Parse metadata (it's stored as a string representation of a dict)
-                        try:
-                            metadata = ast.literal_eval(metadata_str)
-                        except:
-                            # If parsing fails, try json.loads
                             try:
-                                metadata = json.loads(metadata_str)
+                                metadata = ast.literal_eval(metadata_str)
                             except:
-                                logger.warning(f"Failed to parse metadata for doc {idx}: {metadata_str}")
-                                metadata = {"doc_id": str(idx)}
+                                # If parsing fails, try json.loads
+                                try:
+                                    metadata = json.loads(metadata_str)
+                                except:
+                                    logger.warning(f"Failed to parse metadata for doc {idx}: {metadata_str}")
+                                    metadata = {"doc_id": str(idx)}
+                        elif isinstance(metadata_str, dict):
+                            metadata = metadata_str
+                        else:
+                            logger.warning(f"Invalid metadata type for doc {idx}: {type(metadata_str)}")
+                            metadata = {"doc_id": str(idx)}
                         
                         # Ensure doc_id is present
                         if 'doc_id' not in metadata:
