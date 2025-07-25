@@ -47,6 +47,11 @@ class QueryExpansionConfig(BaseModel):
     enabled: bool = True
     technique: str = "none"  # Can use multiple: ["none", "multi_query", "rag_fusion", "hyde", "decomposition"]
     
+    # Combination method
+    combination_method: str = "none"  # Options: "none", "convex_combination", "reciprocal_rank_fusion", "borda_count"
+    normalization_method: str = "minmax"  # Options: "minmax", "zscore" # Only used for convex combination
+    excessive_k: int = 60 # Only used for all combination methods
+
     # Simple Multi-Query settings
     num_expanded_queries: int = 3
     expansion_template: str = "Generate {num} different ways to ask: {query}"
@@ -65,10 +70,8 @@ class QueryExpansionConfig(BaseModel):
     max_subqueries: int = 3
     decomposition_template: str = "Break down this query into simpler sub-questions: {query}"
     
-    # Semantic Routing settings
-    use_semantic_routing: bool = False
-    routing_threshold: float = 0.8
-    route_templates: Dict[str, str] = {}
+
+
 
 
 class RetrievalConfig(BaseModel):
@@ -94,11 +97,8 @@ class RetrievalConfig(BaseModel):
     
     # Hybrid Search settings
     combination_method: str = "convex_combination"  # Options: "convex_combination", "reciprocal_rank_fusion"
-    vector_k: int = 10
-    keyword_k: int = 10
-    rrf_k: int = 60 # Only used for reciprocal rank fusion
-    alpha: float = 0.5  # Vector weight (0.0 = keyword only, 1.0 = vector only) # Only used for convex combination
-    normalize_before_combination: bool = True # Only used for convex combination
+    excessive_k: int = 60 # Excessive k for hybrid search
+    alpha: float = 0.7  # Vector weight (0.0 = keyword only, 1.0 = vector only) # Only used for convex combination
     normalization_method: str = "minmax"  # Options: "minmax", "zscore" # Only used for convex combination
 
 

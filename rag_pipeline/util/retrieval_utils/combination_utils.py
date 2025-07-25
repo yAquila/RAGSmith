@@ -1,142 +1,195 @@
 import numpy as np
-from typing import List, Dict, Any, Tuple, Set
+from typing import List, Dict, Any, Tuple, Set, Union
 from collections import defaultdict
 import logging
+from rag_pipeline.core.modular_framework import Document
 
 logger = logging.getLogger(__name__)
 
 class ScoreCombiner:
-    """Utility class for combining scores from different retrieval methods"""
+    """Utility class for combining scores from multiple result lists"""
     
     @staticmethod
     def convex_combination(
-        vector_results: List[Dict[str, Any]], 
-        keyword_results: List[Dict[str, Any]], 
-        alpha: float = 0.5
+        results_list: List[List[Dict[str, Any]]], 
+        weights: Union[List[float], None] = None,
+        method_names: Union[List[str], None] = None,
+        excessive_k: int = 60
     ) -> List[Dict[str, Any]]:
         """
-        Combine results using convex combination of scores.
+        Combine multiple result lists using convex combination of scores.
         
         Args:
-            vector_results: List of dicts with keys ['doc_id', 'content', 'score', 'metadata']
-            keyword_results: List of dicts with keys ['doc_id', 'content', 'score', 'metadata'] 
-            alpha: Weight for vector scores (1-alpha for keyword scores)
-            
+            results_list: List of result lists, each containing dicts with keys 
+                         ['doc_id', 'content', 'score', 'metadata']
+            weights: List of weights for each method. If None, equal weights are used.
+                    Must sum to 1.0 if provided.
+            method_names: Optional names for each method (for metadata tracking)
+            excessive_k: Excessive k for hybrid search
         Returns:
             Combined results sorted by combined score
         """
         try:
-            # Create mappings for quick lookup
-            vector_scores = {result['doc_id']: result for result in vector_results}
-            keyword_scores = {result['doc_id']: result for result in keyword_results}
+            if not results_list:
+                logger.warning("Empty results list provided")
+                return []
             
-            # Get all unique document IDs
-            all_doc_ids = set(vector_scores.keys()) | set(keyword_scores.keys())
+            num_methods = len(results_list)
+            
+            # Validate and setup weights
+            if weights is None:
+                weights = [1.0 / num_methods] * num_methods
+            else:
+                if len(weights) != num_methods:
+                    raise ValueError(f"Number of weights ({len(weights)}) must match number of result lists ({num_methods})")
+                
+                # Normalize weights to sum to 1.0
+                weight_sum = sum(weights)
+                if abs(weight_sum - 1.0) > 1e-6:
+                    logger.warning(f"Weights sum to {weight_sum}, normalizing to 1.0")
+                    weights = [w / weight_sum for w in weights]
+            
+            # Setup method names for tracking
+            if method_names is None:
+                method_names = [f"method_{i}" for i in range(num_methods)]
+            elif len(method_names) != num_methods:
+                logger.warning("Method names length mismatch, using default names")
+                method_names = [f"method_{i}" for i in range(num_methods)]
+            
+            # Create mappings for each method
+            method_mappings = []
+            for i, results in enumerate(results_list):
+                mapping = {result['doc_id']: result for result in results}
+                method_mappings.append(mapping)
+            
+            # Get all unique document IDs across all methods
+            all_doc_ids = set()
+            for mapping in method_mappings:
+                all_doc_ids.update(mapping.keys())
             
             combined_results = []
             
             for doc_id in all_doc_ids:
-                vector_result = vector_scores.get(doc_id)
-                keyword_result = keyword_scores.get(doc_id)
+                combined_score = 0.0
+                doc_data = None
+                method_contributions = {}
                 
-                # Handle cases where document appears in only one result set
-                if vector_result and keyword_result:
-                    # Both methods found this document
-                    combined_score = alpha * vector_result['score'] + (1 - alpha) * keyword_result['score']
-                    # Use vector result as base (could also merge metadata)
-                    result = vector_result.copy()
-                    result['score'] = combined_score
-                    
-                elif vector_result:
-                    # Only vector search found this document
-                    combined_score = alpha * vector_result['score']
-                    result = vector_result.copy()
-                    result['score'] = combined_score
-                    
-                elif keyword_result:
-                    # Only keyword search found this document
-                    combined_score = (1 - alpha) * keyword_result['score']
-                    result = keyword_result.copy()
-                    result['score'] = combined_score
+                # Calculate weighted combination of scores
+                for i, (mapping, weight, method_name) in enumerate(zip(method_mappings, weights, method_names)):
+                    if doc_id in mapping:
+                        result = mapping[doc_id]
+                        contribution = weight * result['score']
+                        combined_score += contribution
+                        method_contributions[method_name] = {
+                            'score': result['score'],
+                            'weight': weight,
+                            'contribution': contribution
+                        }
+                        
+                        # Use the first available result as base document data
+                        if doc_data is None:
+                            doc_data = result.copy()
                 
-                combined_results.append(result)
+                if doc_data is not None:
+                    # Create combined result
+                    combined_result = {
+                        'doc_id': doc_data['doc_id'],
+                        'content': doc_data['content'],
+                        'score': combined_score,
+                        'metadata': doc_data.get('metadata', {}).copy()
+                    }
+                    
+                    # Add combination metadata
+                    combined_result['metadata']['combination_info'] = {
+                        'method': 'convex_combination',
+                        'method_contributions': method_contributions,
+                        'final_score': combined_score
+                    }
+                    
+                    combined_results.append(combined_result)
             
             # Sort by combined score (descending)
             combined_results.sort(key=lambda x: x['score'], reverse=True)
             
+            logger.info(f"Combined {len(combined_results)} unique documents from {num_methods} methods")
             return combined_results
             
         except Exception as e:
             logger.error(f"Convex combination failed: {e}")
             return []
 
+
 class RankFusionCombiner:
-    """Utility class for Reciprocal Rank Fusion (RRF)"""
+    """Utility class for Reciprocal Rank Fusion (RRF) with multiple methods"""
     
     @staticmethod
     def reciprocal_rank_fusion(
-        vector_results: List[Dict[str, Any]], 
-        keyword_results: List[Dict[str, Any]], 
-        k: int = 60
+        results_list: List[List[Dict[str, Any]]], 
+        excessive_k: int = 60,
+        method_names: Union[List[str], None] = None
     ) -> List[Dict[str, Any]]:
         """
-        Combine results using Reciprocal Rank Fusion.
+        Combine multiple result lists using Reciprocal Rank Fusion.
         
         Args:
-            vector_results: List of dicts with keys ['doc_id', 'content', 'score', 'metadata']
-            keyword_results: List of dicts with keys ['doc_id', 'content', 'score', 'metadata']
-            k: RRF parameter (typically 60)
+            results_list: List of result lists, each containing dicts with keys 
+                         ['doc_id', 'content', 'score', 'metadata']
+            excessive_k: Excessive k for hybrid search
+            method_names: Optional names for each method (for metadata tracking)
             
         Returns:
             Combined results sorted by RRF score
         """
         try:
+            if not results_list:
+                logger.warning("Empty results list provided")
+                return []
+            
+            num_methods = len(results_list)
+            
+            # Setup method names for tracking
+            if method_names is None:
+                method_names = [f"method_{i}" for i in range(num_methods)]
+            elif len(method_names) != num_methods:
+                logger.warning("Method names length mismatch, using default names")
+                method_names = [f"method_{i}" for i in range(num_methods)]
+            
             # Create document registry to store all unique documents
             doc_registry = {}
             
-            # Process vector results
-            for rank, result in enumerate(vector_results):
-                doc_id = result['doc_id']
-                if doc_id not in doc_registry:
-                    doc_registry[doc_id] = {
-                        'doc_id': doc_id,
-                        'content': result['content'],
-                        'metadata': result['metadata'],
-                        'vector_rank': rank + 1,
-                        'keyword_rank': None,
-                        'rrf_score': 0.0
-                    }
-                else:
-                    doc_registry[doc_id]['vector_rank'] = rank + 1
-            
-            # Process keyword results
-            for rank, result in enumerate(keyword_results):
-                doc_id = result['doc_id']
-                if doc_id not in doc_registry:
-                    doc_registry[doc_id] = {
-                        'doc_id': doc_id,
-                        'content': result['content'],
-                        'metadata': result['metadata'],
-                        'vector_rank': None,
-                        'keyword_rank': rank + 1,
-                        'rrf_score': 0.0
-                    }
-                else:
-                    doc_registry[doc_id]['keyword_rank'] = rank + 1
+            # Process each method's results
+            for method_idx, (results, method_name) in enumerate(zip(results_list, method_names)):
+                for rank, result in enumerate(results):
+                    doc_id = result['doc_id']
+                    
+                    if doc_id not in doc_registry:
+                        doc_registry[doc_id] = {
+                            'doc_id': doc_id,
+                            'content': result['content'],
+                            'metadata': result['metadata'],
+                            'method_ranks': {},
+                            'rrf_score': 0.0
+                        }
+                    
+                    # Store rank for this method (1-indexed)
+                    doc_registry[doc_id]['method_ranks'][method_name] = rank + 1
             
             # Calculate RRF scores
             for doc_id, doc_info in doc_registry.items():
                 rrf_score = 0.0
+                method_contributions = {}
                 
-                # Add vector contribution
-                if doc_info['vector_rank'] is not None:
-                    rrf_score += 1.0 / (k + doc_info['vector_rank'])
-                
-                # Add keyword contribution
-                if doc_info['keyword_rank'] is not None:
-                    rrf_score += 1.0 / (k + doc_info['keyword_rank'])
+                # Add contribution from each method that found this document
+                for method_name, rank in doc_info['method_ranks'].items():
+                    contribution = 1.0 / (excessive_k + rank)
+                    rrf_score += contribution
+                    method_contributions[method_name] = {
+                        'rank': rank,
+                        'contribution': contribution
+                    }
                 
                 doc_info['rrf_score'] = rrf_score
+                doc_info['method_contributions'] = method_contributions
             
             # Convert to list and sort by RRF score
             combined_results = []
@@ -145,33 +198,254 @@ class RankFusionCombiner:
                     'doc_id': doc_info['doc_id'],
                     'content': doc_info['content'],
                     'score': doc_info['rrf_score'],
-                    'metadata': doc_info['metadata']
+                    'metadata': doc_info['metadata'].copy() if doc_info['metadata'] else {}
                 }
+                
+                # Add RRF metadata
+                result['metadata']['combination_info'] = {
+                    'method': 'reciprocal_rank_fusion',
+                    'excessive_k': excessive_k,
+                    'method_contributions': doc_info['method_contributions'],
+                    'methods_found_in': list(doc_info['method_ranks'].keys()),
+                    'final_score': doc_info['rrf_score']
+                }
+                
                 combined_results.append(result)
             
             # Sort by RRF score (descending)
             combined_results.sort(key=lambda x: x['score'], reverse=True)
             
+            logger.info(f"RRF combined {len(combined_results)} unique documents from {num_methods} methods")
             return combined_results
             
         except Exception as e:
             logger.error(f"Reciprocal rank fusion failed: {e}")
             return []
 
+    @staticmethod
+    def borda_count_fusion(
+        results_list: List[List[Dict[str, Any]]], 
+        excessive_k: int = 60,
+        method_names: Union[List[str], None] = None
+    ) -> List[Dict[str, Any]]:
+        """
+        Combine multiple result lists using Borda count method.
+        
+        Args:
+            results_list: List of result lists
+            method_names: Optional names for each method
+            excessive_k: Excessive k for hybrid search
+        Returns:
+            Combined results sorted by Borda count score
+        """
+        try:
+            if not results_list:
+                return []
+            
+            num_methods = len(results_list)
+            
+            # Setup method names
+            if method_names is None:
+                method_names = [f"method_{i}" for i in range(num_methods)]
+            
+            # Create document registry
+            doc_registry = {}
+            
+            # Process each method's results
+            for method_idx, (results, method_name) in enumerate(zip(results_list, method_names)):
+                num_docs = len(results)
+                
+                for rank, result in enumerate(results):
+                    doc_id = result['doc_id']
+                    
+                    if doc_id not in doc_registry:
+                        doc_registry[doc_id] = {
+                            'doc_id': doc_id,
+                            'content': result['content'],
+                            'metadata': result['metadata'],
+                            'borda_score': 0.0,
+                            'method_contributions': {}
+                        }
+                    
+                    # Borda count: points = (total_docs - rank)
+                    points = num_docs - rank
+                    doc_registry[doc_id]['borda_score'] += points
+                    doc_registry[doc_id]['method_contributions'][method_name] = {
+                        'rank': rank + 1,
+                        'points': points
+                    }
+            
+            # Convert to list and sort by Borda score
+            combined_results = []
+            for doc_info in doc_registry.values():
+                result = {
+                    'doc_id': doc_info['doc_id'],
+                    'content': doc_info['content'],
+                    'score': doc_info['borda_score'],
+                    'metadata': doc_info['metadata'].copy() if doc_info['metadata'] else {}
+                }
+                
+                result['metadata']['combination_info'] = {
+                    'method': 'borda_count',
+                    'method_contributions': doc_info['method_contributions'],
+                    'final_score': doc_info['borda_score']
+                }
+                
+                combined_results.append(result)
+            
+            combined_results.sort(key=lambda x: x['score'], reverse=True)
+            
+            logger.info(f"Borda count combined {len(combined_results)} unique documents from {num_methods} methods")
+            return combined_results
+            
+        except Exception as e:
+            logger.error(f"Borda count fusion failed: {e}")
+            return []
+
 class HybridUtils:
     """General utilities for hybrid retrieval"""
     
     @staticmethod
-    def normalize_scores_minmax(results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def convert_to_documents(results: List[Dict[str, Any]]) -> List[Document]:
+        """Convert results to Document objects"""
+        documents = []
+        for result in results:
+            documents.append(Document(
+                doc_id=result['doc_id'],
+                content=result['content'],
+                score=result['score'],
+                metadata=result['metadata']
+            ))
+        return documents
+
+    @staticmethod
+    def convert_documents_to_results(documents: List[Document]) -> List[Dict[str, Any]]:
+        """Convert Document objects to results"""
+        results = []
+        for document in documents:
+            results.append(document.to_dict())
+        return results
+    
+    @staticmethod
+    def combine_with_convex_combination(
+        results_list: List[List[Dict[str, Any]]], 
+        method_names: List[str],
+        weights: Union[List[float], None] = None,
+        normalization_method: str = "minmax",
+        excessive_k: int = 60
+    ) -> List[Dict[str, Any]]:
+        """Combine results using convex combination"""
+        try:
+            # Normalize scores before combination if requested
+            results_list = HybridUtils.normalize_results_list(results_list, normalization_method)
+            
+            return ScoreCombiner.convex_combination(results_list, weights, method_names, excessive_k)
+            
+        except Exception as e:
+            logger.error(f"Convex combination failed: {e}")
+            return []
+
+    @staticmethod
+    def combine_with_rrf(
+        results_list: List[List[Dict[str, Any]]], 
+        method_names: List[str],
+        excessive_k: int = 60
+    ) -> List[Dict[str, Any]]:
+        """Combine results using Reciprocal Rank Fusion"""
+        try:
+            return RankFusionCombiner.reciprocal_rank_fusion(results_list, excessive_k, method_names)
+            
+        except Exception as e:
+            logger.error(f"RRF combination failed: {e}")
+            return []
+    
+    @staticmethod
+    def combine_with_borda_count(
+        results_list: List[List[Dict[str, Any]]], 
+        method_names: List[str],
+        excessive_k: int = 60
+    ) -> List[Dict[str, Any]]:
+        """Combine results using Borda Count"""
+        try:
+            return RankFusionCombiner.borda_count_fusion(results_list, excessive_k, method_names)
+            
+        except Exception as e:
+            logger.error(f"Borda count combination failed: {e}")
+            return []
+
+    @staticmethod
+    def normalize_results_list(
+        results_list: List[List[Dict[str, Any]]], 
+        method: str = "minmax"
+    ) -> List[List[Dict[str, Any]]]:
         """
-        Normalize scores in results using min-max normalization.
+        Normalize scores in multiple result lists.
         
         Args:
-            results: List of result dictionaries with 'score' key
+            results_list: List of result lists to normalize
+            method: Normalization method ("minmax", "zscore", "global_minmax")
             
         Returns:
-            Results with normalized scores
+            List of normalized result lists
         """
+        if not results_list:
+            return results_list
+        
+        if method == "global_minmax":
+            return HybridUtils._global_minmax_normalize(results_list)
+        else:
+            # Normalize each list independently
+            normalized_lists = []
+            for results in results_list:
+                if method == "minmax":
+                    normalized = HybridUtils.normalize_scores_minmax(results)
+                elif method == "zscore":
+                    normalized = HybridUtils.normalize_scores_zscore(results)
+                else:
+                    logger.warning(f"Unknown normalization method: {method}")
+                    normalized = results
+                normalized_lists.append(normalized)
+            return normalized_lists
+    
+    @staticmethod
+    def _global_minmax_normalize(results_list: List[List[Dict[str, Any]]]) -> List[List[Dict[str, Any]]]:
+        """Normalize all scores using global min and max across all methods"""
+        # Collect all scores
+        all_scores = []
+        for results in results_list:
+            all_scores.extend([result['score'] for result in results])
+        
+        if not all_scores:
+            return results_list
+        
+        global_min = min(all_scores)
+        global_max = max(all_scores)
+        
+        if global_max == global_min:
+            # All scores are the same
+            normalized_lists = []
+            for results in results_list:
+                normalized = [r.copy() for r in results]
+                for r in normalized:
+                    r['score'] = 1.0
+                normalized_lists.append(normalized)
+            return normalized_lists
+        
+        # Normalize using global min/max
+        normalized_lists = []
+        for results in results_list:
+            normalized = []
+            for result in results:
+                normalized_result = result.copy()
+                normalized_result['score'] = (result['score'] - global_min) / (global_max - global_min)
+                normalized.append(normalized_result)
+            normalized_lists.append(normalized)
+        
+        return normalized_lists
+    
+    @staticmethod
+    def normalize_scores_minmax(results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Normalize scores using min-max normalization"""
         if not results:
             return results
         
@@ -179,13 +453,11 @@ class HybridUtils:
         min_score = min(scores)
         max_score = max(scores)
         
-        # Handle case where all scores are the same
         if max_score == min_score:
             for result in results:
                 result['score'] = 1.0
             return results
         
-        # Normalize scores
         normalized_results = []
         for result in results:
             normalized_result = result.copy()
@@ -196,15 +468,7 @@ class HybridUtils:
     
     @staticmethod
     def normalize_scores_zscore(results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """
-        Normalize scores using z-score normalization.
-        
-        Args:
-            results: List of result dictionaries with 'score' key
-            
-        Returns:
-            Results with z-score normalized scores
-        """
+        """Normalize scores using z-score normalization"""
         if not results:
             return results
         
@@ -212,13 +476,11 @@ class HybridUtils:
         mean_score = np.mean(scores)
         std_score = np.std(scores)
         
-        # Handle case where std is 0
         if std_score == 0:
             for result in results:
                 result['score'] = 0.0
             return results
         
-        # Normalize scores
         normalized_results = []
         for i, result in enumerate(results):
             normalized_result = result.copy()
@@ -229,80 +491,123 @@ class HybridUtils:
     
     @staticmethod
     def filter_top_k(results: List[Dict[str, Any]], k: int) -> List[Dict[str, Any]]:
-        """
-        Filter results to top k items.
-        
-        Args:
-            results: List of result dictionaries
-            k: Number of top results to return
-            
-        Returns:
-            Top k results
-        """
+        """Filter results to top k items"""
         if not results or k <= 0:
             return []
-        
         return results[:k]
     
     @staticmethod
-    def merge_metadata(
-        vector_metadata: Dict[str, Any], 
-        keyword_metadata: Dict[str, Any]
+    def calculate_multi_method_overlap(
+        results_list: List[List[Dict[str, Any]]], 
+        method_names: Union[List[str], None] = None
     ) -> Dict[str, Any]:
         """
-        Merge metadata from vector and keyword results.
+        Calculate overlap statistics between multiple result lists.
         
         Args:
-            vector_metadata: Metadata from vector search
-            keyword_metadata: Metadata from keyword search
+            results_list: List of result lists
+            method_names: Optional names for each method
             
         Returns:
-            Merged metadata
+            Dictionary with comprehensive overlap statistics
         """
-        merged = vector_metadata.copy() if vector_metadata else {}
+        if not results_list:
+            return {}
         
-        if keyword_metadata:
-            # Add keyword-specific metadata with prefix to avoid conflicts
-            for key, value in keyword_metadata.items():
-                if key not in merged:
-                    merged[key] = value
-                elif merged[key] != value:
-                    # Handle conflicts by keeping both with prefixes
-                    merged[f'vector_{key}'] = merged[key]
-                    merged[f'keyword_{key}'] = value
-                    merged[key] = value  # Keep keyword version as default
+        num_methods = len(results_list)
         
-        return merged
-    
-    @staticmethod
-    def calculate_result_overlap(
-        vector_results: List[Dict[str, Any]], 
-        keyword_results: List[Dict[str, Any]]
-    ) -> Dict[str, Any]:
-        """
-        Calculate overlap statistics between vector and keyword results.
+        if method_names is None:
+            method_names = [f"method_{i}" for i in range(num_methods)]
         
-        Args:
-            vector_results: Results from vector search
-            keyword_results: Results from keyword search
+        # Get document IDs for each method
+        method_doc_sets = []
+        for results in results_list:
+            doc_set = set(result['doc_id'] for result in results)
+            method_doc_sets.append(doc_set)
+        
+        # Calculate statistics
+        all_union = set()
+        for doc_set in method_doc_sets:
+            all_union.update(doc_set)
+        
+        # Find intersection of all methods
+        all_intersection = method_doc_sets[0].copy() if method_doc_sets else set()
+        for doc_set in method_doc_sets[1:]:
+            all_intersection &= doc_set
+        
+        # Pairwise overlaps
+        pairwise_overlaps = {}
+        for i in range(num_methods):
+            for j in range(i + 1, num_methods):
+                intersection = method_doc_sets[i] & method_doc_sets[j]
+                union = method_doc_sets[i] | method_doc_sets[j]
+                pairwise_overlaps[f"{method_names[i]}_vs_{method_names[j]}"] = {
+                    'intersection_size': len(intersection),
+                    'union_size': len(union),
+                    'jaccard_similarity': len(intersection) / len(union) if union else 0.0
+                }
+        
+        # Method-specific stats
+        method_stats = {}
+        for i, (method_name, doc_set) in enumerate(zip(method_names, method_doc_sets)):
+            unique_docs = doc_set.copy()
+            for j, other_set in enumerate(method_doc_sets):
+                if i != j:
+                    unique_docs -= other_set
             
-        Returns:
-            Dictionary with overlap statistics
-        """
-        vector_ids = set(result['doc_id'] for result in vector_results)
-        keyword_ids = set(result['doc_id'] for result in keyword_results)
-        
-        intersection = vector_ids & keyword_ids
-        union = vector_ids | keyword_ids
+            method_stats[method_name] = {
+                'total_docs': len(doc_set),
+                'unique_docs': len(unique_docs),
+                'overlap_with_others': len(doc_set) - len(unique_docs)
+            }
         
         overlap_stats = {
-            'vector_count': len(vector_ids),
-            'keyword_count': len(keyword_ids),
-            'intersection_count': len(intersection),
-            'union_count': len(union),
-            'jaccard_similarity': len(intersection) / len(union) if union else 0.0,
-            'vector_unique': len(vector_ids - keyword_ids),
-            'keyword_unique': len(keyword_ids - vector_ids)
+            'num_methods': num_methods,
+            'method_names': method_names,
+            'total_unique_docs': len(all_union),
+            'docs_in_all_methods': len(all_intersection),
+            'all_methods_jaccard': len(all_intersection) / len(all_union) if all_union else 0.0,
+            'method_stats': method_stats,
+            'pairwise_overlaps': pairwise_overlaps
         }
         
         return overlap_stats
+    
+    @staticmethod
+    def analyze_score_distributions(
+        results_list: List[List[Dict[str, Any]]], 
+        method_names: Union[List[str], None] = None
+    ) -> Dict[str, Any]:
+        """
+        Analyze score distributions across multiple methods.
+        """
+        if not results_list:
+            return {}
+        
+        if method_names is None:
+            method_names = [f"method_{i}" for i in range(len(results_list))]
+        
+        distributions = {}
+        
+        for method_name, results in zip(method_names, results_list):
+            if not results:
+                distributions[method_name] = {
+                    'count': 0,
+                    'mean': 0.0,
+                    'std': 0.0,
+                    'min': 0.0,
+                    'max': 0.0
+                }
+                continue
+            
+            scores = [result['score'] for result in results]
+            distributions[method_name] = {
+                'count': len(scores),
+                'mean': float(np.mean(scores)),
+                'std': float(np.std(scores)),
+                'min': float(np.min(scores)),
+                'max': float(np.max(scores)),
+                'median': float(np.median(scores))
+            }
+        
+        return distributions

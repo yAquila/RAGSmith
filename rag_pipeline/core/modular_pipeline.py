@@ -198,14 +198,55 @@ class ModularRAGPipeline:
                 step_start = time.time()
                 if documents:
                     await self.components["retrieval"].index_documents(documents)
-                retrieval_result: RetrievalComponentResult = await self.components["retrieval"].retrieve(
-                    processed_query, 
-                    k=self.config_dict["retrieval"].top_k
-                )
-                retrieved_documents = self._parse_component_result(
-                    retrieval_result, "retrieval", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
-                    main_output_key='documents'
-                )
+                if "query_expansion" not in self.components or self.config_dict["query_expansion"].technique == "none":
+                    retrieval_result: RetrievalComponentResult = await self.components["retrieval"].retrieve(
+                        processed_query, 
+                        k=self.config_dict["retrieval"].top_k
+                    )
+                    retrieved_documents = self._parse_component_result(
+                        retrieval_result, "retrieval", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                        main_output_key='documents'
+                    )
+                else:
+                    from rag_pipeline.util.retrieval_utils.combination_utils import HybridUtils
+                    results_list = []
+                    for expanded_query in processed_query.expanded_queries:
+                        retrieval_result: RetrievalComponentResult = await self.components["retrieval"].retrieve(
+                            expanded_query, 
+                            k=self.config_dict["retrieval"].top_k
+                        )
+                        parsed_result = self._parse_component_result(
+                            retrieval_result, "retrieval", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                            main_output_key='documents'
+                        )
+                        results_list.append(HybridUtils.convert_documents_to_results(parsed_result))
+                    combination_method = self.config_dict["query_expansion"].combination_method
+                    if combination_method == "convex_combination":
+                        weights = [1/len(processed_query.expanded_queries) for _ in range(len(processed_query.expanded_queries))]
+                        retrieved_documents = HybridUtils.combine_with_convex_combination(
+                            results_list=results_list,
+                            method_names=[f"retrieval_query_{i}" for i in range(len(processed_query.expanded_queries))],
+                            weights=weights,
+                            normalization_method=self.config_dict["query_expansion"].normalization_method,
+                            excessive_k=self.config_dict["query_expansion"].excessive_k
+                        )
+                    elif combination_method == "reciprocal_rank_fusion":
+                        retrieved_documents = HybridUtils.combine_with_rrf(
+                            results_list=results_list,
+                            method_names=[f"retrieval_query_{i}" for i in range(len(processed_query.expanded_queries))],
+                            excessive_k=self.config_dict["query_expansion"].excessive_k
+                        )
+                    elif combination_method == "borda_count":
+                        retrieved_documents = HybridUtils.combine_with_borda_count(
+                            results_list=results_list,
+                            method_names=[f"retrieval_query_{i}" for i in range(len(processed_query.expanded_queries))],
+                            excessive_k=self.config_dict["query_expansion"].excessive_k
+                        )
+                    else:
+                        retrieved_documents = results_list[0]
+                        raise ValueError(f"Invalid combination method: {combination_method}")
+                    retrieved_documents = HybridUtils.convert_to_documents(retrieved_documents)
+
                 timing_info["retrieval_time"] = time.time() - step_start
                 components_used["retrieval"] = self.config_dict["retrieval"].technique
                 logger.debug(f"Retrieval completed in {timing_info['retrieval_time']:.3f}s, found {len(retrieved_documents)} documents")
