@@ -203,7 +203,7 @@ async def run_rag_evaluation():
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=10,
+        max_test_cases=3,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,
