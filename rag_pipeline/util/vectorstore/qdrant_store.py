@@ -180,6 +180,7 @@ class QdrantVectorStore:
                 try:
                     metadata = json.loads(metadata_str) if isinstance(metadata_str, str) else metadata_str
                 except:
+                    logger.warning(f"Failed to parse metadata for doc {idx}: {metadata_str}")
                     metadata = {"doc_id": str(idx)}
             
             doc_id = metadata.get('doc_id', str(idx))
@@ -414,8 +415,6 @@ class QdrantVectorStore:
             True if successful, False otherwise
         """
         try:
-            logger.info(f"Starting to index {len(docs_df)} documents")
-            
             # Check indexing status
             status = self.check_indexing_status(docs_df)
             logger.info(f"Indexing status: {status['status']} - {status['points_count']}/{status['expected_count']} documents ({status['completion_percentage']:.1f}%)")
@@ -525,10 +524,12 @@ class QdrantVectorStore:
                         else:
                             logger.warning(f"Invalid metadata type for doc {idx}: {type(metadata_str)}")
                             metadata = {"doc_id": str(idx)}
-                        
                         # Ensure doc_id is present
                         if 'doc_id' not in metadata:
-                            metadata['doc_id'] = str(idx)
+                            if 'chunk_id' in metadata:
+                                metadata['doc_id'] = metadata['chunk_id']
+                            else:
+                                metadata['doc_id'] = str(idx)
                         
                         doc_id = metadata['doc_id']
                         batch_texts.append(text)

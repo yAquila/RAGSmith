@@ -1,0 +1,518 @@
+{
+  "article": {
+    "id": "aspectorientedprogra_8607daaf",
+    "title": "Aspect-oriented programming",
+    "url": "https://en.wikipedia.org/wiki/Aspect-oriented_programming",
+    "lang": "en",
+    "created_at": "2025-07-28T12:12:28.350955",
+    "content": "---\nid: aspectorientedprogra_8607daaf\nurl: https://en.wikipedia.org/wiki/Aspect-oriented_programming\ntitle: Aspect-oriented programming\nlang: en\ncreated_at: '2025-07-28T12:09:46.204800'\nchecksum: c2549873c14505e78219d726469c1e338713e1c22870e26ec9a404a8b2eee9c8\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gpt-4.1\nstats:\n  word_count: 3136\n  char_count: 21313\n  num_chunks: 32\n  num_sections: 0\n---\nIn computing, aspect-oriented programming (AOP) is a programming paradigm that aims to increase modularity by allowing the separation of cross-cutting concerns. It does so by adding behavior to existing code (an advice) without modifying the code, instead separately specifying which code is modified via a \"pointcut\" specification, such as \"log all function calls when the function's name begins with 'set'\". This allows behaviors that are not central to the business logic (such as logging) to be added to a program without cluttering the code of core functions. AOP includes programming methods and tools that support the modularization of concerns at the level of the source code, while aspect-oriented software development refers to a whole engineering discipline. Aspect-oriented programming entails breaking down program logic into cohesive areas of functionality (so-called concerns). Nearly all programming paradigms support some level of grouping and encapsulation of concerns into separate, independent entities by providing abstractions (e.g., functions, procedures, modules, classes, methods) that can be used for implementing, abstracting, and composing these concerns. Some concerns \"cut across\" multiple abstractions in a program, and defy these forms of implementation. These concerns are called cross-cutting concerns or horizontal concerns. Logging exemplifies a cross-cutting concern because a logging strategy must affect every logged part of the system. Logging thereby crosscuts all logged classes and methods. All AOP implementations have some cross-cutting expressions that encapsulate each concern in one place. The difference between implementations lies in the power, safety, and usability of the constructs provided. For example, interceptors that specify the methods to express a limited form of cross-cutting, without much support for type-safety or debugging. AspectJ has a number of such expressions and encapsulates them in a special class, called an aspect. For example, an aspect can alter the behavior of the base code (the non-aspect part of a program) by applying advice (additional behavior) at various join points (points in a program) specified in a quantification or query called a pointcut (that detects whether a given join point matches). An aspect can also make binary-compatible structural changes to other classes, such as adding members or parents. == History == AOP has several direct antecedents A1 and A2: reflection and metaobject protocols, subject-oriented programming, Composition Filters, and Adaptive Programming. Gregor Kiczales and colleagues at Xerox PARC developed the explicit concept of AOP and followed this with the AspectJ AOP extension to Java. IBM's research team pursued a tool approach over a language design approach and in 2001 proposed Hyper/J and the Concern Manipulation Environment, which have not seen wide use. The examples in this article use AspectJ. The Microsoft Transaction Server is considered to be the first major application of AOP followed by Enterprise JavaBeans. == Motivation and basic concepts == Typically, an aspect is scattered or tangled as code, making it harder to understand and maintain. It is scattered by the function (such as logging) being spread over a number of unrelated functions that might use its function, possibly in entirely unrelated systems or written in different languages. Thus, changing logging can require modifying all affected modules. Aspects become tangled not only with the mainline function of the systems in which they are expressed but also with each other. Changing one concern thus entails understanding all the tangled concerns or having some means by which the effect of changes can be inferred. For example, consider a banking application with a conceptually very simple method for transferring an amount from one account to another: However, this transfer method overlooks certain considerations that a deployed application would require, such as verifying that the current user is authorized to perform this operation, encapsulating database transactions to prevent accidental data loss, and logging the operation for diagnostic purposes. A version with all those new concerns might look like this: In this example, other interests have become tangled with the basic functionality (sometimes called the business logic concern). Transactions, security, and logging all exemplify cross-cutting concerns. Now consider what would happen if we suddenly need to change the security considerations for the application. In the program's current version, security-related operations appear scattered across numerous methods, and such a change would require major effort. AOP tries to solve this problem by allowing the programmer to express cross-cutting concerns in stand-alone modules called aspects. Aspects can contain advice (code joined to specified points in the program) and inter-type declarations (structural members added to other classes). For example, a security module can include advice that performs a security check before accessing a bank account. The pointcut defines the times (join points) when one can access a bank account, and the code in the advice body defines how the security check is implemented. That way, both the check and the places can be maintained in one place. Further, a good pointcut can anticipate later program changes, so if another developer creates a new method to access the bank account, the advice will apply to the new method when it executes. So for the example above implementing logging in an aspect: One can think of AOP as a debugging tool or a user-level tool. Advice should be reserved for cases in which one cannot get the function changed (user level) or do not want to change the function in production code (debugging). == Join point models == The advice-related component of an aspect-oriented language defines a join point model (JPM). A JPM defines three things: When the advice can run. These are called join points because they are points in a running program where additional behavior can be usefully joined. A join point needs to be addressable and understandable by an ordinary programmer to be useful. It should also be stable across inconsequential program changes to maintain aspect stability. Many AOP implementations support method executions and field references as join points. A way to specify (or quantify) join points, called pointcuts. Pointcuts determine whether a given join point matches. Most useful pointcut languages use a syntax like the base language (for example, AspectJ uses Java signatures) and allow reuse through naming and combination. A means of specifying code to run at a join point. AspectJ calls this advice, and can run it before, after, and around join points. Some implementations also support defining a method in an aspect on another class. Join-point models can be compared based on the join points exposed, how join points are specified, the operations permitted at the join points, and the structural enhancements that can be expressed. === AspectJ's join-point model === === Other potential join point models === There are other kinds of JPMs. All advice languages can be defined in terms of their JPM. For example, a hypothetical aspect language for UML may have the following JPM: Join points are all model elements. Pointcuts are some Boolean expression combining the model elements. The means of affect at these points are a visualization of all the matched join points. === Inter-type declarations === Inter-type declarations provide a way to express cross-cutting concerns affecting the structure of modules. Also known as open classes and extension methods, this enables programmers to declare in one place members or parents of another class, typically to combine all the code related to a concern in one aspect. For example, if a programmer implemented the cross-cutting display-update concern using visitors, an inter-type declaration using the visitor pattern might look like this in AspectJ: This code snippet adds the acceptVisitor method to the Point class. Any structural additions are required to be compatible with the original class, so that clients of the existing class continue to operate, unless the AOP implementation can expect to control all clients at all times. == Implementation == AOP programs can affect other programs in two different ways, depending on the underlying languages and environments: a combined program is produced, valid in the original language and indistinguishable from an ordinary program to the ultimate interpreter the ultimate interpreter or environment is updated to understand and implement AOP features. The difficulty of changing environments means most implementations produce compatible combination programs through a type of program transformation known as weaving. An aspect weaver reads the aspect-oriented code and generates appropriate object-oriented code with the aspects integrated. The same AOP language can be implemented through a variety of weaving methods, so the semantics of a language should never be understood in terms of the weaving implementation. Only the speed of an implementation and its ease of deployment are affected by the method of combination used. Systems can implement source-level weaving using preprocessors (as C++ was implemented originally in CFront) that require access to program source files. However, Java's well-defined binary form enables bytecode weavers to work with any Java program in .class-file form. Bytecode weavers can be deployed during the build process or, if the weave model is per-class, during class loading. AspectJ started with source-level weaving in 2001, delivered a per-class bytecode weaver in 2002, and offered advanced load-time support after the integration of AspectWerkz in 2005. Any solution that combines programs at runtime must provide views that segregate them properly to maintain the programmer's segregated model. Java's bytecode support for multiple source files enables any debugger to step through a properly woven .class file in a source editor. However, some third-party decompilers cannot process woven code because they expect code produced by Javac rather than all supported bytecode forms (see also § Criticism, below). Deploy-time weaving offers another approach. This basically implies post-processing, but rather than patching the generated code, this weaving approach subclasses existing classes so that the modifications are introduced by method-overriding. The existing classes remain untouched, even at runtime, and all existing tools, such as debuggers and profilers, can be used during development. A similar approach has already proven itself in the implementation of many Java EE application servers, such as IBM's WebSphere. === Terminology === Standard terminology used in Aspect-oriented programming may include: Cross-cutting concerns Even though most classes in an object-oriented model will perform a single, specific function, they often share common, secondary requirements with other classes. For example, we may want to add logging to classes within the data-access layer and also to classes in the UI layer whenever a thread enters or exits a method. Further concerns can be related to security such as access control or information flow control. Even though each class has a very different primary functionality, the code needed to perform the secondary functionality is often identical. Advice This is the additional code that you want to apply to your existing model. In our example, this is the logging code that we want to apply whenever the thread enters or exits a method.: Pointcut This refers to the point of execution in the application at which cross-cutting concern needs to be applied. In our example, a pointcut is reached when the thread enters a method, and another pointcut is reached when the thread exits the method. Aspect The combination of the pointcut and the advice is termed an aspect. In the example above, we add a logging aspect to our application by defining a pointcut and giving the correct advice. == Comparison to other programming paradigms == Aspects emerged from object-oriented programming and reflective programming. AOP languages have functionality similar to, but more restricted than, metaobject protocols. Aspects relate closely to programming concepts like subjects, mixins, and delegation. Other ways to use aspect-oriented programming paradigms include Composition Filters and the hyperslices approach. Since at least the 1970s, developers have been using forms of interception and dispatch-patching that resemble some of the implementation methods for AOP, but these never had the semantics that the cross-cutting specifications provide in one place. Designers have considered alternative ways to achieve separation of code, such as C#'s partial types, but such approaches lack a quantification mechanism that allows reaching several join points of the code with one declarative statement. Though it may seem unrelated, in testing, the use of mocks or stubs requires the use of AOP techniques, such as around advice. Here the collaborating objects are for the purpose of the test, a cross-cutting concern. Thus, the various Mock Object frameworks provide these features. For example, a process invokes a service to get a balance amount. In the test of the process, it is unimportant where the amount comes from, but only that the process uses the balance according to the requirements. == Adoption issues == Programmers need to be able to read and understand code to prevent errors. Even with proper education, understanding cross-cutting concerns can be difficult without proper support for visualizing both static structure and the dynamic flow of a program. Starting in 2002, AspectJ began to provide IDE plug-ins to support the visualizing of cross-cutting concerns. Those features, as well as aspect code assist and refactoring, are now common. Given the power of AOP, making a logical mistake in expressing cross-cutting can lead to widespread program failure. Conversely, another programmer may change the join points in a program, such as by renaming or moving methods, in ways that the aspect writer did not anticipate and with unforeseen consequences. One advantage of modularizing cross-cutting concerns is enabling one programmer to easily affect the entire system. As a result, such problems manifest as a conflict over responsibility between two or more developers for a given failure. AOP can expedite solving these problems, as only the aspect must be changed. Without AOP, the corresponding problems can be much more spread out. == Criticism == The most basic criticism of the effect of AOP is that control flow is obscured, and that it is not only worse than the much-maligned GOTO statement, but is closely analogous to the joke COME FROM statement. The obliviousness of application, which is fundamental to many definitions of AOP (the code in question has no indication that an advice will be applied, which is specified instead in the pointcut), means that the advice is not visible, in contrast to an explicit method call. For example, compare the COME FROM program: with an AOP fragment with analogous semantics: Indeed, the pointcut may depend on runtime condition and thus not be statically deterministic. This can be mitigated but not solved by static analysis and IDE support showing which advices potentially match. General criticisms are that AOP purports to improve \"both modularity and the structure of code\", but some counter that it instead undermines these goals and impedes \"independent development and understandability of programs\". Specifically, quantification by pointcuts breaks modularity: \"one must, in general, have whole-program knowledge to reason about the dynamic execution of an aspect-oriented program.\" Further, while its goals (modularizing cross-cutting concerns) are well understood, its actual definition is unclear and not clearly distinguished from other well-established techniques. Cross-cutting concerns potentially cross-cut each other, requiring some resolution mechanism, such as ordering. Indeed, aspects can apply to themselves, leading to problems such as the liar paradox. Technical criticisms include that the quantification of pointcuts (defining where advices are executed) is \"extremely sensitive to changes in the program\", which is known as the fragile pointcut problem. The problems with pointcuts are deemed intractable. If one replaces the quantification of pointcuts with explicit annotations, one obtains attribute-oriented programming instead, which is simply an explicit subroutine call and suffers the identical problem of scattering, which AOP was designed to solve. == Implementations == Many programming languages have implemented AOP, within the language, or as an external library, including: .NET framework languages (C#, Visual Basic (.NET) (VB.NET)) PostSharp is a commercial AOP implementation with a free but limited edition. Unity provides an API to facilitate proven practices in core areas of programming including data access, security, logging, exception handling and others. AspectDN is an AOP implementation allowing to weave the aspects directly on the .NET executable files. ActionScript Ada AutoHotkey C, C++ COBOL The Cocoa Objective-C frameworks ColdFusion Common Lisp Delphi Delphi Prism e (IEEE 1647) Emacs Lisp Groovy Haskell Java AspectJ JavaScript Logtalk Lua make Matlab ML Nemerle Perl PHP Prolog Python Racket Ruby Squeak Smalltalk UML 2.0 XML == See also == Distributed AOP Attribute grammar, a formalism that can be used for aspect-oriented programming on functional programming languages Programming paradigms Subject-oriented programming, an alternative to aspect-oriented programming Role-oriented programming, an alternative to aspect-oriented programming Predicate dispatch, an older alternative to aspect-oriented programming Executable UML Decorator pattern Domain-driven design == Notes and references == == Further reading == Kiczales, G.; Lamping, J.; Mendhekar, A.; Maeda, C.; Lopes, C.; Loingtier, J. M.; Irwin, J. (1997). Aspect-oriented programming (PDF). ECOOP'97. Proceedings of the 11th European Conference on Object-Oriented Programming. Lecture Notes in Computer Science (LNCS). Vol. 1241. pp. 220–242. CiteSeerX 10.1.1.115.8660. doi:10.1007/BFb0053381. ISBN 3-540-63089-9. The paper generally considered to be the authoritative reference for AOP. Robert E. Filman; Tzilla Elrad; Siobhán Clarke; Mehmet Aksit (2004). Aspect-Oriented Software Development. Addison-Wesley. ISBN 978-0-321-21976-3. Renaud Pawlak, Lionel Seinturier & Jean-Philippe Retaillé (2005). Foundations of AOP for J2EE Development. Apress. ISBN 978-1-59059-507-7. Laddad, Ramnivas (2003). AspectJ in Action: Practical Aspect-Oriented Programming. Manning. ISBN 978-1-930110-93-9. Jacobson, Ivar; Pan-Wei Ng (2005). Aspect-Oriented Software Development with Use Cases. Addison-Wesley. ISBN 978-0-321-26888-4. Aspect-oriented Software Development and PHP, Dmitry Sheiko, 2006 Siobhán Clarke & Elisa Baniassad (2005). Aspect-Oriented Analysis and Design: The Theme Approach. Addison-Wesley. ISBN 978-0-321-24674-5. Raghu Yedduladoddi (2009). Aspect Oriented Software Development: An Approach to Composing UML Design Models. VDM. ISBN 978-3-639-12084-4. \"Adaptive Object-Oriented Programming Using Graph-Based Customization\" – Lieberherr, Silva-Lepe, et al. – 1994 Zambrano Polo y La Borda, Arturo Federico (5 June 2013). \"Addressing aspect interactions in an industrial setting: experiences, problems and solutions\": 159. doi:10.35537/10915/35861. Retrieved 30 May 2014. {{cite journal}}: Cite journal requires |journal= (help) Wijesuriya, Viraj Brian (2016-08-30) Aspect Oriented Development, Lecture Notes, University of Colombo School of Computing, Sri Lanka Groves, Matthew D. (2013). AOP in .NET. Manning. ISBN 9781617291142. == External links == Eric Bodden's list of AOP tools in .NET framework Aspect-Oriented Software Development, annual conference on AOP AspectJ Programming Guide The AspectBench Compiler for AspectJ, another Java implementation Series of IBM developerWorks articles on AOP Laddad, Ramnivas (18 January 2002). \"I want my AOP!, Part 1\". JavaWorld. Retrieved 20 July 2020. A detailed series of articles on basics of aspect-oriented programming and AspectJ What is Aspect-Oriented Programming?, introduction with RemObjects Taco Constraint-Specification Aspect Weaver Aspect- vs. Object-Oriented Programming: Which Technique, When? Archived 15 April 2021 at the Wayback Machine Gregor Kiczales, Professor of Computer Science, explaining AOP, video 57 min. Aspect Oriented Programming in COBOL Archived 2008-12-17 at the Wayback Machine Aspect-Oriented Programming in Java with Spring Framework Wiki dedicated to AOP methods on.NET Early Aspects for Business Process Modeling (An Aspect Oriented Language for BPMN) Spring AOP and AspectJ Introduction AOSD Graduate Course at Bilkent University Introduction to AOP – Software Engineering Radio Podcast Episode 106 An Objective-C implementation of AOP by Szilveszter Molnar Aspect-Oriented programming for iOS and OS X by Manuel Gebele DevExpress MVVM Framework. Introduction to POCO ViewModels"
+  },
+  "chunks": [
+    {
+      "id": "aspectorientedprogra_8607daaf_c0000",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 893,
+      "content": "In computing, aspect-oriented programming (AOP) is a programming paradigm that aims to increase modularity by allowing the separation of cross-cutting concerns. It does so by adding behavior to existing code (an advice) without modifying the code, instead separately specifying which code is modified via a \"pointcut\" specification, such as \"log all function calls when the function's name begins with 'set'\". This allows behaviors that are not central to the business logic (such as logging) to be added to a program without cluttering the code of core functions. AOP includes programming methods and tools that support the modularization of concerns at the level of the source code, while aspect-oriented software development refers to a whole engineering discipline. Aspect-oriented programming entails breaking down program logic into cohesive areas of functionality (so-called concerns).",
+      "char_count": 892,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0001",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 893,
+      "end_char": 1891,
+      "content": "Nearly all programming paradigms support some level of grouping and encapsulation of concerns into separate, independent entities by providing abstractions (e.g., functions, procedures, modules, classes, methods) that can be used for implementing, abstracting, and composing these concerns. Some concerns \"cut across\" multiple abstractions in a program, and defy these forms of implementation. These concerns are called cross-cutting concerns or horizontal concerns. Logging exemplifies a cross-cutting concern because a logging strategy must affect every logged part of the system. Logging thereby crosscuts all logged classes and methods. All AOP implementations have some cross-cutting expressions that encapsulate each concern in one place. The difference between implementations lies in the power, safety, and usability of the constructs provided. For example, interceptors that specify the methods to express a limited form of cross-cutting, without much support for type-safety or debugging.",
+      "char_count": 998,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0002",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1892,
+      "end_char": 2398,
+      "content": "AspectJ has a number of such expressions and encapsulates them in a special class, called an aspect. For example, an aspect can alter the behavior of the base code (the non-aspect part of a program) by applying advice (additional behavior) at various join points (points in a program) specified in a quantification or query called a pointcut (that detects whether a given join point matches). An aspect can also make binary-compatible structural changes to other classes, such as adding members or parents.",
+      "char_count": 506,
+      "token_estimate": 126,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0003",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2412,
+      "end_char": 3055,
+      "content": "== History == AOP has several direct antecedents A1 and A2: reflection and metaobject protocols, subject-oriented programming, Composition Filters, and Adaptive Programming. Gregor Kiczales and colleagues at Xerox PARC developed the explicit concept of AOP and followed this with the AspectJ AOP extension to Java. IBM's research team pursued a tool approach over a language design approach and in 2001 proposed Hyper/J and the Concern Manipulation Environment, which have not seen wide use. The examples in this article use AspectJ. The Microsoft Transaction Server is considered to be the first major application of AOP followed by Enterprise JavaBeans.",
+      "char_count": 655,
+      "token_estimate": 163,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0004",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Motivation and basic concepts ==",
+      "heading_path": "== Motivation and basic concepts ==",
+      "start_char": 3090,
+      "end_char": 3765,
+      "content": "== Motivation and basic concepts == Typically, an aspect is scattered or tangled as code, making it harder to understand and maintain. It is scattered by the function (such as logging) being spread over a number of unrelated functions that might use its function, possibly in entirely unrelated systems or written in different languages. Thus, changing logging can require modifying all affected modules. Aspects become tangled not only with the mainline function of the systems in which they are expressed but also with each other. Changing one concern thus entails understanding all the tangled concerns or having some means by which the effect of changes can be inferred.",
+      "char_count": 674,
+      "token_estimate": 168,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0005",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Motivation and basic concepts ==",
+      "heading_path": "== Motivation and basic concepts ==",
+      "start_char": 3765,
+      "end_char": 4733,
+      "content": "For example, consider a banking application with a conceptually very simple method for transferring an amount from one account to another: However, this transfer method overlooks certain considerations that a deployed application would require, such as verifying that the current user is authorized to perform this operation, encapsulating database transactions to prevent accidental data loss, and logging the operation for diagnostic purposes. A version with all those new concerns might look like this: In this example, other interests have become tangled with the basic functionality (sometimes called the business logic concern). Transactions, security, and logging all exemplify cross-cutting concerns. Now consider what would happen if we suddenly need to change the security considerations for the application. In the program's current version, security-related operations appear scattered across numerous methods, and such a change would require major effort.",
+      "char_count": 968,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0006",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Motivation and basic concepts ==",
+      "heading_path": "== Motivation and basic concepts ==",
+      "start_char": 4734,
+      "end_char": 5677,
+      "content": "AOP tries to solve this problem by allowing the programmer to express cross-cutting concerns in stand-alone modules called aspects. Aspects can contain advice (code joined to specified points in the program) and inter-type declarations (structural members added to other classes). For example, a security module can include advice that performs a security check before accessing a bank account. The pointcut defines the times (join points) when one can access a bank account, and the code in the advice body defines how the security check is implemented. That way, both the check and the places can be maintained in one place. Further, a good pointcut can anticipate later program changes, so if another developer creates a new method to access the bank account, the advice will apply to the new method when it executes. So for the example above implementing logging in an aspect: One can think of AOP as a debugging tool or a user-level tool.",
+      "char_count": 943,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0007",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Motivation and basic concepts ==",
+      "heading_path": "== Motivation and basic concepts ==",
+      "start_char": 5678,
+      "end_char": 5841,
+      "content": "Advice should be reserved for cases in which one cannot get the function changed (user level) or do not want to change the function in production code (debugging).",
+      "char_count": 163,
+      "token_estimate": 40,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0008",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Join point models ==",
+      "heading_path": "== Join point models ==",
+      "start_char": 5830,
+      "end_char": 6731,
+      "content": "== Join point models == The advice-related component of an aspect-oriented language defines a join point model (JPM). A JPM defines three things: When the advice can run. These are called join points because they are points in a running program where additional behavior can be usefully joined. A join point needs to be addressable and understandable by an ordinary programmer to be useful. It should also be stable across inconsequential program changes to maintain aspect stability. Many AOP implementations support method executions and field references as join points. A way to specify (or quantify) join points, called pointcuts. Pointcuts determine whether a given join point matches. Most useful pointcut languages use a syntax like the base language (for example, AspectJ uses Java signatures) and allow reuse through naming and combination. A means of specifying code to run at a join point.",
+      "char_count": 900,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0009",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Join point models ==",
+      "heading_path": "== Join point models ==",
+      "start_char": 6731,
+      "end_char": 7093,
+      "content": "AspectJ calls this advice, and can run it before, after, and around join points. Some implementations also support defining a method in an aspect on another class. Join-point models can be compared based on the join points exposed, how join points are specified, the operations permitted at the join points, and the structural enhancements that can be expressed.",
+      "char_count": 362,
+      "token_estimate": 90,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0010",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== = AspectJ's join-point model ==",
+      "heading_path": "== = AspectJ's join-point model ==",
+      "start_char": 7105,
+      "end_char": 7107,
+      "content": "== = AspectJ's join-point model ===",
+      "char_count": 35,
+      "token_estimate": 8,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0011",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== = Other potential join point models ==",
+      "heading_path": "== = Other potential join point models ==",
+      "start_char": 7148,
+      "end_char": 7512,
+      "content": "== = Other potential join point models === There are other kinds of JPMs. All advice languages can be defined in terms of their JPM. For example, a hypothetical aspect language for UML may have the following JPM: Join points are all model elements. Pointcuts are some Boolean expression combining the model elements. The means of affect at these points are a visualization of all the matched join points.",
+      "char_count": 404,
+      "token_estimate": 101,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0012",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== = Inter-type declarations ==",
+      "heading_path": "== = Inter-type declarations ==",
+      "start_char": 7543,
+      "end_char": 8327,
+      "content": "== = Inter-type declarations === Inter-type declarations provide a way to express cross-cutting concerns affecting the structure of modules. Also known as open classes and extension methods, this enables programmers to declare in one place members or parents of another class, typically to combine all the code related to a concern in one aspect. For example, if a programmer implemented the cross-cutting display-update concern using visitors, an inter-type declaration using the visitor pattern might look like this in AspectJ: This code snippet adds the acceptVisitor method to the Point class. Any structural additions are required to be compatible with the original class, so that clients of the existing class continue to operate, unless the AOP implementation can expect to control all clients at all times.",
+      "char_count": 814,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0013",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Implementation ==",
+      "heading_path": "== Implementation ==",
+      "start_char": 8347,
+      "end_char": 9295,
+      "content": "== Implementation == AOP programs can affect other programs in two different ways, depending on the underlying languages and environments: a combined program is produced, valid in the original language and indistinguishable from an ordinary program to the ultimate interpreter the ultimate interpreter or environment is updated to understand and implement AOP features. The difficulty of changing environments means most implementations produce compatible combination programs through a type of program transformation known as weaving. An aspect weaver reads the aspect-oriented code and generates appropriate object-oriented code with the aspects integrated. The same AOP language can be implemented through a variety of weaving methods, so the semantics of a language should never be understood in terms of the weaving implementation. Only the speed of an implementation and its ease of deployment are affected by the method of combination used.",
+      "char_count": 947,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0014",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Implementation ==",
+      "heading_path": "== Implementation ==",
+      "start_char": 9295,
+      "end_char": 10143,
+      "content": "Systems can implement source-level weaving using preprocessors (as C++ was implemented originally in CFront) that require access to program source files. However, Java's well-defined binary form enables bytecode weavers to work with any Java program in .class-file form. Bytecode weavers can be deployed during the build process or, if the weave model is per-class, during class loading. AspectJ started with source-level weaving in 2001, delivered a per-class bytecode weaver in 2002, and offered advanced load-time support after the integration of AspectWerkz in 2005. Any solution that combines programs at runtime must provide views that segregate them properly to maintain the programmer's segregated model. Java's bytecode support for multiple source files enables any debugger to step through a properly woven .class file in a source editor.",
+      "char_count": 848,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0015",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Implementation ==",
+      "heading_path": "== Implementation ==",
+      "start_char": 10144,
+      "end_char": 10839,
+      "content": "However, some third-party decompilers cannot process woven code because they expect code produced by Javac rather than all supported bytecode forms (see also § Criticism, below). Deploy-time weaving offers another approach. This basically implies post-processing, but rather than patching the generated code, this weaving approach subclasses existing classes so that the modifications are introduced by method-overriding. The existing classes remain untouched, even at runtime, and all existing tools, such as debuggers and profilers, can be used during development. A similar approach has already proven itself in the implementation of many Java EE application servers, such as IBM's WebSphere.",
+      "char_count": 695,
+      "token_estimate": 173,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0016",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== = Terminology ==",
+      "heading_path": "== = Terminology ==",
+      "start_char": 10839,
+      "end_char": 11596,
+      "content": "== = Terminology === Standard terminology used in Aspect-oriented programming may include: Cross-cutting concerns Even though most classes in an object-oriented model will perform a single, specific function, they often share common, secondary requirements with other classes. For example, we may want to add logging to classes within the data-access layer and also to classes in the UI layer whenever a thread enters or exits a method. Further concerns can be related to security such as access control or information flow control. Even though each class has a very different primary functionality, the code needed to perform the secondary functionality is often identical. Advice This is the additional code that you want to apply to your existing model.",
+      "char_count": 756,
+      "token_estimate": 189,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0017",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== = Terminology ==",
+      "heading_path": "== = Terminology ==",
+      "start_char": 11596,
+      "end_char": 12154,
+      "content": "In our example, this is the logging code that we want to apply whenever the thread enters or exits a method.: Pointcut This refers to the point of execution in the application at which cross-cutting concern needs to be applied. In our example, a pointcut is reached when the thread enters a method, and another pointcut is reached when the thread exits the method. Aspect The combination of the pointcut and the advice is termed an aspect. In the example above, we add a logging aspect to our application by defining a pointcut and giving the correct advice.",
+      "char_count": 558,
+      "token_estimate": 139,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0018",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Comparison to other programming paradigms ==",
+      "heading_path": "== Comparison to other programming paradigms ==",
+      "start_char": 12183,
+      "end_char": 13089,
+      "content": "== Comparison to other programming paradigms == Aspects emerged from object-oriented programming and reflective programming. AOP languages have functionality similar to, but more restricted than, metaobject protocols. Aspects relate closely to programming concepts like subjects, mixins, and delegation. Other ways to use aspect-oriented programming paradigms include Composition Filters and the hyperslices approach. Since at least the 1970s, developers have been using forms of interception and dispatch-patching that resemble some of the implementation methods for AOP, but these never had the semantics that the cross-cutting specifications provide in one place. Designers have considered alternative ways to achieve separation of code, such as C#'s partial types, but such approaches lack a quantification mechanism that allows reaching several join points of the code with one declarative statement.",
+      "char_count": 905,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0019",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Comparison to other programming paradigms ==",
+      "heading_path": "== Comparison to other programming paradigms ==",
+      "start_char": 13089,
+      "end_char": 13584,
+      "content": "Though it may seem unrelated, in testing, the use of mocks or stubs requires the use of AOP techniques, such as around advice. Here the collaborating objects are for the purpose of the test, a cross-cutting concern. Thus, the various Mock Object frameworks provide these features. For example, a process invokes a service to get a balance amount. In the test of the process, it is unimportant where the amount comes from, but only that the process uses the balance according to the requirements.",
+      "char_count": 495,
+      "token_estimate": 123,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0020",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Adoption issues ==",
+      "heading_path": "== Adoption issues ==",
+      "start_char": 13559,
+      "end_char": 14451,
+      "content": "== Adoption issues == Programmers need to be able to read and understand code to prevent errors. Even with proper education, understanding cross-cutting concerns can be difficult without proper support for visualizing both static structure and the dynamic flow of a program. Starting in 2002, AspectJ began to provide IDE plug-ins to support the visualizing of cross-cutting concerns. Those features, as well as aspect code assist and refactoring, are now common. Given the power of AOP, making a logical mistake in expressing cross-cutting can lead to widespread program failure. Conversely, another programmer may change the join points in a program, such as by renaming or moving methods, in ways that the aspect writer did not anticipate and with unforeseen consequences. One advantage of modularizing cross-cutting concerns is enabling one programmer to easily affect the entire system.",
+      "char_count": 891,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0021",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Adoption issues ==",
+      "heading_path": "== Adoption issues ==",
+      "start_char": 14451,
+      "end_char": 14718,
+      "content": "As a result, such problems manifest as a conflict over responsibility between two or more developers for a given failure. AOP can expedite solving these problems, as only the aspect must be changed. Without AOP, the corresponding problems can be much more spread out.",
+      "char_count": 267,
+      "token_estimate": 66,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0022",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Criticism ==",
+      "heading_path": "== Criticism ==",
+      "start_char": 14713,
+      "end_char": 15512,
+      "content": "== Criticism == The most basic criticism of the effect of AOP is that control flow is obscured, and that it is not only worse than the much-maligned GOTO statement, but is closely analogous to the joke COME FROM statement. The obliviousness of application, which is fundamental to many definitions of AOP (the code in question has no indication that an advice will be applied, which is specified instead in the pointcut), means that the advice is not visible, in contrast to an explicit method call. For example, compare the COME FROM program: with an AOP fragment with analogous semantics: Indeed, the pointcut may depend on runtime condition and thus not be statically deterministic. This can be mitigated but not solved by static analysis and IDE support showing which advices potentially match.",
+      "char_count": 798,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0023",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Criticism ==",
+      "heading_path": "== Criticism ==",
+      "start_char": 15512,
+      "end_char": 16510,
+      "content": "General criticisms are that AOP purports to improve \"both modularity and the structure of code\", but some counter that it instead undermines these goals and impedes \"independent development and understandability of programs\". Specifically, quantification by pointcuts breaks modularity: \"one must, in general, have whole-program knowledge to reason about the dynamic execution of an aspect-oriented program.\" Further, while its goals (modularizing cross-cutting concerns) are well understood, its actual definition is unclear and not clearly distinguished from other well-established techniques. Cross-cutting concerns potentially cross-cut each other, requiring some resolution mechanism, such as ordering. Indeed, aspects can apply to themselves, leading to problems such as the liar paradox. Technical criticisms include that the quantification of pointcuts (defining where advices are executed) is \"extremely sensitive to changes in the program\", which is known as the fragile pointcut problem.",
+      "char_count": 998,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0024",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Criticism ==",
+      "heading_path": "== Criticism ==",
+      "start_char": 16511,
+      "end_char": 16815,
+      "content": "The problems with pointcuts are deemed intractable. If one replaces the quantification of pointcuts with explicit annotations, one obtains attribute-oriented programming instead, which is simply an explicit subroutine call and suffers the identical problem of scattering, which AOP was designed to solve.",
+      "char_count": 304,
+      "token_estimate": 76,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0025",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Implementations ==",
+      "heading_path": "== Implementations ==",
+      "start_char": 16822,
+      "end_char": 17607,
+      "content": "== Implementations == Many programming languages have implemented AOP, within the language, or as an external library, including: .NET framework languages (C#, Visual Basic (.NET) (VB.NET)) PostSharp is a commercial AOP implementation with a free but limited edition. Unity provides an API to facilitate proven practices in core areas of programming including data access, security, logging, exception handling and others. AspectDN is an AOP implementation allowing to weave the aspects directly on the .NET executable files. ActionScript Ada AutoHotkey C, C++ COBOL The Cocoa Objective-C frameworks ColdFusion Common Lisp Delphi Delphi Prism e (IEEE 1647) Emacs Lisp Groovy Haskell Java AspectJ JavaScript Logtalk Lua make Matlab ML Nemerle Perl PHP Prolog Python Racket Ruby Squeak Smalltalk UML 2.0 XML",
+      "char_count": 805,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0026",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== See also ==",
+      "heading_path": "== See also ==",
+      "start_char": 17621,
+      "end_char": 18051,
+      "content": "== See also == Distributed AOP Attribute grammar, a formalism that can be used for aspect-oriented programming on functional programming languages Programming paradigms Subject-oriented programming, an alternative to aspect-oriented programming Role-oriented programming, an alternative to aspect-oriented programming Predicate dispatch, an older alternative to aspect-oriented programming Executable UML Decorator pattern Domain-driven design",
+      "char_count": 443,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0027",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Notes and references ==",
+      "heading_path": "== Notes and references ==",
+      "start_char": 18077,
+      "end_char": 18078,
+      "content": "== Notes and references ==",
+      "char_count": 26,
+      "token_estimate": 6,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0028",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Further reading ==",
+      "heading_path": "== Further reading ==",
+      "start_char": 18099,
+      "end_char": 19059,
+      "content": "== Further reading == Kiczales, G.; Lamping, J.; Mendhekar, A.; Maeda, C.; Lopes, C.; Loingtier, J. M.; Irwin, J. (1997). Aspect-oriented programming (PDF). ECOOP'97. Proceedings of the 11th European Conference on Object-Oriented Programming. Lecture Notes in Computer Science (LNCS). Vol. 1241. pp. 220–242. CiteSeerX 10.1.1.115.8660. doi:10.1007/BFb0053381. ISBN 3-540-63089-9. The paper generally considered to be the authoritative reference for AOP. Robert E. Filman; Tzilla Elrad; Siobhán Clarke; Mehmet Aksit (2004). Aspect-Oriented Software Development. Addison-Wesley. ISBN 978-0-321-21976-3. Renaud Pawlak, Lionel Seinturier & Jean-Philippe Retaillé (2005). Foundations of AOP for J2EE Development. Apress. ISBN 978-1-59059-507-7. Laddad, Ramnivas (2003). AspectJ in Action: Practical Aspect-Oriented Programming. Manning. ISBN 978-1-930110-93-9. Jacobson, Ivar; Pan-Wei Ng (2005). Aspect-Oriented Software Development with Use Cases. Addison-Wesley.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0029",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== Further reading ==",
+      "heading_path": "== Further reading ==",
+      "start_char": 19059,
+      "end_char": 20002,
+      "content": "ISBN 978-0-321-26888-4. Aspect-oriented Software Development and PHP, Dmitry Sheiko, 2006 Siobhán Clarke & Elisa Baniassad (2005). Aspect-Oriented Analysis and Design: The Theme Approach. Addison-Wesley. ISBN 978-0-321-24674-5. Raghu Yedduladoddi (2009). Aspect Oriented Software Development: An Approach to Composing UML Design Models. VDM. ISBN 978-3-639-12084-4. \"Adaptive Object-Oriented Programming Using Graph-Based Customization\" – Lieberherr, Silva-Lepe, et al. – 1994 Zambrano Polo y La Borda, Arturo Federico (5 June 2013). \"Addressing aspect interactions in an industrial setting: experiences, problems and solutions\": 159. doi:10.35537/10915/35861. Retrieved 30 May 2014. {{cite journal}}: Cite journal requires |journal= (help) Wijesuriya, Viraj Brian (2016-08-30) Aspect Oriented Development, Lecture Notes, University of Colombo School of Computing, Sri Lanka Groves, Matthew D. (2013). AOP in .NET. Manning. ISBN 9781617291142.",
+      "char_count": 943,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0030",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== External links ==",
+      "heading_path": "== External links ==",
+      "start_char": 20002,
+      "end_char": 20752,
+      "content": "== External links == Eric Bodden's list of AOP tools in .NET framework Aspect-Oriented Software Development, annual conference on AOP AspectJ Programming Guide The AspectBench Compiler for AspectJ, another Java implementation Series of IBM developerWorks articles on AOP Laddad, Ramnivas (18 January 2002). \"I want my AOP!, Part 1\". JavaWorld. Retrieved 20 July 2020. A detailed series of articles on basics of aspect-oriented programming and AspectJ What is Aspect-Oriented Programming?, introduction with RemObjects Taco Constraint-Specification Aspect Weaver Aspect- vs. Object-Oriented Programming: Which Technique, When? Archived 15 April 2021 at the Wayback Machine Gregor Kiczales, Professor of Computer Science, explaining AOP, video 57 min.",
+      "char_count": 749,
+      "token_estimate": 187,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "aspectorientedprogra_8607daaf_c0031",
+      "article_id": "aspectorientedprogra_8607daaf",
+      "section": "== External links ==",
+      "heading_path": "== External links ==",
+      "start_char": 20752,
+      "end_char": 21337,
+      "content": "Aspect Oriented Programming in COBOL Archived 2008-12-17 at the Wayback Machine Aspect-Oriented Programming in Java with Spring Framework Wiki dedicated to AOP methods on.NET Early Aspects for Business Process Modeling (An Aspect Oriented Language for BPMN) Spring AOP and AspectJ Introduction AOSD Graduate Course at Bilkent University Introduction to AOP – Software Engineering Radio Podcast Episode 106 An Objective-C implementation of AOP by Szilveszter Molnar Aspect-Oriented programming for iOS and OS X by Manuel Gebele DevExpress MVVM Framework. Introduction to POCO ViewModels",
+      "char_count": 585,
+      "token_estimate": 146,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 9,
+    "items": [
+      {
+        "question": "What is an example of a cross-cutting concern in programming paradigms?",
+        "answer": "Logging is an example of a cross-cutting concern because a logging strategy must affect every logged part of the system.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0001"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the fragile pointcut problem in aspect-oriented programming?",
+        "answer": "The fragile pointcut problem refers to the issue that the quantification of pointcuts (defining where advices are executed) is extremely sensitive to changes in the program.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0023"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are examples of cross-cutting concerns mentioned in the context of a banking application's transfer method?",
+        "answer": "Transactions, security, and logging are examples of cross-cutting concerns mentioned.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0005"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Which paper is generally considered to be the authoritative reference for Aspect-Oriented Programming (AOP)?",
+        "answer": "The paper 'Aspect-oriented programming' by Kiczales, G.; Lamping, J.; Mendhekar, A.; Maeda, C.; Lopes, C.; Loingtier, J. M.; Irwin, J. (1997), presented at ECOOP'97, is generally considered to be the authoritative reference for AOP.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0028"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the name of the program transformation used in most AOP implementations to produce compatible combination programs?",
+        "answer": "Weaving.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0013"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What programming concepts are aspects closely related to?",
+        "answer": "Aspects relate closely to programming concepts like subjects, mixins, and delegation.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0018"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "How do the historical development and motivations behind Aspect-Oriented Programming (AOP) relate to the challenges of scattered and tangled code in software systems?",
+        "answer": "The historical development of Aspect-Oriented Programming (AOP) was driven by the need to address challenges in software systems where concerns like logging, security, and transactions are scattered and tangled across multiple modules, making maintenance difficult. Early motivations for AOP focused on the problem that such cross-cutting concerns were not modularized, leading to code that was hard to understand and modify. The development of AOP by researchers like Gregor Kiczales at Xerox PARC, and tools such as AspectJ, aimed to provide mechanisms to separate these concerns, thus improving modularity and maintainability. This connection between the motivation (untangling and modularizing cross-cutting concerns) and the historical evolution of AOP highlights how the field emerged as a response to practical software engineering difficulties.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0003",
+          "aspectorientedprogra_8607daaf_c0004",
+          "aspectorientedprogra_8607daaf_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does aspect-oriented programming (AOP) address cross-cutting concerns, and what mechanisms or constructs are used to encapsulate and apply these concerns in practice?",
+        "answer": "Aspect-oriented programming (AOP) addresses cross-cutting concerns by allowing behaviors that affect multiple parts of a program, such as logging, to be modularized and added without cluttering core business logic. AOP achieves this by using constructs like advice (additional behavior) and pointcuts (specifications of where to apply the advice) to modify existing code behavior without directly altering the code itself. In practice, implementations like AspectJ encapsulate these cross-cutting expressions in special classes called aspects, which can apply advice at specified join points and even make structural changes to other classes. This modularization enables concerns that cut across multiple abstractions to be managed in one place, improving modularity and maintainability.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0000",
+          "aspectorientedprogra_8607daaf_c0001",
+          "aspectorientedprogra_8607daaf_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does aspect-oriented programming (AOP) address the problems caused by scattered and tangled cross-cutting concerns in software systems, as illustrated by the banking application example?",
+        "answer": "Aspect-oriented programming (AOP) addresses the problems of scattered and tangled cross-cutting concerns by allowing these concerns, such as logging, security, and transactions, to be modularized into separate units called aspects. In traditional code, as shown in the banking application example, cross-cutting concerns are interwoven with business logic and scattered across multiple methods, making maintenance and updates difficult. AOP enables programmers to define advice (code to be executed at specified points) and pointcuts (specifying where the advice applies), so that concerns like security checks or logging can be maintained in one place. This modularization reduces the need to modify multiple modules when a concern changes and helps manage complexity by keeping cross-cutting logic separate from core functionality.",
+        "related_chunk_ids": [
+          "aspectorientedprogra_8607daaf_c0004",
+          "aspectorientedprogra_8607daaf_c0005",
+          "aspectorientedprogra_8607daaf_c0006",
+          "aspectorientedprogra_8607daaf_c0007"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-28T12:09:33.561Z",
+    "content_format": "markdown",
+    "total_chunks": 32,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

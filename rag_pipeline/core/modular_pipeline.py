@@ -257,7 +257,6 @@ class ModularRAGPipeline:
                 logger.debug(f"Retrieval completed in {timing_info['retrieval_time']:.3f}s, found {len(retrieved_documents)} documents")
             else:
                 timing_info["retrieval_time"] = 0.0
-            
             # Step 4: Passage augmentation
             if "passage_augment" in self.components and retrieved_documents:
                 step_start = time.time()

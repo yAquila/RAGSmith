@@ -4,6 +4,7 @@ Dataset utilities for vector store operations.
 Provides utilities for:
 - Dataset hashing
 - CSV loading with proper formatting
+- JSON loading with proper formatting
 - Metadata parsing and validation
 """
 
@@ -13,6 +14,7 @@ import ast
 import json
 import hashlib
 import os
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -61,14 +63,46 @@ def generate_dataset_hash_from_file(file_path: str) -> str:
         return hashlib.md5(combined_content.encode()).hexdigest()
         
     except Exception as e:
-        logger.error(f"Error generating dataset hash from {file_path}: {e}")
-        # Fallback: use file name and size
-        if os.path.exists(file_path):
-            file_stat = os.stat(file_path)
-            fallback_content = f"{os.path.basename(file_path)}_{file_stat.st_size}_{file_stat.st_mtime}"
-            return hashlib.md5(fallback_content.encode()).hexdigest()
-        else:
-            return hashlib.md5(file_path.encode()).hexdigest()
+        logger.error(f"Error generating dataset hash from file {file_path}: {e}")
+        # Fallback: use file path and size
+        fallback_content = f"file_{file_path}_{os.path.getsize(file_path) if os.path.exists(file_path) else 0}"
+        return hashlib.md5(fallback_content.encode()).hexdigest()
+
+
+def generate_dataset_hash_from_folder(folder_path: str) -> str:
+    """
+    Generate a hash for dataset folder containing JSON files to create unique collection names
+    
+    Args:
+        folder_path: Path to the dataset folder containing JSON files
+        
+    Returns:
+        MD5 hash string of the dataset content
+    """
+    try:
+        from rag_pipeline.core.dataset import RAGDataset
+        
+        # Load documents from the folder
+        dataset = RAGDataset(folder_path)
+        documents = dataset.get_documents()
+        
+        # Generate hash based on content
+        content_hashes = []
+        for doc in documents:
+            content = f"{doc.doc_id}:{doc.content}"
+            content_hashes.append(hashlib.md5(content.encode()).hexdigest())
+        
+        # Sort and combine all hashes to create dataset hash
+        content_hashes.sort()
+        combined_content = "".join(content_hashes)
+        return hashlib.md5(combined_content.encode()).hexdigest()
+        
+    except Exception as e:
+        logger.error(f"Error generating dataset hash from folder {folder_path}: {e}")
+        # Fallback: use folder path and number of files
+        json_files = list(Path(folder_path).glob("*.json")) if os.path.exists(folder_path) else []
+        fallback_content = f"folder_{folder_path}_{len(json_files)}"
+        return hashlib.md5(fallback_content.encode()).hexdigest()
 
 
 def generate_dataset_hash_from_dataframe(df: pd.DataFrame) -> str:
