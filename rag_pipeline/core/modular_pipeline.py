@@ -21,11 +21,16 @@ from .modular_framework import (
 from .modular_configs import ModularRAGConfig
 from .modular_implementations import COMPONENT_REGISTRY
 # Add TypedDict imports for result types
-from .modular_implementations import (
-    PreEmbeddingResult, QueryExpansionResult, RetrievalResult as RetrievalComponentResult,
-    PassageAugmentResult, PassageRerankResult, PassageFilterResult, PassageCompressResult,
-    PromptMakerResult, GeneratorResult, PostGenerationResult
-)
+from rag_pipeline.core.modular_implementations.pre_embedding import PreEmbeddingResult
+from rag_pipeline.core.modular_implementations.query_expansion import QueryExpansionResult
+from rag_pipeline.core.modular_implementations.retrieval import RetrievalResult as RetrievalComponentResult
+from rag_pipeline.core.modular_implementations.passage_augment import PassageAugmentResult
+from rag_pipeline.core.modular_implementations.passage_rerank import PassageRerankResult
+from rag_pipeline.core.modular_implementations.passage_filter import PassageFilterResult
+from rag_pipeline.core.modular_implementations.passage_compress import PassageCompressResult
+from rag_pipeline.core.modular_implementations.prompt_maker import PromptMakerResult
+from rag_pipeline.core.modular_implementations.generator import GeneratorResult
+from rag_pipeline.core.modular_implementations.post_generation import PostGenerationResult
 from .dataset import RAGDataset
 from .evaluator import RAGEvaluator
 from rag_pipeline.core.models import RetrievalResult, GenerationResult, RAGMetrics

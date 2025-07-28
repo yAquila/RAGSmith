@@ -49,82 +49,82 @@ async def run_rag_evaluation():
                 embedding_model="mxbai-embed-large",
                 similarity_metric="cosine"
             ),
-            RetrievalConfig(
-                name="nomic-cosine",
-                enabled=True,
-                technique="simple_vector_rag",
-                top_k=10,
-                embedding_model="nomic-embed-text",
-                similarity_metric="cosine"
-            ),
-            RetrievalConfig(
-                name="bm25",
-                enabled=True,
-                technique="keyword_search_bm25",
-                top_k=10,
-                bm25_k1=1.2,
-                bm25_b=0.75,
-                remove_stopwords=True,
-                apply_stemming=False,
-                use_advanced_tokenization=False
-            ),
-            RetrievalConfig(
-                name="hybrid_search_cc",
-                enabled=True,
-                technique="hybrid_search",
-                top_k=10,
-                combination_method="convex_combination",
-                excessive_k=60,
-                alpha=0.7,
-                normalization_method="minmax"
-            ),
-            RetrievalConfig(
-                name="hybrid_search_rrf",
-                enabled=True,
-                technique="hybrid_search",
-                top_k=10,
-                combination_method="reciprocal_rank_fusion",
-                excessive_k=60
-            ),
-            RetrievalConfig(
-                name="hybrid_search_borda",
-                enabled=True,
-                technique="hybrid_search",
-                top_k=10,
-                combination_method="borda_count",
-                excessive_k=60
-            )
+            # RetrievalConfig(
+            #     name="nomic-cosine",
+            #     enabled=True,
+            #     technique="simple_vector_rag",
+            #     top_k=10,
+            #     embedding_model="nomic-embed-text",
+            #     similarity_metric="cosine"
+            # ),
+            # RetrievalConfig(
+            #     name="bm25",
+            #     enabled=True,
+            #     technique="keyword_search_bm25",
+            #     top_k=10,
+            #     bm25_k1=1.2,
+            #     bm25_b=0.75,
+            #     remove_stopwords=True,
+            #     apply_stemming=False,
+            #     use_advanced_tokenization=False
+            # ),
+            # RetrievalConfig(
+            #     name="hybrid_search_cc",
+            #     enabled=True,
+            #     technique="hybrid_search",
+            #     top_k=10,
+            #     combination_method="convex_combination",
+            #     excessive_k=60,
+            #     alpha=0.7,
+            #     normalization_method="minmax"
+            # ),
+            # RetrievalConfig(
+            #     name="hybrid_search_rrf",
+            #     enabled=True,
+            #     technique="hybrid_search",
+            #     top_k=10,
+            #     combination_method="reciprocal_rank_fusion",
+            #     excessive_k=60
+            # ),
+            # RetrievalConfig(
+            #     name="hybrid_search_borda",
+            #     enabled=True,
+            #     technique="hybrid_search",
+            #     top_k=10,
+            #     combination_method="borda_count",
+            #     excessive_k=60
+            # )
         ],
         # Passage rerank: (optional, can add more configs)
         passage_rerank=[
-            PassageRerankConfig(
-                name="ce_rerank_bge",
-                enabled=True,
-                technique="cross_encoder",
-                cross_encoder_top_k=5,
-                cross_encoder_model="BAAI/bge-reranker-v2-m3",
-            ), 
-            PassageRerankConfig(
-                name="llm_rerank_gemma",
-                enabled=True,
-                technique="llm_rerank",
-                llm_rerank_top_k=5,
-                llm_rerank_model="gemma3:4b",
-            ),
-            PassageRerankConfig(
-                name="cellm_parallel_rerank",
-                enabled=True,
-                technique="cellm_parallel_rerank",
-                ce_model="BAAI/bge-reranker-v2-m3",
-                llm_model="gemma3:4b",
-                top_k=5,
-                parallel_ensemble_method="weighted",
-                ce_weight=0.7,
-                llm_weight=0.3,
-                ce_force_cpu=False,
-                llm_max_tokens=2048,
-                llm_temperature=0.1,
-            ),
+            # PassageRerankConfig(
+            #     name="ce_rerank_bge",
+            #     enabled=True,
+            #     technique="cross_encoder",
+            #     cross_encoder_top_k=5,
+            #     cross_encoder_model="BAAI/bge-reranker-v2-m3",
+            # ), 
+            # PassageRerankConfig(
+            #     name="llm_rerank_gemma",
+            #     enabled=True,
+            #     technique="llm_rerank",
+            #     llm_rerank_top_k=5,
+            #     llm_rerank_model="gemma3:4b",
+            # ),
+            # PassageRerankConfig(
+            #     name="cellm_parallel_rerank",
+            #     enabled=True,
+            #     technique="cellm_parallel_rerank",
+            #     ce_model="BAAI/bge-reranker-v2-m3",
+            #     llm_model="gemma3:4b",
+            #     top_k=5,
+            #     parallel_ensemble_method="weighted",
+            #     ce_weight=0.7,
+            #     llm_weight=0.3,
+            #     ce_force_cpu=False,
+            #     llm_max_tokens=2048,
+            #     llm_temperature=0.1,
+            # ),
             PassageRerankConfig(
                 name="no_rerank",
                 enabled=True,
@@ -134,12 +134,12 @@ async def run_rag_evaluation():
 
         # Passage filter: one config
         passage_filter=[
-            PassageFilterConfig(
-                name="simple_threshold",
-                enabled=True,
-                technique="simple_threshold",
-                top_k=10,
-            ),
+            # PassageFilterConfig(
+            #     name="simple_threshold",
+            #     enabled=True,
+            #     technique="simple_threshold",
+            #     top_k=10,
+            # ),
             PassageFilterConfig(
                 name="similarity_threshold",
                 enabled=True,
@@ -149,15 +149,15 @@ async def run_rag_evaluation():
             )
         ],
         passage_compress=[
-            PassageCompressConfig(
-                name="llm_summarize",
-                enabled=True,
-                technique="llm_summarize",
-                provider="ollama",
-                llm_summarize_model="gemma3:4b",
-                llm_summarize_max_tokens=500,
-                llm_summarize_temperature=0.1,
-            ),
+            # PassageCompressConfig(
+            #     name="llm_summarize",
+            #     enabled=True,
+            #     technique="llm_summarize",
+            #     provider="ollama",
+            #     llm_summarize_model="gemma3:4b",
+            #     llm_summarize_max_tokens=500,
+            #     llm_summarize_temperature=0.1,
+            # ),
             PassageCompressConfig(
                 name="no_compress",
                 enabled=True,
@@ -184,16 +184,16 @@ async def run_rag_evaluation():
                 temperature=0.3,
                 provider="ollama",
                 max_tokens=500
-            ),
-            GeneratorConfig(
-                name="gemma3:4b-t0.1",
-                enabled=True,
-                technique="llm",
-                model="gemma3:4b",
-                temperature=0.1,
-                provider="ollama",
-                max_tokens=500
             )
+            # GeneratorConfig(
+            #     name="gemma3:4b-t0.1",
+            #     enabled=True,
+            #     technique="llm",
+            #     model="gemma3:4b",
+            #     temperature=0.1,
+            #     provider="ollama",
+            #     max_tokens=500
+            # )
             # GeneratorConfig(
             #     name="multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemini-2.0-flash",
             #     enabled=True,
@@ -231,8 +231,8 @@ async def run_rag_evaluation():
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=200,
-        eval_batch_size=10,
+        max_test_cases=3,
+        eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,
         cache_enabled=True
