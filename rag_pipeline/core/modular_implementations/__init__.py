@@ -1,5 +1,5 @@
 from rag_pipeline.core.modular_implementations.pre_embedding import NonePreEmbedding, ContextualChunkHeaders, PreEmbeddingResult
-from rag_pipeline.core.modular_implementations.query_expansion import NoneQueryExpansion, SimpleMultiQuery, QueryExpansionResult
+from rag_pipeline.core.modular_implementations.query_expansion import NoneQueryExpansion, SimpleMultiQuery, Decomposition, RAGFusion, HyDE, QueryExpansionResult
 from rag_pipeline.core.modular_implementations.retrieval import SimpleVectorRAG, KeywordSearchBM25, HybridSearch, RetrievalResult
 from rag_pipeline.core.modular_implementations.passage_augment import NonePassageAugment, PrevNextAugmenter, PassageAugmentResult
 from rag_pipeline.core.modular_implementations.passage_rerank import NonePassageRerank, CrossEncoderRerank, LLMRerank, CELLM_ParallelRerank, PassageRerankResult
@@ -17,6 +17,9 @@ COMPONENT_REGISTRY = {
     "query_expansion": {
         "none": NoneQueryExpansion,
         "simple_multi_query": SimpleMultiQuery,
+        "decomposition": Decomposition,
+        "rag_fusion": RAGFusion,
+        "hyde": HyDE,
     },
     "retrieval": {
         "simple_vector_rag": SimpleVectorRAG,

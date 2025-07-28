@@ -55,20 +55,60 @@ class QueryExpansionConfig(BaseModel):
     # Simple Multi-Query settings
     num_expanded_queries: int = 3
     expansion_template: str = "Generate {num} different ways to ask: {query}"
+    prompt: str = """
+You are an efficient Query Expander. Your task is to read the query provided below and expand it into only {num_expanded_queries} variations.
+
+### Output Format
+You must output the expanded queries in the following format:
+1. ...
+2. ...
+...
+...
+{num_expanded_queries}. ...
+
+### Query to Expand
+{query}
+
+### Expanded Queries
+        """
+    model: str = "gemma3:4b"
     
     # RAG Fusion settings
     fusion_weights: List[float] = [0.5, 0.3, 0.2]
     fusion_method: str = "weighted"  # Options: "weighted", "rrf", "max"
     
     # HyDE (Hypothetical Document Embeddings) settings
-    generate_hypothetical_docs: bool = False
-    num_hypothetical_docs: int = 1
-    hyde_template: str = "Write a passage that answers: {query}"
+    hyde_prompt: str = """Imagine you are an expert writing a detailed explanation on the topic: '{query}'
+Your responses should be comprehensive and include all key points that would be found in the top search result. You should output ONLY {num_expanded_queries} documents in the following format:
+
+Document 1:
+...
+Document {num_expanded_queries}:
+...
+
+Do not add any other text.
+"""
     
     # Decomposition settings
-    decompose_complex_queries: bool = False
-    max_subqueries: int = 3
-    decomposition_template: str = "Break down this query into simpler sub-questions: {query}"
+    decomposition_prompt: str = """
+Your task is to rewrite a user's query into {num_expanded_queries} more specific queries. Your output must be ONLY a numbered list of the new queries. Do not add any other text.
+
+---
+Example:
+User Query: "benefits of intermittent fasting"
+Number of Queries: 3
+New Queries:
+1. What are the weight loss results of intermittent fasting?
+2. Risks and side effects of intermittent fasting.
+3. How does intermittent fasting affect metabolic health?
+---
+
+Now, do this for the following query.
+
+User Query: "{query}"
+Number of Queries: {num_expanded_queries}
+New Queries:
+        """
     
 
 
