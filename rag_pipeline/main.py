@@ -210,14 +210,48 @@ async def run_rag_evaluation():
                 technique="none",
             ),
             QueryExpansionConfig(
-                name="simple_multi_query",
+                name="simple_multi_query_cc",
                 enabled=True,
                 technique="simple_multi_query",
                 num_expanded_queries=3,
                 combination_method="convex_combination",
                 normalization_method="minmax",
                 excessive_k=60
-            )
+            ),
+            # QueryExpansionConfig(
+            #     name="rag_fusion",
+            #     enabled=True,
+            #     technique="rag_fusion",
+            #     num_expanded_queries=3,
+            #     combination_method="reciprocal_rank_fusion",
+            #     excessive_k=60,
+            # ),
+            # QueryExpansionConfig(
+            #     name="decomposition_cc",
+            #     enabled=True,
+            #     technique="decomposition",
+            #     num_expanded_queries=3,
+            #     combination_method="convex_combination",
+            #     normalization_method="minmax",
+            #     excessive_k=60,
+            # ),
+            QueryExpansionConfig(
+                name="hyde_cc",
+                enabled=True,
+                technique="hyde",
+                num_expanded_queries=3,
+                combination_method="convex_combination",
+                normalization_method="minmax",
+                excessive_k=60,
+            ),
+            # QueryExpansionConfig(
+            #     name="simple_multi_query_borda",
+            #     enabled=True,
+            #     technique="simple_multi_query",
+            #     num_expanded_queries=3,
+            #     combination_method="borda_count",
+            #     excessive_k=60,
+            # ),
         ],
 
 
@@ -231,7 +265,7 @@ async def run_rag_evaluation():
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=3,
+        max_test_cases=10,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,
