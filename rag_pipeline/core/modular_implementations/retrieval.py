@@ -27,7 +27,7 @@ class SimpleVectorRAG(RetrievalComponent):
         """Setup the vector store"""
         try:
             from rag_pipeline.util.vectorstore.qdrant_store import QdrantVectorStore
-            from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_file
+            from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_folder
             import os
             
             # Use embedding model from config
@@ -38,11 +38,12 @@ class SimpleVectorRAG(RetrievalComponent):
             if not dataset_path:
                 dataset_path = os.path.join(
                     "rag_pipeline",
-                    "default_datasets", 
-                    "retrieval_docs.csv"
+                    "default_datasets",
+                    "gen_programming_10"
                 )
             
-            dataset_hash = generate_dataset_hash_from_file(dataset_path)
+            # Generate hash from the folder
+            dataset_hash = generate_dataset_hash_from_folder(dataset_path)
             self.vectorstore = QdrantVectorStore(embedding_model, dataset_hash)
             
         except Exception as e:
@@ -125,51 +126,60 @@ class KeywordSearchBM25(RetrievalComponent):
     def _setup_bm25_index(self):
         """Setup the BM25 index"""
         try:
-            from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_file
+            from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_folder
             
             # Use dataset path from config or default
             dataset_path = self.config.get("dataset_path")
             if not dataset_path:
                 dataset_path = os.path.join(
-                    os.path.dirname(os.path.dirname(__file__)), 
-                    "default_datasets", 
-                    "retrieval_docs.csv"
+                    "rag_pipeline",
+                    "default_datasets",
+                    "gen_programming_10"
                 )
             
-            dataset_hash = generate_dataset_hash_from_file(dataset_path)
-            self.index_manager.setup_index_paths(dataset_hash, dataset_path)
+            # Generate hash from the folder
+            dataset_hash = generate_dataset_hash_from_folder(dataset_path)
+            
+            # Load documents for indexing
+            from rag_pipeline.core.dataset import RAGDataset
+            dataset = RAGDataset(dataset_path)
+            documents = dataset.get_documents()
+            
+            # Create a temporary CSV file for the BM25 index manager
+            import tempfile
+            import pandas as pd
+            docs_data = []
+            for doc in documents:
+                docs_data.append({
+                    'text': doc.content,
+                    'doc_id': doc.doc_id,
+                    'metadata': doc.metadata or {}
+                })
+            
+            docs_df = pd.DataFrame(docs_data)
+            temp_csv_path = tempfile.mktemp(suffix='.csv')
+            docs_df.to_csv(temp_csv_path, index=False)
+            
+            self.index_manager.setup_index_paths(dataset_hash, temp_csv_path)
             
             # Load existing index or create new one
             if self.index_manager.load_existing_index():
                 logger.info("Loaded existing BM25 index")
             else:
                 logger.info("Creating new BM25 index")
-                self._create_index_from_csv(dataset_path)
+                self._create_index_from_documents(documents)
                 
         except Exception as e:
             logger.error(f"Failed to setup BM25 index: {e}")
             raise
     
-    def _create_index_from_csv(self, dataset_path: str):
-        """Create BM25 index from CSV dataset"""
-        import pandas as pd
-        
+    def _create_index_from_documents(self, documents: List[Document]) -> bool:
+        """Create BM25 index from a list of Document objects"""
         try:
-            df = pd.read_csv(dataset_path)
-            
-            documents = []
-            for _, row in df.iterrows():
-                doc = Document(
-                    doc_id=str(row.get('doc_id', '')),
-                    content=str(row.get('text', '')),
-                    metadata=row.to_dict()
-                )
-                documents.append(doc)
-            
-            return self.index_documents(documents)
+            return self.index_manager.index_documents(documents)
             
         except Exception as e:
-            logger.error(f"Failed to create index from dataset: {e}")
+            logger.error(f"Failed to create index from documents: {e}")
             return False
     
 

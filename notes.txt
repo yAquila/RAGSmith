@@ -3,3 +3,5 @@
 - İleride hızı ve kaynak kullanım verimini/gpu load verimini artırmak için aynı modeli kullanacak olan işlemleri art arda yapıp sonra diğer modele geçilebilir, bunlar farklı configlerde olsa bile kaydedilerek böyle bir şey yapılabilir
 - sonuçları grafikleştirmek lazım
 - şuan sanırım retrieval performansını ölçmede bir sıkıntı var 
+- dataset üretiminde see also lar ve referanslar vs silinmeli, genel olarak çok az token a sahip chunklar da silinebilir.
+- şuan sanırım birden fazla kere indexleniyor dataset, hashle ilgili bir sıkıntı olabilir belki

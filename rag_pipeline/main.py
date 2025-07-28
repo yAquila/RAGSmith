@@ -235,15 +235,15 @@ async def run_rag_evaluation():
             #     normalization_method="minmax",
             #     excessive_k=60,
             # ),
-            QueryExpansionConfig(
-                name="hyde_cc",
-                enabled=True,
-                technique="hyde",
-                num_expanded_queries=3,
-                combination_method="convex_combination",
-                normalization_method="minmax",
-                excessive_k=60,
-            ),
+            # QueryExpansionConfig(
+            #     name="hyde_cc",
+            #     enabled=True,
+            #     technique="hyde",
+            #     num_expanded_queries=3,
+            #     combination_method="convex_combination",
+            #     normalization_method="minmax",
+            #     excessive_k=60,
+            # ),
             # QueryExpansionConfig(
             #     name="simple_multi_query_borda",
             #     enabled=True,
@@ -265,7 +265,7 @@ async def run_rag_evaluation():
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=10,
+        max_test_cases=3,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,

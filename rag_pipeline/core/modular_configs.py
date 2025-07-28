@@ -54,7 +54,7 @@ class QueryExpansionConfig(BaseModel):
 
     # Simple Multi-Query settings
     num_expanded_queries: int = 3
-    expansion_template: str = "Generate {num} different ways to ask: {query}"
+    model: str = "gemma3:4b"
     prompt: str = """
 You are an efficient Query Expander. Your task is to read the query provided below and expand it into only {num_expanded_queries} variations.
 
@@ -71,11 +71,10 @@ You must output the expanded queries in the following format:
 
 ### Expanded Queries
         """
-    model: str = "gemma3:4b"
-    
+
     # RAG Fusion settings
-    fusion_weights: List[float] = [0.5, 0.3, 0.2]
-    fusion_method: str = "weighted"  # Options: "weighted", "rrf", "max"
+    # fusion_weights: List[float] = [0.5, 0.3, 0.2]
+    # fusion_method: str = "weighted"  # Options: "weighted", "rrf", "max"
     
     # HyDE (Hypothetical Document Embeddings) settings
     hyde_prompt: str = """Imagine you are an expert writing a detailed explanation on the topic: '{query}'

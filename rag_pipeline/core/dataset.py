@@ -4,6 +4,7 @@ import os
 import json
 import ast
 from typing import List, Optional, Dict
+from pathlib import Path
 
 from .models import RAGTestCase, RAGDocument
 
@@ -17,138 +18,153 @@ class RAGDataset:
         self.test_cases: List[RAGTestCase] = []
         self.documents: List[RAGDocument] = []
     
-    def load_test_cases(self, queries_file: Optional[str] = None) -> List[RAGTestCase]:
-        """Load test cases from CSV file"""
+    def load_test_cases(self, dataset_folder: Optional[str] = None) -> List[RAGTestCase]:
+        """Load test cases from JSON files in the specified folder"""
         
-        # Determine queries file path
-        if queries_file:
-            queries_path = queries_file
+        # Determine dataset folder path
+        if dataset_folder:
+            folder_path = dataset_folder
         elif self.dataset_path:
-            queries_path = self.dataset_path
+            folder_path = self.dataset_path
         else:
-            # Use default queries file
-            queries_path = os.path.join(
+            # Use default dataset folder
+            folder_path = os.path.join(
                 "rag_pipeline",
                 "default_datasets",
-                "retrieval_withgen.csv"
+                "gen_programming_10"
             )
         
         try:
-            logger.info(f"Loading test cases from: {queries_path}")
-            
-            # Read CSV file
-            df = pd.read_csv(
-                queries_path,
-                quotechar='"',
-                escapechar=None,
-                skipinitialspace=True,
-                na_filter=False,
-                keep_default_na=False
-            )
+            logger.info(f"Loading test cases from folder: {folder_path}")
             
             test_cases = []
-            for idx, row in df.iterrows():
+            json_files = list(Path(folder_path).glob("*.json"))
+            
+            if not json_files:
+                logger.warning(f"No JSON files found in {folder_path}")
+                return []
+            
+            for json_file in json_files:
                 try:
-                    # Parse additional_args to get relevant document IDs
-                    additional_args = row.get("additional_args", "{}")
-                    if isinstance(additional_args, str):
+                    with open(json_file, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                    
+                    # Extract questions from the JSON file
+                    questions_data = data.get("questions", {})
+                    questions = questions_data.get("items", [])
+                    
+                    for idx, question_data in enumerate(questions):
                         try:
-                            additional_args = json.loads(additional_args)
-                        except (json.JSONDecodeError, ValueError):
-                            try:
-                                additional_args = ast.literal_eval(additional_args)
-                            except (ValueError, SyntaxError):
-                                additional_args = {}
-                    
-                    relevant_doc_ids = additional_args.get("true_qrel_list", [])
-                    if isinstance(relevant_doc_ids, str):
-                        relevant_doc_ids = [relevant_doc_ids]
-                    
-                    test_case = RAGTestCase(
-                        id=str(row.get("id", idx)),
-                        query=row.get("user_prompt", ""),
-                        ground_truth_answer=row.get("ground_truth", ""),
-                        relevant_doc_ids=relevant_doc_ids,
-                        metadata={
-                            "task": row.get("task", "retrieval"),
-                            "original_index": idx
-                        }
-                    )
-                    test_cases.append(test_case)
+                            # Extract relevant chunk IDs (previously true_qrel_list)
+                            related_chunk_ids = question_data.get("related_chunk_ids", [])
+                            if isinstance(related_chunk_ids, str):
+                                related_chunk_ids = [related_chunk_ids]
+                            
+                            # Create test case
+                            test_case = RAGTestCase(
+                                id=f"{json_file.stem}_q{idx}",
+                                query=question_data.get("question", ""),
+                                ground_truth_answer=question_data.get("answer", ""),
+                                relevant_doc_ids=related_chunk_ids,
+                                metadata={
+                                    "task": "retrieval",
+                                    "source_file": json_file.name,
+                                    "category": question_data.get("category", "FACTUAL"),
+                                    "original_index": idx
+                                }
+                            )
+                            test_cases.append(test_case)
+                            
+                        except Exception as e:
+                            logger.warning(f"Failed to parse question {idx} in {json_file.name}: {e}")
+                            continue
                     
                 except Exception as e:
-                    logger.warning(f"Failed to parse test case at row {idx}: {e}")
+                    logger.warning(f"Failed to load JSON file {json_file}: {e}")
                     continue
             
-            logger.info(f"Loaded {len(test_cases)} test cases")
+            logger.info(f"Loaded {len(test_cases)} test cases from {len(json_files)} files")
             self.test_cases = test_cases
             return test_cases
             
         except Exception as e:
-            logger.error(f"Failed to load test cases from {queries_path}: {e}")
+            logger.error(f"Failed to load test cases from {folder_path}: {e}")
             return []
     
-    def load_documents(self, docs_file: Optional[str] = None) -> List[RAGDocument]:
-        """Load knowledge base documents from CSV file"""
+    def load_documents(self, dataset_folder: Optional[str] = None) -> List[RAGDocument]:
+        """Load knowledge base documents from JSON files in the specified folder"""
         
-        # Determine documents file path
-        if docs_file:
-            docs_path = docs_file
+        # Determine dataset folder path
+        if dataset_folder:
+            folder_path = dataset_folder
+        elif self.dataset_path:
+            folder_path = self.dataset_path
         else:
-            # Use default docs file
-            docs_path = os.path.join(
-                os.path.dirname(os.path.dirname(__file__)),
+            # Use default dataset folder
+            folder_path = os.path.join(
+                "rag_pipeline",
                 "default_datasets",
-                "retrieval_docs.csv"
+                "gen_programming_10"
             )
         
         try:
-            logger.info(f"Loading documents from: {docs_path}")
-            
-            # Read CSV file
-            df = pd.read_csv(
-                docs_path,
-                quotechar='"',
-                escapechar=None,
-                skipinitialspace=True,
-                na_filter=False,
-                keep_default_na=False
-            )
+            logger.info(f"Loading documents from folder: {folder_path}")
             
             documents = []
-            for idx, row in df.iterrows():
+            json_files = list(Path(folder_path).glob("*.json"))
+            
+            if not json_files:
+                logger.warning(f"No JSON files found in {folder_path}")
+                return []
+            
+            for json_file in json_files:
                 try:
-                    # Parse metadata
-                    metadata = row.get("metadata", "{}")
-                    if isinstance(metadata, str):
+                    with open(json_file, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                    
+                    # Extract article and chunks from the JSON file
+                    article_data = data.get("article", {})
+                    chunks_data = data.get("chunks", [])
+                    
+                    # Create document for each chunk
+                    for chunk in chunks_data:
                         try:
-                            metadata = json.loads(metadata)
-                        except (json.JSONDecodeError, ValueError):
-                            try:
-                                metadata = ast.literal_eval(metadata)
-                            except (ValueError, SyntaxError):
-                                metadata = {}
-                    
-                    # Get doc_id from metadata or use index
-                    doc_id = metadata.get('doc_id', str(idx))
-                    
-                    document = RAGDocument(
-                        doc_id=str(doc_id),
-                        content=row.get("text", ""),
-                        metadata=metadata
-                    )
-                    documents.append(document)
+                            # Create metadata for the chunk
+                            metadata = {
+                                "article_id": article_data.get("id", ""),
+                                "article_title": article_data.get("title", ""),
+                                "article_url": article_data.get("url", ""),
+                                "chunk_id": chunk.get("id", ""),
+                                "section": chunk.get("section", ""),
+                                "heading_path": chunk.get("heading_path", ""),
+                                "start_char": chunk.get("start_char", 0),
+                                "end_char": chunk.get("end_char", 0),
+                                "char_count": chunk.get("char_count", 0),
+                                "token_estimate": chunk.get("token_estimate", 0),
+                                "source_file": json_file.name
+                            }
+                            
+                            document = RAGDocument(
+                                doc_id=chunk.get("id", ""),
+                                content=chunk.get("content", ""),
+                                metadata=metadata
+                            )
+                            documents.append(document)
+                            
+                        except Exception as e:
+                            logger.warning(f"Failed to parse chunk in {json_file.name}: {e}")
+                            continue
                     
                 except Exception as e:
-                    logger.warning(f"Failed to parse document at row {idx}: {e}")
+                    logger.warning(f"Failed to load JSON file {json_file}: {e}")
                     continue
             
-            logger.info(f"Loaded {len(documents)} documents")
+            logger.info(f"Loaded {len(documents)} documents from {len(json_files)} files")
             self.documents = documents
             return documents
             
         except Exception as e:
-            logger.error(f"Failed to load documents from {docs_path}: {e}")
+            logger.error(f"Failed to load documents from {folder_path}: {e}")
             return []
     
     def get_test_cases(self, max_cases: Optional[int] = None) -> List[RAGTestCase]:
