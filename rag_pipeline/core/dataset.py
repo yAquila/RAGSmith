@@ -28,7 +28,7 @@ class RAGDataset:
         else:
             # Use default queries file
             queries_path = os.path.join(
-                os.path.dirname(os.path.dirname(__file__)),
+                "rag_pipeline",
                 "default_datasets",
                 "retrieval_withgen.csv"
             )
