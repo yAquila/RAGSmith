@@ -186,24 +186,24 @@ async def run_rag_evaluation():
                 enabled=True,
                 technique="simple_listing"
             ),
-            PromptMakerConfig(
-                name="long_context_reorder_1",
-                enabled=True,
-                technique="long_context_reorder",
-                reinforce_top_n_passages=1
-            ),
-            PromptMakerConfig(
-                name="long_context_reorder_2",
-                enabled=True,
-                technique="long_context_reorder",
-                reinforce_top_n_passages=2
-            ),
-            PromptMakerConfig(
-                name="long_context_reorder_3",
-                enabled=True,
-                technique="long_context_reorder",
-                reinforce_top_n_passages=3
-            ),
+            # PromptMakerConfig(
+            #     name="long_context_reorder_1",
+            #     enabled=True,
+            #     technique="long_context_reorder",
+            #     reinforce_top_n_passages=1
+            # ),
+            # PromptMakerConfig(
+            #     name="long_context_reorder_2",
+            #     enabled=True,
+            #     technique="long_context_reorder",
+            #     reinforce_top_n_passages=2
+            # ),
+            # PromptMakerConfig(
+            #     name="long_context_reorder_3",
+            #     enabled=True,
+            #     technique="long_context_reorder",
+            #     reinforce_top_n_passages=3
+            # ),
         ],
 
         # Generator: two configs
@@ -284,6 +284,16 @@ async def run_rag_evaluation():
             #     combination_method="borda_count",
             #     excessive_k=60,
             # ),
+            QueryExpansionConfig(
+                name="step_back_prompting",
+                enabled=True,
+                technique="step_back_prompting",
+                num_expanded_queries=3,
+                model="gemma3:4b",
+                combination_method="convex_combination",
+                normalization_method="minmax",
+                excessive_k=60,
+            ),
         ],
 
 
@@ -292,17 +302,17 @@ async def run_rag_evaluation():
         
 
         passage_augment=[
-            PassageAugmentConfig(
-                name="no_augment",
-                enabled=True,
-                technique="none",
-            ),
-            PassageAugmentConfig(
-                name="prev_next_augmenter",
-                enabled=True,
-                technique="prev_next_augmenter",
-                n=1
-            )
+            # PassageAugmentConfig(
+            #     name="no_augment",
+            #     enabled=True,
+            #     technique="none",
+            # ),
+            # PassageAugmentConfig(
+            #     name="prev_next_augmenter",
+            #     enabled=True,
+            #     technique="prev_next_augmenter",
+            #     n=1
+            # )
         ],
         post_generation=[],
 
