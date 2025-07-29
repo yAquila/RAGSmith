@@ -109,6 +109,23 @@ Number of Queries: {num_expanded_queries}
 New Queries:
         """
     
+    # Step Back Prompting settings
+    step_back_prompting_prompt: str = """
+    You are an expert at answering all kind of Questions. Your task is to step back and paraphrase a question to at most {num_expanded_queries} more generic step-back questions, which is easier to answer. Here are a few examples:
+    "input": "Could the members of The Police perform lawful arrests?",
+    "output": "what can the members of The Police do?",
+    "input": "Jan Sindel's was born in what country?",
+    "output": "what is Jan Sindel's personal history?",
+
+    Now, do this for the following query and output at most {num_expanded_queries} step-back questions in the following format:
+    1. ...
+    2. ...
+    ...
+    {num_expanded_queries}. ...
+
+    User Query: "{query}"
+    1. 
+"""
 
 
 

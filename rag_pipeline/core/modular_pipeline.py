@@ -196,7 +196,7 @@ class ModularRAGPipeline:
             else:
                 processed_query = Query(original_text=query, processed_text=query)
                 timing_info["query_expansion_time"] = 0.0
-            logger.debug(f"Processed query: {processed_query}")
+            logger.info(f"Processed query: {processed_query}")
             # Step 3: Retrieval
             retrieved_documents = []
             if "retrieval" in self.components:
