@@ -401,6 +401,8 @@ class HybridUtils:
                     normalized = HybridUtils.normalize_scores_minmax(results)
                 elif method == "zscore":
                     normalized = HybridUtils.normalize_scores_zscore(results)
+                elif method == "dbsf":
+                    normalized = HybridUtils.normalize_scores_dbsf(results)
                 else:
                     logger.warning(f"Unknown normalization method: {method}")
                     normalized = results
@@ -485,6 +487,40 @@ class HybridUtils:
         for i, result in enumerate(results):
             normalized_result = result.copy()
             normalized_result['score'] = (scores[i] - mean_score) / std_score
+            normalized_results.append(normalized_result)
+        
+        return normalized_results
+    
+    @staticmethod
+    def normalize_scores_dbsf(results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Normalize scores using DBSF method (mean +/- 3*std as limits)"""
+        if not results:
+            return results
+        
+        scores = np.array([result['score'] for result in results])
+        mean_value = np.mean(scores)
+        std_value = np.std(scores)
+        
+        # DBSF normalization bounds
+        min_value = mean_value - 3 * std_value
+        max_value = mean_value + 3 * std_value
+        
+        if max_value == min_value:
+            # All scores are the same or std is 0
+            normalized_results = []
+            for result in results:
+                normalized_result = result.copy()
+                normalized_result['score'] = 1.0
+                normalized_results.append(normalized_result)
+            return normalized_results
+        
+        # Normalize scores
+        normalized_results = []
+        for result in results:
+            normalized_result = result.copy()
+            normalized_score = (result['score'] - min_value) / (max_value - min_value)
+            # Clip to [0, 1] range
+            normalized_result['score'] = max(0.0, min(1.0, normalized_score))
             normalized_results.append(normalized_result)
         
         return normalized_results
