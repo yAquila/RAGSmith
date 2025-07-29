@@ -5,7 +5,7 @@ from rag_pipeline.core.modular_implementations.passage_augment import NonePassag
 from rag_pipeline.core.modular_implementations.passage_rerank import NonePassageRerank, CrossEncoderRerank, LLMRerank, CELLM_ParallelRerank, PassageRerankResult
 from rag_pipeline.core.modular_implementations.passage_filter import SimpleThresholdFilter, SimilarityThresholdFilter, PassageFilterResult
 from rag_pipeline.core.modular_implementations.passage_compress import NonePassageCompress, TreeSummarize, LLMSummarize, PassageCompressResult
-from rag_pipeline.core.modular_implementations.prompt_maker import SimpleListingPromptMaker, PromptMakerResult
+from rag_pipeline.core.modular_implementations.prompt_maker import SimpleListingPromptMaker, LongContextReorder, PromptMakerResult
 from rag_pipeline.core.modular_implementations.generator import LLMGenerator, MultiLLMGenerator, GeneratorResult
 from rag_pipeline.core.modular_implementations.post_generation import NonePostGeneration, ReflectionRevising, PostGenerationResult
 
@@ -47,6 +47,7 @@ COMPONENT_REGISTRY = {
     },
     "prompt_maker": {
         "simple_listing": SimpleListingPromptMaker,
+        "long_context_reorder": LongContextReorder,
     },
     "generator": {
         "llm": LLMGenerator,

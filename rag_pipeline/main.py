@@ -72,6 +72,7 @@ async def run_rag_evaluation():
             #     name="hybrid_search_cc",
             #     enabled=True,
             #     technique="hybrid_search",
+            #     embedding_model="mxbai-embed-large",
             #     top_k=10,
             #     combination_method="convex_combination",
             #     excessive_k=60,
@@ -79,9 +80,21 @@ async def run_rag_evaluation():
             #     normalization_method="minmax"
             # ),
             # RetrievalConfig(
+            #     name="hybrid_search_dbsf",
+            #     enabled=True,
+            #     technique="hybrid_search",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="convex_combination",
+            #     excessive_k=60,
+            #     alpha=0.7,
+            #     normalization_method="dbsf"
+            # ),
+            # RetrievalConfig(
             #     name="hybrid_search_rrf",
             #     enabled=True,
             #     technique="hybrid_search",
+            #     embedding_model="mxbai-embed-large",
             #     top_k=10,
             #     combination_method="reciprocal_rank_fusion",
             #     excessive_k=60
@@ -90,6 +103,7 @@ async def run_rag_evaluation():
             #     name="hybrid_search_borda",
             #     enabled=True,
             #     technique="hybrid_search",
+            #     embedding_model="mxbai-embed-large",
             #     top_k=10,
             #     combination_method="borda_count",
             #     excessive_k=60
@@ -171,7 +185,25 @@ async def run_rag_evaluation():
                 name="simple_listing",
                 enabled=True,
                 technique="simple_listing"
-            )
+            ),
+            PromptMakerConfig(
+                name="long_context_reorder_1",
+                enabled=True,
+                technique="long_context_reorder",
+                reinforce_top_n_passages=1
+            ),
+            PromptMakerConfig(
+                name="long_context_reorder_2",
+                enabled=True,
+                technique="long_context_reorder",
+                reinforce_top_n_passages=2
+            ),
+            PromptMakerConfig(
+                name="long_context_reorder_3",
+                enabled=True,
+                technique="long_context_reorder",
+                reinforce_top_n_passages=3
+            ),
         ],
 
         # Generator: two configs
@@ -276,7 +308,7 @@ async def run_rag_evaluation():
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=3,
+        max_test_cases=10,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,

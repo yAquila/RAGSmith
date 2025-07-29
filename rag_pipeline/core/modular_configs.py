@@ -266,16 +266,9 @@ class PromptMakerConfig(BaseModel):
     separator: str = "\n\n"
     include_doc_numbers: bool = True
     include_scores: bool = False
-    
-    # # Multi-LLM Model Ensemble settings
-    # ensemble_models: List[str] = []
-    # ensemble_prompts: List[str] = []
-    # ensemble_weights: List[float] = []
-    
-    # # Multi-LLM Model Fusion settings
-    # fusion_models: List[str] = []
-    # fusion_strategy: str = "concatenate"  # Options: "concatenate", "interleave", "best"
 
+    # Long Context Reorder settings
+    reinforce_top_n_passages: int = 1
 
 class GeneratorConfig(BaseModel):
     """Configuration for generation techniques"""
