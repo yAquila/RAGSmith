@@ -196,7 +196,7 @@ class ModularRAGPipeline:
             else:
                 processed_query = Query(original_text=query, processed_text=query)
                 timing_info["query_expansion_time"] = 0.0
-            logger.info(f"Processed query: {processed_query}")
+            logger.debug(f"Processed query: {processed_query}")
             # Step 3: Retrieval
             retrieved_documents = []
             if "retrieval" in self.components:
@@ -257,23 +257,8 @@ class ModularRAGPipeline:
                 logger.debug(f"Retrieval completed in {timing_info['retrieval_time']:.3f}s, found {len(retrieved_documents)} documents")
             else:
                 timing_info["retrieval_time"] = 0.0
-            # Step 4: Passage augmentation
-            if "passage_augment" in self.components and retrieved_documents:
-                step_start = time.time()
-                passage_augment_result: PassageAugmentResult = await self.components["passage_augment"].augment_passages(
-                    retrieved_documents, processed_query
-                )
-                retrieved_documents = self._parse_component_result(
-                    passage_augment_result, "passage_augment", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
-                    main_output_key='documents'
-                )
-                timing_info["passage_augment_time"] = time.time() - step_start
-                components_used["passage_augment"] = self.config_dict["passage_augment"].technique
-                logger.debug(f"Passage augmentation completed in {timing_info['passage_augment_time']:.3f}s")
-            else:
-                timing_info["passage_augment_time"] = 0.0
             
-            # Step 5: Passage reranking (can have multiple rerankers)
+            # Step 4: Passage reranking (can have multiple rerankers)
             if "passage_rerank" in self.components and retrieved_documents:
                 step_start = time.time()
                 passage_rerank_result: PassageRerankResult = await self.components["passage_rerank"].rerank_passages(retrieved_documents, processed_query)
@@ -287,7 +272,7 @@ class ModularRAGPipeline:
             else:
                 timing_info["passage_rerank_time"] = 0.0
             
-            # Step 6: Passage filtering (can have multiple filters)
+            # Step 5: Passage filtering (can have multiple filters)
             if "passage_filter" in self.components and retrieved_documents:
                 step_start = time.time()
                 passage_filter_result: PassageFilterResult = await self.components["passage_filter"].filter_passages(retrieved_documents, processed_query)
@@ -301,12 +286,29 @@ class ModularRAGPipeline:
             else:
                 timing_info["passage_filter_time"] = 0.0
             
-            # Step 7: Passage compression
+            # Step 6: Passage augmentation
             final_documents = retrieved_documents
-            if "passage_compress" in self.components and retrieved_documents:
+            if "passage_augment" in self.components and final_documents:
+                step_start = time.time()
+                passage_augment_result: PassageAugmentResult = await self.components["passage_augment"].augment_passages(
+                    final_documents, processed_query
+                )
+                final_documents = self._parse_component_result(
+                    passage_augment_result, "passage_augment", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                    main_output_key='documents'
+                )
+                timing_info["passage_augment_time"] = time.time() - step_start
+                components_used["passage_augment"] = self.config_dict["passage_augment"].technique
+                logger.debug(f"Passage augmentation completed in {timing_info['passage_augment_time']:.3f}s")
+            else:
+                timing_info["passage_augment_time"] = 0.0
+            
+
+            # Step 7: Passage compression
+            if "passage_compress" in self.components and final_documents:
                 step_start = time.time()
                 passage_compress_result: PassageCompressResult = await self.components["passage_compress"].compress_passages(
-                    retrieved_documents, processed_query
+                    final_documents, processed_query
                 )
                 final_documents = self._parse_component_result(
                     passage_compress_result, "passage_compress", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,

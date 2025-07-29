@@ -154,34 +154,8 @@ class RetrievalComponent(ABC):
         pass
 
 
-# ==================== CATEGORY 4: PASSAGE AUGMENT ====================
 
-class PassageAugmentComponent(ABC):
-    """
-    Abstract base class for passage augmentation techniques.
-    
-    These components enhance retrieved passages with additional context.
-    """
-    
-    def __init__(self, config: Dict[str, Any]):
-        self.config = config
-    
-    @abstractmethod
-    async def augment_passages(self, documents: List[Document], query: Query) -> List[Document]:
-        """
-        Augment retrieved passages with additional context.
-        
-        Args:
-            documents: List of retrieved documents
-            query: Original query
-            
-        Returns:
-            List of augmented documents
-        """
-        pass
-
-
-# ==================== CATEGORY 5: PASSAGE RERANK ====================
+# ==================== CATEGORY 4: PASSAGE RERANK ====================
 
 class PassageRerankComponent(ABC):
     """
@@ -208,7 +182,7 @@ class PassageRerankComponent(ABC):
         pass
 
 
-# ==================== CATEGORY 6: PASSAGE FILTER ====================
+# ==================== CATEGORY 5: PASSAGE FILTER ====================
 
 class PassageFilterComponent(ABC):
     """
@@ -231,6 +205,33 @@ class PassageFilterComponent(ABC):
             
         Returns:
             List of filtered documents
+        """
+        pass
+
+
+# ==================== CATEGORY 6: PASSAGE AUGMENT ====================
+
+class PassageAugmentComponent(ABC):
+    """
+    Abstract base class for passage augmentation techniques.
+    
+    These components enhance retrieved passages with additional context.
+    """
+    
+    def __init__(self, config: Dict[str, Any]):
+        self.config = config
+    
+    @abstractmethod
+    async def augment_passages(self, documents: List[Document], query: Query) -> List[Document]:
+        """
+        Augment retrieved passages with additional context.
+        
+        Args:
+            documents: List of retrieved documents
+            query: Original query
+            
+        Returns:
+            List of augmented documents
         """
         pass
 

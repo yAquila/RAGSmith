@@ -229,3 +229,98 @@ class RAGDataset:
         
         logger.info(f"Dataset validation: {validation_result}")
         return validation_result 
+    
+    @staticmethod
+    def get_article_content(article_id: str, dataset_folder: Optional[str] = None) -> Optional[str]:
+        """Get the full article content for a given article_id"""
+        
+        # Determine dataset folder path
+        if dataset_folder:
+            folder_path = dataset_folder
+        else:
+            # Use default dataset folder
+            folder_path = os.path.join(
+                "rag_pipeline",
+                "default_datasets",
+                "gen_programming_10"
+            )
+        
+        # Construct the JSON file path
+        json_file_path = os.path.join(folder_path, f"{article_id}.json")
+        
+        try:
+            logger.debug(f"Loading article content from: {json_file_path}")
+            
+            with open(json_file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            # Extract article content
+            article_data = data.get("article", {})
+            content = article_data.get("content", "").split("---")[2]
+            
+            if not content:
+                logger.warning(f"No content found for article_id: {article_id}")
+                return None
+            
+            logger.debug(f"Successfully loaded article content for {article_id}")
+            return content
+            
+        except FileNotFoundError:
+            logger.error(f"Article file not found: {json_file_path}")
+            return None
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse JSON file {json_file_path}: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Failed to load article content for {article_id}: {e}")
+            return None 
+
+    @staticmethod
+    def get_chunk_by_id(chunk_id: str, dataset_folder: Optional[str] = None) -> Optional[Dict]:
+        """Get a specific chunk by chunk_id"""
+        
+        # Determine dataset folder path
+        if dataset_folder:
+            folder_path = dataset_folder
+        else:
+            # Use default dataset folder
+            folder_path = os.path.join(
+                "rag_pipeline",
+                "default_datasets",
+                "gen_programming_10"
+            )
+        
+        # Extract article_id from chunk_id (e.g., "captheorem_82c03c20_c0000" -> "captheorem_82c03c20")
+        article_id = chunk_id.rsplit('_', 1)[0] if '_' in chunk_id else chunk_id
+        
+        # Construct the JSON file path
+        json_file_path = os.path.join(folder_path, f"{article_id}.json")
+        
+        try:
+            logger.debug(f"Loading chunk {chunk_id} from: {json_file_path}")
+            
+            with open(json_file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            # Get chunks array
+            chunks = data.get("chunks", [])
+            
+            # Find the specific chunk by id
+            for chunk in chunks:
+                if chunk.get("id") == chunk_id:
+                    logger.debug(f"Successfully found chunk {chunk_id}")
+                    return chunk
+            
+            logger.warning(f"Chunk {chunk_id} not found in {json_file_path}")
+            return None
+            
+        except FileNotFoundError:
+            logger.error(f"Article file not found: {json_file_path}")
+            return None
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse JSON file {json_file_path}: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Failed to load chunk {chunk_id}: {e}")
+            return None 
+

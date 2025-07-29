@@ -29,7 +29,7 @@ async def run_rag_evaluation():
     """Run RAG evaluation with multiple model combinations"""
     
     # Configuration for Modular RAG evaluation
-    from rag_pipeline.core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig, QueryExpansionConfig
+    from rag_pipeline.core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig, QueryExpansionConfig, PassageAugmentConfig
     from rag_pipeline.core.modular_pipeline import ModularRAGPipeline
     
     # Example ModularRAGConfig with multiple generator configs
@@ -209,15 +209,15 @@ async def run_rag_evaluation():
                 enabled=True,
                 technique="none",
             ),
-            QueryExpansionConfig(
-                name="simple_multi_query_cc",
-                enabled=True,
-                technique="simple_multi_query",
-                num_expanded_queries=3,
-                combination_method="convex_combination",
-                normalization_method="minmax",
-                excessive_k=60
-            ),
+            # QueryExpansionConfig(
+            #     name="simple_multi_query_cc",
+            #     enabled=True,
+            #     technique="simple_multi_query",
+            #     num_expanded_queries=3,
+            #     combination_method="convex_combination",
+            #     normalization_method="minmax",
+            #     excessive_k=60
+            # ),
             # QueryExpansionConfig(
             #     name="rag_fusion",
             #     enabled=True,
@@ -259,8 +259,19 @@ async def run_rag_evaluation():
         pre_embedding=[],
         
 
-        passage_augment=[],
-        
+        passage_augment=[
+            PassageAugmentConfig(
+                name="no_augment",
+                enabled=True,
+                technique="none",
+            ),
+            PassageAugmentConfig(
+                name="prev_next_augmenter",
+                enabled=True,
+                technique="prev_next_augmenter",
+                n=1
+            )
+        ],
         post_generation=[],
 
         # Dataset/global settings
@@ -269,7 +280,24 @@ async def run_rag_evaluation():
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,
-        cache_enabled=True
+        cache_enabled=True,
+
+
+        # Evaluation settings
+        retrieval_weights={
+            'recall_at_k': 1,
+            'map_score': 0,
+            'ndcg_at_k': 0,
+            'mrr': 0
+        },
+        generation_weights={
+            'llm_score': 0.5,
+            'semantic_similarity': 0.5
+        },
+        overall_weights={
+            'retrieval': 0.3,
+            'generation': 0.7
+        }
     )
     
     try:
@@ -445,7 +473,7 @@ def _format_detailed_metrics(aggregated_metrics) -> str:
         map_score = metrics.get('map_score', 0.0)
         ndcg = metrics.get('ndcg_at_k', 0.0)
         mrr = metrics.get('mrr', 0.0)
-        lines.append(f"  Retrieval: R@{eval_k}={recall:.3f}, mAP={map_score:.3f}, nDCG@{eval_k}={ndcg:.3f}, MRR={mrr:.3f}")
+        lines.append(f"  Retrieval: R@{eval_k}={recall:.3f}")#, mAP={map_score:.3f}, nDCG@{eval_k}={ndcg:.3f}, MRR={mrr:.3f}")
         
         # Generation metrics
         llm_score = metrics.get('llm_score', 0.0)

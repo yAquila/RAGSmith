@@ -4,4 +4,4 @@
 - sonuçları grafikleştirmek lazım
 - şuan sanırım retrieval performansını ölçmede bir sıkıntı var 
 - dataset üretiminde see also lar ve referanslar vs silinmeli, genel olarak çok az token a sahip chunklar da silinebilir.
-- şuan sanırım birden fazla kere indexleniyor dataset, hashle ilgili bir sıkıntı olabilir belki
+- dataset üretirken json isimlendirmesi direkt article_id ile olsun ben şuanki datasette değiştirdim ama ilerisi için böyle yapalım

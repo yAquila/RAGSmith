@@ -140,24 +140,6 @@ class RetrievalConfig(BaseModel):
     alpha: float = 0.7  # Vector weight (0.0 = keyword only, 1.0 = vector only) # Only used for convex combination
     normalization_method: str = "minmax"  # Options: "minmax", "zscore" # Only used for convex combination
 
-
-class PassageAugmentConfig(BaseModel):
-    """Configuration for passage augmentation techniques"""
-    name: str = ""
-    enabled: bool = True
-    technique: str = "none"  # Options: "none", "prev_next_augmenter", "relevant_segment_extraction"
-    
-    # Prev-Next Augmenter settings
-    include_previous: bool = False
-    include_next: bool = False
-    context_window: int = 1  # Number of chunks before/after
-    
-    # Relevant Segment Extraction settings
-    extract_segments: bool = False
-    segment_max_length: int = 200
-    relevance_threshold: float = 0.6
-
-
 class PassageRerankConfig(BaseModel):
     """Configuration for passage reranking techniques"""
     name: str = ""
@@ -217,6 +199,20 @@ class PassageFilterConfig(BaseModel):
     use_window_replacement: bool = False
     window_size: int = 3
     replacement_strategy: str = "best"  # Options: "best", "random", "diverse"
+
+class PassageAugmentConfig(BaseModel):
+    """Configuration for passage augmentation techniques"""
+    name: str = ""
+    enabled: bool = True
+    technique: str = "none"  # Options: "none", "prev_next_augmenter", "relevant_segment_extraction"
+    
+    # Prev-Next Augmenter settings
+    n: int = 1  # Number of chunks before/after
+    
+    # Relevant Segment Extraction settings
+    extract_segments: bool = False
+    segment_max_length: int = 200
+    relevance_threshold: float = 0.6
 
 
 class PassageCompressConfig(BaseModel):
@@ -373,7 +369,22 @@ class ModularRAGConfig(BaseModel):
     cache_enabled: bool = True
     cache_dir: Optional[str] = None
     
-    
+    # Evaluation settings
+    retrieval_weights: Dict[str, float] = {
+        'recall_at_k': 0.25,
+        'map_score': 0.25,
+        'ndcg_at_k': 0.25,
+        'mrr': 0.25
+    }
+    generation_weights: Dict[str, float] = {
+        'llm_score': 0.5,
+        'semantic_similarity': 0.5
+    }
+    overall_weights: Dict[str, float] = {
+        'retrieval': 0.3,
+        'generation': 0.7
+    }
+
     def create_config_combinations(self) -> List[Dict[str, Any]]:
         """Create all possible combinations of enabled configs (full Cartesian product)"""
         from itertools import product

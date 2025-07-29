@@ -146,7 +146,7 @@ class SimpleMultiQuery(QueryExpansionComponent):
                 expanded_queries=None,
                 metadata={}
             ))
-        logger.info(f"Expanded queries: {expanded_queries}")
+        logger.debug(f"Expanded queries: {expanded_queries}")
         result = QueryExpansionResult(
             query=Query(
                 original_text=query,
@@ -291,10 +291,10 @@ class HyDE(SimpleMultiQuery):
             response_text = response.get('response', '')
             
             # Debug: Log the raw response
-            logger.info(f"HyDE raw response: {repr(response_text)}")
+            logger.debug(f"HyDE raw response: {repr(response_text)}")
             
             documents = self._parse_documents_from_response(response_text)
-            logger.info(f"Parsed documents: {documents}")
+            logger.debug(f"Parsed documents: {documents}")
             
             for doc in documents:
                 if doc.strip():
@@ -307,7 +307,7 @@ class HyDE(SimpleMultiQuery):
         else:
             # Handle case where response is not a dict
             response_text = str(response)
-            logger.info(f"HyDE non-dict response: {repr(response_text)}")
+            logger.debug(f"HyDE non-dict response: {repr(response_text)}")
             documents = self._parse_documents_from_response(response_text)
             
             for doc in documents:
@@ -319,7 +319,7 @@ class HyDE(SimpleMultiQuery):
                         metadata={}
                     ))
         
-        logger.info(f"Expanded queries: {expanded_queries}")
+        logger.debug(f"Expanded queries: {expanded_queries}")
         result = QueryExpansionResult(
             query=Query(
                 original_text=query,
