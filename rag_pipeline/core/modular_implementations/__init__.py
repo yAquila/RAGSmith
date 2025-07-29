@@ -26,10 +26,6 @@ COMPONENT_REGISTRY = {
         "keyword_search_bm25": KeywordSearchBM25,
         "hybrid_search": HybridSearch,
     },
-    "passage_augment": {
-        "none": NonePassageAugment,
-        "prev_next_augmenter": PrevNextAugmenter,
-    },
     "passage_rerank": {
         "none": NonePassageRerank,
         "cross_encoder": CrossEncoderRerank,
@@ -39,6 +35,10 @@ COMPONENT_REGISTRY = {
     "passage_filter": {
         "simple_threshold": SimpleThresholdFilter,
         "similarity_threshold": SimilarityThresholdFilter,
+    },
+    "passage_augment": {
+        "none": NonePassageAugment,
+        "prev_next_augmenter": PrevNextAugmenter,
     },
     "passage_compress": {
         "none": NonePassageCompress,

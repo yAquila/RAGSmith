@@ -228,31 +228,22 @@ Return format: {{"score": 0.85}}"""
     
     def _calculate_retrieval_score(self, retrieval_metrics: Dict[str, float]) -> float:
         """Calculate average retrieval score"""
-        return (
-            retrieval_metrics['recall_at_k'] + 
-            retrieval_metrics['map_score'] + 
-            retrieval_metrics['ndcg_at_k'] +
-            retrieval_metrics['mrr']
-        ) / 4.0
+        weights = self.global_config.retrieval_weights
+        return sum(weights[k] * retrieval_metrics[k] for k in weights)
     
     def _calculate_generation_score(self, generation_metrics: Dict[str, float]) -> float:
         """Calculate average generation score"""
-        return (
-            generation_metrics['llm_score'] + 
-            generation_metrics['semantic_similarity']
-        ) / 2.0
+        weights = self.global_config.generation_weights
+        return sum(weights[k] * generation_metrics[k] for k in weights)
     
     def _calculate_overall_score(self, retrieval_metrics: Dict[str, float], generation_metrics: Dict[str, float]) -> float:
         """Calculate weighted overall score"""
-        # Weighted combination of retrieval and generation metrics
-        retrieval_weight = 0.3
-        generation_weight = 0.7
-        
+        overall_weights = self.global_config.overall_weights
         # Use the component score calculation methods
         retrieval_score = self._calculate_retrieval_score(retrieval_metrics)
         generation_score = self._calculate_generation_score(generation_metrics)
         
-        overall_score = (retrieval_weight * retrieval_score) + (generation_weight * generation_score)
+        overall_score = (overall_weights['retrieval'] * retrieval_score) + (overall_weights['generation'] * generation_score)
         return overall_score
     
     async def aggregate_results(self, results: List[RAGEvaluationResult]) -> Dict[str, float]:

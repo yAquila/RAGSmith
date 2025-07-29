@@ -183,7 +183,14 @@ class QdrantVectorStore:
                     logger.warning(f"Failed to parse metadata for doc {idx}: {metadata_str}")
                     metadata = {"doc_id": str(idx)}
             
-            doc_id = metadata.get('doc_id', str(idx))
+            if 'doc_id' in metadata:
+                doc_id = metadata.get('doc_id', str(idx))
+            elif 'chunk_id' in metadata:
+                doc_id = metadata.get('chunk_id', str(idx))
+            else:
+                doc_id = str(idx)
+                logger.warning(f"No doc_id or chunk_id found for doc {idx}")
+                logger.info(f"Metadata: {metadata}")
             content_hashes.append(self._generate_doc_hash(text, doc_id))
         
         # Sort and combine all hashes to create dataset hash
@@ -227,7 +234,6 @@ class QdrantVectorStore:
             
             # Check if we have stored the dataset hash in metadata
             dataset_hash = self._generate_dataset_hash(docs_df)
-            
             # Try to get metadata point
             try:
                 metadata_point = self.client.retrieve(
@@ -418,7 +424,7 @@ class QdrantVectorStore:
             # Check indexing status
             status = self.check_indexing_status(docs_df)
             logger.info(f"Indexing status: {status['status']} - {status['points_count']}/{status['expected_count']} documents ({status['completion_percentage']:.1f}%)")
-            
+            logger.info(f"Status: {status}")
             # If already fully indexed and not forcing reindex, skip
             if not force_reindex and not status["needs_indexing"]:
                 logger.info("Dataset already fully indexed, skipping indexing")
@@ -457,7 +463,6 @@ class QdrantVectorStore:
             
             # Generate dataset hash for tracking
             dataset_hash = self._generate_dataset_hash(docs_df)
-            
             points = []
             
             # Add/update dataset metadata point (only if not resuming or if this is the first time)
