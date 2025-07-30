@@ -134,7 +134,7 @@ class RetrievalConfig(BaseModel):
     """Configuration for retrieval techniques"""
     name: str = ""
     enabled: bool = True
-    technique: str = "simple_vector_rag"  # Can combine: ["simple_vector_rag", "keyword_search", "hybrid_cc", "hybrid_rrf"]
+    technique: str = "simple_vector_rag"  # Can combine: ["simple_vector_rag", "keyword_search", "hybrid_cc", "hybrid_rrf", "graph_rag"]
     
     # Common settings
     top_k: int = 10
@@ -156,6 +156,19 @@ class RetrievalConfig(BaseModel):
     excessive_k: int = 60 # Excessive k for hybrid search
     alpha: float = 0.7  # Vector weight (0.0 = keyword only, 1.0 = vector only) # Only used for convex combination
     normalization_method: str = "minmax"  # Options: "minmax", "zscore" # Only used for convex combination
+
+    # Graph RAG settings
+    graph_rag_retrieval_method: str = "basic"  # Options: "basic", "traversal"
+    graph_rag_similarity_threshold: float = 0.7
+    graph_rag_max_depth: int = 2
+    graph_rag_vector_index_name: str = "entity_embeddings"
+    graph_rag_embedding_dimension: int = 1024 #TODO make this dynamic
+    graph_rag_neo4j_uri: str = "bolt://neo4j:7687"
+    graph_rag_neo4j_user: str = "neo4j"
+    graph_rag_neo4j_password: str = "admin123"
+    graph_rag_ollama_embedding_url: str = "http://ollama-gpu-3:11435/api/embeddings"
+    graph_rag_embedding_model: str = "mxbai-embed-large"
+    graph_rag_ollama_model: str = "gemma3:12b"
 
 class PassageRerankConfig(BaseModel):
     """Configuration for passage reranking techniques"""
@@ -227,9 +240,10 @@ class PassageAugmentConfig(BaseModel):
     n: int = 1  # Number of chunks before/after
     
     # Relevant Segment Extraction settings
-    extract_segments: bool = False
-    segment_max_length: int = 200
-    relevance_threshold: float = 0.6
+    max_chunk_number_in_segment: int = 5
+    irrelevant_chunk_penalty: float = 0.18
+    decay_rate: int = 30
+    overall_max_chunk_number: int = 10
 
 
 class PassageCompressConfig(BaseModel):

@@ -1,0 +1,766 @@
+{
+  "article": {
+    "id": "patent_960a174d",
+    "title": "Patent",
+    "url": "https://en.wikipedia.org/wiki/Patent",
+    "lang": "en",
+    "created_at": "2025-07-30T12:44:04.308708",
+    "content": "---\nid: patent_960a174d\nurl: https://en.wikipedia.org/wiki/Patent\ntitle: Patent\nlang: en\ncreated_at: '2025-07-30T12:36:36.439411'\nchecksum: 7bc1308c6497e863a28adb267f76f1eb1ffa45ea7e9acd25803a8bd168c41ae2\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 6775\n  char_count: 43552\n  num_chunks: 50\n  original_chunks: 56\n  filtered_out: 6\n  num_sections: 0\n---\nA patent is a type of intellectual property that gives its owner the legal right to exclude others from making, using, or selling an invention for a limited period of time in exchange for publishing an enabling disclosure of the invention. In most countries, patent rights fall under private law and the patent holder must sue someone infringing the patent in order to enforce their rights. The procedure for granting patents, requirements placed on the patentee, and the extent of the exclusive rights vary widely between countries according to national laws and international agreements. Typically, however, a patent application must include one or more claims that define the scope of protection that is being sought. A patent may include many claims, each of which defines a specific property right. Under the World Trade Organization's (WTO) TRIPS Agreement, patents should be available in WTO member states for any invention, in all fields of technology, provided they are new, involve an inventive step, and are capable of industrial application. Nevertheless, there are variations on what is patentable subject matter from country to country, also among WTO member states. TRIPS also provides that the term of protection available should be a minimum of twenty years. Some countries have other patent-like forms of intellectual property, such as utility models, which have a shorter monopoly period. == Definition == The word patent originates from the Latin patere, which means \"to lay open\" (i.e., to make available for public inspection). It is a shortened version of the term letters patent, which was an open document or instrument issued by a monarch or government granting exclusive rights to a person, predating the modern patent system. Similar grants included land patents, which were land grants by early state governments in the US, and printing patents, a precursor of modern copyright. In modern usage, the term patent usually refers to the right granted to anyone who invents something new, useful and non-obvious. A patent is often referred to as a form of intellectual property right, an expression which is also used to refer to trademarks and copyrights, and which has proponents and detractors (see also Intellectual property § The term \"intellectual property\"). Some other types of intellectual property rights are also called patents in some jurisdictions: industrial design rights are called design patents in the US, plant breeders' rights are sometimes called plant patents, and utility models and Gebrauchsmuster are sometimes called petty patents or innovation patents. The additional qualification utility patent is sometimes used (primarily in the US) to distinguish the primary meaning from these other types of patents. Particular types of patents for inventions include biological patents, business method patents, chemical patents and software patents. == History == Although there is evidence that some form of patent rights was recognized in Ancient Greece in the city of Sybaris, the first statutory patent system is generally regarded to be the Venetian Patent Statute of 1474. However, recent historical research has suggested that the 1474 Statute was inspired by laws in the Kingdom of Jerusalem that granted monopolies to developers of novel silk-making techniques. Patents were systematically granted in Venice as of 1474, where they issued a decree by which new and inventive devices had to be communicated to the Republic in order to obtain legal protection against potential infringers. The period of protection was 10 years. As Venetians emigrated, they sought similar patent protection in their new homes. This led to the diffusion of patent systems to other countries. The English patent system evolved from its early medieval origins into the first modern patent system that recognised intellectual property in order to stimulate invention; this was the crucial legal foundation upon which the Industrial Revolution could emerge and flourish. By the 16th century, the English Crown would habitually abuse the granting of letters patent for monopolies. After public outcry, King James I of England (VI of Scotland) was forced to revoke all existing monopolies and declare that they were only to be used for \"projects of new invention\". This was incorporated into the Statute of Monopolies (1624) in which Parliament restricted the Crown's power explicitly so that the King could only issue letters patent to the inventors or introducers of original inventions for a fixed number of years. The Statute became the foundation for later developments in patent law in England and elsewhere. Important developments in patent law emerged during the 18th century through a slow process of judicial interpretation of the law. During the reign of Queen Anne, patent applications were required to supply a complete specification of the principles of operation of the invention for public access. Legal battles around the 1796 patent taken out by James Watt for his steam engine, established the principles that patents could be issued for improvements of an already existing machine and that ideas or principles without specific practical application could also legally be patented. The English legal system became the foundation for patent law in countries with a common law heritage, including the United States, New Zealand and Australia. In the Thirteen Colonies, inventors could obtain patents through petition to a given colony's legislature. In 1641, Samuel Winslow was granted the first patent in North America by the Massachusetts General Court for a new process for making salt. The modern French patent system was created during the Revolution in 1791. Patents were granted without examination since inventor's right was considered as a natural one. Patent costs were very high (from 500 to 1,500 francs). Importation patents protected new devices coming from foreign countries. The patent law was revised in 1844 – patent cost was lowered and importation patents were abolished. The first Patent Act of the U.S. Congress was passed on April 10, 1790, titled \"An Act to promote the progress of useful Arts\". The first patent under the Act was granted on July 31, 1790, to Samuel Hopkins of Vermont for a method of producing potash (potassium carbonate). A revised patent law was passed in 1793, and in 1836 a major revision was passed. The 1836 law instituted a significantly more rigorous application process, including the establishment of an examination system. Between 1790 and 1836 about ten thousand patents were granted. By the American Civil War about 80,000 patents had been granted. === Gender gap in patents === The first patent in England known to be granted to a woman was to Mrs. Amye Everard Ball in 1637 for a tincture of saffron. In the US, married women were historically precluded from obtaining patents. While section 1 of the Patent Act of 1790 did refer to \"she\", married women were unable to own property in their own name and were also prohibited from rights to their own income, including income from anything they invented. This historical gender gap has lessened over the course of the 20th and 21st centuries, however, disparity is still prevalent. In the UK, for example, only 8% of inventors were female as of 2015. This can partly be attributed to historical barriers for women to obtain patents, as well as to the fact that women are underrepresented in traditionally \"patent-intensive\" sectors, particularly STEM sectors. Marcowitz-Bitton et al. argue that the gender gap in patents is also a result of internal bias within the patent system. === Innovation decline === The number of patent applications filed each year has been growing for most countries although not smoothly, and jumps in activity are often observed due to changes in local laws. The high number of patent families for Spain in the 1800s is related to the superior preservation and cataloguing of the data by Spanish Patent and Trademark Office compared to other countries (see 1836 U.S. Patent Office fire). The US was the World's leader in terms of patent families filed between 1900 and 1966, when Japan took over. Since 2007 PR China leads. However, in most technologically advanced countries (see, for example, France, Italy, Japan, Spain, Sweden, the UK in the figure on the right, as well as in Poland), the total (i.e. regardless of the priority/inventors' country) number of patent families filed there have been declining in absolute numbers since c. 1970s–1980s. The decline is even more pronounced when the number of patent applications is normalized by the country's population each year, or when the country of origin rather than country of filing is used. For the US, the population-normalized peak in patenting occurred in 1915, and the number of subsequent patents induced per patent has been mostly declining since 1926. A study of 4,512 patents obtained by Stanford University between 1970 and 2020 showed that the university's patenting activity plateaued in the 2010s. Incidentally, only 20% of Stanford patents in that dataset produced a positive net income for the university, while the rest was a net loss. Similar declines have been noted not only for the number of patents, but also for other measures of innovation output. Several hypotheses have been proposed as explanations for the observed decline: increasing cost of doing research, as \"lower-hanging fruits have been picked up\"; decrease in productivity per researcher; This occurred because factor (1) (higher hanging fruits) overwhelms increased efficiency in computation, automation, big data analysis and communication. human civilization is reaching the limits of the human brain rather than technological limits. \"For the first time in history people are bombarded with far more information than they can process.\" It has also been suggested that the rate of innovation is proportional to the rate of population growth (rather than to the total population), and that the observed decline in research productivity is related to the resource-limited Malthusian growth model. increasing fragmentation of patent encumbrance and increasing number and cost of patent litigations; decreasing value of patents in post-industrial economies, as businesses prefer less risky and more profitable investments in software rather than in hardware, which can be protected more effectively and at a lower cost by using copyrights, trade secrets, first mover advantage, download limitations (see digital economy). A related decline of manufacturing share in the GDP of post-industrial countries has been reported in some studies. a slow-down in patent applications in the US has been attributed to court decisions in Mayo Collaborative Services v. Prometheus Laboratories, Inc.(2012), Association for Molecular Pathology v. Myriad Genetics, Inc. (2013) and Alice Corp. v. CLS Bank International (2014) limiting the eligibility of business method and biological patents. Similar restrictions on software patents have been enacted in other countries. the number of patent applications from PR China is expected to go down after 2025, when government subsidies for patent filing are to expire. patents that are registered but not commercialized, as is the case in around 50% of them, function as a barrier to the registration of similar ideas, effectively creating a growing zone of non-patentability. == Law == === Effects === A patent does not give a right to make or use or sell an invention. Rather, a patent provides, from a legal standpoint, the right to exclude others from making, using, selling, offering for sale, or importing the patented invention for the term of the patent, which is usually 20 years from the filing date subject to the payment of maintenance fees. From an economic and practical standpoint however, a patent is better and perhaps more precisely regarded as conferring upon its proprietor \"a right to try to exclude by asserting the patent in court\", for many granted patents turn out to be invalid once their proprietors attempt to assert them in court. A patent is a limited property right the government gives inventors in exchange for their agreement to share details of their inventions with the public. Like any other property right, it may be sold, licensed, mortgaged, assigned or transferred, given away, or simply abandoned. A patent, being an exclusionary right, does not necessarily give the patent owner the right to exploit the invention subject to the patent. For example, many inventions are improvements of prior inventions that may still be covered by someone else's patent. If an inventor obtains a patent on improvements to an existing invention which is still under patent, they can only legally use the improved invention if the patent holder of the original invention gives permission, which they may refuse. Some countries have \"working provisions\" that require the invention be exploited in the jurisdiction it covers. Consequences of not working an invention vary from one country to another, ranging from revocation of the patent rights to the awarding of a compulsory license awarded by the courts to a party wishing to exploit a patented invention. The patentee has the opportunity to challenge the revocation or license, but is usually required to provide evidence that the reasonable requirements of the public have been met by the working of invention. === Challenges === In most jurisdictions, there are ways for third parties to challenge the validity of an allowed or issued patent at the national patent office; these are called opposition proceedings. It is also possible to challenge the validity of a patent in court. In either case, the challenging party tries to prove that the patent should never have been granted. There are several grounds for challenges: the claimed subject matter is not patentable subject matter at all; the claimed subject matter was actually not new, or was obvious to the person skilled in the art, at the time the application was filed; or that some kind of fraud was committed during prosecution with regard to listing of inventors, representations about when discoveries were made, etc. Patents can be found to be invalid in whole or in part for any of these reasons. === Infringement === Patent infringement occurs when a third party, without authorization from the patentee, makes, uses, or sells a patented invention. Patents, however, are enforced on a national basis. The making of an item in China, for example, that would infringe a US patent, would not constitute infringement under US patent law unless the item were imported into the US. Infringement includes literal infringement of a patent, meaning they are performing a prohibited act that is protected against by the patent. There is also the Doctrine of Equivalents. This doctrine protects from someone creating a product that is basically, by all rights, the same product that is protected with just a few modifications. In some countries, like the United States, there is liability for another two forms of infringement. One is contributory infringement, which is participating in another's infringement. This could be a company helping another company to create a patented product or selling the patented product which is created by another company. There is also inducement to infringement, which is when a party induces or assists another party in violating a patent. An example of this would be a company paying another party to create a patented product in order to reduce their competitor's market share. This is important when it comes to gray market goods, which is when a patent owner sells a product in country A, wherein they have the product patented, then another party buys and sells it, without the owner's permission, in country B, wherein the owner also has a patent for the product. With either national or regional exhaustion being the law the in country B, the owner may still be able to enforce their patent rights; however, if country B has a policy of international exhaustion, then the patent owner will have no legal grounds for enforcing the patent in country B as it was already sold in a different country. === Enforcement === Patents can generally only be enforced through civil lawsuits (for example, for a US patent, by an action for patent infringement in a United States federal district court), although some countries (such as France and Austria) have criminal penalties for wanton infringement. Typically, the patent owner seeks monetary compensation (damages) for past infringement, and seeks an injunction that prohibits the defendant from engaging in future acts of infringement, or seeks either damages or injunction. To prove infringement, the patent owner must establish that the accused infringer practises all the requirements of at least one of the claims of the patent. (In many jurisdictions the scope of the patent may not be limited to what is literally stated in the claims, for example due to the doctrine of equivalents.) An accused infringer has the right to challenge the validity of the patent allegedly being infringed in a counterclaim. A patent can be found invalid on grounds described in the relevant patent laws, which vary between countries. Often, the grounds are a subset of requirements for patentability in the relevant country. Although an infringer is generally free to rely on any available ground of invalidity (such as a prior publication, for example), some countries have sanctions to prevent the same validity questions being relitigated. An example is the UK Certificate of contested validity. Patent licensing agreements are contracts in which the patent owner (the licensor) agrees to grant the licensee the right to make, use, sell, or import the claimed invention, usually in return for a royalty or other compensation. It is common for companies engaged in complex technical fields to enter into multiple license agreements associated with the production of a single product. Moreover, it is equally common for competitors in such fields to license patents to each other under cross-licensing agreements in order to share the benefits of using each other's patented inventions. Freedom Licenses like the Apache 2.0 License are a hybrid of copyright/trademark/patent license/contract due to the bundling nature of the three intellectual properties in one central license. This can make it difficult to enforce because patent licenses cannot be granted this way under copyright and would have to be considered a contract. === Ownership === In most countries, both natural persons and corporate entities may apply for a patent. In the United States, however, only the inventor(s) may apply for a patent, although it may be assigned to a corporate entity subsequently and inventors may be required to assign inventions to their employers under an employment contract. In most European countries, ownership of an invention may pass from the inventor to their employer by rule of law if the invention was made in the course of the inventor's normal or specifically assigned employment duties, where an invention might reasonably be expected to result from carrying out those duties, or if the inventor had a special obligation to further the interests of the employer's company. Applications by artificial intelligence systems, such as DABUS, have been rejected in the US, the UK, and at the European Patent Office on the grounds they are not natural persons. The inventors, their successors or their assignees become the proprietors of the patent when and if it is granted. If a patent is granted to more than one proprietor, the laws of the country in question and any agreement between the proprietors may affect the extent to which each proprietor can exploit the patent. For example, in some countries, each proprietor may freely license or assign their rights in the patent to another person while the law in other countries prohibits such actions without the permission of the other proprietor(s). The ability to assign ownership rights increases the liquidity of a patent as property. Inventors can obtain patents and then sell them to third parties. The third parties then own the patents and have the same rights to prevent others from exploiting the claimed inventions, as if they had originally made the inventions themselves. === Governing laws === The grant and enforcement of patents are governed by national laws, and also by international treaties, where those treaties have been given effect in national laws. Patents are granted by national or regional patent offices, i.e. national or regional administrative authorities. A given patent is therefore only useful for protecting an invention in the country in which that patent is granted. In other words, patent law is territorial in nature. When a patent application is published, the invention disclosed in the application becomes prior art and enters the public domain (if not protected by other patents) in countries where a patent applicant does not seek protection, the application thus generally becoming prior art against anyone (including the applicant) who might seek patent protection for the invention in those countries. Commonly, a nation or a group of nations forms a patent office with responsibility for operating that nation's patent system, within the relevant patent laws. The patent office generally has responsibility for the grant of patents, with infringement being the remit of national courts. The authority for patent statutes in different countries varies. In the UK, substantive patent law is contained in the Patents Act 1977 as amended. In the United States, the Constitution empowers Congress to make laws to \"promote the Progress of Science and useful Arts ...\". The laws Congress passed are codified in Title 35 of the United States Code and created the United States Patent and Trademark Office. There is a trend towards global harmonization of patent laws, with the World Trade Organization (WTO) being particularly active in this area. The TRIPS Agreement has been largely successful in providing a forum for nations to agree on an aligned set of patent laws. Conformity with the TRIPS agreement is a requirement of admission to the WTO and so compliance is seen by many nations as important. This has also led to many developing nations, which may historically have developed different laws to aid their development, enforcing patents laws in line with global practice. Internationally, there are international treaty procedures, such as the procedures under the European Patent Convention (EPC) [constituting the European Patent Organisation (EPOrg)], that centralize some portion of the filing and examination procedure. Similar arrangements exist among the member states of ARIPO and OAPI, the analogous treaties among African countries, and the nine CIS member states that have formed the Eurasian Patent Organization. A key international convention relating to patents is the Paris Convention for the Protection of Industrial Property, initially signed in 1883. The Paris Convention sets out a range of basic rules relating to patents, and although the convention does not have direct legal effect in all national jurisdictions, the principles of the convention are incorporated into all notable current patent systems. The Paris Convention set a minimum patent protection of 20 years, but the most significant aspect of the convention is the provision of the right to claim priority: filing an application in any one member state of the Paris Convention preserves the right for one year to file in any other member state, and receive the benefit of the original filing date. Another key treaty is the Patent Cooperation Treaty (PCT), administered by the World Intellectual Property Organization (WIPO) and covering more than 150 countries. The Patent Cooperation Treaty provides a unified procedure for filing patent applications to protect inventions in each of its contracting states along with giving owners a 30-month priority for applications as opposed to the standard 12 the Paris Convention granted. A patent application filed under the PCT is called an international application, or PCT application. The steps for PCT applications are as follows: 1. Filing the PCT patent application 2. Examination during the international phase 3. Examination during the national phase. Alongside these international agreements for patents there was the Patent Law Treaty (PLT). This treaty standardized the filing date requirements, standardized the application and forms, allows for electronic communication and filing, and avoids unintentional loss of rights, and simplifies patent office procedures. Sometimes, nations grant others, other than the patent owner, permissions to create a patented product based on different situations that align with public policy or public interest. These may include compulsory licenses, scientific research, and in transit in country. === Anti-biopiracy dispositions === After two decades of drafting, the WIPO's Intergovernmental Committee on Intellectual Property and Genetic Resources, Traditional Knowledge and Folklore moved to a Diplomatic Conference in May 2024 and adopted the WIPO Treaty on Intellectual Property, Genetic Resources and Associated Traditional Knowledge (GRATK Treaty) mandating patent disclosure requirements for patents based on genetic resources and associated traditional knowledge from being granted. The Treaty contemplates revocation for patents incorrectly filed. The treaty, and in particular its planned extension, is seen as complementing the Nagoya Protocol to the Convention on Biological Diversity and its system of Access and Benefit-Sharing. Representatives of Indigenous peoples view the GRATK Treaty as a \"first step towards guaranteeing just and transparent access to these resources.\" === Application and prosecution === Before filing for an application, which must be paid for whether a patent is granted or not, a person will want to ensure that their material is patentable. Patentable material must be synthetic, meaning that anything natural cannot be patented. For example, minerals, materials, genes, facts, organisms, and biological processes cannot be patented, but if someone were to apply an inventive, non-obvious, step to them to synthesize something new, the result could be patentable. That includes genetically engineered strains of bacteria, as was decided in Diamond v. Chakrabarty. Patentability also depends on public policy and ethical standards. Additionally, patentable materials must be novel, useful, and a non-obvious inventive step. A patent is requested by filing a written application at the relevant patent office. The person or company filing the application is referred to as \"the applicant\". The applicant may be the inventor or its assignee. The application contains a description of how to make and use the invention that must provide sufficient detail for a person skilled in the art (i.e., the relevant area of technology) to make and use the invention. In some countries there are requirements for providing specific information such as the usefulness of the invention, the best mode of performing the invention known to the inventor, or the technical problem or problems solved by the invention. Drawings illustrating the invention may also be provided. The application also includes one or more claims that define what a patent covers or the \"scope of protection\". After filing, an application is often referred to as \"patent pending\". While this term does not confer legal protection, and a patent cannot be enforced until granted, it serves to provide warning to potential infringers that if the patent is issued, they may be liable for damages. Once filed, a patent application is \"prosecuted\". A patent examiner reviews the patent application to determine if it meets the patentability requirements of that country. If the application does not comply, objections are communicated to the applicant or their patent agent or attorney through an Office action, to which the applicant may respond. The number of Office actions and responses that may occur vary from country to country, but eventually a final rejection is sent by the patent office, or the patent application is granted, which after the payment of additional fees, leads to an issued, enforceable patent. In some jurisdictions, there are opportunities for third parties to bring an opposition proceeding between grant and issuance, or post-issuance. Once granted the patent is subject in most countries to renewal fees to keep the patent in force. These fees are generally payable on a yearly basis. Some countries or regional patent offices (e.g. the European Patent Office) also require annual renewal fees to be paid for a patent application before it is granted. In the US, patent maintenance fees are due on 3.5, 7.5 and 11.5 anniversaries of the patent issuance. Only ca. 50% of issued US patents are maintained full term. Large corporations tend to pay maintenance fees through the full term, while small companies are more likely to abandon their patents earlier, even though the due fees are ca. 5 times lower for small businesses (microentities). ==== Costs ==== The costs of preparing and filing a patent application, prosecuting it until grant and maintaining the patent vary from one jurisdiction to another, and may also be dependent upon the type and complexity of the invention, and on the type of patent. The European Patent Office estimated in 2005 that the average cost of obtaining a European patent (via a Euro-direct application, i.e. not based on a PCT application) and maintaining the patent for a 10-year term was around €32,000. Since the London Agreement entered into force on May 1, 2008, this estimation is however no longer up-to-date, since fewer translations are required. After a patent is issued, in most countries patent maintenance payments are required. In some countries (e.g. Russia) fees are due every year, and the amount due does not change much. In other countries (e.g. US) payments are due ca. every 4th year after the grant date, and the amount due increases every time. A 2023 study by Rochester Institute of Technology found the full term maintenance rate of issued US patents has been fairly constant (40-50%) since 1992. Full term patents have more issued claims and receive on average more citations than earlier expired patents. The European Patent Office charges annual fees for pending applications. Also, between 2012 and 2016 Ecuador increased its patent maintenance fees ten-fold, briefly becoming the most expensive country to maintain patents. In the United States, in 2000 the cost of obtaining a patent (patent prosecution) was estimated to be from $10,000 to $30,000 per patent. When patent litigation is involved (which in year 1999 happened in about 1,600 cases compared to 153,000 patents issued in the same year), costs increase significantly: although 95% of patent litigation cases are settled out of court, those that reach the courts have legal costs on the order of a million dollars per case, not including associated business costs. ==== Non-national treatment in the application procedure ==== Non-national treatments in national patent offices had been prevalent among the Northern countries until they were prohibited after the negotiation of the Paris Convention for the Protection of Industrial Property. According to Articles 2 and 3 of this treaty, juristic and natural persons who are either national of or domiciled in a state party to the Convention shall, as regards the protection of industrial property, enjoy in all the other countries of the Union, the advantages that their respective laws grant to nationals. In addition, the TRIPS Agreement explicitly prohibits any such discrimination. TRIPS Agreement Article 27.1 states that 'patents shall be available and patent rights enjoyable without discrimination as to the place of invention, the field of technology and whether products are imported or locally produced'. === Alternatives === A defensive publication is the act of publishing a detailed description of a new invention without patenting it, so as to establish prior art and public identification as the creator/originator of an invention, although a defensive publication can also be anonymous. A defensive publication prevents others from later being able to patent the invention. A trade secret is information that is intentionally kept confidential and that provides a competitive advantage to its possessor. Trade secrets are protected by non-disclosure agreement and labour law, each of which prevents information leaks such as breaches of confidentiality and industrial espionage. Compared to patents, the advantages of trade secrets are that the value of a trade secret continues until it is made public, whereas a patent is only in force for a specified time, after which others may freely copy the invention; does not require payment of fees to governmental agencies or filing paperwork; has an immediate effect; and does not require any disclosure of information to the public. The key disadvantage of a trade secret is its vulnerability to reverse engineering. == Benefits == Primary incentives embodied in the patent system include incentives to invent in the first place; to disclose the invention once made; to invest the sums necessary to experiment, produce and market the invention; and to design around and improve upon earlier patents. Patents provide incentives for economically efficient research and development (R&D). A study conducted annually by the Institute for Prospective Technological Studies (IPTS) shows that the 2,000 largest global companies invested more than 430 billion euros in 2008 in their R&D departments. If the investments can be considered as inputs of R&D, real products and patents are the outputs. Based on these groups, a project named Corporate Invention Board, had measured and analyzed the patent portfolios to produce an original picture of their technological profiles. Supporters of patents argue that without patent protection, R&D spending would be significantly less or eliminated altogether, limiting the possibility of technological advances or breakthroughs. Corporations would be much more conservative about the R&D investments they made, as third parties would be free to exploit any developments. The logical consequence of more efficient R&D is a more efficient national economy: An increase in patenting has proven to be linked with an increase of national income. A 2009 study on patent effects in various countries around the world finds, for instance, that a 10% increase in patenting in 1910 was correlated on average to a 9 to 11% higher level of per capita GDP in 1960. The positive effects of patenting on national income were found to be particularly strong in the U.S., Switzerland and Sweden. However, patenting is not the only factor influencing GDP growth: among others, schooling also plays a big role. \"The patent internalizes the externality by giving the [inventor] a property right over its invention.\" In accordance with the original definition of the term \"patent\", patents are intended to facilitate and encourage disclosure of innovations into the public domain for the common good. Thus patenting can be viewed as contributing to open hardware after an embargo period (usually of 20 years). If inventors did not have the legal protection of patents, in many cases, they might prefer or tend to keep their inventions secret (e.g. keep trade secrets). Awarding patents generally makes the details of new technology publicly available, for exploitation by anyone after the patent expires, or for further improvement by other inventors. Furthermore, when a patent's term has expired, the public record ensures that the patentee's invention is not lost to humanity. One effect of modern patent usage is that a small-time inventor, who can afford both the patenting process and the defense of the patent, can use the exclusive right status to become a licensor. This allows the inventor to accumulate capital from licensing the invention and may allow innovation to occur because he or she may choose not to manage a manufacturing buildup for the invention. Thus the inventor's time and energy can be spent on pure innovation, allowing others to concentrate on manufacturability. Another effect of modern patent usage is the social benefit(s) of technology disclosure. Although patentees usually end up not reaping benefit from their patent monopoly, the society still benefits from patent disclosures. Also patents both enable and incentivize competitors to design around (or to \"invent around\" according to R S Praveen Raj) the patented invention. This may promote healthy competition among manufacturers, resulting in gradual improvements of the technology base. == Criticism == Legal scholars, economists, activists, policymakers, industries, and trade organizations have held differing views on patents and engaged in contentious debates on the subject. Critical perspectives emerged in the nineteenth century that were especially based on the principles of free trade. Contemporary criticisms have echoed those arguments, claiming that patents block innovation and waste resources (e.g. with patent-related overheads) that could otherwise be used productively to improve technology. These and other research findings that patents decreased innovation because of the following mechanisms: Low quality, already known or obvious patents hamper innovation and commercialization. Blocking the use of fundamental knowledge with patents creates a \"tragedy of the anticommons, where future innovations can not take place outside of a single firm in an entire field\". Patents weaken the public domain and innovation that comes from it. Patent thickets, or \"an overlapping set of patent rights\", in particular slow innovation. Broad patents prevent companies from commercializing products and hurt innovation. In the worst case, such broad patents are held by non-practicing entities (patent trolls), which do not contribute to innovation. Enforcement by patent trolls of poor quality patents has led to criticism of the patent office as well as the system itself. For example, in 2011, United States business entities incurred $29 billion in direct costs because of patent trolls. Lawsuits brought by \"patent assertion companies\" made up 61% of all patent cases in 2012, according to the Santa Clara University School of Law. Patents apply a \"one size fits all\" model to industries with differing needs, that is especially unproductive for the software industry. Rent-seeking by owners of pharmaceutical patents have also been a particular focus of criticism, as the high prices they enable puts life-saving drugs out of reach of many people. \"With the partial exception of the pharmaceutical industry, we just do not have clear evidence to support the assumption that patents provide significant incentives to inventive activity\". Boldrin and Levine conclude \"Our preferred policy solution is to abolish patents entirely and to find other legislative instruments, less open to lobbying and rent seeking, to foster innovation when there is clear evidence that laissez-faire undersupplies it.\" Abolishing patents may be politically challenging in some countries, however, as the primary economic theories supporting patent law hold that inventors and innovators need patents to recoup the costs associated with research, inventing, and commercializing; this reasoning is weakened if the new technologies decrease these costs. A 2016 paper argued for substantial weakening of patents because current technologies (e.g. 3D printing, cloud computing, synthetic biology, etc.) have reduced the cost of innovation. Debates over the usefulness of patents for their primary objective are part of a larger discourse on intellectual property protection, which also reflects differing perspectives on copyright. === Anti-patent initiatives === Patents on expensive medications are often used as examples that can highlight the inadequacy of patent-based mechanisms. One workaround solution that has been applied by South Africa in the past is passing explained domestic law that gives the state the right to import inexpensive generic versions without permission and wait for international regulations and incentive-systems to get upgraded at a later point. In 2020, multiple initiatives, including by India and South Africa, called for a waiver of TRIPS vaccine patents for accelerated deployment of COVID-19 vaccines around the world. However, no mechanisms of alternative medical research and development incentive-systems or technical details of proposed \"sharing\" after certain amounts of profit were reported and some argue that, instead of intellectual property rights, manufacturing know-how is the main barrier to expanding capacity. The Patent Busting Project is an Electronic Frontier Foundation (EFF) initiative challenging patents that the organization claims are illegitimate and suppress innovation or limit online expression. The initiative launched in 2004 and involves two phases: documenting the damage caused by these patents, and submitting challenges to the United States Patent and Trademark Office (USPTO). Patent critic, Joseph Stiglitz has proposed Prizes as an alternative to patents in order to further advance solutions to global problems such as AIDS. In 2012, Stack Exchange launched Ask Patents, a forum for crowdsourcing prior art to invalidate patents. Several authors have argued for developing defensive prior art to prevent patenting based on obviousness using lists or algorithms. For example, a professor of law at the University of North Carolina School of Law, has demonstrated a method to protect DNA research, which could apply to other technology. Chin wrote an algorithm to generate 11 million \"obvious\" nucleotide sequences to count as prior art and his algorithmic approach has already proven effective at anticipating prior art against oligonucleotide composition claims filed since his publication of the list and has been cited by the U.S. patent office a number of times. More recently, Joshua Pearce developed an open-source algorithm for identifying prior art for 3D printing materials to make such materials obvious by patent standards. As the 3-D printing community is already grappling with legal issues, this development was hotly debated in the technical press. Chin made the same algorithm-based obvious argument in DNA probes. Google and other technology companies founded the LOT Network in 2014 to combat patent assertion entities by cross-licensing patents, thereby preventing legal action by such entities. == See also == Outline of patents PCT/PLT treaties WTO TRIPs Agreement (1994) GRATK Treaty (2024) == References == == Further reading == Henderson, David R. (2002). \"Patents\". Concise Encyclopedia of Economics (1st ed.). Library of Economics and Liberty. == External links == Directory of Intellectual Property Offices, maintained by World Intellectual Property Organization (WIPO) World Intellectual Property Indicators 2022 with patents statistics PCT Yearly Review 2024 Useful links, maintained by the European Patent Office |U.S. Patent Practitioner Homepage U.S. Patent Classification OECD Patent statistics OCLC 317650570, 50016270, 163149563"
+  },
+  "chunks": [
+    {
+      "id": "patent_960a174d_c0000",
+      "article_id": "patent_960a174d",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 804,
+      "content": "A patent is a type of intellectual property that gives its owner the legal right to exclude others from making, using, or selling an invention for a limited period of time in exchange for publishing an enabling disclosure of the invention. In most countries, patent rights fall under private law and the patent holder must sue someone infringing the patent in order to enforce their rights. The procedure for granting patents, requirements placed on the patentee, and the extent of the exclusive rights vary widely between countries according to national laws and international agreements. Typically, however, a patent application must include one or more claims that define the scope of protection that is being sought. A patent may include many claims, each of which defines a specific property right.",
+      "char_count": 803,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0001",
+      "article_id": "patent_960a174d",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 804,
+      "end_char": 1407,
+      "content": "Under the World Trade Organization's (WTO) TRIPS Agreement, patents should be available in WTO member states for any invention, in all fields of technology, provided they are new, involve an inventive step, and are capable of industrial application. Nevertheless, there are variations on what is patentable subject matter from country to country, also among WTO member states. TRIPS also provides that the term of protection available should be a minimum of twenty years. Some countries have other patent-like forms of intellectual property, such as utility models, which have a shorter monopoly period.",
+      "char_count": 603,
+      "token_estimate": 150,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0002",
+      "article_id": "patent_960a174d",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 1424,
+      "end_char": 2307,
+      "content": "== Definition == The word patent originates from the Latin patere, which means \"to lay open\" (i.e., to make available for public inspection). It is a shortened version of the term letters patent, which was an open document or instrument issued by a monarch or government granting exclusive rights to a person, predating the modern patent system. Similar grants included land patents, which were land grants by early state governments in the US, and printing patents, a precursor of modern copyright. In modern usage, the term patent usually refers to the right granted to anyone who invents something new, useful and non-obvious. A patent is often referred to as a form of intellectual property right, an expression which is also used to refer to trademarks and copyrights, and which has proponents and detractors (see also Intellectual property § The term \"intellectual property\").",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0003",
+      "article_id": "patent_960a174d",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 2307,
+      "end_char": 2909,
+      "content": "Some other types of intellectual property rights are also called patents in some jurisdictions: industrial design rights are called design patents in the US, plant breeders' rights are sometimes called plant patents, and utility models and Gebrauchsmuster are sometimes called petty patents or innovation patents. The additional qualification utility patent is sometimes used (primarily in the US) to distinguish the primary meaning from these other types of patents. Particular types of patents for inventions include biological patents, business method patents, chemical patents and software patents.",
+      "char_count": 602,
+      "token_estimate": 150,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0004",
+      "article_id": "patent_960a174d",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2907,
+      "end_char": 3738,
+      "content": "== History == Although there is evidence that some form of patent rights was recognized in Ancient Greece in the city of Sybaris, the first statutory patent system is generally regarded to be the Venetian Patent Statute of 1474. However, recent historical research has suggested that the 1474 Statute was inspired by laws in the Kingdom of Jerusalem that granted monopolies to developers of novel silk-making techniques. Patents were systematically granted in Venice as of 1474, where they issued a decree by which new and inventive devices had to be communicated to the Republic in order to obtain legal protection against potential infringers. The period of protection was 10 years. As Venetians emigrated, they sought similar patent protection in their new homes. This led to the diffusion of patent systems to other countries.",
+      "char_count": 830,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0005",
+      "article_id": "patent_960a174d",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3738,
+      "end_char": 4654,
+      "content": "The English patent system evolved from its early medieval origins into the first modern patent system that recognised intellectual property in order to stimulate invention; this was the crucial legal foundation upon which the Industrial Revolution could emerge and flourish. By the 16th century, the English Crown would habitually abuse the granting of letters patent for monopolies. After public outcry, King James I of England (VI of Scotland) was forced to revoke all existing monopolies and declare that they were only to be used for \"projects of new invention\". This was incorporated into the Statute of Monopolies (1624) in which Parliament restricted the Crown's power explicitly so that the King could only issue letters patent to the inventors or introducers of original inventions for a fixed number of years. The Statute became the foundation for later developments in patent law in England and elsewhere.",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0006",
+      "article_id": "patent_960a174d",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 4655,
+      "end_char": 5646,
+      "content": "Important developments in patent law emerged during the 18th century through a slow process of judicial interpretation of the law. During the reign of Queen Anne, patent applications were required to supply a complete specification of the principles of operation of the invention for public access. Legal battles around the 1796 patent taken out by James Watt for his steam engine, established the principles that patents could be issued for improvements of an already existing machine and that ideas or principles without specific practical application could also legally be patented. The English legal system became the foundation for patent law in countries with a common law heritage, including the United States, New Zealand and Australia. In the Thirteen Colonies, inventors could obtain patents through petition to a given colony's legislature. In 1641, Samuel Winslow was granted the first patent in North America by the Massachusetts General Court for a new process for making salt.",
+      "char_count": 991,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0007",
+      "article_id": "patent_960a174d",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 5647,
+      "end_char": 6596,
+      "content": "The modern French patent system was created during the Revolution in 1791. Patents were granted without examination since inventor's right was considered as a natural one. Patent costs were very high (from 500 to 1,500 francs). Importation patents protected new devices coming from foreign countries. The patent law was revised in 1844 – patent cost was lowered and importation patents were abolished. The first Patent Act of the U.S. Congress was passed on April 10, 1790, titled \"An Act to promote the progress of useful Arts\". The first patent under the Act was granted on July 31, 1790, to Samuel Hopkins of Vermont for a method of producing potash (potassium carbonate). A revised patent law was passed in 1793, and in 1836 a major revision was passed. The 1836 law instituted a significantly more rigorous application process, including the establishment of an examination system. Between 1790 and 1836 about ten thousand patents were granted.",
+      "char_count": 949,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0008",
+      "article_id": "patent_960a174d",
+      "section": "== = Gender gap in patents ==",
+      "heading_path": "== = Gender gap in patents ==",
+      "start_char": 6678,
+      "end_char": 7633,
+      "content": "== = Gender gap in patents === The first patent in England known to be granted to a woman was to Mrs. Amye Everard Ball in 1637 for a tincture of saffron. In the US, married women were historically precluded from obtaining patents. While section 1 of the Patent Act of 1790 did refer to \"she\", married women were unable to own property in their own name and were also prohibited from rights to their own income, including income from anything they invented. This historical gender gap has lessened over the course of the 20th and 21st centuries, however, disparity is still prevalent. In the UK, for example, only 8% of inventors were female as of 2015. This can partly be attributed to historical barriers for women to obtain patents, as well as to the fact that women are underrepresented in traditionally \"patent-intensive\" sectors, particularly STEM sectors. Marcowitz-Bitton et al. argue that the gender gap in patents is also a result of internal bias within the patent system.",
+      "char_count": 983,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0009",
+      "article_id": "patent_960a174d",
+      "section": "== = Innovation decline ==",
+      "heading_path": "== = Innovation decline ==",
+      "start_char": 7659,
+      "end_char": 8561,
+      "content": "== = Innovation decline === The number of patent applications filed each year has been growing for most countries although not smoothly, and jumps in activity are often observed due to changes in local laws. The high number of patent families for Spain in the 1800s is related to the superior preservation and cataloguing of the data by Spanish Patent and Trademark Office compared to other countries (see 1836 U.S. Patent Office fire). The US was the World's leader in terms of patent families filed between 1900 and 1966, when Japan took over. Since 2007 PR China leads. However, in most technologically advanced countries (see, for example, France, Italy, Japan, Spain, Sweden, the UK in the figure on the right, as well as in Poland), the total (i.e. regardless of the priority/inventors' country) number of patent families filed there have been declining in absolute numbers since c. 1970s–1980s.",
+      "char_count": 901,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0010",
+      "article_id": "patent_960a174d",
+      "section": "== = Innovation decline ==",
+      "heading_path": "== = Innovation decline ==",
+      "start_char": 8561,
+      "end_char": 9336,
+      "content": "The decline is even more pronounced when the number of patent applications is normalized by the country's population each year, or when the country of origin rather than country of filing is used. For the US, the population-normalized peak in patenting occurred in 1915, and the number of subsequent patents induced per patent has been mostly declining since 1926. A study of 4,512 patents obtained by Stanford University between 1970 and 2020 showed that the university's patenting activity plateaued in the 2010s. Incidentally, only 20% of Stanford patents in that dataset produced a positive net income for the university, while the rest was a net loss. Similar declines have been noted not only for the number of patents, but also for other measures of innovation output.",
+      "char_count": 775,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0011",
+      "article_id": "patent_960a174d",
+      "section": "== = Innovation decline ==",
+      "heading_path": "== = Innovation decline ==",
+      "start_char": 9337,
+      "end_char": 10148,
+      "content": "Several hypotheses have been proposed as explanations for the observed decline: increasing cost of doing research, as \"lower-hanging fruits have been picked up\"; decrease in productivity per researcher; This occurred because factor (1) (higher hanging fruits) overwhelms increased efficiency in computation, automation, big data analysis and communication. human civilization is reaching the limits of the human brain rather than technological limits. \"For the first time in history people are bombarded with far more information than they can process.\" It has also been suggested that the rate of innovation is proportional to the rate of population growth (rather than to the total population), and that the observed decline in research productivity is related to the resource-limited Malthusian growth model.",
+      "char_count": 811,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0012",
+      "article_id": "patent_960a174d",
+      "section": "== = Innovation decline ==",
+      "heading_path": "== = Innovation decline ==",
+      "start_char": 10149,
+      "end_char": 11106,
+      "content": "increasing fragmentation of patent encumbrance and increasing number and cost of patent litigations; decreasing value of patents in post-industrial economies, as businesses prefer less risky and more profitable investments in software rather than in hardware, which can be protected more effectively and at a lower cost by using copyrights, trade secrets, first mover advantage, download limitations (see digital economy). A related decline of manufacturing share in the GDP of post-industrial countries has been reported in some studies. a slow-down in patent applications in the US has been attributed to court decisions in Mayo Collaborative Services v. Prometheus Laboratories, Inc.(2012), Association for Molecular Pathology v. Myriad Genetics, Inc. (2013) and Alice Corp. v. CLS Bank International (2014) limiting the eligibility of business method and biological patents. Similar restrictions on software patents have been enacted in other countries.",
+      "char_count": 957,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0013",
+      "article_id": "patent_960a174d",
+      "section": "== = Innovation decline ==",
+      "heading_path": "== = Innovation decline ==",
+      "start_char": 11107,
+      "end_char": 11456,
+      "content": "the number of patent applications from PR China is expected to go down after 2025, when government subsidies for patent filing are to expire. patents that are registered but not commercialized, as is the case in around 50% of them, function as a barrier to the registration of similar ideas, effectively creating a growing zone of non-patentability.",
+      "char_count": 349,
+      "token_estimate": 87,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0014",
+      "article_id": "patent_960a174d",
+      "section": "== = Effects ==",
+      "heading_path": "== = Effects ==",
+      "start_char": 11456,
+      "end_char": 12410,
+      "content": "== = Effects === A patent does not give a right to make or use or sell an invention. Rather, a patent provides, from a legal standpoint, the right to exclude others from making, using, selling, offering for sale, or importing the patented invention for the term of the patent, which is usually 20 years from the filing date subject to the payment of maintenance fees. From an economic and practical standpoint however, a patent is better and perhaps more precisely regarded as conferring upon its proprietor \"a right to try to exclude by asserting the patent in court\", for many granted patents turn out to be invalid once their proprietors attempt to assert them in court. A patent is a limited property right the government gives inventors in exchange for their agreement to share details of their inventions with the public. Like any other property right, it may be sold, licensed, mortgaged, assigned or transferred, given away, or simply abandoned.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0015",
+      "article_id": "patent_960a174d",
+      "section": "== = Effects ==",
+      "heading_path": "== = Effects ==",
+      "start_char": 12410,
+      "end_char": 13252,
+      "content": "A patent, being an exclusionary right, does not necessarily give the patent owner the right to exploit the invention subject to the patent. For example, many inventions are improvements of prior inventions that may still be covered by someone else's patent. If an inventor obtains a patent on improvements to an existing invention which is still under patent, they can only legally use the improved invention if the patent holder of the original invention gives permission, which they may refuse. Some countries have \"working provisions\" that require the invention be exploited in the jurisdiction it covers. Consequences of not working an invention vary from one country to another, ranging from revocation of the patent rights to the awarding of a compulsory license awarded by the courts to a party wishing to exploit a patented invention.",
+      "char_count": 842,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0016",
+      "article_id": "patent_960a174d",
+      "section": "== = Effects ==",
+      "heading_path": "== = Effects ==",
+      "start_char": 13253,
+      "end_char": 13459,
+      "content": "The patentee has the opportunity to challenge the revocation or license, but is usually required to provide evidence that the reasonable requirements of the public have been met by the working of invention.",
+      "char_count": 206,
+      "token_estimate": 51,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0017",
+      "article_id": "patent_960a174d",
+      "section": "== = Challenges ==",
+      "heading_path": "== = Challenges ==",
+      "start_char": 13463,
+      "end_char": 14299,
+      "content": "== = Challenges === In most jurisdictions, there are ways for third parties to challenge the validity of an allowed or issued patent at the national patent office; these are called opposition proceedings. It is also possible to challenge the validity of a patent in court. In either case, the challenging party tries to prove that the patent should never have been granted. There are several grounds for challenges: the claimed subject matter is not patentable subject matter at all; the claimed subject matter was actually not new, or was obvious to the person skilled in the art, at the time the application was filed; or that some kind of fraud was committed during prosecution with regard to listing of inventors, representations about when discoveries were made, etc. Patents can be found to be invalid in whole or in part for any of these reasons.",
+      "char_count": 853,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0018",
+      "article_id": "patent_960a174d",
+      "section": "== = Infringement ==",
+      "heading_path": "== = Infringement ==",
+      "start_char": 14319,
+      "end_char": 15225,
+      "content": "== = Infringement === Patent infringement occurs when a third party, without authorization from the patentee, makes, uses, or sells a patented invention. Patents, however, are enforced on a national basis. The making of an item in China, for example, that would infringe a US patent, would not constitute infringement under US patent law unless the item were imported into the US. Infringement includes literal infringement of a patent, meaning they are performing a prohibited act that is protected against by the patent. There is also the Doctrine of Equivalents. This doctrine protects from someone creating a product that is basically, by all rights, the same product that is protected with just a few modifications. In some countries, like the United States, there is liability for another two forms of infringement. One is contributory infringement, which is participating in another's infringement.",
+      "char_count": 905,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0019",
+      "article_id": "patent_960a174d",
+      "section": "== = Infringement ==",
+      "heading_path": "== = Infringement ==",
+      "start_char": 15225,
+      "end_char": 15920,
+      "content": "This could be a company helping another company to create a patented product or selling the patented product which is created by another company. There is also inducement to infringement, which is when a party induces or assists another party in violating a patent. An example of this would be a company paying another party to create a patented product in order to reduce their competitor's market share. This is important when it comes to gray market goods, which is when a patent owner sells a product in country A, wherein they have the product patented, then another party buys and sells it, without the owner's permission, in country B, wherein the owner also has a patent for the product.",
+      "char_count": 695,
+      "token_estimate": 173,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0020",
+      "article_id": "patent_960a174d",
+      "section": "== = Infringement ==",
+      "heading_path": "== = Infringement ==",
+      "start_char": 15921,
+      "end_char": 16254,
+      "content": "With either national or regional exhaustion being the law the in country B, the owner may still be able to enforce their patent rights; however, if country B has a policy of international exhaustion, then the patent owner will have no legal grounds for enforcing the patent in country B as it was already sold in a different country.",
+      "char_count": 333,
+      "token_estimate": 83,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0021",
+      "article_id": "patent_960a174d",
+      "section": "== = Enforcement ==",
+      "heading_path": "== = Enforcement ==",
+      "start_char": 16254,
+      "end_char": 17214,
+      "content": "== = Enforcement === Patents can generally only be enforced through civil lawsuits (for example, for a US patent, by an action for patent infringement in a United States federal district court), although some countries (such as France and Austria) have criminal penalties for wanton infringement. Typically, the patent owner seeks monetary compensation (damages) for past infringement, and seeks an injunction that prohibits the defendant from engaging in future acts of infringement, or seeks either damages or injunction. To prove infringement, the patent owner must establish that the accused infringer practises all the requirements of at least one of the claims of the patent. (In many jurisdictions the scope of the patent may not be limited to what is literally stated in the claims, for example due to the doctrine of equivalents.) An accused infringer has the right to challenge the validity of the patent allegedly being infringed in a counterclaim.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0022",
+      "article_id": "patent_960a174d",
+      "section": "== = Enforcement ==",
+      "heading_path": "== = Enforcement ==",
+      "start_char": 17214,
+      "end_char": 18075,
+      "content": "A patent can be found invalid on grounds described in the relevant patent laws, which vary between countries. Often, the grounds are a subset of requirements for patentability in the relevant country. Although an infringer is generally free to rely on any available ground of invalidity (such as a prior publication, for example), some countries have sanctions to prevent the same validity questions being relitigated. An example is the UK Certificate of contested validity. Patent licensing agreements are contracts in which the patent owner (the licensor) agrees to grant the licensee the right to make, use, sell, or import the claimed invention, usually in return for a royalty or other compensation. It is common for companies engaged in complex technical fields to enter into multiple license agreements associated with the production of a single product.",
+      "char_count": 861,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0023",
+      "article_id": "patent_960a174d",
+      "section": "== = Enforcement ==",
+      "heading_path": "== = Enforcement ==",
+      "start_char": 18076,
+      "end_char": 18619,
+      "content": "Moreover, it is equally common for competitors in such fields to license patents to each other under cross-licensing agreements in order to share the benefits of using each other's patented inventions. Freedom Licenses like the Apache 2.0 License are a hybrid of copyright/trademark/patent license/contract due to the bundling nature of the three intellectual properties in one central license. This can make it difficult to enforce because patent licenses cannot be granted this way under copyright and would have to be considered a contract.",
+      "char_count": 543,
+      "token_estimate": 135,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0024",
+      "article_id": "patent_960a174d",
+      "section": "== = Ownership ==",
+      "heading_path": "== = Ownership ==",
+      "start_char": 18618,
+      "end_char": 19553,
+      "content": "== = Ownership === In most countries, both natural persons and corporate entities may apply for a patent. In the United States, however, only the inventor(s) may apply for a patent, although it may be assigned to a corporate entity subsequently and inventors may be required to assign inventions to their employers under an employment contract. In most European countries, ownership of an invention may pass from the inventor to their employer by rule of law if the invention was made in the course of the inventor's normal or specifically assigned employment duties, where an invention might reasonably be expected to result from carrying out those duties, or if the inventor had a special obligation to further the interests of the employer's company. Applications by artificial intelligence systems, such as DABUS, have been rejected in the US, the UK, and at the European Patent Office on the grounds they are not natural persons.",
+      "char_count": 934,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0025",
+      "article_id": "patent_960a174d",
+      "section": "== = Ownership ==",
+      "heading_path": "== = Ownership ==",
+      "start_char": 19553,
+      "end_char": 20431,
+      "content": "The inventors, their successors or their assignees become the proprietors of the patent when and if it is granted. If a patent is granted to more than one proprietor, the laws of the country in question and any agreement between the proprietors may affect the extent to which each proprietor can exploit the patent. For example, in some countries, each proprietor may freely license or assign their rights in the patent to another person while the law in other countries prohibits such actions without the permission of the other proprietor(s). The ability to assign ownership rights increases the liquidity of a patent as property. Inventors can obtain patents and then sell them to third parties. The third parties then own the patents and have the same rights to prevent others from exploiting the claimed inventions, as if they had originally made the inventions themselves.",
+      "char_count": 878,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0026",
+      "article_id": "patent_960a174d",
+      "section": "== = Governing laws ==",
+      "heading_path": "== = Governing laws ==",
+      "start_char": 20437,
+      "end_char": 21302,
+      "content": "== = Governing laws === The grant and enforcement of patents are governed by national laws, and also by international treaties, where those treaties have been given effect in national laws. Patents are granted by national or regional patent offices, i.e. national or regional administrative authorities. A given patent is therefore only useful for protecting an invention in the country in which that patent is granted. In other words, patent law is territorial in nature. When a patent application is published, the invention disclosed in the application becomes prior art and enters the public domain (if not protected by other patents) in countries where a patent applicant does not seek protection, the application thus generally becoming prior art against anyone (including the applicant) who might seek patent protection for the invention in those countries.",
+      "char_count": 864,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0027",
+      "article_id": "patent_960a174d",
+      "section": "== = Governing laws ==",
+      "heading_path": "== = Governing laws ==",
+      "start_char": 21302,
+      "end_char": 22264,
+      "content": "Commonly, a nation or a group of nations forms a patent office with responsibility for operating that nation's patent system, within the relevant patent laws. The patent office generally has responsibility for the grant of patents, with infringement being the remit of national courts. The authority for patent statutes in different countries varies. In the UK, substantive patent law is contained in the Patents Act 1977 as amended. In the United States, the Constitution empowers Congress to make laws to \"promote the Progress of Science and useful Arts ...\". The laws Congress passed are codified in Title 35 of the United States Code and created the United States Patent and Trademark Office. There is a trend towards global harmonization of patent laws, with the World Trade Organization (WTO) being particularly active in this area. The TRIPS Agreement has been largely successful in providing a forum for nations to agree on an aligned set of patent laws.",
+      "char_count": 962,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0028",
+      "article_id": "patent_960a174d",
+      "section": "== = Governing laws ==",
+      "heading_path": "== = Governing laws ==",
+      "start_char": 22265,
+      "end_char": 23172,
+      "content": "Conformity with the TRIPS agreement is a requirement of admission to the WTO and so compliance is seen by many nations as important. This has also led to many developing nations, which may historically have developed different laws to aid their development, enforcing patents laws in line with global practice. Internationally, there are international treaty procedures, such as the procedures under the European Patent Convention (EPC) [constituting the European Patent Organisation (EPOrg)], that centralize some portion of the filing and examination procedure. Similar arrangements exist among the member states of ARIPO and OAPI, the analogous treaties among African countries, and the nine CIS member states that have formed the Eurasian Patent Organization. A key international convention relating to patents is the Paris Convention for the Protection of Industrial Property, initially signed in 1883.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0029",
+      "article_id": "patent_960a174d",
+      "section": "== = Governing laws ==",
+      "heading_path": "== = Governing laws ==",
+      "start_char": 23173,
+      "end_char": 23951,
+      "content": "The Paris Convention sets out a range of basic rules relating to patents, and although the convention does not have direct legal effect in all national jurisdictions, the principles of the convention are incorporated into all notable current patent systems. The Paris Convention set a minimum patent protection of 20 years, but the most significant aspect of the convention is the provision of the right to claim priority: filing an application in any one member state of the Paris Convention preserves the right for one year to file in any other member state, and receive the benefit of the original filing date. Another key treaty is the Patent Cooperation Treaty (PCT), administered by the World Intellectual Property Organization (WIPO) and covering more than 150 countries.",
+      "char_count": 778,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0030",
+      "article_id": "patent_960a174d",
+      "section": "== = Governing laws ==",
+      "heading_path": "== = Governing laws ==",
+      "start_char": 23952,
+      "end_char": 24809,
+      "content": "The Patent Cooperation Treaty provides a unified procedure for filing patent applications to protect inventions in each of its contracting states along with giving owners a 30-month priority for applications as opposed to the standard 12 the Paris Convention granted. A patent application filed under the PCT is called an international application, or PCT application. The steps for PCT applications are as follows: 1. Filing the PCT patent application 2. Examination during the international phase 3. Examination during the national phase. Alongside these international agreements for patents there was the Patent Law Treaty (PLT). This treaty standardized the filing date requirements, standardized the application and forms, allows for electronic communication and filing, and avoids unintentional loss of rights, and simplifies patent office procedures.",
+      "char_count": 857,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0031",
+      "article_id": "patent_960a174d",
+      "section": "== = Governing laws ==",
+      "heading_path": "== = Governing laws ==",
+      "start_char": 24810,
+      "end_char": 25079,
+      "content": "Sometimes, nations grant others, other than the patent owner, permissions to create a patented product based on different situations that align with public policy or public interest. These may include compulsory licenses, scientific research, and in transit in country.",
+      "char_count": 269,
+      "token_estimate": 67,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0032",
+      "article_id": "patent_960a174d",
+      "section": "== = Anti-biopiracy dispositions ==",
+      "heading_path": "== = Anti-biopiracy dispositions ==",
+      "start_char": 25093,
+      "end_char": 25953,
+      "content": "== = Anti-biopiracy dispositions === After two decades of drafting, the WIPO's Intergovernmental Committee on Intellectual Property and Genetic Resources, Traditional Knowledge and Folklore moved to a Diplomatic Conference in May 2024 and adopted the WIPO Treaty on Intellectual Property, Genetic Resources and Associated Traditional Knowledge (GRATK Treaty) mandating patent disclosure requirements for patents based on genetic resources and associated traditional knowledge from being granted. The Treaty contemplates revocation for patents incorrectly filed. The treaty, and in particular its planned extension, is seen as complementing the Nagoya Protocol to the Convention on Biological Diversity and its system of Access and Benefit-Sharing. Representatives of Indigenous peoples view the GRATK Treaty as a \"first step towards guaranteeing just and transparent access to these resources.\"",
+      "char_count": 894,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0033",
+      "article_id": "patent_960a174d",
+      "section": "== = Application and prosecution ==",
+      "heading_path": "== = Application and prosecution ==",
+      "start_char": 25988,
+      "end_char": 26929,
+      "content": "== = Application and prosecution === Before filing for an application, which must be paid for whether a patent is granted or not, a person will want to ensure that their material is patentable. Patentable material must be synthetic, meaning that anything natural cannot be patented. For example, minerals, materials, genes, facts, organisms, and biological processes cannot be patented, but if someone were to apply an inventive, non-obvious, step to them to synthesize something new, the result could be patentable. That includes genetically engineered strains of bacteria, as was decided in Diamond v. Chakrabarty. Patentability also depends on public policy and ethical standards. Additionally, patentable materials must be novel, useful, and a non-obvious inventive step. A patent is requested by filing a written application at the relevant patent office. The person or company filing the application is referred to as \"the applicant\".",
+      "char_count": 940,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0034",
+      "article_id": "patent_960a174d",
+      "section": "== = Application and prosecution ==",
+      "heading_path": "== = Application and prosecution ==",
+      "start_char": 26929,
+      "end_char": 27891,
+      "content": "The applicant may be the inventor or its assignee. The application contains a description of how to make and use the invention that must provide sufficient detail for a person skilled in the art (i.e., the relevant area of technology) to make and use the invention. In some countries there are requirements for providing specific information such as the usefulness of the invention, the best mode of performing the invention known to the inventor, or the technical problem or problems solved by the invention. Drawings illustrating the invention may also be provided. The application also includes one or more claims that define what a patent covers or the \"scope of protection\". After filing, an application is often referred to as \"patent pending\". While this term does not confer legal protection, and a patent cannot be enforced until granted, it serves to provide warning to potential infringers that if the patent is issued, they may be liable for damages.",
+      "char_count": 962,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0035",
+      "article_id": "patent_960a174d",
+      "section": "== = Application and prosecution ==",
+      "heading_path": "== = Application and prosecution ==",
+      "start_char": 27892,
+      "end_char": 28856,
+      "content": "Once filed, a patent application is \"prosecuted\". A patent examiner reviews the patent application to determine if it meets the patentability requirements of that country. If the application does not comply, objections are communicated to the applicant or their patent agent or attorney through an Office action, to which the applicant may respond. The number of Office actions and responses that may occur vary from country to country, but eventually a final rejection is sent by the patent office, or the patent application is granted, which after the payment of additional fees, leads to an issued, enforceable patent. In some jurisdictions, there are opportunities for third parties to bring an opposition proceeding between grant and issuance, or post-issuance. Once granted the patent is subject in most countries to renewal fees to keep the patent in force. These fees are generally payable on a yearly basis. Some countries or regional patent offices (e.g.",
+      "char_count": 964,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0036",
+      "article_id": "patent_960a174d",
+      "section": "== = Application and prosecution ==",
+      "heading_path": "== = Application and prosecution ==",
+      "start_char": 28857,
+      "end_char": 29365,
+      "content": "the European Patent Office) also require annual renewal fees to be paid for a patent application before it is granted. In the US, patent maintenance fees are due on 3.5, 7.5 and 11.5 anniversaries of the patent issuance. Only ca. 50% of issued US patents are maintained full term. Large corporations tend to pay maintenance fees through the full term, while small companies are more likely to abandon their patents earlier, even though the due fees are ca. 5 times lower for small businesses (microentities).",
+      "char_count": 508,
+      "token_estimate": 127,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0037",
+      "article_id": "patent_960a174d",
+      "section": "== = Alternatives ==",
+      "heading_path": "== = Alternatives ==",
+      "start_char": 29351,
+      "end_char": 30032,
+      "content": "== = Alternatives === A defensive publication is the act of publishing a detailed description of a new invention without patenting it, so as to establish prior art and public identification as the creator/originator of an invention, although a defensive publication can also be anonymous. A defensive publication prevents others from later being able to patent the invention. A trade secret is information that is intentionally kept confidential and that provides a competitive advantage to its possessor. Trade secrets are protected by non-disclosure agreement and labour law, each of which prevents information leaks such as breaches of confidentiality and industrial espionage.",
+      "char_count": 680,
+      "token_estimate": 170,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0038",
+      "article_id": "patent_960a174d",
+      "section": "== = Alternatives ==",
+      "heading_path": "== = Alternatives ==",
+      "start_char": 30032,
+      "end_char": 30516,
+      "content": "Compared to patents, the advantages of trade secrets are that the value of a trade secret continues until it is made public, whereas a patent is only in force for a specified time, after which others may freely copy the invention; does not require payment of fees to governmental agencies or filing paperwork; has an immediate effect; and does not require any disclosure of information to the public. The key disadvantage of a trade secret is its vulnerability to reverse engineering.",
+      "char_count": 484,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0039",
+      "article_id": "patent_960a174d",
+      "section": "== Benefits ==",
+      "heading_path": "== Benefits ==",
+      "start_char": 30511,
+      "end_char": 31362,
+      "content": "== Benefits == Primary incentives embodied in the patent system include incentives to invent in the first place; to disclose the invention once made; to invest the sums necessary to experiment, produce and market the invention; and to design around and improve upon earlier patents. Patents provide incentives for economically efficient research and development (R&D). A study conducted annually by the Institute for Prospective Technological Studies (IPTS) shows that the 2,000 largest global companies invested more than 430 billion euros in 2008 in their R&D departments. If the investments can be considered as inputs of R&D, real products and patents are the outputs. Based on these groups, a project named Corporate Invention Board, had measured and analyzed the patent portfolios to produce an original picture of their technological profiles.",
+      "char_count": 850,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0040",
+      "article_id": "patent_960a174d",
+      "section": "== Benefits ==",
+      "heading_path": "== Benefits ==",
+      "start_char": 31362,
+      "end_char": 32320,
+      "content": "Supporters of patents argue that without patent protection, R&D spending would be significantly less or eliminated altogether, limiting the possibility of technological advances or breakthroughs. Corporations would be much more conservative about the R&D investments they made, as third parties would be free to exploit any developments. The logical consequence of more efficient R&D is a more efficient national economy: An increase in patenting has proven to be linked with an increase of national income. A 2009 study on patent effects in various countries around the world finds, for instance, that a 10% increase in patenting in 1910 was correlated on average to a 9 to 11% higher level of per capita GDP in 1960. The positive effects of patenting on national income were found to be particularly strong in the U.S., Switzerland and Sweden. However, patenting is not the only factor influencing GDP growth: among others, schooling also plays a big role.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0041",
+      "article_id": "patent_960a174d",
+      "section": "== Benefits ==",
+      "heading_path": "== Benefits ==",
+      "start_char": 32321,
+      "end_char": 33187,
+      "content": "\"The patent internalizes the externality by giving the [inventor] a property right over its invention.\" In accordance with the original definition of the term \"patent\", patents are intended to facilitate and encourage disclosure of innovations into the public domain for the common good. Thus patenting can be viewed as contributing to open hardware after an embargo period (usually of 20 years). If inventors did not have the legal protection of patents, in many cases, they might prefer or tend to keep their inventions secret (e.g. keep trade secrets). Awarding patents generally makes the details of new technology publicly available, for exploitation by anyone after the patent expires, or for further improvement by other inventors. Furthermore, when a patent's term has expired, the public record ensures that the patentee's invention is not lost to humanity.",
+      "char_count": 866,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0042",
+      "article_id": "patent_960a174d",
+      "section": "== Benefits ==",
+      "heading_path": "== Benefits ==",
+      "start_char": 33188,
+      "end_char": 34186,
+      "content": "One effect of modern patent usage is that a small-time inventor, who can afford both the patenting process and the defense of the patent, can use the exclusive right status to become a licensor. This allows the inventor to accumulate capital from licensing the invention and may allow innovation to occur because he or she may choose not to manage a manufacturing buildup for the invention. Thus the inventor's time and energy can be spent on pure innovation, allowing others to concentrate on manufacturability. Another effect of modern patent usage is the social benefit(s) of technology disclosure. Although patentees usually end up not reaping benefit from their patent monopoly, the society still benefits from patent disclosures. Also patents both enable and incentivize competitors to design around (or to \"invent around\" according to R S Praveen Raj) the patented invention. This may promote healthy competition among manufacturers, resulting in gradual improvements of the technology base.",
+      "char_count": 998,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0043",
+      "article_id": "patent_960a174d",
+      "section": "== Criticism ==",
+      "heading_path": "== Criticism ==",
+      "start_char": 34188,
+      "end_char": 35155,
+      "content": "== Criticism == Legal scholars, economists, activists, policymakers, industries, and trade organizations have held differing views on patents and engaged in contentious debates on the subject. Critical perspectives emerged in the nineteenth century that were especially based on the principles of free trade. Contemporary criticisms have echoed those arguments, claiming that patents block innovation and waste resources (e.g. with patent-related overheads) that could otherwise be used productively to improve technology. These and other research findings that patents decreased innovation because of the following mechanisms: Low quality, already known or obvious patents hamper innovation and commercialization. Blocking the use of fundamental knowledge with patents creates a \"tragedy of the anticommons, where future innovations can not take place outside of a single firm in an entire field\". Patents weaken the public domain and innovation that comes from it.",
+      "char_count": 966,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0044",
+      "article_id": "patent_960a174d",
+      "section": "== Criticism ==",
+      "heading_path": "== Criticism ==",
+      "start_char": 35155,
+      "end_char": 35981,
+      "content": "Patent thickets, or \"an overlapping set of patent rights\", in particular slow innovation. Broad patents prevent companies from commercializing products and hurt innovation. In the worst case, such broad patents are held by non-practicing entities (patent trolls), which do not contribute to innovation. Enforcement by patent trolls of poor quality patents has led to criticism of the patent office as well as the system itself. For example, in 2011, United States business entities incurred $29 billion in direct costs because of patent trolls. Lawsuits brought by \"patent assertion companies\" made up 61% of all patent cases in 2012, according to the Santa Clara University School of Law. Patents apply a \"one size fits all\" model to industries with differing needs, that is especially unproductive for the software industry.",
+      "char_count": 826,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0045",
+      "article_id": "patent_960a174d",
+      "section": "== Criticism ==",
+      "heading_path": "== Criticism ==",
+      "start_char": 35982,
+      "end_char": 36943,
+      "content": "Rent-seeking by owners of pharmaceutical patents have also been a particular focus of criticism, as the high prices they enable puts life-saving drugs out of reach of many people. \"With the partial exception of the pharmaceutical industry, we just do not have clear evidence to support the assumption that patents provide significant incentives to inventive activity\". Boldrin and Levine conclude \"Our preferred policy solution is to abolish patents entirely and to find other legislative instruments, less open to lobbying and rent seeking, to foster innovation when there is clear evidence that laissez-faire undersupplies it.\" Abolishing patents may be politically challenging in some countries, however, as the primary economic theories supporting patent law hold that inventors and innovators need patents to recoup the costs associated with research, inventing, and commercializing; this reasoning is weakened if the new technologies decrease these costs.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0046",
+      "article_id": "patent_960a174d",
+      "section": "== Criticism ==",
+      "heading_path": "== Criticism ==",
+      "start_char": 36944,
+      "end_char": 37319,
+      "content": "A 2016 paper argued for substantial weakening of patents because current technologies (e.g. 3D printing, cloud computing, synthetic biology, etc.) have reduced the cost of innovation. Debates over the usefulness of patents for their primary objective are part of a larger discourse on intellectual property protection, which also reflects differing perspectives on copyright.",
+      "char_count": 375,
+      "token_estimate": 93,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0047",
+      "article_id": "patent_960a174d",
+      "section": "== = Anti-patent initiatives ==",
+      "heading_path": "== = Anti-patent initiatives ==",
+      "start_char": 37336,
+      "end_char": 38268,
+      "content": "== = Anti-patent initiatives === Patents on expensive medications are often used as examples that can highlight the inadequacy of patent-based mechanisms. One workaround solution that has been applied by South Africa in the past is passing explained domestic law that gives the state the right to import inexpensive generic versions without permission and wait for international regulations and incentive-systems to get upgraded at a later point. In 2020, multiple initiatives, including by India and South Africa, called for a waiver of TRIPS vaccine patents for accelerated deployment of COVID-19 vaccines around the world. However, no mechanisms of alternative medical research and development incentive-systems or technical details of proposed \"sharing\" after certain amounts of profit were reported and some argue that, instead of intellectual property rights, manufacturing know-how is the main barrier to expanding capacity.",
+      "char_count": 931,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0048",
+      "article_id": "patent_960a174d",
+      "section": "== = Anti-patent initiatives ==",
+      "heading_path": "== = Anti-patent initiatives ==",
+      "start_char": 38268,
+      "end_char": 39216,
+      "content": "The Patent Busting Project is an Electronic Frontier Foundation (EFF) initiative challenging patents that the organization claims are illegitimate and suppress innovation or limit online expression. The initiative launched in 2004 and involves two phases: documenting the damage caused by these patents, and submitting challenges to the United States Patent and Trademark Office (USPTO). Patent critic, Joseph Stiglitz has proposed Prizes as an alternative to patents in order to further advance solutions to global problems such as AIDS. In 2012, Stack Exchange launched Ask Patents, a forum for crowdsourcing prior art to invalidate patents. Several authors have argued for developing defensive prior art to prevent patenting based on obviousness using lists or algorithms. For example, a professor of law at the University of North Carolina School of Law, has demonstrated a method to protect DNA research, which could apply to other technology.",
+      "char_count": 948,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "patent_960a174d_c0049",
+      "article_id": "patent_960a174d",
+      "section": "== = Anti-patent initiatives ==",
+      "heading_path": "== = Anti-patent initiatives ==",
+      "start_char": 39217,
+      "end_char": 40095,
+      "content": "Chin wrote an algorithm to generate 11 million \"obvious\" nucleotide sequences to count as prior art and his algorithmic approach has already proven effective at anticipating prior art against oligonucleotide composition claims filed since his publication of the list and has been cited by the U.S. patent office a number of times. More recently, Joshua Pearce developed an open-source algorithm for identifying prior art for 3D printing materials to make such materials obvious by patent standards. As the 3-D printing community is already grappling with legal issues, this development was hotly debated in the technical press. Chin made the same algorithm-based obvious argument in DNA probes. Google and other technology companies founded the LOT Network in 2014 to combat patent assertion entities by cross-licensing patents, thereby preventing legal action by such entities.",
+      "char_count": 878,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "How can patents enable an inventor to focus on innovation rather than manufacturing?",
+        "answer": "By obtaining a patent, an inventor can use their exclusive right to become a licensor. This allows them to accumulate capital from licensing the invention, freeing them from managing the manufacturing process. Consequently, the inventor can dedicate their time and energy to pure innovation while others focus on manufacturability.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0042"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Who was granted the first patent in North America, and for what invention?",
+        "answer": "Samuel Winslow was granted the first patent in North America in 1641 by the Massachusetts General Court for a new process for making salt.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0006"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the potential reasons cited for the ongoing gender gap in patents?",
+        "answer": "The ongoing gender gap in patents is attributed to several factors, including historical barriers that prevented women from obtaining patents, the underrepresentation of women in traditionally \"patent-intensive\" fields like STEM, and potential internal bias within the patent system itself.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are the primary characteristics of a modern patent, including the general criteria for patentability and the minimum standards established by the WTO's TRIPS Agreement?",
+        "answer": "A modern patent is a form of intellectual property that grants its owner the legal right to exclude others from making, using, or selling an invention for a limited time in exchange for public disclosure. Generally, an invention must be new, useful, and non-obvious to be patentable. Under the World Trade Organization's (WTO) TRIPS Agreement, patents must be available for inventions that are new, involve an inventive step, and are capable of industrial application, with a minimum protection term of twenty years.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0000",
+          "patent_960a174d_c0001",
+          "patent_960a174d_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Trace the historical development of patent systems from the first statutory system to the establishment of the modern system that influenced the Industrial Revolution.",
+        "answer": "The first statutory patent system is considered to be the Venetian Patent Statute of 1474, which granted a 10-year period of legal protection for new and inventive devices. As Venetians emigrated, this system's principles spread to other countries. Later, the English patent system evolved into the first modern system. After the English Crown abused its power to grant monopolies in the 16th century, the Statute of Monopolies was enacted in 1624. This statute restricted the Crown's power, limited patents to original inventions for a fixed term, and became the crucial legal foundation for modern patent law and the subsequent Industrial Revolution.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0004",
+          "patent_960a174d_c0005"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Trace the development of the United States patent system from its colonial-era origins to the 1836 revision, including the specific legal standing of married women inventors.",
+        "answer": "The U.S. patent system's foundation is the English legal system. In the colonial era, inventors in the Thirteen Colonies could get patents by petitioning a colony's legislature. The first national system was created by the Patent Act of 1790. While this act used the pronoun \"she,\" married women were historically unable to obtain patents because they could not own property in their own name. The patent law was revised in 1793 and then more significantly in 1836, which instituted a more rigorous application process that included an examination system.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0006",
+          "patent_960a174d_c0007",
+          "patent_960a174d_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does the WTO's TRIPS Agreement attempt to standardize patent law, and what aspects may still vary among member countries?",
+        "answer": "The World Trade Organization's (WTO) TRIPS Agreement aims to standardize patent law by requiring member states to make patents available for any new invention that involves an inventive step and is capable of industrial application, with a minimum protection term of twenty years. Despite this, patent laws still vary widely between countries regarding the specific procedures for granting patents, the requirements placed on the patentee, the extent of the exclusive rights, and what is considered patentable subject matter.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0000",
+          "patent_960a174d_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How is the primary meaning of a patent, as a right for a new and useful invention, distinguished from other intellectual property rights that are also referred to as patents?",
+        "answer": "The primary meaning of a patent refers to the right granted for an invention that is new, useful, and non-obvious. This is distinguished from other types of intellectual property rights that are also called patents in some jurisdictions, such as design patents for industrial design rights, plant patents for plant breeders' rights, and petty or innovation patents for utility models. To clarify this distinction, the term \"utility patent\" is sometimes used, particularly in the US, to refer specifically to the primary type of patent for inventions.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0002",
+          "patent_960a174d_c0003"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Trace the establishment and key principles of the early patent systems in Venice, England, and the United States.",
+        "answer": "The first statutory patent system is considered to be the Venetian Patent Statute of 1474, which granted a 10-year period of protection for new and inventive devices. The English patent system evolved into the first modern system, with the 1624 Statute of Monopolies restricting the Crown's power to grant patents only for original inventions. This system later developed to require a complete specification of the invention's principles. In the United States, after an initial period where colonial legislatures granted patents, the first national Patent Act was passed in 1790. A major revision in 1836 was crucial as it instituted a rigorous application and examination system.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0004",
+          "patent_960a174d_c0005",
+          "patent_960a174d_c0006",
+          "patent_960a174d_c0007"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What evidence suggests a decline in innovation, and what are the various hypotheses proposed to explain this trend?",
+        "answer": "Evidence for a decline in innovation includes a decrease in the absolute number of patent families filed in most technologically advanced countries since the 1970s-1980s. This decline is even more pronounced when normalized by population, with the US, for example, having its population-normalized peak in 1915. Several hypotheses have been proposed to explain this trend, including: the increasing cost of research as easier discoveries (\"lower-hanging fruits\") have been made; decreased productivity per researcher; information overload overwhelming human processing capabilities; increasing patent litigation costs; a shift in post-industrial economies towards software, which is often protected by copyrights or trade secrets rather than patents; and specific court decisions that have limited the eligibility of business method, biological, and software patents.",
+        "related_chunk_ids": [
+          "patent_960a174d_c0009",
+          "patent_960a174d_c0010",
+          "patent_960a174d_c0011",
+          "patent_960a174d_c0012"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T13:32:47.177Z",
+    "content_format": "markdown",
+    "total_chunks": 50,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,595 @@
+{
+  "article": {
+    "id": "testdrivendevelopmen_b98d6d67",
+    "title": "Test-driven development",
+    "url": "https://en.wikipedia.org/wiki/Test-driven_development",
+    "lang": "en",
+    "created_at": "2025-07-30T10:34:05.913938",
+    "content": "---\nid: testdrivendevelopmen_b98d6d67\nurl: https://en.wikipedia.org/wiki/Test-driven_development\ntitle: Test-driven development\nlang: en\ncreated_at: '2025-07-30T10:30:49.109719'\nchecksum: 16a4543e92e2a086706d7dc3a1bf03910423b6e95e57547fd6e5cf44191cce51\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4505\n  char_count: 28717\n  num_chunks: 37\n  original_chunks: 49\n  filtered_out: 12\n  num_sections: 0\n---\nTest-driven development (TDD) is a way of writing code that involves writing an automated unit-level test case that fails, then writing just enough code to make the test pass, then refactoring both the test code and the production code, then repeating with another new test case. Alternative approaches to writing automated tests is to write all of the production code before starting on the test code or to write all of the test code before starting on the production code. With TsDD, both are written together, therefore shortening debugging time necessities. TDD is related to the test-first programming concepts of extreme programming, begun in 1999, but more recently has created more general interest in its own right. Programmers also apply the concept to improving and debugging legacy code developed with older techniques. == History == Software engineer Kent Beck, who is credited with having developed or \"rediscovered\" the technique, stated in 2003 that TDD encourages simple designs and inspires confidence. The original description of TDD was in an ancient book about programming. It said you take the input tape, manually type in the output tape you expect, then program until the actual output tape matches the expected output. After I'd written the first xUnit framework in Smalltalk I remembered reading this and tried it out. That was the origin of TDD for me. When describing TDD to older programmers, I often hear, \"Of course. How else could you program?\" Therefore I refer to my role as \"rediscovering\" TDD. == Coding cycle == The TDD steps vary somewhat by author in count and description, but are generally as follows. These are based on the book Test-Driven Development by Example, and Kent Beck's Canon TDD article. 1. List scenarios for the new feature List the expected variants in the new behavior. “There’s the basic case & then what-if this service times out & what-if the key isn’t in the database yet &…” The developer can discover these specifications by asking about use cases and user stories. A key benefit of TDD is that it makes the developer focus on requirements before writing code. This is in contrast with the usual practice, where unit tests are only written after code. 2. Write a test for an item on the list Write an automated test that would pass if the variant in the new behavior is met. 3. Run all tests. The new test should fail – for expected reasons This shows that new code is actually needed for the desired feature. It validates that the test harness is working correctly. It rules out the possibility that the new test is flawed and will always pass. 4. Write the simplest code that passes the new test Inelegant code and hard coding is acceptable. The code will be honed in Step 6. No code should be added beyond the tested functionality. 5. All tests should now pass If any fail, fix failing tests with minimal changes until all pass. 6. Refactor as needed while ensuring all tests continue to pass Code is refactored for readability and maintainability. In particular, hard-coded test data should be removed from the production code. Running the test suite after each refactor ensures that no existing functionality is broken. Examples of refactoring: moving code to where it most logically belongs removing duplicate code making names self-documenting splitting methods into smaller pieces re-arranging inheritance hierarchies Repeat Repeat the process, starting at step 2, with each test on the list until all tests are implemented and passing. Each tests should be small and commits made often. If new code fails some tests, the programmer can undo or revert rather than debug excessively. When using external libraries, it is important not to write tests that are so small as to effectively test merely the library itself, unless there is some reason to believe that the library is buggy or not feature-rich enough to serve all the needs of the software under development. == Test-driven work == TDD has been adopted outside of software development, in both product and service teams, as test-driven work. For testing to be successful, it needs to be practiced at the micro and macro levels. Every method in a class, every input data value, log message, and error code, amongst other data points, need to be tested. Similar to TDD, non-software teams develop quality control (QC) checks (usually manual tests rather than automated tests) for each aspect of the work prior to commencing. These QC checks are then used to inform the design and validate the associated outcomes. The six steps of the TDD sequence are applied with minor semantic changes: \"Add a check\" replaces \"Add a test\" \"Run all checks\" replaces \"Run all tests\" \"Do the work\" replaces \"Write some code\" \"Run all checks\" replaces \"Run tests\" \"Clean up the work\" replaces \"Refactor code\" \"Repeat\" == Development style == There are various aspects to using test-driven development, for example the principles of \"keep it simple, stupid\" (KISS) and \"You aren't gonna need it\" (YAGNI). By focusing on writing only the code necessary to pass tests, designs can often be cleaner and clearer than is achieved by other methods. In Test-Driven Development by Example, Kent Beck also suggests the principle \"Fake it till you make it\". To achieve some advanced design concept such as a design pattern, tests are written that generate that design. The code may remain simpler than the target pattern, but still pass all required tests. This can be unsettling at first but it allows the developer to focus only on what is important. Writing the tests first: The tests should be written before the functionality that is to be tested. This has been claimed to have many benefits. It helps ensure that the application is written for testability, as the developers must consider how to test the application from the outset rather than adding it later. It also ensures that tests for every feature gets written. Additionally, writing the tests first leads to a deeper and earlier understanding of the product requirements, ensures the effectiveness of the test code, and maintains a continual focus on software quality. When writing feature-first code, there is a tendency by developers and organizations to push the developer on to the next feature, even neglecting testing entirely. The first TDD test might not even compile at first, because the classes and methods it requires may not yet exist. Nevertheless, that first test functions as the beginning of an executable specification. Each test case fails initially: This ensures that the test really works and can catch an error. Once this is shown, the underlying functionality can be implemented. This has led to the \"test-driven development mantra\", which is \"red/green/refactor\", where red means fail and green means pass. Test-driven development constantly repeats the steps of adding test cases that fail, passing them, and refactoring. Receiving the expected test results at each stage reinforces the developer's mental model of the code, boosts confidence and increases productivity. === Code visibility === In test-driven development, writing tests before implementation raises questions about testing private methods versus testing only through public interfaces. This choice affects the design of both test code and production code. === Test isolation === Test-driven development relies primarily on unit tests for its rapid red-green-refactor cycle. These tests execute quickly by avoiding process boundaries, network connections, or external dependencies. While TDD practitioners also write integration tests to verify component interactions, these slower tests are kept separate from the more frequent unit test runs. Testing multiple integrated modules together also makes it more difficult to identify the source of failures. When code under development relies on external dependencies, TDD encourages the use of test doubles to maintain fast, isolated unit tests. The typical approach involves using interfaces to separate external dependencies and implementing test doubles for testing purposes. Since test doubles don't prove the connection to real external components, TDD practitioners supplement unit tests with integration testing at appropriate levels. To keep execution faster and more reliable, testing is maximized at the unit level while minimizing slower tests at higher levels. === Keep the unit small === For TDD, a unit is most commonly defined as a class, or a group of related functions often called a module. Keeping units relatively small is claimed to provide critical benefits, including: Reduced debugging effort – When test failures are detected, having smaller units aids in tracking down errors. Self-documenting tests – Small test cases are easier to read and to understand. Advanced practices of test-driven development can lead to acceptance test–driven development (ATDD) and specification by example where the criteria specified by the customer are automated into acceptance tests, which then drive the traditional unit test-driven development (UTDD) process. This process ensures the customer has an automated mechanism to decide whether the software meets their requirements. With ATDD, the development team now has a specific target to satisfy – the acceptance tests – which keeps them continuously focused on what the customer really wants from each user story. == Best practices == === Test structure === Effective layout of a test case ensures all required actions are completed, improves the readability of the test case, and smooths the flow of execution. Consistent structure helps in building a self-documenting test case. A commonly applied structure for test cases has (1) setup, (2) execution, (3) validation, and (4) cleanup. Setup: Put the Unit Under Test (UUT) or the overall test system in the state needed to run the test. Execution: Trigger/drive the UUT to perform the target behavior and capture all output, such as return values and output parameters. This step is usually very simple. Validation: Ensure the results of the test are correct. These results may include explicit outputs captured during execution or state changes in the UUT. Cleanup: Restore the UUT or the overall test system to the pre-test state. This restoration permits another test to execute immediately after this one. In some cases, in order to preserve the information for possible test failure analysis, the cleanup should be starting the test just before the test's setup run. === Individual best practices === Some best practices that an individual could follow would be to separate common set-up and tear-down logic into test support services utilized by the appropriate test cases, to keep each test oracle focused on only the results necessary to validate its test, and to design time-related tests to allow tolerance for execution in non-real time operating systems. The common practice of allowing a 5-10 percent margin for late execution reduces the potential number of false negatives in test execution. It is also suggested to treat test code with the same respect as production code. Test code must work correctly for both positive and negative cases, last a long time, and be readable and maintainable. Teams can get together and review tests and test practices to share effective techniques and catch bad habits. === Practices to avoid, or \"anti-patterns\" === Having test cases depend on system state manipulated from previously executed test cases (i.e., you should always start a unit test from a known and pre-configured state). Dependencies between test cases. A test suite where test cases are dependent upon each other is brittle and complex. Execution order should not be presumed. Basic refactoring of the initial test cases or structure of the UUT causes a spiral of increasingly pervasive impacts in associated tests. Interdependent tests. Interdependent tests can cause cascading false negatives. A failure in an early test case breaks a later test case even if no actual fault exists in the UUT, increasing defect analysis and debug efforts. Testing precise execution, timing or performance. Building \"all-knowing oracles\". An oracle that inspects more than necessary is more expensive and brittle over time. This very common error is dangerous because it causes a subtle but pervasive time sink across the complex project. Testing implementation details. Slow running tests. == Comparison and demarcation == === TDD and ATDD === Test-driven development is related to, but different from acceptance test–driven development (ATDD). TDD is primarily a developer's tool to help create well-written unit of code (function, class, or module) that correctly performs a set of operations. ATDD is a communication tool between the customer, developer, and tester to ensure that the requirements are well-defined. TDD requires test automation. ATDD does not, although automation helps with regression testing. Tests used in TDD can often be derived from ATDD tests, since the code units implement some portion of a requirement. ATDD tests should be readable by the customer. TDD tests do not need to be. === TDD and BDD === BDD (behavior-driven development) combines practices from TDD and from ATDD. It includes the practice of writing tests first, but focuses on tests which describe behavior, rather than tests which test a unit of implementation. Tools such as JBehave, Cucumber, Mspec and Specflow provide syntaxes which allow product owners, developers and test engineers to define together the behaviors which can then be translated into automated tests. == Software for TDD == There are many testing frameworks and tools that are useful in TDD. === xUnit frameworks === Developers may use computer-assisted testing frameworks, commonly collectively named xUnit (which are derived from SUnit, created in 1998), to create and automatically run the test cases. xUnit frameworks provide assertion-style test validation capabilities and result reporting. These capabilities are critical for automation as they move the burden of execution validation from an independent post-processing activity to one that is included in the test execution. The execution framework provided by these test frameworks allows for the automatic execution of all system test cases or various subsets along with other features. === TAP results === Testing frameworks may accept unit test output in the language-agnostic Test Anything Protocol created in 1987. == TDD for complex systems == Exercising TDD on large, challenging systems requires a modular architecture, well-defined components with published interfaces, and disciplined system layering with maximization of platform independence. These proven practices yield increased testability and facilitate the application of build and test automation. === Designing for testability === Complex systems require an architecture that meets a range of requirements. A key subset of these requirements includes support for the complete and effective testing of the system. Effective modular design yields components that share traits essential for effective TDD. High Cohesion ensures each unit provides a set of related capabilities and makes the tests of those capabilities easier to maintain. Low Coupling allows each unit to be effectively tested in isolation. Published Interfaces restrict Component access and serve as contact points for tests, facilitating test creation and ensuring the highest fidelity between test and production unit configuration. A key technique for building effective modular architecture is Scenario Modeling where a set of sequence charts is constructed, each one focusing on a single system-level execution scenario. The Scenario Model provides an excellent vehicle for creating the strategy of interactions between components in response to a specific stimulus. Each of these Scenario Models serves as a rich set of requirements for the services or functions that a component must provide, and it also dictates the order in which these components and services interact together. Scenario modeling can greatly facilitate the construction of TDD tests for a complex system. === Managing tests for large teams === In a larger system, the impact of poor component quality is magnified by the complexity of interactions. This magnification makes the benefits of TDD accrue even faster in the context of larger projects. However, the complexity of the total population of tests can become a problem in itself, eroding potential gains. It sounds simple, but a key initial step is to recognize that test code is also important software and should be produced and maintained with the same rigor as the production code. Creating and managing the architecture of test software within a complex system is just as important as the core product architecture. Test drivers interact with the UUT, test doubles and the unit test framework. == Advantages and Disadvantages == === Advantages === Test Driven Development (TDD) is a software development approach where tests are written before the actual code. It offers several advantages: Comprehensive Test Coverage: TDD ensures that all new code is covered by at least one test, leading to more robust software. Enhanced Confidence in Code: Developers gain greater confidence in the code's reliability and functionality. Enhanced Confidence in Tests: As the tests are known to be failing without the proper implementation, we know that the tests actually tests the implementation correctly. Well-Documented Code: The process naturally results in well-documented code, as each test clarifies the purpose of the code it tests. Requirement Clarity: TDD encourages a clear understanding of requirements before coding begins. Facilitates Continuous Integration: It integrates well with continuous integration processes, allowing for frequent code updates and testing. Boosts Productivity: Many developers find that TDD increases their productivity. Reinforces Code Mental Model: TDD helps in building a strong mental model of the code's structure and behavior. Emphasis on Design and Functionality: It encourages a focus on the design, interface, and overall functionality of the program. Reduces Need for Debugging: By catching issues early in the development process, TDD reduces the need for extensive debugging later. System Stability: Applications developed with TDD tend to be more stable and less prone to bugs. === Disadvantages === However, TDD is not without its drawbacks: Increased Code Volume: Implementing TDD can result in a larger codebase as tests add to the total amount of code written. False Security from Tests: A large number of passing tests can sometimes give a misleading sense of security regarding the code's robustness. Maintenance Overheads: Maintaining a large suite of tests can add overhead to the development process. Time-Consuming Test Processes: Writing and maintaining tests can be time-consuming. Testing Environment Set-Up: TDD requires setting up and maintaining a suitable testing environment. Learning Curve: It takes time and effort to become proficient in TDD practices. Overcomplication: Designing code to cater for complex tests via TDD can lead to code that is more complicated than necessary. Neglect of Overall Design: Focusing too narrowly on passing tests can sometimes lead to neglect of the bigger picture in software design. === Benefits === A 2005 study found that using TDD meant writing more tests and, in turn, programmers who wrote more tests tended to be more productive. Hypotheses relating to code quality and a more direct correlation between TDD and productivity were inconclusive. Programmers using pure TDD on new (\"greenfield\") projects reported they only rarely felt the need to invoke a debugger. Used in conjunction with a version control system, when tests fail unexpectedly, reverting the code to the last version that passed all tests may often be more productive than debugging. Test-driven development offers more than just simple validation of correctness, but can also drive the design of a program. By focusing on the test cases first, one must imagine how the functionality is used by clients (in the first case, the test cases). So, the programmer is concerned with the interface before the implementation. This benefit is complementary to design by contract as it approaches code through test cases rather than through mathematical assertions or preconceptions. Test-driven development offers the ability to take small steps when required. It allows a programmer to focus on the task at hand as the first goal is to make the test pass. Exceptional cases and error handling are not considered initially, and tests to create these extraneous circumstances are implemented separately. Test-driven development ensures in this way that all written code is covered by at least one test. This gives the programming team, and subsequent users, a greater level of confidence in the code. While it is true that more code is required with TDD than without TDD because of the unit test code, the total code implementation time could be shorter based on a model by Müller and Padberg. Large numbers of tests help to limit the number of defects in the code. The early and frequent nature of the testing helps to catch defects early in the development cycle, preventing them from becoming endemic and expensive problems. Eliminating defects early in the process usually avoids lengthy and tedious debugging later in the project. TDD can lead to more modularized, flexible, and extensible code. This effect often comes about because the methodology requires that the developers think of the software in terms of small units that can be written and tested independently and integrated together later. This leads to smaller, more focused classes, looser coupling, and cleaner interfaces. The use of the mock object design pattern also contributes to the overall modularization of the code because this pattern requires that the code be written so that modules can be switched easily between mock versions for unit testing and \"real\" versions for deployment. Because no more code is written than necessary to pass a failing test case, automated tests tend to cover every code path. For example, for a TDD developer to add an else branch to an existing if statement, the developer would first have to write a failing test case that motivates the branch. As a result, the automated tests resulting from TDD tend to be very thorough: they detect any unexpected changes in the code's behaviour. This detects problems that can arise where a change later in the development cycle unexpectedly alters other functionality. Madeyski provided empirical evidence (via a series of laboratory experiments with over 200 developers) regarding the superiority of the TDD practice over the traditional Test-Last approach or testing for correctness approach, with respect to the lower coupling between objects (CBO). The mean effect size represents a medium (but close to large) effect on the basis of meta-analysis of the performed experiments which is a substantial finding. It suggests a better modularization (i.e., a more modular design), easier reuse and testing of the developed software products due to the TDD programming practice. Madeyski also measured the effect of the TDD practice on unit tests using branch coverage (BC) and mutation score indicator (MSI), which are indicators of the thoroughness and the fault detection effectiveness of unit tests, respectively. The effect size of TDD on branch coverage was medium in size and therefore is considered substantive effect. These findings have been subsequently confirmed by further, smaller experimental evaluations of TDD. === Psychological benefits to programmer === Increased Confidence: TDD allows programmers to make changes or add new features with confidence. Knowing that the code is constantly tested reduces the fear of breaking existing functionality. This safety net can encourage more innovative and creative approaches to problem-solving. Reduced Fear of Change, Reduced Stress: In traditional development, changing existing code can be daunting due to the risk of introducing bugs. TDD, with its comprehensive test suite, reduces this fear, as tests will immediately reveal any problems caused by changes. Knowing that the codebase has a safety net of tests can reduce stress and anxiety associated with programming. Developers might feel more relaxed and open to experimenting and refactoring. Improved Focus: Writing tests first helps programmers concentrate on requirements and design before writing the code. This focus can lead to clearer, more purposeful coding, as the developer is always aware of the goal they are trying to achieve. Sense of Achievement and Job Satisfaction: Passing tests can provide a quick, regular sense of accomplishment, boosting morale. This can be particularly motivating in long-term projects where the end goal might seem distant. The combination of all these factors can lead to increased job satisfaction. When developers feel confident, focused, and part of a collaborative team, their overall job satisfaction can significantly improve. === Limitations === Test-driven development does not perform sufficient testing in situations where full functional tests are required to determine success or failure, due to extensive use of unit tests. Examples of these are user interfaces, programs that work with databases, and some that depend on specific network configurations. TDD encourages developers to put the minimum amount of code into such modules and to maximize the logic that is in testable library code, using fakes and mocks to represent the outside world. Management support is essential. Without the entire organization believing that test-driven development is going to improve the product, management may feel that time spent writing tests is wasted. Unit tests created in a test-driven development environment are typically created by the developer who is writing the code being tested. Therefore, the tests may share blind spots with the code: if, for example, a developer does not realize that certain input parameters must be checked, most likely neither the test nor the code will verify those parameters. Another example: if the developer misinterprets the requirements for the module they are developing, the code and the unit tests they write will both be wrong in the same way. Therefore, the tests will pass, giving a false sense of correctness. A high number of passing unit tests may bring a false sense of security, resulting in fewer additional software testing activities, such as integration testing and compliance testing. Tests become part of the maintenance overhead of a project. Badly written tests, for example ones that include hard-coded error strings, are themselves prone to failure, and they are expensive to maintain. This is especially the case with fragile tests. There is a risk that tests that regularly generate false failures will be ignored, so that when a real failure occurs, it may not be detected. It is possible to write tests for low and easy maintenance, for example by the reuse of error strings, and this should be a goal during the code refactoring phase described above. Writing and maintaining an excessive number of tests costs time. Also, more-flexible modules (with limited tests) might accept new requirements without the need for changing the tests. For those reasons, testing for only extreme conditions, or a small sample of data, can be easier to adjust than a set of highly detailed tests. The level of coverage and testing detail achieved during repeated TDD cycles cannot easily be re-created at a later date. Therefore, these original, or early, tests become increasingly precious as time goes by. The tactic is to fix it early. Also, if a poor architecture, a poor design, or a poor testing strategy leads to a late change that makes dozens of existing tests fail, then it is important that they are individually fixed. Merely deleting, disabling or rashly altering them can lead to undetectable holes in the test coverage. == Conference == First TDD Conference was held during July 2021. Conferences were recorded on YouTube == See also == == References == == External links == TestDrivenDevelopment on WikiWikiWeb Bertrand Meyer (September 2004). \"Test or spec? Test and spec? Test from spec!\". Archived from the original on 2005-02-09. Microsoft Visual Studio Team Test from a TDD approach Write Maintainable Unit Tests That Will Save You Time And Tears Improving Application Quality Using Test-Driven Development (TDD) Test Driven Development Conference"
+  },
+  "chunks": [
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0000",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 832,
+      "content": "Test-driven development (TDD) is a way of writing code that involves writing an automated unit-level test case that fails, then writing just enough code to make the test pass, then refactoring both the test code and the production code, then repeating with another new test case. Alternative approaches to writing automated tests is to write all of the production code before starting on the test code or to write all of the test code before starting on the production code. With TsDD, both are written together, therefore shortening debugging time necessities. TDD is related to the test-first programming concepts of extreme programming, begun in 1999, but more recently has created more general interest in its own right. Programmers also apply the concept to improving and debugging legacy code developed with older techniques.",
+      "char_count": 831,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0001",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 845,
+      "end_char": 1530,
+      "content": "== History == Software engineer Kent Beck, who is credited with having developed or \"rediscovered\" the technique, stated in 2003 that TDD encourages simple designs and inspires confidence. The original description of TDD was in an ancient book about programming. It said you take the input tape, manually type in the output tape you expect, then program until the actual output tape matches the expected output. After I'd written the first xUnit framework in Smalltalk I remembered reading this and tried it out. That was the origin of TDD for me. When describing TDD to older programmers, I often hear, \"Of course. How else could you program?\" Therefore I refer to my role as \"rediscovering\" TDD.",
+      "char_count": 697,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0002",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== Coding cycle ==",
+      "heading_path": "== Coding cycle ==",
+      "start_char": 1548,
+      "end_char": 2492,
+      "content": "== Coding cycle == The TDD steps vary somewhat by author in count and description, but are generally as follows. These are based on the book Test-Driven Development by Example, and Kent Beck's Canon TDD article. 1. List scenarios for the new feature List the expected variants in the new behavior. “There’s the basic case & then what-if this service times out & what-if the key isn’t in the database yet &…” The developer can discover these specifications by asking about use cases and user stories. A key benefit of TDD is that it makes the developer focus on requirements before writing code. This is in contrast with the usual practice, where unit tests are only written after code. 2. Write a test for an item on the list Write an automated test that would pass if the variant in the new behavior is met. 3. Run all tests. The new test should fail – for expected reasons This shows that new code is actually needed for the desired feature.",
+      "char_count": 943,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0003",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== Coding cycle ==",
+      "heading_path": "== Coding cycle ==",
+      "start_char": 2492,
+      "end_char": 3206,
+      "content": "It validates that the test harness is working correctly. It rules out the possibility that the new test is flawed and will always pass. 4. Write the simplest code that passes the new test Inelegant code and hard coding is acceptable. The code will be honed in Step 6. No code should be added beyond the tested functionality. 5. All tests should now pass If any fail, fix failing tests with minimal changes until all pass. 6. Refactor as needed while ensuring all tests continue to pass Code is refactored for readability and maintainability. In particular, hard-coded test data should be removed from the production code. Running the test suite after each refactor ensures that no existing functionality is broken.",
+      "char_count": 714,
+      "token_estimate": 178,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0004",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== Coding cycle ==",
+      "heading_path": "== Coding cycle ==",
+      "start_char": 3207,
+      "end_char": 3956,
+      "content": "Examples of refactoring: moving code to where it most logically belongs removing duplicate code making names self-documenting splitting methods into smaller pieces re-arranging inheritance hierarchies Repeat Repeat the process, starting at step 2, with each test on the list until all tests are implemented and passing. Each tests should be small and commits made often. If new code fails some tests, the programmer can undo or revert rather than debug excessively. When using external libraries, it is important not to write tests that are so small as to effectively test merely the library itself, unless there is some reason to believe that the library is buggy or not feature-rich enough to serve all the needs of the software under development.",
+      "char_count": 749,
+      "token_estimate": 187,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0005",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== Test-driven work ==",
+      "heading_path": "== Test-driven work ==",
+      "start_char": 3961,
+      "end_char": 4828,
+      "content": "== Test-driven work == TDD has been adopted outside of software development, in both product and service teams, as test-driven work. For testing to be successful, it needs to be practiced at the micro and macro levels. Every method in a class, every input data value, log message, and error code, amongst other data points, need to be tested. Similar to TDD, non-software teams develop quality control (QC) checks (usually manual tests rather than automated tests) for each aspect of the work prior to commencing. These QC checks are then used to inform the design and validate the associated outcomes. The six steps of the TDD sequence are applied with minor semantic changes: \"Add a check\" replaces \"Add a test\" \"Run all checks\" replaces \"Run all tests\" \"Do the work\" replaces \"Write some code\" \"Run all checks\" replaces \"Run tests\" \"Clean up the work\" replaces \"Refactor code\" \"Repeat\"",
+      "char_count": 888,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0006",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== Development style ==",
+      "heading_path": "== Development style ==",
+      "start_char": 4851,
+      "end_char": 5720,
+      "content": "== Development style == There are various aspects to using test-driven development, for example the principles of \"keep it simple, stupid\" (KISS) and \"You aren't gonna need it\" (YAGNI). By focusing on writing only the code necessary to pass tests, designs can often be cleaner and clearer than is achieved by other methods. In Test-Driven Development by Example, Kent Beck also suggests the principle \"Fake it till you make it\". To achieve some advanced design concept such as a design pattern, tests are written that generate that design. The code may remain simpler than the target pattern, but still pass all required tests. This can be unsettling at first but it allows the developer to focus only on what is important. Writing the tests first: The tests should be written before the functionality that is to be tested. This has been claimed to have many benefits.",
+      "char_count": 868,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0007",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== Development style ==",
+      "heading_path": "== Development style ==",
+      "start_char": 5720,
+      "end_char": 6690,
+      "content": "It helps ensure that the application is written for testability, as the developers must consider how to test the application from the outset rather than adding it later. It also ensures that tests for every feature gets written. Additionally, writing the tests first leads to a deeper and earlier understanding of the product requirements, ensures the effectiveness of the test code, and maintains a continual focus on software quality. When writing feature-first code, there is a tendency by developers and organizations to push the developer on to the next feature, even neglecting testing entirely. The first TDD test might not even compile at first, because the classes and methods it requires may not yet exist. Nevertheless, that first test functions as the beginning of an executable specification. Each test case fails initially: This ensures that the test really works and can catch an error. Once this is shown, the underlying functionality can be implemented.",
+      "char_count": 970,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0008",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== Development style ==",
+      "heading_path": "== Development style ==",
+      "start_char": 6691,
+      "end_char": 7083,
+      "content": "This has led to the \"test-driven development mantra\", which is \"red/green/refactor\", where red means fail and green means pass. Test-driven development constantly repeats the steps of adding test cases that fail, passing them, and refactoring. Receiving the expected test results at each stage reinforces the developer's mental model of the code, boosts confidence and increases productivity.",
+      "char_count": 392,
+      "token_estimate": 98,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0009",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Code visibility ==",
+      "heading_path": "== = Code visibility ==",
+      "start_char": 7084,
+      "end_char": 7314,
+      "content": "== = Code visibility === In test-driven development, writing tests before implementation raises questions about testing private methods versus testing only through public interfaces. This choice affects the design of both test code and production code.",
+      "char_count": 252,
+      "token_estimate": 63,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0010",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Test isolation ==",
+      "heading_path": "== = Test isolation ==",
+      "start_char": 7336,
+      "end_char": 8270,
+      "content": "== = Test isolation === Test-driven development relies primarily on unit tests for its rapid red-green-refactor cycle. These tests execute quickly by avoiding process boundaries, network connections, or external dependencies. While TDD practitioners also write integration tests to verify component interactions, these slower tests are kept separate from the more frequent unit test runs. Testing multiple integrated modules together also makes it more difficult to identify the source of failures. When code under development relies on external dependencies, TDD encourages the use of test doubles to maintain fast, isolated unit tests. The typical approach involves using interfaces to separate external dependencies and implementing test doubles for testing purposes. Since test doubles don't prove the connection to real external components, TDD practitioners supplement unit tests with integration testing at appropriate levels.",
+      "char_count": 933,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0011",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Keep the unit small ==",
+      "heading_path": "== = Keep the unit small ==",
+      "start_char": 8406,
+      "end_char": 9224,
+      "content": "== = Keep the unit small === For TDD, a unit is most commonly defined as a class, or a group of related functions often called a module. Keeping units relatively small is claimed to provide critical benefits, including: Reduced debugging effort – When test failures are detected, having smaller units aids in tracking down errors. Self-documenting tests – Small test cases are easier to read and to understand. Advanced practices of test-driven development can lead to acceptance test–driven development (ATDD) and specification by example where the criteria specified by the customer are automated into acceptance tests, which then drive the traditional unit test-driven development (UTDD) process. This process ensures the customer has an automated mechanism to decide whether the software meets their requirements.",
+      "char_count": 817,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0012",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Keep the unit small ==",
+      "heading_path": "== = Keep the unit small ==",
+      "start_char": 9224,
+      "end_char": 9411,
+      "content": "With ATDD, the development team now has a specific target to satisfy – the acceptance tests – which keeps them continuously focused on what the customer really wants from each user story.",
+      "char_count": 187,
+      "token_estimate": 46,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0013",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Test structure ==",
+      "heading_path": "== = Test structure ==",
+      "start_char": 9428,
+      "end_char": 10356,
+      "content": "== = Test structure === Effective layout of a test case ensures all required actions are completed, improves the readability of the test case, and smooths the flow of execution. Consistent structure helps in building a self-documenting test case. A commonly applied structure for test cases has (1) setup, (2) execution, (3) validation, and (4) cleanup. Setup: Put the Unit Under Test (UUT) or the overall test system in the state needed to run the test. Execution: Trigger/drive the UUT to perform the target behavior and capture all output, such as return values and output parameters. This step is usually very simple. Validation: Ensure the results of the test are correct. These results may include explicit outputs captured during execution or state changes in the UUT. Cleanup: Restore the UUT or the overall test system to the pre-test state. This restoration permits another test to execute immediately after this one.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0014",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Individual best practices ==",
+      "heading_path": "== = Individual best practices ==",
+      "start_char": 10529,
+      "end_char": 11345,
+      "content": "== = Individual best practices === Some best practices that an individual could follow would be to separate common set-up and tear-down logic into test support services utilized by the appropriate test cases, to keep each test oracle focused on only the results necessary to validate its test, and to design time-related tests to allow tolerance for execution in non-real time operating systems. The common practice of allowing a 5-10 percent margin for late execution reduces the potential number of false negatives in test execution. It is also suggested to treat test code with the same respect as production code. Test code must work correctly for both positive and negative cases, last a long time, and be readable and maintainable. Teams can get together and review tests and test practices to share effective techniques and catch bad habits.",
+      "char_count": 848,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0015",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Practices to avoid, or \"anti-patterns\" ==",
+      "heading_path": "== = Practices to avoid, or \"anti-patterns\" ==",
+      "start_char": 11391,
+      "end_char": 12300,
+      "content": "== = Practices to avoid, or \"anti-patterns\" === Having test cases depend on system state manipulated from previously executed test cases (i.e., you should always start a unit test from a known and pre-configured state). Dependencies between test cases. A test suite where test cases are dependent upon each other is brittle and complex. Execution order should not be presumed. Basic refactoring of the initial test cases or structure of the UUT causes a spiral of increasingly pervasive impacts in associated tests. Interdependent tests. Interdependent tests can cause cascading false negatives. A failure in an early test case breaks a later test case even if no actual fault exists in the UUT, increasing defect analysis and debug efforts. Testing precise execution, timing or performance. Building \"all-knowing oracles\". An oracle that inspects more than necessary is more expensive and brittle over time.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0016",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = TDD and ATDD ==",
+      "heading_path": "== = TDD and ATDD ==",
+      "start_char": 12474,
+      "end_char": 13141,
+      "content": "== = TDD and ATDD === Test-driven development is related to, but different from acceptance test–driven development (ATDD). TDD is primarily a developer's tool to help create well-written unit of code (function, class, or module) that correctly performs a set of operations. ATDD is a communication tool between the customer, developer, and tester to ensure that the requirements are well-defined. TDD requires test automation. ATDD does not, although automation helps with regression testing. Tests used in TDD can often be derived from ATDD tests, since the code units implement some portion of a requirement. ATDD tests should be readable by the customer. TDD tests do not need to be.",
+      "char_count": 686,
+      "token_estimate": 171,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0017",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = TDD and BDD ==",
+      "heading_path": "== = TDD and BDD ==",
+      "start_char": 13160,
+      "end_char": 13600,
+      "content": "== = TDD and BDD === BDD (behavior-driven development) combines practices from TDD and from ATDD. It includes the practice of writing tests first, but focuses on tests which describe behavior, rather than tests which test a unit of implementation. Tools such as JBehave, Cucumber, Mspec and Specflow provide syntaxes which allow product owners, developers and test engineers to define together the behaviors which can then be translated into automated tests.",
+      "char_count": 458,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0018",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = xUnit frameworks ==",
+      "heading_path": "== = xUnit frameworks ==",
+      "start_char": 13715,
+      "end_char": 14348,
+      "content": "== = xUnit frameworks === Developers may use computer-assisted testing frameworks, commonly collectively named xUnit (which are derived from SUnit, created in 1998), to create and automatically run the test cases. xUnit frameworks provide assertion-style test validation capabilities and result reporting. These capabilities are critical for automation as they move the burden of execution validation from an independent post-processing activity to one that is included in the test execution. The execution framework provided by these test frameworks allows for the automatic execution of all system test cases or various subsets along with other features.",
+      "char_count": 656,
+      "token_estimate": 164,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0019",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== TDD for complex systems ==",
+      "heading_path": "== TDD for complex systems ==",
+      "start_char": 14510,
+      "end_char": 14828,
+      "content": "== TDD for complex systems == Exercising TDD on large, challenging systems requires a modular architecture, well-defined components with published interfaces, and disciplined system layering with maximization of platform independence. These proven practices yield increased testability and facilitate the application of build and test automation.",
+      "char_count": 346,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0020",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Designing for testability ==",
+      "heading_path": "== = Designing for testability ==",
+      "start_char": 14861,
+      "end_char": 15756,
+      "content": "== = Designing for testability === Complex systems require an architecture that meets a range of requirements. A key subset of these requirements includes support for the complete and effective testing of the system. Effective modular design yields components that share traits essential for effective TDD. High Cohesion ensures each unit provides a set of related capabilities and makes the tests of those capabilities easier to maintain. Low Coupling allows each unit to be effectively tested in isolation. Published Interfaces restrict Component access and serve as contact points for tests, facilitating test creation and ensuring the highest fidelity between test and production unit configuration. A key technique for building effective modular architecture is Scenario Modeling where a set of sequence charts is constructed, each one focusing on a single system-level execution scenario.",
+      "char_count": 894,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0021",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Designing for testability ==",
+      "heading_path": "== = Designing for testability ==",
+      "start_char": 15756,
+      "end_char": 16211,
+      "content": "The Scenario Model provides an excellent vehicle for creating the strategy of interactions between components in response to a specific stimulus. Each of these Scenario Models serves as a rich set of requirements for the services or functions that a component must provide, and it also dictates the order in which these components and services interact together. Scenario modeling can greatly facilitate the construction of TDD tests for a complex system.",
+      "char_count": 455,
+      "token_estimate": 113,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0022",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Managing tests for large teams ==",
+      "heading_path": "== = Managing tests for large teams ==",
+      "start_char": 16217,
+      "end_char": 16931,
+      "content": "== = Managing tests for large teams === In a larger system, the impact of poor component quality is magnified by the complexity of interactions. This magnification makes the benefits of TDD accrue even faster in the context of larger projects. However, the complexity of the total population of tests can become a problem in itself, eroding potential gains. It sounds simple, but a key initial step is to recognize that test code is also important software and should be produced and maintained with the same rigor as the production code. Creating and managing the architecture of test software within a complex system is just as important as the core product architecture. Test drivers interact with the UUT, test doubles and the unit test framework.",
+      "char_count": 751,
+      "token_estimate": 187,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0023",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Advantages ==",
+      "heading_path": "== = Advantages ==",
+      "start_char": 16984,
+      "end_char": 17923,
+      "content": "== = Advantages === Test Driven Development (TDD) is a software development approach where tests are written before the actual code. It offers several advantages: Comprehensive Test Coverage: TDD ensures that all new code is covered by at least one test, leading to more robust software. Enhanced Confidence in Code: Developers gain greater confidence in the code's reliability and functionality. Enhanced Confidence in Tests: As the tests are known to be failing without the proper implementation, we know that the tests actually tests the implementation correctly. Well-Documented Code: The process naturally results in well-documented code, as each test clarifies the purpose of the code it tests. Requirement Clarity: TDD encourages a clear understanding of requirements before coding begins. Facilitates Continuous Integration: It integrates well with continuous integration processes, allowing for frequent code updates and testing.",
+      "char_count": 938,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0024",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Advantages ==",
+      "heading_path": "== = Advantages ==",
+      "start_char": 17923,
+      "end_char": 18473,
+      "content": "Boosts Productivity: Many developers find that TDD increases their productivity. Reinforces Code Mental Model: TDD helps in building a strong mental model of the code's structure and behavior. Emphasis on Design and Functionality: It encourages a focus on the design, interface, and overall functionality of the program. Reduces Need for Debugging: By catching issues early in the development process, TDD reduces the need for extensive debugging later. System Stability: Applications developed with TDD tend to be more stable and less prone to bugs.",
+      "char_count": 550,
+      "token_estimate": 137,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0025",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Disadvantages ==",
+      "heading_path": "== = Disadvantages ==",
+      "start_char": 18477,
+      "end_char": 19417,
+      "content": "== = Disadvantages === However, TDD is not without its drawbacks: Increased Code Volume: Implementing TDD can result in a larger codebase as tests add to the total amount of code written. False Security from Tests: A large number of passing tests can sometimes give a misleading sense of security regarding the code's robustness. Maintenance Overheads: Maintaining a large suite of tests can add overhead to the development process. Time-Consuming Test Processes: Writing and maintaining tests can be time-consuming. Testing Environment Set-Up: TDD requires setting up and maintaining a suitable testing environment. Learning Curve: It takes time and effort to become proficient in TDD practices. Overcomplication: Designing code to cater for complex tests via TDD can lead to code that is more complicated than necessary. Neglect of Overall Design: Focusing too narrowly on passing tests can sometimes lead to neglect of the bigger picture in software design.",
+      "char_count": 960,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0026",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Benefits ==",
+      "heading_path": "== = Benefits ==",
+      "start_char": 19433,
+      "end_char": 20342,
+      "content": "== = Benefits === A 2005 study found that using TDD meant writing more tests and, in turn, programmers who wrote more tests tended to be more productive. Hypotheses relating to code quality and a more direct correlation between TDD and productivity were inconclusive. Programmers using pure TDD on new (\"greenfield\") projects reported they only rarely felt the need to invoke a debugger. Used in conjunction with a version control system, when tests fail unexpectedly, reverting the code to the last version that passed all tests may often be more productive than debugging. Test-driven development offers more than just simple validation of correctness, but can also drive the design of a program. By focusing on the test cases first, one must imagine how the functionality is used by clients (in the first case, the test cases). So, the programmer is concerned with the interface before the implementation.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0027",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Benefits ==",
+      "heading_path": "== = Benefits ==",
+      "start_char": 20342,
+      "end_char": 21279,
+      "content": "This benefit is complementary to design by contract as it approaches code through test cases rather than through mathematical assertions or preconceptions. Test-driven development offers the ability to take small steps when required. It allows a programmer to focus on the task at hand as the first goal is to make the test pass. Exceptional cases and error handling are not considered initially, and tests to create these extraneous circumstances are implemented separately. Test-driven development ensures in this way that all written code is covered by at least one test. This gives the programming team, and subsequent users, a greater level of confidence in the code. While it is true that more code is required with TDD than without TDD because of the unit test code, the total code implementation time could be shorter based on a model by Müller and Padberg. Large numbers of tests help to limit the number of defects in the code.",
+      "char_count": 937,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0028",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Benefits ==",
+      "heading_path": "== = Benefits ==",
+      "start_char": 21280,
+      "end_char": 22175,
+      "content": "The early and frequent nature of the testing helps to catch defects early in the development cycle, preventing them from becoming endemic and expensive problems. Eliminating defects early in the process usually avoids lengthy and tedious debugging later in the project. TDD can lead to more modularized, flexible, and extensible code. This effect often comes about because the methodology requires that the developers think of the software in terms of small units that can be written and tested independently and integrated together later. This leads to smaller, more focused classes, looser coupling, and cleaner interfaces. The use of the mock object design pattern also contributes to the overall modularization of the code because this pattern requires that the code be written so that modules can be switched easily between mock versions for unit testing and \"real\" versions for deployment.",
+      "char_count": 895,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0029",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Benefits ==",
+      "heading_path": "== = Benefits ==",
+      "start_char": 22176,
+      "end_char": 23175,
+      "content": "Because no more code is written than necessary to pass a failing test case, automated tests tend to cover every code path. For example, for a TDD developer to add an else branch to an existing if statement, the developer would first have to write a failing test case that motivates the branch. As a result, the automated tests resulting from TDD tend to be very thorough: they detect any unexpected changes in the code's behaviour. This detects problems that can arise where a change later in the development cycle unexpectedly alters other functionality. Madeyski provided empirical evidence (via a series of laboratory experiments with over 200 developers) regarding the superiority of the TDD practice over the traditional Test-Last approach or testing for correctness approach, with respect to the lower coupling between objects (CBO). The mean effect size represents a medium (but close to large) effect on the basis of meta-analysis of the performed experiments which is a substantial finding.",
+      "char_count": 999,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0030",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Benefits ==",
+      "heading_path": "== = Benefits ==",
+      "start_char": 23176,
+      "end_char": 23788,
+      "content": "It suggests a better modularization (i.e., a more modular design), easier reuse and testing of the developed software products due to the TDD programming practice. Madeyski also measured the effect of the TDD practice on unit tests using branch coverage (BC) and mutation score indicator (MSI), which are indicators of the thoroughness and the fault detection effectiveness of unit tests, respectively. The effect size of TDD on branch coverage was medium in size and therefore is considered substantive effect. These findings have been subsequently confirmed by further, smaller experimental evaluations of TDD.",
+      "char_count": 612,
+      "token_estimate": 153,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0031",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Psychological benefits to programmer ==",
+      "heading_path": "== = Psychological benefits to programmer ==",
+      "start_char": 23817,
+      "end_char": 24722,
+      "content": "== = Psychological benefits to programmer === Increased Confidence: TDD allows programmers to make changes or add new features with confidence. Knowing that the code is constantly tested reduces the fear of breaking existing functionality. This safety net can encourage more innovative and creative approaches to problem-solving. Reduced Fear of Change, Reduced Stress: In traditional development, changing existing code can be daunting due to the risk of introducing bugs. TDD, with its comprehensive test suite, reduces this fear, as tests will immediately reveal any problems caused by changes. Knowing that the codebase has a safety net of tests can reduce stress and anxiety associated with programming. Developers might feel more relaxed and open to experimenting and refactoring. Improved Focus: Writing tests first helps programmers concentrate on requirements and design before writing the code.",
+      "char_count": 904,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0032",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Psychological benefits to programmer ==",
+      "heading_path": "== = Psychological benefits to programmer ==",
+      "start_char": 24722,
+      "end_char": 25285,
+      "content": "This focus can lead to clearer, more purposeful coding, as the developer is always aware of the goal they are trying to achieve. Sense of Achievement and Job Satisfaction: Passing tests can provide a quick, regular sense of accomplishment, boosting morale. This can be particularly motivating in long-term projects where the end goal might seem distant. The combination of all these factors can lead to increased job satisfaction. When developers feel confident, focused, and part of a collaborative team, their overall job satisfaction can significantly improve.",
+      "char_count": 563,
+      "token_estimate": 140,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0033",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Limitations ==",
+      "heading_path": "== = Limitations ==",
+      "start_char": 25261,
+      "end_char": 26124,
+      "content": "== = Limitations === Test-driven development does not perform sufficient testing in situations where full functional tests are required to determine success or failure, due to extensive use of unit tests. Examples of these are user interfaces, programs that work with databases, and some that depend on specific network configurations. TDD encourages developers to put the minimum amount of code into such modules and to maximize the logic that is in testable library code, using fakes and mocks to represent the outside world. Management support is essential. Without the entire organization believing that test-driven development is going to improve the product, management may feel that time spent writing tests is wasted. Unit tests created in a test-driven development environment are typically created by the developer who is writing the code being tested.",
+      "char_count": 862,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0034",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Limitations ==",
+      "heading_path": "== = Limitations ==",
+      "start_char": 26124,
+      "end_char": 27029,
+      "content": "Therefore, the tests may share blind spots with the code: if, for example, a developer does not realize that certain input parameters must be checked, most likely neither the test nor the code will verify those parameters. Another example: if the developer misinterprets the requirements for the module they are developing, the code and the unit tests they write will both be wrong in the same way. Therefore, the tests will pass, giving a false sense of correctness. A high number of passing unit tests may bring a false sense of security, resulting in fewer additional software testing activities, such as integration testing and compliance testing. Tests become part of the maintenance overhead of a project. Badly written tests, for example ones that include hard-coded error strings, are themselves prone to failure, and they are expensive to maintain. This is especially the case with fragile tests.",
+      "char_count": 905,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0035",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Limitations ==",
+      "heading_path": "== = Limitations ==",
+      "start_char": 27030,
+      "end_char": 27923,
+      "content": "There is a risk that tests that regularly generate false failures will be ignored, so that when a real failure occurs, it may not be detected. It is possible to write tests for low and easy maintenance, for example by the reuse of error strings, and this should be a goal during the code refactoring phase described above. Writing and maintaining an excessive number of tests costs time. Also, more-flexible modules (with limited tests) might accept new requirements without the need for changing the tests. For those reasons, testing for only extreme conditions, or a small sample of data, can be easier to adjust than a set of highly detailed tests. The level of coverage and testing detail achieved during repeated TDD cycles cannot easily be re-created at a later date. Therefore, these original, or early, tests become increasingly precious as time goes by. The tactic is to fix it early.",
+      "char_count": 893,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "testdrivendevelopmen_b98d6d67_c0036",
+      "article_id": "testdrivendevelopmen_b98d6d67",
+      "section": "== = Limitations ==",
+      "heading_path": "== = Limitations ==",
+      "start_char": 27924,
+      "end_char": 28219,
+      "content": "Also, if a poor architecture, a poor design, or a poor testing strategy leads to a late change that makes dozens of existing tests fail, then it is important that they are individually fixed. Merely deleting, disabling or rashly altering them can lead to undetectable holes in the test coverage.",
+      "char_count": 295,
+      "token_estimate": 73,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "According to Madeyski's research, what specific metric demonstrated the superiority of the TDD practice over the traditional Test-Last approach?",
+        "answer": "The metric that demonstrated TDD's superiority was the lower coupling between objects (CBO).",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0029"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the purpose of having a test case fail initially in the TDD process?",
+        "answer": "An initial test case failure ensures that the test is functioning correctly and is capable of catching an error. After this is confirmed, the developer can then implement the necessary functionality.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are the potential drawbacks of using Test-Driven Development (TDD)?",
+        "answer": "The drawbacks of TDD include an increased volume of code, a false sense of security from a large number of passing tests, and maintenance overheads for the test suite. Additionally, the process can be time-consuming, requires setting up a suitable testing environment, has a learning curve, can lead to overcomplicated code, and may cause neglect of the overall software design.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0025"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How is software engineer Kent Beck connected to the Test-Driven Development (TDD) methodology and its specific coding cycle?",
+        "answer": "Kent Beck is credited with developing or \"rediscovering\" the TDD technique, stating that it encourages simple designs and inspires confidence. The specific TDD coding cycle—which involves listing scenarios, writing a test that initially fails, and then writing code to make it pass—is based on his book \"Test-Driven Development by Example\" and his Canon TDD article.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0000",
+          "testdrivendevelopmen_b98d6d67_c0001",
+          "testdrivendevelopmen_b98d6d67_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain the \"Refactor\" step in the Test-Driven Development (TDD) cycle, including its purpose, specific examples, and its equivalent in the \"test-driven work\" methodology.",
+        "answer": "The \"Refactor\" step in the TDD cycle is focused on improving the internal structure of the code for better readability and maintainability, without changing its external behavior. During this step, hard-coded test data is removed from production code, and the test suite is run after each change to ensure no existing functionality is broken. Its equivalent in the non-software \"test-driven work\" methodology is called \"Clean up the work\". Specific examples of refactoring activities include moving code to its logical place, removing duplicate code, making names self-documenting, splitting methods into smaller pieces, and re-arranging inheritance hierarchies.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0003",
+          "testdrivendevelopmen_b98d6d67_c0004",
+          "testdrivendevelopmen_b98d6d67_c0005"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "According to the principles of test-driven development, what are the benefits of writing tests before the functionality is implemented?",
+        "answer": "Writing tests before the functionality is a core aspect of test-driven development that is claimed to have many benefits. These include ensuring the application is written for testability from the outset, guaranteeing that tests are created for every feature, and leading to a deeper and earlier understanding of product requirements. This practice also helps ensure the effectiveness of the test code and maintains a continual focus on software quality.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0006",
+          "testdrivendevelopmen_b98d6d67_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Summarize the complete Test-Driven Development (TDD) coding cycle, from initial planning to final refactoring and repetition.",
+        "answer": "The Test-Driven Development cycle begins by listing all scenarios for a new feature, focusing on requirements before writing code. For each scenario, a developer first writes an automated test that is expected to fail, which validates that new code is needed. Next, the simplest possible code is written to make that specific test pass. After confirming all tests pass, the code is refactored for readability and maintainability, with examples including removing duplicate code, making names self-documenting, and splitting methods. The entire test suite is run after each refactoring to ensure no existing functionality is broken. This process is then repeated for each scenario on the list until all are implemented and passing.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0002",
+          "testdrivendevelopmen_b98d6d67_c0003",
+          "testdrivendevelopmen_b98d6d67_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Summarize the complete test-driven development cycle, including its guiding principles and the meaning of the 'red/green/refactor' mantra.",
+        "answer": "Test-driven development (TDD) is guided by principles such as \"keep it simple, stupid\" (KISS), \"You aren't gonna need it\" (YAGNI), and \"Fake it till you make it\". The process follows a constant cycle known as the \"red/green/refactor\" mantra. It begins with writing a test case for new functionality before the code itself is written; this test is expected to fail initially (red), which confirms the test is working correctly. Next, the developer writes the simplest code possible to make the test pass (green). Finally, the code is refactored to improve its design and clarity. This cycle is repeated, which reinforces the developer's mental model of the code, boosts confidence, and increases productivity.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0006",
+          "testdrivendevelopmen_b98d6d67_c0007",
+          "testdrivendevelopmen_b98d6d67_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does Acceptance Test-Driven Development (ATDD) ensure that a development team remains focused on customer requirements?",
+        "answer": "In Acceptance Test-Driven Development (ATDD), the criteria specified by the customer are automated into acceptance tests. These tests then drive the unit test development process, providing the development team with a specific target to satisfy. This keeps the team continuously focused on what the customer wants from each user story.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0011",
+          "testdrivendevelopmen_b98d6d67_c0012"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does the technique of Scenario Modeling support the design of testable, modular architectures and aid in the creation of TDD tests?",
+        "answer": "Scenario Modeling is a key technique for building an effective modular architecture by creating a set of sequence charts for system-level execution scenarios. These models define the strategy of interactions between components, serve as a rich set of requirements for the services a component must provide, and dictate the order of interactions, which in turn greatly facilitates the construction of TDD tests for a complex system.",
+        "related_chunk_ids": [
+          "testdrivendevelopmen_b98d6d67_c0020",
+          "testdrivendevelopmen_b98d6d67_c0021"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:31.933Z",
+    "content_format": "markdown",
+    "total_chunks": 37,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

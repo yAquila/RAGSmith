@@ -1,0 +1,226 @@
+{
+  "article": {
+    "id": "concurrencycomputers_1e4bf5f1",
+    "title": "Concurrency (computer science)",
+    "url": "https://en.wikipedia.org/wiki/Concurrency_(computer_science)",
+    "lang": "en",
+    "created_at": "2025-07-30T10:33:09.613467",
+    "content": "---\nid: concurrencycomputers_1e4bf5f1\nurl: https://en.wikipedia.org/wiki/Concurrency_(computer_science)\ntitle: Concurrency (computer science)\nlang: en\ncreated_at: '2025-07-30T10:30:54.541379'\nchecksum: 54817444ead8c983a45e0a9df27133dc2bd27a95d3ab8380c557eaffafca8406\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1131\n  char_count: 8458\n  num_chunks: 10\n  original_chunks: 15\n  filtered_out: 5\n  num_sections: 0\n---\nConcurrency refers to the ability of a system to execute multiple tasks through simultaneous execution or time-sharing (context switching), sharing resources and managing interactions. Concurrency improves responsiveness, throughput, and scalability in modern computing, including: Operating systems and embedded systems Distributed systems, parallel computing, and high-performance computing Database systems, web applications, and cloud computing == Related concepts == Concurrency is a broader concept that encompasses several related ideas, including: Parallelism (simultaneous execution on multiple processing units). Parallelism executes tasks independently on multiple CPU cores. Concurrency allows for multiple threads of control at the program level, which can use parallelism or time-slicing to perform these tasks. Programs may exhibit parallelism only, concurrency only, both parallelism and concurrency, neither. Multi-threading and multi-processing (shared system resources) Synchronization (coordinating access to shared resources) Coordination (managing interactions between concurrent tasks) Concurrency Control (ensuring data consistency and integrity) Inter-process Communication (IPC, facilitating information exchange) == Issues == Because computations in a concurrent system can interact with each other while being executed, the number of possible execution paths in the system can be extremely large, and the resulting outcome can be indeterminate. Concurrent use of shared resources can be a source of indeterminacy leading to issues such as deadlocks, and resource starvation. Design of concurrent systems often entails finding reliable techniques for coordinating their execution, data exchange, memory allocation, and execution scheduling to minimize response time and maximise throughput. == Theory == Concurrency theory has been an active field of research in theoretical computer science. One of the first proposals was Carl Adam Petri's seminal work on Petri nets in the early 1960s. In the years since, a wide variety of formalisms have been developed for modeling and reasoning about concurrency. === Models === A number of formalisms for modeling and understanding concurrent systems have been developed, including: The parallel random-access machine The actor model Computational bridging models such as the bulk synchronous parallel (BSP) model Petri nets Process calculi Calculus of communicating systems (CCS) Communicating sequential processes (CSP) model π-calculus Tuple spaces, e.g., Linda Simple Concurrent Object-Oriented Programming (SCOOP) Reo Coordination Language Trace monoids Some of these models of concurrency are primarily intended to support reasoning and specification, while others can be used through the entire development cycle, including design, implementation, proof, testing and simulation of concurrent systems. Some of these are based on message passing, while others have different mechanisms for concurrency. The proliferation of different models of concurrency has motivated some researchers to develop ways to unify these different theoretical models. For example, Lee and Sangiovanni-Vincentelli have demonstrated that a so-called \"tagged-signal\" model can be used to provide a common framework for defining the denotational semantics of a variety of different models of concurrency, while Nielsen, Sassone, and Winskel have demonstrated that category theory can be used to provide a similar unified understanding of different models. The Concurrency Representation Theorem in the actor model provides a fairly general way to represent concurrent systems that are closed in the sense that they do not receive communications from outside. (Other concurrency systems, e.g., process calculi can be modeled in the actor model using a two-phase commit protocol.) The mathematical denotation denoted by a closed system S is constructed increasingly better approximations from an initial behavior called ⊥S using a behavior approximating function progressionS to construct a denotation (meaning ) for S as follows: DenoteS ≡ ⊔i∈ω progressionSi(⊥S) In this way, S can be mathematically characterized in terms of all its possible behaviors. === Logics === Various types of temporal logic can be used to help reason about concurrent systems. Some of these logics, such as linear temporal logic and computation tree logic, allow assertions to be made about the sequences of states that a concurrent system can pass through. Others, such as action computational tree logic, Hennessy–Milner logic, and Lamport's temporal logic of actions, build their assertions from sequences of actions (changes in state). The principal application of these logics is in writing specifications for concurrent systems. == Practice == Concurrent programming encompasses programming languages and algorithms used to implement concurrent systems. Concurrent programming is usually considered to be more general than parallel programming because it can involve arbitrary and dynamic patterns of communication and interaction, whereas parallel systems generally have a predefined and well-structured communications pattern. The base goals of concurrent programming include correctness, performance and robustness. Concurrent systems such as Operating systems and Database management systems are generally designed to operate indefinitely, including automatic recovery from failure, and not terminate unexpectedly (see Concurrency control). Some concurrent systems implement a form of transparent concurrency, in which concurrent computational entities may compete for and share a single resource, but the complexities of this competition and sharing are shielded from the programmer. Because they use shared resources, concurrent systems in general require the inclusion of some kind of arbiter somewhere in their implementation (often in the underlying hardware), to control access to those resources. The use of arbiters introduces the possibility of indeterminacy in concurrent computation which has major implications for practice including correctness and performance. For example, arbitration introduces unbounded nondeterminism which raises issues with model checking because it causes explosion in the state space and can even cause models to have an infinite number of states. Some concurrent programming models include coprocesses and deterministic concurrency. In these models, threads of control explicitly yield their timeslices, either to the system or to another process. == See also == Dining philosophers problem Chu space Client–server network nodes Clojure Cluster nodes Concurrency control Concurrent computing Concurrent object-oriented programming Concurrency pattern Construction and Analysis of Distributed Processes (CADP) D (programming language) Distributed system Elixir (programming language) Erlang (programming language) Go (programming language) Gordon Pask International Conference on Concurrency Theory (CONCUR) OpenMP Parallel computing Partitioned global address space Pony (programming language) Processes Ptolemy Project Rust (programming language) Sheaf (mathematics) Threads X10 (programming language) Structured concurrency == References == == Further reading == Lynch, Nancy A. (1996). Distributed Algorithms. Morgan Kaufmann. ISBN 978-1-55860-348-6. Tanenbaum, Andrew S.; Van Steen, Maarten (2002). Distributed Systems: Principles and Paradigms. Prentice Hall. ISBN 978-0-13-088893-8. Kurki-Suonio, Reino (2005). A Practical Theory of Reactive Systems. Springer. ISBN 978-3-540-23342-8. Garg, Vijay K. (2002). Elements of Distributed Computing. Wiley-IEEE Press. ISBN 978-0-471-03600-5. Magee, Jeff; Kramer, Jeff (2006). Concurrency: State Models and Java Programming. Wiley. ISBN 978-0-470-09355-9. Distefano, S., & Bruneo, D. (2015). Quantitative assessments of distributed systems: Methodologies and techniques (1st ed.). Somerset: John Wiley & Sons Inc.ISBN 9781119131144 Bhattacharyya, S. S. (2013;2014;). Handbook of signal processing systems (Second;2;2nd 2013; ed.). New York, NY: Springer.10.1007/978-1-4614-6859-2 ISBN 9781461468592 Wolter, K. (2012;2014;). Resilience assessment and evaluation of computing systems (1. Aufl.;1; ed.). London;Berlin;: Springer. ISBN 9783642290329 == External links == Process Algebra Diary - Prof. Luca Aceto's blog on Concurrency Theory Concurrent Systems at The WWW Virtual Library Concurrency patterns presentation given at scaleconf"
+  },
+  "chunks": [
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0000",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 449,
+      "content": "Concurrency refers to the ability of a system to execute multiple tasks through simultaneous execution or time-sharing (context switching), sharing resources and managing interactions. Concurrency improves responsiveness, throughput, and scalability in modern computing, including: Operating systems and embedded systems Distributed systems, parallel computing, and high-performance computing Database systems, web applications, and cloud computing",
+      "char_count": 448,
+      "token_estimate": 112,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0001",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== Related concepts ==",
+      "heading_path": "== Related concepts ==",
+      "start_char": 471,
+      "end_char": 1240,
+      "content": "== Related concepts == Concurrency is a broader concept that encompasses several related ideas, including: Parallelism (simultaneous execution on multiple processing units). Parallelism executes tasks independently on multiple CPU cores. Concurrency allows for multiple threads of control at the program level, which can use parallelism or time-slicing to perform these tasks. Programs may exhibit parallelism only, concurrency only, both parallelism and concurrency, neither. Multi-threading and multi-processing (shared system resources) Synchronization (coordinating access to shared resources) Coordination (managing interactions between concurrent tasks) Concurrency Control (ensuring data consistency and integrity) Inter-process Communication (IPC, facilitating information exchange)",
+      "char_count": 790,
+      "token_estimate": 197,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0002",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== Issues ==",
+      "heading_path": "== Issues ==",
+      "start_char": 1252,
+      "end_char": 1818,
+      "content": "== Issues == Because computations in a concurrent system can interact with each other while being executed, the number of possible execution paths in the system can be extremely large, and the resulting outcome can be indeterminate. Concurrent use of shared resources can be a source of indeterminacy leading to issues such as deadlocks, and resource starvation. Design of concurrent systems often entails finding reliable techniques for coordinating their execution, data exchange, memory allocation, and execution scheduling to minimize response time and maximise throughput.",
+      "char_count": 577,
+      "token_estimate": 144,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0003",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== Theory ==",
+      "heading_path": "== Theory ==",
+      "start_char": 1830,
+      "end_char": 2131,
+      "content": "== Theory == Concurrency theory has been an active field of research in theoretical computer science. One of the first proposals was Carl Adam Petri's seminal work on Petri nets in the early 1960s. In the years since, a wide variety of formalisms have been developed for modeling and reasoning about concurrency.",
+      "char_count": 312,
+      "token_estimate": 78,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0004",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== = Models ==",
+      "heading_path": "== = Models ==",
+      "start_char": 2145,
+      "end_char": 2991,
+      "content": "== = Models === A number of formalisms for modeling and understanding concurrent systems have been developed, including: The parallel random-access machine The actor model Computational bridging models such as the bulk synchronous parallel (BSP) model Petri nets Process calculi Calculus of communicating systems (CCS) Communicating sequential processes (CSP) model π-calculus Tuple spaces, e.g., Linda Simple Concurrent Object-Oriented Programming (SCOOP) Reo Coordination Language Trace monoids Some of these models of concurrency are primarily intended to support reasoning and specification, while others can be used through the entire development cycle, including design, implementation, proof, testing and simulation of concurrent systems. Some of these are based on message passing, while others have different mechanisms for concurrency.",
+      "char_count": 845,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0005",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== = Models ==",
+      "heading_path": "== = Models ==",
+      "start_char": 2991,
+      "end_char": 3722,
+      "content": "The proliferation of different models of concurrency has motivated some researchers to develop ways to unify these different theoretical models. For example, Lee and Sangiovanni-Vincentelli have demonstrated that a so-called \"tagged-signal\" model can be used to provide a common framework for defining the denotational semantics of a variety of different models of concurrency, while Nielsen, Sassone, and Winskel have demonstrated that category theory can be used to provide a similar unified understanding of different models. The Concurrency Representation Theorem in the actor model provides a fairly general way to represent concurrent systems that are closed in the sense that they do not receive communications from outside.",
+      "char_count": 731,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0006",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== = Models ==",
+      "heading_path": "== = Models ==",
+      "start_char": 3723,
+      "end_char": 4216,
+      "content": "(Other concurrency systems, e.g., process calculi can be modeled in the actor model using a two-phase commit protocol.) The mathematical denotation denoted by a closed system S is constructed increasingly better approximations from an initial behavior called ⊥S using a behavior approximating function progressionS to construct a denotation (meaning ) for S as follows: DenoteS ≡ ⊔i∈ω progressionSi(⊥S) In this way, S can be mathematically characterized in terms of all its possible behaviors.",
+      "char_count": 493,
+      "token_estimate": 123,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0007",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== = Logics ==",
+      "heading_path": "== = Logics ==",
+      "start_char": 4217,
+      "end_char": 4762,
+      "content": "== = Logics === Various types of temporal logic can be used to help reason about concurrent systems. Some of these logics, such as linear temporal logic and computation tree logic, allow assertions to be made about the sequences of states that a concurrent system can pass through. Others, such as action computational tree logic, Hennessy–Milner logic, and Lamport's temporal logic of actions, build their assertions from sequences of actions (changes in state). The principal application of these logics is in writing specifications for concurrent systems.",
+      "char_count": 558,
+      "token_estimate": 139,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0008",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== Practice ==",
+      "heading_path": "== Practice ==",
+      "start_char": 4776,
+      "end_char": 5736,
+      "content": "== Practice == Concurrent programming encompasses programming languages and algorithms used to implement concurrent systems. Concurrent programming is usually considered to be more general than parallel programming because it can involve arbitrary and dynamic patterns of communication and interaction, whereas parallel systems generally have a predefined and well-structured communications pattern. The base goals of concurrent programming include correctness, performance and robustness. Concurrent systems such as Operating systems and Database management systems are generally designed to operate indefinitely, including automatic recovery from failure, and not terminate unexpectedly (see Concurrency control). Some concurrent systems implement a form of transparent concurrency, in which concurrent computational entities may compete for and share a single resource, but the complexities of this competition and sharing are shielded from the programmer.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "concurrencycomputers_1e4bf5f1_c0009",
+      "article_id": "concurrencycomputers_1e4bf5f1",
+      "section": "== Practice ==",
+      "heading_path": "== Practice ==",
+      "start_char": 5736,
+      "end_char": 6538,
+      "content": "Because they use shared resources, concurrent systems in general require the inclusion of some kind of arbiter somewhere in their implementation (often in the underlying hardware), to control access to those resources. The use of arbiters introduces the possibility of indeterminacy in concurrent computation which has major implications for practice including correctness and performance. For example, arbitration introduces unbounded nondeterminism which raises issues with model checking because it causes explosion in the state space and can even cause models to have an infinite number of states. Some concurrent programming models include coprocesses and deterministic concurrency. In these models, threads of control explicitly yield their timeslices, either to the system or to another process.",
+      "char_count": 802,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 8,
+    "items": [
+      {
+        "question": "What are the three base goals of concurrent programming?",
+        "answer": "The base goals of concurrent programming include correctness, performance, and robustness.",
+        "related_chunk_ids": [
+          "concurrencycomputers_1e4bf5f1_c0008"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the two primary purposes of the various models developed for concurrency?",
+        "answer": "Some models of concurrency are primarily intended to support reasoning and specification. Others can be used throughout the entire development cycle, which includes design, implementation, proof, testing, and simulation of concurrent systems.",
+        "related_chunk_ids": [
+          "concurrencycomputers_1e4bf5f1_c0004"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the purpose of Synchronization as a concept related to concurrency?",
+        "answer": "Synchronization is a concept related to concurrency that involves coordinating access to shared resources.",
+        "related_chunk_ids": [
+          "concurrencycomputers_1e4bf5f1_c0001"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "While concurrency aims to improve system throughput and responsiveness, what are the main challenges that arise from its implementation and what general techniques are used to manage them?",
+        "answer": "The main challenge with concurrency is that interactions between computations can lead to an extremely large number of possible execution paths, causing indeterminate outcomes. This can result in specific issues like deadlocks and resource starvation, especially when shared resources are used concurrently. To manage these problems, designers use reliable techniques for coordination, synchronization, data exchange, memory allocation, and execution scheduling to maximize throughput and minimize response time.",
+        "related_chunk_ids": [
+          "concurrencycomputers_1e4bf5f1_c0000",
+          "concurrencycomputers_1e4bf5f1_c0001",
+          "concurrencycomputers_1e4bf5f1_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What issue arose from the development of numerous concurrency models since the 1960s, and what are some theoretical approaches that have been developed to address this issue?",
+        "answer": "The development of a wide variety of formalisms for modeling concurrency, starting with early proposals like Petri nets, led to a proliferation of different models. This proliferation motivated researchers to develop ways to unify these different theoretical models. Examples of these unification efforts include the \"tagged-signal\" model to provide a common semantic framework, the use of category theory for a unified understanding of different models, and the Concurrency Representation Theorem within the actor model.",
+        "related_chunk_ids": [
+          "concurrencycomputers_1e4bf5f1_c0003",
+          "concurrencycomputers_1e4bf5f1_c0004",
+          "concurrencycomputers_1e4bf5f1_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do the formal methods of mathematical modeling and logic contribute to achieving the practical goals of concurrent programming?",
+        "answer": "The practical goals of concurrent programming include correctness, performance, and robustness. Formal methods support the goal of correctness. Mathematical denotation can be used to characterize a concurrent system in terms of all its possible behaviors. Additionally, various types of temporal logic are used to write specifications for these systems, allowing assertions to be made about the sequences of states and actions they can pass through, which helps in reasoning about their behavior.",
+        "related_chunk_ids": [
+          "concurrencycomputers_1e4bf5f1_c0006",
+          "concurrencycomputers_1e4bf5f1_c0007",
+          "concurrencycomputers_1e4bf5f1_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Given the variety of formalisms for modeling concurrent systems, what problem did this create, and what approaches have been developed to address it?",
+        "answer": "The proliferation of different models for concurrency motivated researchers to develop ways to unify these theoretical models. Some of the approaches developed include using a \"tagged-signal\" model to provide a common framework for denotational semantics, and using category theory to provide a unified understanding. Additionally, the Actor model offers a way to represent closed concurrent systems through its Concurrency Representation Theorem and can model other systems, like process calculi, using a two-phase commit protocol.",
+        "related_chunk_ids": [
+          "concurrencycomputers_1e4bf5f1_c0004",
+          "concurrencycomputers_1e4bf5f1_c0005",
+          "concurrencycomputers_1e4bf5f1_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does the management of shared resources in concurrent systems create challenges for achieving correctness?",
+        "answer": "Concurrent systems involve entities competing for and sharing resources. To manage access to these shared resources, an arbiter is required. The use of an arbiter introduces indeterminacy and unbounded nondeterminism, which creates challenges for ensuring correctness. Specifically, this nondeterminism complicates model checking by causing an explosion in the state space, making it difficult to verify the system's behavior.",
+        "related_chunk_ids": [
+          "concurrencycomputers_1e4bf5f1_c0008",
+          "concurrencycomputers_1e4bf5f1_c0009"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:31.235Z",
+    "content_format": "markdown",
+    "total_chunks": 10,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "article": {
+    "id": "asearchalgorithm_e5d265d4",
+    "title": "A* search algorithm",
+    "url": "https://en.wikipedia.org/wiki/A*_search_algorithm",
+    "lang": "en",
+    "created_at": "2025-07-30T10:33:38.610230",
+    "content": "---\nid: asearchalgorithm_e5d265d4\nurl: https://en.wikipedia.org/wiki/A*_search_algorithm\ntitle: A* search algorithm\nlang: en\ncreated_at: '2025-07-30T10:30:45.387660'\nchecksum: 79d7ab78a5488214a38b6776bdd7939a7097eb51afeebf2ab93051cfe4e1264d\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3544\n  char_count: 19462\n  num_chunks: 26\n  original_chunks: 27\n  filtered_out: 1\n  num_sections: 0\n---\nA* (pronounced \"A-star\") is a graph traversal and pathfinding algorithm that is used in many fields of computer science due to its completeness, optimality, and optimal efficiency. Given a weighted graph, a source node and a goal node, the algorithm finds the shortest path (with respect to the given weights) from source to goal. One major practical drawback is its O ( b d ) {\\displaystyle O(b^{d})} space complexity where d is the depth of the shallowest solution (the length of the shortest path from the source node to any given goal node) and b is the branching factor (the maximum number of successors for any given state), as it stores all generated nodes in memory. Thus, in practical travel-routing systems, it is generally outperformed by algorithms that can pre-process the graph to attain better performance, as well as by memory-bounded approaches; however, A* is still the best solution in many cases. Peter Hart, Nils Nilsson and Bertram Raphael of Stanford Research Institute (now SRI International) first published the algorithm in 1968. It can be seen as an extension of Dijkstra's algorithm. A* achieves better performance by using heuristics to guide its search. Compared to Dijkstra's algorithm, the A* algorithm only finds the shortest path from a specified source to a specified goal, and not the shortest-path tree from a specified source to all possible goals. This is a necessary trade-off for using a specific-goal-directed heuristic. For Dijkstra's algorithm, since the entire shortest-path tree is generated, every node is a goal, and there can be no specific-goal-directed heuristic. == History == A* was created as part of the Shakey project, which had the aim of building a mobile robot that could plan its own actions. Nils Nilsson originally proposed using the Graph Traverser algorithm for Shakey's path planning. Graph Traverser is guided by a heuristic function h(n), the estimated distance from node n to the goal node: it entirely ignores g(n), the distance from the start node to n. Bertram Raphael suggested using the sum, g(n) + h(n). Peter Hart invented the concepts we now call admissibility and consistency of heuristic functions. A* was originally designed for finding least-cost paths when the cost of a path is the sum of its costs, but it has been shown that A* can be used to find optimal paths for any problem satisfying the conditions of a cost algebra. The original 1968 A* paper contained a theorem stating that no A*-like algorithm could expand fewer nodes than A* if the heuristic function is consistent and A*'s tie-breaking rule is suitably chosen. A \"correction\" was published a few years later claiming that consistency was not required, but this was shown to be false in 1985 in Dechter and Pearl's definitive study of A*'s optimality (now called optimal efficiency), which gave an example of A* with a heuristic that was admissible but not consistent expanding arbitrarily more nodes than an alternative A*-like algorithm. == Description == A* is an informed search algorithm, or a best-first search, meaning that it is formulated in terms of weighted graphs: starting from a specific starting node of a graph, it aims to find a path to the given goal node having the smallest cost (least distance travelled, shortest time, etc.). It does this by maintaining a tree of paths originating at the start node and extending those paths one edge at a time until the goal node is reached. At each iteration of its main loop, A* needs to determine which of its paths to extend. It does so based on the cost of the path and an estimate of the cost required to extend the path all the way to the goal. Specifically, A* selects the path that minimizes f ( n ) = g ( n ) + h ( n ) {\\displaystyle f(n)=g(n)+h(n)} where n is the next node on the path, g(n) is the cost of the path from the start node to n, and h(n) is a heuristic function that estimates the cost of the cheapest path from n to the goal. The heuristic function is problem-specific. If the heuristic function is admissible – meaning that it never overestimates the actual cost to get to the goal – A* is guaranteed to return a least-cost path from start to goal. Typical implementations of A* use a priority queue to perform the repeated selection of minimum (estimated) cost nodes to expand. This priority queue is known as the open set, fringe or frontier. At each step of the algorithm, the node with the lowest f(x) value is removed from the queue, the f and g values of its neighbors are updated accordingly, and these neighbors are added to the queue. The algorithm continues until a removed node (thus the node with the lowest f value out of all fringe nodes) is a goal node. The f value of that goal is then also the cost of the shortest path, since h at the goal is zero in an admissible heuristic. The algorithm described so far only gives the length of the shortest path. To find the actual sequence of steps, the algorithm can be easily revised so that each node on the path keeps track of its predecessor. After this algorithm is run, the ending node will point to its predecessor, and so on, until some node's predecessor is the start node. As an example, when searching for the shortest route on a map, h(x) might represent the straight-line distance to the goal, since that is physically the smallest possible distance between any two points. For a grid map from a video game, using the Taxicab distance or the Chebyshev distance becomes better depending on the set of movements available (4-way or 8-way). If the heuristic h satisfies the additional condition h(x) ≤ d(x, y) + h(y) for every edge (x, y) of the graph (where d denotes the length of that edge), then h is called monotone, or consistent. With a consistent heuristic, A* is guaranteed to find an optimal path without processing any node more than once and A* is equivalent to running Dijkstra's algorithm with the reduced cost d'(x, y) = d(x, y) + h(y) − h(x). === Pseudocode === The following pseudocode describes the algorithm: Remark: In this pseudocode, if a node is reached by one path, removed from openSet, and subsequently reached by a cheaper path, it will be added to openSet again. This is essential to guarantee that the path returned is optimal if the heuristic function is admissible but not consistent. If the heuristic is consistent, when a node is removed from openSet the path to it is guaranteed to be optimal so the test ‘tentative_gScore < gScore[neighbor]’ will always fail if the node is reached again. The pseudocode implemented here is sometimes called the graph-search version of A*. This is in contrast with the version without the ‘tentative_gScore < gScore[neighbor]’ test to add nodes back to openSet, which is sometimes called the tree-search version of A* and require a consistent heuristic to guarantee optimality. === Example === An example of an A* algorithm in action where nodes are cities connected with roads and h(x) is the straight-line distance to the target point: Key: green: start; blue: goal; orange: visited The A* algorithm has real-world applications. In this example, edges are railroads and h(x) is the great-circle distance (the shortest possible distance on a sphere) to the target. The algorithm is searching for a path between Washington, D.C., and Los Angeles. === Implementation details === There are a number of simple optimizations or implementation details that can significantly affect the performance of an A* implementation. The first detail to note is that the way the priority queue handles ties can have a significant effect on performance in some situations. If ties are broken so the queue behaves in a LIFO manner, A* will behave like depth-first search among equal cost paths (avoiding exploring more than one equally optimal solution). When a path is required at the end of the search, it is common to keep with each node a reference to that node's parent. At the end of the search, these references can be used to recover the optimal path. If these references are being kept then it can be important that the same node doesn't appear in the priority queue more than once (each entry corresponding to a different path to the node, and each with a different cost). A standard approach here is to check if a node about to be added already appears in the priority queue. If it does, then the priority and parent pointers are changed to correspond to the lower-cost path. A standard binary heap based priority queue does not directly support the operation of searching for one of its elements, but it can be augmented with a hash table that maps elements to their position in the heap, allowing this decrease-priority operation to be performed in logarithmic time. Alternatively, a Fibonacci heap can perform the same decrease-priority operations in constant amortized time. === Special cases === Dijkstra's algorithm, as another example of a uniform-cost search algorithm, can be viewed as a special case of A* where ⁠ h ( x ) = 0 {\\displaystyle h(x)=0} ⁠ for all x. General depth-first search can be implemented using A* by considering that there is a global counter C initialized with a very large value. Every time we process a node we assign C to all of its newly discovered neighbors. After every single assignment, we decrease the counter C by one. Thus the earlier a node is discovered, the higher its ⁠ h ( x ) {\\displaystyle h(x)} ⁠ value. Both Dijkstra's algorithm and depth-first search can be implemented more efficiently without including an ⁠ h ( x ) {\\displaystyle h(x)} ⁠ value at each node. == Properties == === Termination and completeness === On finite graphs with non-negative edge weights A* is guaranteed to terminate and is complete, i.e. it will always find a solution (a path from start to goal) if one exists. On infinite graphs with a finite branching factor and edge costs that are bounded away from zero ( d ( x , y ) > ε > 0 {\\textstyle d(x,y)>\\varepsilon >0} for some fixed ε {\\displaystyle \\varepsilon } ), A* is guaranteed to terminate only if there exists a solution. === Admissibility === A search algorithm is said to be admissible if it is guaranteed to return an optimal solution. If the heuristic function used by A* is admissible, then A* is admissible. An intuitive \"proof\" of this is as follows: Call a node closed if it has been visited and is not in the open set. We close a node when we remove it from the open set. A basic property of the A* algorithm, which we'll sketch a proof of below, is that when ⁠ n {\\displaystyle n} ⁠ is closed, ⁠ f ( n ) {\\displaystyle f(n)} ⁠ is an optimistic estimate (lower bound) of the true distance from the start to the goal. So when the goal node, ⁠ g {\\displaystyle g} ⁠, is closed, ⁠ f ( g ) {\\displaystyle f(g)} ⁠ is no more than the true distance. On the other hand, it is no less than the true distance, since it is the length of a path to the goal plus a heuristic term. Now we'll see that whenever a node ⁠ n {\\displaystyle n} ⁠ is closed, ⁠ f ( n ) {\\displaystyle f(n)} ⁠ is an optimistic estimate. It is enough to see that whenever the open set is not empty, it has at least one node ⁠ n {\\displaystyle n} ⁠ on an optimal path to the goal for which ⁠ g ( n ) {\\displaystyle g(n)} ⁠ is the true distance from start, since in that case ⁠ g ( n ) {\\displaystyle g(n)} ⁠ + ⁠ h ( n ) {\\displaystyle h(n)} ⁠ underestimates the distance to goal, and therefore so does the smaller value chosen for the closed vertex. Let ⁠ P {\\displaystyle P} ⁠ be an optimal path from the start to the goal. Let ⁠ p {\\displaystyle p} ⁠ be the last closed node on ⁠ P {\\displaystyle P} ⁠ for which ⁠ g ( p ) {\\displaystyle g(p)} ⁠ is the true distance from the start to the goal (the start is one such vertex). The next node in ⁠ P {\\displaystyle P} ⁠ has the correct ⁠ g {\\displaystyle g} ⁠ value, since it was updated when ⁠ p {\\displaystyle p} ⁠ was closed, and it is open since it is not closed. === Optimality and consistency === Algorithm A is optimally efficient with respect to a set of alternative algorithms Alts on a set of problems P if for every problem P in P and every algorithm A′ in Alts, the set of nodes expanded by A in solving P is a subset (possibly equal) of the set of nodes expanded by A′ in solving P. The definitive study of the optimal efficiency of A* is due to Rina Dechter and Judea Pearl. They considered a variety of definitions of Alts and P in combination with A*'s heuristic being merely admissible or being both consistent and admissible. The most interesting positive result they proved is that A*, with a consistent heuristic, is optimally efficient with respect to all admissible A*-like search algorithms on all \"non-pathological\" search problems. Roughly speaking, their notion of the non-pathological problem is what we now mean by \"up to tie-breaking\". This result does not hold if A*'s heuristic is admissible but not consistent. In that case, Dechter and Pearl showed there exist admissible A*-like algorithms that can expand arbitrarily fewer nodes than A* on some non-pathological problems. Optimal efficiency is about the set of nodes expanded, not the number of node expansions (the number of iterations of A*'s main loop). When the heuristic being used is admissible but not consistent, it is possible for a node to be expanded by A* many times, an exponential number of times in the worst case. In such circumstances, Dijkstra's algorithm could outperform A* by a large margin. However, more recent research found that this pathological case only occurs in certain contrived situations where the edge weight of the search graph is exponential in the size of the graph and that certain inconsistent (but admissible) heuristics can lead to a reduced number of node expansions in A* searches. == Bounded relaxation == While the admissibility criterion guarantees an optimal solution path, it also means that A* must examine all equally meritorious paths to find the optimal path. To compute approximate shortest paths, it is possible to speed up the search at the expense of optimality by relaxing the admissibility criterion. Oftentimes we want to bound this relaxation, so that we can guarantee that the solution path is no worse than (1 + ε) times the optimal solution path. This new guarantee is referred to as ε-admissible. There are a number of ε-admissible algorithms: Weighted A*/Static Weighting's. If ha(n) is an admissible heuristic function, in the weighted version of the A* search one uses hw(n) = ε ha(n), ε > 1 as the heuristic function, and perform the A* search as usual (which eventually happens faster than using ha since fewer nodes are expanded). The path hence found by the search algorithm can have a cost of at most ε times that of the least cost path in the graph. Convex Upward/Downward Parabola (XUP/XDP). Modification to the cost function in weighted A* to push optimality toward the start or goal. XDP gives paths which are near optimal close to the start, and XUP paths are near-optimal close to the goal. Both yield ϵ {\\displaystyle \\epsilon } -optimal paths overall. f XDP ( n ) = 1 2 ϵ [ g ( n ) + ( 2 ϵ − 1 ) + ( g ( n ) − h ( n ) ) 2 + 4 ϵ g ( n ) h ( n ) ] {\\displaystyle f_{\\text{XDP}}(n)={\\frac {1}{2\\epsilon }}\\left[\\ g(n)+(2\\epsilon -1)+{\\sqrt {(g(n)-h(n))^{2}+4\\epsilon g(n)h(n)}}\\ \\right]} . f XUP ( n ) = 1 2 ϵ [ g ( n ) + h ( n ) + ( g ( n ) + h ( n ) ) 2 + 4 ϵ ( ϵ − 1 ) h ( n ) 2 ] {\\displaystyle f_{\\text{XUP}}(n)={\\frac {1}{2\\epsilon }}\\left[\\ g(n)+h(n)+{\\sqrt {(g(n)+h(n))^{2}+4\\epsilon (\\epsilon -1)h(n)^{2}}}\\ \\right]} . Piecewise Upward/Downward Curve (pwXU/pwXD). Similar to XUP/XDP but with piecewise functions instead of parabola. Solution paths are also ϵ {\\displaystyle \\epsilon } -optimal. f pwXD ( n ) = { g ( n ) + h ( n ) , if h ( n ) > g ( n ) g ( n ) + ( 2 ϵ − 1 ) h ( n ) / ϵ , if h ( n ) ≤ g ( n ) {\\displaystyle f_{\\text{pwXD}}(n)={\\begin{cases}g(n)+h(n),&{\\text{if }}h(n)>g(n)\\\\g(n)+(2\\epsilon -1)h(n)/\\epsilon ,&{\\text{if }}h(n)\\leq g(n)\\end{cases}}} f pwXU ( n ) = { g ( n ) / ( 2 ϵ − 1 ) + h ( n ) , if g ( n ) < ( 2 ϵ − 1 ) h ( n ) ( g ( n ) + h ( n ) ) / ϵ , if g ( n ) ≥ ( 2 ϵ − 1 ) h ( n ) {\\displaystyle f_{\\text{pwXU}}(n)={\\begin{cases}g(n)/(2\\epsilon -1)+h(n),&{\\text{if }}g(n)<(2\\epsilon -1)h(n)\\\\(g(n)+h(n))/\\epsilon ,&{\\text{if }}g(n)\\geq (2\\epsilon -1)h(n)\\end{cases}}} Dynamic Weighting uses the cost function ⁠ f ( n ) = g ( n ) + ( 1 + ε w ( n ) ) h ( n ) {\\displaystyle f(n)=g(n)+(1+\\varepsilon w(n))h(n)} ⁠, where w ( n ) = { 1 − d ( n ) N d ( n ) ≤ N 0 otherwise {\\displaystyle w(n)={\\begin{cases}1-{\\frac {d(n)}{N}}&d(n)\\leq N\\\\0&{\\text{otherwise}}\\end{cases}}} , and where ⁠ d ( n ) {\\displaystyle d(n)} ⁠ is the depth of the search and N is the anticipated length of the solution path. Sampled Dynamic Weighting uses sampling of nodes to better estimate and debias the heuristic error. A ε ∗ {\\displaystyle A_{\\varepsilon }^{*}} . uses two heuristic functions. The first is the FOCAL list, which is used to select candidate nodes, and the second hF is used to select the most promising node from the FOCAL list. Aε selects nodes with the function ⁠ A f ( n ) + B h F ( n ) {\\displaystyle Af(n)+Bh_{F}(n)} ⁠, where A and B are constants. If no nodes can be selected, the algorithm will backtrack with the function ⁠ C f ( n ) + D h F ( n ) {\\displaystyle Cf(n)+Dh_{F}(n)} ⁠, where C and D are constants. AlphA* attempts to promote depth-first exploitation by preferring recently expanded nodes. AlphA* uses the cost function f α ( n ) = ( 1 + w α ( n ) ) f ( n ) {\\displaystyle f_{\\alpha }(n)=(1+w_{\\alpha }(n))f(n)} , where w α ( n ) = { λ g ( π ( n ) ) ≤ g ( n ~ ) Λ otherwise {\\displaystyle w_{\\alpha }(n)={\\begin{cases}\\lambda &g(\\pi (n))\\leq g({\\tilde {n}})\\\\\\Lambda &{\\text{otherwise}}\\end{cases}}} , where λ and Λ are constants with λ ≤ Λ {\\displaystyle \\lambda \\leq \\Lambda } , π(n) is the parent of n, and ñ is the most recently expanded node. == Complexity == As a heuristic search algorithm, the performance of A* is heavily influenced by the quality of the heuristic function h ( n ) {\\textstyle h(n)} . If the heuristic closely approximates the true cost to the goal, A* can significantly reduce the number of node expansions. On the other hand, a poor heuristic can lead to many unnecessary expansions. === Worst-Case Scenario === In the worst case, A* expands all nodes n {\\textstyle n} for which f ( n ) = g ( n ) + h ( n ) ≤ C ∗ {\\textstyle f(n)=g(n)+h(n)\\leq C^{*}} , where C ∗ {\\textstyle C^{*}} is the cost of the optimal goal node. ==== Why can’t it be worse ==== Suppose there is a node N ′ {\\textstyle N'} in the open list with f ( N ′ ) > C ∗ {\\textstyle f(N')>C^{*}} , and it's the next node to be expanded. Since the goal node has f ( g o a l ) = g ( g o a l ) + h ( g o a l ) = g ( g o a l ) = C ∗ {\\textstyle f(goal)=g(goal)+h(goal)=g(goal)=C^{*}} , and f ( N ′ ) > C ∗ {\\textstyle f(N')>C^{*}} , the goal node will have a lower f-value and will be expanded before N ′ {\\textstyle N'} . Therefore, A* never expands nodes with f ( n ) > C ∗ {\\textstyle f(n)>C^{*}} . ==== Why can’t it be better ==== Assume there exists an optimal algorithm that expands fewer nodes than C ∗ {\\textstyle C^{*}} in the worst case using the same heuristic. That means there must be some node N ′ {\\textstyle N'} such that f ( N ′ ) < C ∗ {\\textstyle f(N') 0 {\\textstyle \\varepsilon >0} ) is added from N ′ {\\textstyle N'} to the goal. If f ( N ′ ) + ε < C ∗ {\\textstyle f(N')+\\varepsilon"
+  },
+  "chunks": [
+    {
+      "id": "asearchalgorithm_e5d265d4_c0000",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 917,
+      "content": "A* (pronounced \"A-star\") is a graph traversal and pathfinding algorithm that is used in many fields of computer science due to its completeness, optimality, and optimal efficiency. Given a weighted graph, a source node and a goal node, the algorithm finds the shortest path (with respect to the given weights) from source to goal. One major practical drawback is its O ( b d ) {\\displaystyle O(b^{d})} space complexity where d is the depth of the shallowest solution (the length of the shortest path from the source node to any given goal node) and b is the branching factor (the maximum number of successors for any given state), as it stores all generated nodes in memory. Thus, in practical travel-routing systems, it is generally outperformed by algorithms that can pre-process the graph to attain better performance, as well as by memory-bounded approaches; however, A* is still the best solution in many cases.",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0001",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 917,
+      "end_char": 1614,
+      "content": "Peter Hart, Nils Nilsson and Bertram Raphael of Stanford Research Institute (now SRI International) first published the algorithm in 1968. It can be seen as an extension of Dijkstra's algorithm. A* achieves better performance by using heuristics to guide its search. Compared to Dijkstra's algorithm, the A* algorithm only finds the shortest path from a specified source to a specified goal, and not the shortest-path tree from a specified source to all possible goals. This is a necessary trade-off for using a specific-goal-directed heuristic. For Dijkstra's algorithm, since the entire shortest-path tree is generated, every node is a goal, and there can be no specific-goal-directed heuristic.",
+      "char_count": 697,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0002",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1628,
+      "end_char": 2420,
+      "content": "== History == A* was created as part of the Shakey project, which had the aim of building a mobile robot that could plan its own actions. Nils Nilsson originally proposed using the Graph Traverser algorithm for Shakey's path planning. Graph Traverser is guided by a heuristic function h(n), the estimated distance from node n to the goal node: it entirely ignores g(n), the distance from the start node to n. Bertram Raphael suggested using the sum, g(n) + h(n). Peter Hart invented the concepts we now call admissibility and consistency of heuristic functions. A* was originally designed for finding least-cost paths when the cost of a path is the sum of its costs, but it has been shown that A* can be used to find optimal paths for any problem satisfying the conditions of a cost algebra.",
+      "char_count": 791,
+      "token_estimate": 197,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0003",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2420,
+      "end_char": 2998,
+      "content": "The original 1968 A* paper contained a theorem stating that no A*-like algorithm could expand fewer nodes than A* if the heuristic function is consistent and A*'s tie-breaking rule is suitably chosen. A \"correction\" was published a few years later claiming that consistency was not required, but this was shown to be false in 1985 in Dechter and Pearl's definitive study of A*'s optimality (now called optimal efficiency), which gave an example of A* with a heuristic that was admissible but not consistent expanding arbitrarily more nodes than an alternative A*-like algorithm.",
+      "char_count": 578,
+      "token_estimate": 144,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0004",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Description ==",
+      "heading_path": "== Description ==",
+      "start_char": 3003,
+      "end_char": 3971,
+      "content": "== Description == A* is an informed search algorithm, or a best-first search, meaning that it is formulated in terms of weighted graphs: starting from a specific starting node of a graph, it aims to find a path to the given goal node having the smallest cost (least distance travelled, shortest time, etc.). It does this by maintaining a tree of paths originating at the start node and extending those paths one edge at a time until the goal node is reached. At each iteration of its main loop, A* needs to determine which of its paths to extend. It does so based on the cost of the path and an estimate of the cost required to extend the path all the way to the goal. Specifically, A* selects the path that minimizes f ( n ) = g ( n ) + h ( n ) {\\displaystyle f(n)=g(n)+h(n)} where n is the next node on the path, g(n) is the cost of the path from the start node to n, and h(n) is a heuristic function that estimates the cost of the cheapest path from n to the goal.",
+      "char_count": 967,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0005",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Description ==",
+      "heading_path": "== Description ==",
+      "start_char": 3971,
+      "end_char": 4914,
+      "content": "The heuristic function is problem-specific. If the heuristic function is admissible – meaning that it never overestimates the actual cost to get to the goal – A* is guaranteed to return a least-cost path from start to goal. Typical implementations of A* use a priority queue to perform the repeated selection of minimum (estimated) cost nodes to expand. This priority queue is known as the open set, fringe or frontier. At each step of the algorithm, the node with the lowest f(x) value is removed from the queue, the f and g values of its neighbors are updated accordingly, and these neighbors are added to the queue. The algorithm continues until a removed node (thus the node with the lowest f value out of all fringe nodes) is a goal node. The f value of that goal is then also the cost of the shortest path, since h at the goal is zero in an admissible heuristic. The algorithm described so far only gives the length of the shortest path.",
+      "char_count": 943,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0006",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Description ==",
+      "heading_path": "== Description ==",
+      "start_char": 4915,
+      "end_char": 5750,
+      "content": "To find the actual sequence of steps, the algorithm can be easily revised so that each node on the path keeps track of its predecessor. After this algorithm is run, the ending node will point to its predecessor, and so on, until some node's predecessor is the start node. As an example, when searching for the shortest route on a map, h(x) might represent the straight-line distance to the goal, since that is physically the smallest possible distance between any two points. For a grid map from a video game, using the Taxicab distance or the Chebyshev distance becomes better depending on the set of movements available (4-way or 8-way). If the heuristic h satisfies the additional condition h(x) ≤ d(x, y) + h(y) for every edge (x, y) of the graph (where d denotes the length of that edge), then h is called monotone, or consistent.",
+      "char_count": 835,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0007",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Description ==",
+      "heading_path": "== Description ==",
+      "start_char": 5751,
+      "end_char": 5972,
+      "content": "With a consistent heuristic, A* is guaranteed to find an optimal path without processing any node more than once and A* is equivalent to running Dijkstra's algorithm with the reduced cost d'(x, y) = d(x, y) + h(y) − h(x).",
+      "char_count": 221,
+      "token_estimate": 55,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0008",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Pseudocode ==",
+      "heading_path": "== = Pseudocode ==",
+      "start_char": 5974,
+      "end_char": 6844,
+      "content": "== = Pseudocode === The following pseudocode describes the algorithm: Remark: In this pseudocode, if a node is reached by one path, removed from openSet, and subsequently reached by a cheaper path, it will be added to openSet again. This is essential to guarantee that the path returned is optimal if the heuristic function is admissible but not consistent. If the heuristic is consistent, when a node is removed from openSet the path to it is guaranteed to be optimal so the test ‘tentative_gScore < gScore[neighbor]’ will always fail if the node is reached again. The pseudocode implemented here is sometimes called the graph-search version of A*. This is in contrast with the version without the ‘tentative_gScore < gScore[neighbor]’ test to add nodes back to openSet, which is sometimes called the tree-search version of A* and require a consistent heuristic to guarantee optimality.",
+      "char_count": 887,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0009",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Example ==",
+      "heading_path": "== = Example ==",
+      "start_char": 6859,
+      "end_char": 7314,
+      "content": "== = Example === An example of an A* algorithm in action where nodes are cities connected with roads and h(x) is the straight-line distance to the target point: Key: green: start; blue: goal; orange: visited The A* algorithm has real-world applications. In this example, edges are railroads and h(x) is the great-circle distance (the shortest possible distance on a sphere) to the target. The algorithm is searching for a path between Washington, D.C., and Los Angeles.",
+      "char_count": 469,
+      "token_estimate": 117,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0010",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Implementation details ==",
+      "heading_path": "== = Implementation details ==",
+      "start_char": 7344,
+      "end_char": 8263,
+      "content": "== = Implementation details === There are a number of simple optimizations or implementation details that can significantly affect the performance of an A* implementation. The first detail to note is that the way the priority queue handles ties can have a significant effect on performance in some situations. If ties are broken so the queue behaves in a LIFO manner, A* will behave like depth-first search among equal cost paths (avoiding exploring more than one equally optimal solution). When a path is required at the end of the search, it is common to keep with each node a reference to that node's parent. At the end of the search, these references can be used to recover the optimal path. If these references are being kept then it can be important that the same node doesn't appear in the priority queue more than once (each entry corresponding to a different path to the node, and each with a different cost).",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0011",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Implementation details ==",
+      "heading_path": "== = Implementation details ==",
+      "start_char": 8263,
+      "end_char": 8869,
+      "content": "A standard approach here is to check if a node about to be added already appears in the priority queue. If it does, then the priority and parent pointers are changed to correspond to the lower-cost path. A standard binary heap based priority queue does not directly support the operation of searching for one of its elements, but it can be augmented with a hash table that maps elements to their position in the heap, allowing this decrease-priority operation to be performed in logarithmic time. Alternatively, a Fibonacci heap can perform the same decrease-priority operations in constant amortized time.",
+      "char_count": 606,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0012",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Special cases ==",
+      "heading_path": "== = Special cases ==",
+      "start_char": 8861,
+      "end_char": 9575,
+      "content": "== = Special cases === Dijkstra's algorithm, as another example of a uniform-cost search algorithm, can be viewed as a special case of A* where ⁠ h ( x ) = 0 {\\displaystyle h(x)=0} ⁠ for all x. General depth-first search can be implemented using A* by considering that there is a global counter C initialized with a very large value. Every time we process a node we assign C to all of its newly discovered neighbors. After every single assignment, we decrease the counter C by one. Thus the earlier a node is discovered, the higher its ⁠ h ( x ) {\\displaystyle h(x)} ⁠ value. Both Dijkstra's algorithm and depth-first search can be implemented more efficiently without including an ⁠ h ( x ) {\\displaystyle h(x)} ⁠ value at each node.",
+      "char_count": 734,
+      "token_estimate": 183,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0013",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Termination and completeness ==",
+      "heading_path": "== = Termination and completeness ==",
+      "start_char": 9628,
+      "end_char": 10070,
+      "content": "== = Termination and completeness === On finite graphs with non-negative edge weights A* is guaranteed to terminate and is complete, i.e. it will always find a solution (a path from start to goal) if one exists. On infinite graphs with a finite branching factor and edge costs that are bounded away from zero ( d ( x , y ) > ε > 0 {\\textstyle d(x,y)>\\varepsilon >0} for some fixed ε {\\displaystyle \\varepsilon } ), A* is guaranteed to terminate only if there exists a solution.",
+      "char_count": 477,
+      "token_estimate": 119,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0014",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Admissibility ==",
+      "heading_path": "== = Admissibility ==",
+      "start_char": 10091,
+      "end_char": 10948,
+      "content": "== = Admissibility === A search algorithm is said to be admissible if it is guaranteed to return an optimal solution. If the heuristic function used by A* is admissible, then A* is admissible. An intuitive \"proof\" of this is as follows: Call a node closed if it has been visited and is not in the open set. We close a node when we remove it from the open set. A basic property of the A* algorithm, which we'll sketch a proof of below, is that when ⁠ n {\\displaystyle n} ⁠ is closed, ⁠ f ( n ) {\\displaystyle f(n)} ⁠ is an optimistic estimate (lower bound) of the true distance from the start to the goal. So when the goal node, ⁠ g {\\displaystyle g} ⁠, is closed, ⁠ f ( g ) {\\displaystyle f(g)} ⁠ is no more than the true distance. On the other hand, it is no less than the true distance, since it is the length of a path to the goal plus a heuristic term.",
+      "char_count": 856,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0015",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Admissibility ==",
+      "heading_path": "== = Admissibility ==",
+      "start_char": 10948,
+      "end_char": 11765,
+      "content": "Now we'll see that whenever a node ⁠ n {\\displaystyle n} ⁠ is closed, ⁠ f ( n ) {\\displaystyle f(n)} ⁠ is an optimistic estimate. It is enough to see that whenever the open set is not empty, it has at least one node ⁠ n {\\displaystyle n} ⁠ on an optimal path to the goal for which ⁠ g ( n ) {\\displaystyle g(n)} ⁠ is the true distance from start, since in that case ⁠ g ( n ) {\\displaystyle g(n)} ⁠ + ⁠ h ( n ) {\\displaystyle h(n)} ⁠ underestimates the distance to goal, and therefore so does the smaller value chosen for the closed vertex. Let ⁠ P {\\displaystyle P} ⁠ be an optimal path from the start to the goal. Let ⁠ p {\\displaystyle p} ⁠ be the last closed node on ⁠ P {\\displaystyle P} ⁠ for which ⁠ g ( p ) {\\displaystyle g(p)} ⁠ is the true distance from the start to the goal (the start is one such vertex).",
+      "char_count": 817,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0016",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Admissibility ==",
+      "heading_path": "== = Admissibility ==",
+      "start_char": 11766,
+      "end_char": 11954,
+      "content": "The next node in ⁠ P {\\displaystyle P} ⁠ has the correct ⁠ g {\\displaystyle g} ⁠ value, since it was updated when ⁠ p {\\displaystyle p} ⁠ was closed, and it is open since it is not closed.",
+      "char_count": 188,
+      "token_estimate": 47,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0017",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Optimality and consistency ==",
+      "heading_path": "== = Optimality and consistency ==",
+      "start_char": 11968,
+      "end_char": 12866,
+      "content": "== = Optimality and consistency === Algorithm A is optimally efficient with respect to a set of alternative algorithms Alts on a set of problems P if for every problem P in P and every algorithm A′ in Alts, the set of nodes expanded by A in solving P is a subset (possibly equal) of the set of nodes expanded by A′ in solving P. The definitive study of the optimal efficiency of A* is due to Rina Dechter and Judea Pearl. They considered a variety of definitions of Alts and P in combination with A*'s heuristic being merely admissible or being both consistent and admissible. The most interesting positive result they proved is that A*, with a consistent heuristic, is optimally efficient with respect to all admissible A*-like search algorithms on all \"non-pathological\" search problems. Roughly speaking, their notion of the non-pathological problem is what we now mean by \"up to tie-breaking\".",
+      "char_count": 897,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0018",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Optimality and consistency ==",
+      "heading_path": "== = Optimality and consistency ==",
+      "start_char": 12866,
+      "end_char": 13810,
+      "content": "This result does not hold if A*'s heuristic is admissible but not consistent. In that case, Dechter and Pearl showed there exist admissible A*-like algorithms that can expand arbitrarily fewer nodes than A* on some non-pathological problems. Optimal efficiency is about the set of nodes expanded, not the number of node expansions (the number of iterations of A*'s main loop). When the heuristic being used is admissible but not consistent, it is possible for a node to be expanded by A* many times, an exponential number of times in the worst case. In such circumstances, Dijkstra's algorithm could outperform A* by a large margin. However, more recent research found that this pathological case only occurs in certain contrived situations where the edge weight of the search graph is exponential in the size of the graph and that certain inconsistent (but admissible) heuristics can lead to a reduced number of node expansions in A* searches.",
+      "char_count": 944,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0019",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Bounded relaxation ==",
+      "heading_path": "== Bounded relaxation ==",
+      "start_char": 13801,
+      "end_char": 14677,
+      "content": "== Bounded relaxation == While the admissibility criterion guarantees an optimal solution path, it also means that A* must examine all equally meritorious paths to find the optimal path. To compute approximate shortest paths, it is possible to speed up the search at the expense of optimality by relaxing the admissibility criterion. Oftentimes we want to bound this relaxation, so that we can guarantee that the solution path is no worse than (1 + ε) times the optimal solution path. This new guarantee is referred to as ε-admissible. There are a number of ε-admissible algorithms: Weighted A*/Static Weighting's. If ha(n) is an admissible heuristic function, in the weighted version of the A* search one uses hw(n) = ε ha(n), ε > 1 as the heuristic function, and perform the A* search as usual (which eventually happens faster than using ha since fewer nodes are expanded).",
+      "char_count": 875,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0020",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Bounded relaxation ==",
+      "heading_path": "== Bounded relaxation ==",
+      "start_char": 14677,
+      "end_char": 15625,
+      "content": "The path hence found by the search algorithm can have a cost of at most ε times that of the least cost path in the graph. Convex Upward/Downward Parabola (XUP/XDP). Modification to the cost function in weighted A* to push optimality toward the start or goal. XDP gives paths which are near optimal close to the start, and XUP paths are near-optimal close to the goal. Both yield ϵ {\\displaystyle \\epsilon } -optimal paths overall. f XDP ( n ) = 1 2 ϵ [ g ( n ) + ( 2 ϵ − 1 ) + ( g ( n ) − h ( n ) ) 2 + 4 ϵ g ( n ) h ( n ) ] {\\displaystyle f_{\\text{XDP}}(n)={\\frac {1}{2\\epsilon }}\\left[\\ g(n)+(2\\epsilon -1)+{\\sqrt {(g(n)-h(n))^{2}+4\\epsilon g(n)h(n)}}\\ \\right]} . f XUP ( n ) = 1 2 ϵ [ g ( n ) + h ( n ) + ( g ( n ) + h ( n ) ) 2 + 4 ϵ ( ϵ − 1 ) h ( n ) 2 ] {\\displaystyle f_{\\text{XUP}}(n)={\\frac {1}{2\\epsilon }}\\left[\\ g(n)+h(n)+{\\sqrt {(g(n)+h(n))^{2}+4\\epsilon (\\epsilon -1)h(n)^{2}}}\\ \\right]} . Piecewise Upward/Downward Curve (pwXU/pwXD).",
+      "char_count": 948,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0021",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Bounded relaxation ==",
+      "heading_path": "== Bounded relaxation ==",
+      "start_char": 15626,
+      "end_char": 16502,
+      "content": "Similar to XUP/XDP but with piecewise functions instead of parabola. Solution paths are also ϵ {\\displaystyle \\epsilon } -optimal. f pwXD ( n ) = { g ( n ) + h ( n ) , if h ( n ) > g ( n ) g ( n ) + ( 2 ϵ − 1 ) h ( n ) / ϵ , if h ( n ) ≤ g ( n ) {\\displaystyle f_{\\text{pwXD}}(n)={\\begin{cases}g(n)+h(n),&{\\text{if }}h(n)>g(n)\\\\g(n)+(2\\epsilon -1)h(n)/\\epsilon ,&{\\text{if }}h(n)\\leq g(n)\\end{cases}}} f pwXU ( n ) = { g ( n ) / ( 2 ϵ − 1 ) + h ( n ) , if g ( n ) < ( 2 ϵ − 1 ) h ( n ) ( g ( n ) + h ( n ) ) / ϵ , if g ( n ) ≥ ( 2 ϵ − 1 ) h ( n ) {\\displaystyle f_{\\text{pwXU}}(n)={\\begin{cases}g(n)/(2\\epsilon -1)+h(n),&{\\text{if }}g(n)<(2\\epsilon -1)h(n)\\\\(g(n)+h(n))/\\epsilon ,&{\\text{if }}g(n)\\geq (2\\epsilon -1)h(n)\\end{cases}}} Dynamic Weighting uses the cost function ⁠ f ( n ) = g ( n ) + ( 1 + ε w ( n ) ) h ( n ) {\\displaystyle f(n)=g(n)+(1+\\varepsilon w(n))h(n)} ⁠,",
+      "char_count": 876,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0022",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Bounded relaxation ==",
+      "heading_path": "== Bounded relaxation ==",
+      "start_char": 16503,
+      "end_char": 17492,
+      "content": "where w ( n ) = { 1 − d ( n ) N d ( n ) ≤ N 0 otherwise {\\displaystyle w(n)={\\begin{cases}1-{\\frac {d(n)}{N}}&d(n)\\leq N\\\\0&{\\text{otherwise}}\\end{cases}}} , and where ⁠ d ( n ) {\\displaystyle d(n)} ⁠ is the depth of the search and N is the anticipated length of the solution path. Sampled Dynamic Weighting uses sampling of nodes to better estimate and debias the heuristic error. A ε ∗ {\\displaystyle A_{\\varepsilon }^{*}} . uses two heuristic functions. The first is the FOCAL list, which is used to select candidate nodes, and the second hF is used to select the most promising node from the FOCAL list. Aε selects nodes with the function ⁠ A f ( n ) + B h F ( n ) {\\displaystyle Af(n)+Bh_{F}(n)} ⁠, where A and B are constants. If no nodes can be selected, the algorithm will backtrack with the function ⁠ C f ( n ) + D h F ( n ) {\\displaystyle Cf(n)+Dh_{F}(n)} ⁠, where C and D are constants. AlphA* attempts to promote depth-first exploitation by preferring recently expanded nodes.",
+      "char_count": 989,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0023",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Bounded relaxation ==",
+      "heading_path": "== Bounded relaxation ==",
+      "start_char": 17493,
+      "end_char": 17950,
+      "content": "AlphA* uses the cost function f α ( n ) = ( 1 + w α ( n ) ) f ( n ) {\\displaystyle f_{\\alpha }(n)=(1+w_{\\alpha }(n))f(n)} , where w α ( n ) = { λ g ( π ( n ) ) ≤ g ( n ~ ) Λ otherwise {\\displaystyle w_{\\alpha }(n)={\\begin{cases}\\lambda &g(\\pi (n))\\leq g({\\tilde {n}})\\\\\\Lambda &{\\text{otherwise}}\\end{cases}}} , where λ and Λ are constants with λ ≤ Λ {\\displaystyle \\lambda \\leq \\Lambda } , π(n) is the parent of n, and ñ is the most recently expanded node.",
+      "char_count": 457,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0024",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== Complexity ==",
+      "heading_path": "== Complexity ==",
+      "start_char": 17943,
+      "end_char": 18291,
+      "content": "== Complexity == As a heuristic search algorithm, the performance of A* is heavily influenced by the quality of the heuristic function h ( n ) {\\textstyle h(n)} . If the heuristic closely approximates the true cost to the goal, A* can significantly reduce the number of node expansions. On the other hand, a poor heuristic can lead to many unnecessary expansions.",
+      "char_count": 363,
+      "token_estimate": 90,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "asearchalgorithm_e5d265d4_c0025",
+      "article_id": "asearchalgorithm_e5d265d4",
+      "section": "== = Worst-Case Scenario ==",
+      "heading_path": "== = Worst-Case Scenario ==",
+      "start_char": 18318,
+      "end_char": 18528,
+      "content": "== = Worst-Case Scenario === In the worst case, A* expands all nodes n {\\textstyle n} for which f ( n ) = g ( n ) + h ( n ) ≤ C ∗ {\\textstyle f(n)=g(n)+h(n)\\leq C^{*}} , where C ∗ {\\textstyle C^{*}} is the cost of the optimal goal node.",
+      "char_count": 236,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is the goal of the AlphA* algorithm?",
+        "answer": "The AlphA* algorithm attempts to promote depth-first exploitation by preferring recently expanded nodes.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0022"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the formula that the A* search algorithm uses to select which path to extend?",
+        "answer": "The A* algorithm selects the path that minimizes the function f(n) = g(n) + h(n), where n is the next node, g(n) is the cost of the path from the start node to n, and h(n) is a heuristic function estimating the cost from n to the goal.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0004"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Under what circumstances could Dijkstra's algorithm outperform the A* algorithm?",
+        "answer": "Dijkstra's algorithm could outperform A* by a large margin when A*'s heuristic is admissible but not consistent. This is because in such situations, a node can be expanded by A* multiple times, even an exponential number of times in the worst case.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0018"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Summarize the development of the A* algorithm, including its creators, original purpose, and key features that distinguish it from other pathfinding methods.",
+        "answer": "The A* algorithm was first published in 1968 by Peter Hart, Nils Nilsson, and Bertram Raphael. It was created as part of the Shakey project, which aimed to build a mobile robot capable of planning its own actions. The algorithm evolved from Nilsson's proposal to use the Graph Traverser algorithm, with Raphael suggesting the addition of the distance from the start node (g(n)) to the heuristic function (h(n)), and Hart inventing the concepts of admissibility and consistency. A* is a complete and optimal pathfinding algorithm that extends Dijkstra's algorithm by using heuristics to guide its search toward a specific goal, making it more efficient for single-path queries. However, a significant drawback is its high space complexity (O(b^d)), as it stores all generated nodes in memory.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0000",
+          "asearchalgorithm_e5d265d4_c0001",
+          "asearchalgorithm_e5d265d4_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How do the properties of admissibility and consistency in a heuristic function affect the performance and guarantees of the A* search algorithm?",
+        "answer": "In the A* algorithm, if the heuristic function is admissible, meaning it never overestimates the cost to the goal, the algorithm is guaranteed to find a least-cost path. However, for A* to be optimally efficient (expanding the fewest nodes possible for an A*-like algorithm), the heuristic function must be consistent. A heuristic that is admissible but not consistent can result in A* expanding more nodes than an alternative algorithm, even though it will still find the least-cost path.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0003",
+          "asearchalgorithm_e5d265d4_c0004",
+          "asearchalgorithm_e5d265d4_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain how the A* algorithm's behavior regarding node processing differs when using a consistent heuristic versus one that is only admissible but not consistent.",
+        "answer": "A heuristic `h` is consistent if for every edge (x, y), `h(x) ≤ d(x, y) + h(y)`. With a consistent heuristic, A* is guaranteed to find an optimal path without processing any node more than once. When a node is removed from the `openSet`, the path to it is optimal, so any subsequent path found to that node will not be cheaper, and the node will not be re-added to the `openSet`. Conversely, if the heuristic is admissible but not consistent, a node might be reached and removed from `openSet`, and later reached again via a cheaper path. In this scenario, the algorithm must add the node back to `openSet` to guarantee that the final returned path is optimal.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0006",
+          "asearchalgorithm_e5d265d4_c0007",
+          "asearchalgorithm_e5d265d4_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What is the relationship between the A* and Dijkstra's algorithms, and what is a major practical drawback of A*?",
+        "answer": "A* is considered an extension of Dijkstra's algorithm. It improves performance by using heuristics to find the shortest path to a specific goal, whereas Dijkstra's algorithm finds the shortest-path tree to all possible goals. A major practical drawback of A* is its O(b^d) space complexity, as it stores all generated nodes in memory.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0000",
+          "asearchalgorithm_e5d265d4_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How did the understanding of the importance of heuristic consistency for the A* algorithm evolve from its initial conception to later analysis?",
+        "answer": "Peter Hart first invented the concept of consistency for heuristic functions during the A* algorithm's creation. The original 1968 paper on A* contained a theorem stating that with a consistent heuristic, no similar algorithm could expand fewer nodes. Although a later publication incorrectly claimed consistency was not required, a definitive 1985 study by Dechter and Pearl proved this false. Their work showed that an A* algorithm with a heuristic that was admissible but not consistent could expand arbitrarily more nodes than another A*-like algorithm, thus cementing the importance of consistency for A*'s optimal efficiency.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0002",
+          "asearchalgorithm_e5d265d4_c0003"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the two key properties a heuristic function can have in the A* algorithm, and what guarantees does each property provide about the algorithm's result and performance?",
+        "answer": "The two key properties for a heuristic function are admissibility and consistency. An admissible heuristic is one that never overestimates the actual cost to get to the goal; if the heuristic is admissible, A* is guaranteed to return a least-cost path. A consistent (or monotone) heuristic is one that satisfies the condition h(x) ≤ d(x, y) + h(y) for every edge (x, y). With a consistent heuristic, A* is guaranteed to find an optimal path without processing any node more than once.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0004",
+          "asearchalgorithm_e5d265d4_c0005",
+          "asearchalgorithm_e5d265d4_c0006",
+          "asearchalgorithm_e5d265d4_c0007"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What is the recommended approach for handling a node that is about to be added to the priority queue but may already be present?",
+        "answer": "To prevent a node from appearing in the priority queue more than once, a standard approach is to check if the node is already in the queue before adding it. If it is, the priority and parent pointers are updated to reflect the lower-cost path. This decrease-priority operation can be implemented in logarithmic time using a binary heap augmented with a hash table, or in constant amortized time using a Fibonacci heap.",
+        "related_chunk_ids": [
+          "asearchalgorithm_e5d265d4_c0010",
+          "asearchalgorithm_e5d265d4_c0011"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:30.520Z",
+    "content_format": "markdown",
+    "total_chunks": 26,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,555 @@
+{
+  "article": {
+    "id": "distributedcomputing_de92816b",
+    "title": "Distributed computing",
+    "url": "https://en.wikipedia.org/wiki/Distributed_computing",
+    "lang": "en",
+    "created_at": "2025-07-30T10:34:06.846585",
+    "content": "---\nid: distributedcomputing_de92816b\nurl: https://en.wikipedia.org/wiki/Distributed_computing\ntitle: Distributed computing\nlang: en\ncreated_at: '2025-07-30T10:30:55.967342'\nchecksum: a3960df4c9afa0cf0ded899bb0d9a7a93d320387a4afba5a429510ee8952447c\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4098\n  char_count: 27724\n  num_chunks: 34\n  original_chunks: 46\n  filtered_out: 12\n  num_sections: 0\n---\nDistributed computing is a field of computer science that studies distributed systems, defined as computer systems whose inter-communicating components are located on different networked computers. The components of a distributed system communicate and coordinate their actions by passing messages to one another in order to achieve a common goal. Three significant challenges of distributed systems are: maintaining concurrency of components, overcoming the lack of a global clock, and managing the independent failure of components. When a component of one system fails, the entire system does not fail. Examples of distributed systems vary from SOA-based systems to microservices to massively multiplayer online games to peer-to-peer applications. Distributed systems cost significantly more than monolithic architectures, primarily due to increased needs for additional hardware, servers, gateways, firewalls, new subnets, proxies, and so on. Also, distributed systems are prone to fallacies of distributed computing. On the other hand, a well designed distributed system is more scalable, more durable, more changeable and more fine-tuned than a monolithic application deployed on a single machine. According to Marc Brooker: \"a system is scalable in the range where marginal cost of additional workload is nearly constant.\" Serverless technologies fit this definition but the total cost of ownership, and not just the infra cost must be considered. A computer program that runs within a distributed system is called a distributed program, and distributed programming is the process of writing such programs. There are many different types of implementations for the message passing mechanism, including pure HTTP, RPC-like connectors and message queues. Distributed computing also refers to the use of distributed systems to solve computational problems. In distributed computing, a problem is divided into many tasks, each of which is solved by one or more computers, which communicate with each other via message passing. == Introduction == The word distributed in terms such as \"distributed system\", \"distributed programming\", and \"distributed algorithm\" originally referred to computer networks where individual computers were physically distributed within some geographical area. The terms are nowadays used in a much wider sense, even referring to autonomous processes that run on the same physical computer and interact with each other by message passing. While there is no single definition of a distributed system, the following defining properties are commonly used as: There are several autonomous computational entities (computers or nodes), each of which has its own local memory. The entities communicate with each other by message passing. A distributed system may have a common goal, such as solving a large computational problem; the user then perceives the collection of autonomous processors as a unit. Alternatively, each computer may have its own user with individual needs, and the purpose of the distributed system is to coordinate the use of shared resources or provide communication services to the users. Other typical properties of distributed systems include the following: The system has to tolerate failures in individual computers. The structure of the system (network topology, network latency, number of computers) is not known in advance, the system may consist of different kinds of computers and network links, and the system may change during the execution of a distributed program. Each computer has only a limited, incomplete view of the system. Each computer may know only one part of the input. == Patterns == Here are common architectural patterns used for distributed computing: Saga interaction pattern Microservices Event driven architecture == Events vs. Messages == In distributed systems, events represent a fact or state change (e.g., OrderPlaced) and are typically broadcast asynchronously to multiple consumers, promoting loose coupling and scalability. While events generally don’t expect an immediate response, acknowledgment mechanisms are often implemented at the infrastructure level (e.g., Kafka commit offsets, SNS delivery statuses) rather than being an inherent part of the event pattern itself. In contrast, messages serve a broader role, encompassing commands (e.g., ProcessPayment), events (e.g., PaymentProcessed), and documents (e.g., DataPayload). Both events and messages can support various delivery guarantees, including at-least-once, at-most-once, and exactly-once, depending on the technology stack and implementation. However, exactly-once delivery is often achieved through idempotency mechanisms rather than true, infrastructure-level exactly-once semantics. Delivery patterns for both events and messages include publish/subscribe (one-to-many) and point-to-point (one-to-one). While request/reply is technically possible, it is more commonly associated with messaging patterns rather than pure event-driven systems. Events excel at state propagation and decoupled notifications, while messages are better suited for command execution, workflow orchestration, and explicit coordination. Modern architectures commonly combine both approaches, leveraging events for distributed state change notifications and messages for targeted command execution and structured workflows based on specific timing, ordering, and delivery requirements. == Parallel and distributed computing == Distributed systems are groups of networked computers which share a common goal for their work. The terms \"concurrent computing\", \"parallel computing\", and \"distributed computing\" have much overlap, and no clear distinction exists between them. The same system may be characterized both as \"parallel\" and \"distributed\"; the processors in a typical distributed system run concurrently in parallel. Parallel computing may be seen as a particularly tightly coupled form of distributed computing, and distributed computing may be seen as a loosely coupled form of parallel computing. Nevertheless, it is possible to roughly classify concurrent systems as \"parallel\" or \"distributed\" using the following criteria: In parallel computing, all processors may have access to a shared memory to exchange information between processors. In distributed computing, each processor has its own private memory (distributed memory). Information is exchanged by passing messages between the processors. The figure on the right illustrates the difference between distributed and parallel systems. Figure (a) is a schematic view of a typical distributed system; the system is represented as a network topology in which each node is a computer and each line connecting the nodes is a communication link. Figure (b) shows the same distributed system in more detail: each computer has its own local memory, and information can be exchanged only by passing messages from one node to another by using the available communication links. Figure (c) shows a parallel system in which each processor has a direct access to a shared memory. The situation is further complicated by the traditional uses of the terms parallel and distributed algorithm that do not quite match the above definitions of parallel and distributed systems (see below for more detailed discussion). Nevertheless, as a rule of thumb, high-performance parallel computation in a shared-memory multiprocessor uses parallel algorithms while the coordination of a large-scale distributed system uses distributed algorithms. == History == The use of concurrent processes which communicate through message-passing has its roots in operating system architectures studied in the 1960s. The first widespread distributed systems were local-area networks such as Ethernet, which was invented in the 1970s. ARPANET, one of the predecessors of the Internet, was introduced in the late 1960s, and ARPANET e-mail was invented in the early 1970s. E-mail became the most successful application of ARPANET, and it is probably the earliest example of a large-scale distributed application. In addition to ARPANET (and its successor, the global Internet), other early worldwide computer networks included Usenet and FidoNet from the 1980s, both of which were used to support distributed discussion systems. The study of distributed computing became its own branch of computer science in the late 1970s and early 1980s. The first conference in the field, Symposium on Principles of Distributed Computing (PODC), dates back to 1982, and its counterpart International Symposium on Distributed Computing (DISC) was first held in Ottawa in 1985 as the International Workshop on Distributed Algorithms on Graphs. == Architectures == Various hardware and software architectures are used for distributed computing. At a lower level, it is necessary to interconnect multiple CPUs with some sort of network, regardless of whether that network is printed onto a circuit board or made up of loosely coupled devices and cables. At a higher level, it is necessary to interconnect processes running on those CPUs with some sort of communication system. Whether these CPUs share resources or not determines a first distinction between three types of architecture: Shared memory Shared disk Shared nothing. Distributed programming typically falls into one of several basic architectures: client–server, three-tier, n-tier, or peer-to-peer; or categories: loose coupling, or tight coupling. Client–server: architectures where smart clients contact the server for data then format and display it to the users. Input at the client is committed back to the server when it represents a permanent change. Three-tier: architectures that move the client intelligence to a middle tier so that stateless clients can be used. This simplifies application deployment. Most web applications are three-tier. n-tier: architectures that refer typically to web applications which further forward their requests to other enterprise services. This type of application is the one most responsible for the success of application servers. Peer-to-peer: architectures where there are no special machines that provide a service or manage the network resources. Instead all responsibilities are uniformly divided among all machines, known as peers. Peers can serve both as clients and as servers. Examples of this architecture include BitTorrent and the bitcoin network. Another basic aspect of distributed computing architecture is the method of communicating and coordinating work among concurrent processes. Through various message passing protocols, processes may communicate directly with one another, typically in a main/sub relationship. Alternatively, a \"database-centric\" architecture can enable distributed computing to be done without any form of direct inter-process communication, by utilizing a shared database. Database-centric architecture in particular provides relational processing analytics in a schematic architecture allowing for live environment relay. This enables distributed computing functions both within and beyond the parameters of a networked database. === Cell-Based Architecture === Cell-based architecture is a distributed computing approach in which computational resources are organized into self-contained units called cells. Each cell operates independently, processing requests while maintaining scalability, fault isolation, and availability. A cell typically consists of multiple services or application components and functions as an autonomous unit. Some implementations replicate entire sets of services across multiple cells, while others partition workloads between cells. In replicated models, requests may be rerouted to an operational cell if another experiences a failure. This design is intended to enhance system resilience by reducing the impact of localized failures. Some implementations employ circuit breakers within and between cells. Within a cell, circuit breakers may be used to prevent cascading failures among services, while inter-cell circuit breakers can isolate failing cells and redirect traffic to those that remain operational. Cell-based architecture has been adopted in some large-scale distributed systems, particularly in cloud-native and high-availability environments, where fault isolation and redundancy are key design considerations. Its implementation varies depending on system requirements, infrastructure constraints, and operational objectives. == Applications == Reasons for using distributed systems and distributed computing may include: The very nature of an application may require the use of a communication network that connects several computers: for example, data produced in one physical location and required in another location. There are many cases in which the use of a single computer would be possible in principle, but the use of a distributed system is beneficial for practical reasons. For example: It can allow for much larger storage and memory, faster compute, and higher bandwidth than a single machine. It can provide more reliability than a non-distributed system, as there is no single point of failure. Moreover, a distributed system may be easier to expand and manage than a monolithic uniprocessor system. It may be more cost-efficient to obtain the desired level of performance by using a cluster of several low-end computers, in comparison with a single high-end computer. == Examples == Examples of distributed systems and applications of distributed computing include the following: telecommunications networks: telephone networks and cellular networks, computer networks such as the Internet, wireless sensor networks, routing algorithms; network applications: World Wide Web and peer-to-peer networks, massively multiplayer online games and virtual reality communities, distributed databases and distributed database management systems, network file systems, distributed cache such as burst buffers, distributed information processing systems such as banking systems and airline reservation systems; real-time process control: aircraft control systems, industrial control systems; parallel computation: scientific computing, including cluster computing, grid computing, cloud computing, and various volunteer computing projects, distributed rendering in computer graphics. peer-to-peer == Reactive distributed systems == According to Reactive Manifesto, reactive distributed systems are responsive, resilient, elastic and message-driven. Subsequently, Reactive systems are more flexible, loosely-coupled and scalable. To make your systems reactive, you are advised to implement Reactive Principles. Reactive Principles are a set of principles and patterns which help to make your cloud native application as well as edge native applications more reactive. == Theoretical foundations == === Models === Many tasks that we would like to automate by using a computer are of question–answer type: we would like to ask a question and the computer should produce an answer. In theoretical computer science, such tasks are called computational problems. Formally, a computational problem consists of instances together with a solution for each instance. Instances are questions that we can ask, and solutions are desired answers to these questions. Theoretical computer science seeks to understand which computational problems can be solved by using a computer (computability theory) and how efficiently (computational complexity theory). Traditionally, it is said that a problem can be solved by using a computer if we can design an algorithm that produces a correct solution for any given instance. Such an algorithm can be implemented as a computer program that runs on a general-purpose computer: the program reads a problem instance from input, performs some computation, and produces the solution as output. Formalisms such as random-access machines or universal Turing machines can be used as abstract models of a sequential general-purpose computer executing such an algorithm. The field of concurrent and distributed computing studies similar questions in the case of either multiple computers, or a computer that executes a network of interacting processes: which computational problems can be solved in such a network and how efficiently? However, it is not at all obvious what is meant by \"solving a problem\" in the case of a concurrent or distributed system: for example, what is the task of the algorithm designer, and what is the concurrent or distributed equivalent of a sequential general-purpose computer? The discussion below focuses on the case of multiple computers, although many of the issues are the same for concurrent processes running on a single computer. Three viewpoints are commonly used: Parallel algorithms in shared-memory model All processors have access to a shared memory. The algorithm designer chooses the program executed by each processor. One theoretical model is the parallel random-access machines (PRAM) that are used. However, the classical PRAM model assumes synchronous access to the shared memory. Shared-memory programs can be extended to distributed systems if the underlying operating system encapsulates the communication between nodes and virtually unifies the memory across all individual systems. A model that is closer to the behavior of real-world multiprocessor machines and takes into account the use of machine instructions, such as Compare-and-swap (CAS), is that of asynchronous shared memory. There is a wide body of work on this model, a summary of which can be found in the literature. Parallel algorithms in message-passing model The algorithm designer chooses the structure of the network, as well as the program executed by each computer. Models such as Boolean circuits and sorting networks are used. A Boolean circuit can be seen as a computer network: each gate is a computer that runs an extremely simple computer program. Similarly, a sorting network can be seen as a computer network: each comparator is a computer. Distributed algorithms in message-passing model The algorithm designer only chooses the computer program. All computers run the same program. The system must work correctly regardless of the structure of the network. A commonly used model is a graph with one finite-state machine per node. In the case of distributed algorithms, computational problems are typically related to graphs. Often the graph that describes the structure of the computer network is the problem instance. This is illustrated in the following example. === An example === Consider the computational problem of finding a coloring of a given graph G. Different fields might take the following approaches: Centralized algorithms The graph G is encoded as a string, and the string is given as input to a computer. The computer program finds a coloring of the graph, encodes the coloring as a string, and outputs the result. Parallel algorithms Again, the graph G is encoded as a string. However, multiple computers can access the same string in parallel. Each computer might focus on one part of the graph and produce a coloring for that part. The main focus is on high-performance computation that exploits the processing power of multiple computers in parallel. Distributed algorithms The graph G is the structure of the computer network. There is one computer for each node of G and one communication link for each edge of G. Initially, each computer only knows about its immediate neighbors in the graph G; the computers must exchange messages with each other to discover more about the structure of G. Each computer must produce its own color as output. The main focus is on coordinating the operation of an arbitrary distributed system. While the field of parallel algorithms has a different focus than the field of distributed algorithms, there is much interaction between the two fields. For example, the Cole–Vishkin algorithm for graph coloring was originally presented as a parallel algorithm, but the same technique can also be used directly as a distributed algorithm. Moreover, a parallel algorithm can be implemented either in a parallel system (using shared memory) or in a distributed system (using message passing). The traditional boundary between parallel and distributed algorithms (choose a suitable network vs. run in any given network) does not lie in the same place as the boundary between parallel and distributed systems (shared memory vs. message passing). === Complexity measures === In parallel algorithms, yet another resource in addition to time and space is the number of computers. Indeed, often there is a trade-off between the running time and the number of computers: the problem can be solved faster if there are more computers running in parallel (see speedup). If a decision problem can be solved in polylogarithmic time by using a polynomial number of processors, then the problem is said to be in the class NC. The class NC can be defined equally well by using the PRAM formalism or Boolean circuits—PRAM machines can simulate Boolean circuits efficiently and vice versa. In the analysis of distributed algorithms, more attention is usually paid on communication operations than computational steps. Perhaps the simplest model of distributed computing is a synchronous system where all nodes operate in a lockstep fashion. This model is commonly known as the LOCAL model. During each communication round, all nodes in parallel (1) receive the latest messages from their neighbours, (2) perform arbitrary local computation, and (3) send new messages to their neighbors. In such systems, a central complexity measure is the number of synchronous communication rounds required to complete the task. This complexity measure is closely related to the diameter of the network. Let D be the diameter of the network. On the one hand, any computable problem can be solved trivially in a synchronous distributed system in approximately 2D communication rounds: simply gather all information in one location (D rounds), solve the problem, and inform each node about the solution (D rounds). On the other hand, if the running time of the algorithm is much smaller than D communication rounds, then the nodes in the network must produce their output without having the possibility to obtain information about distant parts of the network. In other words, the nodes must make globally consistent decisions based on information that is available in their local D-neighbourhood. Many distributed algorithms are known with the running time much smaller than D rounds, and understanding which problems can be solved by such algorithms is one of the central research questions of the field. Typically an algorithm which solves a problem in polylogarithmic time in the network size is considered efficient in this model. Another commonly used measure is the total number of bits transmitted in the network (cf. communication complexity). The features of this concept are typically captured with the CONGEST(B) model, which is similarly defined as the LOCAL model, but where single messages can only contain B bits. === Other problems === Traditional computational problems take the perspective that the user asks a question, a computer (or a distributed system) processes the question, then produces an answer and stops. However, there are also problems where the system is required not to stop, including the dining philosophers problem and other similar mutual exclusion problems. In these problems, the distributed system is supposed to continuously coordinate the use of shared resources so that no conflicts or deadlocks occur. There are also fundamental challenges that are unique to distributed computing, for example those related to fault-tolerance. Examples of related problems include consensus problems, Byzantine fault tolerance, and self-stabilisation. Much research is also focused on understanding the asynchronous nature of distributed systems: Synchronizers can be used to run synchronous algorithms in asynchronous systems. Logical clocks provide a causal happened-before ordering of events. Clock synchronization algorithms provide globally consistent physical time stamps. Note that in distributed systems, latency should be measured through \"99th percentile\" because \"median\" and \"average\" can be misleading. === Election === Coordinator election (or leader election) is the process of designating a single process as the organizer of some task distributed among several computers (nodes). Before the task is begun, all network nodes are either unaware which node will serve as the \"coordinator\" (or leader) of the task, or unable to communicate with the current coordinator. After a coordinator election algorithm has been run, however, each node throughout the network recognizes a particular, unique node as the task coordinator. The network nodes communicate among themselves in order to decide which of them will get into the \"coordinator\" state. For that, they need some method in order to break the symmetry among them. For example, if each node has unique and comparable identities, then the nodes can compare their identities, and decide that the node with the highest identity is the coordinator. The definition of this problem is often attributed to LeLann, who formalized it as a method to create a new token in a token ring network in which the token has been lost. Coordinator election algorithms are designed to be economical in terms of total bytes transmitted, and time. The algorithm suggested by Gallager, Humblet, and Spira for general undirected graphs has had a strong impact on the design of distributed algorithms in general, and won the Dijkstra Prize for an influential paper in distributed computing. Many other algorithms were suggested for different kinds of network graphs, such as undirected rings, unidirectional rings, complete graphs, grids, directed Euler graphs, and others. A general method that decouples the issue of the graph family from the design of the coordinator election algorithm was suggested by Korach, Kutten, and Moran. In order to perform coordination, distributed systems employ the concept of coordinators. The coordinator election problem is to choose a process from among a group of processes on different processors in a distributed system to act as the central coordinator. Several central coordinator election algorithms exist. === Properties of distributed systems === So far the focus has been on designing a distributed system that solves a given problem. A complementary research problem is studying the properties of a given distributed system. The halting problem is an analogous example from the field of centralised computation: we are given a computer program and the task is to decide whether it halts or runs forever. The halting problem is undecidable in the general case, and naturally understanding the behaviour of a computer network is at least as hard as understanding the behaviour of one computer. However, there are many interesting special cases that are decidable. In particular, it is possible to reason about the behaviour of a network of finite-state machines. One example is telling whether a given network of interacting (asynchronous and non-deterministic) finite-state machines can reach a deadlock. This problem is PSPACE-complete, i.e., it is decidable, but not likely that there is an efficient (centralised, parallel or distributed) algorithm that solves the problem in the case of large networks. === Other Topics === Linearizability == See also == == Notes == == References == == Further reading == == External links == Media related to Distributed computing at Wikimedia Commons"
+  },
+  "chunks": [
+    {
+      "id": "distributedcomputing_de92816b_c0000",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 947,
+      "content": "Distributed computing is a field of computer science that studies distributed systems, defined as computer systems whose inter-communicating components are located on different networked computers. The components of a distributed system communicate and coordinate their actions by passing messages to one another in order to achieve a common goal. Three significant challenges of distributed systems are: maintaining concurrency of components, overcoming the lack of a global clock, and managing the independent failure of components. When a component of one system fails, the entire system does not fail. Examples of distributed systems vary from SOA-based systems to microservices to massively multiplayer online games to peer-to-peer applications. Distributed systems cost significantly more than monolithic architectures, primarily due to increased needs for additional hardware, servers, gateways, firewalls, new subnets, proxies, and so on.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0001",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 947,
+      "end_char": 1860,
+      "content": "Also, distributed systems are prone to fallacies of distributed computing. On the other hand, a well designed distributed system is more scalable, more durable, more changeable and more fine-tuned than a monolithic application deployed on a single machine. According to Marc Brooker: \"a system is scalable in the range where marginal cost of additional workload is nearly constant.\" Serverless technologies fit this definition but the total cost of ownership, and not just the infra cost must be considered. A computer program that runs within a distributed system is called a distributed program, and distributed programming is the process of writing such programs. There are many different types of implementations for the message passing mechanism, including pure HTTP, RPC-like connectors and message queues. Distributed computing also refers to the use of distributed systems to solve computational problems.",
+      "char_count": 913,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0002",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 2048,
+      "end_char": 2946,
+      "content": "== Introduction == The word distributed in terms such as \"distributed system\", \"distributed programming\", and \"distributed algorithm\" originally referred to computer networks where individual computers were physically distributed within some geographical area. The terms are nowadays used in a much wider sense, even referring to autonomous processes that run on the same physical computer and interact with each other by message passing. While there is no single definition of a distributed system, the following defining properties are commonly used as: There are several autonomous computational entities (computers or nodes), each of which has its own local memory. The entities communicate with each other by message passing. A distributed system may have a common goal, such as solving a large computational problem; the user then perceives the collection of autonomous processors as a unit.",
+      "char_count": 897,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0003",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 2946,
+      "end_char": 3659,
+      "content": "Alternatively, each computer may have its own user with individual needs, and the purpose of the distributed system is to coordinate the use of shared resources or provide communication services to the users. Other typical properties of distributed systems include the following: The system has to tolerate failures in individual computers. The structure of the system (network topology, network latency, number of computers) is not known in advance, the system may consist of different kinds of computers and network links, and the system may change during the execution of a distributed program. Each computer has only a limited, incomplete view of the system. Each computer may know only one part of the input.",
+      "char_count": 713,
+      "token_estimate": 178,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0004",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Events vs. Messages ==",
+      "heading_path": "== Events vs. Messages ==",
+      "start_char": 3818,
+      "end_char": 4765,
+      "content": "== Events vs. Messages == In distributed systems, events represent a fact or state change (e.g., OrderPlaced) and are typically broadcast asynchronously to multiple consumers, promoting loose coupling and scalability. While events generally don’t expect an immediate response, acknowledgment mechanisms are often implemented at the infrastructure level (e.g., Kafka commit offsets, SNS delivery statuses) rather than being an inherent part of the event pattern itself. In contrast, messages serve a broader role, encompassing commands (e.g., ProcessPayment), events (e.g., PaymentProcessed), and documents (e.g., DataPayload). Both events and messages can support various delivery guarantees, including at-least-once, at-most-once, and exactly-once, depending on the technology stack and implementation. However, exactly-once delivery is often achieved through idempotency mechanisms rather than true, infrastructure-level exactly-once semantics.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0005",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Events vs. Messages ==",
+      "heading_path": "== Events vs. Messages ==",
+      "start_char": 4765,
+      "end_char": 5441,
+      "content": "Delivery patterns for both events and messages include publish/subscribe (one-to-many) and point-to-point (one-to-one). While request/reply is technically possible, it is more commonly associated with messaging patterns rather than pure event-driven systems. Events excel at state propagation and decoupled notifications, while messages are better suited for command execution, workflow orchestration, and explicit coordination. Modern architectures commonly combine both approaches, leveraging events for distributed state change notifications and messages for targeted command execution and structured workflows based on specific timing, ordering, and delivery requirements.",
+      "char_count": 676,
+      "token_estimate": 169,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0006",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Parallel and distributed computing ==",
+      "heading_path": "== Parallel and distributed computing ==",
+      "start_char": 5457,
+      "end_char": 6414,
+      "content": "== Parallel and distributed computing == Distributed systems are groups of networked computers which share a common goal for their work. The terms \"concurrent computing\", \"parallel computing\", and \"distributed computing\" have much overlap, and no clear distinction exists between them. The same system may be characterized both as \"parallel\" and \"distributed\"; the processors in a typical distributed system run concurrently in parallel. Parallel computing may be seen as a particularly tightly coupled form of distributed computing, and distributed computing may be seen as a loosely coupled form of parallel computing. Nevertheless, it is possible to roughly classify concurrent systems as \"parallel\" or \"distributed\" using the following criteria: In parallel computing, all processors may have access to a shared memory to exchange information between processors. In distributed computing, each processor has its own private memory (distributed memory).",
+      "char_count": 956,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0007",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Parallel and distributed computing ==",
+      "heading_path": "== Parallel and distributed computing ==",
+      "start_char": 6414,
+      "end_char": 7340,
+      "content": "Information is exchanged by passing messages between the processors. The figure on the right illustrates the difference between distributed and parallel systems. Figure (a) is a schematic view of a typical distributed system; the system is represented as a network topology in which each node is a computer and each line connecting the nodes is a communication link. Figure (b) shows the same distributed system in more detail: each computer has its own local memory, and information can be exchanged only by passing messages from one node to another by using the available communication links. Figure (c) shows a parallel system in which each processor has a direct access to a shared memory. The situation is further complicated by the traditional uses of the terms parallel and distributed algorithm that do not quite match the above definitions of parallel and distributed systems (see below for more detailed discussion).",
+      "char_count": 926,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0008",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 7533,
+      "end_char": 8412,
+      "content": "== History == The use of concurrent processes which communicate through message-passing has its roots in operating system architectures studied in the 1960s. The first widespread distributed systems were local-area networks such as Ethernet, which was invented in the 1970s. ARPANET, one of the predecessors of the Internet, was introduced in the late 1960s, and ARPANET e-mail was invented in the early 1970s. E-mail became the most successful application of ARPANET, and it is probably the earliest example of a large-scale distributed application. In addition to ARPANET (and its successor, the global Internet), other early worldwide computer networks included Usenet and FidoNet from the 1980s, both of which were used to support distributed discussion systems. The study of distributed computing became its own branch of computer science in the late 1970s and early 1980s.",
+      "char_count": 878,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0009",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 8412,
+      "end_char": 8699,
+      "content": "The first conference in the field, Symposium on Principles of Distributed Computing (PODC), dates back to 1982, and its counterpart International Symposium on Distributed Computing (DISC) was first held in Ottawa in 1985 as the International Workshop on Distributed Algorithms on Graphs.",
+      "char_count": 287,
+      "token_estimate": 71,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0010",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Architectures ==",
+      "heading_path": "== Architectures ==",
+      "start_char": 8706,
+      "end_char": 9681,
+      "content": "== Architectures == Various hardware and software architectures are used for distributed computing. At a lower level, it is necessary to interconnect multiple CPUs with some sort of network, regardless of whether that network is printed onto a circuit board or made up of loosely coupled devices and cables. At a higher level, it is necessary to interconnect processes running on those CPUs with some sort of communication system. Whether these CPUs share resources or not determines a first distinction between three types of architecture: Shared memory Shared disk Shared nothing. Distributed programming typically falls into one of several basic architectures: client–server, three-tier, n-tier, or peer-to-peer; or categories: loose coupling, or tight coupling. Client–server: architectures where smart clients contact the server for data then format and display it to the users. Input at the client is committed back to the server when it represents a permanent change.",
+      "char_count": 974,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0011",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Architectures ==",
+      "heading_path": "== Architectures ==",
+      "start_char": 9681,
+      "end_char": 10566,
+      "content": "Three-tier: architectures that move the client intelligence to a middle tier so that stateless clients can be used. This simplifies application deployment. Most web applications are three-tier. n-tier: architectures that refer typically to web applications which further forward their requests to other enterprise services. This type of application is the one most responsible for the success of application servers. Peer-to-peer: architectures where there are no special machines that provide a service or manage the network resources. Instead all responsibilities are uniformly divided among all machines, known as peers. Peers can serve both as clients and as servers. Examples of this architecture include BitTorrent and the bitcoin network. Another basic aspect of distributed computing architecture is the method of communicating and coordinating work among concurrent processes.",
+      "char_count": 885,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0012",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Architectures ==",
+      "heading_path": "== Architectures ==",
+      "start_char": 10567,
+      "end_char": 11139,
+      "content": "Through various message passing protocols, processes may communicate directly with one another, typically in a main/sub relationship. Alternatively, a \"database-centric\" architecture can enable distributed computing to be done without any form of direct inter-process communication, by utilizing a shared database. Database-centric architecture in particular provides relational processing analytics in a schematic architecture allowing for live environment relay. This enables distributed computing functions both within and beyond the parameters of a networked database.",
+      "char_count": 572,
+      "token_estimate": 143,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0013",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Cell-Based Architecture ==",
+      "heading_path": "== = Cell-Based Architecture ==",
+      "start_char": 11152,
+      "end_char": 11962,
+      "content": "== = Cell-Based Architecture === Cell-based architecture is a distributed computing approach in which computational resources are organized into self-contained units called cells. Each cell operates independently, processing requests while maintaining scalability, fault isolation, and availability. A cell typically consists of multiple services or application components and functions as an autonomous unit. Some implementations replicate entire sets of services across multiple cells, while others partition workloads between cells. In replicated models, requests may be rerouted to an operational cell if another experiences a failure. This design is intended to enhance system resilience by reducing the impact of localized failures. Some implementations employ circuit breakers within and between cells.",
+      "char_count": 809,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0014",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Cell-Based Architecture ==",
+      "heading_path": "== = Cell-Based Architecture ==",
+      "start_char": 11962,
+      "end_char": 12497,
+      "content": "Within a cell, circuit breakers may be used to prevent cascading failures among services, while inter-cell circuit breakers can isolate failing cells and redirect traffic to those that remain operational. Cell-based architecture has been adopted in some large-scale distributed systems, particularly in cloud-native and high-availability environments, where fault isolation and redundancy are key design considerations. Its implementation varies depending on system requirements, infrastructure constraints, and operational objectives.",
+      "char_count": 535,
+      "token_estimate": 133,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0015",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 12485,
+      "end_char": 13426,
+      "content": "== Applications == Reasons for using distributed systems and distributed computing may include: The very nature of an application may require the use of a communication network that connects several computers: for example, data produced in one physical location and required in another location. There are many cases in which the use of a single computer would be possible in principle, but the use of a distributed system is beneficial for practical reasons. For example: It can allow for much larger storage and memory, faster compute, and higher bandwidth than a single machine. It can provide more reliability than a non-distributed system, as there is no single point of failure. Moreover, a distributed system may be easier to expand and manage than a monolithic uniprocessor system. It may be more cost-efficient to obtain the desired level of performance by using a cluster of several low-end computers, in comparison with a single high-end computer.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0016",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 13440,
+      "end_char": 14343,
+      "content": "== Examples == Examples of distributed systems and applications of distributed computing include the following: telecommunications networks: telephone networks and cellular networks, computer networks such as the Internet, wireless sensor networks, routing algorithms; network applications: World Wide Web and peer-to-peer networks, massively multiplayer online games and virtual reality communities, distributed databases and distributed database management systems, network file systems, distributed cache such as burst buffers, distributed information processing systems such as banking systems and airline reservation systems; real-time process control: aircraft control systems, industrial control systems; parallel computation: scientific computing, including cluster computing, grid computing, cloud computing, and various volunteer computing projects, distributed rendering in computer graphics. peer-to-peer",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0017",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== Reactive distributed systems ==",
+      "heading_path": "== Reactive distributed systems ==",
+      "start_char": 14377,
+      "end_char": 14813,
+      "content": "== Reactive distributed systems == According to Reactive Manifesto, reactive distributed systems are responsive, resilient, elastic and message-driven. Subsequently, Reactive systems are more flexible, loosely-coupled and scalable. To make your systems reactive, you are advised to implement Reactive Principles. Reactive Principles are a set of principles and patterns which help to make your cloud native application as well as edge native applications more reactive.",
+      "char_count": 469,
+      "token_estimate": 117,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0018",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Models ==",
+      "heading_path": "== = Models ==",
+      "start_char": 14857,
+      "end_char": 15665,
+      "content": "== = Models === Many tasks that we would like to automate by using a computer are of question–answer type: we would like to ask a question and the computer should produce an answer. In theoretical computer science, such tasks are called computational problems. Formally, a computational problem consists of instances together with a solution for each instance. Instances are questions that we can ask, and solutions are desired answers to these questions. Theoretical computer science seeks to understand which computational problems can be solved by using a computer (computability theory) and how efficiently (computational complexity theory). Traditionally, it is said that a problem can be solved by using a computer if we can design an algorithm that produces a correct solution for any given instance.",
+      "char_count": 807,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0019",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Models ==",
+      "heading_path": "== = Models ==",
+      "start_char": 15665,
+      "end_char": 16587,
+      "content": "Such an algorithm can be implemented as a computer program that runs on a general-purpose computer: the program reads a problem instance from input, performs some computation, and produces the solution as output. Formalisms such as random-access machines or universal Turing machines can be used as abstract models of a sequential general-purpose computer executing such an algorithm. The field of concurrent and distributed computing studies similar questions in the case of either multiple computers, or a computer that executes a network of interacting processes: which computational problems can be solved in such a network and how efficiently? However, it is not at all obvious what is meant by \"solving a problem\" in the case of a concurrent or distributed system: for example, what is the task of the algorithm designer, and what is the concurrent or distributed equivalent of a sequential general-purpose computer?",
+      "char_count": 922,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0020",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Models ==",
+      "heading_path": "== = Models ==",
+      "start_char": 16588,
+      "end_char": 17520,
+      "content": "The discussion below focuses on the case of multiple computers, although many of the issues are the same for concurrent processes running on a single computer. Three viewpoints are commonly used: Parallel algorithms in shared-memory model All processors have access to a shared memory. The algorithm designer chooses the program executed by each processor. One theoretical model is the parallel random-access machines (PRAM) that are used. However, the classical PRAM model assumes synchronous access to the shared memory. Shared-memory programs can be extended to distributed systems if the underlying operating system encapsulates the communication between nodes and virtually unifies the memory across all individual systems. A model that is closer to the behavior of real-world multiprocessor machines and takes into account the use of machine instructions, such as Compare-and-swap (CAS), is that of asynchronous shared memory.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0021",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Models ==",
+      "heading_path": "== = Models ==",
+      "start_char": 17521,
+      "end_char": 18439,
+      "content": "There is a wide body of work on this model, a summary of which can be found in the literature. Parallel algorithms in message-passing model The algorithm designer chooses the structure of the network, as well as the program executed by each computer. Models such as Boolean circuits and sorting networks are used. A Boolean circuit can be seen as a computer network: each gate is a computer that runs an extremely simple computer program. Similarly, a sorting network can be seen as a computer network: each comparator is a computer. Distributed algorithms in message-passing model The algorithm designer only chooses the computer program. All computers run the same program. The system must work correctly regardless of the structure of the network. A commonly used model is a graph with one finite-state machine per node. In the case of distributed algorithms, computational problems are typically related to graphs.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0022",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = An example ==",
+      "heading_path": "== = An example ==",
+      "start_char": 18584,
+      "end_char": 19457,
+      "content": "== = An example === Consider the computational problem of finding a coloring of a given graph G. Different fields might take the following approaches: Centralized algorithms The graph G is encoded as a string, and the string is given as input to a computer. The computer program finds a coloring of the graph, encodes the coloring as a string, and outputs the result. Parallel algorithms Again, the graph G is encoded as a string. However, multiple computers can access the same string in parallel. Each computer might focus on one part of the graph and produce a coloring for that part. The main focus is on high-performance computation that exploits the processing power of multiple computers in parallel. Distributed algorithms The graph G is the structure of the computer network. There is one computer for each node of G and one communication link for each edge of G.",
+      "char_count": 872,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0023",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = An example ==",
+      "heading_path": "== = An example ==",
+      "start_char": 19457,
+      "end_char": 20361,
+      "content": "Initially, each computer only knows about its immediate neighbors in the graph G; the computers must exchange messages with each other to discover more about the structure of G. Each computer must produce its own color as output. The main focus is on coordinating the operation of an arbitrary distributed system. While the field of parallel algorithms has a different focus than the field of distributed algorithms, there is much interaction between the two fields. For example, the Cole–Vishkin algorithm for graph coloring was originally presented as a parallel algorithm, but the same technique can also be used directly as a distributed algorithm. Moreover, a parallel algorithm can be implemented either in a parallel system (using shared memory) or in a distributed system (using message passing). The traditional boundary between parallel and distributed algorithms (choose a suitable network vs.",
+      "char_count": 904,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0024",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Complexity measures ==",
+      "heading_path": "== = Complexity measures ==",
+      "start_char": 20522,
+      "end_char": 21452,
+      "content": "== = Complexity measures === In parallel algorithms, yet another resource in addition to time and space is the number of computers. Indeed, often there is a trade-off between the running time and the number of computers: the problem can be solved faster if there are more computers running in parallel (see speedup). If a decision problem can be solved in polylogarithmic time by using a polynomial number of processors, then the problem is said to be in the class NC. The class NC can be defined equally well by using the PRAM formalism or Boolean circuits—PRAM machines can simulate Boolean circuits efficiently and vice versa. In the analysis of distributed algorithms, more attention is usually paid on communication operations than computational steps. Perhaps the simplest model of distributed computing is a synchronous system where all nodes operate in a lockstep fashion. This model is commonly known as the LOCAL model.",
+      "char_count": 929,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0025",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Complexity measures ==",
+      "heading_path": "== = Complexity measures ==",
+      "start_char": 21452,
+      "end_char": 22405,
+      "content": "During each communication round, all nodes in parallel (1) receive the latest messages from their neighbours, (2) perform arbitrary local computation, and (3) send new messages to their neighbors. In such systems, a central complexity measure is the number of synchronous communication rounds required to complete the task. This complexity measure is closely related to the diameter of the network. Let D be the diameter of the network. On the one hand, any computable problem can be solved trivially in a synchronous distributed system in approximately 2D communication rounds: simply gather all information in one location (D rounds), solve the problem, and inform each node about the solution (D rounds). On the other hand, if the running time of the algorithm is much smaller than D communication rounds, then the nodes in the network must produce their output without having the possibility to obtain information about distant parts of the network.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0026",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Complexity measures ==",
+      "heading_path": "== = Complexity measures ==",
+      "start_char": 22406,
+      "end_char": 23174,
+      "content": "In other words, the nodes must make globally consistent decisions based on information that is available in their local D-neighbourhood. Many distributed algorithms are known with the running time much smaller than D rounds, and understanding which problems can be solved by such algorithms is one of the central research questions of the field. Typically an algorithm which solves a problem in polylogarithmic time in the network size is considered efficient in this model. Another commonly used measure is the total number of bits transmitted in the network (cf. communication complexity). The features of this concept are typically captured with the CONGEST(B) model, which is similarly defined as the LOCAL model, but where single messages can only contain B bits.",
+      "char_count": 768,
+      "token_estimate": 192,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0027",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Other problems ==",
+      "heading_path": "== = Other problems ==",
+      "start_char": 23170,
+      "end_char": 24099,
+      "content": "== = Other problems === Traditional computational problems take the perspective that the user asks a question, a computer (or a distributed system) processes the question, then produces an answer and stops. However, there are also problems where the system is required not to stop, including the dining philosophers problem and other similar mutual exclusion problems. In these problems, the distributed system is supposed to continuously coordinate the use of shared resources so that no conflicts or deadlocks occur. There are also fundamental challenges that are unique to distributed computing, for example those related to fault-tolerance. Examples of related problems include consensus problems, Byzantine fault tolerance, and self-stabilisation. Much research is also focused on understanding the asynchronous nature of distributed systems: Synchronizers can be used to run synchronous algorithms in asynchronous systems.",
+      "char_count": 928,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0028",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Other problems ==",
+      "heading_path": "== = Other problems ==",
+      "start_char": 24099,
+      "end_char": 24386,
+      "content": "Logical clocks provide a causal happened-before ordering of events. Clock synchronization algorithms provide globally consistent physical time stamps. Note that in distributed systems, latency should be measured through \"99th percentile\" because \"median\" and \"average\" can be misleading.",
+      "char_count": 287,
+      "token_estimate": 71,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0029",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Election ==",
+      "heading_path": "== = Election ==",
+      "start_char": 24381,
+      "end_char": 25280,
+      "content": "== = Election === Coordinator election (or leader election) is the process of designating a single process as the organizer of some task distributed among several computers (nodes). Before the task is begun, all network nodes are either unaware which node will serve as the \"coordinator\" (or leader) of the task, or unable to communicate with the current coordinator. After a coordinator election algorithm has been run, however, each node throughout the network recognizes a particular, unique node as the task coordinator. The network nodes communicate among themselves in order to decide which of them will get into the \"coordinator\" state. For that, they need some method in order to break the symmetry among them. For example, if each node has unique and comparable identities, then the nodes can compare their identities, and decide that the node with the highest identity is the coordinator.",
+      "char_count": 898,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0030",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Election ==",
+      "heading_path": "== = Election ==",
+      "start_char": 25280,
+      "end_char": 26233,
+      "content": "The definition of this problem is often attributed to LeLann, who formalized it as a method to create a new token in a token ring network in which the token has been lost. Coordinator election algorithms are designed to be economical in terms of total bytes transmitted, and time. The algorithm suggested by Gallager, Humblet, and Spira for general undirected graphs has had a strong impact on the design of distributed algorithms in general, and won the Dijkstra Prize for an influential paper in distributed computing. Many other algorithms were suggested for different kinds of network graphs, such as undirected rings, unidirectional rings, complete graphs, grids, directed Euler graphs, and others. A general method that decouples the issue of the graph family from the design of the coordinator election algorithm was suggested by Korach, Kutten, and Moran. In order to perform coordination, distributed systems employ the concept of coordinators.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0031",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Election ==",
+      "heading_path": "== = Election ==",
+      "start_char": 26234,
+      "end_char": 26459,
+      "content": "The coordinator election problem is to choose a process from among a group of processes on different processors in a distributed system to act as the central coordinator. Several central coordinator election algorithms exist.",
+      "char_count": 225,
+      "token_estimate": 56,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0032",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Properties of distributed systems ==",
+      "heading_path": "== = Properties of distributed systems ==",
+      "start_char": 26485,
+      "end_char": 27387,
+      "content": "== = Properties of distributed systems === So far the focus has been on designing a distributed system that solves a given problem. A complementary research problem is studying the properties of a given distributed system. The halting problem is an analogous example from the field of centralised computation: we are given a computer program and the task is to decide whether it halts or runs forever. The halting problem is undecidable in the general case, and naturally understanding the behaviour of a computer network is at least as hard as understanding the behaviour of one computer. However, there are many interesting special cases that are decidable. In particular, it is possible to reason about the behaviour of a network of finite-state machines. One example is telling whether a given network of interacting (asynchronous and non-deterministic) finite-state machines can reach a deadlock.",
+      "char_count": 901,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "distributedcomputing_de92816b_c0033",
+      "article_id": "distributedcomputing_de92816b",
+      "section": "== = Properties of distributed systems ==",
+      "heading_path": "== = Properties of distributed systems ==",
+      "start_char": 27387,
+      "end_char": 27588,
+      "content": "This problem is PSPACE-complete, i.e., it is decidable, but not likely that there is an efficient (centralised, parallel or distributed) algorithm that solves the problem in the case of large networks.",
+      "char_count": 201,
+      "token_estimate": 50,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What are the three types of architecture distinguished by whether or not CPUs share resources?",
+        "answer": "The three types of architecture distinguished by whether or not CPUs share resources are Shared memory, Shared disk, and Shared nothing.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0010"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the practical benefits of using a distributed system over a single computer?",
+        "answer": "Practical benefits of using a distributed system include the ability to have much larger storage and memory, faster computation, and higher bandwidth than a single machine. It also provides more reliability by not having a single point of failure, is easier to expand and manage than a monolithic system, and can be more cost-efficient by using a cluster of low-end computers to achieve a desired performance level instead of one high-end computer.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0015"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What is the key difference between parallel and distributed computing in terms of memory access?",
+        "answer": "In parallel computing, all processors may have access to a shared memory to exchange information, whereas in distributed computing, each processor has its own private memory (distributed memory).",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0006"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are the primary trade-offs between distributed systems and monolithic architectures regarding cost and system qualities?",
+        "answer": "Distributed systems present a trade-off compared to monolithic architectures. Their main disadvantage is significantly higher cost, driven by the need for additional hardware, servers, gateways, firewalls, new subnets, and proxies. In contrast, their advantage is that a well-designed distributed system can be more scalable, durable, changeable, and fine-tuned than a monolithic application.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0000",
+          "distributedcomputing_de92816b_c0001",
+          "distributedcomputing_de92816b_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Why do modern distributed architectures often combine both events and messages, considering the typical properties and challenges of such systems?",
+        "answer": "Modern architectures combine events and messages to address the different needs within a distributed system. Events, which represent state changes and are broadcast asynchronously, are well-suited for propagating state and providing decoupled notifications. This helps manage the challenges where each computer has an incomplete view of the system and must tolerate failures. In contrast, messages are better for targeted command execution and workflow orchestration, which is essential for coordinating the use of shared resources. By using both, systems can leverage events for broad state change notifications and messages for specific, structured workflows.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0003",
+          "distributedcomputing_de92816b_c0004",
+          "distributedcomputing_de92816b_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain the fundamental difference between parallel and distributed computing based on their memory architecture, and relate this to the historical origins of distributed systems.",
+        "answer": "The primary difference between parallel and distributed computing lies in their memory architecture. In parallel computing, all processors typically have access to a shared memory to exchange information. In contrast, distributed computing systems are characterized by each processor having its own private, distributed memory. Consequently, information in a distributed system is exchanged by passing messages between the processors. This model aligns with the historical roots of distributed systems, which originated from the study of concurrent processes communicating via message-passing in 1960s operating system architectures. Early large-scale distributed applications, like ARPANET e-mail, functioned on this principle of message passing over a network.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0006",
+          "distributedcomputing_de92816b_c0007",
+          "distributedcomputing_de92816b_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the primary trade-offs, including both advantages and disadvantages, of using a distributed system compared to a monolithic architecture?",
+        "answer": "Distributed systems present several trade-offs. A major disadvantage is that they cost significantly more than monolithic architectures due to the need for additional hardware, servers, and other infrastructure. They are also prone to the fallacies of distributed computing. However, the advantages include greater resilience, as the failure of a single component does not cause the entire system to fail. Furthermore, a well-designed distributed system is more scalable, durable, changeable, and fine-tuned than a monolithic application.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0000",
+          "distributedcomputing_de92816b_c0001"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the various purposes and defining properties of a distributed system?",
+        "answer": "A distributed system can have several purposes, such as solving a large computational problem where it appears as a single unit to the user, or coordinating the use of shared resources and providing communication services to individual users. Its defining properties include having several autonomous computational entities with their own local memory that communicate via message passing. Other typical properties are the ability to tolerate failures in individual computers, having a structure that is not known in advance and may change, and each computer having only a limited, incomplete view of the system and its input.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0002",
+          "distributedcomputing_de92816b_c0003"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Compare and contrast the primary purpose and typical use cases for events versus messages in distributed systems.",
+        "answer": "In distributed systems, events and messages serve distinct purposes. Events represent a fact or a state change (e.g., OrderPlaced) and are broadcast asynchronously to multiple consumers, typically using a publish/subscribe pattern. Their primary use case is for state propagation and decoupled notifications, promoting loose coupling. In contrast, messages serve a broader role that can include commands, events, or documents. They are better suited for targeted tasks like command execution, workflow orchestration, and explicit coordination, often using point-to-point or request/reply patterns.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0004",
+          "distributedcomputing_de92816b_c0005"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How do parallel and distributed computing systems differ in their methods of information exchange, based on their memory structures?",
+        "answer": "In parallel computing, all processors may have access to a shared memory, allowing them to exchange information through direct access. In contrast, distributed computing systems feature processors that each have their own private, distributed memory, so information must be exchanged by passing messages between them.",
+        "related_chunk_ids": [
+          "distributedcomputing_de92816b_c0006",
+          "distributedcomputing_de92816b_c0007"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:31.537Z",
+    "content_format": "markdown",
+    "total_chunks": 34,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

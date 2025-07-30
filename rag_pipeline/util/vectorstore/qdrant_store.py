@@ -364,7 +364,7 @@ class QdrantVectorStore:
                 if next_page_offset is None:
                     break
             
-            logger.info(f"Found {len(indexed_doc_ids)} already indexed documents")
+            logger.info(f"Found {len(indexed_doc_ids)} already indexed documents in collection {self.collection_name}")
             return indexed_doc_ids
             
         except Exception as e:

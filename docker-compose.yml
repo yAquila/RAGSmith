@@ -111,10 +111,31 @@ services:
               device_ids: ['3']
               capabilities: [gpu]
 
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j
+    networks: ['rag_pipeline_network']
+    restart: unless-stopped
+    ports:
+      - 7687:7687
+      - 7474:7474
+    volumes:
+      - ./neo4j_storage:/data
+    environment:
+      - NEO4J_AUTH=neo4j/admin123
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['4']
+              capabilities: [gpu]
+
 volumes:
   ollama_storage_3:
   #postgresql_storage:
   rag_pipeline_qdrant_storage:
   rag_pipeline_reranker_cache:
+  neo4j_storage:
   #benchmark_uploads:  # Volume for temporary dataset uploads
   #benchmark_history:  # Volume for persistent benchmark run history

@@ -1,0 +1,347 @@
+{
+  "article": {
+    "id": "coderefactoring_4b3a67fa",
+    "title": "Code refactoring",
+    "url": "https://en.wikipedia.org/wiki/Code_refactoring",
+    "lang": "en",
+    "created_at": "2025-07-30T10:34:07.625356",
+    "content": "---\nid: coderefactoring_4b3a67fa\nurl: https://en.wikipedia.org/wiki/Code_refactoring\ntitle: Code refactoring\nlang: en\ncreated_at: '2025-07-30T10:31:10.922529'\nchecksum: 720f72d61d61c2421b76f7db829dcfa35644e4b4ae48c00d4271556bbac1bacb\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2062\n  char_count: 13922\n  num_chunks: 18\n  original_chunks: 25\n  filtered_out: 7\n  num_sections: 0\n---\nIn computer programming and software design, code refactoring is the process of restructuring existing source code—changing the factoring—without changing its external behavior. Refactoring is intended to improve the design, structure, and/or implementation of the software (its non-functional attributes), while preserving its functionality. Potential advantages of refactoring may include improved code readability and reduced complexity; these can improve the source code's maintainability and create a simpler, cleaner, or more expressive internal architecture or object model to improve extensibility. Another potential goal for refactoring is improved performance; software engineers face an ongoing challenge to write programs that perform faster or use less memory. Typically, refactoring applies a series of standardized basic micro-refactorings, each of which is (usually) a tiny change in a computer program's source code that either preserves the behavior of the software, or at least does not modify its conformance to functional requirements. Many development environments provide automated support for performing the mechanical aspects of these basic refactorings. If done well, code refactoring may help software developers discover and fix hidden or dormant bugs or vulnerabilities in the system by simplifying the underlying logic and eliminating unnecessary levels of complexity. If done poorly, it may fail the requirement that external functionality not be changed, and may thus introduce new bugs. By continuously improving the design of code, we make it easier and easier to work with. This is in sharp contrast to what typically happens: little refactoring and a great deal of attention paid to expediently add new features. If you get into the hygienic habit of refactoring continuously, you'll find that it is easier to extend and maintain code. == Motivation == Refactoring is usually motivated by noticing a code smell. For example, the method at hand may be very long, or it may be a near duplicate of another nearby method. Once recognized, such problems can be addressed by refactoring the source code, or transforming it into a new form that behaves the same as before but that no longer \"smells\". For a long routine, one or more smaller subroutines can be extracted; or for duplicate routines, the duplication can be removed and replaced with one shared function. Failure to perform refactoring can result in accumulating technical debt; on the other hand, refactoring is one of the primary means of repaying technical debt. == Benefits == There are two general categories of benefits to the activity of refactoring. Maintainability. It is easier to fix bugs because the source code is easy to read and the intent of its author is easy to grasp. This might be achieved by reducing large monolithic routines into a set of individually concise, well-named, single-purpose methods. It might be achieved by moving a method to a more appropriate class, or by removing misleading comments. Extensibility. It is easier to extend the capabilities of the application if it uses recognizable design patterns, and it provides some flexibility where none before may have existed. Performance engineering can remove inefficiencies in programs, known as software bloat, arising from traditional software-development strategies that aim to minimize an application's development time rather than the time it takes to run. Performance engineering can also tailor software to the hardware on which it runs, for example, to take advantage of parallel processors and vector units. == Timing and responsibility == There are two possible times for refactoring. Preventive refactoring – the original developer of the code makes the code more robust when it is still free of smells to prevent the formation of smells in the future. Corrective refactoring – a subsequent developer performs refactoring to correct code smells as they occur. A method that balances preventive and corrective refactoring is \"shared responsibility for refactoring\". This approach splits the refactoring action into two stages and two roles. The original developer of the code just prepares the code for refactoring, and when the code smells form, a subsequent developer carries out the actual refactoring action. == Challenges == Refactoring requires extracting software system structure, data models, and intra-application dependencies to get back knowledge of an existing software system. The turnover of teams implies missing or inaccurate knowledge of the current state of a system and about design decisions made by departing developers. Further code refactoring activities may require additional effort to regain this knowledge. Refactoring activities generate architectural modifications that deteriorate the structural architecture of a software system. Such deterioration affects architectural properties such as maintainability and comprehensibility which can lead to a complete re-development of software systems. Code refactoring activities are secured with software intelligence when using tools and techniques providing data about algorithms and sequences of code execution. Providing a comprehensible format for the inner-state of software system structure, data models, and intra-components dependencies is a critical element to form a high-level understanding and then refined views of what needs to be modified, and how. == Testing == Automatic unit tests should be set up before refactoring to ensure routines still behave as expected. Unit tests can bring stability to even large refactors when performed with a single atomic commit. A common strategy to allow safe and atomic refactors spanning multiple projects is to store all projects in a single repository, known as monorepo. With unit testing in place, refactoring is then an iterative cycle of making a small program transformation, testing it to ensure correctness, and making another small transformation. If at any point a test fails, the last small change is undone and repeated in a different way. Through many small steps the program moves from where it was to where you want it to be. For this very iterative process to be practical, the tests must run very quickly, or the programmer would have to spend a large fraction of their time waiting for the tests to finish. Proponents of extreme programming and other agile software development describe this activity as an integral part of the software development cycle. == Techniques == Here are some examples of micro-refactorings; some of these may only apply to certain languages or language types. A longer list can be found in Martin Fowler's refactoring book and website. Many development environments provide automated support for these micro-refactorings. For instance, a programmer could click on the name of a variable and then select the \"Encapsulate field\" refactoring from a context menu. The IDE would then prompt for additional details, typically with sensible defaults and a preview of the code changes. After confirmation by the programmer it would carry out the required changes throughout the code. === Static analysis === Static program analysis (called \"linting\" when performed on less strict interpreted languages) detects problems in a valid but substandard program. Program dependence graph - explicit representation of data and control dependencies System dependence graph - representation of procedure calls between PDG Cyclometric complexity analysis. Software intelligence - reverse engineers the initial state to understand existing intra-application dependencies === Transformations === Transformations modify the syntactic representation of a program. Some modifications alter the semantics or structure of the program in a way which improves its flexibility or robustness. Such modifications require knowledge of the problem domain and intended logic, and thus are infeasible to automate. Modifications exist which make the program easier to read and modify but which to not alter the underlying logic of the program; these transformations can be automated. Techniques that allow for more abstraction Encapsulate field – force code to access the field with getter and setter methods Generalize type – create more general types to allow for more code sharing Replace type-checking code with state/strategy Replace conditional with polymorphism Techniques for breaking code apart into more logical pieces Componentization breaks code down into reusable semantic units that present clear, well-defined, simple-to-use interfaces. Extract class moves part of the code from an existing class into a new class. Extract method, to turn part of a larger method into a new method. By breaking down code in smaller pieces, it is more easily understandable. This is also applicable to functions. Techniques for improving names and location of code Move method or move field – move to a more appropriate class or source file Rename method or rename field – changing the name into a new one that better reveals its purpose Pull up – in object-oriented programming (OOP), move to a superclass Push down – in OOP, move to a subclass Automatic clone detection == Hardware refactoring == While the term refactoring originally referred exclusively to refactoring of software code, in recent years code written in hardware description languages has also been refactored. The term hardware refactoring is used as a shorthand term for refactoring of code in hardware description languages. Since hardware description languages are not considered to be programming languages by most hardware engineers, hardware refactoring is to be considered a separate field from traditional code refactoring. Automated refactoring of analog hardware descriptions (in VHDL-AMS) has been proposed by Zeng and Huss. In their approach, refactoring preserves the simulated behavior of a hardware design. The non-functional measurement that improves is that refactored code can be processed by standard synthesis tools, while the original code cannot. Refactoring of digital hardware description languages, albeit manual refactoring, has also been investigated by Synopsys fellow Mike Keating. His target is to make complex systems easier to understand, which increases the designers' productivity. == History == The first known use of the term \"refactoring\" in the published literature was in a September, 1990 article by William Opdyke and Ralph Johnson. Although refactoring code has been done informally for decades, William Griswold's 1991 Ph.D. dissertation is one of the first major academic works on refactoring functional and procedural programs, followed by William Opdyke's 1992 dissertation on the refactoring of object-oriented programs, although all the theory and machinery have long been available as program transformation systems. All of these resources provide a catalog of common methods for refactoring; a refactoring method has a description of how to apply the method and indicators for when you should (or should not) apply the method. Martin Fowler's book Refactoring: Improving the Design of Existing Code is the canonical reference. The terms \"factoring\" and \"factoring out\" have been used in this way in the Forth community since at least the early 1980s. Chapter Six of Leo Brodie's book Thinking Forth (1984) is dedicated to the subject. In extreme programming, the Extract Method refactoring technique has essentially the same meaning as factoring in Forth; to break down a \"word\" (or function) into smaller, more easily maintained functions. Refactorings can also be reconstructed posthoc to produce concise descriptions of complex software changes recorded in software repositories like Git. == Automated code refactoring == Many software editors and IDEs have automated refactoring support. Here is a list of a few of these editors, or so-called refactoring browsers. DMS Software Reengineering Toolkit (Implements large-scale refactoring for C, C++, C#, COBOL, Java, PHP and other languages) Eclipse based: Eclipse (for Java, and to a lesser extent, C++, PHP, Ruby and JavaScript) PyDev (for Python) Embarcadero Delphi IntelliJ based: AppCode (for Objective-C, C and C++) IntelliJ IDEA (for Java) PyCharm (for Python) WebStorm (for JavaScript) PhpStorm (for PHP) Android Studio (for Java and C++) JDeveloper (for Java) NetBeans (for Java) Smalltalk: Most dialects include powerful refactoring tools. Many use the original refactoring browser produced in the early '90s by Ralph Johnson. Visual Studio based: Visual Studio (for .NET and C++) Visual Assist (addon for Visual Studio with refactoring support for C# and C++) Wing IDE (for Python) Xcode (for C, Objective-C, and Swift) Qt Creator (for C++, Objective-C and QML) == See also == Amelioration pattern Code review Database refactoring Decomposition (computer science) Modular programming Obfuscated code Prefactoring Rewrite (programming) Separation of concerns Software peer review Test-driven development == References == == Further reading == Wake, William C. (2003). Refactoring Workbook. Addison-Wesley. ISBN 978-0-321-10929-3. Mens, T.; Tourwe, T. (February 2004). \"A survey of software refactoring\". IEEE Transactions on Software Engineering. 30 (2): 126–139. doi:10.1109/tse.2004.1265817. ISSN 0098-5589. S2CID 206778272. Feathers, Michael C (2004). Working Effectively with Legacy Code. Prentice Hall. ISBN 978-0-13-117705-5. Kerievsky, Joshua (2004). Refactoring To Patterns. Addison-Wesley. ISBN 978-0-321-21335-8. Arsenovski, Danijel (2008). Professional Refactoring in Visual Basic. Wrox. ISBN 978-0-470-17979-6. Arsenovski, Danijel (2009). Professional Refactoring in C# and ASP.NET. Wrox. ISBN 978-0-470-43452-9. Ritchie, Peter (2010). Refactoring with Visual Studio 2010. Packt. ISBN 978-1-84968-010-3. == External links == What Is Refactoring? (c2.com article) Martin Fowler's homepage about refactoring"
+  },
+  "chunks": [
+    {
+      "id": "coderefactoring_4b3a67fa_c0000",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 774,
+      "content": "In computer programming and software design, code refactoring is the process of restructuring existing source code—changing the factoring—without changing its external behavior. Refactoring is intended to improve the design, structure, and/or implementation of the software (its non-functional attributes), while preserving its functionality. Potential advantages of refactoring may include improved code readability and reduced complexity; these can improve the source code's maintainability and create a simpler, cleaner, or more expressive internal architecture or object model to improve extensibility. Another potential goal for refactoring is improved performance; software engineers face an ongoing challenge to write programs that perform faster or use less memory.",
+      "char_count": 773,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0001",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 774,
+      "end_char": 1748,
+      "content": "Typically, refactoring applies a series of standardized basic micro-refactorings, each of which is (usually) a tiny change in a computer program's source code that either preserves the behavior of the software, or at least does not modify its conformance to functional requirements. Many development environments provide automated support for performing the mechanical aspects of these basic refactorings. If done well, code refactoring may help software developers discover and fix hidden or dormant bugs or vulnerabilities in the system by simplifying the underlying logic and eliminating unnecessary levels of complexity. If done poorly, it may fail the requirement that external functionality not be changed, and may thus introduce new bugs. By continuously improving the design of code, we make it easier and easier to work with. This is in sharp contrast to what typically happens: little refactoring and a great deal of attention paid to expediently add new features.",
+      "char_count": 974,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0002",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Motivation ==",
+      "heading_path": "== Motivation ==",
+      "start_char": 1888,
+      "end_char": 2558,
+      "content": "== Motivation == Refactoring is usually motivated by noticing a code smell. For example, the method at hand may be very long, or it may be a near duplicate of another nearby method. Once recognized, such problems can be addressed by refactoring the source code, or transforming it into a new form that behaves the same as before but that no longer \"smells\". For a long routine, one or more smaller subroutines can be extracted; or for duplicate routines, the duplication can be removed and replaced with one shared function. Failure to perform refactoring can result in accumulating technical debt; on the other hand, refactoring is one of the primary means of repaying technical debt.",
+      "char_count": 685,
+      "token_estimate": 171,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0003",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Benefits ==",
+      "heading_path": "== Benefits ==",
+      "start_char": 2572,
+      "end_char": 3453,
+      "content": "== Benefits == There are two general categories of benefits to the activity of refactoring. Maintainability. It is easier to fix bugs because the source code is easy to read and the intent of its author is easy to grasp. This might be achieved by reducing large monolithic routines into a set of individually concise, well-named, single-purpose methods. It might be achieved by moving a method to a more appropriate class, or by removing misleading comments. Extensibility. It is easier to extend the capabilities of the application if it uses recognizable design patterns, and it provides some flexibility where none before may have existed. Performance engineering can remove inefficiencies in programs, known as software bloat, arising from traditional software-development strategies that aim to minimize an application's development time rather than the time it takes to run.",
+      "char_count": 880,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0004",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Timing and responsibility ==",
+      "heading_path": "== Timing and responsibility ==",
+      "start_char": 3625,
+      "end_char": 4300,
+      "content": "== Timing and responsibility == There are two possible times for refactoring. Preventive refactoring – the original developer of the code makes the code more robust when it is still free of smells to prevent the formation of smells in the future. Corrective refactoring – a subsequent developer performs refactoring to correct code smells as they occur. A method that balances preventive and corrective refactoring is \"shared responsibility for refactoring\". This approach splits the refactoring action into two stages and two roles. The original developer of the code just prepares the code for refactoring, and when the code smells form, a subsequent developer carries out the actual refactoring action.",
+      "char_count": 705,
+      "token_estimate": 176,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0005",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Challenges ==",
+      "heading_path": "== Challenges ==",
+      "start_char": 4316,
+      "end_char": 5192,
+      "content": "== Challenges == Refactoring requires extracting software system structure, data models, and intra-application dependencies to get back knowledge of an existing software system. The turnover of teams implies missing or inaccurate knowledge of the current state of a system and about design decisions made by departing developers. Further code refactoring activities may require additional effort to regain this knowledge. Refactoring activities generate architectural modifications that deteriorate the structural architecture of a software system. Such deterioration affects architectural properties such as maintainability and comprehensibility which can lead to a complete re-development of software systems. Code refactoring activities are secured with software intelligence when using tools and techniques providing data about algorithms and sequences of code execution.",
+      "char_count": 875,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0006",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Challenges ==",
+      "heading_path": "== Challenges ==",
+      "start_char": 5192,
+      "end_char": 5441,
+      "content": "Providing a comprehensible format for the inner-state of software system structure, data models, and intra-components dependencies is a critical element to form a high-level understanding and then refined views of what needs to be modified, and how.",
+      "char_count": 249,
+      "token_estimate": 62,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0007",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Testing ==",
+      "heading_path": "== Testing ==",
+      "start_char": 5439,
+      "end_char": 6354,
+      "content": "== Testing == Automatic unit tests should be set up before refactoring to ensure routines still behave as expected. Unit tests can bring stability to even large refactors when performed with a single atomic commit. A common strategy to allow safe and atomic refactors spanning multiple projects is to store all projects in a single repository, known as monorepo. With unit testing in place, refactoring is then an iterative cycle of making a small program transformation, testing it to ensure correctness, and making another small transformation. If at any point a test fails, the last small change is undone and repeated in a different way. Through many small steps the program moves from where it was to where you want it to be. For this very iterative process to be practical, the tests must run very quickly, or the programmer would have to spend a large fraction of their time waiting for the tests to finish.",
+      "char_count": 914,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0008",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Techniques ==",
+      "heading_path": "== Techniques ==",
+      "start_char": 6506,
+      "end_char": 7138,
+      "content": "== Techniques == Here are some examples of micro-refactorings; some of these may only apply to certain languages or language types. A longer list can be found in Martin Fowler's refactoring book and website. Many development environments provide automated support for these micro-refactorings. For instance, a programmer could click on the name of a variable and then select the \"Encapsulate field\" refactoring from a context menu. The IDE would then prompt for additional details, typically with sensible defaults and a preview of the code changes. After confirmation by the programmer it would carry out the required changes throughout the code.",
+      "char_count": 647,
+      "token_estimate": 161,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0009",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== = Static analysis ==",
+      "heading_path": "== = Static analysis ==",
+      "start_char": 7161,
+      "end_char": 7614,
+      "content": "== = Static analysis === Static program analysis (called \"linting\" when performed on less strict interpreted languages) detects problems in a valid but substandard program. Program dependence graph - explicit representation of data and control dependencies System dependence graph - representation of procedure calls between PDG Cyclometric complexity analysis. Software intelligence - reverse engineers the initial state to understand existing intra-application dependencies",
+      "char_count": 475,
+      "token_estimate": 118,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0010",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== = Transformations ==",
+      "heading_path": "== = Transformations ==",
+      "start_char": 7637,
+      "end_char": 8603,
+      "content": "== = Transformations === Transformations modify the syntactic representation of a program. Some modifications alter the semantics or structure of the program in a way which improves its flexibility or robustness. Such modifications require knowledge of the problem domain and intended logic, and thus are infeasible to automate. Modifications exist which make the program easier to read and modify but which to not alter the underlying logic of the program; these transformations can be automated. Techniques that allow for more abstraction Encapsulate field – force code to access the field with getter and setter methods Generalize type – create more general types to allow for more code sharing Replace type-checking code with state/strategy Replace conditional with polymorphism Techniques for breaking code apart into more logical pieces Componentization breaks code down into reusable semantic units that present clear, well-defined, simple-to-use interfaces.",
+      "char_count": 965,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0011",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== = Transformations ==",
+      "heading_path": "== = Transformations ==",
+      "start_char": 8603,
+      "end_char": 9219,
+      "content": "Extract class moves part of the code from an existing class into a new class. Extract method, to turn part of a larger method into a new method. By breaking down code in smaller pieces, it is more easily understandable. This is also applicable to functions. Techniques for improving names and location of code Move method or move field – move to a more appropriate class or source file Rename method or rename field – changing the name into a new one that better reveals its purpose Pull up – in object-oriented programming (OOP), move to a superclass Push down – in OOP, move to a subclass Automatic clone detection",
+      "char_count": 616,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0012",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Hardware refactoring ==",
+      "heading_path": "== Hardware refactoring ==",
+      "start_char": 9223,
+      "end_char": 10090,
+      "content": "== Hardware refactoring == While the term refactoring originally referred exclusively to refactoring of software code, in recent years code written in hardware description languages has also been refactored. The term hardware refactoring is used as a shorthand term for refactoring of code in hardware description languages. Since hardware description languages are not considered to be programming languages by most hardware engineers, hardware refactoring is to be considered a separate field from traditional code refactoring. Automated refactoring of analog hardware descriptions (in VHDL-AMS) has been proposed by Zeng and Huss. In their approach, refactoring preserves the simulated behavior of a hardware design. The non-functional measurement that improves is that refactored code can be processed by standard synthesis tools, while the original code cannot.",
+      "char_count": 866,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0013",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Hardware refactoring ==",
+      "heading_path": "== Hardware refactoring ==",
+      "start_char": 10090,
+      "end_char": 10336,
+      "content": "Refactoring of digital hardware description languages, albeit manual refactoring, has also been investigated by Synopsys fellow Mike Keating. His target is to make complex systems easier to understand, which increases the designers' productivity.",
+      "char_count": 246,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0014",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 10324,
+      "end_char": 11309,
+      "content": "== History == The first known use of the term \"refactoring\" in the published literature was in a September, 1990 article by William Opdyke and Ralph Johnson. Although refactoring code has been done informally for decades, William Griswold's 1991 Ph.D. dissertation is one of the first major academic works on refactoring functional and procedural programs, followed by William Opdyke's 1992 dissertation on the refactoring of object-oriented programs, although all the theory and machinery have long been available as program transformation systems. All of these resources provide a catalog of common methods for refactoring; a refactoring method has a description of how to apply the method and indicators for when you should (or should not) apply the method. Martin Fowler's book Refactoring: Improving the Design of Existing Code is the canonical reference. The terms \"factoring\" and \"factoring out\" have been used in this way in the Forth community since at least the early 1980s.",
+      "char_count": 984,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0015",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 11309,
+      "end_char": 11749,
+      "content": "Chapter Six of Leo Brodie's book Thinking Forth (1984) is dedicated to the subject. In extreme programming, the Extract Method refactoring technique has essentially the same meaning as factoring in Forth; to break down a \"word\" (or function) into smaller, more easily maintained functions. Refactorings can also be reconstructed posthoc to produce concise descriptions of complex software changes recorded in software repositories like Git.",
+      "char_count": 440,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0016",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Automated code refactoring ==",
+      "heading_path": "== Automated code refactoring ==",
+      "start_char": 11769,
+      "end_char": 12566,
+      "content": "== Automated code refactoring == Many software editors and IDEs have automated refactoring support. Here is a list of a few of these editors, or so-called refactoring browsers. DMS Software Reengineering Toolkit (Implements large-scale refactoring for C, C++, C#, COBOL, Java, PHP and other languages) Eclipse based: Eclipse (for Java, and to a lesser extent, C++, PHP, Ruby and JavaScript) PyDev (for Python) Embarcadero Delphi IntelliJ based: AppCode (for Objective-C, C and C++) IntelliJ IDEA (for Java) PyCharm (for Python) WebStorm (for JavaScript) PhpStorm (for PHP) Android Studio (for Java and C++) JDeveloper (for Java) NetBeans (for Java) Smalltalk: Most dialects include powerful refactoring tools. Many use the original refactoring browser produced in the early '90s by Ralph Johnson.",
+      "char_count": 796,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "coderefactoring_4b3a67fa_c0017",
+      "article_id": "coderefactoring_4b3a67fa",
+      "section": "== Automated code refactoring ==",
+      "heading_path": "== Automated code refactoring ==",
+      "start_char": 12566,
+      "end_char": 12801,
+      "content": "Visual Studio based: Visual Studio (for .NET and C++) Visual Assist (addon for Visual Studio with refactoring support for C# and C++) Wing IDE (for Python) Xcode (for C, Objective-C, and Swift) Qt Creator (for C++, Objective-C and QML)",
+      "char_count": 235,
+      "token_estimate": 58,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "When and by whom was the term \"refactoring\" first known to be used in published literature?",
+        "answer": "The first known use of the term \"refactoring\" in published literature was in a September 1990 article by William Opdyke and Ralph Johnson.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0014"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the potential benefits and risks of performing code refactoring?",
+        "answer": "If done well, code refactoring can help developers find and fix hidden bugs or vulnerabilities by simplifying logic and eliminating unnecessary complexity. However, if done poorly, it risks introducing new bugs by failing to preserve the software's external functionality.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the purpose of the componentization technique in programming?",
+        "answer": "Componentization is a technique used to break code down into reusable semantic units that present clear, well-defined, and simple-to-use interfaces.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0010"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the relationship between code smells, technical debt, and the goals of refactoring?",
+        "answer": "Code smells, such as a very long method or duplicate code, serve as the motivation to perform refactoring. Failure to address these issues through refactoring can lead to the accumulation of technical debt. Refactoring is the primary method for repaying this debt by restructuring the code to improve its non-functional attributes, such as readability, complexity, and overall design, without changing its external behavior.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0000",
+          "coderefactoring_4b3a67fa_c0001",
+          "coderefactoring_4b3a67fa_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain how refactoring can result in conflicting outcomes for a software system's maintainability, and how the challenge of team turnover relates to different refactoring timings.",
+        "answer": "Refactoring can have conflicting effects on maintainability. On one hand, it can improve maintainability by making source code easier to read and understand. On the other hand, the architectural modifications generated during refactoring can deteriorate the system's structural architecture, which negatively affects maintainability. The challenge of team turnover is particularly relevant to corrective refactoring, where a subsequent developer must work on the code. This developer may lack the knowledge of the original design decisions made by departing developers, making the refactoring process more difficult.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0003",
+          "coderefactoring_4b3a67fa_c0004",
+          "coderefactoring_4b3a67fa_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Describe the overall process of code refactoring, from the initial understanding required to the specific techniques used in the iterative cycle.",
+        "answer": "The refactoring process begins with a critical prerequisite: forming a high-level understanding of the software system's structure, data models, and dependencies to identify what needs modification. Once this is established, refactoring proceeds as an iterative cycle. This cycle involves making a small program transformation, which can be an automated micro-refactoring provided by a development environment, and then running automatic unit tests to ensure the change did not break existing functionality. If a test fails, the last change is undone. This process of small, tested steps is repeated until the desired program state is achieved.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0006",
+          "coderefactoring_4b3a67fa_c0007",
+          "coderefactoring_4b3a67fa_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the potential positive and negative outcomes of code refactoring?",
+        "answer": "The potential positive outcomes of code refactoring include improving the software's design, structure, implementation, readability, and extensibility, while also reducing its complexity and enhancing its maintainability and performance. If done well, it can also help developers discover and fix hidden bugs or vulnerabilities. However, a potential negative outcome is that if done poorly, refactoring can fail to preserve the software's external functionality, thereby introducing new bugs.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0000",
+          "coderefactoring_4b3a67fa_c0001"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What makes it challenging to gain the necessary understanding for refactoring, and what specific system elements are critical for this understanding?",
+        "answer": "It is challenging to gain the necessary understanding for refactoring because team turnover can lead to missing or inaccurate knowledge of the system. To proceed, it is critical to have a comprehensible format of the software system's structure, data models, and intra-application dependencies to form a high-level understanding of what needs to be modified and how.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0005",
+          "coderefactoring_4b3a67fa_c0006"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are the different categories of automated code transformations mentioned, and what are some specific techniques for each?",
+        "answer": "Automated code transformations are grouped into several categories. For adding more abstraction, techniques include Encapsulate field, Generalize type, replacing type-checking code with state/strategy, and replacing conditionals with polymorphism. For breaking code into more logical pieces, techniques include Componentization, Extract class, and Extract method. For improving the names and location of code, techniques include Move method or field, Rename method or field, Pull up (moving to a superclass), and Push down (moving to a subclass).",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0010",
+          "coderefactoring_4b3a67fa_c0011"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the two different approaches to hardware refactoring mentioned, and what are their respective goals?",
+        "answer": "One approach is the automated refactoring of analog hardware descriptions, proposed by Zeng and Huss, which aims to make code processable by standard synthesis tools while preserving simulated behavior. A second approach, investigated by Mike Keating, is the manual refactoring of digital hardware description languages, which seeks to make complex systems easier to understand and thus increase designer productivity.",
+        "related_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0012",
+          "coderefactoring_4b3a67fa_c0013"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:31.431Z",
+    "content_format": "markdown",
+    "total_chunks": 18,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

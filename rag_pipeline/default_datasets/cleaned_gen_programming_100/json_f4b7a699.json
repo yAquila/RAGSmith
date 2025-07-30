@@ -1,0 +1,507 @@
+{
+  "article": {
+    "id": "json_f4b7a699",
+    "title": "JSON",
+    "url": "https://en.wikipedia.org/wiki/JSON",
+    "lang": "en",
+    "created_at": "2025-07-30T10:34:24.253086",
+    "content": "---\nid: json_f4b7a699\nurl: https://en.wikipedia.org/wiki/JSON\ntitle: JSON\nlang: en\ncreated_at: '2025-07-30T10:30:57.648395'\nchecksum: 8b43a23b6780723b75853ff20014b2aa6a080f8b67c0a90be8d8f1fe3865277d\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3289\n  char_count: 21138\n  num_chunks: 30\n  original_chunks: 36\n  filtered_out: 6\n  num_sections: 0\n---\nJSON (JavaScript Object Notation, pronounced or ) is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of name–value pairs and arrays (or other serializable values). It is a commonly used data format with diverse uses in electronic data interchange, including that of web applications with servers. JSON is a language-independent data format. It was derived from JavaScript, but many modern programming languages include code to generate and parse JSON-format data. JSON filenames use the extension .json. Douglas Crockford originally specified the JSON format in the early 2000s. He and Chip Morningstar sent the first JSON message in April 2001. == Naming and pronunciation == The 2017 international standard (ECMA-404 and ISO/IEC 21778:2017) specifies that \"JSON\" is \"pronounced , as in 'Jason and The Argonauts'\". The first (2013) edition of ECMA-404 did not address the pronunciation. The UNIX and Linux System Administration Handbook states, \"Douglas Crockford, who named and promoted the JSON format, says it's pronounced like the name Jason. But somehow, 'JAY-sawn' seems to have become more common in the technical community.\" Crockford said in 2011, \"There's a lot of argument about how you pronounce that, but I strictly don't care.\" == Standards == After RFC 4627 had been available as its \"informational\" specification since 2006, JSON was first standardized in 2013, as ECMA-404. RFC 8259, published in 2017, is the current version of the Internet Standard STD 90, and it remains consistent with ECMA-404. That same year, JSON was also standardized as ISO/IEC 21778:2017. The ECMA and ISO/IEC standards describe only the allowed syntax, whereas the RFC covers some security and interoperability considerations. == History == JSON grew out of a need for a real-time server-to-browser session communication protocol without using browser plugins such as Flash or Java applets, the dominant methods used in the early 2000s. Crockford first specified and popularized the JSON format. The acronym originated at State Software, a company cofounded by Crockford and others in March 2001. The cofounders agreed to build a system that used standard browser capabilities and provided an abstraction layer for Web developers to create stateful Web applications that had a persistent duplex connection to a Web server by holding two Hypertext Transfer Protocol (HTTP) connections open and recycling them before standard browser time-outs if no further data were exchanged. The cofounders had a round-table discussion and voted on whether to call the data format JSML (JavaScript Markup Language) or JSON (JavaScript Object Notation), as well as under what license type to make it available. The JSON.org website was launched in 2001. In December 2005, Yahoo! began offering some of its Web services in JSON. A precursor to the JSON libraries was used in a children's digital asset trading game project named Cartoon Orbit at Communities.com which used a browser side plug-in with a proprietary messaging format to manipulate DHTML elements. Upon discovery of early Ajax capabilities, digiGroups, Noosh, and others used frames to pass information into the user browsers' visual field without refreshing a Web application's visual context, realizing real-time rich Web applications using only the standard HTTP, HTML, and JavaScript capabilities of Netscape 4.0.5+ and Internet Explorer 5+. Crockford then found that JavaScript could be used as an object-based messaging format for such a system. The system was sold to Sun Microsystems, Amazon.com, and EDS. JSON was based on a subset of the JavaScript scripting language (specifically, Standard ECMA-262 3rd Edition—December 1999) and is commonly used with JavaScript, but it is a language-independent data format. Code for parsing and generating JSON data is readily available in many programming languages. JSON's website lists JSON libraries by language. In October 2013, Ecma International published the first edition of its JSON standard ECMA-404. That same year, RFC 7158 used ECMA-404 as a reference. In 2014, RFC 7159 became the main reference for JSON's Internet uses, superseding RFC 4627 and RFC 7158 (but preserving ECMA-262 and ECMA-404 as main references). In November 2017, ISO/IEC JTC 1/SC 22 published ISO/IEC 21778:2017 as an international standard. On December 13, 2017, the Internet Engineering Task Force obsoleted RFC 7159 when it published RFC 8259, which is the current version of the Internet Standard STD 90. Crockford added a clause to the JSON license stating, \"The Software shall be used for Good, not Evil\", in order to open-source the JSON libraries while mocking corporate lawyers and those who are overly pedantic. On the other hand, this clause led to license compatibility problems of the JSON license with other open-source licenses since open-source software and free software usually imply no restrictions on the purpose of use. == Syntax == The following example shows a possible JSON representation describing a person. === Character encoding === Although Crockford originally asserted that JSON is a strict subset of JavaScript and ECMAScript, his specification actually allows valid JSON documents that are not valid JavaScript; JSON allows the Unicode line terminators U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR to appear unescaped in quoted strings, while ECMAScript 2018 and older do not. This is a consequence of JSON disallowing only \"control characters\". For maximum portability, these characters are backslash-escaped. JSON exchange in an open ecosystem must be encoded in UTF-8. The encoding supports the full Unicode character set, including those characters outside the Basic Multilingual Plane (U+0000 to U+FFFF). However, if escaped, those characters must be written using UTF-16 surrogate pairs. For example, to include the Emoji character U+1F610 😐 NEUTRAL FACE in JSON: JSON became a strict subset of ECMAScript as of the language's 2019 revision. === Data types === JSON's basic data types are: Number: a signed decimal number that may contain a fractional part and may use exponential E notation but cannot include non-numbers such as NaN. The format makes no distinction between integer and floating-point. JavaScript uses IEEE-754 double-precision floating-point format for all its numeric values (later also supporting BigInt), but other languages implementing JSON may encode numbers differently. String: a sequence of zero or more Unicode characters. Strings are delimited with double quotation marks and support a backslash escaping syntax. Boolean: either of the values true or false Array: an ordered list of zero or more elements, each of which may be of any type. Arrays use square bracket notation with comma-separated elements. Object: a collection of name–value pairs where the names (also called keys) are strings. The current ECMA standard states, \"The JSON syntax does not impose any restrictions on the strings used as names, does not require that name strings be unique, and does not assign any significance to the ordering of name/value pairs.\" Objects are delimited with curly brackets and use commas to separate each pair, while within each pair, the colon \":\" character separates the key or name from its value. null: an empty value, using the word null Whitespace is allowed and ignored around or between syntactic elements (values and punctuation, but not within a string value). Four specific characters are considered whitespace for this purpose: space, horizontal tab, line feed, and carriage return. In particular, the byte order mark must not be generated by a conforming implementation (though it may be accepted when parsing JSON). JSON does not provide syntax for comments. Early versions of JSON (such as specified by RFC 4627) required that a valid JSON text must consist of only an object or an array type, which could contain other types within them. This restriction was dropped in RFC 7158, where a JSON text was redefined as any serialized value. Numbers in JSON are agnostic with regard to their representation within programming languages. While this allows for numbers of arbitrary precision to be serialized, it may lead to portability issues. For example, since no differentiation is made between integer and floating-point values, some implementations may treat 42, 42.0, and 4.2E+1 as the same number, while others may not. The JSON standard makes no requirements regarding implementation details such as overflow, underflow, loss of precision, rounding, or signed zeros, but it does recommend expecting no more than IEEE 754 binary64 precision for \"good interoperability\". There is no inherent precision loss in serializing a machine-level binary representation of a floating-point number (like binary64) into a human-readable decimal representation (like numbers in JSON) and back; there exist published algorithms to do this conversion exactly and optimally. Comments were intentionally excluded from JSON. In 2012, Douglas Crockford described his design decision thus: \"I removed comments from JSON because I saw people were using them to hold parsing directives, a practice which would have destroyed interoperability.\" JSON disallows \"trailing commas\", a comma after the last value inside a data structure. Trailing commas are a common feature of JSON derivatives to improve ease of use. == Interoperability == RFC 8259 describes certain aspects of JSON syntax that, while legal per the specifications, can cause interoperability problems. Certain JSON implementations only accept JSON texts representing an object or an array. For interoperability, applications interchanging JSON should transmit messages that are objects or arrays. The specifications allow JSON objects that contain multiple members with the same name. The behavior of implementations processing objects with duplicate names is unpredictable. For interoperability, applications should avoid duplicate names when transmitting JSON objects. The specifications specifically say that the order of members in JSON objects is not significant. For interoperability, applications should avoid assigning meaning to member ordering even if the parsing software makes that ordering visible. While the specifications place no limits on the magnitude or precision of JSON number literals, the widely used JavaScript implementation stores them as IEEE754 \"binary64\" quantities. For interoperability, applications should avoid transmitting numbers that cannot be represented in this way, for example, 1E400 or 3.141592653589793238462643383279. While the specifications do not constrain the character encoding of the Unicode characters in a JSON text, the vast majority of implementations assume UTF-8 encoding; for interoperability, applications should always and only encode JSON messages in UTF-8. The specifications do not forbid transmitting byte sequences that incorrectly represent Unicode characters. For interoperability, applications should transmit messages containing no such byte sequences. The specification does not constrain how applications go about comparing Unicode strings. For interoperability, applications should always perform such comparisons code unit by code unit. In 2015, the IETF published RFC 7493, describing the \"I-JSON Message Format\", a restricted profile of JSON that constrains the syntax and processing of JSON to avoid, as much as possible, these interoperability issues. === Semantics === While JSON provides a syntactic framework for data interchange, unambiguous data interchange also requires agreement between producer and consumer on the semantics of specific use of the JSON syntax. One example of where such an agreement is necessary is the serialization of data types that are not part of the JSON standard, for example, dates and regular expressions. == Metadata and schema == The official MIME type for JSON text is application/json, and most modern implementations have adopted this. Legacy MIME types include text/json, text/x-json, and text/javascript. The standard filename extension is .json. JSON Schema specifies a JSON-based format to define the structure of JSON data for validation, documentation, and interaction control. It provides a contract for the JSON data required by a given application and how that data can be modified. JSON Schema is based on the concepts from XML Schema (XSD) but is JSON-based. As in XSD, the same serialization/deserialization tools can be used both for the schema and data, and it is self-describing. It is specified in an Internet Draft at the IETF, with the latest version as of 2024 being \"Draft 2020-12\". There are several validators available for different programming languages, each with varying levels of conformance. The JSON standard does not support object references, but an IETF draft standard for JSON-based object references exists. == Uses == JSON-RPC is a remote procedure call (RPC) protocol built on JSON, as a replacement for XML-RPC or SOAP. It is a simple protocol that defines only a handful of data types and commands. JSON-RPC lets a system send notifications (information to the server that does not require a response) and multiple calls to the server that can be answered out of order. Asynchronous JavaScript and JSON (or AJAJ) refers to the same dynamic web page methodology as Ajax, but instead of XML, JSON is the data format. AJAJ is a web development technique that provides for the ability of a web page to request new data after it has loaded into the web browser. Typically, it renders new data from the server in response to user actions on that web page. For example, what the user types into a search box, client-side code then sends to the server, which immediately responds with a drop-down list of matching database items. JSON has seen ad hoc usage as a configuration language. However, it does not support comments. In 2012, Douglas Crockford, JSON creator, had this to say about comments in JSON when used as a configuration language: \"I know that the lack of comments makes some people sad, but it shouldn't. Suppose you are using JSON to keep configuration files, which you would like to annotate. Go ahead and insert all the comments you like. Then pipe it through JSMin before handing it to your JSON parser.\" MongoDB uses JSON-like data for its document-oriented database. Some relational databases have added support for native JSON data types, such as JSONB in PostgreSQL and JSON in MySQL. This allows developers to insert JSON data directly without having to convert it to another format. == Safety == JSON being a subset of JavaScript can lead to the misconception that it is safe to pass JSON texts to the JavaScript eval() function. This is not safe, due to certain valid JSON texts, specifically those containing U+2028 LINE SEPARATOR or U+2029 PARAGRAPH SEPARATOR, not being valid JavaScript code until JavaScript specifications were updated in 2019, and so older engines may not support it. To avoid the many pitfalls caused by executing arbitrary code from the Internet, a new function, JSON.parse(), was first added to the fifth edition of ECMAScript, which as of 2017 is supported by all major browsers. For non-supported browsers, an API-compatible JavaScript library is provided by Douglas Crockford. In addition, the TC39 proposal \"Subsume JSON\" made ECMAScript a strict JSON superset as of the language's 2019 revision. Various JSON parser implementations have suffered from denial-of-service attack and mass assignment vulnerability. == Alternatives == JSON is promoted as a low-overhead alternative to XML as both of these formats have widespread support for creation, reading, and decoding in the real-world situations where they are commonly used. Apart from XML, examples could include CSV and supersets of JSON. Google Protocol Buffers can fill this role, although it is not a data interchange language. CBOR has a superset of the JSON data types, but it is not text-based. Ion is also a superset of JSON, with a wider range of primary types, annotations, comments, and allowing trailing commas. === XML === XML has been used to describe structured data and to serialize objects. Various XML-based protocols exist to represent the same kind of data structures as JSON for the same kind of data interchange purposes. Data can be encoded in XML in several ways. The most expansive form using tag pairs results in a much larger (in character count) representation than JSON, but if data is stored in attributes and short tag form where the closing tag is replaced with />, the representation is often about the same size as JSON or just a little larger. However, an XML attribute can only have a single value and each attribute can appear at most once on each element. XML separates data from metadata (via the use of elements and attributes), while JSON does not have such a concept. Another key difference is the addressing of values. JSON has objects with a simple key-to-value mapping, whereas in XML addressing happens on nodes, each of which receives a unique ID via the XML processor. Additionally, the XML standard defines a common attribute xml:id, that can be used by the user, to set an ID explicitly. XML tag names cannot contain any of the characters !\"#$%&'()*+,/;<=>?@[\\]^`{|}~, nor a space character, and cannot begin with -, ., or a numeric digit, whereas JSON keys can (even if quotation mark and backslash must be escaped). XML values are strings of characters, with no built-in type safety. XML has the concept of schema, that permits strong typing, user-defined types, predefined tags, and formal structure, allowing for formal validation of an XML stream. JSON has several types built-in and has a similar schema concept in JSON Schema. XML supports comments, while JSON does not. == Supersets == Support for comments and other features have been deemed useful, which has led to several nonstandard JSON supersets being created. Among them are HJSON, HOCON, and JSON5 (which despite its name, is not the fifth version of JSON). === YAML === YAML version 1.2 is a superset of JSON; prior versions were not strictly compatible. For example, escaping a slash / with a backslash \\ is valid in JSON, but was not valid in YAML. YAML supports comments, while JSON does not. === CSON === CSON (\"CoffeeScript Object Notation\") uses significant indentation and unquoted keys, and assumes an outer object declaration. It was used for configuring GitHub's Atom text editor. There is also an unrelated project called CSON (\"Cursive Script Object Notation\") that is more syntactically similar to JSON. === HOCON === HOCON (\"Human-Optimized Config Object Notation\") is a format for human-readable data, and a superset of JSON. The uses of HOCON are: It is used mostly along with the Play Framework, and is developed by Lightbend. It is also supported as a configuration format for .NET projects via Akka.NET and Puppet. TIBCO Streaming: HOCON is the primary configuration file format for the TIBCO Streaming family of products (StreamBase, LiveView, and Artifact Management Server) as of TIBCO Streaming Release 10. It is also the primary configuration file format for several subsystems of Exabeam Advanced Analytics. Jitsi uses it as the \"new\" config system and .properties-Files as fallback === JSON5 === JSON5 (\"JSON5 Data Interchange Format\") is an extension of JSON syntax that, like JSON, is also valid JavaScript syntax. The specification was started in 2012 and finished in 2018 with version 1.0.0. The main differences to JSON syntax are: Optional trailing commas Unquoted object keys Single quoted and multiline strings Additional number formats Comments JSON5 syntax is supported in some software as an extension of JSON syntax, for instance in SQLite. === JSONC === JSONC (JSON with Comments) is a subset of JSON5 used in Microsoft's Visual Studio Code: supports single-line comments (//) and block comments (/* */) accepts trailing commas, but they are discouraged and the editor will display a warning == Derivatives == Several serialization formats have been built on or from the JSON specification. Examples include GeoJSON, a format designed for representing simple geographical features JSON-LD, a method of encoding linked data using JSON JSON-RPC, a remote procedure call protocol encoded in JSON JsonML, a lightweight markup language used to map between XML and JSON Smile (data interchange format) UBJSON, a binary computer data interchange format imitating JSON, but requiring fewer bytes of data == See also == BSON Comparison of data serialization formats Extensible Data Notation Amazon Ion – a superset of JSON (though limited to UTF-8, like JSON for interchange, unlike general JSON) Jackson (API) jaql – a functional data processing and query language most commonly used for JSON query processing jq – a \"JSON query language\" and high-level programming language JSONiq – a JSON-oriented query and processing language based on XQuery JSON streaming S-expression == Notes == == References == == External links == Official website"
+  },
+  "chunks": [
+    {
+      "id": "json_f4b7a699_c0000",
+      "article_id": "json_f4b7a699",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 731,
+      "content": "JSON (JavaScript Object Notation, pronounced or ) is an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of name–value pairs and arrays (or other serializable values). It is a commonly used data format with diverse uses in electronic data interchange, including that of web applications with servers. JSON is a language-independent data format. It was derived from JavaScript, but many modern programming languages include code to generate and parse JSON-format data. JSON filenames use the extension .json. Douglas Crockford originally specified the JSON format in the early 2000s. He and Chip Morningstar sent the first JSON message in April 2001.",
+      "char_count": 730,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0001",
+      "article_id": "json_f4b7a699",
+      "section": "== Naming and pronunciation ==",
+      "heading_path": "== Naming and pronunciation ==",
+      "start_char": 761,
+      "end_char": 1328,
+      "content": "== Naming and pronunciation == The 2017 international standard (ECMA-404 and ISO/IEC 21778:2017) specifies that \"JSON\" is \"pronounced , as in 'Jason and The Argonauts'\". The first (2013) edition of ECMA-404 did not address the pronunciation. The UNIX and Linux System Administration Handbook states, \"Douglas Crockford, who named and promoted the JSON format, says it's pronounced like the name Jason. But somehow, 'JAY-sawn' seems to have become more common in the technical community.\" Crockford said in 2011, \"There's a lot of argument about how you pronounce that, but I strictly don't care.\"",
+      "char_count": 596,
+      "token_estimate": 149,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0002",
+      "article_id": "json_f4b7a699",
+      "section": "== Standards ==",
+      "heading_path": "== Standards ==",
+      "start_char": 1343,
+      "end_char": 1808,
+      "content": "== Standards == After RFC 4627 had been available as its \"informational\" specification since 2006, JSON was first standardized in 2013, as ECMA-404. RFC 8259, published in 2017, is the current version of the Internet Standard STD 90, and it remains consistent with ECMA-404. That same year, JSON was also standardized as ISO/IEC 21778:2017. The ECMA and ISO/IEC standards describe only the allowed syntax, whereas the RFC covers some security and interoperability considerations.",
+      "char_count": 479,
+      "token_estimate": 119,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0003",
+      "article_id": "json_f4b7a699",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1821,
+      "end_char": 2789,
+      "content": "== History == JSON grew out of a need for a real-time server-to-browser session communication protocol without using browser plugins such as Flash or Java applets, the dominant methods used in the early 2000s. Crockford first specified and popularized the JSON format. The acronym originated at State Software, a company cofounded by Crockford and others in March 2001. The cofounders agreed to build a system that used standard browser capabilities and provided an abstraction layer for Web developers to create stateful Web applications that had a persistent duplex connection to a Web server by holding two Hypertext Transfer Protocol (HTTP) connections open and recycling them before standard browser time-outs if no further data were exchanged. The cofounders had a round-table discussion and voted on whether to call the data format JSML (JavaScript Markup Language) or JSON (JavaScript Object Notation), as well as under what license type to make it available.",
+      "char_count": 967,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0004",
+      "article_id": "json_f4b7a699",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2789,
+      "end_char": 3654,
+      "content": "The JSON.org website was launched in 2001. In December 2005, Yahoo! began offering some of its Web services in JSON. A precursor to the JSON libraries was used in a children's digital asset trading game project named Cartoon Orbit at Communities.com which used a browser side plug-in with a proprietary messaging format to manipulate DHTML elements. Upon discovery of early Ajax capabilities, digiGroups, Noosh, and others used frames to pass information into the user browsers' visual field without refreshing a Web application's visual context, realizing real-time rich Web applications using only the standard HTTP, HTML, and JavaScript capabilities of Netscape 4.0.5+ and Internet Explorer 5+. Crockford then found that JavaScript could be used as an object-based messaging format for such a system. The system was sold to Sun Microsystems, Amazon.com, and EDS.",
+      "char_count": 865,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0005",
+      "article_id": "json_f4b7a699",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3655,
+      "end_char": 4582,
+      "content": "JSON was based on a subset of the JavaScript scripting language (specifically, Standard ECMA-262 3rd Edition—December 1999) and is commonly used with JavaScript, but it is a language-independent data format. Code for parsing and generating JSON data is readily available in many programming languages. JSON's website lists JSON libraries by language. In October 2013, Ecma International published the first edition of its JSON standard ECMA-404. That same year, RFC 7158 used ECMA-404 as a reference. In 2014, RFC 7159 became the main reference for JSON's Internet uses, superseding RFC 4627 and RFC 7158 (but preserving ECMA-262 and ECMA-404 as main references). In November 2017, ISO/IEC JTC 1/SC 22 published ISO/IEC 21778:2017 as an international standard. On December 13, 2017, the Internet Engineering Task Force obsoleted RFC 7159 when it published RFC 8259, which is the current version of the Internet Standard STD 90.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0006",
+      "article_id": "json_f4b7a699",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 4583,
+      "end_char": 5014,
+      "content": "Crockford added a clause to the JSON license stating, \"The Software shall be used for Good, not Evil\", in order to open-source the JSON libraries while mocking corporate lawyers and those who are overly pedantic. On the other hand, this clause led to license compatibility problems of the JSON license with other open-source licenses since open-source software and free software usually imply no restrictions on the purpose of use.",
+      "char_count": 431,
+      "token_estimate": 107,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0007",
+      "article_id": "json_f4b7a699",
+      "section": "== = Character encoding ==",
+      "heading_path": "== = Character encoding ==",
+      "start_char": 5121,
+      "end_char": 6051,
+      "content": "== = Character encoding === Although Crockford originally asserted that JSON is a strict subset of JavaScript and ECMAScript, his specification actually allows valid JSON documents that are not valid JavaScript; JSON allows the Unicode line terminators U+2028 LINE SEPARATOR and U+2029 PARAGRAPH SEPARATOR to appear unescaped in quoted strings, while ECMAScript 2018 and older do not. This is a consequence of JSON disallowing only \"control characters\". For maximum portability, these characters are backslash-escaped. JSON exchange in an open ecosystem must be encoded in UTF-8. The encoding supports the full Unicode character set, including those characters outside the Basic Multilingual Plane (U+0000 to U+FFFF). However, if escaped, those characters must be written using UTF-16 surrogate pairs. For example, to include the Emoji character U+1F610 😐 NEUTRAL FACE in JSON: JSON became a strict subset of ECMAScript as of the language's 2019 revision.",
+      "char_count": 955,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0008",
+      "article_id": "json_f4b7a699",
+      "section": "== = Data types ==",
+      "heading_path": "== = Data types ==",
+      "start_char": 6069,
+      "end_char": 6953,
+      "content": "== = Data types === JSON's basic data types are: Number: a signed decimal number that may contain a fractional part and may use exponential E notation but cannot include non-numbers such as NaN. The format makes no distinction between integer and floating-point. JavaScript uses IEEE-754 double-precision floating-point format for all its numeric values (later also supporting BigInt), but other languages implementing JSON may encode numbers differently. String: a sequence of zero or more Unicode characters. Strings are delimited with double quotation marks and support a backslash escaping syntax. Boolean: either of the values true or false Array: an ordered list of zero or more elements, each of which may be of any type. Arrays use square bracket notation with comma-separated elements. Object: a collection of name–value pairs where the names (also called keys) are strings.",
+      "char_count": 883,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0009",
+      "article_id": "json_f4b7a699",
+      "section": "== = Data types ==",
+      "heading_path": "== = Data types ==",
+      "start_char": 6953,
+      "end_char": 7829,
+      "content": "The current ECMA standard states, \"The JSON syntax does not impose any restrictions on the strings used as names, does not require that name strings be unique, and does not assign any significance to the ordering of name/value pairs.\" Objects are delimited with curly brackets and use commas to separate each pair, while within each pair, the colon \":\" character separates the key or name from its value. null: an empty value, using the word null Whitespace is allowed and ignored around or between syntactic elements (values and punctuation, but not within a string value). Four specific characters are considered whitespace for this purpose: space, horizontal tab, line feed, and carriage return. In particular, the byte order mark must not be generated by a conforming implementation (though it may be accepted when parsing JSON). JSON does not provide syntax for comments.",
+      "char_count": 876,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0010",
+      "article_id": "json_f4b7a699",
+      "section": "== = Data types ==",
+      "heading_path": "== = Data types ==",
+      "start_char": 7830,
+      "end_char": 8743,
+      "content": "Early versions of JSON (such as specified by RFC 4627) required that a valid JSON text must consist of only an object or an array type, which could contain other types within them. This restriction was dropped in RFC 7158, where a JSON text was redefined as any serialized value. Numbers in JSON are agnostic with regard to their representation within programming languages. While this allows for numbers of arbitrary precision to be serialized, it may lead to portability issues. For example, since no differentiation is made between integer and floating-point values, some implementations may treat 42, 42.0, and 4.2E+1 as the same number, while others may not. The JSON standard makes no requirements regarding implementation details such as overflow, underflow, loss of precision, rounding, or signed zeros, but it does recommend expecting no more than IEEE 754 binary64 precision for \"good interoperability\".",
+      "char_count": 913,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0011",
+      "article_id": "json_f4b7a699",
+      "section": "== = Data types ==",
+      "heading_path": "== = Data types ==",
+      "start_char": 8744,
+      "end_char": 9463,
+      "content": "There is no inherent precision loss in serializing a machine-level binary representation of a floating-point number (like binary64) into a human-readable decimal representation (like numbers in JSON) and back; there exist published algorithms to do this conversion exactly and optimally. Comments were intentionally excluded from JSON. In 2012, Douglas Crockford described his design decision thus: \"I removed comments from JSON because I saw people were using them to hold parsing directives, a practice which would have destroyed interoperability.\" JSON disallows \"trailing commas\", a comma after the last value inside a data structure. Trailing commas are a common feature of JSON derivatives to improve ease of use.",
+      "char_count": 719,
+      "token_estimate": 179,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0012",
+      "article_id": "json_f4b7a699",
+      "section": "== Interoperability ==",
+      "heading_path": "== Interoperability ==",
+      "start_char": 9468,
+      "end_char": 10330,
+      "content": "== Interoperability == RFC 8259 describes certain aspects of JSON syntax that, while legal per the specifications, can cause interoperability problems. Certain JSON implementations only accept JSON texts representing an object or an array. For interoperability, applications interchanging JSON should transmit messages that are objects or arrays. The specifications allow JSON objects that contain multiple members with the same name. The behavior of implementations processing objects with duplicate names is unpredictable. For interoperability, applications should avoid duplicate names when transmitting JSON objects. The specifications specifically say that the order of members in JSON objects is not significant. For interoperability, applications should avoid assigning meaning to member ordering even if the parsing software makes that ordering visible.",
+      "char_count": 861,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0013",
+      "article_id": "json_f4b7a699",
+      "section": "== Interoperability ==",
+      "heading_path": "== Interoperability ==",
+      "start_char": 10330,
+      "end_char": 11325,
+      "content": "While the specifications place no limits on the magnitude or precision of JSON number literals, the widely used JavaScript implementation stores them as IEEE754 \"binary64\" quantities. For interoperability, applications should avoid transmitting numbers that cannot be represented in this way, for example, 1E400 or 3.141592653589793238462643383279. While the specifications do not constrain the character encoding of the Unicode characters in a JSON text, the vast majority of implementations assume UTF-8 encoding; for interoperability, applications should always and only encode JSON messages in UTF-8. The specifications do not forbid transmitting byte sequences that incorrectly represent Unicode characters. For interoperability, applications should transmit messages containing no such byte sequences. The specification does not constrain how applications go about comparing Unicode strings. For interoperability, applications should always perform such comparisons code unit by code unit.",
+      "char_count": 995,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0014",
+      "article_id": "json_f4b7a699",
+      "section": "== Interoperability ==",
+      "heading_path": "== Interoperability ==",
+      "start_char": 11326,
+      "end_char": 11544,
+      "content": "In 2015, the IETF published RFC 7493, describing the \"I-JSON Message Format\", a restricted profile of JSON that constrains the syntax and processing of JSON to avoid, as much as possible, these interoperability issues.",
+      "char_count": 218,
+      "token_estimate": 54,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0015",
+      "article_id": "json_f4b7a699",
+      "section": "== = Semantics ==",
+      "heading_path": "== = Semantics ==",
+      "start_char": 11540,
+      "end_char": 11913,
+      "content": "== = Semantics === While JSON provides a syntactic framework for data interchange, unambiguous data interchange also requires agreement between producer and consumer on the semantics of specific use of the JSON syntax. One example of where such an agreement is necessary is the serialization of data types that are not part of the JSON standard, for example, dates and regular expressions.",
+      "char_count": 389,
+      "token_estimate": 97,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0016",
+      "article_id": "json_f4b7a699",
+      "section": "== Metadata and schema ==",
+      "heading_path": "== Metadata and schema ==",
+      "start_char": 11938,
+      "end_char": 12857,
+      "content": "== Metadata and schema == The official MIME type for JSON text is application/json, and most modern implementations have adopted this. Legacy MIME types include text/json, text/x-json, and text/javascript. The standard filename extension is .json. JSON Schema specifies a JSON-based format to define the structure of JSON data for validation, documentation, and interaction control. It provides a contract for the JSON data required by a given application and how that data can be modified. JSON Schema is based on the concepts from XML Schema (XSD) but is JSON-based. As in XSD, the same serialization/deserialization tools can be used both for the schema and data, and it is self-describing. It is specified in an Internet Draft at the IETF, with the latest version as of 2024 being \"Draft 2020-12\". There are several validators available for different programming languages, each with varying levels of conformance.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0017",
+      "article_id": "json_f4b7a699",
+      "section": "== Uses ==",
+      "heading_path": "== Uses ==",
+      "start_char": 12964,
+      "end_char": 13938,
+      "content": "== Uses == JSON-RPC is a remote procedure call (RPC) protocol built on JSON, as a replacement for XML-RPC or SOAP. It is a simple protocol that defines only a handful of data types and commands. JSON-RPC lets a system send notifications (information to the server that does not require a response) and multiple calls to the server that can be answered out of order. Asynchronous JavaScript and JSON (or AJAJ) refers to the same dynamic web page methodology as Ajax, but instead of XML, JSON is the data format. AJAJ is a web development technique that provides for the ability of a web page to request new data after it has loaded into the web browser. Typically, it renders new data from the server in response to user actions on that web page. For example, what the user types into a search box, client-side code then sends to the server, which immediately responds with a drop-down list of matching database items. JSON has seen ad hoc usage as a configuration language.",
+      "char_count": 973,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0018",
+      "article_id": "json_f4b7a699",
+      "section": "== Uses ==",
+      "heading_path": "== Uses ==",
+      "start_char": 13938,
+      "end_char": 14659,
+      "content": "However, it does not support comments. In 2012, Douglas Crockford, JSON creator, had this to say about comments in JSON when used as a configuration language: \"I know that the lack of comments makes some people sad, but it shouldn't. Suppose you are using JSON to keep configuration files, which you would like to annotate. Go ahead and insert all the comments you like. Then pipe it through JSMin before handing it to your JSON parser.\" MongoDB uses JSON-like data for its document-oriented database. Some relational databases have added support for native JSON data types, such as JSONB in PostgreSQL and JSON in MySQL. This allows developers to insert JSON data directly without having to convert it to another format.",
+      "char_count": 721,
+      "token_estimate": 180,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0019",
+      "article_id": "json_f4b7a699",
+      "section": "== Safety ==",
+      "heading_path": "== Safety ==",
+      "start_char": 14662,
+      "end_char": 15609,
+      "content": "== Safety == JSON being a subset of JavaScript can lead to the misconception that it is safe to pass JSON texts to the JavaScript eval() function. This is not safe, due to certain valid JSON texts, specifically those containing U+2028 LINE SEPARATOR or U+2029 PARAGRAPH SEPARATOR, not being valid JavaScript code until JavaScript specifications were updated in 2019, and so older engines may not support it. To avoid the many pitfalls caused by executing arbitrary code from the Internet, a new function, JSON.parse(), was first added to the fifth edition of ECMAScript, which as of 2017 is supported by all major browsers. For non-supported browsers, an API-compatible JavaScript library is provided by Douglas Crockford. In addition, the TC39 proposal \"Subsume JSON\" made ECMAScript a strict JSON superset as of the language's 2019 revision. Various JSON parser implementations have suffered from denial-of-service attack and mass assignment vulnerability.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0020",
+      "article_id": "json_f4b7a699",
+      "section": "== Alternatives ==",
+      "heading_path": "== Alternatives ==",
+      "start_char": 15627,
+      "end_char": 16176,
+      "content": "== Alternatives == JSON is promoted as a low-overhead alternative to XML as both of these formats have widespread support for creation, reading, and decoding in the real-world situations where they are commonly used. Apart from XML, examples could include CSV and supersets of JSON. Google Protocol Buffers can fill this role, although it is not a data interchange language. CBOR has a superset of the JSON data types, but it is not text-based. Ion is also a superset of JSON, with a wider range of primary types, annotations, comments, and allowing trailing commas.",
+      "char_count": 566,
+      "token_estimate": 141,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0021",
+      "article_id": "json_f4b7a699",
+      "section": "== = XML ==",
+      "heading_path": "== = XML ==",
+      "start_char": 16187,
+      "end_char": 17026,
+      "content": "== = XML === XML has been used to describe structured data and to serialize objects. Various XML-based protocols exist to represent the same kind of data structures as JSON for the same kind of data interchange purposes. Data can be encoded in XML in several ways. The most expansive form using tag pairs results in a much larger (in character count) representation than JSON, but if data is stored in attributes and short tag form where the closing tag is replaced with />, the representation is often about the same size as JSON or just a little larger. However, an XML attribute can only have a single value and each attribute can appear at most once on each element. XML separates data from metadata (via the use of elements and attributes), while JSON does not have such a concept. Another key difference is the addressing of values.",
+      "char_count": 838,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0022",
+      "article_id": "json_f4b7a699",
+      "section": "== = XML ==",
+      "heading_path": "== = XML ==",
+      "start_char": 17026,
+      "end_char": 17891,
+      "content": "JSON has objects with a simple key-to-value mapping, whereas in XML addressing happens on nodes, each of which receives a unique ID via the XML processor. Additionally, the XML standard defines a common attribute xml:id, that can be used by the user, to set an ID explicitly. XML tag names cannot contain any of the characters !\"#$%&'()*+,/;<=>?@[\\]^`{|}~, nor a space character, and cannot begin with -, ., or a numeric digit, whereas JSON keys can (even if quotation mark and backslash must be escaped). XML values are strings of characters, with no built-in type safety. XML has the concept of schema, that permits strong typing, user-defined types, predefined tags, and formal structure, allowing for formal validation of an XML stream. JSON has several types built-in and has a similar schema concept in JSON Schema. XML supports comments, while JSON does not.",
+      "char_count": 865,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0023",
+      "article_id": "json_f4b7a699",
+      "section": "== Supersets ==",
+      "heading_path": "== Supersets ==",
+      "start_char": 17896,
+      "end_char": 18128,
+      "content": "== Supersets == Support for comments and other features have been deemed useful, which has led to several nonstandard JSON supersets being created. Among them are HJSON, HOCON, and JSON5 (which despite its name, is not the fifth version of JSON).",
+      "char_count": 246,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0024",
+      "article_id": "json_f4b7a699",
+      "section": "== = YAML ==",
+      "heading_path": "== = YAML ==",
+      "start_char": 18140,
+      "end_char": 18368,
+      "content": "== = YAML === YAML version 1.2 is a superset of JSON; prior versions were not strictly compatible. For example, escaping a slash / with a backslash \\ is valid in JSON, but was not valid in YAML. YAML supports comments, while JSON does not.",
+      "char_count": 239,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0025",
+      "article_id": "json_f4b7a699",
+      "section": "== = CSON ==",
+      "heading_path": "== = CSON ==",
+      "start_char": 18380,
+      "end_char": 18690,
+      "content": "== = CSON === CSON (\"CoffeeScript Object Notation\") uses significant indentation and unquoted keys, and assumes an outer object declaration. It was used for configuring GitHub's Atom text editor. There is also an unrelated project called CSON (\"Cursive Script Object Notation\") that is more syntactically similar to JSON.",
+      "char_count": 321,
+      "token_estimate": 80,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0026",
+      "article_id": "json_f4b7a699",
+      "section": "== = HOCON ==",
+      "heading_path": "== = HOCON ==",
+      "start_char": 18703,
+      "end_char": 19382,
+      "content": "== = HOCON === HOCON (\"Human-Optimized Config Object Notation\") is a format for human-readable data, and a superset of JSON. The uses of HOCON are: It is used mostly along with the Play Framework, and is developed by Lightbend. It is also supported as a configuration format for .NET projects via Akka.NET and Puppet. TIBCO Streaming: HOCON is the primary configuration file format for the TIBCO Streaming family of products (StreamBase, LiveView, and Artifact Management Server) as of TIBCO Streaming Release 10. It is also the primary configuration file format for several subsystems of Exabeam Advanced Analytics. Jitsi uses it as the \"new\" config system and .properties-Files as fallback",
+      "char_count": 691,
+      "token_estimate": 172,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0027",
+      "article_id": "json_f4b7a699",
+      "section": "== = JSON5 ==",
+      "heading_path": "== = JSON5 ==",
+      "start_char": 19395,
+      "end_char": 19854,
+      "content": "== = JSON5 === JSON5 (\"JSON5 Data Interchange Format\") is an extension of JSON syntax that, like JSON, is also valid JavaScript syntax. The specification was started in 2012 and finished in 2018 with version 1.0.0. The main differences to JSON syntax are: Optional trailing commas Unquoted object keys Single quoted and multiline strings Additional number formats Comments JSON5 syntax is supported in some software as an extension of JSON syntax, for instance in SQLite.",
+      "char_count": 471,
+      "token_estimate": 117,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0028",
+      "article_id": "json_f4b7a699",
+      "section": "== = JSONC ==",
+      "heading_path": "== = JSONC ==",
+      "start_char": 19867,
+      "end_char": 20107,
+      "content": "== = JSONC === JSONC (JSON with Comments) is a subset of JSON5 used in Microsoft's Visual Studio Code: supports single-line comments (//) and block comments (/* */) accepts trailing commas, but they are discouraged and the editor will display a warning",
+      "char_count": 252,
+      "token_estimate": 63,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "json_f4b7a699_c0029",
+      "article_id": "json_f4b7a699",
+      "section": "== Derivatives ==",
+      "heading_path": "== Derivatives ==",
+      "start_char": 20124,
+      "end_char": 20611,
+      "content": "== Derivatives == Several serialization formats have been built on or from the JSON specification. Examples include GeoJSON, a format designed for representing simple geographical features JSON-LD, a method of encoding linked data using JSON JSON-RPC, a remote procedure call protocol encoded in JSON JsonML, a lightweight markup language used to map between XML and JSON Smile (data interchange format) UBJSON, a binary computer data interchange format imitating JSON, but requiring fewer bytes of data",
+      "char_count": 503,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "For the sake of interoperability, why should applications avoid transmitting JSON numbers like 1E400?",
+        "answer": "Applications should avoid transmitting numbers like 1E400 to ensure interoperability because the widely used JavaScript implementation stores numbers as IEEE 754 \"binary64\" quantities, and cannot represent numbers of that magnitude, even though the JSON specification itself places no limits on them.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0013"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What protocols is JSON-RPC designed to replace?",
+        "answer": "JSON-RPC is designed as a replacement for XML-RPC or SOAP.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0017"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What was the alternative name considered for the JSON data format before the co-founders settled on JavaScript Object Notation?",
+        "answer": "The co-founders considered calling the data format JSML (JavaScript Markup Language) before voting to use the name JSON (JavaScript Object Notation).",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0003"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What was Douglas Crockford's role in the creation of JSON, and what is his stated position on its pronunciation?",
+        "answer": "Douglas Crockford originally specified the JSON format in the early 2000s and sent the first JSON message in April 2001. Although he says it's pronounced like the name \"Jason,\" he also stated in 2011 that he \"strictly [doesn't] care\" how it is pronounced.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0000",
+          "json_f4b7a699_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Trace the timeline of JSON's development, from its conceptual origins to its formal standardization, including key dates and events.",
+        "answer": "The concept for JSON originated in March 2001 at State Software, a company co-founded by Douglas Crockford. The JSON.org website was launched that same year. In December 2005, Yahoo! began to offer some of its web services in JSON. An \"informational\" specification, RFC 4627, became available in 2006. The format was first formally standardized in 2013 as ECMA-404. In 2017, the current Internet Standard STD 90, RFC 8259, was published, and JSON was also standardized as ISO/IEC 21778:2017.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0002",
+          "json_f4b7a699_c0003",
+          "json_f4b7a699_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Describe the evolution of the relationship between JSON and ECMAScript, from JSON's origin to 2019.",
+        "answer": "JSON was initially based on a subset of the 1999 ECMA-262 (ECMAScript) standard. However, for a long time it was not a strict subset because JSON's specification allowed certain Unicode line terminators (U+2028 and U+2029) to appear unescaped in strings, which was not valid in ECMAScript. This discrepancy was resolved with the 2019 revision of ECMAScript, at which point JSON officially became a strict subset of the language.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0005",
+          "json_f4b7a699_c0006",
+          "json_f4b7a699_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Trace the evolution of JSON from its initial creation to becoming an official internet standard.",
+        "answer": "JSON originated in 2001 at State Software, a company co-founded by Douglas Crockford, to facilitate real-time server-browser communication. The JSON.org website was also launched in 2001, and by 2005, Yahoo! began using it for web services. The format was later formalized through several publications. In 2013, Ecma International published the ECMA-404 standard. This was followed by RFC 7159 in 2014, which became the main reference for JSON's internet uses. Finally, in December 2017, the Internet Engineering Task Force published RFC 8259, which obsoleted previous RFCs and is the current version of the Internet Standard STD 90.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0003",
+          "json_f4b7a699_c0004",
+          "json_f4b7a699_c0005",
+          "json_f4b7a699_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Summarize the key characteristics and design choices of JSON, including its basic data types, structural rules, and intentional omissions.",
+        "answer": "JSON's basic data types are Number, String, Boolean, Array, Object, and null. For Objects, which are collections of name-value pairs, the standard does not require names to be unique or assign significance to the order of pairs. While early versions of JSON required a valid text to be only an object or an array, this restriction was later dropped to allow any serialized value. Key design choices include the intentional exclusion of comments, a decision made to prevent them from being used for parsing directives which would have harmed interoperability. JSON also disallows trailing commas.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0008",
+          "json_f4b7a699_c0009",
+          "json_f4b7a699_c0010",
+          "json_f4b7a699_c0011"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Summarize the key interoperability issues identified in JSON and the solution proposed by the IETF to address them.",
+        "answer": "Key interoperability issues in JSON include transmitting data that isn't an object or array, using duplicate member names, relying on member order, using numbers that cannot be represented as IEEE 754 'binary64', using character encodings other than UTF-8, and transmitting invalid Unicode byte sequences. To address these problems, the IETF published RFC 7493 in 2015, which describes the 'I-JSON Message Format', a restricted profile of JSON designed to avoid these specific interoperability issues.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0012",
+          "json_f4b7a699_c0013",
+          "json_f4b7a699_c0014"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What is a notable limitation of using JSON as a configuration language, and what workaround was proposed by its creator?",
+        "answer": "A notable limitation of using JSON as a configuration language is that it does not support comments. JSON's creator, Douglas Crockford, suggested a workaround where users can add comments to their configuration files and then use a tool like JSMin to remove the comments before the file is processed by a JSON parser.",
+        "related_chunk_ids": [
+          "json_f4b7a699_c0017",
+          "json_f4b7a699_c0018"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:31.239Z",
+    "content_format": "markdown",
+    "total_chunks": 30,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}
