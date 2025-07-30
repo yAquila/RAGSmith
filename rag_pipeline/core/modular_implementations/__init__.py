@@ -1,7 +1,7 @@
 from rag_pipeline.core.modular_implementations.pre_embedding import NonePreEmbedding, ContextualChunkHeaders, PreEmbeddingResult
 from rag_pipeline.core.modular_implementations.query_expansion import NoneQueryExpansion, SimpleMultiQuery, Decomposition, RAGFusion, HyDE, StepBackPrompting, QueryExpansionResult
-from rag_pipeline.core.modular_implementations.retrieval import SimpleVectorRAG, KeywordSearchBM25, HybridSearch, RetrievalResult
-from rag_pipeline.core.modular_implementations.passage_augment import NonePassageAugment, PrevNextAugmenter, PassageAugmentResult
+from rag_pipeline.core.modular_implementations.retrieval import SimpleVectorRAG, KeywordSearchBM25, HybridSearch, GraphRAG, RetrievalResult
+from rag_pipeline.core.modular_implementations.passage_augment import NonePassageAugment, PrevNextAugmenter, RelevantSegmentExtractor, PassageAugmentResult
 from rag_pipeline.core.modular_implementations.passage_rerank import NonePassageRerank, CrossEncoderRerank, LLMRerank, CELLM_ParallelRerank, PassageRerankResult
 from rag_pipeline.core.modular_implementations.passage_filter import SimpleThresholdFilter, SimilarityThresholdFilter, PassageFilterResult
 from rag_pipeline.core.modular_implementations.passage_compress import NonePassageCompress, TreeSummarize, LLMSummarize, PassageCompressResult
@@ -26,6 +26,7 @@ COMPONENT_REGISTRY = {
         "simple_vector_rag": SimpleVectorRAG,
         "keyword_search_bm25": KeywordSearchBM25,
         "hybrid_search": HybridSearch,
+        "graph_rag": GraphRAG,
     },
     "passage_rerank": {
         "none": NonePassageRerank,
@@ -40,6 +41,7 @@ COMPONENT_REGISTRY = {
     "passage_augment": {
         "none": NonePassageAugment,
         "prev_next_augmenter": PrevNextAugmenter,
+        "relevant_segment_extractor": RelevantSegmentExtractor,
     },
     "passage_compress": {
         "none": NonePassageCompress,

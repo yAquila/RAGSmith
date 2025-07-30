@@ -1,0 +1,118 @@
+{
+  "article": {
+    "id": "softwaredevelopmentk_5204c847",
+    "title": "Software development kit",
+    "url": "https://en.wikipedia.org/wiki/Software_development_kit",
+    "lang": "en",
+    "created_at": "2025-07-30T08:46:53.908108",
+    "content": "---\nid: softwaredevelopmentk_5204c847\nurl: https://en.wikipedia.org/wiki/Software_development_kit\ntitle: Software development kit\nlang: en\ncreated_at: '2025-07-30T08:45:42.531138'\nchecksum: dbe1112148a9abebd59ed821a1f7cc789ec405fefa530140cd84353594e4571c\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 507\n  char_count: 3402\n  num_chunks: 4\n  original_chunks: 8\n  filtered_out: 4\n  num_sections: 0\n---\nA software development kit (SDK) is a collection of software development tools in one installable package. They facilitate the creation of applications by having a compiler, debugger and sometimes a software framework. They are normally specific to a hardware platform and operating system combination. To create applications with advanced functionalities such as advertisements, push notifications, etc; most application software developers use specific software development kits. Some SDKs are required for developing a platform-specific app. For example, the development of an Android app on the Java platform requires a Java Development Kit. For iOS applications (apps) the iOS SDK is required. For Universal Windows Platform the .NET Framework SDK might be used. There are also SDKs that add additional features and can be installed in apps to provide analytics, data about application activity, and monetization options. Some prominent creators of these types of SDKs include Google, Smaato, InMobi, and Facebook. == Details == An SDK can take the form of application programming interfaces in the form of on-device libraries of reusable functions used to interface to a particular programming language, or it may be as complex as hardware-specific tools that can communicate with a particular embedded system. Common tools include debugging facilities and other utilities, often presented in an integrated development environment. SDKs may include sample software and/or technical notes along with documentation, and tutorials to help clarify points made by the primary reference material. SDKs often include licenses that make them unsuitable for building software intended to be developed under an incompatible license. For example, a proprietary SDK is generally incompatible with free software development, while a GNU General Public License'd SDK could be incompatible with proprietary software development, for legal reasons. However, SDKs built under the GNU Lesser General Public License are typically usable for proprietary development. In cases where the underlying technology is new, SDKs may include hardware. For example, AirTag's 2012 near-field communication SDK included both the paying and the reading halves of the necessary hardware stack. The average Android mobile app implements 15.6 separate SDKs, with gaming apps implementing on average 17.5 different SDKs. The most popular SDK categories for Android mobile apps are analytics and advertising. SDKs can be unsafe (because they are implemented within apps yet run separate code). Malicious SDKs (with honest intentions or not) can violate users' data privacy, damage app performance, or even cause apps to be banned from Google Play or the App Store. New technologies allow app developers to control and monitor client SDKs in real time. Providers of SDKs for specific systems or subsystems sometimes substitute a more specific term instead of software. For instance, both Microsoft and Citrix provide a driver development kit for developing device drivers. == Examples == Examples of software development kits for various platforms include: AmigaOS NDK Android NDK iOS SDK Java Development Kit Java Web Services Development Pack Microsoft Windows SDK VaxTele SIP Server SDK Visage SDK Vuforia Augmented Reality SDK Windows App SDK Xbox Development Kit == See also == Game development kit Widget toolkit == References =="
+  },
+  "chunks": [
+    {
+      "id": "softwaredevelopmentk_5204c847_c0000",
+      "article_id": "softwaredevelopmentk_5204c847",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 927,
+      "content": "A software development kit (SDK) is a collection of software development tools in one installable package. They facilitate the creation of applications by having a compiler, debugger and sometimes a software framework. They are normally specific to a hardware platform and operating system combination. To create applications with advanced functionalities such as advertisements, push notifications, etc; most application software developers use specific software development kits. Some SDKs are required for developing a platform-specific app. For example, the development of an Android app on the Java platform requires a Java Development Kit. For iOS applications (apps) the iOS SDK is required. For Universal Windows Platform the .NET Framework SDK might be used. There are also SDKs that add additional features and can be installed in apps to provide analytics, data about application activity, and monetization options.",
+      "char_count": 926,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaredevelopmentk_5204c847_c0001",
+      "article_id": "softwaredevelopmentk_5204c847",
+      "section": "== Details ==",
+      "heading_path": "== Details ==",
+      "start_char": 1033,
+      "end_char": 1952,
+      "content": "== Details == An SDK can take the form of application programming interfaces in the form of on-device libraries of reusable functions used to interface to a particular programming language, or it may be as complex as hardware-specific tools that can communicate with a particular embedded system. Common tools include debugging facilities and other utilities, often presented in an integrated development environment. SDKs may include sample software and/or technical notes along with documentation, and tutorials to help clarify points made by the primary reference material. SDKs often include licenses that make them unsuitable for building software intended to be developed under an incompatible license. For example, a proprietary SDK is generally incompatible with free software development, while a GNU General Public License'd SDK could be incompatible with proprietary software development, for legal reasons.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaredevelopmentk_5204c847_c0002",
+      "article_id": "softwaredevelopmentk_5204c847",
+      "section": "== Details ==",
+      "heading_path": "== Details ==",
+      "start_char": 1952,
+      "end_char": 2948,
+      "content": "However, SDKs built under the GNU Lesser General Public License are typically usable for proprietary development. In cases where the underlying technology is new, SDKs may include hardware. For example, AirTag's 2012 near-field communication SDK included both the paying and the reading halves of the necessary hardware stack. The average Android mobile app implements 15.6 separate SDKs, with gaming apps implementing on average 17.5 different SDKs. The most popular SDK categories for Android mobile apps are analytics and advertising. SDKs can be unsafe (because they are implemented within apps yet run separate code). Malicious SDKs (with honest intentions or not) can violate users' data privacy, damage app performance, or even cause apps to be banned from Google Play or the App Store. New technologies allow app developers to control and monitor client SDKs in real time. Providers of SDKs for specific systems or subsystems sometimes substitute a more specific term instead of software.",
+      "char_count": 996,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaredevelopmentk_5204c847_c0003",
+      "article_id": "softwaredevelopmentk_5204c847",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 3054,
+      "end_char": 3335,
+      "content": "== Examples == Examples of software development kits for various platforms include: AmigaOS NDK Android NDK iOS SDK Java Development Kit Java Web Services Development Pack Microsoft Windows SDK VaxTele SIP Server SDK Visage SDK Vuforia Augmented Reality SDK Windows App SDK Xbox Development Kit",
+      "char_count": 294,
+      "token_estimate": 73,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 5,
+    "items": [
+      {
+        "question": "What are the most popular SDK categories for Android mobile applications?",
+        "answer": "The most popular SDK categories for Android mobile apps are analytics and advertising.",
+        "related_chunk_ids": [
+          "softwaredevelopmentk_5204c847_c0002"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What specific SDK is required to develop an Android application on the Java platform?",
+        "answer": "The development of an Android app on the Java platform requires a Java Development Kit.",
+        "related_chunk_ids": [
+          "softwaredevelopmentk_5204c847_c0000"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the name of the software development kit for Android mentioned in the examples?",
+        "answer": "The software development kit for Android mentioned in the examples is the Android NDK.",
+        "related_chunk_ids": [
+          "softwaredevelopmentk_5204c847_c0003"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the potential risks or downsides associated with using a Software Development Kit (SDK)?",
+        "answer": "There are several potential risks when using an SDK. One is related to licensing, as a proprietary SDK is generally incompatible with free software development, and a GNU General Public License'd SDK can be legally incompatible with proprietary software. Another significant risk is that SDKs can be unsafe, as they are implemented within apps but run separate code. Malicious SDKs can violate users' data privacy, negatively impact app performance, or even cause the application to be banned from platforms like Google Play or the App Store.",
+        "related_chunk_ids": [
+          "softwaredevelopmentk_5204c847_c0000",
+          "softwaredevelopmentk_5204c847_c0001",
+          "softwaredevelopmentk_5204c847_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What licensing incompatibilities can arise when using an SDK, and what is a notable exception?",
+        "answer": "SDKs can have licenses that are incompatible with the software being developed. For example, a proprietary SDK is generally incompatible with free software development, and a GNU General Public License'd (GPL) SDK can be legally incompatible with proprietary software development. A notable exception is the GNU Lesser General Public License (LGPL), as SDKs built under it are typically usable for proprietary development.",
+        "related_chunk_ids": [
+          "softwaredevelopmentk_5204c847_c0001",
+          "softwaredevelopmentk_5204c847_c0002"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:33.135Z",
+    "content_format": "markdown",
+    "total_chunks": 4,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "article": {
+    "id": "familylaw_d712d7ab",
+    "title": "Family law",
+    "url": "https://en.wikipedia.org/wiki/Family_law",
+    "lang": "en",
+    "created_at": "2025-07-30T12:39:34.675149",
+    "content": "---\nid: familylaw_d712d7ab\nurl: https://en.wikipedia.org/wiki/Family_law\ntitle: Family law\nlang: en\ncreated_at: '2025-07-30T12:36:37.291184'\nchecksum: b8821c131778f571e53efbefcc3462d1653367ac243333f6c2807de877e91037\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 672\n  char_count: 4503\n  num_chunks: 3\n  original_chunks: 10\n  filtered_out: 7\n  num_sections: 0\n---\nFamily law (also called matrimonial law or the law of domestic relations) is an area of the law that deals with family matters and domestic relations. == Overview == Subjects that commonly fall under a nation's body of family law include: Marriage, civil unions, and domestic partnerships: Entry into legally recognized spousal and domestic relationships The termination of legally recognized family relationships and ancillary matters, including divorce, annulment, property settlements, alimony, child custody and visitation, child support and alimony awards Prenuptial and Postnuptial agreements Adoption: proceedings to adopt a child and, in some cases, an adult. Surrogacy: the law and process of giving birth as a surrogate mother Child protective proceedings: court proceedings that may result from state intervention in cases of child abuse and child neglect Juvenile law: Matters relating to minors including status offenses, delinquency, emancipation and juvenile adjudication Paternity: proceedings to establish and disestablish paternity, and the administration of paternity testing Rights: Children's rights, Youth rights, Mothers' rights, Fathers' rights, Parents' rights, Right to family life This list is not exhaustive and varies depending on jurisdiction. == Conflict of laws == Issues may arise in family law where there is a question as to the laws of the jurisdiction that apply to the marriage relationship or to custody and divorce, and whether a divorce or child custody order is recognized under the laws of another jurisdiction. For child custody, many nations have joined the Hague Convention on the Civil Aspects of International Child Abduction in order to grant recognition to other member states' custody orders and avoid issues of parental kidnapping. == By jurisdiction == == See also == == References == == Further reading == David Bradley. ‘Family law’, in Elgar encyclopedia of comparative law, 3rd edn. Vol. 2: E-L. Eds. Jan M. Smits et al. Cheltenham/Northampton, M.A.: Edward Elgar, 2023. Elizabeth Brake & Lucinda Ferguson, eds. Philosophical foundations of children's and family law. Oxford: Oxford University Press, 2018. Aleck Chloros, Max Rheinstein, & Mary Ann Glendon, eds. International encyclopedia of comparative law, vol. 4: Persons and family. Tübingen: Mohr Siebeck, 2007. Shazia Choudhry & Jonathan Herring, eds. The Cambridge companion to comparative family law. Cambridge: Cambridge University Press, 2019. John Eekelaar. Family law and personal life. Oxford: Oxford University Press, 2006. Finer, Sir Morris (1974). Report of the Committee on One-Parent Families: presented to Parliament by the Secretary of State for Social Services by command of Her Majesty July 1974. H.M.S.O. ISBN 9780101562911. Marsha Garrison. Family life, family law, and family justice: tying the knot. Abingdon: Routledge, 2023. Laurence D. Houlgate. Philosophy, law and the family: a new introduction to the philosophy of law. Cham: Springer, 2017. Shamil Jeppie, Ebrahim Moosa, & Richard L. Roberts, eds. Muslim family law in Sub-Saharan Africa: colonial legacies and post-colonial challenges. Amsterdam: Amsterdam University Press, 2010. Klaw, Margaret (2013). Keeping It Civil: The Case of the Pre-nup and the Porsche & Other True Accounts from the Files of a Family Lawyer. Algonquin Books. ISBN 978-1616202392. Harry D. Krause. ‘Comparative family law’, in Oxford handbook of comparative law. Eds. Mathias Reimann & Reinhard Zimmermann. Oxford: Oxford University Press, 2008, p. 1099–1130. Ziba Mir-Hosseini et al., eds. Gender and equality in Muslim family law: justice and ethics in the Islamic legal tradition. London: I.B. Tauris, 2017. Jens M. Scherpe, ed. European family law. 3 vols. Cheltenham, UK: Edward Elgar, 2016. == External links == Testimony of Barbara Dafoe Whitehead, Ph.D., Co-Director, National Marriage Project Rutgers University, before US Senate Subcommittee Wallerstein, Judith (19 December 2000). \"The Unexpected Legacy of Divorce\". pbs.org. NPR. Archived from the original on 26 January 2001. Retrieved 2019-10-10. (an analysis of the long-term effect of divorce on children) R. Partain, \"Comparative Family Law, Korean Family Law, and the Missing Definitions of Family\", (2012) HongIk University Journal of Law, Vol. 13, No. 2. \"Hong Kong Family Court Tables\" includes a summary of Hong Kong family law principles, a guide to the recent case law and relevant statutes, and a glossary of relevant terms related to the Hong Kong family law."
+  },
+  "chunks": [
+    {
+      "id": "familylaw_d712d7ab_c0000",
+      "article_id": "familylaw_d712d7ab",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 165,
+      "end_char": 682,
+      "content": "== Overview == Subjects that commonly fall under a nation's body of family law include: Marriage, civil unions, and domestic partnerships: Entry into legally recognized spousal and domestic relationships The termination of legally recognized family relationships and ancillary matters, including divorce, annulment, property settlements, alimony, child custody and visitation, child support and alimony awards Prenuptial and Postnuptial agreements Adoption: proceedings to adopt a child and, in some cases, an adult.",
+      "char_count": 516,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "familylaw_d712d7ab_c0001",
+      "article_id": "familylaw_d712d7ab",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 682,
+      "end_char": 1287,
+      "content": "Surrogacy: the law and process of giving birth as a surrogate mother Child protective proceedings: court proceedings that may result from state intervention in cases of child abuse and child neglect Juvenile law: Matters relating to minors including status offenses, delinquency, emancipation and juvenile adjudication Paternity: proceedings to establish and disestablish paternity, and the administration of paternity testing Rights: Children's rights, Youth rights, Mothers' rights, Fathers' rights, Parents' rights, Right to family life This list is not exhaustive and varies depending on jurisdiction.",
+      "char_count": 605,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "familylaw_d712d7ab_c0002",
+      "article_id": "familylaw_d712d7ab",
+      "section": "== Conflict of laws ==",
+      "heading_path": "== Conflict of laws ==",
+      "start_char": 1296,
+      "end_char": 1784,
+      "content": "== Conflict of laws == Issues may arise in family law where there is a question as to the laws of the jurisdiction that apply to the marriage relationship or to custody and divorce, and whether a divorce or child custody order is recognized under the laws of another jurisdiction. For child custody, many nations have joined the Hague Convention on the Civil Aspects of International Child Abduction in order to grant recognition to other member states' custody orders and avoid issues of parental kidnapping.",
+      "char_count": 509,
+      "token_estimate": 127,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 5,
+    "items": [
+      {
+        "question": "What are the common subjects that fall under a nation's body of family law?",
+        "answer": "Subjects commonly covered by family law include: the entry into legally recognized relationships like marriage, civil unions, and domestic partnerships; the termination of these relationships through divorce or annulment, along with related matters such as property settlements, alimony, and child custody; prenuptial and postnuptial agreements; and adoption proceedings for children and sometimes adults.",
+        "related_chunk_ids": [
+          "familylaw_d712d7ab_c0000"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are child protective proceedings?",
+        "answer": "Child protective proceedings are court proceedings that can result from state intervention in cases of child abuse and child neglect.",
+        "related_chunk_ids": [
+          "familylaw_d712d7ab_c0001"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What international agreement was established to ensure recognition of custody orders between member states and to prevent parental kidnapping?",
+        "answer": "Many nations have joined the Hague Convention on the Civil Aspects of International Child Abduction to grant recognition to other member states' custody orders and avoid issues of parental kidnapping.",
+        "related_chunk_ids": [
+          "familylaw_d712d7ab_c0002"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "How can international legal issues, such as conflict of laws, affect child custody and divorce proceedings?",
+        "answer": "In family law, a conflict of laws can create issues regarding which jurisdiction's laws apply to divorce and child custody. This can lead to questions about whether a divorce or child custody order from one jurisdiction will be recognized in another. To address this for child custody specifically and to prevent parental kidnapping, many countries have joined the Hague Convention on the Civil Aspects of International Child Abduction to grant recognition to custody orders from other member states.",
+        "related_chunk_ids": [
+          "familylaw_d712d7ab_c0000",
+          "familylaw_d712d7ab_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are some of the legal proceedings and matters related to children that fall under the scope of family law?",
+        "answer": "Family law covers numerous proceedings and matters concerning children, including the termination of family relationships and related issues like child custody, visitation, and support. It also includes the legal process of adoption, surrogacy arrangements, and child protective proceedings in cases of abuse or neglect. Additionally, family law addresses juvenile law, which pertains to minors' status offenses, delinquency, and emancipation, as well as paternity proceedings to establish or disestablish parentage.",
+        "related_chunk_ids": [
+          "familylaw_d712d7ab_c0000",
+          "familylaw_d712d7ab_c0001"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T13:32:46.424Z",
+    "content_format": "markdown",
+    "total_chunks": 3,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

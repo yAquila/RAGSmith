@@ -1,0 +1,762 @@
+{
+  "article": {
+    "id": "softwaretesting_535dff33",
+    "title": "Software testing",
+    "url": "https://en.wikipedia.org/wiki/Software_testing",
+    "lang": "en",
+    "created_at": "2025-07-30T08:48:56.150998",
+    "content": "---\nid: softwaretesting_535dff33\nurl: https://en.wikipedia.org/wiki/Software_testing\ntitle: Software testing\nlang: en\ncreated_at: '2025-07-30T08:45:43.591801'\nchecksum: db3b0cafb846ed9562bc62b02aa8365a931a1bc558080d8034f640a3b7f78746\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 7485\n  char_count: 48439\n  num_chunks: 50\n  original_chunks: 68\n  filtered_out: 18\n  num_sections: 0\n---\nSoftware testing is the act of checking whether software satisfies expectations. Software testing can provide objective, independent information about the quality of software and the risk of its failure to a user or sponsor. Software testing can determine the correctness of software for specific scenarios but cannot determine correctness for all scenarios. It cannot find all bugs. Based on the criteria for measuring correctness from an oracle, software testing employs principles and mechanisms that might recognize a problem. Examples of oracles include specifications, contracts, comparable products, past versions of the same product, inferences about intended or expected purpose, user or customer expectations, relevant standards, and applicable laws. Software testing is often dynamic in nature; running the software to verify actual output matches expected. It can also be static in nature; reviewing code and its associated documentation. Software testing is often used to answer the question: Does the software do what it is supposed to do and what it needs to do? Information learned from software testing may be used to improve the process by which software is developed. Software testing should follow a \"pyramid\" approach wherein most of your tests should be unit tests, followed by integration tests and finally end-to-end (e2e) tests should have the lowest proportion. == Economics == A study conducted by NIST in 2002 reported that software bugs cost the U.S. economy $59.5 billion annually. More than a third of this cost could be avoided if better software testing was performed. Outsourcing software testing because of costs is very common, with China, the Philippines, and India being preferred destinations. == History == Glenford J. Myers initially introduced the separation of debugging from testing in 1979. Although his attention was on breakage testing (\"A successful test case is one that detects an as-yet undiscovered error.\"), it illustrated the desire of the software engineering community to separate fundamental development activities, such as debugging, from that of verification. Software testing typically includes handling software bugs – a defect in the code that causes an undesirable result. Bugs generally slow testing progress and involve programmer assistance to debug and fix. Not all defects cause a failure. For example, a defect in dead code will not be considered a failure. A defect that does not cause failure at one point in time may lead to failure later due to environmental changes. Examples of environment change include running on new computer hardware, changes in data, and interacting with different software. == Goals == Software testing is typically goal driven. === Finding bugs === Software testing typically includes handling software bugs – a defect in the code that causes an undesirable result. Bugs generally slow testing progress and involve programmer assistance to debug and fix. Not all defects cause a failure. For example, a defect in dead code will not be considered a failure. A defect that does not cause failure at one point in time may lead to failure later due to environmental changes. Examples of environment change include running on new computer hardware, changes in data, and interacting with different software. A single defect may result in multiple failure symptoms. === Ensuring requirements are satisfied === Software testing may involve a Requirements gap – omission from the design for a requirement. Requirement gaps can often be non-functional requirements such as testability, scalability, maintainability, performance, and security. === Code coverage === A fundamental limitation of software testing is that testing under all combinations of inputs and preconditions (initial state) is not feasible, even with a simple product. Defects that manifest in unusual conditions are difficult to find in testing. Also, non-functional dimensions of quality (how it is supposed to be versus what it is supposed to do) – usability, scalability, performance, compatibility, and reliability – can be subjective; something that constitutes sufficient value to one person may not to another. Although testing for every possible input is not feasible, testing can use combinatorics to maximize coverage while minimizing tests. == Categories == Testing can be categorized many ways. === Automated testing === === Levels === Software testing can be categorized into levels based on how much of the software system is the focus of a test. ==== Unit testing ==== ==== Integration testing ==== ==== System testing ==== === Static, dynamic, and passive testing === There are many approaches to software testing. Reviews, walkthroughs, or inspections are referred to as static testing, whereas executing programmed code with a given set of test cases is referred to as dynamic testing. Static testing is often implicit, like proofreading, plus when programming tools/text editors check source code structure or compilers (pre-compilers) check syntax and data flow as static program analysis. Dynamic testing takes place when the program itself is run. Dynamic testing may begin before the program is 100% complete in order to test particular sections of code and are applied to discrete functions or modules. Typical techniques for these are either using stubs/drivers or execution from a debugger environment. Static testing involves verification, whereas dynamic testing also involves validation. Passive testing means verifying the system's behavior without any interaction with the software product. Contrary to active testing, testers do not provide any test data but look at system logs and traces. They mine for patterns and specific behavior in order to make some kind of decisions. This is related to offline runtime verification and log analysis. === Exploratory === === Preset testing vs adaptive testing === The type of testing strategy to be performed depends on whether the tests to be applied to the IUT should be decided before the testing plan starts to be executed (preset testing) or whether each input to be applied to the IUT can be dynamically dependent on the outputs obtained during the application of the previous tests (adaptive testing). === Black/white box === Software testing can often be divided into white-box and black-box. These two approaches are used to describe the point of view that the tester takes when designing test cases. A hybrid approach called grey-box that includes aspects of both boxes may also be applied to software testing methodology. ==== White-box testing ==== White-box testing (also known as clear box testing, glass box testing, transparent box testing, and structural testing) verifies the internal structures or workings of a program, as opposed to the functionality exposed to the end-user. In white-box testing, an internal perspective of the system (the source code), as well as programming skills are used to design test cases. The tester chooses inputs to exercise paths through the code and determines the appropriate outputs. This is analogous to testing nodes in a circuit, e.g., in-circuit testing (ICT). While white-box testing can be applied at the unit, integration, and system levels of the software testing process, it is usually done at the unit level. It can test paths within a unit, paths between units during integration, and between subsystems during a system–level test. Though this method of test design can uncover many errors or problems, it might not detect unimplemented parts of the specification or missing requirements. Techniques used in white-box testing include: API testing – testing of the application using public and private APIs (application programming interfaces) Code coverage – creating tests to satisfy some criteria of code coverage (for example, the test designer can create tests to cause all statements in the program to be executed at least once) Fault injection methods – intentionally introducing faults to gauge the efficacy of testing strategies Mutation testing methods Static testing methods Code coverage tools can evaluate the completeness of a test suite that was created with any method, including black-box testing. This allows the software team to examine parts of a system that are rarely tested and ensures that the most important function points have been tested. Code coverage as a software metric can be reported as a percentage for: Function coverage, which reports on functions executed Statement coverage, which reports on the number of lines executed to complete the test Decision coverage, which reports on whether both the True and the False branch of a given test has been executed 100% statement coverage ensures that all code paths or branches (in terms of control flow) are executed at least once. This is helpful in ensuring correct functionality, but not sufficient since the same code may process different inputs correctly or incorrectly. ==== Black-box testing ==== Black-box testing (also known as functional testing) describes designing test cases without knowledge of the implementation, without reading the source code. The testers are only aware of what the software is supposed to do, not how it does it. Black-box testing methods include: equivalence partitioning, boundary value analysis, all-pairs testing, state transition tables, decision table testing, fuzz testing, model-based testing, use case testing, exploratory testing, and specification-based testing. Specification-based testing aims to test the functionality of software according to the applicable requirements. This level of testing usually requires thorough test cases to be provided to the tester, who then can simply verify that for a given input, the output value (or behavior), either \"is\" or \"is not\" the same as the expected value specified in the test case. Test cases are built around specifications and requirements, i.e., what the application is supposed to do. It uses external descriptions of the software, including specifications, requirements, and designs, to derive test cases. These tests can be functional or non-functional, though usually functional. Specification-based testing may be necessary to assure correct functionality, but it is insufficient to guard against complex or high-risk situations. Black box testing can be used to any level of testing although usually not at the unit level. Component interface testing Component interface testing is a variation of black-box testing, with the focus on the data values beyond just the related actions of a subsystem component. The practice of component interface testing can be used to check the handling of data passed between various units, or subsystem components, beyond full integration testing between those units. The data being passed can be considered as \"message packets\" and the range or data types can be checked for data generated from one unit and tested for validity before being passed into another unit. One option for interface testing is to keep a separate log file of data items being passed, often with a timestamp logged to allow analysis of thousands of cases of data passed between units for days or weeks. Tests can include checking the handling of some extreme data values while other interface variables are passed as normal values. Unusual data values in an interface can help explain unexpected performance in the next unit. ===== Visual testing ===== The aim of visual testing is to provide developers with the ability to examine what was happening at the point of software failure by presenting the data in such a way that the developer can easily find the information he or she requires, and the information is expressed clearly. At the core of visual testing is the idea that showing someone a problem (or a test failure), rather than just describing it, greatly increases clarity and understanding. Visual testing, therefore, requires the recording of the entire test process – capturing everything that occurs on the test system in video format. Output videos are supplemented by real-time tester input via picture-in-a-picture webcam and audio commentary from microphones. Visual testing provides a number of advantages. The quality of communication is increased drastically because testers can show the problem (and the events leading up to it) to the developer as opposed to just describing it, and the need to replicate test failures will cease to exist in many cases. The developer will have all the evidence he or she requires of a test failure and can instead focus on the cause of the fault and how it should be fixed. Ad hoc testing and exploratory testing are important methodologies for checking software integrity because they require less preparation time to implement, while the important bugs can be found quickly. In ad hoc testing, where testing takes place in an improvised impromptu way, the ability of the tester(s) to base testing off documented methods and then improvise variations of those tests can result in a more rigorous examination of defect fixes. However, unless strict documentation of the procedures is maintained, one of the limits of ad hoc testing is lack of repeatability. ==== Grey-box testing ==== Grey-box testing (American spelling: gray-box testing) involves using knowledge of internal data structures and algorithms for purposes of designing tests while executing those tests at the user, or black-box level. The tester will often have access to both \"the source code and the executable binary.\" Grey-box testing may also include reverse engineering (using dynamic code analysis) to determine, for instance, boundary values or error messages. Manipulating input data and formatting output do not qualify as grey-box, as the input and output are clearly outside of the \"black box\" that we are calling the system under test. This distinction is particularly important when conducting integration testing between two modules of code written by two different developers, where only the interfaces are exposed for the test. By knowing the underlying concepts of how the software works, the tester makes better-informed testing choices while testing the software from outside. Typically, a grey-box tester will be permitted to set up an isolated testing environment with activities, such as seeding a database. The tester can observe the state of the product being tested after performing certain actions such as executing SQL statements against the database and then executing queries to ensure that the expected changes have been reflected. Grey-box testing implements intelligent test scenarios based on limited information. This will particularly apply to data type handling, exception handling, and so on. With the concept of grey-box testing, this \"arbitrary distinction\" between black- and white-box testing has faded somewhat. === Installation testing === === Compatibility testing === A common cause of software failure (real or perceived) is a lack of its compatibility with other application software, operating systems (or operating system versions, old or new), or target environments that differ greatly from the original (such as a terminal or GUI application intended to be run on the desktop now being required to become a Web application, which must render in a Web browser). For example, in the case of a lack of backward compatibility, this can occur because the programmers develop and test software only on the latest version of the target environment, which not all users may be running. This results in the unintended consequence that the latest work may not function on earlier versions of the target environment, or on older hardware that earlier versions of the target environment were capable of using. Sometimes such issues can be fixed by proactively abstracting operating system functionality into a separate program module or library. === Smoke and sanity testing === Sanity testing determines whether it is reasonable to proceed with further testing. Smoke testing consists of minimal attempts to operate the software, designed to determine whether there are any basic problems that will prevent it from working at all. Such tests can be used as build verification test. === Regression testing === Regression testing focuses on finding defects after a major code change has occurred. Specifically, it seeks to uncover software regressions, as degraded or lost features, including old bugs that have come back. Such regressions occur whenever software functionality that was previously working correctly, stops working as intended. Typically, regressions occur as an unintended consequence of program changes, when the newly developed part of the software collides with the previously existing code. Regression testing is typically the largest test effort in commercial software development, due to checking numerous details in prior software features, and even new software can be developed while using some old test cases to test parts of the new design to ensure prior functionality is still supported. Common methods of regression testing include re-running previous sets of test cases and checking whether previously fixed faults have re-emerged. The depth of testing depends on the phase in the release process and the risk of the added features. They can either be complete, for changes added late in the release or deemed to be risky, or be very shallow, consisting of positive tests on each feature, if the changes are early in the release or deemed to be of low risk. === Acceptance testing === Acceptance testing is system-level testing to ensure the software meets customer expectations. Acceptance testing may be performed as part of the hand-off process between any two phases of development. Tests are frequently grouped into these levels by where they are performed in the software development process, or by the level of specificity of the test. User acceptance testing (UAT) Operational acceptance testing (OAT) Contractual and regulatory acceptance testing Alpha and beta testing Sometimes, UAT is performed by the customer, in their environment and on their own hardware. OAT is used to conduct operational readiness (pre-release) of a product, service or system as part of a quality management system. OAT is a common type of non-functional software testing, used mainly in software development and software maintenance projects. This type of testing focuses on the operational readiness of the system to be supported, or to become part of the production environment. Hence, it is also known as operational readiness testing (ORT) or operations readiness and assurance (OR&A) testing. Functional testing within OAT is limited to those tests that are required to verify the non-functional aspects of the system. In addition, the software testing should ensure that the portability of the system, as well as working as expected, does not also damage or partially corrupt its operating environment or cause other processes within that environment to become inoperative. Contractual acceptance testing is performed based on the contract's acceptance criteria defined during the agreement of the contract, while regulatory acceptance testing is performed based on the relevant regulations to the software product. Both of these two tests can be performed by users or independent testers. Regulation acceptance testing sometimes involves the regulatory agencies auditing the test results. === Alpha testing === Alpha testing is simulated or actual operational testing by potential users/customers or an independent test team at the developers' site. Alpha testing is often employed for off-the-shelf software as a form of internal acceptance testing before the software goes to beta testing. === Beta testing === Beta testing comes after alpha testing and can be considered a form of external user acceptance testing. Versions of the software, known as beta versions, are released to a limited audience outside of the programming team known as beta testers. The software is released to groups of people so that further testing can ensure the product has few faults or bugs. Beta versions can be made available to the open public to increase the feedback field to a maximal number of future users and to deliver value earlier, for an extended or even indefinite period of time (perpetual beta). === Functional vs non-functional testing === Functional testing refers to activities that verify a specific action or function of the code. These are usually found in the code requirements documentation, although some development methodologies work from use cases or user stories. Functional tests tend to answer the question of \"can the user do this\" or \"does this particular feature work.\" Non-functional testing refers to aspects of the software that may not be related to a specific function or user action, such as scalability or other performance, behavior under certain constraints, or security. Testing will determine the breaking point, the point at which extremes of scalability or performance leads to unstable execution. Non-functional requirements tend to be those that reflect the quality of the product, particularly in the context of the suitability perspective of its users. === Continuous testing === Continuous testing is the process of executing automated tests as part of the software delivery pipeline to obtain immediate feedback on the business risks associated with a software release candidate. Continuous testing includes the validation of both functional requirements and non-functional requirements; the scope of testing extends from validating bottom-up requirements or user stories to assessing the system requirements associated with overarching business goals. === Destructive testing === Destructive testing attempts to cause the software or a sub-system to fail. It verifies that the software functions properly even when it receives invalid or unexpected inputs, thereby establishing the robustness of input validation and error-management routines. Software fault injection, in the form of fuzzing, is an example of failure testing. Various commercial non-functional testing tools are linked from the software fault injection page; there are also numerous open-source and free software tools available that perform destructive testing. === Software performance testing === Performance testing is generally executed to determine how a system or sub-system performs in terms of responsiveness and stability under a particular workload. It can also serve to investigate, measure, validate or verify other quality attributes of the system, such as scalability, reliability and resource usage. Load testing is primarily concerned with testing that the system can continue to operate under a specific load, whether that be large quantities of data or a large number of users. This is generally referred to as software scalability. The related load testing activity of when performed as a non-functional activity is often referred to as endurance testing. Volume testing is a way to test software functions even when certain components (for example a file or database) increase radically in size. Stress testing is a way to test reliability under unexpected or rare workloads. Stability testing (often referred to as load or endurance testing) checks to see if the software can continuously function well in or above an acceptable period. There is little agreement on what the specific goals of performance testing are. The terms load testing, performance testing, scalability testing, and volume testing, are often used interchangeably. Real-time software systems have strict timing constraints. To test if timing constraints are met, real-time testing is used. === Usability testing === Usability testing is to check if the user interface is easy to use and understand. It is concerned mainly with the use of the application. This is not a kind of testing that can be automated; actual human users are needed, being monitored by skilled UI designers. Usability testing can use structured models to check how well an interface works. The Stanton, Theofanos, and Joshi (2015) model looks at user experience, and the Al-Sharafat and Qadoumi (2016) model is for expert evaluation, helping to assess usability in digital applications. === Accessibility testing === Accessibility testing is done to ensure that the software is accessible to persons with disabilities. Some of the common web accessibility tests are Ensuring that the color contrast between the font and the background color is appropriate Font Size Alternate Texts for multimedia content Ability to use the system using the computer keyboard in addition to the mouse. ==== Common standards for compliance ==== Americans with Disabilities Act of 1990 Section 508 Amendment to the Rehabilitation Act of 1973 Web Accessibility Initiative (WAI) of the World Wide Web Consortium (W3C) === Security testing === Security testing is essential for software that processes confidential data to prevent system intrusion by hackers. The International Organization for Standardization (ISO) defines this as a \"type of testing conducted to evaluate the degree to which a test item, and associated data and information, are protected so that unauthorised persons or systems cannot use, read or modify them, and authorized persons or systems are not denied access to them.\" === Internationalization and localization === Testing for internationalization and localization validates that the software can be used with different languages and geographic regions. The process of pseudolocalization is used to test the ability of an application to be translated to another language, and make it easier to identify when the localization process may introduce new bugs into the product. Globalization testing verifies that the software is adapted for a new culture, such as different currencies or time zones. Actual translation to human languages must be tested, too. Possible localization and globalization failures include: Some messages may be untranslated. Software is often localized by translating a list of strings out of context, and the translator may choose the wrong translation for an ambiguous source string. Technical terminology may become inconsistent, if the project is translated by several people without proper coordination or if the translator is imprudent. Literal word-for-word translations may sound inappropriate, artificial or too technical in the target language. Untranslated messages in the original language may be hard coded in the source code, and thus untranslatable. Some messages may be created automatically at run time and the resulting string may be ungrammatical, functionally incorrect, misleading or confusing. Software may use a keyboard shortcut that has no function on the source language's keyboard layout, but is used for typing characters in the layout of the target language. Software may lack support for the character encoding of the target language. Fonts and font sizes that are appropriate in the source language may be inappropriate in the target language; for example, CJK characters may become unreadable if the font is too small. A string in the target language may be longer than the software can handle. This may make the string partly invisible to the user or cause the software to crash or malfunction. Software may lack proper support for reading or writing bi-directional text. Software may display images with text that was not localized. Localized operating systems may have differently named system configuration files and environment variables and different formats for date and currency. === Development testing === Development testing is a software development process that involves the synchronized application of a broad spectrum of defect prevention and detection strategies in order to reduce software development risks, time, and costs. It is performed by the software developer or engineer during the construction phase of the software development lifecycle. Development testing aims to eliminate construction errors before code is promoted to other testing; this strategy is intended to increase the quality of the resulting software as well as the efficiency of the overall development process. Depending on the organization's expectations for software development, development testing might include static code analysis, data flow analysis, metrics analysis, peer code reviews, unit testing, code coverage analysis, traceability, and other software testing practices. === A/B testing === A/B testing is a method of running a controlled experiment to determine if a proposed change is more effective than the current approach. Customers are routed to either a current version (control) of a feature, or to a modified version (treatment) and data is collected to determine which version is better at achieving the desired outcome. === Concurrent testing === Concurrent or concurrency testing assesses the behaviour and performance of software and systems that use concurrent computing, generally under normal usage conditions. Typical problems this type of testing will expose are deadlocks, race conditions and problems with shared memory/resource handling. === Conformance testing or type testing === In software testing, conformance testing verifies that a product performs according to its specified standards. Compilers, for instance, are extensively tested to determine whether they meet the recognized standard for that language. === Output comparison testing === Creating a display expected output, whether as data comparison of text or screenshots of the UI, is sometimes called snapshot testing or Golden Master Testing unlike many other forms of testing, this cannot detect failures automatically and instead requires that a human evaluate the output for inconsistencies. === Property testing === Property testing is a testing technique where, instead of asserting that specific inputs produce specific expected outputs, the practitioner randomly generates many inputs, runs the program on all of them, and asserts the truth of some \"property\" that should be true for every pair of input and output. For example, every output from a serialization function should be accepted by the corresponding deserialization function, and every output from a sort function should be a monotonically increasing list containing exactly the same elements as its input. Property testing libraries allow the user to control the strategy by which random inputs are constructed, to ensure coverage of degenerate cases, or inputs featuring specific patterns that are needed to fully exercise aspects of the implementation under test. Property testing is also sometimes known as \"generative testing\" or \"QuickCheck testing\" since it was introduced and popularized by the Haskell library QuickCheck. === Metamorphic testing === Metamorphic testing (MT) is a property-based software testing technique, which can be an effective approach for addressing the test oracle problem and test case generation problem. The test oracle problem is the difficulty of determining the expected outcomes of selected test cases or to determine whether the actual outputs agree with the expected outcomes. === VCR testing === VCR testing, also known as \"playback testing\" or \"record/replay\" testing, is a testing technique for increasing the reliability and speed of regression tests that involve a component that is slow or unreliable to communicate with, often a third-party API outside of the tester's control. It involves making a recording (\"cassette\") of the system's interactions with the external component, and then replaying the recorded interactions as a substitute for communicating with the external system on subsequent runs of the test. The technique was popularized in web development by the Ruby library vcr. == Teamwork == === Roles === In an organization, testers may be in a separate team from the rest of the software development team or they may be integrated into one team. Software testing can also be performed by non-dedicated software testers. In the 1980s, the term software tester started to be used to denote a separate profession. Notable software testing roles and titles include: test manager, test lead, test analyst, test designer, tester, automation developer, and test administrator. === Processes === Organizations that develop software, perform testing differently, but there are common patterns. ==== Waterfall development ==== In waterfall development, testing is generally performed after the code is completed, but before the product is shipped to the customer. This practice often results in the testing phase being used as a project buffer to compensate for project delays, thereby compromising the time devoted to testing. Some contend that the waterfall process allows for testing to start when the development project starts and to be a continuous process until the project finishes. ==== Agile development ==== Agile software development commonly involves testing while the code is being written and organizing teams with both programmers and testers and with team members performing both programming and testing. One agile practice, test-driven software development (TDD), is a way of unit testing such that unit-level testing is performed while writing the product code. Test code is updated as new features are added and failure conditions are discovered (bugs fixed). Commonly, the unit test code is maintained with the project code, integrated in the build process, and run on each build and as part of regression testing. Goals of this continuous integration is to support development and reduce defects. Even in organizations that separate teams by programming and testing functions, many often have the programmers perform unit testing. ==== Sample process ==== The sample below is common for waterfall development. The same activities are commonly found in other development models, but might be described differently. Requirements analysis: testing should begin in the requirements phase of the software development life cycle. During the design phase, testers work to determine what aspects of a design are testable and with what parameters those tests work. Test planning: test strategy, test plan, testbed creation. Since many activities will be carried out during testing, a plan is needed. Test development: test procedures, test scenarios, test cases, test datasets, test scripts to use in testing software. Test execution: testers execute the software based on the plans and test documents then report any errors found to the development team. This part could be complex when running tests with a lack of programming knowledge. Test reporting: once testing is completed, testers generate metrics and make final reports on their test effort and whether or not the software tested is ready for release. Test result analysis: or defect analysis, is done by the development team usually along with the client, in order to decide what defects should be assigned, fixed, rejected (i.e. found software working properly) or deferred to be dealt with later. Defect retesting: once a defect has been dealt with by the development team, it is retested by the testing team. Regression testing: it is common to have a small test program built of a subset of tests, for each integration of new, modified, or fixed software, in order to ensure that the latest delivery has not ruined anything and that the software product as a whole is still working correctly. Test closure: once the test meets the exit criteria, the activities such as capturing the key outputs, lessons learned, results, logs, documents related to the project are archived and used as a reference for future projects. == Quality == === Software verification and validation === Software testing is used in association with verification and validation: Verification: Have we built the software right? (i.e., does it implement the requirements). Validation: Have we built the right software? (i.e., do the deliverables satisfy the customer). The terms verification and validation are commonly used interchangeably in the industry; it is also common to see these two terms defined with contradictory definitions. According to the IEEE Standard Glossary of Software Engineering Terminology: Verification is the process of evaluating a system or component to determine whether the products of a given development phase satisfy the conditions imposed at the start of that phase. Validation is the process of evaluating a system or component during or at the end of the development process to determine whether it satisfies specified requirements. And, according to the ISO 9000 standard: Verification is confirmation by examination and through provision of objective evidence that specified requirements have been fulfilled. Validation is confirmation by examination and through provision of objective evidence that the requirements for a specific intended use or application have been fulfilled. The contradiction is caused by the use of the concepts of requirements and specified requirements but with different meanings. In the case of IEEE standards, the specified requirements, mentioned in the definition of validation, are the set of problems, needs and wants of the stakeholders that the software must solve and satisfy. Such requirements are documented in a Software Requirements Specification (SRS). And, the products mentioned in the definition of verification, are the output artifacts of every phase of the software development process. These products are, in fact, specifications such as Architectural Design Specification, Detailed Design Specification, etc. The SRS is also a specification, but it cannot be verified (at least not in the sense used here, more on this subject below). But, for the ISO 9000, the specified requirements are the set of specifications, as just mentioned above, that must be verified. A specification, as previously explained, is the product of a software development process phase that receives another specification as input. A specification is verified successfully when it correctly implements its input specification. All the specifications can be verified except the SRS because it is the first one (it can be validated, though). Examples: The Design Specification must implement the SRS; and, the Construction phase artifacts must implement the Design Specification. So, when these words are defined in common terms, the apparent contradiction disappears. Both the SRS and the software must be validated. The SRS can be validated statically by consulting with the stakeholders. Nevertheless, running some partial implementation of the software or a prototype of any kind (dynamic testing) and obtaining positive feedback from them, can further increase the certainty that the SRS is correctly formulated. On the other hand, the software, as a final and running product (not its artifacts and documents, including the source code) must be validated dynamically with the stakeholders by executing the software and having them to try it. Some might argue that, for SRS, the input is the words of stakeholders and, therefore, SRS validation is the same as SRS verification. Thinking this way is not advisable as it only causes more confusion. It is better to think of verification as a process involving a formal and technical input document. === Software quality assurance === In some organizations, software testing is part of a software quality assurance (SQA) process. In SQA, software process specialists and auditors are concerned with the software development process rather than just the artifacts such as documentation, code and systems. They examine and change the software engineering process itself to reduce the number of faults that end up in the delivered software: the so-called defect rate. What constitutes an acceptable defect rate depends on the nature of the software; a flight simulator video game would have much higher defect tolerance than software for an actual airplane. Although there are close links with SQA, testing departments often exist independently, and there may be no SQA function in some companies. Software testing is an activity to investigate software under test in order to provide quality-related information to stakeholders. By contrast, QA (quality assurance) is the implementation of policies and procedures intended to prevent defects from reaching customers. === Measures === Quality measures include such topics as correctness, completeness, security and ISO/IEC 9126 requirements such as capability, reliability, efficiency, portability, maintainability, compatibility, and usability. There are a number of frequently used software metrics, or measures, which are used to assist in determining the state of the software or the adequacy of the testing. === Artifacts === A software testing process can produce several artifacts. The actual artifacts produced are a factor of the software development model used, stakeholder and organisational needs. ==== Test plan ==== A test plan is a document detailing the approach that will be taken for intended test activities. The plan may include aspects such as objectives, scope, processes and procedures, personnel requirements, and contingency plans. The test plan could come in the form of a single plan that includes all test types (like an acceptance or system test plan) and planning considerations, or it may be issued as a master test plan that provides an overview of more than one detailed test plan (a plan of a plan). A test plan can be, in some cases, part of a wide \"test strategy\" which documents overall testing approaches, which may itself be a master test plan or even a separate artifact. ==== Traceability matrix ==== ==== Test case ==== A test case normally consists of a unique identifier, requirement references from a design specification, preconditions, events, a series of steps (also known as actions) to follow, input, output, expected result, and the actual result. Clinically defined, a test case is an input and an expected result. This can be as terse as \"for condition x your derived result is y\", although normally test cases describe in more detail the input scenario and what results might be expected. It can occasionally be a series of steps (but often steps are contained in a separate test procedure that can be exercised against multiple test cases, as a matter of economy) but with one expected result or expected outcome. The optional fields are a test case ID, test step, or order of execution number, related requirement(s), depth, test category, author, and check boxes for whether the test is automatable and has been automated. Larger test cases may also contain prerequisite states or steps, and descriptions. A test case should also contain a place for the actual result. These steps can be stored in a word processor document, spreadsheet, database, or other common repositories. In a database system, you may also be able to see past test results, who generated the results, and what system configuration was used to generate those results. These past results would usually be stored in a separate table. ==== Test script ==== A test script is a procedure or programming code that replicates user actions. Initially, the term was derived from the product of work created by automated regression test tools. A test case will be a baseline to create test scripts using a tool or a program. ==== Test suite ==== ==== Test fixture or test data ==== In most cases, multiple sets of values or data are used to test the same functionality of a particular feature. All the test values and changeable environmental components are collected in separate files and stored as test data. It is also useful to provide this data to the client and with the product or a project. There are techniques to generate Test data. ==== Test harness ==== The software, tools, samples of data input and output, and configurations are all referred to collectively as a test harness. ==== Test run ==== A test run is a collection of test cases or test suites that the user is executing and comparing the expected with the actual results. Once complete, a report or all executed tests may be generated. === Certifications === Several certification programs exist to support the professional aspirations of software testers and quality assurance specialists. A few practitioners argue that the testing field is not ready for certification, as mentioned in the controversy section. == Controversy == Some of the major software testing controversies include: Agile vs. traditional Should testers learn to work under conditions of uncertainty and constant change or should they aim at process \"maturity\"? The agile testing movement has received growing popularity since the early 2000s mainly in commercial circles, whereas government and military software providers use this methodology but also the traditional test-last models (e.g., in the Waterfall model). Manual vs. automated testing Some writers believe that test automation is so expensive relative to its value that it should be used sparingly. The test automation then can be considered as a way to capture and implement the requirements. As a general rule, the larger the system and the greater the complexity, the greater the ROI in test automation. Also, the investment in tools and expertise can be amortized over multiple projects with the right level of knowledge sharing within an organization. Is the existence of the ISO 29119 software testing standard justified? Significant opposition has formed out of the ranks of the context-driven school of software testing about the ISO 29119 standard. Professional testing associations, such as the International Society for Software Testing, have attempted to have the standard withdrawn. Some practitioners declare that the testing field is not ready for certification No certification now offered actually requires the applicant to show their ability to test software. No certification is based on a widely accepted body of knowledge. Certification itself cannot measure an individual's productivity, their skill, or practical knowledge, and cannot guarantee their competence, or professionalism as a tester. Studies used to show the relative expense of fixing defects There are opposing views on the applicability of studies used to show the relative expense of fixing defects depending on their introduction and detection. For example: It is commonly believed that the earlier a defect is found, the cheaper it is to fix it. The following table shows the cost of fixing the defect depending on the stage it was found. For example, if a problem in the requirements is found only post-release, then it would cost 10–100 times more to fix than if it had already been found by the requirements review. With the advent of modern continuous deployment practices and cloud-based services, the cost of re-deployment and maintenance may lessen over time. The data from which this table is extrapolated is scant. Laurent Bossavit says in his analysis: The \"smaller projects\" curve turns out to be from only two teams of first-year students, a sample size so small that extrapolating to \"smaller projects in general\" is totally indefensible. The GTE study does not explain its data, other than to say it came from two projects, one large and one small. The paper cited for the Bell Labs \"Safeguard\" project specifically disclaims having collected the fine-grained data that Boehm's data points suggest. The IBM study (Fagan's paper) contains claims that seem to contradict Boehm's graph and no numerical results that clearly correspond to his data points. Boehm doesn't even cite a paper for the TRW data, except when writing for \"Making Software\" in 2010, and there he cited the original 1976 article. There exists a large study conducted at TRW at the right time for Boehm to cite it, but that paper doesn't contain the sort of data that would support Boehm's claims. == See also == == References == == Further reading == Meyer, Bertrand (August 2008). \"Seven Principles of Software Testing\" (PDF). Computer. Vol. 41, no. 8. pp. 99–101. doi:10.1109/MC.2008.306. Retrieved November 21, 2017. == External links == \"Software that makes Software better\" Economist.com"
+  },
+  "chunks": [
+    {
+      "id": "softwaretesting_535dff33_c0000",
+      "article_id": "softwaretesting_535dff33",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 951,
+      "content": "Software testing is the act of checking whether software satisfies expectations. Software testing can provide objective, independent information about the quality of software and the risk of its failure to a user or sponsor. Software testing can determine the correctness of software for specific scenarios but cannot determine correctness for all scenarios. It cannot find all bugs. Based on the criteria for measuring correctness from an oracle, software testing employs principles and mechanisms that might recognize a problem. Examples of oracles include specifications, contracts, comparable products, past versions of the same product, inferences about intended or expected purpose, user or customer expectations, relevant standards, and applicable laws. Software testing is often dynamic in nature; running the software to verify actual output matches expected. It can also be static in nature; reviewing code and its associated documentation.",
+      "char_count": 950,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0001",
+      "article_id": "softwaretesting_535dff33",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 951,
+      "end_char": 1387,
+      "content": "Software testing is often used to answer the question: Does the software do what it is supposed to do and what it needs to do? Information learned from software testing may be used to improve the process by which software is developed. Software testing should follow a \"pyramid\" approach wherein most of your tests should be unit tests, followed by integration tests and finally end-to-end (e2e) tests should have the lowest proportion.",
+      "char_count": 436,
+      "token_estimate": 109,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0002",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== Economics ==",
+      "heading_path": "== Economics ==",
+      "start_char": 1403,
+      "end_char": 1733,
+      "content": "== Economics == A study conducted by NIST in 2002 reported that software bugs cost the U.S. economy $59.5 billion annually. More than a third of this cost could be avoided if better software testing was performed. Outsourcing software testing because of costs is very common, with China, the Philippines, and India being preferred destinations.",
+      "char_count": 344,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0003",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1746,
+      "end_char": 2672,
+      "content": "== History == Glenford J. Myers initially introduced the separation of debugging from testing in 1979. Although his attention was on breakage testing (\"A successful test case is one that detects an as-yet undiscovered error.\"), it illustrated the desire of the software engineering community to separate fundamental development activities, such as debugging, from that of verification. Software testing typically includes handling software bugs – a defect in the code that causes an undesirable result. Bugs generally slow testing progress and involve programmer assistance to debug and fix. Not all defects cause a failure. For example, a defect in dead code will not be considered a failure. A defect that does not cause failure at one point in time may lead to failure later due to environmental changes. Examples of environment change include running on new computer hardware, changes in data, and interacting with different software.",
+      "char_count": 938,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0004",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Finding bugs ==",
+      "heading_path": "== = Finding bugs ==",
+      "start_char": 2747,
+      "end_char": 3359,
+      "content": "== = Finding bugs === Software testing typically includes handling software bugs – a defect in the code that causes an undesirable result. Bugs generally slow testing progress and involve programmer assistance to debug and fix. Not all defects cause a failure. For example, a defect in dead code will not be considered a failure. A defect that does not cause failure at one point in time may lead to failure later due to environmental changes. Examples of environment change include running on new computer hardware, changes in data, and interacting with different software. A single defect may result in multiple failure symptoms.",
+      "char_count": 631,
+      "token_estimate": 157,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0005",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Ensuring requirements are satisfied ==",
+      "heading_path": "== = Ensuring requirements are satisfied ==",
+      "start_char": 3402,
+      "end_char": 3634,
+      "content": "== = Ensuring requirements are satisfied === Software testing may involve a Requirements gap – omission from the design for a requirement. Requirement gaps can often be non-functional requirements such as testability, scalability, maintainability, performance, and security.",
+      "char_count": 274,
+      "token_estimate": 68,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0006",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Code coverage ==",
+      "heading_path": "== = Code coverage ==",
+      "start_char": 3655,
+      "end_char": 4314,
+      "content": "== = Code coverage === A fundamental limitation of software testing is that testing under all combinations of inputs and preconditions (initial state) is not feasible, even with a simple product. Defects that manifest in unusual conditions are difficult to find in testing. Also, non-functional dimensions of quality (how it is supposed to be versus what it is supposed to do) – usability, scalability, performance, compatibility, and reliability – can be subjective; something that constitutes sufficient value to one person may not to another. Although testing for every possible input is not feasible, testing can use combinatorics to maximize coverage while minimizing tests.",
+      "char_count": 679,
+      "token_estimate": 169,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0007",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Static, dynamic, and passive testing ==",
+      "heading_path": "== = Static, dynamic, and passive testing ==",
+      "start_char": 4569,
+      "end_char": 5448,
+      "content": "== = Static, dynamic, and passive testing === There are many approaches to software testing. Reviews, walkthroughs, or inspections are referred to as static testing, whereas executing programmed code with a given set of test cases is referred to as dynamic testing. Static testing is often implicit, like proofreading, plus when programming tools/text editors check source code structure or compilers (pre-compilers) check syntax and data flow as static program analysis. Dynamic testing takes place when the program itself is run. Dynamic testing may begin before the program is 100% complete in order to test particular sections of code and are applied to discrete functions or modules. Typical techniques for these are either using stubs/drivers or execution from a debugger environment. Static testing involves verification, whereas dynamic testing also involves validation.",
+      "char_count": 878,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0008",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Static, dynamic, and passive testing ==",
+      "heading_path": "== = Static, dynamic, and passive testing ==",
+      "start_char": 5448,
+      "end_char": 5805,
+      "content": "Passive testing means verifying the system's behavior without any interaction with the software product. Contrary to active testing, testers do not provide any test data but look at system logs and traces. They mine for patterns and specific behavior in order to make some kind of decisions. This is related to offline runtime verification and log analysis.",
+      "char_count": 357,
+      "token_estimate": 89,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0009",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Preset testing vs adaptive testing ==",
+      "heading_path": "== = Preset testing vs adaptive testing ==",
+      "start_char": 5825,
+      "end_char": 6172,
+      "content": "== = Preset testing vs adaptive testing === The type of testing strategy to be performed depends on whether the tests to be applied to the IUT should be decided before the testing plan starts to be executed (preset testing) or whether each input to be applied to the IUT can be dynamically dependent on the outputs obtained during the application of the previous tests (adaptive testing).",
+      "char_count": 388,
+      "token_estimate": 97,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0010",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Black/white box ==",
+      "heading_path": "== = Black/white box ==",
+      "start_char": 6195,
+      "end_char": 6497,
+      "content": "== = Black/white box === Software testing can often be divided into white-box and black-box. These two approaches are used to describe the point of view that the tester takes when designing test cases. A hybrid approach called grey-box that includes aspects of both boxes may also be applied to software testing methodology.",
+      "char_count": 324,
+      "token_estimate": 81,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0011",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Compatibility testing ==",
+      "heading_path": "== = Compatibility testing ==",
+      "start_char": 6556,
+      "end_char": 7424,
+      "content": "== = Compatibility testing === A common cause of software failure (real or perceived) is a lack of its compatibility with other application software, operating systems (or operating system versions, old or new), or target environments that differ greatly from the original (such as a terminal or GUI application intended to be run on the desktop now being required to become a Web application, which must render in a Web browser). For example, in the case of a lack of backward compatibility, this can occur because the programmers develop and test software only on the latest version of the target environment, which not all users may be running. This results in the unintended consequence that the latest work may not function on earlier versions of the target environment, or on older hardware that earlier versions of the target environment were capable of using.",
+      "char_count": 867,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0012",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Smoke and sanity testing ==",
+      "heading_path": "== = Smoke and sanity testing ==",
+      "start_char": 7563,
+      "end_char": 7869,
+      "content": "== = Smoke and sanity testing === Sanity testing determines whether it is reasonable to proceed with further testing. Smoke testing consists of minimal attempts to operate the software, designed to determine whether there are any basic problems that will prevent it from working at all. Such tests can be used as build verification test.",
+      "char_count": 337,
+      "token_estimate": 84,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0013",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Regression testing ==",
+      "heading_path": "== = Regression testing ==",
+      "start_char": 7895,
+      "end_char": 8730,
+      "content": "== = Regression testing === Regression testing focuses on finding defects after a major code change has occurred. Specifically, it seeks to uncover software regressions, as degraded or lost features, including old bugs that have come back. Such regressions occur whenever software functionality that was previously working correctly, stops working as intended. Typically, regressions occur as an unintended consequence of program changes, when the newly developed part of the software collides with the previously existing code. Regression testing is typically the largest test effort in commercial software development, due to checking numerous details in prior software features, and even new software can be developed while using some old test cases to test parts of the new design to ensure prior functionality is still supported.",
+      "char_count": 834,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0014",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Regression testing ==",
+      "heading_path": "== = Regression testing ==",
+      "start_char": 8730,
+      "end_char": 9201,
+      "content": "Common methods of regression testing include re-running previous sets of test cases and checking whether previously fixed faults have re-emerged. The depth of testing depends on the phase in the release process and the risk of the added features. They can either be complete, for changes added late in the release or deemed to be risky, or be very shallow, consisting of positive tests on each feature, if the changes are early in the release or deemed to be of low risk.",
+      "char_count": 471,
+      "token_estimate": 117,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0015",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Acceptance testing ==",
+      "heading_path": "== = Acceptance testing ==",
+      "start_char": 9202,
+      "end_char": 10076,
+      "content": "== = Acceptance testing === Acceptance testing is system-level testing to ensure the software meets customer expectations. Acceptance testing may be performed as part of the hand-off process between any two phases of development. Tests are frequently grouped into these levels by where they are performed in the software development process, or by the level of specificity of the test. User acceptance testing (UAT) Operational acceptance testing (OAT) Contractual and regulatory acceptance testing Alpha and beta testing Sometimes, UAT is performed by the customer, in their environment and on their own hardware. OAT is used to conduct operational readiness (pre-release) of a product, service or system as part of a quality management system. OAT is a common type of non-functional software testing, used mainly in software development and software maintenance projects.",
+      "char_count": 873,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0016",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Acceptance testing ==",
+      "heading_path": "== = Acceptance testing ==",
+      "start_char": 10076,
+      "end_char": 11028,
+      "content": "This type of testing focuses on the operational readiness of the system to be supported, or to become part of the production environment. Hence, it is also known as operational readiness testing (ORT) or operations readiness and assurance (OR&A) testing. Functional testing within OAT is limited to those tests that are required to verify the non-functional aspects of the system. In addition, the software testing should ensure that the portability of the system, as well as working as expected, does not also damage or partially corrupt its operating environment or cause other processes within that environment to become inoperative. Contractual acceptance testing is performed based on the contract's acceptance criteria defined during the agreement of the contract, while regulatory acceptance testing is performed based on the relevant regulations to the software product. Both of these two tests can be performed by users or independent testers.",
+      "char_count": 952,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0017",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Alpha testing ==",
+      "heading_path": "== = Alpha testing ==",
+      "start_char": 11124,
+      "end_char": 11407,
+      "content": "== = Alpha testing === Alpha testing is simulated or actual operational testing by potential users/customers or an independent test team at the developers' site. Alpha testing is often employed for off-the-shelf software as a form of internal acceptance testing before the software goes to beta testing.",
+      "char_count": 303,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0018",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Beta testing ==",
+      "heading_path": "== = Beta testing ==",
+      "start_char": 11427,
+      "end_char": 12010,
+      "content": "== = Beta testing === Beta testing comes after alpha testing and can be considered a form of external user acceptance testing. Versions of the software, known as beta versions, are released to a limited audience outside of the programming team known as beta testers. The software is released to groups of people so that further testing can ensure the product has few faults or bugs. Beta versions can be made available to the open public to increase the feedback field to a maximal number of future users and to deliver value earlier, for an extended or even indefinite period of time (perpetual beta).",
+      "char_count": 602,
+      "token_estimate": 150,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0019",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Functional vs non-functional testing ==",
+      "heading_path": "== = Functional vs non-functional testing ==",
+      "start_char": 12054,
+      "end_char": 12903,
+      "content": "== = Functional vs non-functional testing === Functional testing refers to activities that verify a specific action or function of the code. These are usually found in the code requirements documentation, although some development methodologies work from use cases or user stories. Functional tests tend to answer the question of \"can the user do this\" or \"does this particular feature work.\" Non-functional testing refers to aspects of the software that may not be related to a specific function or user action, such as scalability or other performance, behavior under certain constraints, or security. Testing will determine the breaking point, the point at which extremes of scalability or performance leads to unstable execution. Non-functional requirements tend to be those that reflect the quality of the product, particularly in the context of the suitability perspective of its users.",
+      "char_count": 892,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0020",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Continuous testing ==",
+      "heading_path": "== = Continuous testing ==",
+      "start_char": 12929,
+      "end_char": 13406,
+      "content": "== = Continuous testing === Continuous testing is the process of executing automated tests as part of the software delivery pipeline to obtain immediate feedback on the business risks associated with a software release candidate. Continuous testing includes the validation of both functional requirements and non-functional requirements; the scope of testing extends from validating bottom-up requirements or user stories to assessing the system requirements associated with overarching business goals.",
+      "char_count": 502,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0021",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Destructive testing ==",
+      "heading_path": "== = Destructive testing ==",
+      "start_char": 13433,
+      "end_char": 13986,
+      "content": "== = Destructive testing === Destructive testing attempts to cause the software or a sub-system to fail. It verifies that the software functions properly even when it receives invalid or unexpected inputs, thereby establishing the robustness of input validation and error-management routines. Software fault injection, in the form of fuzzing, is an example of failure testing. Various commercial non-functional testing tools are linked from the software fault injection page; there are also numerous open-source and free software tools available that perform destructive testing.",
+      "char_count": 579,
+      "token_estimate": 144,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0022",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Software performance testing ==",
+      "heading_path": "== = Software performance testing ==",
+      "start_char": 14022,
+      "end_char": 14957,
+      "content": "== = Software performance testing === Performance testing is generally executed to determine how a system or sub-system performs in terms of responsiveness and stability under a particular workload. It can also serve to investigate, measure, validate or verify other quality attributes of the system, such as scalability, reliability and resource usage. Load testing is primarily concerned with testing that the system can continue to operate under a specific load, whether that be large quantities of data or a large number of users. This is generally referred to as software scalability. The related load testing activity of when performed as a non-functional activity is often referred to as endurance testing. Volume testing is a way to test software functions even when certain components (for example a file or database) increase radically in size. Stress testing is a way to test reliability under unexpected or rare workloads.",
+      "char_count": 934,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0023",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Software performance testing ==",
+      "heading_path": "== = Software performance testing ==",
+      "start_char": 14957,
+      "end_char": 15442,
+      "content": "Stability testing (often referred to as load or endurance testing) checks to see if the software can continuously function well in or above an acceptable period. There is little agreement on what the specific goals of performance testing are. The terms load testing, performance testing, scalability testing, and volume testing, are often used interchangeably. Real-time software systems have strict timing constraints. To test if timing constraints are met, real-time testing is used.",
+      "char_count": 485,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0024",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Usability testing ==",
+      "heading_path": "== = Usability testing ==",
+      "start_char": 15432,
+      "end_char": 15977,
+      "content": "== = Usability testing === Usability testing is to check if the user interface is easy to use and understand. It is concerned mainly with the use of the application. This is not a kind of testing that can be automated; actual human users are needed, being monitored by skilled UI designers. Usability testing can use structured models to check how well an interface works. The Stanton, Theofanos, and Joshi (2015) model looks at user experience, and the Al-Sharafat and Qadoumi (2016) model is for expert evaluation, helping to assess usability in digital applications.",
+      "char_count": 569,
+      "token_estimate": 142,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0025",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Accessibility testing ==",
+      "heading_path": "== = Accessibility testing ==",
+      "start_char": 16006,
+      "end_char": 16376,
+      "content": "== = Accessibility testing === Accessibility testing is done to ensure that the software is accessible to persons with disabilities. Some of the common web accessibility tests are Ensuring that the color contrast between the font and the background color is appropriate Font Size Alternate Texts for multimedia content Ability to use the system using the computer keyboard in addition to the mouse.",
+      "char_count": 398,
+      "token_estimate": 99,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0026",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Security testing ==",
+      "heading_path": "== = Security testing ==",
+      "start_char": 16400,
+      "end_char": 16855,
+      "content": "== = Security testing === Security testing is essential for software that processes confidential data to prevent system intrusion by hackers. The International Organization for Standardization (ISO) defines this as a \"type of testing conducted to evaluate the degree to which a test item, and associated data and information, are protected so that unauthorised persons or systems cannot use, read or modify them, and authorized persons or systems are not denied access to them.\"",
+      "char_count": 478,
+      "token_estimate": 119,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0027",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Internationalization and localization ==",
+      "heading_path": "== = Internationalization and localization ==",
+      "start_char": 16900,
+      "end_char": 17742,
+      "content": "== = Internationalization and localization === Testing for internationalization and localization validates that the software can be used with different languages and geographic regions. The process of pseudolocalization is used to test the ability of an application to be translated to another language, and make it easier to identify when the localization process may introduce new bugs into the product. Globalization testing verifies that the software is adapted for a new culture, such as different currencies or time zones. Actual translation to human languages must be tested, too. Possible localization and globalization failures include: Some messages may be untranslated. Software is often localized by translating a list of strings out of context, and the translator may choose the wrong translation for an ambiguous source string.",
+      "char_count": 841,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0028",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Internationalization and localization ==",
+      "heading_path": "== = Internationalization and localization ==",
+      "start_char": 17742,
+      "end_char": 18706,
+      "content": "Technical terminology may become inconsistent, if the project is translated by several people without proper coordination or if the translator is imprudent. Literal word-for-word translations may sound inappropriate, artificial or too technical in the target language. Untranslated messages in the original language may be hard coded in the source code, and thus untranslatable. Some messages may be created automatically at run time and the resulting string may be ungrammatical, functionally incorrect, misleading or confusing. Software may use a keyboard shortcut that has no function on the source language's keyboard layout, but is used for typing characters in the layout of the target language. Software may lack support for the character encoding of the target language. Fonts and font sizes that are appropriate in the source language may be inappropriate in the target language; for example, CJK characters may become unreadable if the font is too small.",
+      "char_count": 964,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0029",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Internationalization and localization ==",
+      "heading_path": "== = Internationalization and localization ==",
+      "start_char": 18707,
+      "end_char": 19175,
+      "content": "A string in the target language may be longer than the software can handle. This may make the string partly invisible to the user or cause the software to crash or malfunction. Software may lack proper support for reading or writing bi-directional text. Software may display images with text that was not localized. Localized operating systems may have differently named system configuration files and environment variables and different formats for date and currency.",
+      "char_count": 468,
+      "token_estimate": 117,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0030",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Development testing ==",
+      "heading_path": "== = Development testing ==",
+      "start_char": 19158,
+      "end_char": 20022,
+      "content": "== = Development testing === Development testing is a software development process that involves the synchronized application of a broad spectrum of defect prevention and detection strategies in order to reduce software development risks, time, and costs. It is performed by the software developer or engineer during the construction phase of the software development lifecycle. Development testing aims to eliminate construction errors before code is promoted to other testing; this strategy is intended to increase the quality of the resulting software as well as the efficiency of the overall development process. Depending on the organization's expectations for software development, development testing might include static code analysis, data flow analysis, metrics analysis, peer code reviews, unit testing, code coverage analysis, traceability, and other software testing practices.",
+      "char_count": 890,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0031",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = A/B testing ==",
+      "heading_path": "== = A/B testing ==",
+      "start_char": 20041,
+      "end_char": 20384,
+      "content": "== = A/B testing === A/B testing is a method of running a controlled experiment to determine if a proposed change is more effective than the current approach. Customers are routed to either a current version (control) of a feature, or to a modified version (treatment) and data is collected to determine which version is better at achieving the desired outcome.",
+      "char_count": 361,
+      "token_estimate": 90,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0032",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Concurrent testing ==",
+      "heading_path": "== = Concurrent testing ==",
+      "start_char": 20410,
+      "end_char": 20713,
+      "content": "== = Concurrent testing === Concurrent or concurrency testing assesses the behaviour and performance of software and systems that use concurrent computing, generally under normal usage conditions. Typical problems this type of testing will expose are deadlocks, race conditions and problems with shared memory/resource handling.",
+      "char_count": 328,
+      "token_estimate": 82,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0033",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Conformance testing or type testing ==",
+      "heading_path": "== = Conformance testing or type testing ==",
+      "start_char": 20756,
+      "end_char": 20992,
+      "content": "== = Conformance testing or type testing === In software testing, conformance testing verifies that a product performs according to its specified standards. Compilers, for instance, are extensively tested to determine whether they meet the recognized standard for that language.",
+      "char_count": 278,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0034",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Output comparison testing ==",
+      "heading_path": "== = Output comparison testing ==",
+      "start_char": 21025,
+      "end_char": 21339,
+      "content": "== = Output comparison testing === Creating a display expected output, whether as data comparison of text or screenshots of the UI, is sometimes called snapshot testing or Golden Master Testing unlike many other forms of testing, this cannot detect failures automatically and instead requires that a human evaluate the output for inconsistencies.",
+      "char_count": 346,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0035",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Property testing ==",
+      "heading_path": "== = Property testing ==",
+      "start_char": 21363,
+      "end_char": 22205,
+      "content": "== = Property testing === Property testing is a testing technique where, instead of asserting that specific inputs produce specific expected outputs, the practitioner randomly generates many inputs, runs the program on all of them, and asserts the truth of some \"property\" that should be true for every pair of input and output. For example, every output from a serialization function should be accepted by the corresponding deserialization function, and every output from a sort function should be a monotonically increasing list containing exactly the same elements as its input. Property testing libraries allow the user to control the strategy by which random inputs are constructed, to ensure coverage of degenerate cases, or inputs featuring specific patterns that are needed to fully exercise aspects of the implementation under test.",
+      "char_count": 841,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0036",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Metamorphic testing ==",
+      "heading_path": "== = Metamorphic testing ==",
+      "start_char": 22372,
+      "end_char": 22734,
+      "content": "== = Metamorphic testing === Metamorphic testing (MT) is a property-based software testing technique, which can be an effective approach for addressing the test oracle problem and test case generation problem. The test oracle problem is the difficulty of determining the expected outcomes of selected test cases or to determine whether the actual outputs agree with the expected outcomes.",
+      "char_count": 388,
+      "token_estimate": 97,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0037",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = VCR testing ==",
+      "heading_path": "== = VCR testing ==",
+      "start_char": 22753,
+      "end_char": 23355,
+      "content": "== = VCR testing === VCR testing, also known as \"playback testing\" or \"record/replay\" testing, is a testing technique for increasing the reliability and speed of regression tests that involve a component that is slow or unreliable to communicate with, often a third-party API outside of the tester's control. It involves making a recording (\"cassette\") of the system's interactions with the external component, and then replaying the recorded interactions as a substitute for communicating with the external system on subsequent runs of the test. The technique was popularized in web development by the Ruby library vcr.",
+      "char_count": 620,
+      "token_estimate": 155,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0038",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Roles ==",
+      "heading_path": "== = Roles ==",
+      "start_char": 23383,
+      "end_char": 23851,
+      "content": "== = Roles === In an organization, testers may be in a separate team from the rest of the software development team or they may be integrated into one team. Software testing can also be performed by non-dedicated software testers. In the 1980s, the term software tester started to be used to denote a separate profession. Notable software testing roles and titles include: test manager, test lead, test analyst, test designer, tester, automation developer, and test administrator.",
+      "char_count": 480,
+      "token_estimate": 120,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0039",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Software verification and validation ==",
+      "heading_path": "== = Software verification and validation ==",
+      "start_char": 24025,
+      "end_char": 24934,
+      "content": "== = Software verification and validation === Software testing is used in association with verification and validation: Verification: Have we built the software right? (i.e., does it implement the requirements). Validation: Have we built the right software? (i.e., do the deliverables satisfy the customer). The terms verification and validation are commonly used interchangeably in the industry; it is also common to see these two terms defined with contradictory definitions. According to the IEEE Standard Glossary of Software Engineering Terminology: Verification is the process of evaluating a system or component to determine whether the products of a given development phase satisfy the conditions imposed at the start of that phase. Validation is the process of evaluating a system or component during or at the end of the development process to determine whether it satisfies specified requirements.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0040",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Software verification and validation ==",
+      "heading_path": "== = Software verification and validation ==",
+      "start_char": 24934,
+      "end_char": 25836,
+      "content": "And, according to the ISO 9000 standard: Verification is confirmation by examination and through provision of objective evidence that specified requirements have been fulfilled. Validation is confirmation by examination and through provision of objective evidence that the requirements for a specific intended use or application have been fulfilled. The contradiction is caused by the use of the concepts of requirements and specified requirements but with different meanings. In the case of IEEE standards, the specified requirements, mentioned in the definition of validation, are the set of problems, needs and wants of the stakeholders that the software must solve and satisfy. Such requirements are documented in a Software Requirements Specification (SRS). And, the products mentioned in the definition of verification, are the output artifacts of every phase of the software development process.",
+      "char_count": 902,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0041",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Software verification and validation ==",
+      "heading_path": "== = Software verification and validation ==",
+      "start_char": 25837,
+      "end_char": 26793,
+      "content": "These products are, in fact, specifications such as Architectural Design Specification, Detailed Design Specification, etc. The SRS is also a specification, but it cannot be verified (at least not in the sense used here, more on this subject below). But, for the ISO 9000, the specified requirements are the set of specifications, as just mentioned above, that must be verified. A specification, as previously explained, is the product of a software development process phase that receives another specification as input. A specification is verified successfully when it correctly implements its input specification. All the specifications can be verified except the SRS because it is the first one (it can be validated, though). Examples: The Design Specification must implement the SRS; and, the Construction phase artifacts must implement the Design Specification. So, when these words are defined in common terms, the apparent contradiction disappears.",
+      "char_count": 956,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0042",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Software verification and validation ==",
+      "heading_path": "== = Software verification and validation ==",
+      "start_char": 26794,
+      "end_char": 27676,
+      "content": "Both the SRS and the software must be validated. The SRS can be validated statically by consulting with the stakeholders. Nevertheless, running some partial implementation of the software or a prototype of any kind (dynamic testing) and obtaining positive feedback from them, can further increase the certainty that the SRS is correctly formulated. On the other hand, the software, as a final and running product (not its artifacts and documents, including the source code) must be validated dynamically with the stakeholders by executing the software and having them to try it. Some might argue that, for SRS, the input is the words of stakeholders and, therefore, SRS validation is the same as SRS verification. Thinking this way is not advisable as it only causes more confusion. It is better to think of verification as a process involving a formal and technical input document.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0043",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Software quality assurance ==",
+      "heading_path": "== = Software quality assurance ==",
+      "start_char": 27667,
+      "end_char": 28595,
+      "content": "== = Software quality assurance === In some organizations, software testing is part of a software quality assurance (SQA) process. In SQA, software process specialists and auditors are concerned with the software development process rather than just the artifacts such as documentation, code and systems. They examine and change the software engineering process itself to reduce the number of faults that end up in the delivered software: the so-called defect rate. What constitutes an acceptable defect rate depends on the nature of the software; a flight simulator video game would have much higher defect tolerance than software for an actual airplane. Although there are close links with SQA, testing departments often exist independently, and there may be no SQA function in some companies. Software testing is an activity to investigate software under test in order to provide quality-related information to stakeholders.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0044",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Measures ==",
+      "heading_path": "== = Measures ==",
+      "start_char": 28715,
+      "end_char": 29095,
+      "content": "== = Measures === Quality measures include such topics as correctness, completeness, security and ISO/IEC 9126 requirements such as capability, reliability, efficiency, portability, maintainability, compatibility, and usability. There are a number of frequently used software metrics, or measures, which are used to assist in determining the state of the software or the adequacy of the testing.",
+      "char_count": 395,
+      "token_estimate": 98,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0045",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== = Certifications ==",
+      "heading_path": "== = Certifications ==",
+      "start_char": 29315,
+      "end_char": 29571,
+      "content": "== = Certifications === Several certification programs exist to support the professional aspirations of software testers and quality assurance specialists. A few practitioners argue that the testing field is not ready for certification, as mentioned in the controversy section.",
+      "char_count": 277,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0046",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== Controversy ==",
+      "heading_path": "== Controversy ==",
+      "start_char": 29588,
+      "end_char": 30567,
+      "content": "== Controversy == Some of the major software testing controversies include: Agile vs. traditional Should testers learn to work under conditions of uncertainty and constant change or should they aim at process \"maturity\"? The agile testing movement has received growing popularity since the early 2000s mainly in commercial circles, whereas government and military software providers use this methodology but also the traditional test-last models (e.g., in the Waterfall model). Manual vs. automated testing Some writers believe that test automation is so expensive relative to its value that it should be used sparingly. The test automation then can be considered as a way to capture and implement the requirements. As a general rule, the larger the system and the greater the complexity, the greater the ROI in test automation. Also, the investment in tools and expertise can be amortized over multiple projects with the right level of knowledge sharing within an organization.",
+      "char_count": 978,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0047",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== Controversy ==",
+      "heading_path": "== Controversy ==",
+      "start_char": 30567,
+      "end_char": 31543,
+      "content": "Is the existence of the ISO 29119 software testing standard justified? Significant opposition has formed out of the ranks of the context-driven school of software testing about the ISO 29119 standard. Professional testing associations, such as the International Society for Software Testing, have attempted to have the standard withdrawn. Some practitioners declare that the testing field is not ready for certification No certification now offered actually requires the applicant to show their ability to test software. No certification is based on a widely accepted body of knowledge. Certification itself cannot measure an individual's productivity, their skill, or practical knowledge, and cannot guarantee their competence, or professionalism as a tester. Studies used to show the relative expense of fixing defects There are opposing views on the applicability of studies used to show the relative expense of fixing defects depending on their introduction and detection.",
+      "char_count": 976,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0048",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== Controversy ==",
+      "heading_path": "== Controversy ==",
+      "start_char": 31544,
+      "end_char": 32462,
+      "content": "For example: It is commonly believed that the earlier a defect is found, the cheaper it is to fix it. The following table shows the cost of fixing the defect depending on the stage it was found. For example, if a problem in the requirements is found only post-release, then it would cost 10–100 times more to fix than if it had already been found by the requirements review. With the advent of modern continuous deployment practices and cloud-based services, the cost of re-deployment and maintenance may lessen over time. The data from which this table is extrapolated is scant. Laurent Bossavit says in his analysis: The \"smaller projects\" curve turns out to be from only two teams of first-year students, a sample size so small that extrapolating to \"smaller projects in general\" is totally indefensible. The GTE study does not explain its data, other than to say it came from two projects, one large and one small.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "softwaretesting_535dff33_c0049",
+      "article_id": "softwaretesting_535dff33",
+      "section": "== Controversy ==",
+      "heading_path": "== Controversy ==",
+      "start_char": 32463,
+      "end_char": 33079,
+      "content": "The paper cited for the Bell Labs \"Safeguard\" project specifically disclaims having collected the fine-grained data that Boehm's data points suggest. The IBM study (Fagan's paper) contains claims that seem to contradict Boehm's graph and no numerical results that clearly correspond to his data points. Boehm doesn't even cite a paper for the TRW data, except when writing for \"Making Software\" in 2010, and there he cited the original 1976 article. There exists a large study conducted at TRW at the right time for Boehm to cite it, but that paper doesn't contain the sort of data that would support Boehm's claims.",
+      "char_count": 616,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What factors contribute to a greater return on investment (ROI) in test automation?",
+        "answer": "The ROI in test automation is greater for larger and more complex systems. Additionally, the investment in tools and expertise can be amortized over multiple projects if there is adequate knowledge sharing within an organization.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0046"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are some of the potential issues that can arise during the internationalization and localization of software?",
+        "answer": "Potential issues include inconsistent technical terminology from uncoordinated translations, inappropriate or artificial-sounding literal translations, and untranslatable messages hard-coded in the source code. Other problems can be ungrammatical or confusing messages created automatically at run time, keyboard shortcuts that conflict with the target language's layout, lack of support for the target language's character encoding, and inappropriate fonts or font sizes that can make characters like CJK unreadable.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0028"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Why can the Software Requirements Specification (SRS) not be verified?",
+        "answer": "The Software Requirements Specification (SRS) cannot be verified because it is the first specification in the development process.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0041"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "How does software testing determine if a product is doing what it is supposed to do?",
+        "answer": "Software testing determines if a product is doing what it is supposed to do by using oracles as criteria for measuring correctness. These oracles, which define the expected behavior, can include specifications, contracts, user expectations, relevant standards, and applicable laws.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0000",
+          "softwaretesting_535dff33_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain the economic significance of software bugs and the primary method identified for mitigating their financial impact.",
+        "answer": "Software bugs, which are defects in code causing undesirable results, have a major economic impact. A 2002 NIST study reported that they cost the U.S. economy $59.5 billion annually. The primary method for mitigating this financial impact is performing better software testing, which is the process used to find these bugs. The study suggested that over a third of this cost could be avoided through such improved testing.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0002",
+          "softwaretesting_535dff33_c0003",
+          "softwaretesting_535dff33_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Considering the different approaches to software testing and its inherent limitations, why is it difficult to ensure all requirements, particularly non-functional ones, are satisfied?",
+        "answer": "It is difficult to ensure all requirements are satisfied due to fundamental limitations in testing. While testing can be static (verification) or dynamic (validation), it is not feasible to test all combinations of inputs and preconditions, making it hard to find defects that only appear in unusual conditions. This challenge is particularly acute for non-functional requirements like scalability and performance, which are often the source of 'requirement gaps' and can also be subjective, making their quality difficult to measure consistently.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0005",
+          "softwaretesting_535dff33_c0006",
+          "softwaretesting_535dff33_c0007"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does software testing determine if a product is doing what it's supposed to do?",
+        "answer": "Software testing aims to answer the question, \"Does the software do what it is supposed to do and what it needs to do?\". It determines this by using various \"oracles\" as criteria for measuring correctness, which can include specifications, contracts, user or customer expectations, and relevant standards.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0000",
+          "softwaretesting_535dff33_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do the approaches of dynamic testing and passive testing differ?",
+        "answer": "Dynamic testing is an active approach that involves executing the program's code with a given set of test cases to test specific functions or modules. In contrast, passive testing verifies a system's behavior without any direct interaction; it involves analyzing system logs and traces to look for patterns and specific behaviors.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0007",
+          "softwaretesting_535dff33_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the primary purpose of regression testing, and what factors determine the depth of this testing process?",
+        "answer": "The primary purpose of regression testing is to find defects, known as software regressions, that occur after a major code change. These regressions happen when previously working functionality stops working correctly. The depth of this testing is determined by the phase in the release process and the risk associated with the new features. For instance, changes made late in the release or deemed risky will undergo complete testing, while low-risk changes made early in the process might only receive shallow testing.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0013",
+          "softwaretesting_535dff33_c0014"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are the key differences between Operational Acceptance Testing (OAT) and Contractual/Regulatory Acceptance Testing?",
+        "answer": "Operational Acceptance Testing (OAT) is a type of non-functional testing that focuses on the operational readiness of a system for its production environment, ensuring it doesn't negatively impact other processes. In contrast, Contractual Acceptance Testing is performed based on acceptance criteria defined in a contract, while Regulatory Acceptance Testing is based on relevant regulations. Both contractual and regulatory tests can be performed by users or independent testers.",
+        "related_chunk_ids": [
+          "softwaretesting_535dff33_c0015",
+          "softwaretesting_535dff33_c0016"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:34.023Z",
+    "content_format": "markdown",
+    "total_chunks": 50,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

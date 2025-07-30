@@ -1,0 +1,220 @@
+{
+  "article": {
+    "id": "criminalprocedure_24e88904",
+    "title": "Criminal procedure",
+    "url": "https://en.wikipedia.org/wiki/Criminal_procedure",
+    "lang": "en",
+    "created_at": "2025-07-30T12:39:29.277759",
+    "content": "---\nid: criminalprocedure_24e88904\nurl: https://en.wikipedia.org/wiki/Criminal_procedure\ntitle: Criminal procedure\nlang: en\ncreated_at: '2025-07-30T12:36:03.553119'\nchecksum: e24caf39067762285cf948961107e503c79daa1a3ea6f9036e77de923818c51b\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1130\n  char_count: 6835\n  num_chunks: 9\n  original_chunks: 12\n  filtered_out: 3\n  num_sections: 0\n---\nCriminal procedure is the adjudication process of the criminal law. While criminal procedure differs dramatically by jurisdiction, the process generally begins with a formal criminal charge with the person on trial either being free on bail or incarcerated, and results in the conviction or acquittal of the defendant. Criminal procedure can be either in form of inquisitorial or adversarial criminal procedure. == Basic rights == Currently, in many countries with a democratic system and the rule of law, criminal procedure puts the burden of proof on the prosecution – that is, it is up to the prosecution to prove that the defendant is guilty beyond any reasonable doubt, as opposed to having the defence prove that they are innocent, and any doubt is resolved in favor of the defendant. This provision, known as the presumption of innocence, is required, for example, in the 46 countries that are members of the Council of Europe, under Article 6 of the European Convention on Human Rights, and it is included in other human rights documents. However, in practice, it operates somewhat differently in different countries. These basic rights also include the right of the defendant to know the offence for which they have been arrested or charged, and the right to appear before a judicial official within a specified time after arrest. Many jurisdictions also allow the defendant the right to legal counsel and provide any defendant who cannot afford their own lawyer with a lawyer paid for at the public expense. == Difference between criminal and civil cases == Countries using the common law tend to make a clear distinction between civil and criminal procedures. For example, an English criminal court may force a convicted accused to pay a fine to the Crown as punishment for the crime, and sometimes to pay the legal costs of the prosecution, but does not normally order the convicted accused to pay any compensation to the victim of the crime. The victim must pursue their claim for compensation in a civil, not a criminal, action. In countries using the continental civil law system, such as France and Italy, the victim of a crime (known as the \"injured party\") may be awarded damages by a criminal court judge. The standards of proof are higher in a criminal action than in a civil one since the loser risks not only financial penalties but also being sent to prison (or, in some countries, execution). In English law, the prosecution must prove the guilt of a criminal \"beyond reasonable doubt\", while the plaintiff in a civil action is required to prove his case \"on the balance of probabilities\". \"Beyond reasonable doubt\" is not defined for the jury which decides the verdict, but it has been said by appeal courts that proving guilt beyond reasonable doubt requires the prosecution to exclude any reasonable hypothesis consistent with innocence: Plomp v. R. In a civil case, however, the court simply weighs the evidence and decides what is most probable. Criminal and civil procedure are different. Although some systems, including the English, allow a private citizen to bring a criminal prosecution against another citizen, criminal actions are nearly always started by the state. Civil actions, on the other hand, are usually started by individuals. In Anglo-American law, the party bringing a criminal action (that is, in most cases, the state) is called the prosecution, but the party bringing a civil action is the plaintiff. In a civil action the other party is known as the defendant. In a criminal case, the private party may be known as the defendant or the accused. A criminal case in the United States against a person named Ms. Sanchez would be entitled United States v. (short for versus, or against) Sanchez if initiated by the federal government; if brought by a state, the case would typically be called State v. Sanchez or People v. Sanchez. In the United Kingdom, the criminal case would be styled R. (short for Rex or Regina, that is, the King or Queen) v. Sanchez. In both the United States and the United Kingdom, a civil action between Ms. Sanchez and a Mr. Smith would be Sanchez v. Smith if started by Sanchez and Smith v. Sanchez if begun by Smith. Evidence given at a criminal trial is not necessarily admissible in a civil action about the same matter, just as evidence given in a civil cause is not necessarily admissible on a criminal trial. For example, the victim of a road accident does not directly benefit if the driver who injured him is found guilty of the crime of careless driving. He still has to prove his case in a civil action. In fact he may be able to prove his civil case even when the driver is found not guilty in the criminal trial. If the accused has given evidence on his trial he may be cross-examined on those statements in a subsequent civil action regardless of the criminal verdict. Once the plaintiff has shown that the defendant is liable, the main argument in a civil court is about the amount of money, or damages, which the defendant should pay to the plaintiff. == Differences between civil law and common law systems == The majority of civil law jurisdictions ('civil law' as a type of law system, not as opposed to criminal law) follow an inquisitorial system of adjudication, in which judges undertake an active investigation of the claims by examining the evidence at the trial (while other judges contribute likewise by preparing reports). In common law systems, the trial judge presides over proceedings grounded in the adversarial system of dispute resolution, where both the prosecution and the defence prepare arguments to be presented before the court. Some civil law systems have adopted adversarial procedures. Proponents of either system tend to consider that their system defends best the rights of the innocent. There is a tendency in common law countries to believe that civil law / inquisitorial systems do not have the so-called \"presumption of innocence\", and do not provide the defence with adequate rights. Conversely, there is a tendency in countries with an inquisitorial system to believe that accusatorial proceedings unduly favour rich defendants who can afford large legal teams, and therefore disfavour poorer defendants. == See also == Offence (law) Trial (law) Civil procedure Code of Criminal Procedure, 1973 of India Court Appointed Special Advocates Criminal Procedure Act Criminal procedure in the United States Formal procedure law in Switzerland Italian Criminal Procedure Code of Criminal Procedure (Japan) Criminal Procedure Code (Malaysia) Criminal Procedure Code (Ukraine) == References == == Further reading == Israel, Jerold H.; Kamisar, Yale; LaFave, Wayne R. (2003). Criminal Procedure and the Constitution: Leading Supreme Court Cases and Introductory Text. St. Paul, MN: West Publishing. ISBN 0-314-14669-5."
+  },
+  "chunks": [
+    {
+      "id": "criminalprocedure_24e88904_c0000",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 412,
+      "content": "Criminal procedure is the adjudication process of the criminal law. While criminal procedure differs dramatically by jurisdiction, the process generally begins with a formal criminal charge with the person on trial either being free on bail or incarcerated, and results in the conviction or acquittal of the defendant. Criminal procedure can be either in form of inquisitorial or adversarial criminal procedure.",
+      "char_count": 411,
+      "token_estimate": 102,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "criminalprocedure_24e88904_c0001",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "== Basic rights ==",
+      "heading_path": "== Basic rights ==",
+      "start_char": 430,
+      "end_char": 1358,
+      "content": "== Basic rights == Currently, in many countries with a democratic system and the rule of law, criminal procedure puts the burden of proof on the prosecution – that is, it is up to the prosecution to prove that the defendant is guilty beyond any reasonable doubt, as opposed to having the defence prove that they are innocent, and any doubt is resolved in favor of the defendant. This provision, known as the presumption of innocence, is required, for example, in the 46 countries that are members of the Council of Europe, under Article 6 of the European Convention on Human Rights, and it is included in other human rights documents. However, in practice, it operates somewhat differently in different countries. These basic rights also include the right of the defendant to know the offence for which they have been arrested or charged, and the right to appear before a judicial official within a specified time after arrest.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "criminalprocedure_24e88904_c0002",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "== Basic rights ==",
+      "heading_path": "== Basic rights ==",
+      "start_char": 1358,
+      "end_char": 1535,
+      "content": "Many jurisdictions also allow the defendant the right to legal counsel and provide any defendant who cannot afford their own lawyer with a lawyer paid for at the public expense.",
+      "char_count": 177,
+      "token_estimate": 44,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "criminalprocedure_24e88904_c0003",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "== Difference between criminal and civil cases ==",
+      "heading_path": "== Difference between criminal and civil cases ==",
+      "start_char": 1567,
+      "end_char": 2466,
+      "content": "== Difference between criminal and civil cases == Countries using the common law tend to make a clear distinction between civil and criminal procedures. For example, an English criminal court may force a convicted accused to pay a fine to the Crown as punishment for the crime, and sometimes to pay the legal costs of the prosecution, but does not normally order the convicted accused to pay any compensation to the victim of the crime. The victim must pursue their claim for compensation in a civil, not a criminal, action. In countries using the continental civil law system, such as France and Italy, the victim of a crime (known as the \"injured party\") may be awarded damages by a criminal court judge. The standards of proof are higher in a criminal action than in a civil one since the loser risks not only financial penalties but also being sent to prison (or, in some countries, execution).",
+      "char_count": 898,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "criminalprocedure_24e88904_c0004",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "== Difference between criminal and civil cases ==",
+      "heading_path": "== Difference between criminal and civil cases ==",
+      "start_char": 2466,
+      "end_char": 3321,
+      "content": "In English law, the prosecution must prove the guilt of a criminal \"beyond reasonable doubt\", while the plaintiff in a civil action is required to prove his case \"on the balance of probabilities\". \"Beyond reasonable doubt\" is not defined for the jury which decides the verdict, but it has been said by appeal courts that proving guilt beyond reasonable doubt requires the prosecution to exclude any reasonable hypothesis consistent with innocence: Plomp v. R. In a civil case, however, the court simply weighs the evidence and decides what is most probable. Criminal and civil procedure are different. Although some systems, including the English, allow a private citizen to bring a criminal prosecution against another citizen, criminal actions are nearly always started by the state. Civil actions, on the other hand, are usually started by individuals.",
+      "char_count": 855,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "criminalprocedure_24e88904_c0005",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "== Difference between criminal and civil cases ==",
+      "heading_path": "== Difference between criminal and civil cases ==",
+      "start_char": 3322,
+      "end_char": 4243,
+      "content": "In Anglo-American law, the party bringing a criminal action (that is, in most cases, the state) is called the prosecution, but the party bringing a civil action is the plaintiff. In a civil action the other party is known as the defendant. In a criminal case, the private party may be known as the defendant or the accused. A criminal case in the United States against a person named Ms. Sanchez would be entitled United States v. (short for versus, or against) Sanchez if initiated by the federal government; if brought by a state, the case would typically be called State v. Sanchez or People v. Sanchez. In the United Kingdom, the criminal case would be styled R. (short for Rex or Regina, that is, the King or Queen) v. Sanchez. In both the United States and the United Kingdom, a civil action between Ms. Sanchez and a Mr. Smith would be Sanchez v. Smith if started by Sanchez and Smith v. Sanchez if begun by Smith.",
+      "char_count": 921,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "criminalprocedure_24e88904_c0006",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "== Difference between criminal and civil cases ==",
+      "heading_path": "== Difference between criminal and civil cases ==",
+      "start_char": 4244,
+      "end_char": 5092,
+      "content": "Evidence given at a criminal trial is not necessarily admissible in a civil action about the same matter, just as evidence given in a civil cause is not necessarily admissible on a criminal trial. For example, the victim of a road accident does not directly benefit if the driver who injured him is found guilty of the crime of careless driving. He still has to prove his case in a civil action. In fact he may be able to prove his civil case even when the driver is found not guilty in the criminal trial. If the accused has given evidence on his trial he may be cross-examined on those statements in a subsequent civil action regardless of the criminal verdict. Once the plaintiff has shown that the defendant is liable, the main argument in a civil court is about the amount of money, or damages, which the defendant should pay to the plaintiff.",
+      "char_count": 848,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "criminalprocedure_24e88904_c0007",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "== Differences between civil law and common law systems ==",
+      "heading_path": "== Differences between civil law and common law systems ==",
+      "start_char": 5102,
+      "end_char": 5867,
+      "content": "== Differences between civil law and common law systems == The majority of civil law jurisdictions ('civil law' as a type of law system, not as opposed to criminal law) follow an inquisitorial system of adjudication, in which judges undertake an active investigation of the claims by examining the evidence at the trial (while other judges contribute likewise by preparing reports). In common law systems, the trial judge presides over proceedings grounded in the adversarial system of dispute resolution, where both the prosecution and the defence prepare arguments to be presented before the court. Some civil law systems have adopted adversarial procedures. Proponents of either system tend to consider that their system defends best the rights of the innocent.",
+      "char_count": 764,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "criminalprocedure_24e88904_c0008",
+      "article_id": "criminalprocedure_24e88904",
+      "section": "== Differences between civil law and common law systems ==",
+      "heading_path": "== Differences between civil law and common law systems ==",
+      "start_char": 5867,
+      "end_char": 6289,
+      "content": "There is a tendency in common law countries to believe that civil law / inquisitorial systems do not have the so-called \"presumption of innocence\", and do not provide the defence with adequate rights. Conversely, there is a tendency in countries with an inquisitorial system to believe that accusatorial proceedings unduly favour rich defendants who can afford large legal teams, and therefore disfavour poorer defendants.",
+      "char_count": 422,
+      "token_estimate": 105,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 9,
+    "items": [
+      {
+        "question": "Under which article of the European Convention on Human Rights is the presumption of innocence required for the 46 member countries of the Council of Europe?",
+        "answer": "The presumption of innocence is required under Article 6 of the European Convention on Human Rights for the 46 countries that are members of the Council of Europe.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0001"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "In the United Kingdom, what does the 'R.' in a criminal case title like 'R. v. Sanchez' signify?",
+        "answer": "The 'R.' in a UK criminal case title stands for Rex or Regina, which translates to the King or Queen.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0005"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the key differences between the inquisitorial system of adjudication in civil law and the adversarial system in common law?",
+        "answer": "In the inquisitorial system, common in civil law jurisdictions, judges actively investigate claims by examining evidence. In contrast, the adversarial system, used in common law, features a trial judge who presides over proceedings while the prosecution and defense prepare and present their own arguments to the court.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does the principle of the presumption of innocence, a basic right in many democratic countries, influence the general adjudication process of criminal law?",
+        "answer": "The adjudication process of criminal law, which begins with a formal charge and results in a conviction or acquittal, is fundamentally shaped by the presumption of innocence. This principle places the burden of proof on the prosecution to demonstrate the defendant's guilt beyond a reasonable doubt. Instead of the defense needing to prove innocence, any doubt is resolved in the defendant's favor, directly impacting how the case proceeds from charge to final verdict.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0000",
+          "criminalprocedure_24e88904_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do criminal and civil cases differ regarding the standard of proof, the initiating party, and the potential outcomes for the defendant?",
+        "answer": "Criminal and civil cases differ in several key ways. The standard of proof is higher in criminal cases, requiring proof \"beyond reasonable doubt,\" because the defendant risks severe penalties like imprisonment. In contrast, civil cases are decided \"on the balance of probabilities.\" Criminal actions are nearly always initiated by the state, while civil actions are usually started by individuals. Finally, in common law systems, a convicted person in a criminal case faces punishment like a fine or prison, but the victim must typically pursue a separate civil action to receive compensation.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0003",
+          "criminalprocedure_24e88904_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does the adversarial nature of the common law system influence both the naming of parties in legal actions and the relationship between criminal and civil proceedings concerning the same event?",
+        "answer": "The common law system is adversarial, meaning disputes are resolved by opposing sides presenting arguments. This is reflected in the naming of parties, which pits one against the other, such as the prosecution versus the defendant in a criminal case, or a plaintiff versus a defendant in a civil action. This adversarial separation also means that criminal and civil proceedings about the same event are distinct; evidence from a criminal trial is not automatically admissible in a civil action, and a victim must still independently prove their case in a civil court to receive damages, regardless of the criminal verdict.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0005",
+          "criminalprocedure_24e88904_c0006",
+          "criminalprocedure_24e88904_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are some of the basic rights afforded to a defendant in many democratic legal systems with the rule of law?",
+        "answer": "In many democratic countries with a rule of law, a defendant has several basic rights. These include the presumption of innocence, which places the burden of proof on the prosecution. Defendants also have the right to be informed of the offence for which they have been arrested or charged, the right to appear before a judicial official within a specified time after arrest, and the right to legal counsel. For those who cannot afford their own lawyer, many jurisdictions provide one at public expense.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0001",
+          "criminalprocedure_24e88904_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How do criminal and civil cases differ in terms of the standard of proof required, the typical initiating party, and the potential outcomes for a victim in a common law system?",
+        "answer": "In a criminal case, the standard of proof is higher, requiring the prosecution to prove guilt \"beyond reasonable doubt.\" In contrast, a civil case requires the plaintiff to prove their case \"on the balance of probabilities.\" Criminal actions are nearly always initiated by the state (the prosecution), while civil actions are usually started by individuals (the plaintiff). In a common law system, a criminal court's outcome focuses on punishment, such as a fine to the state, and does not typically award compensation to the victim. The victim must pursue damages in a separate civil action.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0003",
+          "criminalprocedure_24e88904_c0004",
+          "criminalprocedure_24e88904_c0005"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the common criticisms that proponents of common law and civil law systems have about each other's approach to adjudication?",
+        "answer": "In common law countries, there is a tendency to believe that civil law's inquisitorial systems lack a \"presumption of innocence\" and fail to provide adequate rights for the defense. Conversely, in countries with an inquisitorial system, there is a belief that the adversarial proceedings of common law systems unduly favor wealthy defendants who can afford large legal teams, which puts poorer defendants at a disadvantage.",
+        "related_chunk_ids": [
+          "criminalprocedure_24e88904_c0007",
+          "criminalprocedure_24e88904_c0008"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T13:32:46.590Z",
+    "content_format": "markdown",
+    "total_chunks": 9,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

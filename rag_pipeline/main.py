@@ -108,6 +108,14 @@ async def run_rag_evaluation():
             #     combination_method="borda_count",
             #     excessive_k=60
             # )
+            RetrievalConfig(
+                name="graph_rag",
+                enabled=True,
+                technique="graph_rag",
+                top_k=10,
+                embedding_model="mxbai-embed-large",
+                similarity_metric="cosine"
+            )
         ],
         # Passage rerank: (optional, can add more configs)
         passage_rerank=[
@@ -139,11 +147,11 @@ async def run_rag_evaluation():
             #     llm_max_tokens=2048,
             #     llm_temperature=0.1,
             # ),
-            PassageRerankConfig(
-                name="no_rerank",
-                enabled=True,
-                technique="none",
-            )
+            # PassageRerankConfig(
+            #     name="no_rerank",
+            #     enabled=True,
+            #     technique="none",
+            # )
         ],
 
         # Passage filter: one config
@@ -172,11 +180,11 @@ async def run_rag_evaluation():
             #     llm_summarize_max_tokens=500,
             #     llm_summarize_temperature=0.1,
             # ),
-            PassageCompressConfig(
-                name="no_compress",
-                enabled=True,
-                technique="none",
-            )
+            # PassageCompressConfig(
+            #     name="no_compress",
+            #     enabled=True,
+            #     technique="none",
+            # )
         ],
 
         # Prompt maker: one config
@@ -208,24 +216,24 @@ async def run_rag_evaluation():
 
         # Generator: two configs
         generator=[
-            GeneratorConfig(
-                name="llama3.2:1b-t0.3",
-                enabled=True,
-                technique="llm",
-                model="llama3.2:1b",
-                temperature=0.3,
-                provider="ollama",
-                max_tokens=500
-            )
             # GeneratorConfig(
-            #     name="gemma3:4b-t0.1",
+            #     name="llama3.2:1b-t0.3",
             #     enabled=True,
             #     technique="llm",
-            #     model="gemma3:4b",
-            #     temperature=0.1,
+            #     model="llama3.2:1b",
+            #     temperature=0.3,
             #     provider="ollama",
             #     max_tokens=500
-            # )
+            # ),
+            GeneratorConfig(
+                name="gemma3:4b-t0.1",
+                enabled=True,
+                technique="llm",
+                model="gemma3:4b",
+                temperature=0.1,
+                provider="ollama",
+                max_tokens=500
+            ),
             # GeneratorConfig(
             #     name="multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemini-2.0-flash",
             #     enabled=True,
@@ -236,11 +244,11 @@ async def run_rag_evaluation():
         ],
 
         query_expansion=[
-            QueryExpansionConfig(
-                name="no_expansion",
-                enabled=True,
-                technique="none",
-            ),
+            # QueryExpansionConfig(
+            #     name="no_expansion",
+            #     enabled=True,
+            #     technique="none",
+            # ),
             # QueryExpansionConfig(
             #     name="simple_multi_query_cc",
             #     enabled=True,
@@ -284,16 +292,16 @@ async def run_rag_evaluation():
             #     combination_method="borda_count",
             #     excessive_k=60,
             # ),
-            QueryExpansionConfig(
-                name="step_back_prompting",
-                enabled=True,
-                technique="step_back_prompting",
-                num_expanded_queries=3,
-                model="gemma3:4b",
-                combination_method="convex_combination",
-                normalization_method="minmax",
-                excessive_k=60,
-            ),
+            # QueryExpansionConfig(
+            #     name="step_back_prompting",
+            #     enabled=True,
+            #     technique="step_back_prompting",
+            #     num_expanded_queries=3,
+            #     model="gemma3:4b",
+            #     combination_method="convex_combination",
+            #     normalization_method="minmax",
+            #     excessive_k=60,
+            # ),
         ],
 
 
@@ -313,12 +321,21 @@ async def run_rag_evaluation():
             #     technique="prev_next_augmenter",
             #     n=1
             # )
+            # PassageAugmentConfig(
+            #     name="relevant_segment_extractor",
+            #     enabled=True,
+            #     technique="relevant_segment_extractor",
+            #     max_chunk_number_in_segment=5,
+            #     irrelevant_chunk_penalty=0.18,
+            #     decay_rate=30,
+            #     overall_max_chunk_number=10
+            # )
         ],
         post_generation=[],
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=10,
+        max_test_cases=3,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,

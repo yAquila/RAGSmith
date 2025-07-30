@@ -1,0 +1,152 @@
+{
+  "article": {
+    "id": "statute_394baccb",
+    "title": "Statute",
+    "url": "https://en.wikipedia.org/wiki/Statute",
+    "lang": "en",
+    "created_at": "2025-07-30T12:38:31.006173",
+    "content": "---\nid: statute_394baccb\nurl: https://en.wikipedia.org/wiki/Statute\ntitle: Statute\nlang: en\ncreated_at: '2025-07-30T12:35:58.313165'\nchecksum: 7462d5deafdcc277de8d742e54d8082cb0187a07030228c72ab2421fe6e3a263\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 581\n  char_count: 3619\n  num_chunks: 6\n  original_chunks: 11\n  filtered_out: 5\n  num_sections: 0\n---\nA statute is a law or formal written enactment of a legislature. Statutes typically declare, command or prohibit something. Statutes are distinguished from court law and unwritten law (also known as common law) in that they are the expressed will of a legislative body, whether that be on the behalf of a country, state or province, county, municipality, or so on. They are also distinguished from secondary legislation, or regulations, that are issued by an executive body under authority granted by a statute. Depending on the legal system, a statute may also be referred to as an \"act.\" == Etymology == The word appears in use in English as early as the 14th century. \"Statute\" and earlier English spellings were derived from the Old French words statut, estatut, estatu, meaning \"(royal) promulgation, (legal) statute.\" These terms were in turn derived from the Late Latin statutum, meaning \"a law, decree.\" == Publication and organization == In virtually all countries, newly enacted statutes are published and distributed so that everyone can look up the statutory law. This can be done in the form of a government gazette, which may include other kinds of legal notices released by the government, or in the form of a series of books whose content is limited to legislative acts. In either form, statutes are traditionally published in chronological order based on date of enactment. A universal problem encountered by lawmakers throughout human history is how to organize published statutes. Such publications have a habit of starting small but growing rapidly over time, as new statutes are enacted in response to the exigencies of the moment. Eventually, persons trying to find the law are forced to sort through an enormous number of statutes enacted at various points in time to determine which portions are still in effect. The solution adopted in many countries is to organize existing statutory law in topical arrangements (or \"codified\") within publications called codes, then ensure that new statutes are consistently drafted so that they add, amend, repeal or move various code sections. In turn, in theory, the code will thenceforth reflect the current cumulative state of the statutory law in that jurisdiction. In many nations statutory law is distinguished from and subordinate to constitutional law. == Alternative meanings == === International law === The term \"statute\" is also used to refer to an International treaty that establishes an institution, such as the Statute of the European Central Bank, a protocol to the international courts as well, such as the Statute of the International Court of Justice and the Rome Statute of the International Criminal Court. \"Statute\" is also another word for law. The term was adapted from England in about the 18th century. === Autonomy statute === In the autonomous communities of Spain, an autonomy statute is a legal document similar to the constitution of a federated state, save that it is enacted by the national legislature, rather than the autonomous community it governs. The autonomy statutes in Spain have the rank of ley orgánica (organic law), a category of special legislation reserved for the main institutions and issues and mentioned in the constitution (the highest ranking legal instrument in Spain). Leyes orgánicas rank between the constitution and ordinary laws. The name was chosen, among others, to avoid confusion with the term constitution (i.e. the Spanish constitution of 1978). == Types == Public and private bills Organic statute Super statute == See also == Statutory interpretation == References == == External links =="
+  },
+  "chunks": [
+    {
+      "id": "statute_394baccb_c0000",
+      "article_id": "statute_394baccb",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 590,
+      "content": "A statute is a law or formal written enactment of a legislature. Statutes typically declare, command or prohibit something. Statutes are distinguished from court law and unwritten law (also known as common law) in that they are the expressed will of a legislative body, whether that be on the behalf of a country, state or province, county, municipality, or so on. They are also distinguished from secondary legislation, or regulations, that are issued by an executive body under authority granted by a statute. Depending on the legal system, a statute may also be referred to as an \"act.\"",
+      "char_count": 589,
+      "token_estimate": 147,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "statute_394baccb_c0001",
+      "article_id": "statute_394baccb",
+      "section": "== Etymology ==",
+      "heading_path": "== Etymology ==",
+      "start_char": 605,
+      "end_char": 912,
+      "content": "== Etymology == The word appears in use in English as early as the 14th century. \"Statute\" and earlier English spellings were derived from the Old French words statut, estatut, estatu, meaning \"(royal) promulgation, (legal) statute.\" These terms were in turn derived from the Late Latin statutum, meaning \"a law, decree.\"",
+      "char_count": 321,
+      "token_estimate": 80,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "statute_394baccb_c0002",
+      "article_id": "statute_394baccb",
+      "section": "== Publication and organization ==",
+      "heading_path": "== Publication and organization ==",
+      "start_char": 946,
+      "end_char": 1871,
+      "content": "== Publication and organization == In virtually all countries, newly enacted statutes are published and distributed so that everyone can look up the statutory law. This can be done in the form of a government gazette, which may include other kinds of legal notices released by the government, or in the form of a series of books whose content is limited to legislative acts. In either form, statutes are traditionally published in chronological order based on date of enactment. A universal problem encountered by lawmakers throughout human history is how to organize published statutes. Such publications have a habit of starting small but growing rapidly over time, as new statutes are enacted in response to the exigencies of the moment. Eventually, persons trying to find the law are forced to sort through an enormous number of statutes enacted at various points in time to determine which portions are still in effect.",
+      "char_count": 924,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "statute_394baccb_c0003",
+      "article_id": "statute_394baccb",
+      "section": "== Publication and organization ==",
+      "heading_path": "== Publication and organization ==",
+      "start_char": 1871,
+      "end_char": 2356,
+      "content": "The solution adopted in many countries is to organize existing statutory law in topical arrangements (or \"codified\") within publications called codes, then ensure that new statutes are consistently drafted so that they add, amend, repeal or move various code sections. In turn, in theory, the code will thenceforth reflect the current cumulative state of the statutory law in that jurisdiction. In many nations statutory law is distinguished from and subordinate to constitutional law.",
+      "char_count": 485,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "statute_394baccb_c0004",
+      "article_id": "statute_394baccb",
+      "section": "== = International law ==",
+      "heading_path": "== = International law ==",
+      "start_char": 2375,
+      "end_char": 2793,
+      "content": "== = International law === The term \"statute\" is also used to refer to an International treaty that establishes an institution, such as the Statute of the European Central Bank, a protocol to the international courts as well, such as the Statute of the International Court of Justice and the Rome Statute of the International Criminal Court. \"Statute\" is also another word for law. The term was adapted from England in about the 18th century.",
+      "char_count": 442,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "statute_394baccb_c0005",
+      "article_id": "statute_394baccb",
+      "section": "== = Autonomy statute ==",
+      "heading_path": "== = Autonomy statute ==",
+      "start_char": 2817,
+      "end_char": 3477,
+      "content": "== = Autonomy statute === In the autonomous communities of Spain, an autonomy statute is a legal document similar to the constitution of a federated state, save that it is enacted by the national legislature, rather than the autonomous community it governs. The autonomy statutes in Spain have the rank of ley orgánica (organic law), a category of special legislation reserved for the main institutions and issues and mentioned in the constitution (the highest ranking legal instrument in Spain). Leyes orgánicas rank between the constitution and ordinary laws. The name was chosen, among others, to avoid confusion with the term constitution (i.e. the Spanish constitution of 1978).",
+      "char_count": 683,
+      "token_estimate": 170,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 6,
+    "items": [
+      {
+        "question": "Why does the chronological publication of statutes eventually become a problem for people trying to find the law?",
+        "answer": "As new statutes are enacted over time, the volume of published laws grows rapidly. This forces people to sort through a large number of statutes enacted at different times to determine which portions are still in effect.",
+        "related_chunk_ids": [
+          "statute_394baccb_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the legal rank of an autonomy statute in Spain?",
+        "answer": "An autonomy statute in Spain has the rank of ley orgánica (organic law), a category of special legislation that ranks between the constitution and ordinary laws.",
+        "related_chunk_ids": [
+          "statute_394baccb_c0005"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "How are statutes distinguished from secondary legislation?",
+        "answer": "Statutes are distinguished from secondary legislation because statutes are the expressed will of a legislative body, whereas secondary legislation, or regulations, are issued by an executive body under the authority granted by a statute.",
+        "related_chunk_ids": [
+          "statute_394baccb_c0000"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is a statute, and what is a universal problem associated with its publication and organization over time?",
+        "answer": "A statute is a formal written law enacted by a legislature, which can also be referred to as an \"act.\" A universal problem associated with statutes is their organization after publication. As new statutes are enacted and published chronologically, the volume of law grows rapidly, making it difficult for individuals to sort through them to determine which laws are still in effect.",
+        "related_chunk_ids": [
+          "statute_394baccb_c0000",
+          "statute_394baccb_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Compare the function and legal status of an 'autonomy statute' in Spain with a 'statute' in the context of international law.",
+        "answer": "In Spain, an 'autonomy statute' is a domestic legal document that functions like a constitution for an autonomous community. It is enacted by the national legislature and has the rank of 'ley orgánica', placing it between the national constitution and ordinary laws. In contrast, a 'statute' in international law refers to an international treaty or protocol that establishes an institution, such as the International Court of Justice or the European Central Bank.",
+        "related_chunk_ids": [
+          "statute_394baccb_c0004",
+          "statute_394baccb_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the universal problem associated with the chronological publication of statutes, and what solution have many countries adopted to manage it?",
+        "answer": "The problem with publishing statutes chronologically is that the body of law grows rapidly over time, making it difficult for individuals to sort through numerous statutes to determine which laws are currently in effect. To solve this, many countries organize their statutory law topically into publications called codes. New statutes are then drafted to specifically add, amend, or repeal sections of these codes, ensuring the code reflects the current state of the law.",
+        "related_chunk_ids": [
+          "statute_394baccb_c0002",
+          "statute_394baccb_c0003"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T13:32:46.190Z",
+    "content_format": "markdown",
+    "total_chunks": 6,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

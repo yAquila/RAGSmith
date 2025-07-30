@@ -1,0 +1,401 @@
+{
+  "article": {
+    "id": "stackabstractdatatyp_6d848b82",
+    "title": "Stack (abstract data type)",
+    "url": "https://en.wikipedia.org/wiki/Stack_(abstract_data_type)",
+    "lang": "en",
+    "created_at": "2025-07-30T10:20:51.146257",
+    "content": "---\nid: stackabstractdatatyp_6d848b82\nurl: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)\ntitle: Stack (abstract data type)\nlang: en\ncreated_at: '2025-07-30T10:17:49.914693'\nchecksum: d1cbed8d4bca675b724c51c5c5ccba565d75a95d0e8fd731642743baf325d1f6\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3734\n  char_count: 22340\n  num_chunks: 22\n  original_chunks: 33\n  filtered_out: 11\n  num_sections: 0\n---\nIn computer science, a stack is an abstract data type that serves as a collection of elements with two main operations: Push, which adds an element to the collection, and Pop, which removes the most recently added element. Additionally, a peek operation can, without modifying the stack, return the value of the last element added. The name stack is an analogy to a set of physical items stacked one atop another, such as a stack of plates. The order in which an element added to or removed from a stack is described as last in, first out, referred to by the acronym LIFO. As with a stack of physical objects, this structure makes it easy to take an item off the top of the stack, but accessing a datum deeper in the stack may require removing multiple other items first. Considered a sequential collection, a stack has one end which is the only position at which the push and pop operations may occur, the top of the stack, and is fixed at the other end, the bottom. A stack may be implemented as, for example, a singly linked list with a pointer to the top element. A stack may be implemented to have a bounded capacity. If the stack is full and does not contain enough space to accept another element, the stack is in a state of stack overflow. == History == Stacks entered the computer science literature in 1946, when Alan Turing used the terms \"bury\" and \"unbury\" as a means of calling and returning from subroutines. Subroutines and a two-level stack had already been implemented in Konrad Zuse's Z4 in 1945. Klaus Samelson and Friedrich L. Bauer of Technical University Munich proposed the idea of a stack called Operationskeller (\"operational cellar\") in 1955 and filed a patent in 1957. In March 1988, by which time Samelson was deceased, Bauer received the IEEE Computer Pioneer Award for the invention of the stack principle. Similar concepts were independently developed by Charles Leonard Hamblin in the first half of 1954 and by Wilhelm Kämmerer with his automatisches Gedächtnis (\"automatic memory\") in 1958. Stacks are often described using the analogy of a spring-loaded stack of plates in a cafeteria. Clean plates are placed on top of the stack, pushing down any plates already there. When the top plate is removed from the stack, the one below it is elevated to become the new top plate. == Non-essential operations == In many implementations, a stack has more operations than the essential \"push\" and \"pop\" operations. An example of a non-essential operation is \"top of stack\", or \"peek\", which observes the top element without removing it from the stack. Since this can be broken down into a \"pop\" followed by a \"push\" to return the same data to the stack, it is not considered an essential operation. If the stack is empty, an underflow condition will occur upon execution of either the \"stack top\" or \"pop\" operations. Additionally, many implementations include convenience operations that handle common tasks, such as checking if the stack is empty or returning its size. == Software stacks == === Implementation === A stack can be easily implemented either through an array or a linked list, as it is merely a special case of a list. In either case, what identifies the data structure as a stack is not the implementation but the interface: the user is only allowed to pop or push items onto the array or linked list, with few other helper operations. The following will demonstrate both implementations using pseudocode. ==== Array ==== An array can be used to implement a (bounded) stack, as follows. The first element, usually at the zero offset, is the bottom, resulting in array being the first element pushed onto the stack and the last element popped off. The program must keep track of the size (length) of the stack, using a variable top that records the number of items pushed so far, therefore pointing to the place in the array where the next element is to be inserted (assuming a zero-based index convention). Thus, the stack itself can be effectively implemented as a three-element structure: structure stack: maxsize : integer top : integer items : array of item procedure initialize(stk : stack, size : integer): stk.items ← new array of size items, initially empty stk.maxsize ← size stk.top ← 0 The push operation adds an element and increments the top index, after checking for overflow: procedure push(stk : stack, x : item): if stk.top = stk.maxsize: report overflow error else: stk.items[stk.top] ← x stk.top ← stk.top + 1 Similarly, pop decrements the top index after checking for underflow, and returns the item that was previously the top one: procedure pop(stk : stack): if stk.top = 0: report underflow error else: stk.top ← stk.top − 1 r ← stk.items[stk.top] return r Using a dynamic array, it is possible to implement a stack that can grow or shrink as much as needed. The size of the stack is simply the size of the dynamic array, which is a very efficient implementation of a stack since adding items to or removing items from the end of a dynamic array requires amortized O(1) time. ==== Linked list ==== Another option for implementing stacks is to use a singly linked list. A stack is then a pointer to the \"head\" of the list, with perhaps a counter to keep track of the size of the list: structure frame: data : item next : frame or nil structure stack: head : frame or nil size : integer procedure initialize(stk : stack): stk.head ← nil stk.size ← 0 Pushing and popping items happens at the head of the list; overflow is not possible in this implementation (unless memory is exhausted): procedure push(stk : stack, x : item): newhead ← new frame newhead.data ← x newhead.next ← stk.head stk.head ← newhead stk.size ← stk.size + 1 procedure pop(stk : stack): if stk.head = nil: report underflow error r ← stk.head.data stk.head ← stk.head.next stk.size ← stk.size - 1 return r === Stacks and programming languages === Some languages, such as Perl, LISP, JavaScript and Python, make the stack operations push and pop available on their standard list/array types. Some languages, notably those in the Forth family (including PostScript), are designed around language-defined stacks that are directly visible to and manipulated by the programmer. The following is an example of manipulating a stack in Common Lisp (\">\" is the Lisp interpreter's prompt; lines not starting with \">\" are the interpreter's responses to expressions): Several of the C++ Standard Library container types have push_back and pop_back operations with LIFO semantics; additionally, the stack template class adapts existing containers to provide a restricted API with only push/pop operations. PHP has an SplStack class. Java's library contains a Stack class that is a specialization of Vector. Following is an example program in Java language, using that class. Some processors, such as the PDP-11, VAX, and Motorola 68000 series have addressing modes useful for stack manipulation. The following trivial PDP-11 assembly source code pushes two numbers on a stack and adds them, leaving the result on the stack. == Hardware stack == A common use of stacks at the architecture level is as a means of allocating and accessing memory. === Basic architecture of a stack === A typical stack is an area of computer memory with a fixed origin and a variable size. Initially the size of the stack is zero. A stack pointer (usually in the form of a processor register) points to the most recently referenced location on the stack; when the stack has a size of zero, the stack pointer points to the origin of the stack. The two operations applicable to all stacks are: A push operation: the address in the stack pointer is adjusted by the size of the data item and a data item is written at the location to which the stack pointer points. A pop or pull operation: a data item at the current location to which the stack pointer points is read, and the stack pointer is moved by a distance corresponding to the size of that data item. There are many variations on the basic principle of stack operations. Every stack has a fixed location in memory at which it begins. As data items are added to the stack, the stack pointer is displaced to indicate the current extent of the stack, which expands away from the origin. Stack pointers may point to the origin of a stack or to a limited range of addresses above or below the origin (depending on the direction in which the stack grows); however, the stack pointer cannot cross the origin of the stack. In other words, if the origin of the stack is at address 1000 and the stack grows downwards (towards addresses 999, 998, and so on), the stack pointer must never be incremented beyond 1000 (to 1001 or beyond). If a pop operation on the stack causes the stack pointer to move past the origin of the stack, a stack underflow occurs. If a push operation causes the stack pointer to increment or decrement beyond the maximum extent of the stack, a stack overflow occurs. Some environments that rely heavily on stacks may provide additional operations, for example: Duplicate: the top item is popped and then pushed twice, such that two copies of the former top item now lie at the top. Peek: the topmost item is inspected (or returned), but the stack pointer and stack size does not change (meaning the item remains on the stack). This can also be called the top operation. Swap or exchange: the two topmost items on the stack exchange places. Rotate (or Roll): the n topmost items are moved on the stack in a rotating fashion. For example, if n = 3, items 1, 2, and 3 on the stack are moved to positions 2, 3, and 1 on the stack, respectively. Many variants of this operation are possible, with the most common being called left rotate and right rotate. Stacks are often visualized growing from the bottom up (like real-world stacks). They may also be visualized growing from left to right, where the top is on the far right, or even growing from top to bottom. The important feature is for the bottom of the stack to be in a fixed position. The illustration in this section is an example of a top-to-bottom growth visualization: the top (28) is the stack \"bottom\", since the stack \"top\" (9) is where items are pushed or popped from. A right rotate will move the first element to the third position, the second to the first and the third to the second. Here are two equivalent visualizations of this process: apple banana banana ===right rotate==> cucumber cucumber apple cucumber apple banana ===left rotate==> cucumber apple banana A stack is usually represented in computers by a block of memory cells, with the \"bottom\" at a fixed location, and the stack pointer holding the address of the current \"top\" cell in the stack. The \"top\" and \"bottom\" nomenclature is used irrespective of whether the stack actually grows towards higher memory addresses. Pushing an item on to the stack adjusts the stack pointer by the size of the item (either decrementing or incrementing, depending on the direction in which the stack grows in memory), pointing it to the next cell, and copies the new top item to the stack area. Depending again on the exact implementation, at the end of a push operation, the stack pointer may point to the next unused location in the stack, or it may point to the topmost item in the stack. If the stack points to the current topmost item, the stack pointer will be updated before a new item is pushed onto the stack; if it points to the next available location in the stack, it will be updated after the new item is pushed onto the stack. Popping the stack is simply the inverse of pushing. The topmost item in the stack is removed and the stack pointer is updated, in the opposite order of that used in the push operation. ==== Stack in main memory ==== Many CISC-type CPU designs, including the x86, Z80 and 6502, have a dedicated register for use as the call stack stack pointer with dedicated call, return, push, and pop instructions that implicitly update the dedicated register, thus increasing code density. Some CISC processors, like the PDP-11 and the 68000, also have special addressing modes for implementation of stacks, typically with a semi-dedicated stack pointer as well (such as A7 in the 68000). In contrast, most RISC CPU designs do not have dedicated stack instructions and therefore most, if not all, registers may be used as stack pointers as needed. ==== Stack in registers or dedicated memory ==== Some machines use a stack for arithmetic and logical operations; operands are pushed onto the stack, and arithmetic and logical operations act on the top one or more items on the stack, popping them off the stack and pushing the result onto the stack. Machines that function in this fashion are called stack machines. A number of mainframes and minicomputers were stack machines, the most famous being the Burroughs large systems. Other examples include the CISC HP 3000 machines and the CISC machines from Tandem Computers. The x87 floating point architecture is an example of a set of registers organised as a stack where direct access to individual registers (relative to the current top) is also possible. Having the top-of-stack as an implicit argument allows for a small machine code footprint with a good usage of bus bandwidth and code caches, but it also prevents some types of optimizations possible on processors permitting random access to the register file for all (two or three) operands. A stack structure also makes superscalar implementations with register renaming (for speculative execution) somewhat more complex to implement, although it is still feasible, as exemplified by modern x87 implementations. Sun SPARC, AMD Am29000, and Intel i960 are all examples of architectures that use register windows within a register-stack as another strategy to avoid the use of slow main memory for function arguments and return values. There is also a number of small microprocessors that implement a stack directly in hardware, and some microcontrollers have a fixed-depth stack that is not directly accessible. Examples are the PIC microcontrollers, the Computer Cowboys MuP21, the Harris RTX line, and the Novix NC4016. At least one microcontroller family, the COP400, implements a stack either directly in hardware or in RAM via a stack pointer, depending on the device. Many stack-based microprocessors were used to implement the programming language Forth at the microcode level. == Applications of stacks == === Expression evaluation and syntax parsing === Calculators that employ reverse Polish notation use a stack structure to hold values. Expressions can be represented in prefix, postfix or infix notations and conversion from one form to another may be accomplished using a stack. Many compilers use a stack to parse syntax before translation into low-level code. Most programming languages are context-free languages, allowing them to be parsed with stack-based machines. === Backtracking === Another important application of stacks is backtracking. An illustration of this is the simple example of finding the correct path in a maze that contains a series of points, a starting point, several paths and a destination. If random paths must be chosen, then after following an incorrect path, there must be a method by which to return to the beginning of that path. This can be achieved through the use of stacks, as a last correct point can be pushed onto the stack, and popped from the stack in case of an incorrect path. The prototypical example of a backtracking algorithm is depth-first search, which finds all vertices of a graph that can be reached from a specified starting vertex. Other applications of backtracking involve searching through spaces that represent potential solutions to an optimization problem. Branch and bound is a technique for performing such backtracking searches without exhaustively searching all of the potential solutions in such a space. === Compile-time memory management === A number of programming languages are stack-oriented, meaning they define most basic operations (adding two numbers, printing a character) as taking their arguments from the stack, and placing any return values back on the stack. For example, PostScript has a return stack and an operand stack, and also has a graphics state stack and a dictionary stack. Many virtual machines are also stack-oriented, including the p-code machine and the Java Virtual Machine. Almost all calling conventions‍—‌the ways in which subroutines receive their parameters and return results‍—‌use a special stack (the \"call stack\") to hold information about procedure/function calling and nesting in order to switch to the context of the called function and restore to the caller function when the calling finishes. The functions follow a runtime protocol between caller and callee to save arguments and return value on the stack. Stacks are an important way of supporting nested or recursive function calls. This type of stack is used implicitly by the compiler to support CALL and RETURN statements (or their equivalents) and is not manipulated directly by the programmer. Some programming languages use the stack to store data that is local to a procedure. Space for local data items is allocated from the stack when the procedure is entered, and is deallocated when the procedure exits. The C programming language is typically implemented in this way. Using the same stack for both data and procedure calls has important security implications (see below) of which a programmer must be aware in order to avoid introducing serious security bugs into a program. === Efficient algorithms === Several algorithms use a stack (separate from the usual function call stack of most programming languages) as the principal data structure with which they organize their information. These include: Graham scan, an algorithm for the convex hull of a two-dimensional system of points. A convex hull of a subset of the input is maintained in a stack, which is used to find and remove concavities in the boundary when a new point is added to the hull. Part of the SMAWK algorithm for finding the row minima of a monotone matrix uses stacks in a similar way to Graham scan. All nearest smaller values, the problem of finding, for each number in an array, the closest preceding number that is smaller than it. One algorithm for this problem uses a stack to maintain a collection of candidates for the nearest smaller value. For each position in the array, the stack is popped until a smaller value is found on its top, and then the value in the new position is pushed onto the stack. The nearest-neighbor chain algorithm, a method for agglomerative hierarchical clustering based on maintaining a stack of clusters, each of which is the nearest neighbor of its predecessor on the stack. When this method finds a pair of clusters that are mutual nearest neighbors, they are popped and merged. == Security == Some computing environments use stacks in ways that may make them vulnerable to security breaches and attacks. Programmers working in such environments must take special care to avoid such pitfalls in these implementations. As an example, some programming languages use a common stack to store both data local to a called procedure and the linking information that allows the procedure to return to its caller. This means that the program moves data into and out of the same stack that contains critical return addresses for the procedure calls. If data is moved to the wrong location on the stack, or an oversized data item is moved to a stack location that is not large enough to contain it, return information for procedure calls may be corrupted, causing the program to fail. Malicious parties may attempt a stack smashing attack that takes advantage of this type of implementation by providing oversized data input to a program that does not check the length of input. Such a program may copy the data in its entirety to a location on the stack, and in doing so, it may change the return addresses for procedures that have called it. An attacker can experiment to find a specific type of data that can be provided to such a program such that the return address of the current procedure is reset to point to an area within the stack itself (and within the data provided by the attacker), which in turn contains instructions that carry out unauthorized operations. This type of attack is a variation on the buffer overflow attack and is an extremely frequent source of security breaches in software, mainly because some of the most popular compilers use a shared stack for both data and procedure calls, and do not verify the length of data items. Frequently, programmers do not write code to verify the size of data items, either, and when an oversized or undersized data item is copied to the stack, a security breach may occur. == See also == == Notes == == References == This article incorporates public domain material from Paul E. Black. \"Bounded stack\". Dictionary of Algorithms and Data Structures. NIST. == Further reading == Donald Knuth. The Art of Computer Programming, Volume 1: Fundamental Algorithms, Third Edition. Addison-Wesley, 1997. ISBN 0-201-89683-4. Section 2.2.1: Stacks, Queues, and Deques, pp. 238–243. Langmaack, Hans [in German] (2015) [2014-11-14]. Written at Kiel, Germany. Friedrich L. Bauers und Klaus Samelsons Arbeiten in den 1950er-Jahren zur Einführung der Begriffe Kellerprinzip und Kellerautomat [Friedrich L. Bauer's and Klaus Samelson's works in the 1950s on the introduction of the terms cellar principle and cellar automaton] (PDF) (in German). Jena, Germany: Institut für Informatik, Christian-Albrechts-Universität zu Kiel. pp. 19–29. Archived (PDF) from the original on 2022-11-14. Retrieved 2022-11-14. (11 pages) (NB. Published in Fothe & Wilke.) Goos, Gerhard [in German] (2017-08-07). Geschichte der deutschsprachigen Informatik - Programmiersprachen und Übersetzerbau [History of informatics in German-speaking countries - Programming languages and compiler design] (PDF) (in German). Karlsruhe, Germany: Fakultät für Informatik, Karlsruhe Institute of Technology (KIT). Archived (PDF) from the original on 2022-05-19. Retrieved 2022-11-14. (11 pages) == External links == Stack Machines - the new wave Bounding stack depth Stack Size Analysis for Interrupt-driven Programs"
+  },
+  "chunks": [
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0000",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 968,
+      "content": "In computer science, a stack is an abstract data type that serves as a collection of elements with two main operations: Push, which adds an element to the collection, and Pop, which removes the most recently added element. Additionally, a peek operation can, without modifying the stack, return the value of the last element added. The name stack is an analogy to a set of physical items stacked one atop another, such as a stack of plates. The order in which an element added to or removed from a stack is described as last in, first out, referred to by the acronym LIFO. As with a stack of physical objects, this structure makes it easy to take an item off the top of the stack, but accessing a datum deeper in the stack may require removing multiple other items first. Considered a sequential collection, a stack has one end which is the only position at which the push and pop operations may occur, the top of the stack, and is fixed at the other end, the bottom.",
+      "char_count": 967,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0001",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 968,
+      "end_char": 1247,
+      "content": "A stack may be implemented as, for example, a singly linked list with a pointer to the top element. A stack may be implemented to have a bounded capacity. If the stack is full and does not contain enough space to accept another element, the stack is in a state of stack overflow.",
+      "char_count": 279,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0002",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1261,
+      "end_char": 2218,
+      "content": "== History == Stacks entered the computer science literature in 1946, when Alan Turing used the terms \"bury\" and \"unbury\" as a means of calling and returning from subroutines. Subroutines and a two-level stack had already been implemented in Konrad Zuse's Z4 in 1945. Klaus Samelson and Friedrich L. Bauer of Technical University Munich proposed the idea of a stack called Operationskeller (\"operational cellar\") in 1955 and filed a patent in 1957. In March 1988, by which time Samelson was deceased, Bauer received the IEEE Computer Pioneer Award for the invention of the stack principle. Similar concepts were independently developed by Charles Leonard Hamblin in the first half of 1954 and by Wilhelm Kämmerer with his automatisches Gedächtnis (\"automatic memory\") in 1958. Stacks are often described using the analogy of a spring-loaded stack of plates in a cafeteria. Clean plates are placed on top of the stack, pushing down any plates already there.",
+      "char_count": 956,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0003",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== Non-essential operations ==",
+      "heading_path": "== Non-essential operations ==",
+      "start_char": 2339,
+      "end_char": 2998,
+      "content": "== Non-essential operations == In many implementations, a stack has more operations than the essential \"push\" and \"pop\" operations. An example of a non-essential operation is \"top of stack\", or \"peek\", which observes the top element without removing it from the stack. Since this can be broken down into a \"pop\" followed by a \"push\" to return the same data to the stack, it is not considered an essential operation. If the stack is empty, an underflow condition will occur upon execution of either the \"stack top\" or \"pop\" operations. Additionally, many implementations include convenience operations that handle common tasks, such as checking if the stack is empty or returning its size.",
+      "char_count": 688,
+      "token_estimate": 172,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0004",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Implementation ==",
+      "heading_path": "== = Implementation ==",
+      "start_char": 3042,
+      "end_char": 3450,
+      "content": "== = Implementation === A stack can be easily implemented either through an array or a linked list, as it is merely a special case of a list. In either case, what identifies the data structure as a stack is not the implementation but the interface: the user is only allowed to pop or push items onto the array or linked list, with few other helper operations. The following will demonstrate both implementations using pseudocode.",
+      "char_count": 429,
+      "token_estimate": 107,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0005",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Stacks and programming languages ==",
+      "heading_path": "== = Stacks and programming languages ==",
+      "start_char": 3490,
+      "end_char": 4447,
+      "content": "== = Stacks and programming languages === Some languages, such as Perl, LISP, JavaScript and Python, make the stack operations push and pop available on their standard list/array types. Some languages, notably those in the Forth family (including PostScript), are designed around language-defined stacks that are directly visible to and manipulated by the programmer. The following is an example of manipulating a stack in Common Lisp (\">\" is the Lisp interpreter's prompt; lines not starting with \">\" are the interpreter's responses to expressions): Several of the C++ Standard Library container types have push_back and pop_back operations with LIFO semantics; additionally, the stack template class adapts existing containers to provide a restricted API with only push/pop operations. PHP has an SplStack class. Java's library contains a Stack class that is a specialization of Vector. Following is an example program in Java language, using that class.",
+      "char_count": 956,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0006",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Stacks and programming languages ==",
+      "heading_path": "== = Stacks and programming languages ==",
+      "start_char": 4447,
+      "end_char": 4695,
+      "content": "Some processors, such as the PDP-11, VAX, and Motorola 68000 series have addressing modes useful for stack manipulation. The following trivial PDP-11 assembly source code pushes two numbers on a stack and adds them, leaving the result on the stack.",
+      "char_count": 248,
+      "token_estimate": 62,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0007",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Basic architecture of a stack ==",
+      "heading_path": "== = Basic architecture of a stack ==",
+      "start_char": 4813,
+      "end_char": 5738,
+      "content": "== = Basic architecture of a stack === A typical stack is an area of computer memory with a fixed origin and a variable size. Initially the size of the stack is zero. A stack pointer (usually in the form of a processor register) points to the most recently referenced location on the stack; when the stack has a size of zero, the stack pointer points to the origin of the stack. The two operations applicable to all stacks are: A push operation: the address in the stack pointer is adjusted by the size of the data item and a data item is written at the location to which the stack pointer points. A pop or pull operation: a data item at the current location to which the stack pointer points is read, and the stack pointer is moved by a distance corresponding to the size of that data item. There are many variations on the basic principle of stack operations. Every stack has a fixed location in memory at which it begins.",
+      "char_count": 924,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0008",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Basic architecture of a stack ==",
+      "heading_path": "== = Basic architecture of a stack ==",
+      "start_char": 5738,
+      "end_char": 6585,
+      "content": "As data items are added to the stack, the stack pointer is displaced to indicate the current extent of the stack, which expands away from the origin. Stack pointers may point to the origin of a stack or to a limited range of addresses above or below the origin (depending on the direction in which the stack grows); however, the stack pointer cannot cross the origin of the stack. In other words, if the origin of the stack is at address 1000 and the stack grows downwards (towards addresses 999, 998, and so on), the stack pointer must never be incremented beyond 1000 (to 1001 or beyond). If a pop operation on the stack causes the stack pointer to move past the origin of the stack, a stack underflow occurs. If a push operation causes the stack pointer to increment or decrement beyond the maximum extent of the stack, a stack overflow occurs.",
+      "char_count": 847,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0009",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Basic architecture of a stack ==",
+      "heading_path": "== = Basic architecture of a stack ==",
+      "start_char": 6586,
+      "end_char": 7577,
+      "content": "Some environments that rely heavily on stacks may provide additional operations, for example: Duplicate: the top item is popped and then pushed twice, such that two copies of the former top item now lie at the top. Peek: the topmost item is inspected (or returned), but the stack pointer and stack size does not change (meaning the item remains on the stack). This can also be called the top operation. Swap or exchange: the two topmost items on the stack exchange places. Rotate (or Roll): the n topmost items are moved on the stack in a rotating fashion. For example, if n = 3, items 1, 2, and 3 on the stack are moved to positions 2, 3, and 1 on the stack, respectively. Many variants of this operation are possible, with the most common being called left rotate and right rotate. Stacks are often visualized growing from the bottom up (like real-world stacks). They may also be visualized growing from left to right, where the top is on the far right, or even growing from top to bottom.",
+      "char_count": 991,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0010",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Basic architecture of a stack ==",
+      "heading_path": "== = Basic architecture of a stack ==",
+      "start_char": 7578,
+      "end_char": 8044,
+      "content": "The important feature is for the bottom of the stack to be in a fixed position. The illustration in this section is an example of a top-to-bottom growth visualization: the top (28) is the stack \"bottom\", since the stack \"top\" (9) is where items are pushed or popped from. A right rotate will move the first element to the third position, the second to the first and the third to the second. Here are two equivalent visualizations of this process: apple banana banana",
+      "char_count": 466,
+      "token_estimate": 116,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0011",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== =left rotate ==",
+      "heading_path": "== =left rotate ==",
+      "start_char": 8093,
+      "end_char": 8912,
+      "content": "== =left rotate ==> cucumber apple banana A stack is usually represented in computers by a block of memory cells, with the \"bottom\" at a fixed location, and the stack pointer holding the address of the current \"top\" cell in the stack. The \"top\" and \"bottom\" nomenclature is used irrespective of whether the stack actually grows towards higher memory addresses. Pushing an item on to the stack adjusts the stack pointer by the size of the item (either decrementing or incrementing, depending on the direction in which the stack grows in memory), pointing it to the next cell, and copies the new top item to the stack area. Depending again on the exact implementation, at the end of a push operation, the stack pointer may point to the next unused location in the stack, or it may point to the topmost item in the stack.",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0012",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== =left rotate ==",
+      "heading_path": "== =left rotate ==",
+      "start_char": 8912,
+      "end_char": 9345,
+      "content": "If the stack points to the current topmost item, the stack pointer will be updated before a new item is pushed onto the stack; if it points to the next available location in the stack, it will be updated after the new item is pushed onto the stack. Popping the stack is simply the inverse of pushing. The topmost item in the stack is removed and the stack pointer is updated, in the opposite order of that used in the push operation.",
+      "char_count": 433,
+      "token_estimate": 108,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0013",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Expression evaluation and syntax parsing ==",
+      "heading_path": "== = Expression evaluation and syntax parsing ==",
+      "start_char": 9405,
+      "end_char": 9829,
+      "content": "== = Expression evaluation and syntax parsing === Calculators that employ reverse Polish notation use a stack structure to hold values. Expressions can be represented in prefix, postfix or infix notations and conversion from one form to another may be accomplished using a stack. Many compilers use a stack to parse syntax before translation into low-level code. Most programming languages are context-free languages, allowing them to be parsed with stack-based machines.",
+      "char_count": 471,
+      "token_estimate": 117,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0014",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Backtracking ==",
+      "heading_path": "== = Backtracking ==",
+      "start_char": 9849,
+      "end_char": 10830,
+      "content": "== = Backtracking === Another important application of stacks is backtracking. An illustration of this is the simple example of finding the correct path in a maze that contains a series of points, a starting point, several paths and a destination. If random paths must be chosen, then after following an incorrect path, there must be a method by which to return to the beginning of that path. This can be achieved through the use of stacks, as a last correct point can be pushed onto the stack, and popped from the stack in case of an incorrect path. The prototypical example of a backtracking algorithm is depth-first search, which finds all vertices of a graph that can be reached from a specified starting vertex. Other applications of backtracking involve searching through spaces that represent potential solutions to an optimization problem. Branch and bound is a technique for performing such backtracking searches without exhaustively searching all of the potential solutions in such a space.",
+      "char_count": 1000,
+      "token_estimate": 250,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0015",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Compile-time memory management ==",
+      "heading_path": "== = Compile-time memory management ==",
+      "start_char": 10868,
+      "end_char": 11816,
+      "content": "== = Compile-time memory management === A number of programming languages are stack-oriented, meaning they define most basic operations (adding two numbers, printing a character) as taking their arguments from the stack, and placing any return values back on the stack. For example, PostScript has a return stack and an operand stack, and also has a graphics state stack and a dictionary stack. Many virtual machines are also stack-oriented, including the p-code machine and the Java Virtual Machine. Almost all calling conventions‍—‌the ways in which subroutines receive their parameters and return results‍—‌use a special stack (the \"call stack\") to hold information about procedure/function calling and nesting in order to switch to the context of the called function and restore to the caller function when the calling finishes. The functions follow a runtime protocol between caller and callee to save arguments and return value on the stack.",
+      "char_count": 947,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0016",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Compile-time memory management ==",
+      "heading_path": "== = Compile-time memory management ==",
+      "start_char": 11816,
+      "end_char": 12547,
+      "content": "Stacks are an important way of supporting nested or recursive function calls. This type of stack is used implicitly by the compiler to support CALL and RETURN statements (or their equivalents) and is not manipulated directly by the programmer. Some programming languages use the stack to store data that is local to a procedure. Space for local data items is allocated from the stack when the procedure is entered, and is deallocated when the procedure exits. The C programming language is typically implemented in this way. Using the same stack for both data and procedure calls has important security implications (see below) of which a programmer must be aware in order to avoid introducing serious security bugs into a program.",
+      "char_count": 731,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0017",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Efficient algorithms ==",
+      "heading_path": "== = Efficient algorithms ==",
+      "start_char": 12538,
+      "end_char": 13386,
+      "content": "== = Efficient algorithms === Several algorithms use a stack (separate from the usual function call stack of most programming languages) as the principal data structure with which they organize their information. These include: Graham scan, an algorithm for the convex hull of a two-dimensional system of points. A convex hull of a subset of the input is maintained in a stack, which is used to find and remove concavities in the boundary when a new point is added to the hull. Part of the SMAWK algorithm for finding the row minima of a monotone matrix uses stacks in a similar way to Graham scan. All nearest smaller values, the problem of finding, for each number in an array, the closest preceding number that is smaller than it. One algorithm for this problem uses a stack to maintain a collection of candidates for the nearest smaller value.",
+      "char_count": 847,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0018",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== = Efficient algorithms ==",
+      "heading_path": "== = Efficient algorithms ==",
+      "start_char": 13386,
+      "end_char": 13852,
+      "content": "For each position in the array, the stack is popped until a smaller value is found on its top, and then the value in the new position is pushed onto the stack. The nearest-neighbor chain algorithm, a method for agglomerative hierarchical clustering based on maintaining a stack of clusters, each of which is the nearest neighbor of its predecessor on the stack. When this method finds a pair of clusters that are mutual nearest neighbors, they are popped and merged.",
+      "char_count": 466,
+      "token_estimate": 116,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0019",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== Security ==",
+      "heading_path": "== Security ==",
+      "start_char": 13839,
+      "end_char": 14634,
+      "content": "== Security == Some computing environments use stacks in ways that may make them vulnerable to security breaches and attacks. Programmers working in such environments must take special care to avoid such pitfalls in these implementations. As an example, some programming languages use a common stack to store both data local to a called procedure and the linking information that allows the procedure to return to its caller. This means that the program moves data into and out of the same stack that contains critical return addresses for the procedure calls. If data is moved to the wrong location on the stack, or an oversized data item is moved to a stack location that is not large enough to contain it, return information for procedure calls may be corrupted, causing the program to fail.",
+      "char_count": 794,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0020",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== Security ==",
+      "heading_path": "== Security ==",
+      "start_char": 14634,
+      "end_char": 15604,
+      "content": "Malicious parties may attempt a stack smashing attack that takes advantage of this type of implementation by providing oversized data input to a program that does not check the length of input. Such a program may copy the data in its entirety to a location on the stack, and in doing so, it may change the return addresses for procedures that have called it. An attacker can experiment to find a specific type of data that can be provided to such a program such that the return address of the current procedure is reset to point to an area within the stack itself (and within the data provided by the attacker), which in turn contains instructions that carry out unauthorized operations. This type of attack is a variation on the buffer overflow attack and is an extremely frequent source of security breaches in software, mainly because some of the most popular compilers use a shared stack for both data and procedure calls, and do not verify the length of data items.",
+      "char_count": 970,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stackabstractdatatyp_6d848b82_c0021",
+      "article_id": "stackabstractdatatyp_6d848b82",
+      "section": "== Security ==",
+      "heading_path": "== Security ==",
+      "start_char": 15605,
+      "end_char": 15787,
+      "content": "Frequently, programmers do not write code to verify the size of data items, either, and when an oversized or undersized data item is copied to the stack, a security breach may occur.",
+      "char_count": 182,
+      "token_estimate": 45,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is a prototypical example of a backtracking algorithm?",
+        "answer": "The prototypical example of a backtracking algorithm is depth-first search, which is used to find all vertices of a graph reachable from a specific starting vertex.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0014"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is another name for the 'peek' operation on a stack?",
+        "answer": "The 'peek' operation can also be called the 'top' operation.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0009"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Describe the mechanism of a stack smashing attack and explain why this vulnerability is so common.",
+        "answer": "A stack smashing attack occurs when a malicious party provides oversized data input to a program that doesn't check the input's length. The program copies this data to the stack, which can overwrite and change the return addresses of procedures. An attacker can craft the input so the return address points to a location on the stack containing malicious instructions, which then carry out unauthorized operations. This type of attack is a frequent security breach because many popular compilers use a shared stack for both data and procedure calls and do not verify the length of data items.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0020"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Provide a comprehensive overview of the stack data structure, including its core principles, a potential implementation method, and its historical origins.",
+        "answer": "A stack is an abstract data type that operates on a last-in, first-out (LIFO) principle, where the main operations are 'Push' (to add an element) and 'Pop' (to remove the most recently added element). It can be implemented using a singly linked list with a pointer to the top element and may have a bounded capacity, which can lead to a stack overflow if exceeded. The concept's history dates back to 1945 with an implementation in Konrad Zuse's Z4 and was described in literature by Alan Turing in 1946. The idea was formally proposed by Klaus Samelson and Friedrich L. Bauer in 1955.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0000",
+          "stackabstractdatatyp_6d848b82_c0001",
+          "stackabstractdatatyp_6d848b82_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How is the concept of a restricted stack interface, which includes essential and non-essential operations, implemented across different programming languages?",
+        "answer": "A stack is defined by its restricted interface, which primarily allows users to push or pop items, rather than its underlying implementation (like an array or linked list). This interface also includes non-essential or helper operations such as 'peek' (viewing the top element) or checking if the stack is empty. Programming languages realize this concept differently. Some, like C++ with its 'stack' template class and Java with its 'Stack' class, adapt existing containers to provide a formal, restricted API with only stack-specific operations. In contrast, other languages like Perl, LISP, and Python make the essential push and pop operations directly available on their standard list or array types without enforcing a separate, restricted interface.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0003",
+          "stackabstractdatatyp_6d848b82_c0004",
+          "stackabstractdatatyp_6d848b82_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do the stack manipulation features of processors like the PDP-11 relate to the fundamental stack operations and their potential error conditions?",
+        "answer": "Processors such as the PDP-11 have specific addressing modes useful for stack manipulation. These modes are used to implement the two fundamental stack operations: push and pop. These operations involve adjusting a processor register, known as the stack pointer, to add or remove data from a designated memory area. The processor's management of this pointer is critical, as pushing data beyond the stack's maximum extent leads to a stack overflow, and popping data in a way that moves the pointer past the stack's origin results in a stack underflow.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0006",
+          "stackabstractdatatyp_6d848b82_c0007",
+          "stackabstractdatatyp_6d848b82_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the outcome of performing a Push operation on a stack that has a bounded capacity and is already full?",
+        "answer": "When a Push operation, which adds an element to the collection, is performed on a stack that has a bounded capacity and is already full, the stack enters a state of stack overflow because it does not have enough space to accept the new element.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0000",
+          "stackabstractdatatyp_6d848b82_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How is stack manipulation supported at both the high-level programming language and low-level processor levels?",
+        "answer": "Stack manipulation is supported at multiple levels of computing. In high-level programming languages like Perl, LISP, and Python, stack operations are available on standard list/array types. Others, like C++, PHP, and Java, provide dedicated stack classes or templates. At a lower level, some processors, such as the PDP-11, VAX, and Motorola 68000 series, feature specific addressing modes designed for efficient stack manipulation in assembly language.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0005",
+          "stackabstractdatatyp_6d848b82_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How can the fundamental `push` and `pop` operations lead to stack overflow and stack underflow errors?",
+        "answer": "A `push` operation, which adds a data item to the stack, can cause a `stack overflow` if it causes the stack pointer to increment or decrement beyond the maximum extent of the stack's allocated memory. Conversely, a `pop` operation, which reads a data item, can cause a `stack underflow` if it is performed on an empty stack, causing the stack pointer to move past the stack's fixed origin.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0007",
+          "stackabstractdatatyp_6d848b82_c0008",
+          "stackabstractdatatyp_6d848b82_c0009",
+          "stackabstractdatatyp_6d848b82_c0010"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does the sequence of events in a stack's push operation differ depending on whether the stack pointer indicates the topmost item or the next available location?",
+        "answer": "The sequence of a push operation, which involves adjusting the stack pointer and copying the new item, varies with the implementation. If the stack pointer points to the current topmost item, the pointer is updated before the new item is pushed onto the stack. In contrast, if the pointer indicates the next available location, the pointer is updated after the new item is pushed onto the stack.",
+        "related_chunk_ids": [
+          "stackabstractdatatyp_6d848b82_c0011",
+          "stackabstractdatatyp_6d848b82_c0012"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:32.540Z",
+    "content_format": "markdown",
+    "total_chunks": 22,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

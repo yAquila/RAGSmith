@@ -5,3 +5,6 @@
 - şuan sanırım retrieval performansını ölçmede bir sıkıntı var 
 - dataset üretiminde see also lar ve referanslar vs silinmeli, genel olarak çok az token a sahip chunklar da silinebilir.
 - dataset üretirken json isimlendirmesi direkt article_id ile olsun ben şuanki datasette değiştirdim ama ilerisi için böyle yapalım
+- rse yi yaptım ama biraz daha test etmek gerekiyor sanırım tam doğru çalışıyor mu emin değilim, şuan baya verimsiz çalışıyor her seferinde tüm chunkların similarity score'unu hesaplıyor bunun yerine bu score'lar bir yerde depolanabilir belki 
+- hashingle ilgili bir sıkıntı var
+- en son token sayıları vs kontrol edilmeli, bazı tokenlar sayılmıyor olabilir iyice bakılmalı

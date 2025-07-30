@@ -1,0 +1,333 @@
+{
+  "article": {
+    "id": "memorymanagement_0d37e2f1",
+    "title": "Memory management",
+    "url": "https://en.wikipedia.org/wiki/Memory_management",
+    "lang": "en",
+    "created_at": "2025-07-30T08:35:26.402505",
+    "content": "---\nid: memorymanagement_0d37e2f1\nurl: https://en.wikipedia.org/wiki/Memory_management\ntitle: Memory management\nlang: en\ncreated_at: '2025-07-30T08:32:42.521813'\nchecksum: b11d969f941061803c50293698c42aac9b6b638bcff2b8d9956b5f3a297fb4b0\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2672\n  char_count: 17141\n  num_chunks: 17\n  original_chunks: 25\n  filtered_out: 8\n  num_sections: 0\n---\nMemory management (also dynamic memory management, dynamic storage allocation, or dynamic memory allocation) is a form of resource management applied to computer memory. The essential requirement of memory management is to provide ways to dynamically allocate portions of memory to programs at their request, and free it for reuse when no longer needed. This is critical to any advanced computer system where more than a single process might be underway at any time. Several methods have been devised that increase the effectiveness of memory management. Virtual memory systems separate the memory addresses used by a process from actual physical addresses, allowing separation of processes and increasing the size of the virtual address space beyond the available amount of RAM using paging or swapping to secondary storage. The quality of the virtual memory manager can have an extensive effect on overall system performance. The system allows a computer to appear as if it may have more memory available than physically present, thereby allowing multiple processes to share it. In some operating systems, e.g. Burroughs/Unisys MCP, and OS/360 and successors, memory is managed by the operating system. In other operating systems, e.g. Unix-like operating systems, memory is managed at the application level. Memory management within an address space is generally categorized as either manual memory management or automatic memory management. == Manual memory management == The task of fulfilling an allocation request consists of locating a block of unused memory of sufficient size. Memory requests are satisfied by allocating portions from a large pool of memory called the heap or free store. At any given time, some parts of the heap are in use, while some are \"free\" (unused) and thus available for future allocations. In the C language, the function which allocates memory from the heap is called malloc and the function which takes previously allocated memory and marks it as \"free\" (to be used by future allocations) is called free. Several issues complicate the implementation, such as external fragmentation, which arises when there are many small gaps between allocated memory blocks, which invalidates their use for an allocation request. The allocator's metadata can also inflate the size of (individually) small allocations. This is often managed by chunking. The memory management system must track outstanding allocations to ensure that they do not overlap and that no memory is ever \"lost\" (i.e. that there are no \"memory leaks\"). === Efficiency === The specific dynamic memory allocation algorithm implemented can impact performance significantly. A study conducted in 1994 by Digital Equipment Corporation illustrates the overheads involved for a variety of allocators. The lowest average instruction path length required to allocate a single memory slot was 52 (as measured with an instruction level profiler on a variety of software). === Implementations === Since the precise location of the allocation is not known in advance, the memory is accessed indirectly, usually through a pointer reference. The specific algorithm used to organize the memory area and allocate and deallocate chunks is interlinked with the kernel, and may use any of the following methods: ==== Fixed-size blocks allocation ==== Fixed-size blocks allocation, also called memory pool allocation, uses a free list of fixed-size blocks of memory (often all of the same size). This works well for simple embedded systems where no large objects need to be allocated but suffers from fragmentation especially with long memory addresses. However, due to the significantly reduced overhead, this method can substantially improve performance for objects that need frequent allocation and deallocation, and so it is often used in video games. ==== Buddy blocks ==== In this system, memory is allocated into several pools of memory instead of just one, where each pool represents blocks of memory of a certain power of two in size, or blocks of some other convenient size progression. All blocks of a particular size are kept in a sorted linked list or tree and all new blocks that are formed during allocation are added to their respective memory pools for later use. If a smaller size is requested than is available, the smallest available size is selected and split. One of the resulting parts is selected, and the process repeats until the request is complete. When a block is allocated, the allocator will start with the smallest sufficiently large block to avoid needlessly breaking blocks. When a block is freed, it is compared to its buddy. If they are both free, they are combined and placed in the correspondingly larger-sized buddy-block list. ==== Slab allocation ==== This memory allocation mechanism preallocates memory chunks suitable to fit objects of a certain type or size. These chunks are called caches and the allocator only has to keep track of a list of free cache slots. Constructing an object will use any one of the free cache slots and destructing an object will add a slot back to the free cache slot list. This technique alleviates memory fragmentation and is efficient as there is no need to search for a suitable portion of memory, as any open slot will suffice. ==== Stack allocation ==== Many Unix-like systems as well as Microsoft Windows implement a function called alloca for dynamically allocating stack memory in a way similar to the heap-based malloc. A compiler typically translates it to inlined instructions manipulating the stack pointer. Although there is no need of manually freeing memory allocated this way as it is automatically freed when the function that called alloca returns, there exists a risk of overflow. And since alloca is an ad hoc expansion seen in many systems but never in POSIX or the C standard, its behavior in case of a stack overflow is undefined. A safer version of alloca called _malloca, which reports errors, exists on Microsoft Windows. It requires the use of _freea. gnulib provides an equivalent interface, albeit instead of throwing an SEH exception on overflow, it delegates to malloc when an overlarge size is detected. A similar feature can be emulated using manual accounting and size-checking, such as in the uses of alloca_account in glibc. == Automated memory management == The proper management of memory in an application is a difficult problem, and several different strategies for handling memory management have been devised. === Automatic management of call stack variables === In many programming language implementations, the runtime environment for the program automatically allocates memory in the call stack for non-static local variables of a subroutine, called automatic variables, when the subroutine is called, and automatically releases that memory when the subroutine is exited. Special declarations may allow local variables to retain values between invocations of the procedure, or may allow local variables to be accessed by other subroutines. The automatic allocation of local variables makes recursion possible, to a depth limited by available memory. === Garbage collection === Garbage collection is a strategy for automatically detecting memory allocated to objects that are no longer usable in a program, and returning that allocated memory to a pool of free memory locations. This method is in contrast to \"manual\" memory management where a programmer explicitly codes memory requests and memory releases in the program. While automatic garbage collection has the advantages of reducing programmer workload and preventing certain kinds of memory allocation bugs, garbage collection does require memory resources of its own, and can compete with the application program for processor time. === Reference counting === Reference counting is a strategy for detecting that memory is no longer usable by a program by maintaining a counter for how many independent pointers point to the memory. Whenever a new pointer points to a piece of memory, the programmer is supposed to increase the counter. When the pointer changes where it points, or when the pointer is no longer pointing to any area or has itself been freed, the counter should decrease. When the counter drops to zero, the memory should be considered unused and freed. Some reference counting systems require programmer involvement and some are implemented automatically by the compiler. A disadvantage of reference counting is that circular references can develop which cause a memory leak to occur. This can be mitigated by either adding the concept of a \"weak reference\" (a reference that does not participate in reference counting, but is notified when the area it is pointing to is no longer valid) or by combining reference counting and garbage collection together. === Memory pools === A memory pool is a technique of automatically deallocating memory based on the state of the application, such as the lifecycle of a request or transaction. The idea is that many applications execute large chunks of code which may generate memory allocations, but that there is a point in execution where all of those chunks are known to be no longer valid. For example, in a web service, after each request the web service no longer needs any of the memory allocated during the execution of the request. Therefore, rather than keeping track of whether or not memory is currently being referenced, the memory is allocated according to the request or lifecycle stage with which it is associated. When that request or stage has passed, all associated memory is deallocated simultaneously. == Systems with virtual memory == Virtual memory is a method of decoupling the memory organization from the physical hardware. The applications operate on memory via virtual addresses. Each attempt by the application to access a particular virtual memory address results in the virtual memory address being translated to an actual physical address. In this way the addition of virtual memory enables granular control over memory systems and methods of access. In virtual memory systems the operating system limits how a process can access the memory. This feature, called memory protection, can be used to disallow a process to read or write to memory that is not allocated to it, preventing malicious or malfunctioning code in one program from interfering with the operation of another. Even though the memory allocated for specific processes is normally isolated, processes sometimes need to be able to share information. Shared memory is one of the fastest techniques for inter-process communication. Memory is usually classified by access rate into primary storage and secondary storage. Memory management systems, among other operations, also handle the moving of information between these two levels of memory. == Memory management in Burroughs/Unisys MCP systems == An operating system manages various resources in the computing system. The memory subsystem is the system element for managing memory. The memory subsystem combines the hardware memory resource and the MCP OS software that manages the resource. The memory subsystem manages the physical memory and the virtual memory of the system (both part of the hardware resource). The virtual memory extends physical memory by using extra space on a peripheral device, usually disk. The memory subsystem is responsible for moving code and data between main and virtual memory in a process known as overlaying. Burroughs was the first commercial implementation of virtual memory (although developed at Manchester University for the Ferranti Atlas computer) and integrated virtual memory with the system design of the B5000 from the start (in 1961) needing no external memory management unit (MMU). The memory subsystem is responsible for mapping logical requests for memory blocks to physical portions of memory (segments) which are found in the list of free segments. Each allocated block is managed by means of a segment descriptor, a special control word containing relevant metadata about the segment including address, length, machine type, and the p-bit or ‘presence’ bit which indicates whether the block is in main memory or needs to be loaded from the address given in the descriptor. Descriptors are essential in providing memory safety and security so that operations cannot overflow or underflow the referenced block (commonly known as buffer overflow). Descriptors themselves are protected control words that cannot be manipulated except for specific elements of the MCP OS (enabled by the UNSAFE block directive in NEWP). Donald Knuth describes a similar system in Section 2.5 ‘Dynamic Storage Allocation’ of ‘Fundamental Algorithms’. == Memory management in OS/360 and successors == IBM System/360 does not support virtual memory. Memory isolation of jobs is optionally accomplished using protection keys, assigning storage for each job a different key, 0 for the supervisor or 1–15. Memory management in OS/360 is a supervisor function. Storage is requested using the GETMAIN macro and freed using the FREEMAIN macro, which result in a call to the supervisor (SVC) to perform the operation. In OS/360 the details vary depending on how the system is generated, e.g., for PCP, MFT, MVT. In OS/360 MVT, suballocation within a job's region or the shared System Queue Area (SQA) is based on subpools, areas a multiple of 2 KB in size—the size of an area protected by a protection key. Subpools are numbered 0–255. Within a region subpools are assigned either the job's storage protection or the supervisor's key, key 0. Subpools 0–127 receive the job's key. Initially only subpool zero is created, and all user storage requests are satisfied from subpool 0, unless another is specified in the memory request. Subpools 250–255 are created by memory requests by the supervisor on behalf of the job. Most of these are assigned key 0, although a few get the key of the job. Subpool numbers are also relevant in MFT, although the details are much simpler. MFT uses fixed partitions redefinable by the operator instead of dynamic regions and PCP has only a single partition. Each subpool is mapped by a list of control blocks identifying allocated and free memory blocks within the subpool. Memory is allocated by finding a free area of sufficient size, or by allocating additional blocks in the subpool, up to the region size of the job. It is possible to free all or part of an allocated memory area. The details for OS/VS1 are similar to those for MFT and for MVT; the details for OS/VS2 are similar to those for MVT, except that the page size is 4 KiB. For both OS/VS1 and OS/VS2 the shared System Queue Area (SQA) is nonpageable. In MVS the address space includes an additional pageable shared area, the Common Storage Area (CSA), and two additional private areas, the nonpageable local system queue area (LSQA) and the pageable System Work area (SWA). Also, the storage keys 0–7 are all reserved for use by privileged code. == See also == Dynamic array Out of memory Heap pollution == Notes == == References == == Bibliography == Donald Knuth. Fundamental Algorithms, Third Edition. Addison-Wesley, 1997. ISBN 0-201-89683-4. Section 2.5: Dynamic Storage Allocation, pp. 435–456. Simple Memory Allocation AlgorithmsArchived 5 March 2016 at the Wayback Machine (originally published on OSDEV Community) Wilson, P. R.; Johnstone, M. S.; Neely, M.; Boles, D. (1995). \"Dynamic storage allocation: A survey and critical review\" (PDF). Memory Management. Lecture Notes in Computer Science. Vol. 986. pp. 1–116. CiteSeerX 10.1.1.47.275. doi:10.1007/3-540-60368-9_19. ISBN 978-3-540-60368-9. Berger, E. D.; Zorn, B. G.; McKinley, K. S. (June 2001). \"Composing High-Performance Memory Allocators\" (PDF). Proceedings of the ACM SIGPLAN 2001 conference on Programming language design and implementation. PLDI '01. pp. 114–124. CiteSeerX 10.1.1.1.2112. doi:10.1145/378795.378821. ISBN 1-58113-414-2. S2CID 7501376. Berger, E. D.; Zorn, B. G.; McKinley, K. S. (November 2002). \"Reconsidering Custom Memory Allocation\" (PDF). Proceedings of the 17th ACM SIGPLAN conference on Object-oriented programming, systems, languages, and applications. OOPSLA '02. pp. 1–12. CiteSeerX 10.1.1.119.5298. doi:10.1145/582419.582421. ISBN 1-58113-471-1. S2CID 481812. OS360Sup OS Release 21 IBM System/360 Operating System Supervisor Services and Macro Instructions (PDF). IBM Systems Reference Library (Eighth ed.). IBM. September 1974. GC28-6646-7. OSVS1Dig OS/VS1 Programmer's Reference Digest Release 6 (PDF). Systems (Sixth ed.). IBM. September 15, 1976. GC24-5091-5 with TNLs. == External links == \"Generic Memory Manager\" C++ library Sample bit-mapped arena memory allocator in C TLSF: a constant time allocator for real-time systems Slides on Dynamic memory allocation Inside A Storage Allocator The Memory Management Reference The Memory Management Reference, Beginner's Guide Allocation Linux Memory Management Memory Management For System Programmers VMem - general malloc/free replacement. Fast thread safe C++ allocator Operating System Memory Management"
+  },
+  "chunks": [
+    {
+      "id": "memorymanagement_0d37e2f1_c0000",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 928,
+      "content": "Memory management (also dynamic memory management, dynamic storage allocation, or dynamic memory allocation) is a form of resource management applied to computer memory. The essential requirement of memory management is to provide ways to dynamically allocate portions of memory to programs at their request, and free it for reuse when no longer needed. This is critical to any advanced computer system where more than a single process might be underway at any time. Several methods have been devised that increase the effectiveness of memory management. Virtual memory systems separate the memory addresses used by a process from actual physical addresses, allowing separation of processes and increasing the size of the virtual address space beyond the available amount of RAM using paging or swapping to secondary storage. The quality of the virtual memory manager can have an extensive effect on overall system performance.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0001",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 928,
+      "end_char": 1444,
+      "content": "The system allows a computer to appear as if it may have more memory available than physically present, thereby allowing multiple processes to share it. In some operating systems, e.g. Burroughs/Unisys MCP, and OS/360 and successors, memory is managed by the operating system. In other operating systems, e.g. Unix-like operating systems, memory is managed at the application level. Memory management within an address space is generally categorized as either manual memory management or automatic memory management.",
+      "char_count": 516,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0002",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== Manual memory management ==",
+      "heading_path": "== Manual memory management ==",
+      "start_char": 1475,
+      "end_char": 2407,
+      "content": "== Manual memory management == The task of fulfilling an allocation request consists of locating a block of unused memory of sufficient size. Memory requests are satisfied by allocating portions from a large pool of memory called the heap or free store. At any given time, some parts of the heap are in use, while some are \"free\" (unused) and thus available for future allocations. In the C language, the function which allocates memory from the heap is called malloc and the function which takes previously allocated memory and marks it as \"free\" (to be used by future allocations) is called free. Several issues complicate the implementation, such as external fragmentation, which arises when there are many small gaps between allocated memory blocks, which invalidates their use for an allocation request. The allocator's metadata can also inflate the size of (individually) small allocations. This is often managed by chunking.",
+      "char_count": 931,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0003",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== = Efficiency ==",
+      "heading_path": "== = Efficiency ==",
+      "start_char": 2569,
+      "end_char": 2960,
+      "content": "== = Efficiency === The specific dynamic memory allocation algorithm implemented can impact performance significantly. A study conducted in 1994 by Digital Equipment Corporation illustrates the overheads involved for a variety of allocators. The lowest average instruction path length required to allocate a single memory slot was 52 (as measured with an instruction level profiler on a variety of software).",
+      "char_count": 408,
+      "token_estimate": 102,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0004",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== = Implementations ==",
+      "heading_path": "== = Implementations ==",
+      "start_char": 2983,
+      "end_char": 3292,
+      "content": "== = Implementations === Since the precise location of the allocation is not known in advance, the memory is accessed indirectly, usually through a pointer reference. The specific algorithm used to organize the memory area and allocate and deallocate chunks is interlinked with the kernel, and may use any of the following methods:",
+      "char_count": 331,
+      "token_estimate": 82,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0005",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== = Automatic management of call stack variables ==",
+      "heading_path": "== = Automatic management of call stack variables ==",
+      "start_char": 3535,
+      "end_char": 4127,
+      "content": "== = Automatic management of call stack variables === In many programming language implementations, the runtime environment for the program automatically allocates memory in the call stack for non-static local variables of a subroutine, called automatic variables, when the subroutine is called, and automatically releases that memory when the subroutine is exited. Special declarations may allow local variables to retain values between invocations of the procedure, or may allow local variables to be accessed by other subroutines. The automatic allocation of local variables makes recursion possible, to a depth limited by available memory.",
+      "char_count": 643,
+      "token_estimate": 160,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0006",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== = Garbage collection ==",
+      "heading_path": "== = Garbage collection ==",
+      "start_char": 4153,
+      "end_char": 4769,
+      "content": "== = Garbage collection === Garbage collection is a strategy for automatically detecting memory allocated to objects that are no longer usable in a program, and returning that allocated memory to a pool of free memory locations. This method is in contrast to \"manual\" memory management where a programmer explicitly codes memory requests and memory releases in the program. While automatic garbage collection has the advantages of reducing programmer workload and preventing certain kinds of memory allocation bugs, garbage collection does require memory resources of its own, and can compete with the application program for processor time.",
+      "char_count": 641,
+      "token_estimate": 160,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0007",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== = Reference counting ==",
+      "heading_path": "== = Reference counting ==",
+      "start_char": 4795,
+      "end_char": 5564,
+      "content": "== = Reference counting === Reference counting is a strategy for detecting that memory is no longer usable by a program by maintaining a counter for how many independent pointers point to the memory. Whenever a new pointer points to a piece of memory, the programmer is supposed to increase the counter. When the pointer changes where it points, or when the pointer is no longer pointing to any area or has itself been freed, the counter should decrease. When the counter drops to zero, the memory should be considered unused and freed. Some reference counting systems require programmer involvement and some are implemented automatically by the compiler. A disadvantage of reference counting is that circular references can develop which cause a memory leak to occur.",
+      "char_count": 768,
+      "token_estimate": 192,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0008",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== = Reference counting ==",
+      "heading_path": "== = Reference counting ==",
+      "start_char": 5564,
+      "end_char": 5834,
+      "content": "This can be mitigated by either adding the concept of a \"weak reference\" (a reference that does not participate in reference counting, but is notified when the area it is pointing to is no longer valid) or by combining reference counting and garbage collection together.",
+      "char_count": 270,
+      "token_estimate": 67,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0009",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== = Memory pools ==",
+      "heading_path": "== = Memory pools ==",
+      "start_char": 5829,
+      "end_char": 6617,
+      "content": "== = Memory pools === A memory pool is a technique of automatically deallocating memory based on the state of the application, such as the lifecycle of a request or transaction. The idea is that many applications execute large chunks of code which may generate memory allocations, but that there is a point in execution where all of those chunks are known to be no longer valid. For example, in a web service, after each request the web service no longer needs any of the memory allocated during the execution of the request. Therefore, rather than keeping track of whether or not memory is currently being referenced, the memory is allocated according to the request or lifecycle stage with which it is associated. When that request or stage has passed, all associated memory is deallocated simultaneously.",
+      "char_count": 807,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0010",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== Systems with virtual memory ==",
+      "heading_path": "== Systems with virtual memory ==",
+      "start_char": 6650,
+      "end_char": 7574,
+      "content": "== Systems with virtual memory == Virtual memory is a method of decoupling the memory organization from the physical hardware. The applications operate on memory via virtual addresses. Each attempt by the application to access a particular virtual memory address results in the virtual memory address being translated to an actual physical address. In this way the addition of virtual memory enables granular control over memory systems and methods of access. In virtual memory systems the operating system limits how a process can access the memory. This feature, called memory protection, can be used to disallow a process to read or write to memory that is not allocated to it, preventing malicious or malfunctioning code in one program from interfering with the operation of another. Even though the memory allocated for specific processes is normally isolated, processes sometimes need to be able to share information.",
+      "char_count": 923,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0011",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== Systems with virtual memory ==",
+      "heading_path": "== Systems with virtual memory ==",
+      "start_char": 7574,
+      "end_char": 7866,
+      "content": "Shared memory is one of the fastest techniques for inter-process communication. Memory is usually classified by access rate into primary storage and secondary storage. Memory management systems, among other operations, also handle the moving of information between these two levels of memory.",
+      "char_count": 292,
+      "token_estimate": 73,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0012",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== Memory management in Burroughs/Unisys MCP systems ==",
+      "heading_path": "== Memory management in Burroughs/Unisys MCP systems ==",
+      "start_char": 7889,
+      "end_char": 8830,
+      "content": "== Memory management in Burroughs/Unisys MCP systems == An operating system manages various resources in the computing system. The memory subsystem is the system element for managing memory. The memory subsystem combines the hardware memory resource and the MCP OS software that manages the resource. The memory subsystem manages the physical memory and the virtual memory of the system (both part of the hardware resource). The virtual memory extends physical memory by using extra space on a peripheral device, usually disk. The memory subsystem is responsible for moving code and data between main and virtual memory in a process known as overlaying. Burroughs was the first commercial implementation of virtual memory (although developed at Manchester University for the Ferranti Atlas computer) and integrated virtual memory with the system design of the B5000 from the start (in 1961) needing no external memory management unit (MMU).",
+      "char_count": 940,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0013",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== Memory management in Burroughs/Unisys MCP systems ==",
+      "heading_path": "== Memory management in Burroughs/Unisys MCP systems ==",
+      "start_char": 8830,
+      "end_char": 9780,
+      "content": "The memory subsystem is responsible for mapping logical requests for memory blocks to physical portions of memory (segments) which are found in the list of free segments. Each allocated block is managed by means of a segment descriptor, a special control word containing relevant metadata about the segment including address, length, machine type, and the p-bit or ‘presence’ bit which indicates whether the block is in main memory or needs to be loaded from the address given in the descriptor. Descriptors are essential in providing memory safety and security so that operations cannot overflow or underflow the referenced block (commonly known as buffer overflow). Descriptors themselves are protected control words that cannot be manipulated except for specific elements of the MCP OS (enabled by the UNSAFE block directive in NEWP). Donald Knuth describes a similar system in Section 2.5 ‘Dynamic Storage Allocation’ of ‘Fundamental Algorithms’.",
+      "char_count": 950,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0014",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== Memory management in OS/360 and successors ==",
+      "heading_path": "== Memory management in OS/360 and successors ==",
+      "start_char": 9774,
+      "end_char": 10694,
+      "content": "== Memory management in OS/360 and successors == IBM System/360 does not support virtual memory. Memory isolation of jobs is optionally accomplished using protection keys, assigning storage for each job a different key, 0 for the supervisor or 1–15. Memory management in OS/360 is a supervisor function. Storage is requested using the GETMAIN macro and freed using the FREEMAIN macro, which result in a call to the supervisor (SVC) to perform the operation. In OS/360 the details vary depending on how the system is generated, e.g., for PCP, MFT, MVT. In OS/360 MVT, suballocation within a job's region or the shared System Queue Area (SQA) is based on subpools, areas a multiple of 2 KB in size—the size of an area protected by a protection key. Subpools are numbered 0–255. Within a region subpools are assigned either the job's storage protection or the supervisor's key, key 0. Subpools 0–127 receive the job's key.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0015",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== Memory management in OS/360 and successors ==",
+      "heading_path": "== Memory management in OS/360 and successors ==",
+      "start_char": 10694,
+      "end_char": 11686,
+      "content": "Initially only subpool zero is created, and all user storage requests are satisfied from subpool 0, unless another is specified in the memory request. Subpools 250–255 are created by memory requests by the supervisor on behalf of the job. Most of these are assigned key 0, although a few get the key of the job. Subpool numbers are also relevant in MFT, although the details are much simpler. MFT uses fixed partitions redefinable by the operator instead of dynamic regions and PCP has only a single partition. Each subpool is mapped by a list of control blocks identifying allocated and free memory blocks within the subpool. Memory is allocated by finding a free area of sufficient size, or by allocating additional blocks in the subpool, up to the region size of the job. It is possible to free all or part of an allocated memory area. The details for OS/VS1 are similar to those for MFT and for MVT; the details for OS/VS2 are similar to those for MVT, except that the page size is 4 KiB.",
+      "char_count": 992,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "memorymanagement_0d37e2f1_c0016",
+      "article_id": "memorymanagement_0d37e2f1",
+      "section": "== Memory management in OS/360 and successors ==",
+      "heading_path": "== Memory management in OS/360 and successors ==",
+      "start_char": 11687,
+      "end_char": 12059,
+      "content": "For both OS/VS1 and OS/VS2 the shared System Queue Area (SQA) is nonpageable. In MVS the address space includes an additional pageable shared area, the Common Storage Area (CSA), and two additional private areas, the nonpageable local system queue area (LSQA) and the pageable System Work area (SWA). Also, the storage keys 0–7 are all reserved for use by privileged code.",
+      "char_count": 372,
+      "token_estimate": 93,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Which subpools are created by the supervisor on behalf of a job?",
+        "answer": "Subpools 250–255 are created by memory requests from the supervisor on behalf of the job.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0015"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What does the 'p-bit' or 'presence' bit in a segment descriptor signify in Burroughs/Unisys MCP systems?",
+        "answer": "The 'p-bit' or 'presence' bit indicates whether the memory block is currently in main memory or if it needs to be loaded from the address provided in the descriptor.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0013"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "In the C language, what function allocates memory from the heap, and what function marks it as free?",
+        "answer": "In the C language, the function `malloc` allocates memory from the heap, and the function `free` takes previously allocated memory and marks it as free for future allocations.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0002"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Explain the role of memory management in supporting multiple processes, including the different levels at which it can be managed and a detailed description of one specific method.",
+        "answer": "Memory management is critical for computer systems running multiple processes by dynamically allocating memory to programs and freeing it for reuse. This allows multiple processes to share memory, which can be managed by the operating system (e.g., OS/360) or at the application level (e.g., Unix-like systems). One specific method is manual memory management, where allocation requests are fulfilled from a large pool of memory called the heap. In C, the `malloc` function allocates memory from the heap, and the `free` function returns it. A challenge with this method is external fragmentation, where small, unusable gaps form between allocated memory blocks.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0000",
+          "memorymanagement_0d37e2f1_c0001",
+          "memorymanagement_0d37e2f1_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does automatic memory management for call stack variables differ from dynamic memory allocation in terms of implementation and performance overhead?",
+        "answer": "Automatic memory management is handled by the program's runtime environment, which allocates memory for a subroutine's local variables on the call stack upon entry and releases it upon exit. In contrast, dynamic memory allocation involves specific algorithms that can have a significant performance impact, with one study showing an average of 52 instructions per allocation. This dynamically allocated memory is accessed indirectly through a pointer because its exact location is not known beforehand.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0003",
+          "memorymanagement_0d37e2f1_c0004",
+          "memorymanagement_0d37e2f1_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Compare garbage collection and reference counting as memory management strategies, including their primary approach and a key disadvantage of each.",
+        "answer": "Garbage collection automatically detects memory for objects that are no longer usable, while reference counting uses a counter to track how many pointers point to a piece of memory, freeing it when the count is zero. A key disadvantage of garbage collection is that it requires its own memory resources and can compete for processor time. A key disadvantage of reference counting is that circular references can cause memory leaks.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0006",
+          "memorymanagement_0d37e2f1_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do memory management techniques create the appearance that a computer has more memory than is physically present?",
+        "answer": "Memory management accomplishes this through virtual memory systems, which separate the memory addresses used by a process from the actual physical addresses. This technique allows the virtual address space to be increased beyond the amount of available RAM by using paging or swapping to secondary storage. Consequently, the computer can appear to have more memory than is physically available, which enables multiple processes to share it.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0000",
+          "memorymanagement_0d37e2f1_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is a significant disadvantage of reference counting, and what are two methods to mitigate this issue?",
+        "answer": "A major disadvantage of reference counting is the potential for circular references to cause a memory leak. This can be addressed by either implementing \"weak references\" that don't participate in the count, or by combining reference counting with garbage collection.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0007",
+          "memorymanagement_0d37e2f1_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "While virtual memory systems typically isolate processes for protection, what technique is mentioned for allowing them to share information when needed?",
+        "answer": "Virtual memory systems use memory protection to isolate processes, preventing them from interfering with one another. However, when processes need to share information, shared memory is one of the fastest techniques used for this type of inter-process communication.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0010",
+          "memorymanagement_0d37e2f1_c0011"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does the Burroughs/Unisys MCP system use segment descriptors to manage the movement of data between main and virtual memory, and what is this process called?",
+        "answer": "The system uses a segment descriptor for each allocated memory block, which contains a 'p-bit' or 'presence' bit. This bit indicates whether the block is in main memory or if it needs to be loaded from virtual memory. The process of moving code and data between main and virtual memory is known as overlaying.",
+        "related_chunk_ids": [
+          "memorymanagement_0d37e2f1_c0012",
+          "memorymanagement_0d37e2f1_c0013"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:32.537Z",
+    "content_format": "markdown",
+    "total_chunks": 17,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}
