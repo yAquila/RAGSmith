@@ -29,7 +29,7 @@ async def run_rag_evaluation():
     """Run RAG evaluation with multiple model combinations"""
     
     # Configuration for Modular RAG evaluation
-    from rag_pipeline.core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig, QueryExpansionConfig, PassageAugmentConfig
+    from rag_pipeline.core.modular_configs import ModularRAGConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig, QueryExpansionConfig, PassageAugmentConfig, PostGenerationConfig
     from rag_pipeline.core.modular_pipeline import ModularRAGPipeline
     
     # Example ModularRAGConfig with multiple generator configs
@@ -188,19 +188,19 @@ async def run_rag_evaluation():
             #     llm_summarize_max_tokens=500,
             #     llm_summarize_temperature=0.1,
             # ),
-            PassageCompressConfig(
-                name="no_compress",
-                enabled=True,
-                technique="none",
-            ),
-            PassageCompressConfig(
-                name="tree_summarize",
-                enabled=True,
-                technique="tree_summarize",
-                provider="ollama",
-                tree_summarize_model="gemma3:4b",
-                max_fan_in=3
-            )
+            # PassageCompressConfig(
+            #     name="no_compress",
+            #     enabled=True,
+            #     technique="none",
+            # ),
+            # PassageCompressConfig(
+            #     name="tree_summarize",
+            #     enabled=True,
+            #     technique="tree_summarize",
+            #     provider="ollama",
+            #     tree_summarize_model="gemma3:4b",
+            #     max_fan_in=3
+            # )
         ],
 
         # Prompt maker: one config
@@ -326,28 +326,37 @@ async def run_rag_evaluation():
         
 
         passage_augment=[
-            PassageAugmentConfig(
-                name="no_augment",
-                enabled=True,
-                technique="none",
-            ),
+            # PassageAugmentConfig(
+            #     name="no_augment",
+            #     enabled=True,
+            #     technique="none",
+            # ),
             # PassageAugmentConfig(
             #     name="prev_next_augmenter",
             #     enabled=True,
             #     technique="prev_next_augmenter",
             #     n=1
             # )
-            PassageAugmentConfig(
-                name="relevant_segment_extractor",
-                enabled=True,
-                technique="relevant_segment_extractor",
-                max_chunk_number_in_segment=5,
-                irrelevant_chunk_penalty=0.18,
-                decay_rate=30,
-                overall_max_chunk_number=10
-            )
+            # PassageAugmentConfig(
+            #     name="relevant_segment_extractor",
+            #     enabled=True,
+            #     technique="relevant_segment_extractor",
+            #     max_chunk_number_in_segment=5,
+            #     irrelevant_chunk_penalty=0.18,
+            #     decay_rate=30,
+            #     overall_max_chunk_number=10
+            # )
         ],
-        post_generation=[],
+        post_generation=[
+            # PostGenerationConfig(
+            #     name="reflection_revising",
+            #     enabled=True,
+            #     technique="reflection_revising",
+            #     provider="ollama",
+            #     reflection_revising_model="gemma3:4b",
+            #     max_revisions=2
+            # )
+        ],
 
         # Dataset/global settings
         dataset_path=None,
