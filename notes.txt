@@ -7,4 +7,4 @@
 - teknikler implement edildikten sonra (hyperparameter optimization aşırı uzun süreceği için) bu tekniklerin kullanıldığı makalelerden hyperparametre ve prompt'ları alıp onları kullanarak test edelim
 - promptlar ayrı bir dosyada tutulsun ordan çekilsin
 - GraphRAG ve HyperGraphRAG tamamlandı ama prompt değişimi veya document content kısmının değişimiyle daha iyi hale getirilebilir belki
-- 
+- Token sayısına hangi llm modelinin kullanıldığı eklenebilir çünkü örneğin gemini-2.0-flash az kullanıp gemma3:4b veya hatta llama3.2:1b çok kullanan bir kombinasyon avantajlı olabilir ama şuan bunu göremyoruz.

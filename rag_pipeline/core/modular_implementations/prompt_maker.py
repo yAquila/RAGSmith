@@ -71,8 +71,9 @@ class LongContextReorder(PromptMakerComponent): # Top n passages are reinforced 
                         context_parts.append(f"Document {i}:\n{content}")
                 else:
                     context_parts.append(content)
-        for i in range(reinforce_top_n_passages-1, -1, -1):
-            context_parts.append(context_parts[i]) # Reinforce top n passages by putting them at the end
+        if len(context_parts) > reinforce_top_n_passages:
+            for i in range(reinforce_top_n_passages-1, -1, -1):
+                context_parts.append(context_parts[i]) # Reinforce top n passages by putting them at the end
         context = separator.join(context_parts)
         
         # Format final prompt
