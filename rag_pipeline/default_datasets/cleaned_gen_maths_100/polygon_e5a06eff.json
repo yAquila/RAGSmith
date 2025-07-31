@@ -1,0 +1,357 @@
+{
+  "article": {
+    "id": "polygon_e5a06eff",
+    "title": "Polygon",
+    "url": "https://en.wikipedia.org/wiki/Polygon",
+    "lang": "en",
+    "created_at": "2025-07-31T06:30:53.145888",
+    "content": "---\nid: polygon_e5a06eff\nurl: https://en.wikipedia.org/wiki/Polygon\ntitle: Polygon\nlang: en\ncreated_at: '2025-07-31T06:25:45.693546'\nchecksum: d50ccaa38600a1d452fa88f4e32b82fc6ec7b31de74f407c43c371f0cec7803f\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3210\n  char_count: 18532\n  num_chunks: 19\n  original_chunks: 28\n  filtered_out: 9\n  num_sections: 0\n---\nIn geometry, a polygon () is a plane figure made up of line segments connected to form a closed polygonal chain. The segments of a closed polygonal chain are called its edges or sides. The points where two edges meet are the polygon's vertices or corners. An n-gon is a polygon with n sides; for example, a triangle is a 3-gon. A simple polygon is one which does not intersect itself. More precisely, the only allowed intersections among the line segments that make up the polygon are the shared endpoints of consecutive segments in the polygonal chain. A simple polygon is the boundary of a region of the plane that is called a solid polygon. The interior of a solid polygon is its body, also known as a polygonal region or polygonal area. In contexts where one is concerned only with simple and solid polygons, a polygon may refer only to a simple polygon or to a solid polygon. A polygonal chain may cross over itself, creating star polygons and other self-intersecting polygons. Some sources also consider closed polygonal chains in Euclidean space to be a type of polygon (a skew polygon), even when the chain does not lie in a single plane. A polygon is a 2-dimensional example of the more general polytope in any number of dimensions. There are many more generalizations of polygons defined for different purposes. == Etymology == The word polygon derives from the Greek adjective πολύς (polús) 'much', 'many' and γωνία (gōnía) 'corner' or 'angle'. It has been suggested that γόνυ (gónu) 'knee' may be the origin of gon. == Classification == === Number of sides === Polygons are primarily classified by the number of sides. === Convexity and intersection === Polygons may be characterized by their convexity or type of non-convexity: Convex: any line drawn through the polygon (and not tangent to an edge or corner) meets its boundary exactly twice. As a consequence, all its interior angles are less than 180°. Equivalently, any line segment with endpoints on the boundary passes through only interior points between its endpoints. This condition is true for polygons in any geometry, not just Euclidean. Non-convex: a line may be found which meets its boundary more than twice. Equivalently, there exists a line segment between two boundary points that passes outside the polygon. Simple: the boundary of the polygon does not cross itself. All convex polygons are simple. Concave: Non-convex and simple. There is at least one interior angle greater than 180°. Star-shaped: the whole interior is visible from at least one point, without crossing any edge. The polygon must be simple, and may be convex or concave. All convex polygons are star-shaped. Self-intersecting: the boundary of the polygon crosses itself. The term complex is sometimes used in contrast to simple, but this usage risks confusion with the idea of a complex polygon as one which exists in the complex Hilbert plane consisting of two complex dimensions. Star polygon: a polygon which self-intersects in a regular way. A polygon cannot be both a star and star-shaped. === Equality and symmetry === Equiangular: all corner angles are equal. Equilateral: all edges are of the same length. Regular: both equilateral and equiangular. Cyclic: all corners lie on a single circle, called the circumcircle. Tangential: all sides are tangent to an inscribed circle. Isogonal or vertex-transitive: all corners lie within the same symmetry orbit. The polygon is also cyclic and equiangular. Isotoxal or edge-transitive: all sides lie within the same symmetry orbit. The polygon is also equilateral and tangential. The property of regularity may be defined in other ways: a polygon is regular if and only if it is both isogonal and isotoxal, or equivalently it is both cyclic and equilateral. A non-convex regular polygon is called a regular star polygon. === Miscellaneous === Rectilinear: the polygon's sides meet at right angles, i.e. all its interior angles are 90 or 270 degrees. Monotone with respect to a given line L: every line orthogonal to L intersects the polygon not more than twice. == Properties and formulas == Euclidean geometry is assumed throughout. === Angles === Any polygon has as many corners as it has sides. Each corner has several angles. The two most important ones are: Interior angle – The sum of the interior angles of a simple n-gon is (n − 2) × π radians or (n − 2) × 180 degrees. This is because any simple n-gon ( having n sides ) can be considered to be made up of (n − 2) triangles, each of which has an angle sum of π radians or 180 degrees. The measure of any interior angle of a convex regular n-gon is ( 1 − 2 n ) π {\\displaystyle \\left(1-{\\tfrac {2}{n}}\\right)\\pi } radians or 180 − 360 n {\\displaystyle 180-{\\tfrac {360}{n}}} degrees. The interior angles of regular star polygons were first studied by Poinsot, in the same paper in which he describes the four regular star polyhedra: for a regular p q {\\displaystyle {\\tfrac {p}{q}}} -gon (a p-gon with central density q), each interior angle is π ( p − 2 q ) p {\\displaystyle {\\tfrac {\\pi (p-2q)}{p}}} radians or 180 ( p − 2 q ) p {\\displaystyle {\\tfrac {180(p-2q)}{p}}} degrees. Exterior angle – The exterior angle is the supplementary angle to the interior angle. Tracing around a convex n-gon, the angle \"turned\" at a corner is the exterior or external angle. Tracing all the way around the polygon makes one full turn, so the sum of the exterior angles must be 360°. This argument can be generalized to concave simple polygons, if external angles that turn in the opposite direction are subtracted from the total turned. Tracing around an n-gon in general, the sum of the exterior angles (the total amount one rotates at the vertices) can be any integer multiple d of 360°, e.g. 720° for a pentagram and 0° for an angular \"eight\" or antiparallelogram, where d is the density or turning number of the polygon. === Area === In this section, the vertices of the polygon under consideration are taken to be ( x 0 , y 0 ) , ( x 1 , y 1 ) , … , ( x n − 1 , y n − 1 ) {\\displaystyle (x_{0},y_{0}),(x_{1},y_{1}),\\ldots ,(x_{n-1},y_{n-1})} in order. For convenience in some formulas, the notation (xn, yn) = (x0, y0) will also be used. ==== Simple polygons ==== If the polygon is non-self-intersecting (that is, simple), the signed area is A = 1 2 ∑ i = 0 n − 1 ( x i y i + 1 − x i + 1 y i ) where x n = x 0 and y n = y 0 , {\\displaystyle A={\\frac {1}{2}}\\sum _{i=0}^{n-1}(x_{i}y_{i+1}-x_{i+1}y_{i})\\quad {\\text{where }}x_{n}=x_{0}{\\text{ and }}y_{n}=y_{0},} or, using determinants 16 A 2 = ∑ i = 0 n − 1 ∑ j = 0 n − 1 | Q i , j Q i , j + 1 Q i + 1 , j Q i + 1 , j + 1 | , {\\displaystyle 16A^{2}=\\sum _{i=0}^{n-1}\\sum _{j=0}^{n-1}{\\begin{vmatrix}Q_{i,j}&Q_{i,j+1}\\\\Q_{i+1,j}&Q_{i+1,j+1}\\end{vmatrix}},} where Q i , j {\\displaystyle Q_{i,j}} is the squared distance between ( x i , y i ) {\\displaystyle (x_{i},y_{i})} and ( x j , y j ) . {\\displaystyle (x_{j},y_{j}).} The signed area depends on the ordering of the vertices and of the orientation of the plane. Commonly, the positive orientation is defined by the (counterclockwise) rotation that maps the positive x-axis to the positive y-axis. If the vertices are ordered counterclockwise (that is, according to positive orientation), the signed area is positive; otherwise, it is negative. In either case, the area formula is correct in absolute value. This is commonly called the shoelace formula or surveyor's formula. The area A of a simple polygon can also be computed if the lengths of the sides, a1, a2, ..., an and the exterior angles, θ1, θ2, ..., θn are known, from: A = 1 2 ( a 1 [ a 2 sin ⁡ ( θ 1 ) + a 3 sin ⁡ ( θ 1 + θ 2 ) + ⋯ + a n − 1 sin ⁡ ( θ 1 + θ 2 + ⋯ + θ n − 2 ) ] + a 2 [ a 3 sin ⁡ ( θ 2 ) + a 4 sin ⁡ ( θ 2 + θ 3 ) + ⋯ + a n − 1 sin ⁡ ( θ 2 + ⋯ + θ n − 2 ) ] + ⋯ + a n − 2 [ a n − 1 sin ⁡ ( θ n − 2 ) ] ) . {\\displaystyle {\\begin{aligned}A={\\frac {1}{2}}(a_{1}[a_{2}\\sin(\\theta _{1})+a_{3}\\sin(\\theta _{1}+\\theta _{2})+\\cdots +a_{n-1}\\sin(\\theta _{1}+\\theta _{2}+\\cdots +\\theta _{n-2})]\\\\{}+a_{2}[a_{3}\\sin(\\theta _{2})+a_{4}\\sin(\\theta _{2}+\\theta _{3})+\\cdots +a_{n-1}\\sin(\\theta _{2}+\\cdots +\\theta _{n-2})]\\\\{}+\\cdots +a_{n-2}[a_{n-1}\\sin(\\theta _{n-2})]).\\end{aligned}}} The formula was described by Lopshits in 1963. If the polygon can be drawn on an equally spaced grid such that all its vertices are grid points, Pick's theorem gives a simple formula for the polygon's area based on the numbers of interior and boundary grid points: the former number plus one-half the latter number, minus 1. In every polygon with perimeter p and area A , the isoperimetric inequality p 2 > 4 π A {\\displaystyle p^{2}>4\\pi A} holds. For any two simple polygons of equal area, the Bolyai–Gerwien theorem asserts that the first can be cut into polygonal pieces which can be reassembled to form the second polygon. The lengths of the sides of a polygon do not in general determine its area. However, if the polygon is simple and cyclic then the sides do determine the area. Of all n-gons with given side lengths, the one with the largest area is cyclic. Of all n-gons with a given perimeter, the one with the largest area is regular (and therefore cyclic). ==== Regular polygons ==== Many specialized formulas apply to the areas of regular polygons. The area of a regular polygon is given in terms of the radius r of its inscribed circle and its perimeter p by A = 1 2 ⋅ p ⋅ r . {\\displaystyle A={\\tfrac {1}{2}}\\cdot p\\cdot r.} This radius is also termed its apothem and is often represented as a. The area of a regular n-gon can be expressed in terms of the radius R of its circumscribed circle (the unique circle passing through all vertices of the regular n-gon) as follows: A = R 2 ⋅ n 2 ⋅ sin ⁡ 2 π n = R 2 ⋅ n ⋅ sin ⁡ π n ⋅ cos ⁡ π n {\\displaystyle A=R^{2}\\cdot {\\frac {n}{2}}\\cdot \\sin {\\frac {2\\pi }{n}}=R^{2}\\cdot n\\cdot \\sin {\\frac {\\pi }{n}}\\cdot \\cos {\\frac {\\pi }{n}}} ==== Self-intersecting ==== The area of a self-intersecting polygon can be defined in two different ways, giving different answers: Using the formulas for simple polygons, we allow that particular regions within the polygon may have their area multiplied by a factor which we call the density of the region. For example, the central convex pentagon in the center of a pentagram has density 2. The two triangular regions of a cross-quadrilateral (like a figure 8) have opposite-signed densities, and adding their areas together can give a total area of zero for the whole figure. Considering the enclosed regions as point sets, we can find the area of the enclosed point set. This corresponds to the area of the plane covered by the polygon or to the area of one or more simple polygons having the same outline as the self-intersecting one. In the case of the cross-quadrilateral, it is treated as two simple triangles. === Centroid === Using the same convention for vertex coordinates as in the previous section, the coordinates of the centroid of a solid simple polygon are C x = 1 6 A ∑ i = 0 n − 1 ( x i + x i + 1 ) ( x i y i + 1 − x i + 1 y i ) , {\\displaystyle C_{x}={\\frac {1}{6A}}\\sum _{i=0}^{n-1}(x_{i}+x_{i+1})(x_{i}y_{i+1}-x_{i+1}y_{i}),} C y = 1 6 A ∑ i = 0 n − 1 ( y i + y i + 1 ) ( x i y i + 1 − x i + 1 y i ) . {\\displaystyle C_{y}={\\frac {1}{6A}}\\sum _{i=0}^{n-1}(y_{i}+y_{i+1})(x_{i}y_{i+1}-x_{i+1}y_{i}).} In these formulas, the signed value of area A {\\displaystyle A} must be used. For triangles (n = 3), the centroids of the vertices and of the solid shape are the same, but, in general, this is not true for n > 3. The centroid of the vertex set of a polygon with n vertices has the coordinates c x = 1 n ∑ i = 0 n − 1 x i , {\\displaystyle c_{x}={\\frac {1}{n}}\\sum _{i=0}^{n-1}x_{i},} c y = 1 n ∑ i = 0 n − 1 y i . {\\displaystyle c_{y}={\\frac {1}{n}}\\sum _{i=0}^{n-1}y_{i}.} == Generalizations == The idea of a polygon has been generalized in various ways. Some of the more important include: A spherical polygon is a circuit of arcs of great circles (sides) and vertices on the surface of a sphere. It allows the digon, a polygon having only two sides and two corners, which is impossible in a flat plane. Spherical polygons play an important role in cartography (map making) and in Wythoff's construction of the uniform polyhedra. A skew polygon does not lie in a flat plane, but zigzags in three (or more) dimensions. The Petrie polygons of the regular polytopes are well known examples. An apeirogon is an infinite sequence of sides and angles, which is not closed but has no ends because it extends indefinitely in both directions. A skew apeirogon is an infinite sequence of sides and angles that do not lie in a flat plane. A polygon with holes is an area-connected or multiply-connected planar polygon with one external boundary and one or more interior boundaries (holes). A complex polygon is a configuration analogous to an ordinary polygon, which exists in the complex plane of two real and two imaginary dimensions. An abstract polygon is an algebraic partially ordered set representing the various elements (sides, vertices, etc.) and their connectivity. A real geometric polygon is said to be a realization of the associated abstract polygon. Depending on the mapping, all the generalizations described here can be realized. A polyhedron is a three-dimensional solid bounded by flat polygonal faces, analogous to a polygon in two dimensions. The corresponding shapes in four or higher dimensions are called polytopes. (In other conventions, the words polyhedron and polytope are used in any dimension, with the distinction between the two that a polytope is necessarily bounded.) == Naming == The word polygon comes from Late Latin polygōnum (a noun), from Greek πολύγωνον (polygōnon/polugōnon), noun use of neuter of πολύγωνος (polygōnos/polugōnos, the masculine adjective), meaning \"many-angled\". Individual polygons are named (and sometimes classified) according to the number of sides, combining a Greek-derived numerical prefix with the suffix -gon, e.g. pentagon, dodecagon. The triangle, quadrilateral and nonagon are exceptions. Beyond decagons (10-sided) and dodecagons (12-sided), mathematicians generally use numerical notation, for example 17-gon and 257-gon. Exceptions exist for side counts that are easily expressed in verbal form (e.g. 20 and 30), or are used by non-mathematicians. Some special polygons also have their own names; for example the regular star pentagon is also known as the pentagram. To construct the name of a polygon with more than 20 and fewer than 100 edges, combine the prefixes as follows. The \"kai\" term applies to 13-gons and higher and was used by Kepler, and advocated by John H. Conway for clarity of concatenated prefix numbers in the naming of quasiregular polyhedra, though not all sources use it. == History == Polygons have been known since ancient times. The regular polygons were known to the ancient Greeks, with the pentagram, a non-convex regular polygon (star polygon), appearing as early as the 7th century B.C. on a krater by Aristophanes, found at Caere and now in the Capitoline Museum. The first known systematic study of non-convex polygons in general was made by Thomas Bradwardine in the 14th century. In 1952, Geoffrey Colin Shephard generalized the idea of polygons to the complex plane, where each real dimension is accompanied by an imaginary one, to create complex polygons. == In nature == Polygons appear in rock formations, most commonly as the flat facets of crystals, where the angles between the sides depend on the type of mineral from which the crystal is made. Regular hexagons can occur when the cooling of lava forms areas of tightly packed columns of basalt, which may be seen at the Giant's Causeway in Northern Ireland, or at the Devil's Postpile in California. In biology, the surface of the wax honeycomb made by bees is an array of hexagons, and the sides and base of each cell are also polygons. == Computer graphics == In computer graphics, a polygon is a primitive used in modelling and rendering. They are defined in a database, containing arrays of vertices (the coordinates of the geometrical vertices, as well as other attributes of the polygon, such as color, shading and texture), connectivity information, and materials. Any surface is modelled as a tessellation called polygon mesh. If a square mesh has n + 1 points (vertices) per side, there are n squared squares in the mesh, or 2n squared triangles since there are two triangles in a square. There are (n + 1)2 / 2(n2) vertices per triangle. Where n is large, this approaches one half. Or, each vertex inside the square mesh connects four edges (lines). The imaging system calls up the structure of polygons needed for the scene to be created from the database. This is transferred to active memory and finally, to the display system (screen, TV monitors etc.) so that the scene can be viewed. During this process, the imaging system renders polygons in correct perspective ready for transmission of the processed data to the display system. Although polygons are two-dimensional, through the system computer they are placed in a visual scene in the correct three-dimensional orientation. In computer graphics and computational geometry, it is often necessary to determine whether a given point P = ( x 0 , y 0 ) {\\displaystyle P=(x_{0},y_{0})} lies inside a simple polygon given by a sequence of line segments. This is called the point in polygon test. == See also == == References == === Bibliography === Coxeter, H.S.M.; Regular Polytopes, Methuen and Co., 1948 (3rd Edition, Dover, 1973). Cromwell, P.; Polyhedra, CUP hbk (1997), pbk. (1999). Grünbaum, B.; Are your polyhedra the same as my polyhedra? Discrete and comput. geom: the Goodman-Pollack festschrift, ed. Aronov et al. Springer (2003) pp. 461–488. (pdf) === Notes === == External links == Weisstein, Eric W. \"Polygon\". MathWorld. What Are Polyhedra?, with Greek Numerical Prefixes Polygons, types of polygons, and polygon properties, with interactive animation How to draw monochrome orthogonal polygons on screens, by Herbert Glarner comp.graphics.algorithms Frequently Asked Questions, solutions to mathematical problems computing 2D and 3D polygons Comparison of the different algorithms for Polygon Boolean operations, compares capabilities, speed and numerical robustness Interior angle sum of polygons: a general formula, Provides an interactive Java investigation that extends the interior angle sum formula for simple closed polygons to include crossed (complex) polygons"
+  },
+  "chunks": [
+    {
+      "id": "polygon_e5a06eff_c0000",
+      "article_id": "polygon_e5a06eff",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 983,
+      "content": "In geometry, a polygon () is a plane figure made up of line segments connected to form a closed polygonal chain. The segments of a closed polygonal chain are called its edges or sides. The points where two edges meet are the polygon's vertices or corners. An n-gon is a polygon with n sides; for example, a triangle is a 3-gon. A simple polygon is one which does not intersect itself. More precisely, the only allowed intersections among the line segments that make up the polygon are the shared endpoints of consecutive segments in the polygonal chain. A simple polygon is the boundary of a region of the plane that is called a solid polygon. The interior of a solid polygon is its body, also known as a polygonal region or polygonal area. In contexts where one is concerned only with simple and solid polygons, a polygon may refer only to a simple polygon or to a solid polygon. A polygonal chain may cross over itself, creating star polygons and other self-intersecting polygons.",
+      "char_count": 982,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0001",
+      "article_id": "polygon_e5a06eff",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 983,
+      "end_char": 1321,
+      "content": "Some sources also consider closed polygonal chains in Euclidean space to be a type of polygon (a skew polygon), even when the chain does not lie in a single plane. A polygon is a 2-dimensional example of the more general polytope in any number of dimensions. There are many more generalizations of polygons defined for different purposes.",
+      "char_count": 338,
+      "token_estimate": 84,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0002",
+      "article_id": "polygon_e5a06eff",
+      "section": "== Etymology ==",
+      "heading_path": "== Etymology ==",
+      "start_char": 1337,
+      "end_char": 1528,
+      "content": "== Etymology == The word polygon derives from the Greek adjective πολύς (polús) 'much', 'many' and γωνία (gōnía) 'corner' or 'angle'. It has been suggested that γόνυ (gónu) 'knee' may be the origin of gon.",
+      "char_count": 205,
+      "token_estimate": 51,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0003",
+      "article_id": "polygon_e5a06eff",
+      "section": "== = Convexity and intersection ==",
+      "heading_path": "== = Convexity and intersection ==",
+      "start_char": 1666,
+      "end_char": 2600,
+      "content": "== = Convexity and intersection === Polygons may be characterized by their convexity or type of non-convexity: Convex: any line drawn through the polygon (and not tangent to an edge or corner) meets its boundary exactly twice. As a consequence, all its interior angles are less than 180°. Equivalently, any line segment with endpoints on the boundary passes through only interior points between its endpoints. This condition is true for polygons in any geometry, not just Euclidean. Non-convex: a line may be found which meets its boundary more than twice. Equivalently, there exists a line segment between two boundary points that passes outside the polygon. Simple: the boundary of the polygon does not cross itself. All convex polygons are simple. Concave: Non-convex and simple. There is at least one interior angle greater than 180°. Star-shaped: the whole interior is visible from at least one point, without crossing any edge.",
+      "char_count": 933,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0004",
+      "article_id": "polygon_e5a06eff",
+      "section": "== = Convexity and intersection ==",
+      "heading_path": "== = Convexity and intersection ==",
+      "start_char": 2600,
+      "end_char": 3081,
+      "content": "The polygon must be simple, and may be convex or concave. All convex polygons are star-shaped. Self-intersecting: the boundary of the polygon crosses itself. The term complex is sometimes used in contrast to simple, but this usage risks confusion with the idea of a complex polygon as one which exists in the complex Hilbert plane consisting of two complex dimensions. Star polygon: a polygon which self-intersects in a regular way. A polygon cannot be both a star and star-shaped.",
+      "char_count": 481,
+      "token_estimate": 120,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0005",
+      "article_id": "polygon_e5a06eff",
+      "section": "== = Equality and symmetry ==",
+      "heading_path": "== = Equality and symmetry ==",
+      "start_char": 3077,
+      "end_char": 3825,
+      "content": "== = Equality and symmetry === Equiangular: all corner angles are equal. Equilateral: all edges are of the same length. Regular: both equilateral and equiangular. Cyclic: all corners lie on a single circle, called the circumcircle. Tangential: all sides are tangent to an inscribed circle. Isogonal or vertex-transitive: all corners lie within the same symmetry orbit. The polygon is also cyclic and equiangular. Isotoxal or edge-transitive: all sides lie within the same symmetry orbit. The polygon is also equilateral and tangential. The property of regularity may be defined in other ways: a polygon is regular if and only if it is both isogonal and isotoxal, or equivalently it is both cyclic and equilateral. A non-convex regular polygon is called a regular star polygon.",
+      "char_count": 776,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0006",
+      "article_id": "polygon_e5a06eff",
+      "section": "== = Miscellaneous ==",
+      "heading_path": "== = Miscellaneous ==",
+      "start_char": 3846,
+      "end_char": 4067,
+      "content": "== = Miscellaneous === Rectilinear: the polygon's sides meet at right angles, i.e. all its interior angles are 90 or 270 degrees. Monotone with respect to a given line L: every line orthogonal to L intersects the polygon not more than twice.",
+      "char_count": 241,
+      "token_estimate": 60,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0007",
+      "article_id": "polygon_e5a06eff",
+      "section": "== = Angles ==",
+      "heading_path": "== = Angles ==",
+      "start_char": 4153,
+      "end_char": 4762,
+      "content": "== = Angles === Any polygon has as many corners as it has sides. Each corner has several angles. The two most important ones are: Interior angle – The sum of the interior angles of a simple n-gon is (n − 2) × π radians or (n − 2) × 180 degrees. This is because any simple n-gon ( having n sides ) can be considered to be made up of (n − 2) triangles, each of which has an angle sum of π radians or 180 degrees. The measure of any interior angle of a convex regular n-gon is ( 1 − 2 n ) π {\\displaystyle \\left(1-{\\tfrac {2}{n}}\\right)\\pi } radians or 180 − 360 n {\\displaystyle 180-{\\tfrac {360}{n}}} degrees.",
+      "char_count": 608,
+      "token_estimate": 152,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0008",
+      "article_id": "polygon_e5a06eff",
+      "section": "== = Angles ==",
+      "heading_path": "== = Angles ==",
+      "start_char": 4762,
+      "end_char": 5760,
+      "content": "The interior angles of regular star polygons were first studied by Poinsot, in the same paper in which he describes the four regular star polyhedra: for a regular p q {\\displaystyle {\\tfrac {p}{q}}} -gon (a p-gon with central density q), each interior angle is π ( p − 2 q ) p {\\displaystyle {\\tfrac {\\pi (p-2q)}{p}}} radians or 180 ( p − 2 q ) p {\\displaystyle {\\tfrac {180(p-2q)}{p}}} degrees. Exterior angle – The exterior angle is the supplementary angle to the interior angle. Tracing around a convex n-gon, the angle \"turned\" at a corner is the exterior or external angle. Tracing all the way around the polygon makes one full turn, so the sum of the exterior angles must be 360°. This argument can be generalized to concave simple polygons, if external angles that turn in the opposite direction are subtracted from the total turned. Tracing around an n-gon in general, the sum of the exterior angles (the total amount one rotates at the vertices) can be any integer multiple d of 360°, e.g.",
+      "char_count": 998,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0009",
+      "article_id": "polygon_e5a06eff",
+      "section": "== = Area ==",
+      "heading_path": "== = Area ==",
+      "start_char": 5889,
+      "end_char": 6196,
+      "content": "== = Area === In this section, the vertices of the polygon under consideration are taken to be ( x 0 , y 0 ) , ( x 1 , y 1 ) , … , ( x n − 1 , y n − 1 ) {\\displaystyle (x_{0},y_{0}),(x_{1},y_{1}),\\ldots ,(x_{n-1},y_{n-1})} in order. For convenience in some formulas, the notation (xn, yn) = (x0, y0) will also be used.",
+      "char_count": 318,
+      "token_estimate": 79,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0010",
+      "article_id": "polygon_e5a06eff",
+      "section": "== = Centroid ==",
+      "heading_path": "== = Centroid ==",
+      "start_char": 6212,
+      "end_char": 7174,
+      "content": "== = Centroid === Using the same convention for vertex coordinates as in the previous section, the coordinates of the centroid of a solid simple polygon are C x = 1 6 A ∑ i = 0 n − 1 ( x i + x i + 1 ) ( x i y i + 1 − x i + 1 y i ) , {\\displaystyle C_{x}={\\frac {1}{6A}}\\sum _{i=0}^{n-1}(x_{i}+x_{i+1})(x_{i}y_{i+1}-x_{i+1}y_{i}),} C y = 1 6 A ∑ i = 0 n − 1 ( y i + y i + 1 ) ( x i y i + 1 − x i + 1 y i ) . {\\displaystyle C_{y}={\\frac {1}{6A}}\\sum _{i=0}^{n-1}(y_{i}+y_{i+1})(x_{i}y_{i+1}-x_{i+1}y_{i}).} In these formulas, the signed value of area A {\\displaystyle A} must be used. For triangles (n = 3), the centroids of the vertices and of the solid shape are the same, but, in general, this is not true for n > 3. The centroid of the vertex set of a polygon with n vertices has the coordinates c x = 1 n ∑ i = 0 n − 1 x i , {\\displaystyle c_{x}={\\frac {1}{n}}\\sum _{i=0}^{n-1}x_{i},} c y = 1 n ∑ i = 0 n − 1 y i . {\\displaystyle c_{y}={\\frac {1}{n}}\\sum _{i=0}^{n-1}y_{i}.}",
+      "char_count": 977,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0011",
+      "article_id": "polygon_e5a06eff",
+      "section": "== Generalizations ==",
+      "heading_path": "== Generalizations ==",
+      "start_char": 7195,
+      "end_char": 8051,
+      "content": "== Generalizations == The idea of a polygon has been generalized in various ways. Some of the more important include: A spherical polygon is a circuit of arcs of great circles (sides) and vertices on the surface of a sphere. It allows the digon, a polygon having only two sides and two corners, which is impossible in a flat plane. Spherical polygons play an important role in cartography (map making) and in Wythoff's construction of the uniform polyhedra. A skew polygon does not lie in a flat plane, but zigzags in three (or more) dimensions. The Petrie polygons of the regular polytopes are well known examples. An apeirogon is an infinite sequence of sides and angles, which is not closed but has no ends because it extends indefinitely in both directions. A skew apeirogon is an infinite sequence of sides and angles that do not lie in a flat plane.",
+      "char_count": 855,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0012",
+      "article_id": "polygon_e5a06eff",
+      "section": "== Generalizations ==",
+      "heading_path": "== Generalizations ==",
+      "start_char": 8051,
+      "end_char": 9014,
+      "content": "A polygon with holes is an area-connected or multiply-connected planar polygon with one external boundary and one or more interior boundaries (holes). A complex polygon is a configuration analogous to an ordinary polygon, which exists in the complex plane of two real and two imaginary dimensions. An abstract polygon is an algebraic partially ordered set representing the various elements (sides, vertices, etc.) and their connectivity. A real geometric polygon is said to be a realization of the associated abstract polygon. Depending on the mapping, all the generalizations described here can be realized. A polyhedron is a three-dimensional solid bounded by flat polygonal faces, analogous to a polygon in two dimensions. The corresponding shapes in four or higher dimensions are called polytopes. (In other conventions, the words polyhedron and polytope are used in any dimension, with the distinction between the two that a polytope is necessarily bounded.)",
+      "char_count": 963,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0013",
+      "article_id": "polygon_e5a06eff",
+      "section": "== Naming ==",
+      "heading_path": "== Naming ==",
+      "start_char": 9006,
+      "end_char": 9956,
+      "content": "== Naming == The word polygon comes from Late Latin polygōnum (a noun), from Greek πολύγωνον (polygōnon/polugōnon), noun use of neuter of πολύγωνος (polygōnos/polugōnos, the masculine adjective), meaning \"many-angled\". Individual polygons are named (and sometimes classified) according to the number of sides, combining a Greek-derived numerical prefix with the suffix -gon, e.g. pentagon, dodecagon. The triangle, quadrilateral and nonagon are exceptions. Beyond decagons (10-sided) and dodecagons (12-sided), mathematicians generally use numerical notation, for example 17-gon and 257-gon. Exceptions exist for side counts that are easily expressed in verbal form (e.g. 20 and 30), or are used by non-mathematicians. Some special polygons also have their own names; for example the regular star pentagon is also known as the pentagram. To construct the name of a polygon with more than 20 and fewer than 100 edges, combine the prefixes as follows.",
+      "char_count": 949,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0014",
+      "article_id": "polygon_e5a06eff",
+      "section": "== Naming ==",
+      "heading_path": "== Naming ==",
+      "start_char": 9956,
+      "end_char": 10171,
+      "content": "The \"kai\" term applies to 13-gons and higher and was used by Kepler, and advocated by John H. Conway for clarity of concatenated prefix numbers in the naming of quasiregular polyhedra, though not all sources use it.",
+      "char_count": 215,
+      "token_estimate": 53,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0015",
+      "article_id": "polygon_e5a06eff",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 10173,
+      "end_char": 10758,
+      "content": "== History == Polygons have been known since ancient times. The regular polygons were known to the ancient Greeks, with the pentagram, a non-convex regular polygon (star polygon), appearing as early as the 7th century B.C. on a krater by Aristophanes, found at Caere and now in the Capitoline Museum. The first known systematic study of non-convex polygons in general was made by Thomas Bradwardine in the 14th century. In 1952, Geoffrey Colin Shephard generalized the idea of polygons to the complex plane, where each real dimension is accompanied by an imaginary one, to create complex polygons.",
+      "char_count": 597,
+      "token_estimate": 149,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0016",
+      "article_id": "polygon_e5a06eff",
+      "section": "== In nature ==",
+      "heading_path": "== In nature ==",
+      "start_char": 10773,
+      "end_char": 11297,
+      "content": "== In nature == Polygons appear in rock formations, most commonly as the flat facets of crystals, where the angles between the sides depend on the type of mineral from which the crystal is made. Regular hexagons can occur when the cooling of lava forms areas of tightly packed columns of basalt, which may be seen at the Giant's Causeway in Northern Ireland, or at the Devil's Postpile in California. In biology, the surface of the wax honeycomb made by bees is an array of hexagons, and the sides and base of each cell are also polygons.",
+      "char_count": 538,
+      "token_estimate": 134,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0017",
+      "article_id": "polygon_e5a06eff",
+      "section": "== Computer graphics ==",
+      "heading_path": "== Computer graphics ==",
+      "start_char": 11320,
+      "end_char": 12282,
+      "content": "== Computer graphics == In computer graphics, a polygon is a primitive used in modelling and rendering. They are defined in a database, containing arrays of vertices (the coordinates of the geometrical vertices, as well as other attributes of the polygon, such as color, shading and texture), connectivity information, and materials. Any surface is modelled as a tessellation called polygon mesh. If a square mesh has n + 1 points (vertices) per side, there are n squared squares in the mesh, or 2n squared triangles since there are two triangles in a square. There are (n + 1)2 / 2(n2) vertices per triangle. Where n is large, this approaches one half. Or, each vertex inside the square mesh connects four edges (lines). The imaging system calls up the structure of polygons needed for the scene to be created from the database. This is transferred to active memory and finally, to the display system (screen, TV monitors etc.) so that the scene can be viewed.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "polygon_e5a06eff_c0018",
+      "article_id": "polygon_e5a06eff",
+      "section": "== Computer graphics ==",
+      "heading_path": "== Computer graphics ==",
+      "start_char": 12282,
+      "end_char": 12841,
+      "content": "During this process, the imaging system renders polygons in correct perspective ready for transmission of the processed data to the display system. Although polygons are two-dimensional, through the system computer they are placed in a visual scene in the correct three-dimensional orientation. In computer graphics and computational geometry, it is often necessary to determine whether a given point P = ( x 0 , y 0 ) {\\displaystyle P=(x_{0},y_{0})} lies inside a simple polygon given by a sequence of line segments. This is called the point in polygon test.",
+      "char_count": 559,
+      "token_estimate": 139,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is the sum of the exterior angles for a convex n-gon?",
+        "answer": "The sum of the exterior angles for a convex n-gon must be 360°.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0008"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "In geometry, what are the points where two edges of a polygon meet called?",
+        "answer": "The points where two edges of a polygon meet are called its vertices or corners.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0000"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What information is provided about == = Centroid ==?",
+        "answer": "The text provides information about == = Centroid == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0010"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does the definition of a standard polygon differ from that of a skew polygon in terms of their spatial properties?",
+        "answer": "A standard polygon is defined as a plane figure, meaning all its vertices and edges are contained within a single two-dimensional plane. In contrast, a skew polygon is a closed polygonal chain that does not lie in a single plane, meaning its vertices exist in three-dimensional space.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0000",
+          "polygon_e5a06eff_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What information is provided about == Etymology ==?",
+        "answer": "The text provides information about == Etymology == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0002",
+          "polygon_e5a06eff_c0003"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What defines a regular star polygon, and how does this relate to the properties of star polygons and regular polygons?",
+        "answer": "A regular star polygon is a non-convex regular polygon. This means it is both equilateral (all sides have the same length) and equiangular (all corner angles are equal), but it is not convex. It is a specific type of star polygon, which is a polygon that self-intersects in a regular way.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0004",
+          "polygon_e5a06eff_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does the concept of a skew polygon differ from the primary definition of a polygon?",
+        "answer": "A standard polygon is defined as a plane figure, meaning it is made up of line segments that lie within a single plane. In contrast, a skew polygon is a generalization where the closed polygonal chain of segments does not lie in a single plane.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0000",
+          "polygon_e5a06eff_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the relationship between convex, simple, and star-shaped polygons?",
+        "answer": "All convex polygons are considered simple, meaning their boundaries do not self-intersect. They are also all star-shaped, which means their entire interior is visible from at least one point. Star-shaped polygons themselves must be simple.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0003",
+          "polygon_e5a06eff_c0004"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the relationship between a polygon's interior and exterior angles, and what is the total sum of the exterior angles for a convex polygon?",
+        "answer": "The exterior angle is the supplementary angle to the interior angle. For a convex n-gon, the sum of the exterior angles is 360°, which represents the one full turn made when tracing all the way around the polygon.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0007",
+          "polygon_e5a06eff_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the relationship between an abstract polygon and other generalized polygon types like spherical or skew polygons?",
+        "answer": "An abstract polygon is an algebraic, partially ordered set representing a polygon's elements and their connectivity. Other generalized forms, such as spherical polygons (on a sphere's surface) and skew polygons (which are not planar), can be considered specific geometric \"realizations\" of an associated abstract polygon, depending on the mapping used.",
+        "related_chunk_ids": [
+          "polygon_e5a06eff_c0011",
+          "polygon_e5a06eff_c0012"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:46.307Z",
+    "content_format": "markdown",
+    "total_chunks": 19,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "article": {
+    "id": "closeinweaponsystem_7a299e66",
+    "title": "Close-in weapon system",
+    "url": "https://en.wikipedia.org/wiki/Close-in_weapon_system",
+    "lang": "en",
+    "created_at": "2025-07-31T08:49:13.012722",
+    "content": "---\nid: closeinweaponsystem_7a299e66\nurl: https://en.wikipedia.org/wiki/Close-in_weapon_system\ntitle: Close-in weapon system\nlang: en\ncreated_at: '2025-07-31T08:44:32.287339'\nchecksum: 6cc04b73b4e92cef82a8f27377e80bb825e2196b8d6ec558d32fd38210bc7a38\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 676\n  char_count: 4303\n  num_chunks: 6\n  original_chunks: 10\n  filtered_out: 4\n  num_sections: 0\n---\nA close-in weapon system (CIWS SEE-wiz) is a point-defense weapon system for detecting and destroying short-range incoming missiles and enemy aircraft which have penetrated the outer defenses, typically mounted on a naval ship. Nearly all classes of larger modern warships along with many other warships are equipped with some kind of CIWS device. There are mainly three types of CIWS systems: gun-based CIWS, missile-based CIWS, and hybrid gun- and missile-based CIWS. A gun-based CIWS usually consists of a combination of radars, computers, and rapid-firing multiple-barrel rotary cannons placed on a rotating turret. Missile-based CIWSs use either infra-red, passive radar/ESM, or semi-active radar terminal guidance to guide missiles to the targeted enemy aircraft or other threats. In some cases, CIWS are used on land to protect military bases. In this case, the CIWS can also protect the base from shell and rocket fire. == Gun systems == A gun-based CIWS usually consists of a combination of radars, computers and rotary or revolver cannon placed on a rotating, automatically aimed gun mount. Examples of gun-based CIWS products in operation are: AK-630, 630M, 306, 630M1-2, and 630M2 - 30×165mm caliber Aselsan GOKDENIZ and GOKDENIZ ER - 35×228mm DARDO and Fast Forty - 40×365mmR Denel 35mm Dual Purpose Gun - 35×228mm Goalkeeper CIWS - 30×173mm Kashtan CIWS and M variant - 30×165mm Meroka CIWS - 20×128mm Myriad CIWS - 25×184mm PIT-Radwar OSU-35K - 35×228mm Rheinmetall Oerlikon Millennium Gun - 35×228mm Rheinmetall Sea Snake 30 mm - 30×173mm Phalanx CIWS Block 0, 1, 1A, and 1B - 20×102mm Sea Zenith - 25×184mm Type 730 and Type 1130 CIWS - 30×165mm === Limitations of gun systems === CIWS systems are short range: the maximum effective range of gun systems is about 5,000 metres (16,000 ft); systems with lighter projectiles have even shorter range. The expected real-world kill-distance of an incoming anti-ship missile is about 500 m (1,600 ft) or less, still close enough to cause damage to the ship's sensor or communication arrays, or to wound or kill exposed personnel. Thus some CIWS like Russian Kashtan and Pantsir systems are augmented by installing the close range surface-to-air missiles on the same mounting for increased tactical flexibility. They have a limited kill probability compared to other antiair guns. Even if the missile is hit and damaged, this may not be enough to destroy it entirely or to alter its course. Even in the case of a direct hit, the missile or fragments from it may still impact the intended target, particularly if the final interception distance is short. This is especially true if the gun fires kinetic-energy-only projectiles. === Comparison table === == Missile systems == A missile-based CIWS comprises a combination of radars and computers connected to either a rotating, automatically aimed launcher mount or vertical launching system. Examples of missile-based CIWS in operational service are: 9M337 Sosna-R Barak 1 GÖKSUR (Turkey) HHQ-10 / FL-3000N RIM-116 Rolling Airframe Missile Roketsan Levent (Turkey) Mistral-3 (ship-based remotely controlled variants) Sea Oryx Tor missile system == Hybrid Gun-Missile systems == Examples of gun-missile-based CIWS in operational service are: Kortik / Kashtan CIWS Pantsir-M missile system == Land-based == CIWS are also used on land in the form of Pantsir and C-RAM. On a smaller scale, active protection systems are used in some tanks (to destroy rocket propelled grenades (RPGs), and several are in development. The Drozd system was deployed on Soviet Naval Infantry tanks in the early 1980s, but later replaced by explosive reactive armour. Other systems that are available or under development are the Russian Arena, Israeli Trophy, American Quick Kill and South African-Swedish LEDS-150. == Laser systems == Laser-based CIWS systems are being researched. In August 2014 an operational prototype was deployed to the Persian Gulf aboard USS Ponce. The Scientific and Technological Research Council of Turkey (Turkish: Türkiye Bilimsel ve Teknolojik Araştırma Kurumu, TÜBİTAK) is the second organisation after the US to have developed and tested a High Power Laser CIWS prototype System which is intended to be used on the TF-2000 class frigate and on Turkish airborne systems. == References =="
+  },
+  "chunks": [
+    {
+      "id": "closeinweaponsystem_7a299e66_c0000",
+      "article_id": "closeinweaponsystem_7a299e66",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 928,
+      "content": "A close-in weapon system (CIWS SEE-wiz) is a point-defense weapon system for detecting and destroying short-range incoming missiles and enemy aircraft which have penetrated the outer defenses, typically mounted on a naval ship. Nearly all classes of larger modern warships along with many other warships are equipped with some kind of CIWS device. There are mainly three types of CIWS systems: gun-based CIWS, missile-based CIWS, and hybrid gun- and missile-based CIWS. A gun-based CIWS usually consists of a combination of radars, computers, and rapid-firing multiple-barrel rotary cannons placed on a rotating turret. Missile-based CIWSs use either infra-red, passive radar/ESM, or semi-active radar terminal guidance to guide missiles to the targeted enemy aircraft or other threats. In some cases, CIWS are used on land to protect military bases. In this case, the CIWS can also protect the base from shell and rocket fire.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "closeinweaponsystem_7a299e66_c0001",
+      "article_id": "closeinweaponsystem_7a299e66",
+      "section": "== Gun systems ==",
+      "heading_path": "== Gun systems ==",
+      "start_char": 945,
+      "end_char": 1663,
+      "content": "== Gun systems == A gun-based CIWS usually consists of a combination of radars, computers and rotary or revolver cannon placed on a rotating, automatically aimed gun mount. Examples of gun-based CIWS products in operation are: AK-630, 630M, 306, 630M1-2, and 630M2 - 30×165mm caliber Aselsan GOKDENIZ and GOKDENIZ ER - 35×228mm DARDO and Fast Forty - 40×365mmR Denel 35mm Dual Purpose Gun - 35×228mm Goalkeeper CIWS - 30×173mm Kashtan CIWS and M variant - 30×165mm Meroka CIWS - 20×128mm Myriad CIWS - 25×184mm PIT-Radwar OSU-35K - 35×228mm Rheinmetall Oerlikon Millennium Gun - 35×228mm Rheinmetall Sea Snake 30 mm - 30×173mm Phalanx CIWS Block 0, 1, 1A, and 1B - 20×102mm Sea Zenith - 25×184mm Type 730 and Type 1130 CIWS - 30×165mm",
+      "char_count": 734,
+      "token_estimate": 183,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "closeinweaponsystem_7a299e66_c0002",
+      "article_id": "closeinweaponsystem_7a299e66",
+      "section": "== = Limitations of gun systems ==",
+      "heading_path": "== = Limitations of gun systems ==",
+      "start_char": 1697,
+      "end_char": 2648,
+      "content": "== = Limitations of gun systems === CIWS systems are short range: the maximum effective range of gun systems is about 5,000 metres (16,000 ft); systems with lighter projectiles have even shorter range. The expected real-world kill-distance of an incoming anti-ship missile is about 500 m (1,600 ft) or less, still close enough to cause damage to the ship's sensor or communication arrays, or to wound or kill exposed personnel. Thus some CIWS like Russian Kashtan and Pantsir systems are augmented by installing the close range surface-to-air missiles on the same mounting for increased tactical flexibility. They have a limited kill probability compared to other antiair guns. Even if the missile is hit and damaged, this may not be enough to destroy it entirely or to alter its course. Even in the case of a direct hit, the missile or fragments from it may still impact the intended target, particularly if the final interception distance is short.",
+      "char_count": 950,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "closeinweaponsystem_7a299e66_c0003",
+      "article_id": "closeinweaponsystem_7a299e66",
+      "section": "== Missile systems ==",
+      "heading_path": "== Missile systems ==",
+      "start_char": 2735,
+      "end_char": 3155,
+      "content": "== Missile systems == A missile-based CIWS comprises a combination of radars and computers connected to either a rotating, automatically aimed launcher mount or vertical launching system. Examples of missile-based CIWS in operational service are: 9M337 Sosna-R Barak 1 GÖKSUR (Turkey) HHQ-10 / FL-3000N RIM-116 Rolling Airframe Missile Roketsan Levent (Turkey) Mistral-3 (ship-based remotely controlled variants) Sea Oryx Tor missile system",
+      "char_count": 440,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "closeinweaponsystem_7a299e66_c0004",
+      "article_id": "closeinweaponsystem_7a299e66",
+      "section": "== Land-based ==",
+      "heading_path": "== Land-based ==",
+      "start_char": 3314,
+      "end_char": 3802,
+      "content": "== Land-based == CIWS are also used on land in the form of Pantsir and C-RAM. On a smaller scale, active protection systems are used in some tanks (to destroy rocket propelled grenades (RPGs), and several are in development. The Drozd system was deployed on Soviet Naval Infantry tanks in the early 1980s, but later replaced by explosive reactive armour. Other systems that are available or under development are the Russian Arena, Israeli Trophy, American Quick Kill and South African-Swedish LEDS-150.",
+      "char_count": 503,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "closeinweaponsystem_7a299e66_c0005",
+      "article_id": "closeinweaponsystem_7a299e66",
+      "section": "== Laser systems ==",
+      "heading_path": "== Laser systems ==",
+      "start_char": 3821,
+      "end_char": 4289,
+      "content": "== Laser systems == Laser-based CIWS systems are being researched. In August 2014 an operational prototype was deployed to the Persian Gulf aboard USS Ponce. The Scientific and Technological Research Council of Turkey (Turkish: Türkiye Bilimsel ve Teknolojik Araştırma Kurumu, TÜBİTAK) is the second organisation after the US to have developed and tested a High Power Laser CIWS prototype System which is intended to be used on the TF-2000 class frigate and on Turkish airborne systems.",
+      "char_count": 486,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 5,
+    "items": [
+      {
+        "question": "What information is provided about == = Limitations of gun systems ==?",
+        "answer": "The text provides information about == = Limitations of gun systems == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "closeinweaponsystem_7a299e66_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the three main types of Close-in Weapon Systems (CIWS)?",
+        "answer": "The three main types of CIWS systems are gun-based CIWS, missile-based CIWS, and hybrid gun- and missile-based CIWS.",
+        "related_chunk_ids": [
+          "closeinweaponsystem_7a299e66_c0000"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What information is provided about == Gun systems ==?",
+        "answer": "The text provides information about == Gun systems == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "closeinweaponsystem_7a299e66_c0001"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the key limitations of gun-based CIWS, and how does a system like the Russian Kashtan address these issues?",
+        "answer": "Gun-based CIWS have a short effective range, with a real-world kill distance of about 500 meters, which is close enough for debris to still cause damage. They also have a limited kill probability, as a damaged missile may not be fully destroyed or diverted. To address these limitations, the Russian Kashtan system is augmented by installing close-range surface-to-air missiles on the same mounting, which increases its tactical flexibility.",
+        "related_chunk_ids": [
+          "closeinweaponsystem_7a299e66_c0001",
+          "closeinweaponsystem_7a299e66_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "In what different environments are Close-In Weapon Systems (CIWS) deployed, and what are some examples for each type of deployment?",
+        "answer": "Close-In Weapon Systems (CIWS) are deployed in both naval (missile-based) and land-based environments. Examples of missile-based systems, which can be ship-based, include the RIM-116 Rolling Airframe Missile and the Tor missile system. Land-based systems include Pantsir and C-RAM, as well as smaller active protection systems used on tanks like the Israeli Trophy and Russian Arena.",
+        "related_chunk_ids": [
+          "closeinweaponsystem_7a299e66_c0003",
+          "closeinweaponsystem_7a299e66_c0004"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T10:54:55.605Z",
+    "content_format": "markdown",
+    "total_chunks": 6,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

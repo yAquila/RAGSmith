@@ -1,0 +1,275 @@
+{
+  "article": {
+    "id": "corporatebond_62280a98",
+    "title": "Corporate bond",
+    "url": "https://en.wikipedia.org/wiki/Corporate_bond",
+    "lang": "en",
+    "created_at": "2025-07-30T14:07:23.760571",
+    "content": "---\nid: corporatebond_62280a98\nurl: https://en.wikipedia.org/wiki/Corporate_bond\ntitle: Corporate bond\nlang: en\ncreated_at: '2025-07-30T14:02:03.617358'\nchecksum: cdefd606f043a747e2910318e336114c76399eefc427d19695a2eda4fc1178dc\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1405\n  char_count: 8699\n  num_chunks: 14\n  original_chunks: 18\n  filtered_out: 4\n  num_sections: 0\n---\nA corporate bond is a bond issued by a corporation in order to raise financing for a variety of reasons such as to ongoing operations, mergers & acquisitions, or to expand business. It is a longer-term debt instrument indicating that a corporation has borrowed a certain amount of money and promises to repay it in the future under specific terms. Corporate debt instruments with maturity shorter than one year are referred to as commercial paper. == Definition == A corporate bond is a bond issued by a corporation in order to raise financing for a variety of reasons such as to ongoing operations, mergers & acquisitions, or to expand business. The term sometimes also encompasses bonds issued by supranational organizations (such as European Bank for Reconstruction and Development). Strictly speaking, however, it only applies to those issued by corporations. The bonds of local authorities (municipal bonds) are not included. == Trading == Corporate bonds trade in decentralized, dealer-based, over-the-counter markets. In over-the-counter trading dealers act as intermediaries between buyers and sellers. Corporate bonds may be publicly listed (these are called \"listed\" bonds). However, the vast majority of trading volume happens over-the-counter. == High grade versus high yield == Corporate bonds are divided into two main categories High Grade (also called Investment Grade) and High Yield (also called Non-Investment Grade, Speculative Grade, or Junk Bonds) according to their credit rating. Bonds rated AAA, AA, A, and BBB are High Grade, while bonds rated BB and below are High Yield. This is a significant distinction as High Grade and High Yield bonds are traded by different trading desks and held by different investors. For example, many pension funds and insurance companies are prohibited from holding more than a token amount of High Yield bonds (by internal rules or government regulation). The distinction between High Grade and High Yield is also common to most corporate bond markets. == Bond types == The coupon (i.e. interest payment) is usually taxable for the investor. It is tax deductible for the corporation paying it. For US dollar corporates, the coupon is almost always semiannual, while Euro denominated corporates pay coupon quarterly. The coupon can be zero. In this case the bond, a zero-coupon bond, is sold at a discount (i.e. a $100 face value bond sold initially for $80). The investor benefits by paying $80, but collecting $100 at maturity. The $20 gain (ignoring time value of money) is in lieu of the regular coupon. However, this is rare for corporate bonds. Some corporate bonds have an embedded call option that allows the issuer to redeem the debt before its maturity date. These are called callable bonds. A less common feature is an embedded put option that allows investors to put the bond back to the issuer before its maturity date. These are called putable bonds. Both of these features are common to the High Yield market. High Grade bonds rarely have embedded options. A straight bond that is neither callable nor putable is called a bullet bond. Other bonds, known as convertible bonds, allow investors to convert the bond into equity. They can also be secured or unsecured, senior or subordinated, and issued out of different parts of the company's capital structure. == Valuation == High grade corporate bonds usually trade at market interest rate but low grade corporate bonds usually trade on credit spread. Credit spread is the difference in yield between the corporate bond and a Government bond of similar maturity or duration (e.g. for US Dollar corporates, US Treasury bonds). It is essentially the extra yield an investor earns over a risk free instrument as a compensation for the extra risk: thus, the better the quality of the bond, the smaller the spread between its required return and the yield to maturity (YTM) of the benchmark; see § Risk analysis below.This increased required return is then used to discount the bond's cash flows, using the present value formula for bonds, to obtain the bond's price. See Bond (finance) § Bond valuation for discussion, and for the math, Bond valuation. == Derivatives == The most common derivative on corporate bonds are called credit default swaps (CDS) which are contracts between two parties that provide a synthetic exposure with similar risks to owning the bond. The bond that the CDS is based on is called the Reference Entity and the difference between the credit spread of the bond and the spread of the CDS is called the Bond-CDS basis. == Risk analysis == === Default risk === Compared to government bonds, corporate bonds generally have a higher risk of default. This risk depends on the particular corporation issuing the bond, the current market conditions and governments to which the bond issuer is being compared and the rating of the company. Corporate bond holders are compensated for this risk by receiving a higher yield than government bonds. The difference in yield - called credit spread - reflects the higher probability of default, the expected loss in the event of default, and may also reflect liquidity and risk premia; see Bond credit rating, High-yield debt. === Other risks === Additional to default risk, as outlined, there are other risks for which corporate bondholders expect to be compensated through an increased credit spread. This explains, for example, the Option Adjusted Spread on a Ginnie Mae MBS relative to the Treasury curve. Credit Spread Risk: The risk that the credit spread of a bond (extra yield to compensate investors for taking default risk), which is inherent in the fixed coupon, becomes insufficient compensation for default risk that has later deteriorated. As the coupon is fixed the only way the credit spread can readjust to new circumstances is by the market price of the bond falling and the yield rising to such a level that an appropriate credit spread is offered. (See CS01.) Interest Rate Risk: The risk that level of Yields generally in a bond market, as expressed by Government Bond Yields, may change and thus bring about changes in the market value of Fixed-Coupon bonds so that their Yield to Maturity adjusts to newly appropriate levels. (See DV01, Bond duration and Bond convexity.) Liquidity Risk: There may not be a continuous secondary market for a bond, thus leaving an investor with difficulty in selling at, or even near to, a fair price. This particular risk could become more severe in developing markets, where a large amount of junk bonds belong, such as India, Vietnam, Indonesia, etc. Supply Risk: Heavy issuance of new bonds similar to the one held may depress their prices. Inflation Risk: Inflation reduces the real value of future fixed cash flows. An anticipation of inflation, or higher inflation, may depress prices immediately. Tax Change Risk: Unanticipated changes in taxation may adversely impact the value of a bond to investors and consequently its immediate market value. == Corporate bond indices == Corporate bond indices include the Barclays Corporate Bond Index, S&P U.S. Issued Investment Grade Corporate Bond Index (SPUSCIG), the Citigroup US Broad Investment Grade Credit Index, the JPMorgan US Liquid Index (JULI), and the Dow Jones Corporate Bond Index. == Corporate bond market transparency == Speaking in 2005, SEC Chief Economist Chester S. Spatt offered the following opinion on the transparency of corporate bond markets: Frankly, I find it surprising that there has been so little attention to pre-trade transparency in the design of the U.S. bond markets. While some might argue that this is a consequence of the degree of fragmentation in the bond market, I would point to options markets and European bond markets-which are similarly fragmented, but much more transparent on a pre-trade basis. A combination of mathematical and regulatory initiatives are aimed at addressing pre-trade transparency in the U.S. corporate bond markets. == Foreign-currency denominated bonds == In February 2015 it was expected that Apple Inc. would issue its corporate bonds in Swiss francs, as the yields of Switzerland's government bonds went negative. Taking advantage of the very low borrowing costs, the computer maker intended to sell CHF-denominated bonds for the first time. The California-based company did sell positive-yield and Swiss franc-denominated bonds on 10 February 2015, borrowing CHF 1.25 billion (nearly equivalent to US$1.35 billion). It was thought that the company aimed to expand its total shareholder return more in 2015 than in 2014. == See also == Debenture Corporate debt bubble Corporate debt by country List of most indebted companies == References =="
+  },
+  "chunks": [
+    {
+      "id": "corporatebond_62280a98_c0000",
+      "article_id": "corporatebond_62280a98",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 448,
+      "content": "A corporate bond is a bond issued by a corporation in order to raise financing for a variety of reasons such as to ongoing operations, mergers & acquisitions, or to expand business. It is a longer-term debt instrument indicating that a corporation has borrowed a certain amount of money and promises to repay it in the future under specific terms. Corporate debt instruments with maturity shorter than one year are referred to as commercial paper.",
+      "char_count": 447,
+      "token_estimate": 111,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0001",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 464,
+      "end_char": 931,
+      "content": "== Definition == A corporate bond is a bond issued by a corporation in order to raise financing for a variety of reasons such as to ongoing operations, mergers & acquisitions, or to expand business. The term sometimes also encompasses bonds issued by supranational organizations (such as European Bank for Reconstruction and Development). Strictly speaking, however, it only applies to those issued by corporations. The bonds of local authorities (municipal bonds) are not included.",
+      "char_count": 482,
+      "token_estimate": 120,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0002",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Trading ==",
+      "heading_path": "== Trading ==",
+      "start_char": 944,
+      "end_char": 1256,
+      "content": "== Trading == Corporate bonds trade in decentralized, dealer-based, over-the-counter markets. In over-the-counter trading dealers act as intermediaries between buyers and sellers. Corporate bonds may be publicly listed (these are called \"listed\" bonds). However, the vast majority of trading volume happens over-the-counter.",
+      "char_count": 324,
+      "token_estimate": 81,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0003",
+      "article_id": "corporatebond_62280a98",
+      "section": "== High grade versus high yield ==",
+      "heading_path": "== High grade versus high yield ==",
+      "start_char": 1290,
+      "end_char": 2011,
+      "content": "== High grade versus high yield == Corporate bonds are divided into two main categories High Grade (also called Investment Grade) and High Yield (also called Non-Investment Grade, Speculative Grade, or Junk Bonds) according to their credit rating. Bonds rated AAA, AA, A, and BBB are High Grade, while bonds rated BB and below are High Yield. This is a significant distinction as High Grade and High Yield bonds are traded by different trading desks and held by different investors. For example, many pension funds and insurance companies are prohibited from holding more than a token amount of High Yield bonds (by internal rules or government regulation). The distinction between High Grade and High Yield is also common to most corporate bond markets.",
+      "char_count": 754,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0004",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Bond types ==",
+      "heading_path": "== Bond types ==",
+      "start_char": 2027,
+      "end_char": 2998,
+      "content": "== Bond types == The coupon (i.e. interest payment) is usually taxable for the investor. It is tax deductible for the corporation paying it. For US dollar corporates, the coupon is almost always semiannual, while Euro denominated corporates pay coupon quarterly. The coupon can be zero. In this case the bond, a zero-coupon bond, is sold at a discount (i.e. a $100 face value bond sold initially for $80). The investor benefits by paying $80, but collecting $100 at maturity. The $20 gain (ignoring time value of money) is in lieu of the regular coupon. However, this is rare for corporate bonds. Some corporate bonds have an embedded call option that allows the issuer to redeem the debt before its maturity date. These are called callable bonds. A less common feature is an embedded put option that allows investors to put the bond back to the issuer before its maturity date. These are called putable bonds. Both of these features are common to the High Yield market.",
+      "char_count": 970,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0005",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Bond types ==",
+      "heading_path": "== Bond types ==",
+      "start_char": 2998,
+      "end_char": 3345,
+      "content": "High Grade bonds rarely have embedded options. A straight bond that is neither callable nor putable is called a bullet bond. Other bonds, known as convertible bonds, allow investors to convert the bond into equity. They can also be secured or unsecured, senior or subordinated, and issued out of different parts of the company's capital structure.",
+      "char_count": 347,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0006",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Valuation ==",
+      "heading_path": "== Valuation ==",
+      "start_char": 3345,
+      "end_char": 4170,
+      "content": "== Valuation == High grade corporate bonds usually trade at market interest rate but low grade corporate bonds usually trade on credit spread. Credit spread is the difference in yield between the corporate bond and a Government bond of similar maturity or duration (e.g. for US Dollar corporates, US Treasury bonds). It is essentially the extra yield an investor earns over a risk free instrument as a compensation for the extra risk: thus, the better the quality of the bond, the smaller the spread between its required return and the yield to maturity (YTM) of the benchmark; see § Risk analysis below.This increased required return is then used to discount the bond's cash flows, using the present value formula for bonds, to obtain the bond's price. See Bond (finance) § Bond valuation for discussion, and for the math, Bond valuation.",
+      "char_count": 839,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0007",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Derivatives ==",
+      "heading_path": "== Derivatives ==",
+      "start_char": 4187,
+      "end_char": 4563,
+      "content": "== Derivatives == The most common derivative on corporate bonds are called credit default swaps (CDS) which are contracts between two parties that provide a synthetic exposure with similar risks to owning the bond. The bond that the CDS is based on is called the Reference Entity and the difference between the credit spread of the bond and the spread of the CDS is called the Bond-CDS basis.",
+      "char_count": 392,
+      "token_estimate": 98,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0008",
+      "article_id": "corporatebond_62280a98",
+      "section": "== = Default risk ==",
+      "heading_path": "== = Default risk ==",
+      "start_char": 4603,
+      "end_char": 5207,
+      "content": "== = Default risk === Compared to government bonds, corporate bonds generally have a higher risk of default. This risk depends on the particular corporation issuing the bond, the current market conditions and governments to which the bond issuer is being compared and the rating of the company. Corporate bond holders are compensated for this risk by receiving a higher yield than government bonds. The difference in yield - called credit spread - reflects the higher probability of default, the expected loss in the event of default, and may also reflect liquidity and risk premia; see Bond credit rating, High-yield debt.",
+      "char_count": 623,
+      "token_estimate": 155,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0009",
+      "article_id": "corporatebond_62280a98",
+      "section": "== = Other risks ==",
+      "heading_path": "== = Other risks ==",
+      "start_char": 5226,
+      "end_char": 5968,
+      "content": "== = Other risks === Additional to default risk, as outlined, there are other risks for which corporate bondholders expect to be compensated through an increased credit spread. This explains, for example, the Option Adjusted Spread on a Ginnie Mae MBS relative to the Treasury curve. Credit Spread Risk: The risk that the credit spread of a bond (extra yield to compensate investors for taking default risk), which is inherent in the fixed coupon, becomes insufficient compensation for default risk that has later deteriorated. As the coupon is fixed the only way the credit spread can readjust to new circumstances is by the market price of the bond falling and the yield rising to such a level that an appropriate credit spread is offered.",
+      "char_count": 741,
+      "token_estimate": 185,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0010",
+      "article_id": "corporatebond_62280a98",
+      "section": "== = Other risks ==",
+      "heading_path": "== = Other risks ==",
+      "start_char": 5968,
+      "end_char": 6859,
+      "content": "(See CS01.) Interest Rate Risk: The risk that level of Yields generally in a bond market, as expressed by Government Bond Yields, may change and thus bring about changes in the market value of Fixed-Coupon bonds so that their Yield to Maturity adjusts to newly appropriate levels. (See DV01, Bond duration and Bond convexity.) Liquidity Risk: There may not be a continuous secondary market for a bond, thus leaving an investor with difficulty in selling at, or even near to, a fair price. This particular risk could become more severe in developing markets, where a large amount of junk bonds belong, such as India, Vietnam, Indonesia, etc. Supply Risk: Heavy issuance of new bonds similar to the one held may depress their prices. Inflation Risk: Inflation reduces the real value of future fixed cash flows. An anticipation of inflation, or higher inflation, may depress prices immediately.",
+      "char_count": 891,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0011",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Corporate bond indices ==",
+      "heading_path": "== Corporate bond indices ==",
+      "start_char": 7019,
+      "end_char": 7282,
+      "content": "== Corporate bond indices == Corporate bond indices include the Barclays Corporate Bond Index, S&P U.S. Issued Investment Grade Corporate Bond Index (SPUSCIG), the Citigroup US Broad Investment Grade Credit Index, the JPMorgan US Liquid Index (JULI), and the Dow Jones Corporate Bond Index.",
+      "char_count": 290,
+      "token_estimate": 72,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0012",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Corporate bond market transparency ==",
+      "heading_path": "== Corporate bond market transparency ==",
+      "start_char": 7322,
+      "end_char": 7971,
+      "content": "== Corporate bond market transparency == Speaking in 2005, SEC Chief Economist Chester S. Spatt offered the following opinion on the transparency of corporate bond markets: Frankly, I find it surprising that there has been so little attention to pre-trade transparency in the design of the U.S. bond markets. While some might argue that this is a consequence of the degree of fragmentation in the bond market, I would point to options markets and European bond markets-which are similarly fragmented, but much more transparent on a pre-trade basis. A combination of mathematical and regulatory initiatives are aimed at addressing pre-trade transparency in the U.S. corporate bond markets.",
+      "char_count": 688,
+      "token_estimate": 172,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporatebond_62280a98_c0013",
+      "article_id": "corporatebond_62280a98",
+      "section": "== Foreign-currency denominated bonds ==",
+      "heading_path": "== Foreign-currency denominated bonds ==",
+      "start_char": 8011,
+      "end_char": 8580,
+      "content": "== Foreign-currency denominated bonds == In February 2015 it was expected that Apple Inc. would issue its corporate bonds in Swiss francs, as the yields of Switzerland's government bonds went negative. Taking advantage of the very low borrowing costs, the computer maker intended to sell CHF-denominated bonds for the first time. The California-based company did sell positive-yield and Swiss franc-denominated bonds on 10 February 2015, borrowing CHF 1.25 billion (nearly equivalent to US$1.35 billion). It was thought that the company aimed to expand its total shareholder return more in 2015 than in 2014.",
+      "char_count": 608,
+      "token_estimate": 152,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 8,
+    "items": [
+      {
+        "question": "What is the typical coupon payment frequency for US dollar corporate bonds versus Euro denominated corporate bonds?",
+        "answer": "For US dollar corporate bonds, the coupon is almost always paid semiannually, while Euro denominated corporate bonds pay the coupon quarterly.",
+        "related_chunk_ids": [
+          "corporatebond_62280a98_c0004"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "According to the text, what is liquidity risk in the context of bonds, and in which markets might this risk be more severe?",
+        "answer": "Liquidity risk is the risk that an investor may have difficulty selling a bond at or near a fair price because a continuous secondary market for it does not exist. This risk can be more severe in developing markets, such as India, Vietnam, and Indonesia.",
+        "related_chunk_ids": [
+          "corporatebond_62280a98_c0010"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the definition of a credit spread for corporate bonds?",
+        "answer": "A credit spread is the difference in yield between a corporate bond and a government bond of similar maturity or duration. It serves as compensation for the extra risk an investor takes on compared to a risk-free instrument.",
+        "related_chunk_ids": [
+          "corporatebond_62280a98_c0006"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How are corporate debt instruments classified based on their maturity, and what types of issuers are explicitly excluded from the strict definition of a corporate bond?",
+        "answer": "Corporate debt instruments are classified by maturity into two types: longer-term instruments known as corporate bonds, and shorter-term instruments with a maturity of less than one year, referred to as commercial paper. The strict definition of a corporate bond excludes bonds issued by local authorities, which are called municipal bonds.",
+        "related_chunk_ids": [
+          "corporatebond_62280a98_c0000",
+          "corporatebond_62280a98_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Provide a comprehensive description of High Yield corporate bonds, covering their credit rating, trading environment, and common features.",
+        "answer": "High Yield corporate bonds, also known as Non-Investment Grade, Speculative Grade, or Junk Bonds, are those with a credit rating of BB or below. They are traded in decentralized, over-the-counter markets, but are handled by different trading desks and held by different investors than High Grade bonds. Common features for bonds in the High Yield market include embedded options like call options, which allow the issuer to redeem the debt early, and put options, which allow investors to sell the bond back to the issuer before maturity.",
+        "related_chunk_ids": [
+          "corporatebond_62280a98_c0002",
+          "corporatebond_62280a98_c0003",
+          "corporatebond_62280a98_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How are high-grade bonds, which are often straight or \"bullet\" bonds, typically valued in the market?",
+        "answer": "High-grade bonds, which rarely have embedded options and are often straight \"bullet\" bonds, usually trade based on the market interest rate. Their valuation involves a small credit spread over a government bond of similar maturity, which is minimal due to the bond's high quality and lower risk. This required return is then used to discount the bond's cash flows to determine its price.",
+        "related_chunk_ids": [
+          "corporatebond_62280a98_c0005",
+          "corporatebond_62280a98_c0006"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do High Yield and High Grade bonds typically differ regarding the inclusion of embedded options?",
+        "answer": "High Yield bonds commonly feature embedded options, such as call options that allow the issuer to redeem the debt early or put options that let investors sell the bond back to the issuer. In contrast, High Grade bonds rarely have these embedded options.",
+        "related_chunk_ids": [
+          "corporatebond_62280a98_c0004",
+          "corporatebond_62280a98_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are the various risks, other than default risk, that corporate bondholders face which can affect a bond's value?",
+        "answer": "Besides default risk, corporate bondholders face several other risks for which they expect compensation. These include: Credit Spread Risk, where the bond's fixed spread becomes insufficient if the issuer's default risk worsens, causing the bond's price to fall. Interest Rate Risk is the risk that changes in general market yields will alter the value of a fixed-coupon bond. Liquidity Risk is the difficulty in selling a bond at a fair price due to a lack of a continuous secondary market. Supply Risk occurs when a heavy issuance of similar new bonds depresses the prices of existing ones. Lastly, Inflation Risk is the risk that inflation reduces the real value of future fixed payments, which can depress prices immediately.",
+        "related_chunk_ids": [
+          "corporatebond_62280a98_c0009",
+          "corporatebond_62280a98_c0010"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:26.222Z",
+    "content_format": "markdown",
+    "total_chunks": 14,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

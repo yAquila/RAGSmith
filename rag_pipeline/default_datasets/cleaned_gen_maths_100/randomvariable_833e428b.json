@@ -1,0 +1,479 @@
+{
+  "article": {
+    "id": "randomvariable_833e428b",
+    "title": "Random variable",
+    "url": "https://en.wikipedia.org/wiki/Random_variable",
+    "lang": "en",
+    "created_at": "2025-07-31T06:35:02.978451",
+    "content": "---\nid: randomvariable_833e428b\nurl: https://en.wikipedia.org/wiki/Random_variable\ntitle: Random variable\nlang: en\ncreated_at: '2025-07-31T06:27:03.451916'\nchecksum: f4010aeb72250a1eff98bb2407d44e4b534536427b6f3a9bb4f3debde5f96fe5\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3665\n  char_count: 21168\n  num_chunks: 28\n  original_chunks: 36\n  filtered_out: 8\n  num_sections: 0\n---\nA random variable (also called random quantity, aleatory variable, or stochastic variable) is a mathematical formalization of a quantity or object which depends on random events. The term 'random variable' in its mathematical definition refers to neither randomness nor variability but instead is a mathematical function in which the domain is the set of possible outcomes in a sample space (e.g. the set { H , T } {\\displaystyle \\{H,T\\}} which are the possible upper sides of a flipped coin heads H {\\displaystyle H} or tails T {\\displaystyle T} as the result from tossing a coin); and the range is a measurable space (e.g. corresponding to the domain above, the range might be the set { − 1 , 1 } {\\displaystyle \\{-1,1\\}} if say heads H {\\displaystyle H} mapped to -1 and T {\\displaystyle T} mapped to 1). Typically, the range of a random variable is a subset of the real numbers. Informally, randomness typically represents some fundamental element of chance, such as in the roll of a die; it may also represent uncertainty, such as measurement error. However, the interpretation of probability is philosophically complicated, and even in specific cases is not always straightforward. The purely mathematical analysis of random variables is independent of such interpretational difficulties, and can be based upon a rigorous axiomatic setup. In the formal mathematical language of measure theory, a random variable is defined as a measurable function from a probability measure space (called the sample space) to a measurable space. This allows consideration of the pushforward measure, which is called the distribution of the random variable; the distribution is thus a probability measure on the set of all possible values of the random variable. It is possible for two random variables to have identical distributions but to differ in significant ways; for instance, they may be independent. It is common to consider the special cases of discrete random variables and absolutely continuous random variables, corresponding to whether a random variable is valued in a countable subset or in an interval of real numbers. There are other important possibilities, especially in the theory of stochastic processes, wherein it is natural to consider random sequences or random functions. Sometimes a random variable is taken to be automatically valued in the real numbers, with more general random quantities instead being called random elements. According to George Mackey, Pafnuty Chebyshev was the first person \"to think systematically in terms of random variables\". == Definition == A random variable X {\\displaystyle X} is a measurable function X : Ω → E {\\displaystyle X\\colon \\Omega \\to E} from a sample space Ω {\\displaystyle \\Omega } as a set of possible outcomes to a measurable space E {\\displaystyle E} . The technical axiomatic definition requires the sample space Ω {\\displaystyle \\Omega } to belong to a probability triple ( Ω , F , P ) {\\displaystyle (\\Omega ,{\\mathcal {F}},\\operatorname {P} )} (see the measure-theoretic definition). A random variable is often denoted by capital Roman letters such as X , Y , Z , T {\\displaystyle X,Y,Z,T} . The probability that X {\\displaystyle X} takes on a value in a measurable set S ⊆ E {\\displaystyle S\\subseteq E} is written as P ⁡ ( X ∈ S ) = P ⁡ ( { ω ∈ Ω ∣ X ( ω ) ∈ S } ) {\\displaystyle \\operatorname {P} (X\\in S)=\\operatorname {P} (\\{\\omega \\in \\Omega \\mid X(\\omega )\\in S\\})} . === Standard case === In many cases, X {\\displaystyle X} is real-valued, i.e. E = R {\\displaystyle E=\\mathbb {R} } . In some contexts, the term random element (see extensions) is used to denote a random variable not of this form. When the image (or range) of X {\\displaystyle X} is finite or countably infinite, the random variable is called a discrete random variable and its distribution is a discrete probability distribution, i.e. can be described by a probability mass function that assigns a probability to each value in the image of X {\\displaystyle X} . If the image is uncountably infinite (usually an interval) then X {\\displaystyle X} is called a continuous random variable. In the special case that it is absolutely continuous, its distribution can be described by a probability density function, which assigns probabilities to intervals; in particular, each individual point must necessarily have probability zero for an absolutely continuous random variable. Not all continuous random variables are absolutely continuous. Any random variable can be described by its cumulative distribution function, which describes the probability that the random variable will be less than or equal to a certain value. === Extensions === The term \"random variable\" in statistics is traditionally limited to the real-valued case ( E = R {\\displaystyle E=\\mathbb {R} } ). In this case, the structure of the real numbers makes it possible to define quantities such as the expected value and variance of a random variable, its cumulative distribution function, and the moments of its distribution. However, the definition above is valid for any measurable space E {\\displaystyle E} of values. Thus one can consider random elements of other sets E {\\displaystyle E} , such as random Boolean values, categorical values, complex numbers, vectors, matrices, sequences, trees, sets, shapes, manifolds, and functions. One may then specifically refer to a random variable of type E {\\displaystyle E} , or an E {\\displaystyle E} -valued random variable. This more general concept of a random element is particularly useful in disciplines such as graph theory, machine learning, natural language processing, and other fields in discrete mathematics and computer science, where one is often interested in modeling the random variation of non-numerical data structures. In some cases, it is nonetheless convenient to represent each element of E {\\displaystyle E} , using one or more real numbers. In this case, a random element may optionally be represented as a vector of real-valued random variables (all defined on the same underlying probability space Ω {\\displaystyle \\Omega } , which allows the different random variables to covary). For example: A random word may be represented as a random integer that serves as an index into the vocabulary of possible words. Alternatively, it can be represented as a random indicator vector, whose length equals the size of the vocabulary, where the only values of positive probability are ( 1 0 0 0 ⋯ ) {\\displaystyle (1\\ 0\\ 0\\ 0\\ \\cdots )} , ( 0 1 0 0 ⋯ ) {\\displaystyle (0\\ 1\\ 0\\ 0\\ \\cdots )} , ( 0 0 1 0 ⋯ ) {\\displaystyle (0\\ 0\\ 1\\ 0\\ \\cdots )} and the position of the 1 indicates the word. A random sentence of given length N {\\displaystyle N} may be represented as a vector of N {\\displaystyle N} random words. A random graph on N {\\displaystyle N} given vertices may be represented as a N × N {\\displaystyle N\\times N} matrix of random variables, whose values specify the adjacency matrix of the random graph. A random function F {\\displaystyle F} may be represented as a collection of random variables F ( x ) {\\displaystyle F(x)} , giving the function's values at the various points x {\\displaystyle x} in the function's domain. The F ( x ) {\\displaystyle F(x)} are ordinary real-valued random variables provided that the function is real-valued. For example, a stochastic process is a random function of time, a random vector is a random function of some index set such as 1 , 2 , … , n {\\displaystyle 1,2,\\ldots ,n} , and random field is a random function on any set (typically time, space, or a discrete set). == Distribution functions == If a random variable X : Ω → R {\\displaystyle X\\colon \\Omega \\to \\mathbb {R} } defined on the probability space ( Ω , F , P ) {\\displaystyle (\\Omega ,{\\mathcal {F}},\\operatorname {P} )} is given, we can ask questions like \"How likely is it that the value of X {\\displaystyle X} is equal to 2?\". This is the same as the probability of the event { ω : X ( ω ) = 2 } {\\displaystyle \\{\\omega :X(\\omega )=2\\}\\,\\!} which is often written as P ( X = 2 ) {\\displaystyle P(X=2)\\,\\!} or p X ( 2 ) {\\displaystyle p_{X}(2)} for short. Recording all these probabilities of outputs of a random variable X {\\displaystyle X} yields the probability distribution of X {\\displaystyle X} . The probability distribution \"forgets\" about the particular probability space used to define X {\\displaystyle X} and only records the probabilities of various output values of X {\\displaystyle X} . Such a probability distribution, if X {\\displaystyle X} is real-valued, can always be captured by its cumulative distribution function F X ( x ) = P ⁡ ( X ≤ x ) {\\displaystyle F_{X}(x)=\\operatorname {P} (X\\leq x)} and sometimes also using a probability density function, f X {\\displaystyle f_{X}} . In measure-theoretic terms, we use the random variable X {\\displaystyle X} to \"push-forward\" the measure P {\\displaystyle P} on Ω {\\displaystyle \\Omega } to a measure p X {\\displaystyle p_{X}} on R {\\displaystyle \\mathbb {R} } . The measure p X {\\displaystyle p_{X}} is called the \"(probability) distribution of X {\\displaystyle X} \" or the \"law of X {\\displaystyle X} \". The density f X = d p X / d μ {\\displaystyle f_{X}=dp_{X}/d\\mu } , the Radon–Nikodym derivative of p X {\\displaystyle p_{X}} with respect to some reference measure μ {\\displaystyle \\mu } on R {\\displaystyle \\mathbb {R} } (often, this reference measure is the Lebesgue measure in the case of continuous random variables, or the counting measure in the case of discrete random variables). The underlying probability space Ω {\\displaystyle \\Omega } is a technical device used to guarantee the existence of random variables, sometimes to construct them, and to define notions such as correlation and dependence or independence based on a joint distribution of two or more random variables on the same probability space. In practice, one often disposes of the space Ω {\\displaystyle \\Omega } altogether and just puts a measure on R {\\displaystyle \\mathbb {R} } that assigns measure 1 to the whole real line, i.e., one works with probability distributions instead of random variables. See the article on quantile functions for fuller development. == Examples == === Discrete random variable === Consider an experiment where a person is chosen at random. An example of a random variable may be the person's height. Mathematically, the random variable is interpreted as a function which maps the person to their height. Associated with the random variable is a probability distribution that allows the computation of the probability that the height is in any subset of possible values, such as the probability that the height is between 180 and 190 cm, or the probability that the height is either less than 150 or more than 200 cm. Another random variable may be the person's number of children; this is a discrete random variable with non-negative integer values. It allows the computation of probabilities for individual integer values – the probability mass function (PMF) – or for sets of values, including infinite sets. For example, the event of interest may be \"an even number of children\". For both finite and infinite event sets, their probabilities can be found by adding up the PMFs of the elements; that is, the probability of an even number of children is the infinite sum PMF ⁡ ( 0 ) + PMF ⁡ ( 2 ) + PMF ⁡ ( 4 ) + ⋯ {\\displaystyle \\operatorname {PMF} (0)+\\operatorname {PMF} (2)+\\operatorname {PMF} (4)+\\cdots } . In examples such as these, the sample space is often suppressed, since it is mathematically hard to describe, and the possible values of the random variables are then treated as a sample space. But when two random variables are measured on the same sample space of outcomes, such as the height and number of children being computed on the same random persons, it is easier to track their relationship if it is acknowledged that both height and number of children come from the same random person, for example so that questions of whether such random variables are correlated or not can be posed. If { a n } , { b n } {\\textstyle \\{a_{n}\\},\\{b_{n}\\}} are countable sets of real numbers, b n > 0 {\\textstyle b_{n}>0} and ∑ n b n = 1 {\\textstyle \\sum _{n}b_{n}=1} , then F = ∑ n b n δ a n ( x ) {\\textstyle F=\\sum _{n}b_{n}\\delta _{a_{n}}(x)} is a discrete distribution function. Here δ t ( x ) = 0 {\\displaystyle \\delta _{t}(x)=0} for x < t {\\displaystyle x 0 {\\displaystyle \\theta >0} is a fixed parameter. Consider the random variable Y = l o g ( 1 + e − X ) . {\\displaystyle Y=\\mathrm {log} (1+e^{-X}).} Then, F Y ( y ) = P ( Y ≤ y ) = P ( l o g ( 1 + e − X ) ≤ y ) = P ( X ≥ − l o g ( e y − 1 ) ) . {\\displaystyle F_{Y}(y)=P(Y\\leq y)=P(\\mathrm {log} (1+e^{-X})\\leq y)=P(X\\geq -\\mathrm {log} (e^{y}-1)).\\,} The last expression can be calculated in terms of the cumulative distribution of X , {\\displaystyle X,} so F Y ( y ) = 1 − F X ( − log ⁡ ( e y − 1 ) ) = 1 − 1 ( 1 + e log ⁡ ( e y − 1 ) ) θ = 1 − 1 ( 1 + e y − 1 ) θ = 1 − e − y θ . {\\displaystyle {\\begin{aligned}F_{Y}(y)&=1-F_{X}(-\\log(e^{y}-1))\\\\[5pt]&=1-{\\frac {1}{(1+e^{\\log(e^{y}-1)})^{\\theta }}}\\\\[5pt]&=1-{\\frac {1}{(1+e^{y}-1)^{\\theta }}}\\\\[5pt]&=1-e^{-y\\theta }.\\end{aligned}}} which is the cumulative distribution function (CDF) of an exponential distribution. === Example 3 === Suppose X {\\displaystyle X} is a random variable with a standard normal distribution, whose density is f X ( x ) = 1 2 π e − x 2 / 2 . {\\displaystyle f_{X}(x)={\\frac {1}{\\sqrt {2\\pi }}}e^{-x^{2}/2}.} Consider the random variable Y = X 2 . {\\displaystyle Y=X^{2}.} We can find the density using the above formula for a change of variables: f Y ( y ) = ∑ i f X ( g i − 1 ( y ) ) | d g i − 1 ( y ) d y | . {\\displaystyle f_{Y}(y)=\\sum _{i}f_{X}(g_{i}^{-1}(y))\\left|{\\frac {dg_{i}^{-1}(y)}{dy}}\\right|.} In this case the change is not monotonic, because every value of Y {\\displaystyle Y} has two corresponding values of X {\\displaystyle X} (one positive and negative). However, because of symmetry, both halves will transform identically, i.e., f Y ( y ) = 2 f X ( g − 1 ( y ) ) | d g − 1 ( y ) d y | . {\\displaystyle f_{Y}(y)=2f_{X}(g^{-1}(y))\\left|{\\frac {dg^{-1}(y)}{dy}}\\right|.} The inverse transformation is x = g − 1 ( y ) = y {\\displaystyle x=g^{-1}(y)={\\sqrt {y}}} and its derivative is d g − 1 ( y ) d y = 1 2 y . {\\displaystyle {\\frac {dg^{-1}(y)}{dy}}={\\frac {1}{2{\\sqrt {y}}}}.} Then, f Y ( y ) = 2 1 2 π e − y / 2 1 2 y = 1 2 π y e − y / 2 . {\\displaystyle f_{Y}(y)=2{\\frac {1}{\\sqrt {2\\pi }}}e^{-y/2}{\\frac {1}{2{\\sqrt {y}}}}={\\frac {1}{\\sqrt {2\\pi y}}}e^{-y/2}.} This is a chi-squared distribution with one degree of freedom. === Example 4 === Suppose X {\\displaystyle X} is a random variable with a normal distribution, whose density is f X ( x ) = 1 2 π σ 2 e − ( x − μ ) 2 / ( 2 σ 2 ) . {\\displaystyle f_{X}(x)={\\frac {1}{\\sqrt {2\\pi \\sigma ^{2}}}}e^{-(x-\\mu )^{2}/(2\\sigma ^{2})}.} Consider the random variable Y = X 2 . {\\displaystyle Y=X^{2}.} We can find the density using the above formula for a change of variables: f Y ( y ) = ∑ i f X ( g i − 1 ( y ) ) | d g i − 1 ( y ) d y | . {\\displaystyle f_{Y}(y)=\\sum _{i}f_{X}(g_{i}^{-1}(y))\\left|{\\frac {dg_{i}^{-1}(y)}{dy}}\\right|.} In this case the change is not monotonic, because every value of Y {\\displaystyle Y} has two corresponding values of X {\\displaystyle X} (one positive and negative). Differently from the previous example, in this case however, there is no symmetry and we have to compute the two distinct terms: f Y ( y ) = f X ( g 1 − 1 ( y ) ) | d g 1 − 1 ( y ) d y | + f X ( g 2 − 1 ( y ) ) | d g 2 − 1 ( y ) d y | . {\\displaystyle f_{Y}(y)=f_{X}(g_{1}^{-1}(y))\\left|{\\frac {dg_{1}^{-1}(y)}{dy}}\\right|+f_{X}(g_{2}^{-1}(y))\\left|{\\frac {dg_{2}^{-1}(y)}{dy}}\\right|.} The inverse transformation is x = g 1 , 2 − 1 ( y ) = ± y {\\displaystyle x=g_{1,2}^{-1}(y)=\\pm {\\sqrt {y}}} and its derivative is d g 1 , 2 − 1 ( y ) d y = ± 1 2 y . {\\displaystyle {\\frac {dg_{1,2}^{-1}(y)}{dy}}=\\pm {\\frac {1}{2{\\sqrt {y}}}}.} Then, f Y ( y ) = 1 2 π σ 2 1 2 y ( e − ( y − μ ) 2 / ( 2 σ 2 ) + e − ( − y − μ ) 2 / ( 2 σ 2 ) ) . {\\displaystyle f_{Y}(y)={\\frac {1}{\\sqrt {2\\pi \\sigma ^{2}}}}{\\frac {1}{2{\\sqrt {y}}}}(e^{-({\\sqrt {y}}-\\mu )^{2}/(2\\sigma ^{2})}+e^{-(-{\\sqrt {y}}-\\mu )^{2}/(2\\sigma ^{2})}).} This is a noncentral chi-squared distribution with one degree of freedom. == Some properties == The probability distribution of the sum of two independent random variables is the convolution of each of their distributions. Probability distributions are not a vector space—they are not closed under linear combinations, as these do not preserve non-negativity or total integral 1—but they are closed under convex combination, thus forming a convex subset of the space of functions (or measures). == Equivalence of random variables == There are several different senses in which random variables can be considered to be equivalent. Two random variables can be equal, equal almost surely, or equal in distribution. In increasing order of strength, the precise definition of these notions of equivalence is given below. === Equality in distribution === If the sample space is a subset of the real line, random variables X and Y are equal in distribution (denoted X = d Y {\\displaystyle X{\\stackrel {d}{=}}Y} ) if they have the same distribution functions: P ⁡ ( X ≤ x ) = P ⁡ ( Y ≤ x ) for all x . {\\displaystyle \\operatorname {P} (X\\leq x)=\\operatorname {P} (Y\\leq x)\\quad {\\text{for all }}x.} To be equal in distribution, random variables need not be defined on the same probability space. Two random variables having equal moment generating functions have the same distribution. This provides, for example, a useful method of checking equality of certain functions of independent, identically distributed (IID) random variables. However, the moment generating function exists only for distributions that have a defined Laplace transform. === Almost sure equality === Two random variables X and Y are equal almost surely (denoted X = a.s. Y {\\displaystyle X\\;{\\stackrel {\\text{a.s.}}{=}}\\;Y} ) if, and only if, the probability that they are different is zero: P ⁡ ( X ≠ Y ) = 0. {\\displaystyle \\operatorname {P} (X\\neq Y)=0.} For all practical purposes in probability theory, this notion of equivalence is as strong as actual equality. It is associated to the following distance: d ∞ ( X , Y ) = ess ⁡ sup ω | X ( ω ) − Y ( ω ) | , {\\displaystyle d_{\\infty }(X,Y)=\\operatorname {ess} \\sup _{\\omega }|X(\\omega )-Y(\\omega )|,} where \"ess sup\" represents the essential supremum in the sense of measure theory. === Equality === Finally, the two random variables X and Y are equal if they are equal as functions on their measurable space: X ( ω ) = Y ( ω ) for all ω . {\\displaystyle X(\\omega )=Y(\\omega )\\qquad {\\hbox{for all }}\\omega .} This notion is typically the least useful in probability theory because in practice and in theory, the underlying measure space of the experiment is rarely explicitly characterized or even characterizable. === Practical difference between notions of equivalence === Since we rarely explicitly construct the probability space underlying a random variable, the difference between these notions of equivalence is somewhat subtle. Essentially, two random variables considered in isolation are \"practically equivalent\" if they are equal in distribution -- but once we relate them to other random variables defined on the same probability space, then they only remain \"practically equivalent\" if they are equal almost surely. For example, consider the real random variables A, B, C, and D all defined on the same probability space. Suppose that A and B are equal almost surely ( A = a.s. B {\\displaystyle A\\;{\\stackrel {\\text{a.s.}}{=}}\\;B} ), but A and C are only equal in distribution ( A = d C {\\displaystyle A{\\stackrel {d}{=}}C} ). Then A + D = a.s. B + D {\\displaystyle A+D\\;{\\stackrel {\\text{a.s.}}{=}}\\;B+D} , but in general A + D ≠ C + D {\\displaystyle A+D\\;\\neq \\;C+D} (not even in distribution). Similarly, we have that the expectation values E ( A D ) = E ( B D ) {\\displaystyle \\mathbb {E} (AD)=\\mathbb {E} (BD)} , but in general E ( A D ) ≠ E ( C D ) {\\displaystyle \\mathbb {E} (AD)\\neq \\mathbb {E} (CD)} . Therefore, two random variables that are equal in distribution (but not equal almost surely) can have different covariances with a third random variable. == Convergence == A significant theme in mathematical statistics consists of obtaining convergence results for certain sequences of random variables; for instance the law of large numbers and the central limit theorem. There are various senses in which a sequence X n {\\displaystyle X_{n}} of random variables can converge to a random variable X {\\displaystyle X} . These are explained in the article on convergence of random variables. == See also == == References == === Inline citations === === Literature === == External links == \"Random variable\", Encyclopedia of Mathematics, EMS Press, 2001  Zukerman, Moshe (2014), Introduction to Queueing Theory and Stochastic Teletraffic Models (PDF), arXiv:1307.2968 Zukerman, Moshe (2014), Basic Probability Topics (PDF)"
+  },
+  "chunks": [
+    {
+      "id": "randomvariable_833e428b_c0000",
+      "article_id": "randomvariable_833e428b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 883,
+      "content": "A random variable (also called random quantity, aleatory variable, or stochastic variable) is a mathematical formalization of a quantity or object which depends on random events. The term 'random variable' in its mathematical definition refers to neither randomness nor variability but instead is a mathematical function in which the domain is the set of possible outcomes in a sample space (e.g. the set { H , T } {\\displaystyle \\{H,T\\}} which are the possible upper sides of a flipped coin heads H {\\displaystyle H} or tails T {\\displaystyle T} as the result from tossing a coin); and the range is a measurable space (e.g. corresponding to the domain above, the range might be the set { − 1 , 1 } {\\displaystyle \\{-1,1\\}} if say heads H {\\displaystyle H} mapped to -1 and T {\\displaystyle T} mapped to 1). Typically, the range of a random variable is a subset of the real numbers.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0001",
+      "article_id": "randomvariable_833e428b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 883,
+      "end_char": 1751,
+      "content": "Informally, randomness typically represents some fundamental element of chance, such as in the roll of a die; it may also represent uncertainty, such as measurement error. However, the interpretation of probability is philosophically complicated, and even in specific cases is not always straightforward. The purely mathematical analysis of random variables is independent of such interpretational difficulties, and can be based upon a rigorous axiomatic setup. In the formal mathematical language of measure theory, a random variable is defined as a measurable function from a probability measure space (called the sample space) to a measurable space. This allows consideration of the pushforward measure, which is called the distribution of the random variable; the distribution is thus a probability measure on the set of all possible values of the random variable.",
+      "char_count": 868,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0002",
+      "article_id": "randomvariable_833e428b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1752,
+      "end_char": 2568,
+      "content": "It is possible for two random variables to have identical distributions but to differ in significant ways; for instance, they may be independent. It is common to consider the special cases of discrete random variables and absolutely continuous random variables, corresponding to whether a random variable is valued in a countable subset or in an interval of real numbers. There are other important possibilities, especially in the theory of stochastic processes, wherein it is natural to consider random sequences or random functions. Sometimes a random variable is taken to be automatically valued in the real numbers, with more general random quantities instead being called random elements. According to George Mackey, Pafnuty Chebyshev was the first person \"to think systematically in terms of random variables\".",
+      "char_count": 816,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0003",
+      "article_id": "randomvariable_833e428b",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 2585,
+      "end_char": 3442,
+      "content": "== Definition == A random variable X {\\displaystyle X} is a measurable function X : Ω → E {\\displaystyle X\\colon \\Omega \\to E} from a sample space Ω {\\displaystyle \\Omega } as a set of possible outcomes to a measurable space E {\\displaystyle E} . The technical axiomatic definition requires the sample space Ω {\\displaystyle \\Omega } to belong to a probability triple ( Ω , F , P ) {\\displaystyle (\\Omega ,{\\mathcal {F}},\\operatorname {P} )} (see the measure-theoretic definition). A random variable is often denoted by capital Roman letters such as X , Y , Z , T {\\displaystyle X,Y,Z,T} . The probability that X {\\displaystyle X} takes on a value in a measurable set S ⊆ E {\\displaystyle S\\subseteq E} is written as P ⁡ ( X ∈ S ) = P ⁡ ( { ω ∈ Ω ∣ X ( ω ) ∈ S } ) {\\displaystyle \\operatorname {P} (X\\in S)=\\operatorname {P} (\\{\\omega \\in \\Omega \\mid X(\\omega )\\in S\\})} .",
+      "char_count": 872,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0004",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Standard case ==",
+      "heading_path": "== = Standard case ==",
+      "start_char": 3463,
+      "end_char": 4437,
+      "content": "== = Standard case === In many cases, X {\\displaystyle X} is real-valued, i.e. E = R {\\displaystyle E=\\mathbb {R} } . In some contexts, the term random element (see extensions) is used to denote a random variable not of this form. When the image (or range) of X {\\displaystyle X} is finite or countably infinite, the random variable is called a discrete random variable and its distribution is a discrete probability distribution, i.e. can be described by a probability mass function that assigns a probability to each value in the image of X {\\displaystyle X} . If the image is uncountably infinite (usually an interval) then X {\\displaystyle X} is called a continuous random variable. In the special case that it is absolutely continuous, its distribution can be described by a probability density function, which assigns probabilities to intervals; in particular, each individual point must necessarily have probability zero for an absolutely continuous random variable.",
+      "char_count": 973,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0005",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Standard case ==",
+      "heading_path": "== = Standard case ==",
+      "start_char": 4437,
+      "end_char": 4681,
+      "content": "Not all continuous random variables are absolutely continuous. Any random variable can be described by its cumulative distribution function, which describes the probability that the random variable will be less than or equal to a certain value.",
+      "char_count": 244,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0006",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Extensions ==",
+      "heading_path": "== = Extensions ==",
+      "start_char": 4679,
+      "end_char": 5503,
+      "content": "== = Extensions === The term \"random variable\" in statistics is traditionally limited to the real-valued case ( E = R {\\displaystyle E=\\mathbb {R} } ). In this case, the structure of the real numbers makes it possible to define quantities such as the expected value and variance of a random variable, its cumulative distribution function, and the moments of its distribution. However, the definition above is valid for any measurable space E {\\displaystyle E} of values. Thus one can consider random elements of other sets E {\\displaystyle E} , such as random Boolean values, categorical values, complex numbers, vectors, matrices, sequences, trees, sets, shapes, manifolds, and functions. One may then specifically refer to a random variable of type E {\\displaystyle E} , or an E {\\displaystyle E} -valued random variable.",
+      "char_count": 823,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0007",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Extensions ==",
+      "heading_path": "== = Extensions ==",
+      "start_char": 5503,
+      "end_char": 6314,
+      "content": "This more general concept of a random element is particularly useful in disciplines such as graph theory, machine learning, natural language processing, and other fields in discrete mathematics and computer science, where one is often interested in modeling the random variation of non-numerical data structures. In some cases, it is nonetheless convenient to represent each element of E {\\displaystyle E} , using one or more real numbers. In this case, a random element may optionally be represented as a vector of real-valued random variables (all defined on the same underlying probability space Ω {\\displaystyle \\Omega } , which allows the different random variables to covary). For example: A random word may be represented as a random integer that serves as an index into the vocabulary of possible words.",
+      "char_count": 811,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0008",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Extensions ==",
+      "heading_path": "== = Extensions ==",
+      "start_char": 6315,
+      "end_char": 7228,
+      "content": "Alternatively, it can be represented as a random indicator vector, whose length equals the size of the vocabulary, where the only values of positive probability are ( 1 0 0 0 ⋯ ) {\\displaystyle (1\\ 0\\ 0\\ 0\\ \\cdots )} , ( 0 1 0 0 ⋯ ) {\\displaystyle (0\\ 1\\ 0\\ 0\\ \\cdots )} , ( 0 0 1 0 ⋯ ) {\\displaystyle (0\\ 0\\ 1\\ 0\\ \\cdots )} and the position of the 1 indicates the word. A random sentence of given length N {\\displaystyle N} may be represented as a vector of N {\\displaystyle N} random words. A random graph on N {\\displaystyle N} given vertices may be represented as a N × N {\\displaystyle N\\times N} matrix of random variables, whose values specify the adjacency matrix of the random graph. A random function F {\\displaystyle F} may be represented as a collection of random variables F ( x ) {\\displaystyle F(x)} , giving the function's values at the various points x {\\displaystyle x} in the function's domain.",
+      "char_count": 913,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0009",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Extensions ==",
+      "heading_path": "== = Extensions ==",
+      "start_char": 7229,
+      "end_char": 7612,
+      "content": "The F ( x ) {\\displaystyle F(x)} are ordinary real-valued random variables provided that the function is real-valued. For example, a stochastic process is a random function of time, a random vector is a random function of some index set such as 1 , 2 , … , n {\\displaystyle 1,2,\\ldots ,n} , and random field is a random function on any set (typically time, space, or a discrete set).",
+      "char_count": 383,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0010",
+      "article_id": "randomvariable_833e428b",
+      "section": "== Distribution functions ==",
+      "heading_path": "== Distribution functions ==",
+      "start_char": 7623,
+      "end_char": 8520,
+      "content": "== Distribution functions == If a random variable X : Ω → R {\\displaystyle X\\colon \\Omega \\to \\mathbb {R} } defined on the probability space ( Ω , F , P ) {\\displaystyle (\\Omega ,{\\mathcal {F}},\\operatorname {P} )} is given, we can ask questions like \"How likely is it that the value of X {\\displaystyle X} is equal to 2?\". This is the same as the probability of the event { ω : X ( ω ) = 2 } {\\displaystyle \\{\\omega :X(\\omega )=2\\}\\,\\!} which is often written as P ( X = 2 ) {\\displaystyle P(X=2)\\,\\!} or p X ( 2 ) {\\displaystyle p_{X}(2)} for short. Recording all these probabilities of outputs of a random variable X {\\displaystyle X} yields the probability distribution of X {\\displaystyle X} . The probability distribution \"forgets\" about the particular probability space used to define X {\\displaystyle X} and only records the probabilities of various output values of X {\\displaystyle X} .",
+      "char_count": 896,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0011",
+      "article_id": "randomvariable_833e428b",
+      "section": "== Distribution functions ==",
+      "heading_path": "== Distribution functions ==",
+      "start_char": 8520,
+      "end_char": 9190,
+      "content": "Such a probability distribution, if X {\\displaystyle X} is real-valued, can always be captured by its cumulative distribution function F X ( x ) = P ⁡ ( X ≤ x ) {\\displaystyle F_{X}(x)=\\operatorname {P} (X\\leq x)} and sometimes also using a probability density function, f X {\\displaystyle f_{X}} . In measure-theoretic terms, we use the random variable X {\\displaystyle X} to \"push-forward\" the measure P {\\displaystyle P} on Ω {\\displaystyle \\Omega } to a measure p X {\\displaystyle p_{X}} on R {\\displaystyle \\mathbb {R} } . The measure p X {\\displaystyle p_{X}} is called the \"(probability) distribution of X {\\displaystyle X} \" or the \"law of X {\\displaystyle X} \".",
+      "char_count": 670,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0012",
+      "article_id": "randomvariable_833e428b",
+      "section": "== Distribution functions ==",
+      "heading_path": "== Distribution functions ==",
+      "start_char": 9191,
+      "end_char": 10169,
+      "content": "The density f X = d p X / d μ {\\displaystyle f_{X}=dp_{X}/d\\mu } , the Radon–Nikodym derivative of p X {\\displaystyle p_{X}} with respect to some reference measure μ {\\displaystyle \\mu } on R {\\displaystyle \\mathbb {R} } (often, this reference measure is the Lebesgue measure in the case of continuous random variables, or the counting measure in the case of discrete random variables). The underlying probability space Ω {\\displaystyle \\Omega } is a technical device used to guarantee the existence of random variables, sometimes to construct them, and to define notions such as correlation and dependence or independence based on a joint distribution of two or more random variables on the same probability space. In practice, one often disposes of the space Ω {\\displaystyle \\Omega } altogether and just puts a measure on R {\\displaystyle \\mathbb {R} } that assigns measure 1 to the whole real line, i.e., one works with probability distributions instead of random variables.",
+      "char_count": 978,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0013",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Discrete random variable ==",
+      "heading_path": "== = Discrete random variable ==",
+      "start_char": 10251,
+      "end_char": 11187,
+      "content": "== = Discrete random variable === Consider an experiment where a person is chosen at random. An example of a random variable may be the person's height. Mathematically, the random variable is interpreted as a function which maps the person to their height. Associated with the random variable is a probability distribution that allows the computation of the probability that the height is in any subset of possible values, such as the probability that the height is between 180 and 190 cm, or the probability that the height is either less than 150 or more than 200 cm. Another random variable may be the person's number of children; this is a discrete random variable with non-negative integer values. It allows the computation of probabilities for individual integer values – the probability mass function (PMF) – or for sets of values, including infinite sets. For example, the event of interest may be \"an even number of children\".",
+      "char_count": 935,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0014",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Discrete random variable ==",
+      "heading_path": "== = Discrete random variable ==",
+      "start_char": 11187,
+      "end_char": 12112,
+      "content": "For both finite and infinite event sets, their probabilities can be found by adding up the PMFs of the elements; that is, the probability of an even number of children is the infinite sum PMF ⁡ ( 0 ) + PMF ⁡ ( 2 ) + PMF ⁡ ( 4 ) + ⋯ {\\displaystyle \\operatorname {PMF} (0)+\\operatorname {PMF} (2)+\\operatorname {PMF} (4)+\\cdots } . In examples such as these, the sample space is often suppressed, since it is mathematically hard to describe, and the possible values of the random variables are then treated as a sample space. But when two random variables are measured on the same sample space of outcomes, such as the height and number of children being computed on the same random persons, it is easier to track their relationship if it is acknowledged that both height and number of children come from the same random person, for example so that questions of whether such random variables are correlated or not can be posed.",
+      "char_count": 925,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0015",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Discrete random variable ==",
+      "heading_path": "== = Discrete random variable ==",
+      "start_char": 12113,
+      "end_char": 13055,
+      "content": "If { a n } , { b n } {\\textstyle \\{a_{n}\\},\\{b_{n}\\}} are countable sets of real numbers, b n > 0 {\\textstyle b_{n}>0} and ∑ n b n = 1 {\\textstyle \\sum _{n}b_{n}=1} , then F = ∑ n b n δ a n ( x ) {\\textstyle F=\\sum _{n}b_{n}\\delta _{a_{n}}(x)} is a discrete distribution function. Here δ t ( x ) = 0 {\\displaystyle \\delta _{t}(x)=0} for x < t {\\displaystyle x 0 {\\displaystyle \\theta >0} is a fixed parameter. Consider the random variable Y = l o g ( 1 + e − X ) . {\\displaystyle Y=\\mathrm {log} (1+e^{-X}).} Then, F Y ( y ) = P ( Y ≤ y ) = P ( l o g ( 1 + e − X ) ≤ y ) = P ( X ≥ − l o g ( e y − 1 ) ) . {\\displaystyle F_{Y}(y)=P(Y\\leq y)=P(\\mathrm {log} (1+e^{-X})\\leq y)=P(X\\geq -\\mathrm {log} (e^{y}-1)).\\,} The last expression can be calculated in terms of the cumulative distribution of X , {\\displaystyle X,} so F Y ( y ) = 1 − F X ( − log ⁡ ( e y − 1 ) ) = 1 − 1 ( 1 + e log ⁡ ( e y − 1 ) ) θ = 1 − 1 ( 1 + e y − 1 ) θ = 1 − e − y θ .",
+      "char_count": 942,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0016",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Example 3 ==",
+      "heading_path": "== = Example 3 ==",
+      "start_char": 13330,
+      "end_char": 14149,
+      "content": "== = Example 3 === Suppose X {\\displaystyle X} is a random variable with a standard normal distribution, whose density is f X ( x ) = 1 2 π e − x 2 / 2 . {\\displaystyle f_{X}(x)={\\frac {1}{\\sqrt {2\\pi }}}e^{-x^{2}/2}.} Consider the random variable Y = X 2 . {\\displaystyle Y=X^{2}.} We can find the density using the above formula for a change of variables: f Y ( y ) = ∑ i f X ( g i − 1 ( y ) ) | d g i − 1 ( y ) d y | . {\\displaystyle f_{Y}(y)=\\sum _{i}f_{X}(g_{i}^{-1}(y))\\left|{\\frac {dg_{i}^{-1}(y)}{dy}}\\right|.} In this case the change is not monotonic, because every value of Y {\\displaystyle Y} has two corresponding values of X {\\displaystyle X} (one positive and negative). However, because of symmetry, both halves will transform identically, i.e., f Y ( y ) = 2 f X ( g − 1 ( y ) ) | d g − 1 ( y ) d y | .",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0017",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Example 3 ==",
+      "heading_path": "== = Example 3 ==",
+      "start_char": 14149,
+      "end_char": 14687,
+      "content": "{\\displaystyle f_{Y}(y)=2f_{X}(g^{-1}(y))\\left|{\\frac {dg^{-1}(y)}{dy}}\\right|.} The inverse transformation is x = g − 1 ( y ) = y {\\displaystyle x=g^{-1}(y)={\\sqrt {y}}} and its derivative is d g − 1 ( y ) d y = 1 2 y . {\\displaystyle {\\frac {dg^{-1}(y)}{dy}}={\\frac {1}{2{\\sqrt {y}}}}.} Then, f Y ( y ) = 2 1 2 π e − y / 2 1 2 y = 1 2 π y e − y / 2 . {\\displaystyle f_{Y}(y)=2{\\frac {1}{\\sqrt {2\\pi }}}e^{-y/2}{\\frac {1}{2{\\sqrt {y}}}}={\\frac {1}{\\sqrt {2\\pi y}}}e^{-y/2}.} This is a chi-squared distribution with one degree of freedom.",
+      "char_count": 538,
+      "token_estimate": 134,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0018",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Example 4 ==",
+      "heading_path": "== = Example 4 ==",
+      "start_char": 14688,
+      "end_char": 15652,
+      "content": "== = Example 4 === Suppose X {\\displaystyle X} is a random variable with a normal distribution, whose density is f X ( x ) = 1 2 π σ 2 e − ( x − μ ) 2 / ( 2 σ 2 ) . {\\displaystyle f_{X}(x)={\\frac {1}{\\sqrt {2\\pi \\sigma ^{2}}}}e^{-(x-\\mu )^{2}/(2\\sigma ^{2})}.} Consider the random variable Y = X 2 . {\\displaystyle Y=X^{2}.} We can find the density using the above formula for a change of variables: f Y ( y ) = ∑ i f X ( g i − 1 ( y ) ) | d g i − 1 ( y ) d y | . {\\displaystyle f_{Y}(y)=\\sum _{i}f_{X}(g_{i}^{-1}(y))\\left|{\\frac {dg_{i}^{-1}(y)}{dy}}\\right|.} In this case the change is not monotonic, because every value of Y {\\displaystyle Y} has two corresponding values of X {\\displaystyle X} (one positive and negative). Differently from the previous example, in this case however, there is no symmetry and we have to compute the two distinct terms: f Y ( y ) = f X ( g 1 − 1 ( y ) ) | d g 1 − 1 ( y ) d y | + f X ( g 2 − 1 ( y ) ) | d g 2 − 1 ( y ) d y | .",
+      "char_count": 963,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0019",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Example 4 ==",
+      "heading_path": "== = Example 4 ==",
+      "start_char": 15652,
+      "end_char": 16396,
+      "content": "{\\displaystyle f_{Y}(y)=f_{X}(g_{1}^{-1}(y))\\left|{\\frac {dg_{1}^{-1}(y)}{dy}}\\right|+f_{X}(g_{2}^{-1}(y))\\left|{\\frac {dg_{2}^{-1}(y)}{dy}}\\right|.} The inverse transformation is x = g 1 , 2 − 1 ( y ) = ± y {\\displaystyle x=g_{1,2}^{-1}(y)=\\pm {\\sqrt {y}}} and its derivative is d g 1 , 2 − 1 ( y ) d y = ± 1 2 y . {\\displaystyle {\\frac {dg_{1,2}^{-1}(y)}{dy}}=\\pm {\\frac {1}{2{\\sqrt {y}}}}.} Then, f Y ( y ) = 1 2 π σ 2 1 2 y ( e − ( y − μ ) 2 / ( 2 σ 2 ) + e − ( − y − μ ) 2 / ( 2 σ 2 ) ) . {\\displaystyle f_{Y}(y)={\\frac {1}{\\sqrt {2\\pi \\sigma ^{2}}}}{\\frac {1}{2{\\sqrt {y}}}}(e^{-({\\sqrt {y}}-\\mu )^{2}/(2\\sigma ^{2})}+e^{-(-{\\sqrt {y}}-\\mu )^{2}/(2\\sigma ^{2})}).} This is a noncentral chi-squared distribution with one degree of freedom.",
+      "char_count": 744,
+      "token_estimate": 186,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0020",
+      "article_id": "randomvariable_833e428b",
+      "section": "== Some properties ==",
+      "heading_path": "== Some properties ==",
+      "start_char": 16401,
+      "end_char": 16801,
+      "content": "== Some properties == The probability distribution of the sum of two independent random variables is the convolution of each of their distributions. Probability distributions are not a vector space—they are not closed under linear combinations, as these do not preserve non-negativity or total integral 1—but they are closed under convex combination, thus forming a convex subset of the space of functions (or measures).",
+      "char_count": 420,
+      "token_estimate": 105,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0021",
+      "article_id": "randomvariable_833e428b",
+      "section": "== Equivalence of random variables ==",
+      "heading_path": "== Equivalence of random variables ==",
+      "start_char": 16838,
+      "end_char": 17122,
+      "content": "== Equivalence of random variables == There are several different senses in which random variables can be considered to be equivalent. Two random variables can be equal, equal almost surely, or equal in distribution. In increasing order of strength, the precise definition of these notions of equivalence is given below.",
+      "char_count": 320,
+      "token_estimate": 80,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0022",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Equality in distribution ==",
+      "heading_path": "== = Equality in distribution ==",
+      "start_char": 17154,
+      "end_char": 17944,
+      "content": "== = Equality in distribution === If the sample space is a subset of the real line, random variables X and Y are equal in distribution (denoted X = d Y {\\displaystyle X{\\stackrel {d}{=}}Y} ) if they have the same distribution functions: P ⁡ ( X ≤ x ) = P ⁡ ( Y ≤ x ) for all x . {\\displaystyle \\operatorname {P} (X\\leq x)=\\operatorname {P} (Y\\leq x)\\quad {\\text{for all }}x.} To be equal in distribution, random variables need not be defined on the same probability space. Two random variables having equal moment generating functions have the same distribution. This provides, for example, a useful method of checking equality of certain functions of independent, identically distributed (IID) random variables. However, the moment generating function exists only for distributions that have a defined Laplace transform.",
+      "char_count": 821,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0023",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Almost sure equality ==",
+      "heading_path": "== = Almost sure equality ==",
+      "start_char": 17972,
+      "end_char": 18613,
+      "content": "== = Almost sure equality === Two random variables X and Y are equal almost surely (denoted X = a.s. Y {\\displaystyle X\\;{\\stackrel {\\text{a.s.}}{=}}\\;Y} ) if, and only if, the probability that they are different is zero: P ⁡ ( X ≠ Y ) = 0. {\\displaystyle \\operatorname {P} (X\\neq Y)=0.} For all practical purposes in probability theory, this notion of equivalence is as strong as actual equality. It is associated to the following distance: d ∞ ( X , Y ) = ess ⁡ sup ω | X ( ω ) − Y ( ω ) | , {\\displaystyle d_{\\infty }(X,Y)=\\operatorname {ess} \\sup _{\\omega }|X(\\omega )-Y(\\omega )|,} where \"ess sup\" represents the essential supremum in the sense of measure theory.",
+      "char_count": 668,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0024",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Equality ==",
+      "heading_path": "== = Equality ==",
+      "start_char": 18629,
+      "end_char": 19047,
+      "content": "== = Equality === Finally, the two random variables X and Y are equal if they are equal as functions on their measurable space: X ( ω ) = Y ( ω ) for all ω . {\\displaystyle X(\\omega )=Y(\\omega )\\qquad {\\hbox{for all }}\\omega .} This notion is typically the least useful in probability theory because in practice and in theory, the underlying measure space of the experiment is rarely explicitly characterized or even characterizable.",
+      "char_count": 433,
+      "token_estimate": 108,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0025",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Practical difference between notions of equivalence ==",
+      "heading_path": "== = Practical difference between notions of equivalence ==",
+      "start_char": 19106,
+      "end_char": 19950,
+      "content": "== = Practical difference between notions of equivalence === Since we rarely explicitly construct the probability space underlying a random variable, the difference between these notions of equivalence is somewhat subtle. Essentially, two random variables considered in isolation are \"practically equivalent\" if they are equal in distribution -- but once we relate them to other random variables defined on the same probability space, then they only remain \"practically equivalent\" if they are equal almost surely. For example, consider the real random variables A, B, C, and D all defined on the same probability space. Suppose that A and B are equal almost surely ( A = a.s. B {\\displaystyle A\\;{\\stackrel {\\text{a.s.}}{=}}\\;B} ), but A and C are only equal in distribution ( A = d C {\\displaystyle A{\\stackrel {d}{=}}C} ). Then A + D = a.s.",
+      "char_count": 843,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0026",
+      "article_id": "randomvariable_833e428b",
+      "section": "== = Practical difference between notions of equivalence ==",
+      "heading_path": "== = Practical difference between notions of equivalence ==",
+      "start_char": 19950,
+      "end_char": 20469,
+      "content": "B + D {\\displaystyle A+D\\;{\\stackrel {\\text{a.s.}}{=}}\\;B+D} , but in general A + D ≠ C + D {\\displaystyle A+D\\;\\neq \\;C+D} (not even in distribution). Similarly, we have that the expectation values E ( A D ) = E ( B D ) {\\displaystyle \\mathbb {E} (AD)=\\mathbb {E} (BD)} , but in general E ( A D ) ≠ E ( C D ) {\\displaystyle \\mathbb {E} (AD)\\neq \\mathbb {E} (CD)} . Therefore, two random variables that are equal in distribution (but not equal almost surely) can have different covariances with a third random variable.",
+      "char_count": 519,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "randomvariable_833e428b_c0027",
+      "article_id": "randomvariable_833e428b",
+      "section": "== Convergence ==",
+      "heading_path": "== Convergence ==",
+      "start_char": 20428,
+      "end_char": 20848,
+      "content": "== Convergence == A significant theme in mathematical statistics consists of obtaining convergence results for certain sequences of random variables; for instance the law of large numbers and the central limit theorem. There are various senses in which a sequence X n {\\displaystyle X_{n}} of random variables can converge to a random variable X {\\displaystyle X} . These are explained in the article on convergence of random variables.",
+      "char_count": 436,
+      "token_estimate": 109,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is the purpose of the underlying probability space, denoted as Ω?",
+        "answer": "The underlying probability space Ω is a technical device used to guarantee the existence of random variables, to construct them, and to define concepts like correlation, dependence, or independence based on a joint distribution of multiple random variables on the same probability space.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0012"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is a random variable called when its image, or range, is finite or countably infinite?",
+        "answer": "When the image of a random variable is finite or countably infinite, it is called a discrete random variable.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0004"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Why is the change of variable from X to Y = X² described as not monotonic in this example?",
+        "answer": "The change of variable is described as not monotonic because every value of the random variable Y corresponds to two different values of the random variable X, one positive and one negative.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0018"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Provide a comprehensive overview of a random variable, including its formal mathematical definition, its distribution, and its different types.",
+        "answer": "A random variable is a mathematical formalization of a quantity that depends on random events. Formally, it is defined as a measurable function from a probability measure space, known as the sample space (e.g., the outcomes of a coin toss), to a measurable space, which is typically a subset of the real numbers. The distribution of the random variable is a probability measure on its set of possible values, derived from what is called the pushforward measure. Random variables can be categorized into special cases, such as discrete random variables, which are valued in a countable set, and absolutely continuous random variables, which are valued in an interval of real numbers.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0000",
+          "randomvariable_833e428b_c0001",
+          "randomvariable_833e428b_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "In the standard case of a random variable, what is the measurable space `E`, and how does the nature of the variable's image within this space determine its classification as discrete or continuous?",
+        "answer": "In the standard case, a random variable is real-valued, meaning the measurable space is the set of real numbers, `E = R`. The classification of the variable is then determined by its image (or range). If the image is a finite or countably infinite set, the variable is discrete. If the image is an uncountably infinite set, such as an interval, the variable is continuous.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0003",
+          "randomvariable_833e428b_c0004"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does the applicability of a cumulative distribution function differ between traditional real-valued random variables and the more general concept of a random element?",
+        "answer": "A cumulative distribution function, which describes the probability that a random variable is less than or equal to a certain value, is a quantity defined for traditional, real-valued random variables. The concept of a random variable can be extended to a more general \"random element\" that can take non-numerical values like trees, sets, or shapes. While a cumulative distribution function is specifically associated with the structure of real numbers, these more general random elements can sometimes be represented as vectors of real-valued random variables, which in turn allows for the different variables to covary.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0005",
+          "randomvariable_833e428b_c0006",
+          "randomvariable_833e428b_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the formal mathematical definition of a random variable, and what is its associated distribution?",
+        "answer": "A random variable is formally defined as a mathematical function from a sample space (the set of possible outcomes) to a measurable space. More rigorously, it is a measurable function from a probability measure space to a measurable space. The distribution of the random variable is the resulting pushforward measure, which is a probability measure on the set of all possible values the variable can take.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0000",
+          "randomvariable_833e428b_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How are different types of continuous random variables described, and which descriptive function is universally applicable to any random variable?",
+        "answer": "A specific type of continuous random variable, known as an absolutely continuous random variable, can be described by a probability density function. However, not all continuous variables fall into this category. A cumulative distribution function is a more universal tool, as it can be used to describe any random variable, including all types of continuous ones.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0004",
+          "randomvariable_833e428b_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How is the traditional concept of a real-valued random variable extended to accommodate non-numerical data, and what are some specific examples of these extensions?",
+        "answer": "The traditional concept of a random variable, which is limited to real numbers, is extended to any measurable space E. This allows for the consideration of 'random elements' of other sets, such as random Boolean values, vectors, matrices, functions, and trees. This is particularly useful in fields like machine learning and computer science. These non-numerical random elements can be represented using real numbers, for instance as a vector of real-valued random variables. Examples include representing a random word as an indicator vector, a random sentence as a vector of random words, a random graph as an N×N matrix of random variables for its adjacency matrix, and a random function as a collection of random variables F(x) for points in its domain.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0006",
+          "randomvariable_833e428b_c0007",
+          "randomvariable_833e428b_c0008",
+          "randomvariable_833e428b_c0009"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How is the probability distribution of a random variable X defined, and what are the different ways it can be represented or worked with in practice?",
+        "answer": "The probability distribution of a random variable X is defined by recording the probabilities of all its possible output values. For a real-valued variable, this distribution can be represented by its cumulative distribution function (CDF) or a probability density function (PDF). In measure-theoretic terms, it is a measure p_X on the real numbers, which is a \"push-forward\" of the original probability measure P. In practice, the original probability space is often discarded, and one works directly with the probability distribution as a measure on the real line.",
+        "related_chunk_ids": [
+          "randomvariable_833e428b_c0010",
+          "randomvariable_833e428b_c0011",
+          "randomvariable_833e428b_c0012"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:47.571Z",
+    "content_format": "markdown",
+    "total_chunks": 28,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

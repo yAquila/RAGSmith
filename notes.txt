@@ -1,10 +1,10 @@
 - Evaluator ı şöyle yapabiliriz belki: Her adımdan ya da bazı adımlardan sonra evaluation yapıp o adımın bir önceki adıma göre başarıyı ne kadar arttırdığına bakılabilir
-- MRR hesabıyla ilgili bir sıkıntı var sanki, hep 1.00 veriyo
 - İleride hızı ve kaynak kullanım verimini/gpu load verimini artırmak için aynı modeli kullanacak olan işlemleri art arda yapıp sonra diğer modele geçilebilir, bunlar farklı configlerde olsa bile kaydedilerek böyle bir şey yapılabilir
 - sonuçları grafikleştirmek lazım
-- şuan sanırım retrieval performansını ölçmede bir sıkıntı var 
-- dataset üretiminde see also lar ve referanslar vs silinmeli, genel olarak çok az token a sahip chunklar da silinebilir.
 - dataset üretirken json isimlendirmesi direkt article_id ile olsun ben şuanki datasette değiştirdim ama ilerisi için böyle yapalım
-- rse yi yaptım ama biraz daha test etmek gerekiyor sanırım tam doğru çalışıyor mu emin değilim, şuan baya verimsiz çalışıyor her seferinde tüm chunkların similarity score'unu hesaplıyor bunun yerine bu score'lar bir yerde depolanabilir belki 
 - hashingle ilgili bir sıkıntı var
 - en son token sayıları vs kontrol edilmeli, bazı tokenlar sayılmıyor olabilir iyice bakılmalı
+- teknikler implement edildikten sonra (hyperparameter optimization aşırı uzun süreceği için) bu tekniklerin kullanıldığı makalelerden hyperparametre ve prompt'ları alıp onları kullanarak test edelim
+- promptlar ayrı bir dosyada tutulsun ordan çekilsin
+- GraphRAG ve HyperGraphRAG tamamlandı ama prompt değişimi veya document content kısmının değişimiyle daha iyi hale getirilebilir belki
+- 

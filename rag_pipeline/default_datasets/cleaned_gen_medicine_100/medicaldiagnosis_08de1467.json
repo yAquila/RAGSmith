@@ -1,0 +1,477 @@
+{
+  "article": {
+    "id": "medicaldiagnosis_08de1467",
+    "title": "Medical diagnosis",
+    "url": "https://en.wikipedia.org/wiki/Medical_diagnosis",
+    "lang": "en",
+    "created_at": "2025-07-31T07:11:14.786492",
+    "content": "---\nid: medicaldiagnosis_08de1467\nurl: https://en.wikipedia.org/wiki/Medical_diagnosis\ntitle: Medical diagnosis\nlang: en\ncreated_at: '2025-07-31T07:04:37.896808'\nchecksum: edb6846168f994c340f56a766bd1e366b5e167d25e6aeecaccc3ba20108774b4\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2927\n  char_count: 19189\n  num_chunks: 28\n  original_chunks: 34\n  filtered_out: 6\n  num_sections: 0\n---\nMedical diagnosis (abbreviated Dx, Dx, or Ds) is the process of determining which disease or condition explains a person's symptoms and signs. It is most often referred to as a diagnosis with the medical context being implicit. The information required for a diagnosis is typically collected from a history and physical examination of the person seeking medical care. Often, one or more diagnostic procedures, such as medical tests, are also done during the process. Sometimes the posthumous diagnosis is considered a kind of medical diagnosis. Diagnosis is often challenging because many signs and symptoms are nonspecific. For example, redness of the skin (erythema), by itself, is a sign of many disorders and thus does not tell the healthcare professional what is wrong. Thus differential diagnosis, in which several possible explanations are compared and contrasted, must be performed. This involves the correlation of various pieces of information followed by the recognition and differentiation of patterns. Occasionally the process is made easy by a sign or symptom (or a group of several) that is pathognomonic. Diagnosis is a major component of the procedure of a doctor's visit. From the point of view of statistics, the diagnostic procedure involves classification tests. == Medical uses == A diagnosis, in the sense of diagnostic procedure, can be regarded as an attempt at classification of an individual's condition into separate and distinct categories that allow medical decisions about treatment and prognosis to be made. Subsequently, a diagnostic opinion is often described in terms of a disease or other condition. (In the case of a wrong diagnosis, however, the individual's actual disease or condition is not the same as the individual's diagnosis.) A total evaluation of a condition is often termed a diagnostic workup. A diagnostic procedure may be performed by various healthcare professionals such as a physician, physiotherapist, dentist, podiatrist, optometrist, nurse practitioner, healthcare scientist or physician assistant. This article uses diagnostician as any of these person categories. A diagnostic procedure (as well as the opinion reached thereby) does not necessarily involve elucidation of the etiology of the diseases or conditions of interest, that is, what caused the disease or condition. Such elucidation can be useful to optimize treatment, further specify the prognosis or prevent recurrence of the disease or condition in the future. The initial task is to detect a medical indication to perform a diagnostic procedure. Indications include: Detection of any deviation from what is known to be normal, such as can be described in terms of, for example, anatomy (the structure of the human body), physiology (how the body works), pathology (what can go wrong with the anatomy and physiology), psychology (thought and behavior) and human homeostasis (regarding mechanisms to keep body systems in balance). Knowledge of what is normal and measuring of the patient's current condition against those norms can assist in determining the patient's particular departure from homeostasis and the degree of departure, which in turn can assist in quantifying the indication for further diagnostic processing. A complaint expressed by a patient. The fact that a patient has sought a diagnostician can itself be an indication to perform a diagnostic procedure. For example, in a doctor's visit, the physician may already start performing a diagnostic procedure by watching the gait of the patient from the waiting room to the doctor's office even before she or he has started to present any complaints. Even during an already ongoing diagnostic procedure, there can be an indication to perform another, separate, diagnostic procedure for another, potentially concomitant, disease or condition. This may occur as a result of an incidental finding of a sign unrelated to the parameter of interest, such as can occur in comprehensive tests such as radiological studies like magnetic resonance imaging or blood test panels that also include blood tests that are not relevant for the ongoing diagnosis. == Procedure == General components which are present in a diagnostic procedure in most of the various available methods include: Complementing the already given information with further data gathering, which may include questions of the medical history (potentially from other people close to the patient as well), physical examination and various diagnostic tests. A diagnostic test is any kind of medical test performed to aid in the diagnosis or detection of disease. Diagnostic tests can also be used to provide prognostic information on people with established disease. Processing of the answers, findings or other results. Consultations with other providers and specialists in the field may be sought. There are a number of methods or techniques that can be used in a diagnostic procedure, including performing a differential diagnosis or following medical algorithms. In reality, a diagnostic procedure may involve components of multiple methods. === Differential diagnosis === The method of differential diagnosis is based on finding as many candidate diseases or conditions as possible that can possibly cause the signs or symptoms, followed by a process of elimination or at least of rendering the entries more or less probable by further medical tests and other processing, aiming to reach the point where only one candidate disease or condition remains as probable. The result may also remain a list of possible conditions, ranked in order of probability or severity. Such a list is often generated by computer-aided diagnosis systems. The resultant diagnostic opinion by this method can be regarded more or less as a diagnosis of exclusion. Even if it does not result in a single probable disease or condition, it can at least rule out any imminently life-threatening conditions. Unless the provider is certain of the condition present, further medical tests, such as medical imaging, are performed or scheduled in part to confirm or disprove the diagnosis but also to document the patient's status and keep the patient's medical history up to date. If unexpected findings are made during this process, the initial hypothesis may be ruled out and the provider must then consider other hypotheses. === Pattern recognition === In a pattern recognition method the provider uses experience to recognize a pattern of clinical characteristics. It is mainly based on certain symptoms or signs being associated with certain diseases or conditions, not necessarily involving the more cognitive processing involved in a differential diagnosis. This may be the primary method used in cases where diseases are \"obvious\", or the provider's experience may enable him or her to recognize the condition quickly. Theoretically, a certain pattern of signs or symptoms can be directly associated with a certain therapy, even without a definite decision regarding what is the actual disease, but such a compromise carries a substantial risk of missing a diagnosis which actually has a different therapy so it may be limited to cases where no diagnosis can be made. === Diagnostic criteria === The term diagnostic criteria designates the specific combination of signs and symptoms, and test results that the clinician uses to attempt to determine the correct diagnosis. Some examples of diagnostic criteria, also known as clinical case definitions, are: Amsterdam criteria for hereditary nonpolyposis colorectal cancer McDonald criteria for multiple sclerosis ACR criteria for systemic lupus erythematosus Centor criteria for strep throat === Clinical decision support system === Clinical decision support systems are interactive computer programs designed to assist health professionals with decision-making tasks. The clinician interacts with the software utilizing both the clinician's knowledge and the software to make a better analysis of the patients data than either human or software could make on their own. Typically the system makes suggestions for the clinician to look through and the clinician picks useful information and removes erroneous suggestions. Some programs attempt to do this by replacing the clinician, such as reading the output of a heart monitor. Such automated processes are usually deemed a \"device\" by the FDA and require regulatory approval. In contrast, clinical decision support systems that \"support\" but do not replace the clinician are deemed to be \"Augmented Intelligence\" if it meets the FDA criteria that (1) it reveals the underlying data, (2) reveals the underlying logic, and (3) leaves the clinician in charge to shape and make the decision. === Other diagnostic procedure methods === Other methods that can be used in performing a diagnostic procedure include: Usage of medical algorithms An \"exhaustive method\", in which every possible question is asked and all possible data is collected. == Adverse effects == Diagnosis problems are the dominant cause of medical malpractice payments, accounting for 35% of total payments in a study of 25 years of data and 350,000 claims. === Overdiagnosis === Overdiagnosis is the diagnosis of \"disease\" that will never cause symptoms or death during a patient's lifetime. It is a problem because it turns people into patients unnecessarily and because it can lead to economic waste (overutilization) and treatments that may cause harm. Overdiagnosis occurs when a disease is diagnosed correctly, but the diagnosis is irrelevant. A correct diagnosis may be irrelevant because treatment for the disease is not available, not needed, or not wanted. === Errors === Most people will experience at least one diagnostic error in their lifetime, according to a 2015 report by the National Academies of Sciences, Engineering, and Medicine. Causes and factors of error in diagnosis are: the manifestation of disease are not sufficiently noticeable a disease is omitted from consideration too much significance is given to some aspect of the diagnosis the condition is a rare disease with symptoms suggestive of many other conditions the condition has a rare presentation === Lag time === When making a medical diagnosis, a lag time is a delay in time until a step towards diagnosis of a disease or condition is made. Types of lag times are mainly: Onset-to-medical encounter lag time, the time from onset of symptoms until visiting a health care provider Encounter-to-diagnosis lag time, the time from first medical encounter to diagnosis Lag time due to delays in reading x-rays have been cited as a major challenge in care delivery. The Department of Health and Human Services has reportedly found that interpretation of x-rays is rarely available to emergency room physicians prior to patient discharge. Long lag times are often called \"diagnostic odyssey\". == History == The first recorded examples of medical diagnosis are found in the writings of Imhotep (2630–2611 BC) in ancient Egypt (the Edwin Smith Papyrus). A Babylonian medical textbook, the Diagnostic Handbook written by Esagil-kin-apli (fl.1069–1046 BC), introduced the use of empiricism, logic and rationality in the diagnosis of an illness or disease. Traditional Chinese Medicine, as described in the Yellow Emperor's Inner Canon or Huangdi Neijing, specified four diagnostic methods: inspection, auscultation-olfaction, inquiry and palpation. Hippocrates was known to make diagnoses by tasting his patients' urine and smelling their sweat. == Word == Medical diagnosis or the actual process of making a diagnosis is a cognitive process. A clinician uses several sources of data and puts the pieces of the puzzle together to make a diagnostic impression. The initial diagnostic impression can be a broad term describing a category of diseases instead of a specific disease or condition. After the initial diagnostic impression, the clinician obtains follow up tests and procedures to get more data to support or reject the original diagnosis and will attempt to narrow it down to a more specific level. Diagnostic procedures are the specific tools that the clinicians use to narrow the diagnostic possibilities. The plural of diagnosis is diagnoses. The verb is to diagnose, and a person who diagnoses is called a diagnostician. === Etymology === The word diagnosis is derived through Latin from the Greek word διάγνωσις (diágnōsis) from διαγιγνώσκειν (diagignṓskein), meaning \"to discern, distinguish\". == Society and culture == === Social context === Diagnosis can take many forms. It might be a matter of naming the disease, lesion, dysfunction or disability. It might be a management-naming or prognosis-naming exercise. It may indicate either degree of abnormality on a continuum or kind of abnormality in a classification. It is influenced by non-medical factors such as power, ethics and financial incentives for patient or doctor. It can be a brief summation or an extensive formulation, even taking the form of a story or metaphor. It might be a means of communication such as a computer code through which it triggers payment, prescription, notification, information or advice. It might be pathogenic or salutogenic. It is generally uncertain and provisional. Once a diagnostic opinion has been reached, the provider is able to propose a management plan, which will include treatment as well as plans for follow-up. From this point on, in addition to treating the patient's condition, the provider can educate the patient about the etiology, progression, prognosis, other outcomes, and possible treatments of her or his ailments, as well as providing advice for maintaining health. A treatment plan is proposed which may include therapy and follow-up consultations and tests to monitor the condition and the progress of the treatment, if needed, usually according to the medical guidelines provided by the medical field on the treatment of the particular illness. Relevant information should be added to the medical record of the patient. A failure to respond to treatments that would normally work may indicate a need for review of the diagnosis. Nancy McWilliams identifies five reasons that determine the necessity for diagnosis: diagnosis for treatment planning; information contained in it related to prognosis; protecting interests of patients; a diagnosis might help the therapist to empathize with his patient; might reduce the likelihood that some fearful patients will go-by the treatment. == Types == Sub-types of diagnoses include: Clinical diagnosis A diagnosis made on the basis of medical signs and reported symptoms, rather than diagnostic tests Laboratory diagnosis A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient. For instance, a proper diagnosis of infectious diseases usually requires both an examination of signs and symptoms, as well as laboratory test results and characteristics of the pathogen involved. Radiology diagnosis A diagnosis based primarily on the results from medical imaging studies. Greenstick fractures are common radiological diagnoses. Electrography diagnosis A diagnosis based on measurement and recording of electrophysiologic activity. Endoscopy diagnosis A diagnosis based on endoscopic inspection and observation of the interior of a hollow organ or cavity of the body. Tissue diagnosis A diagnosis based on the macroscopic, microscopic, and molecular examination of tissues such as biopsies or whole organs. For example, a definitive diagnosis of cancer is made via tissue examination by a pathologist. Principal diagnosis The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment. Many patients have additional diagnoses. Admitting diagnosis The diagnosis given as the reason why the patient was admitted to the hospital; it may differ from the actual problem or from the discharge diagnoses, which are the diagnoses recorded when the patient is discharged from the hospital. Differential diagnosis A process of identifying all of the possible diagnoses that could be connected to the signs, symptoms, and lab findings, and then ruling out diagnoses until a final determination can be made. Diagnostic criteria Designates the combination of signs, symptoms, and test results that the clinician uses to attempt to determine the correct diagnosis. They are standards, normally published by international committees, and they are designed to offer the best sensitivity and specificity possible, respect the presence of a condition, with the state-of-the-art technology. Prenatal diagnosis Diagnosis work done before birth Diagnosis of exclusion A medical condition whose presence cannot be established with complete confidence from history, examination or testing. Diagnosis is therefore by elimination of all other reasonable possibilities. Dual diagnosis The diagnosis of two related, but separate, medical conditions or comorbidities. The term almost always referred to a diagnosis of a serious mental illness and a substance use disorder, however, the increasing prevalence of genetic testing has revealed many cases of patients with multiple concomitant genetic disorders. Self-diagnosis The diagnosis or identification of a medical conditions in oneself. Self-diagnosis is very common. Remote diagnosis A type of telemedicine that diagnoses a patient without being physically in the same room as the patient. Nursing diagnosis Rather than focusing on biological processes, a nursing diagnosis identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance. Computer-aided diagnosis Providing symptoms allows the computer to identify the problem and diagnose the user to the best of its ability. Health screening begins by identifying the part of the body where the symptoms are located; the computer cross-references a database for the corresponding disease and presents a diagnosis. Overdiagnosis The diagnosis of \"disease\" that will never cause symptoms, distress, or death during a patient's lifetime Wastebasket diagnosis A vague, or even completely fake, medical or psychiatric label given to the patient or to the medical records department for essentially non-medical reasons, such as to reassure the patient by providing an official-sounding label, to make the provider look effective, or to obtain approval for treatment. This term is also used as a derogatory label for disputed, poorly described, overused, or questionably classified diagnoses, such as pouchitis and senility, or to dismiss diagnoses that amount to overmedicalization, such as the labeling of normal responses to physical hunger as reactive hypoglycemia. Retrospective diagnosis The labeling of an illness in a historical figure or specific historical event using modern knowledge, methods and disease classifications. == See also == === Lists === List of diagnostic classification and rating scales used in psychiatry List of diseases List of disorders List of medical symptoms Category:Diseases == References == == External links == Media related to Medical diagnosis at Wikimedia Commons"
+  },
+  "chunks": [
+    {
+      "id": "medicaldiagnosis_08de1467_c0000",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 891,
+      "content": "Medical diagnosis (abbreviated Dx, Dx, or Ds) is the process of determining which disease or condition explains a person's symptoms and signs. It is most often referred to as a diagnosis with the medical context being implicit. The information required for a diagnosis is typically collected from a history and physical examination of the person seeking medical care. Often, one or more diagnostic procedures, such as medical tests, are also done during the process. Sometimes the posthumous diagnosis is considered a kind of medical diagnosis. Diagnosis is often challenging because many signs and symptoms are nonspecific. For example, redness of the skin (erythema), by itself, is a sign of many disorders and thus does not tell the healthcare professional what is wrong. Thus differential diagnosis, in which several possible explanations are compared and contrasted, must be performed.",
+      "char_count": 890,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0001",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 891,
+      "end_char": 1283,
+      "content": "This involves the correlation of various pieces of information followed by the recognition and differentiation of patterns. Occasionally the process is made easy by a sign or symptom (or a group of several) that is pathognomonic. Diagnosis is a major component of the procedure of a doctor's visit. From the point of view of statistics, the diagnostic procedure involves classification tests.",
+      "char_count": 392,
+      "token_estimate": 98,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0002",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 1302,
+      "end_char": 2142,
+      "content": "== Medical uses == A diagnosis, in the sense of diagnostic procedure, can be regarded as an attempt at classification of an individual's condition into separate and distinct categories that allow medical decisions about treatment and prognosis to be made. Subsequently, a diagnostic opinion is often described in terms of a disease or other condition. (In the case of a wrong diagnosis, however, the individual's actual disease or condition is not the same as the individual's diagnosis.) A total evaluation of a condition is often termed a diagnostic workup. A diagnostic procedure may be performed by various healthcare professionals such as a physician, physiotherapist, dentist, podiatrist, optometrist, nurse practitioner, healthcare scientist or physician assistant. This article uses diagnostician as any of these person categories.",
+      "char_count": 839,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0003",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 2142,
+      "end_char": 2970,
+      "content": "A diagnostic procedure (as well as the opinion reached thereby) does not necessarily involve elucidation of the etiology of the diseases or conditions of interest, that is, what caused the disease or condition. Such elucidation can be useful to optimize treatment, further specify the prognosis or prevent recurrence of the disease or condition in the future. The initial task is to detect a medical indication to perform a diagnostic procedure. Indications include: Detection of any deviation from what is known to be normal, such as can be described in terms of, for example, anatomy (the structure of the human body), physiology (how the body works), pathology (what can go wrong with the anatomy and physiology), psychology (thought and behavior) and human homeostasis (regarding mechanisms to keep body systems in balance).",
+      "char_count": 828,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0004",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 2971,
+      "end_char": 3847,
+      "content": "Knowledge of what is normal and measuring of the patient's current condition against those norms can assist in determining the patient's particular departure from homeostasis and the degree of departure, which in turn can assist in quantifying the indication for further diagnostic processing. A complaint expressed by a patient. The fact that a patient has sought a diagnostician can itself be an indication to perform a diagnostic procedure. For example, in a doctor's visit, the physician may already start performing a diagnostic procedure by watching the gait of the patient from the waiting room to the doctor's office even before she or he has started to present any complaints. Even during an already ongoing diagnostic procedure, there can be an indication to perform another, separate, diagnostic procedure for another, potentially concomitant, disease or condition.",
+      "char_count": 876,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0005",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 3848,
+      "end_char": 4151,
+      "content": "This may occur as a result of an incidental finding of a sign unrelated to the parameter of interest, such as can occur in comprehensive tests such as radiological studies like magnetic resonance imaging or blood test panels that also include blood tests that are not relevant for the ongoing diagnosis.",
+      "char_count": 303,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0006",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Procedure ==",
+      "heading_path": "== Procedure ==",
+      "start_char": 4149,
+      "end_char": 5088,
+      "content": "== Procedure == General components which are present in a diagnostic procedure in most of the various available methods include: Complementing the already given information with further data gathering, which may include questions of the medical history (potentially from other people close to the patient as well), physical examination and various diagnostic tests. A diagnostic test is any kind of medical test performed to aid in the diagnosis or detection of disease. Diagnostic tests can also be used to provide prognostic information on people with established disease. Processing of the answers, findings or other results. Consultations with other providers and specialists in the field may be sought. There are a number of methods or techniques that can be used in a diagnostic procedure, including performing a differential diagnosis or following medical algorithms. In reality, a diagnostic procedure may involve components of multiple methods.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0007",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Differential diagnosis ==",
+      "heading_path": "== = Differential diagnosis ==",
+      "start_char": 5118,
+      "end_char": 5958,
+      "content": "== = Differential diagnosis === The method of differential diagnosis is based on finding as many candidate diseases or conditions as possible that can possibly cause the signs or symptoms, followed by a process of elimination or at least of rendering the entries more or less probable by further medical tests and other processing, aiming to reach the point where only one candidate disease or condition remains as probable. The result may also remain a list of possible conditions, ranked in order of probability or severity. Such a list is often generated by computer-aided diagnosis systems. The resultant diagnostic opinion by this method can be regarded more or less as a diagnosis of exclusion. Even if it does not result in a single probable disease or condition, it can at least rule out any imminently life-threatening conditions.",
+      "char_count": 839,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0008",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Differential diagnosis ==",
+      "heading_path": "== = Differential diagnosis ==",
+      "start_char": 5958,
+      "end_char": 6374,
+      "content": "Unless the provider is certain of the condition present, further medical tests, such as medical imaging, are performed or scheduled in part to confirm or disprove the diagnosis but also to document the patient's status and keep the patient's medical history up to date. If unexpected findings are made during this process, the initial hypothesis may be ruled out and the provider must then consider other hypotheses.",
+      "char_count": 416,
+      "token_estimate": 104,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0009",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Pattern recognition ==",
+      "heading_path": "== = Pattern recognition ==",
+      "start_char": 6372,
+      "end_char": 7194,
+      "content": "== = Pattern recognition === In a pattern recognition method the provider uses experience to recognize a pattern of clinical characteristics. It is mainly based on certain symptoms or signs being associated with certain diseases or conditions, not necessarily involving the more cognitive processing involved in a differential diagnosis. This may be the primary method used in cases where diseases are \"obvious\", or the provider's experience may enable him or her to recognize the condition quickly. Theoretically, a certain pattern of signs or symptoms can be directly associated with a certain therapy, even without a definite decision regarding what is the actual disease, but such a compromise carries a substantial risk of missing a diagnosis which actually has a different therapy so it may be limited to cases where no diagnosis can be made.",
+      "char_count": 848,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0010",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Diagnostic criteria ==",
+      "heading_path": "== = Diagnostic criteria ==",
+      "start_char": 7221,
+      "end_char": 7668,
+      "content": "== = Diagnostic criteria === The term diagnostic criteria designates the specific combination of signs and symptoms, and test results that the clinician uses to attempt to determine the correct diagnosis. Some examples of diagnostic criteria, also known as clinical case definitions, are: Amsterdam criteria for hereditary nonpolyposis colorectal cancer McDonald criteria for multiple sclerosis ACR criteria for systemic lupus erythematosus Centor criteria for strep throat",
+      "char_count": 473,
+      "token_estimate": 118,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0011",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Clinical decision support system ==",
+      "heading_path": "== = Clinical decision support system ==",
+      "start_char": 7708,
+      "end_char": 8446,
+      "content": "== = Clinical decision support system === Clinical decision support systems are interactive computer programs designed to assist health professionals with decision-making tasks. The clinician interacts with the software utilizing both the clinician's knowledge and the software to make a better analysis of the patients data than either human or software could make on their own. Typically the system makes suggestions for the clinician to look through and the clinician picks useful information and removes erroneous suggestions. Some programs attempt to do this by replacing the clinician, such as reading the output of a heart monitor. Such automated processes are usually deemed a \"device\" by the FDA and require regulatory approval.",
+      "char_count": 737,
+      "token_estimate": 184,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0012",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Clinical decision support system ==",
+      "heading_path": "== = Clinical decision support system ==",
+      "start_char": 8446,
+      "end_char": 8757,
+      "content": "In contrast, clinical decision support systems that \"support\" but do not replace the clinician are deemed to be \"Augmented Intelligence\" if it meets the FDA criteria that (1) it reveals the underlying data, (2) reveals the underlying logic, and (3) leaves the clinician in charge to shape and make the decision.",
+      "char_count": 311,
+      "token_estimate": 77,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0013",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Other diagnostic procedure methods ==",
+      "heading_path": "== = Other diagnostic procedure methods ==",
+      "start_char": 8760,
+      "end_char": 8969,
+      "content": "== = Other diagnostic procedure methods === Other methods that can be used in performing a diagnostic procedure include: Usage of medical algorithms An \"exhaustive method\", in which every possible question is asked and all possible data is collected.",
+      "char_count": 250,
+      "token_estimate": 62,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0014",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Adverse effects ==",
+      "heading_path": "== Adverse effects ==",
+      "start_char": 8990,
+      "end_char": 9154,
+      "content": "== Adverse effects == Diagnosis problems are the dominant cause of medical malpractice payments, accounting for 35% of total payments in a study of 25 years of data and 350,000 claims.",
+      "char_count": 184,
+      "token_estimate": 46,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0015",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Overdiagnosis ==",
+      "heading_path": "== = Overdiagnosis ==",
+      "start_char": 9175,
+      "end_char": 9664,
+      "content": "== = Overdiagnosis === Overdiagnosis is the diagnosis of \"disease\" that will never cause symptoms or death during a patient's lifetime. It is a problem because it turns people into patients unnecessarily and because it can lead to economic waste (overutilization) and treatments that may cause harm. Overdiagnosis occurs when a disease is diagnosed correctly, but the diagnosis is irrelevant. A correct diagnosis may be irrelevant because treatment for the disease is not available, not needed, or not wanted.",
+      "char_count": 509,
+      "token_estimate": 127,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0016",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Errors ==",
+      "heading_path": "== = Errors ==",
+      "start_char": 9678,
+      "end_char": 10180,
+      "content": "== = Errors === Most people will experience at least one diagnostic error in their lifetime, according to a 2015 report by the National Academies of Sciences, Engineering, and Medicine. Causes and factors of error in diagnosis are: the manifestation of disease are not sufficiently noticeable a disease is omitted from consideration too much significance is given to some aspect of the diagnosis the condition is a rare disease with symptoms suggestive of many other conditions the condition has a rare presentation",
+      "char_count": 515,
+      "token_estimate": 128,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0017",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Lag time ==",
+      "heading_path": "== = Lag time ==",
+      "start_char": 10196,
+      "end_char": 10871,
+      "content": "== = Lag time === When making a medical diagnosis, a lag time is a delay in time until a step towards diagnosis of a disease or condition is made. Types of lag times are mainly: Onset-to-medical encounter lag time, the time from onset of symptoms until visiting a health care provider Encounter-to-diagnosis lag time, the time from first medical encounter to diagnosis Lag time due to delays in reading x-rays have been cited as a major challenge in care delivery. The Department of Health and Human Services has reportedly found that interpretation of x-rays is rarely available to emergency room physicians prior to patient discharge. Long lag times are often called \"diagnostic odyssey\".",
+      "char_count": 690,
+      "token_estimate": 172,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0018",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 10884,
+      "end_char": 11520,
+      "content": "== History == The first recorded examples of medical diagnosis are found in the writings of Imhotep (2630–2611 BC) in ancient Egypt (the Edwin Smith Papyrus). A Babylonian medical textbook, the Diagnostic Handbook written by Esagil-kin-apli (fl.1069–1046 BC), introduced the use of empiricism, logic and rationality in the diagnosis of an illness or disease. Traditional Chinese Medicine, as described in the Yellow Emperor's Inner Canon or Huangdi Neijing, specified four diagnostic methods: inspection, auscultation-olfaction, inquiry and palpation. Hippocrates was known to make diagnoses by tasting his patients' urine and smelling their sweat.",
+      "char_count": 648,
+      "token_estimate": 162,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0019",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Word ==",
+      "heading_path": "== Word ==",
+      "start_char": 11530,
+      "end_char": 12308,
+      "content": "== Word == Medical diagnosis or the actual process of making a diagnosis is a cognitive process. A clinician uses several sources of data and puts the pieces of the puzzle together to make a diagnostic impression. The initial diagnostic impression can be a broad term describing a category of diseases instead of a specific disease or condition. After the initial diagnostic impression, the clinician obtains follow up tests and procedures to get more data to support or reject the original diagnosis and will attempt to narrow it down to a more specific level. Diagnostic procedures are the specific tools that the clinicians use to narrow the diagnostic possibilities. The plural of diagnosis is diagnoses. The verb is to diagnose, and a person who diagnoses is called a diagnostician.",
+      "char_count": 787,
+      "token_estimate": 196,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0020",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Social context ==",
+      "heading_path": "== = Social context ==",
+      "start_char": 12532,
+      "end_char": 13429,
+      "content": "== = Social context === Diagnosis can take many forms. It might be a matter of naming the disease, lesion, dysfunction or disability. It might be a management-naming or prognosis-naming exercise. It may indicate either degree of abnormality on a continuum or kind of abnormality in a classification. It is influenced by non-medical factors such as power, ethics and financial incentives for patient or doctor. It can be a brief summation or an extensive formulation, even taking the form of a story or metaphor. It might be a means of communication such as a computer code through which it triggers payment, prescription, notification, information or advice. It might be pathogenic or salutogenic. It is generally uncertain and provisional. Once a diagnostic opinion has been reached, the provider is able to propose a management plan, which will include treatment as well as plans for follow-up.",
+      "char_count": 896,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0021",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Social context ==",
+      "heading_path": "== = Social context ==",
+      "start_char": 13429,
+      "end_char": 14160,
+      "content": "From this point on, in addition to treating the patient's condition, the provider can educate the patient about the etiology, progression, prognosis, other outcomes, and possible treatments of her or his ailments, as well as providing advice for maintaining health. A treatment plan is proposed which may include therapy and follow-up consultations and tests to monitor the condition and the progress of the treatment, if needed, usually according to the medical guidelines provided by the medical field on the treatment of the particular illness. Relevant information should be added to the medical record of the patient. A failure to respond to treatments that would normally work may indicate a need for review of the diagnosis.",
+      "char_count": 731,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0022",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== = Social context ==",
+      "heading_path": "== = Social context ==",
+      "start_char": 14161,
+      "end_char": 14512,
+      "content": "Nancy McWilliams identifies five reasons that determine the necessity for diagnosis: diagnosis for treatment planning; information contained in it related to prognosis; protecting interests of patients; a diagnosis might help the therapist to empathize with his patient; might reduce the likelihood that some fearful patients will go-by the treatment.",
+      "char_count": 351,
+      "token_estimate": 87,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0023",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 14502,
+      "end_char": 15394,
+      "content": "== Types == Sub-types of diagnoses include: Clinical diagnosis A diagnosis made on the basis of medical signs and reported symptoms, rather than diagnostic tests Laboratory diagnosis A diagnosis based significantly on laboratory reports or test results, rather than the physical examination of the patient. For instance, a proper diagnosis of infectious diseases usually requires both an examination of signs and symptoms, as well as laboratory test results and characteristics of the pathogen involved. Radiology diagnosis A diagnosis based primarily on the results from medical imaging studies. Greenstick fractures are common radiological diagnoses. Electrography diagnosis A diagnosis based on measurement and recording of electrophysiologic activity. Endoscopy diagnosis A diagnosis based on endoscopic inspection and observation of the interior of a hollow organ or cavity of the body.",
+      "char_count": 891,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0024",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 15394,
+      "end_char": 16264,
+      "content": "Tissue diagnosis A diagnosis based on the macroscopic, microscopic, and molecular examination of tissues such as biopsies or whole organs. For example, a definitive diagnosis of cancer is made via tissue examination by a pathologist. Principal diagnosis The single medical diagnosis that is most relevant to the patient's chief complaint or need for treatment. Many patients have additional diagnoses. Admitting diagnosis The diagnosis given as the reason why the patient was admitted to the hospital; it may differ from the actual problem or from the discharge diagnoses, which are the diagnoses recorded when the patient is discharged from the hospital. Differential diagnosis A process of identifying all of the possible diagnoses that could be connected to the signs, symptoms, and lab findings, and then ruling out diagnoses until a final determination can be made.",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0025",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 16265,
+      "end_char": 17248,
+      "content": "Diagnostic criteria Designates the combination of signs, symptoms, and test results that the clinician uses to attempt to determine the correct diagnosis. They are standards, normally published by international committees, and they are designed to offer the best sensitivity and specificity possible, respect the presence of a condition, with the state-of-the-art technology. Prenatal diagnosis Diagnosis work done before birth Diagnosis of exclusion A medical condition whose presence cannot be established with complete confidence from history, examination or testing. Diagnosis is therefore by elimination of all other reasonable possibilities. Dual diagnosis The diagnosis of two related, but separate, medical conditions or comorbidities. The term almost always referred to a diagnosis of a serious mental illness and a substance use disorder, however, the increasing prevalence of genetic testing has revealed many cases of patients with multiple concomitant genetic disorders.",
+      "char_count": 983,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0026",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 17249,
+      "end_char": 18025,
+      "content": "Self-diagnosis The diagnosis or identification of a medical conditions in oneself. Self-diagnosis is very common. Remote diagnosis A type of telemedicine that diagnoses a patient without being physically in the same room as the patient. Nursing diagnosis Rather than focusing on biological processes, a nursing diagnosis identifies people's responses to situations in their lives, such as a readiness to change or a willingness to accept assistance. Computer-aided diagnosis Providing symptoms allows the computer to identify the problem and diagnose the user to the best of its ability. Health screening begins by identifying the part of the body where the symptoms are located; the computer cross-references a database for the corresponding disease and presents a diagnosis.",
+      "char_count": 776,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicaldiagnosis_08de1467_c0027",
+      "article_id": "medicaldiagnosis_08de1467",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 18026,
+      "end_char": 18938,
+      "content": "Overdiagnosis The diagnosis of \"disease\" that will never cause symptoms, distress, or death during a patient's lifetime Wastebasket diagnosis A vague, or even completely fake, medical or psychiatric label given to the patient or to the medical records department for essentially non-medical reasons, such as to reassure the patient by providing an official-sounding label, to make the provider look effective, or to obtain approval for treatment. This term is also used as a derogatory label for disputed, poorly described, overused, or questionably classified diagnoses, such as pouchitis and senility, or to dismiss diagnoses that amount to overmedicalization, such as the labeling of normal responses to physical hunger as reactive hypoglycemia. Retrospective diagnosis The labeling of an illness in a historical figure or specific historical event using modern knowledge, methods and disease classifications.",
+      "char_count": 912,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is a diagnosis of exclusion?",
+        "answer": "A diagnosis of exclusion is a medical condition whose presence cannot be established with complete confidence from history, examination, or testing. The diagnosis is made by eliminating all other reasonable possibilities.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0025"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the general components of a diagnostic procedure?",
+        "answer": "A diagnostic procedure generally includes several components. First, it involves gathering additional data through medical history questions (which may involve people close to the patient), a physical examination, and various diagnostic tests. Second, the answers, findings, and results are processed. Third, consultations with other providers and specialists may be sought. The procedure can utilize methods like differential diagnosis or medical algorithms, and in practice, may combine components from multiple methods.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What non-medical factors can influence a medical diagnosis?",
+        "answer": "A diagnosis can be influenced by non-medical factors such as power, ethics, and financial incentives for the patient or doctor.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0020"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the primary purpose of a medical diagnosis, and what general steps are involved in the process?",
+        "answer": "The primary purpose of a medical diagnosis is to classify an individual's condition into distinct categories, which allows for informed medical decisions regarding treatment and prognosis. The process involves collecting information from a patient's history and physical examination, often supplemented by diagnostic tests. This is followed by correlating the various pieces of information to recognize and differentiate patterns. Because many signs and symptoms are nonspecific, this often requires a differential diagnosis where several possible explanations are compared and contrasted.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0000",
+          "medicaldiagnosis_08de1467_c0001",
+          "medicaldiagnosis_08de1467_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What constitutes a medical indication for a diagnostic procedure, and what are some practical ways a diagnostician might identify one?",
+        "answer": "A medical indication for a diagnostic procedure is the detection of any deviation from what is known to be normal in areas such as anatomy, physiology, pathology, psychology, or human homeostasis. A diagnostician can identify such an indication by measuring a patient's condition against these norms, through a complaint expressed by the patient, or even by observing the patient's physical state, like their gait, before they have voiced any complaints.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0003",
+          "medicaldiagnosis_08de1467_c0004"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What information is provided about == Medical uses ==?",
+        "answer": "The text provides information about == Medical uses == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0005",
+          "medicaldiagnosis_08de1467_c0006",
+          "medicaldiagnosis_08de1467_c0007"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does the medical diagnostic process address the challenge posed by nonspecific signs and symptoms?",
+        "answer": "The diagnostic process addresses the challenge of nonspecific signs and symptoms by correlating various pieces of information, such as from a patient's history and physical exam, to recognize and differentiate patterns. When signs are nonspecific, a differential diagnosis is performed, which involves comparing and contrasting several possible explanations to identify the correct disease or condition.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0000",
+          "medicaldiagnosis_08de1467_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are the different circumstances or findings that can trigger the start of a diagnostic procedure?",
+        "answer": "A diagnostic procedure can be initiated for several reasons. The primary trigger is the detection of a medical indication, which is any deviation from what is considered normal in terms of anatomy, physiology, pathology, psychology, or homeostasis. A complaint expressed by a patient is another indication, as is the mere fact that a patient has sought out a diagnostician. Furthermore, a new diagnostic procedure can be prompted by an incidental finding of an unrelated sign during a comprehensive test like an MRI or blood panel.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0003",
+          "medicaldiagnosis_08de1467_c0004",
+          "medicaldiagnosis_08de1467_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do further medical tests, such as imaging, facilitate the process of elimination in a differential diagnosis?",
+        "answer": "In a differential diagnosis, a list of possible conditions is generated. Further medical tests, like medical imaging, are then performed to confirm or disprove the initial diagnostic hypothesis. If unexpected findings from these tests rule out the initial hypothesis, the provider must then consider other possibilities, thereby advancing the process of elimination to identify the most probable condition.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0007",
+          "medicaldiagnosis_08de1467_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does the FDA differentiate between a clinical decision support system that is considered a \"device\" and one that is considered \"Augmented Intelligence\"?",
+        "answer": "A clinical decision support system is considered a \"device\" by the FDA when it attempts to replace the clinician, such as by automatically reading a heart monitor's output. In contrast, a system is classified as \"Augmented Intelligence\" when it supports the clinician and meets three specific criteria: it reveals the underlying data, it reveals the underlying logic, and it leaves the clinician in charge of shaping and making the final decision.",
+        "related_chunk_ids": [
+          "medicaldiagnosis_08de1467_c0011",
+          "medicaldiagnosis_08de1467_c0012"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T08:34:19.690Z",
+    "content_format": "markdown",
+    "total_chunks": 28,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

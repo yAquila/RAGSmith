@@ -1,0 +1,304 @@
+{
+  "article": {
+    "id": "probabilitydistribut_c000514b",
+    "title": "Probability distribution",
+    "url": "https://en.wikipedia.org/wiki/Probability_distribution",
+    "lang": "en",
+    "created_at": "2025-07-31T06:32:40.017121",
+    "content": "---\nid: probabilitydistribut_c000514b\nurl: https://en.wikipedia.org/wiki/Probability_distribution\ntitle: Probability distribution\nlang: en\ncreated_at: '2025-07-31T06:27:05.791425'\nchecksum: 0bead688d883c7bdeb6784d25b6ac31110eb26cf2b9130a5ea07f56cbdd06120\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2019\n  char_count: 12509\n  num_chunks: 16\n  original_chunks: 17\n  filtered_out: 1\n  num_sections: 0\n---\nIn probability theory and statistics, a probability distribution is a function that gives the probabilities of occurrence of possible events for an experiment. It is a mathematical description of a random phenomenon in terms of its sample space and the probabilities of events (subsets of the sample space). For instance, if X is used to denote the outcome of a coin toss (\"the experiment\"), then the probability distribution of X would take the value 0.5 (1 in 2 or 1/2) for X = heads, and 0.5 for X = tails (assuming that the coin is fair). More commonly, probability distributions are used to compare the relative occurrence of many different random values. Probability distributions can be defined in different ways and for discrete or for continuous variables. Distributions with special properties or for especially important applications are given specific names. == Introduction == A probability distribution is a mathematical description of the probabilities of events, subsets of the sample space. The sample space, often represented in notation by Ω , {\\displaystyle \\ \\Omega \\ ,} is the set of all possible outcomes of a random phenomenon being observed. The sample space may be any set: a set of real numbers, a set of descriptive labels, a set of vectors, a set of arbitrary non-numerical values, etc. For example, the sample space of a coin flip could be Ω = {\"heads\", \"tails\"}. To define probability distributions for the specific case of random variables (so the sample space can be seen as a numeric set), it is common to distinguish between discrete and continuous random variables. In the discrete case, it is sufficient to specify a probability mass function p {\\displaystyle p} assigning a probability to each possible outcome (e.g. when throwing a fair die, each of the six digits “1” to “6”, corresponding to the number of dots on the die, has probability 1 6 ) . {\\displaystyle {\\tfrac {1}{6}}).} The probability of an event is then defined to be the sum of the probabilities of all outcomes that satisfy the event; for example, the probability of the event \"the die rolls an even value\" is p ( “ 2 ” ) + p ( “ 4 ” ) + p ( “ 6 ” ) = 1 6 + 1 6 + 1 6 = 1 2 . {\\displaystyle p({\\text{“}}2{\\text{”}})+p({\\text{“}}4{\\text{”}})+p({\\text{“}}6{\\text{”}})={\\frac {1}{6}}+{\\frac {1}{6}}+{\\frac {1}{6}}={\\frac {1}{2}}.} In contrast, when a random variable takes values from a continuum then by convention, any individual outcome is assigned probability zero. For such continuous random variables, only events that include infinitely many outcomes such as intervals have probability greater than 0. For example, consider measuring the weight of a piece of ham in the supermarket, and assume the scale can provide arbitrarily many digits of precision. Then, the probability that it weighs exactly 500 g must be zero because no matter how high the level of precision chosen, it cannot be assumed that there are no non-zero decimal digits in the remaining omitted digits ignored by the precision level. However, for the same use case, it is possible to meet quality control requirements such as that a package of \"500 g\" of ham must weigh between 490 g and 510 g with at least 98% probability. This is possible because this measurement does not require as much precision from the underlying equipment. Continuous probability distributions can be described by means of the cumulative distribution function, which describes the probability that the random variable is no larger than a given value (i.e., P(X ≤ x) for some x. The cumulative distribution function is the area under the probability density function from -∞ to x, as shown in figure 1. Most continuous probability distributions encountered in practice are not only continuous but also absolutely continuous. Such distributions can be described by their probability density function. Informally, the probability density f {\\displaystyle f} of a random variable X {\\displaystyle X} describes the infinitesimal probability that X {\\displaystyle X} takes any value x {\\displaystyle x} — that is P ( x ≤ X < x + Δ x ) ≈ f ( x ) Δ x {\\displaystyle P(x\\leq X 0 {\\displaystyle \\Delta x>0} becomes is arbitrarily small. The probability that X {\\displaystyle X} lies in a given interval can be computed rigorously by integrating the probability density function over that interval. == General probability definition == Let ( Ω , F , P ) {\\displaystyle (\\Omega ,{\\mathcal {F}},P)} be a probability space, ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} be a measurable space, and X : Ω → E {\\displaystyle X:\\Omega \\to E} be a ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} -valued random variable. Then the probability distribution of X {\\displaystyle X} is the pushforward measure of the probability measure P {\\displaystyle P} onto ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} induced by X {\\displaystyle X} . Explicitly, this pushforward measure on ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} is given by X ∗ ( P ) ( B ) = P ( X − 1 ( B ) ) {\\displaystyle X_{*}(P)(B)=P\\left(X^{-1}(B)\\right)} for B ∈ E . {\\displaystyle B\\in {\\mathcal {E}}.} Any probability distribution is a probability measure on ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} (in general different from P {\\displaystyle P} , unless X {\\displaystyle X} happens to be the identity map). A probability distribution can be described in various forms, such as by a probability mass function or a cumulative distribution function. One of the most general descriptions, which applies for absolutely continuous and discrete variables, is by means of a probability function P : A → R {\\displaystyle P\\colon {\\mathcal {A}}\\to \\mathbb {R} } whose input space A {\\displaystyle {\\mathcal {A}}} is a σ-algebra, and gives a real number probability as its output, particularly, a number in [ 0 , 1 ] ⊆ R {\\displaystyle [0,1]\\subseteq \\mathbb {R} } . The probability function P {\\displaystyle P} can take as argument subsets of the sample space itself, as in the coin toss example, where the function P {\\displaystyle P} was defined so that P(heads) = 0.5 and P(tails) = 0.5. However, because of the widespread use of random variables, which transform the sample space into a set of numbers (e.g., R {\\displaystyle \\mathbb {R} } , N {\\displaystyle \\mathbb {N} } ), it is more common to study probability distributions whose argument are subsets of these particular kinds of sets (number sets), and all probability distributions discussed in this article are of this type. It is common to denote as P ( X ∈ E ) {\\displaystyle P(X\\in E)} the probability that a certain value of the variable X {\\displaystyle X} belongs to a certain event E {\\displaystyle E} . The above probability function only characterizes a probability distribution if it satisfies all the Kolmogorov axioms, that is: P ( X ∈ E ) ≥ 0 ∀ E ∈ A {\\displaystyle P(X\\in E)\\geq 0\\;\\forall E\\in {\\mathcal {A}}} , so the probability is non-negative P ( X ∈ E ) ≤ 1 ∀ E ∈ A {\\displaystyle P(X\\in E)\\leq 1\\;\\forall E\\in {\\mathcal {A}}} , so no probability exceeds 1 {\\displaystyle 1} P ( X ∈ ⋃ i E i ) = ∑ i P ( X ∈ E i ) {\\displaystyle P(X\\in \\bigcup _{i}E_{i})=\\sum _{i}P(X\\in E_{i})} for any countable disjoint family of sets { E i } {\\displaystyle \\{E_{i}\\}} The concept of probability function is made more rigorous by defining it as the element of a probability space ( X , A , P ) {\\displaystyle (X,{\\mathcal {A}},P)} , where X {\\displaystyle X} is the set of possible outcomes, A {\\displaystyle {\\mathcal {A}}} is the set of all subsets E ⊂ X {\\displaystyle E\\subset X} whose probability can be measured, and P {\\displaystyle P} is the probability function, or probability measure, that assigns a probability to each of these measurable subsets E ∈ A {\\displaystyle E\\in {\\mathcal {A}}} . Probability distributions usually belong to one of two classes. A discrete probability distribution is applicable to the scenarios where the set of possible outcomes is discrete (e.g. a coin toss, a roll of a die) and the probabilities are encoded by a discrete list of the probabilities of the outcomes; in this case the discrete probability distribution is known as probability mass function. On the other hand, absolutely continuous probability distributions are applicable to scenarios where the set of possible outcomes can take on values in a continuous range (e.g. real numbers), such as the temperature on a given day. In the absolutely continuous case, probabilities are described by a probability density function, and the probability distribution is by definition the integral of the probability density function. The normal distribution is a commonly encountered absolutely continuous probability distribution. More complex experiments, such as those involving stochastic processes defined in continuous time, may demand the use of more general probability measures. A probability distribution whose sample space is one-dimensional (for example real numbers, list of labels, ordered labels or binary) is called univariate, while a distribution whose sample space is a vector space of dimension 2 or more is called multivariate. A univariate distribution gives the probabilities of a single random variable taking on various different values; a multivariate distribution (a joint probability distribution) gives the probabilities of a random vector – a list of two or more random variables – taking on various combinations of values. Important and commonly encountered univariate probability distributions include the binomial distribution, the hypergeometric distribution, and the normal distribution. A commonly encountered multivariate distribution is the multivariate normal distribution. Besides the probability function, the cumulative distribution function, the probability mass function and the probability density function, the moment generating function and the characteristic function also serve to identify a probability distribution, as they uniquely determine an underlying cumulative distribution function. == Terminology == Some key concepts and terms, widely used in the literature on the topic of probability distributions, are listed below. === Basic terms === Random variable: takes values from a sample space; probabilities describe which values and set of values are more likely taken. Event: set of possible values (outcomes) of a random variable that occurs with a certain probability. Probability function or probability measure: describes the probability P ( X ∈ E ) {\\displaystyle P(X\\in E)} that the event E , {\\displaystyle E,} occurs. Cumulative distribution function: function evaluating the probability that X {\\displaystyle X} will take a value less than or equal to x {\\displaystyle x} for a random variable (only for real-valued random variables). Quantile function: the inverse of the cumulative distribution function. Gives x {\\displaystyle x} such that, with probability q {\\displaystyle q} , X {\\displaystyle X} will not exceed x {\\displaystyle x} . === Discrete probability distributions === Discrete probability distribution: for many random variables with finitely or countably infinitely many values. Probability mass function (pmf): function that gives the probability that a discrete random variable is equal to some value. Frequency distribution: a table that displays the frequency of various outcomes in a sample. Relative frequency distribution: a frequency distribution where each value has been divided (normalized) by a number of outcomes in a sample (i.e. sample size). Categorical distribution: for discrete random variables with a finite set of values. === Absolutely continuous probability distributions === Absolutely continuous probability distribution: for many random variables with uncountably many values. Probability density function (pdf) or probability density: function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random variable) can be interpreted as providing a relative likelihood that the value of the random variable would equal that sample. === Related terms === Support: set of values that can be assumed with non-zero probability (or probability density in the case of a continuous distribution) by the random variable. For a random variable X {\\displaystyle X} , it is sometimes denoted as R X {\\displaystyle R_{X}} . Tail: the regions close to the bounds of the random variable, if the pmf or pdf are relatively low therein. Usually has the form X > a {\\displaystyle X>a} , X < b {\\displaystyle X"
+  },
+  "chunks": [
+    {
+      "id": "probabilitydistribut_c000514b_c0000",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 871,
+      "content": "In probability theory and statistics, a probability distribution is a function that gives the probabilities of occurrence of possible events for an experiment. It is a mathematical description of a random phenomenon in terms of its sample space and the probabilities of events (subsets of the sample space). For instance, if X is used to denote the outcome of a coin toss (\"the experiment\"), then the probability distribution of X would take the value 0.5 (1 in 2 or 1/2) for X = heads, and 0.5 for X = tails (assuming that the coin is fair). More commonly, probability distributions are used to compare the relative occurrence of many different random values. Probability distributions can be defined in different ways and for discrete or for continuous variables. Distributions with special properties or for especially important applications are given specific names.",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0001",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 889,
+      "end_char": 1773,
+      "content": "== Introduction == A probability distribution is a mathematical description of the probabilities of events, subsets of the sample space. The sample space, often represented in notation by Ω , {\\displaystyle \\ \\Omega \\ ,} is the set of all possible outcomes of a random phenomenon being observed. The sample space may be any set: a set of real numbers, a set of descriptive labels, a set of vectors, a set of arbitrary non-numerical values, etc. For example, the sample space of a coin flip could be Ω = {\"heads\", \"tails\"}. To define probability distributions for the specific case of random variables (so the sample space can be seen as a numeric set), it is common to distinguish between discrete and continuous random variables. In the discrete case, it is sufficient to specify a probability mass function p {\\displaystyle p} assigning a probability to each possible outcome (e.g.",
+      "char_count": 883,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0002",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 1773,
+      "end_char": 2629,
+      "content": "when throwing a fair die, each of the six digits “1” to “6”, corresponding to the number of dots on the die, has probability 1 6 ) . {\\displaystyle {\\tfrac {1}{6}}).} The probability of an event is then defined to be the sum of the probabilities of all outcomes that satisfy the event; for example, the probability of the event \"the die rolls an even value\" is p ( “ 2 ” ) + p ( “ 4 ” ) + p ( “ 6 ” ) = 1 6 + 1 6 + 1 6 = 1 2 . {\\displaystyle p({\\text{“}}2{\\text{”}})+p({\\text{“}}4{\\text{”}})+p({\\text{“}}6{\\text{”}})={\\frac {1}{6}}+{\\frac {1}{6}}+{\\frac {1}{6}}={\\frac {1}{2}}.} In contrast, when a random variable takes values from a continuum then by convention, any individual outcome is assigned probability zero. For such continuous random variables, only events that include infinitely many outcomes such as intervals have probability greater than 0.",
+      "char_count": 856,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0003",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 2630,
+      "end_char": 3550,
+      "content": "For example, consider measuring the weight of a piece of ham in the supermarket, and assume the scale can provide arbitrarily many digits of precision. Then, the probability that it weighs exactly 500 g must be zero because no matter how high the level of precision chosen, it cannot be assumed that there are no non-zero decimal digits in the remaining omitted digits ignored by the precision level. However, for the same use case, it is possible to meet quality control requirements such as that a package of \"500 g\" of ham must weigh between 490 g and 510 g with at least 98% probability. This is possible because this measurement does not require as much precision from the underlying equipment. Continuous probability distributions can be described by means of the cumulative distribution function, which describes the probability that the random variable is no larger than a given value (i.e., P(X ≤ x) for some x.",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0004",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 3551,
+      "end_char": 4360,
+      "content": "The cumulative distribution function is the area under the probability density function from -∞ to x, as shown in figure 1. Most continuous probability distributions encountered in practice are not only continuous but also absolutely continuous. Such distributions can be described by their probability density function. Informally, the probability density f {\\displaystyle f} of a random variable X {\\displaystyle X} describes the infinitesimal probability that X {\\displaystyle X} takes any value x {\\displaystyle x} — that is P ( x ≤ X < x + Δ x ) ≈ f ( x ) Δ x {\\displaystyle P(x\\leq X 0 {\\displaystyle \\Delta x>0} becomes is arbitrarily small. The probability that X {\\displaystyle X} lies in a given interval can be computed rigorously by integrating the probability density function over that interval.",
+      "char_count": 809,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0005",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== General probability definition ==",
+      "heading_path": "== General probability definition ==",
+      "start_char": 4379,
+      "end_char": 5100,
+      "content": "== General probability definition == Let ( Ω , F , P ) {\\displaystyle (\\Omega ,{\\mathcal {F}},P)} be a probability space, ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} be a measurable space, and X : Ω → E {\\displaystyle X:\\Omega \\to E} be a ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} -valued random variable. Then the probability distribution of X {\\displaystyle X} is the pushforward measure of the probability measure P {\\displaystyle P} onto ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} induced by X {\\displaystyle X} . Explicitly, this pushforward measure on ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} is given by X ∗ ( P ) ( B ) = P ( X − 1 ( B ) ) {\\displaystyle X_{*}(P)(B)=P\\left(X^{-1}(B)\\right)} for B ∈ E .",
+      "char_count": 720,
+      "token_estimate": 180,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0006",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== General probability definition ==",
+      "heading_path": "== General probability definition ==",
+      "start_char": 5100,
+      "end_char": 5896,
+      "content": "{\\displaystyle B\\in {\\mathcal {E}}.} Any probability distribution is a probability measure on ( E , E ) {\\displaystyle (E,{\\mathcal {E}})} (in general different from P {\\displaystyle P} , unless X {\\displaystyle X} happens to be the identity map). A probability distribution can be described in various forms, such as by a probability mass function or a cumulative distribution function. One of the most general descriptions, which applies for absolutely continuous and discrete variables, is by means of a probability function P : A → R {\\displaystyle P\\colon {\\mathcal {A}}\\to \\mathbb {R} } whose input space A {\\displaystyle {\\mathcal {A}}} is a σ-algebra, and gives a real number probability as its output, particularly, a number in [ 0 , 1 ] ⊆ R {\\displaystyle [0,1]\\subseteq \\mathbb {R} } .",
+      "char_count": 796,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0007",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== General probability definition ==",
+      "heading_path": "== General probability definition ==",
+      "start_char": 5897,
+      "end_char": 6703,
+      "content": "The probability function P {\\displaystyle P} can take as argument subsets of the sample space itself, as in the coin toss example, where the function P {\\displaystyle P} was defined so that P(heads) = 0.5 and P(tails) = 0.5. However, because of the widespread use of random variables, which transform the sample space into a set of numbers (e.g., R {\\displaystyle \\mathbb {R} } , N {\\displaystyle \\mathbb {N} } ), it is more common to study probability distributions whose argument are subsets of these particular kinds of sets (number sets), and all probability distributions discussed in this article are of this type. It is common to denote as P ( X ∈ E ) {\\displaystyle P(X\\in E)} the probability that a certain value of the variable X {\\displaystyle X} belongs to a certain event E {\\displaystyle E} .",
+      "char_count": 806,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0008",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== General probability definition ==",
+      "heading_path": "== General probability definition ==",
+      "start_char": 6704,
+      "end_char": 7693,
+      "content": "The above probability function only characterizes a probability distribution if it satisfies all the Kolmogorov axioms, that is: P ( X ∈ E ) ≥ 0 ∀ E ∈ A {\\displaystyle P(X\\in E)\\geq 0\\;\\forall E\\in {\\mathcal {A}}} , so the probability is non-negative P ( X ∈ E ) ≤ 1 ∀ E ∈ A {\\displaystyle P(X\\in E)\\leq 1\\;\\forall E\\in {\\mathcal {A}}} , so no probability exceeds 1 {\\displaystyle 1} P ( X ∈ ⋃ i E i ) = ∑ i P ( X ∈ E i ) {\\displaystyle P(X\\in \\bigcup _{i}E_{i})=\\sum _{i}P(X\\in E_{i})} for any countable disjoint family of sets { E i } {\\displaystyle \\{E_{i}\\}} The concept of probability function is made more rigorous by defining it as the element of a probability space ( X , A , P ) {\\displaystyle (X,{\\mathcal {A}},P)} , where X {\\displaystyle X} is the set of possible outcomes, A {\\displaystyle {\\mathcal {A}}} is the set of all subsets E ⊂ X {\\displaystyle E\\subset X} whose probability can be measured, and P {\\displaystyle P} is the probability function, or probability measure,",
+      "char_count": 989,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0009",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== General probability definition ==",
+      "heading_path": "== General probability definition ==",
+      "start_char": 7694,
+      "end_char": 8625,
+      "content": "that assigns a probability to each of these measurable subsets E ∈ A {\\displaystyle E\\in {\\mathcal {A}}} . Probability distributions usually belong to one of two classes. A discrete probability distribution is applicable to the scenarios where the set of possible outcomes is discrete (e.g. a coin toss, a roll of a die) and the probabilities are encoded by a discrete list of the probabilities of the outcomes; in this case the discrete probability distribution is known as probability mass function. On the other hand, absolutely continuous probability distributions are applicable to scenarios where the set of possible outcomes can take on values in a continuous range (e.g. real numbers), such as the temperature on a given day. In the absolutely continuous case, probabilities are described by a probability density function, and the probability distribution is by definition the integral of the probability density function.",
+      "char_count": 931,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0010",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== General probability definition ==",
+      "heading_path": "== General probability definition ==",
+      "start_char": 8626,
+      "end_char": 9614,
+      "content": "The normal distribution is a commonly encountered absolutely continuous probability distribution. More complex experiments, such as those involving stochastic processes defined in continuous time, may demand the use of more general probability measures. A probability distribution whose sample space is one-dimensional (for example real numbers, list of labels, ordered labels or binary) is called univariate, while a distribution whose sample space is a vector space of dimension 2 or more is called multivariate. A univariate distribution gives the probabilities of a single random variable taking on various different values; a multivariate distribution (a joint probability distribution) gives the probabilities of a random vector – a list of two or more random variables – taking on various combinations of values. Important and commonly encountered univariate probability distributions include the binomial distribution, the hypergeometric distribution, and the normal distribution.",
+      "char_count": 988,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0011",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== General probability definition ==",
+      "heading_path": "== General probability definition ==",
+      "start_char": 9615,
+      "end_char": 10033,
+      "content": "A commonly encountered multivariate distribution is the multivariate normal distribution. Besides the probability function, the cumulative distribution function, the probability mass function and the probability density function, the moment generating function and the characteristic function also serve to identify a probability distribution, as they uniquely determine an underlying cumulative distribution function.",
+      "char_count": 418,
+      "token_estimate": 104,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0012",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== = Basic terms ==",
+      "heading_path": "== = Basic terms ==",
+      "start_char": 10155,
+      "end_char": 10966,
+      "content": "== = Basic terms === Random variable: takes values from a sample space; probabilities describe which values and set of values are more likely taken. Event: set of possible values (outcomes) of a random variable that occurs with a certain probability. Probability function or probability measure: describes the probability P ( X ∈ E ) {\\displaystyle P(X\\in E)} that the event E , {\\displaystyle E,} occurs. Cumulative distribution function: function evaluating the probability that X {\\displaystyle X} will take a value less than or equal to x {\\displaystyle x} for a random variable (only for real-valued random variables). Quantile function: the inverse of the cumulative distribution function. Gives x {\\displaystyle x} such that, with probability q {\\displaystyle q} , X {\\displaystyle X} will not exceed x {\\displaystyle x} .",
+      "char_count": 829,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0013",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== = Discrete probability distributions ==",
+      "heading_path": "== = Discrete probability distributions ==",
+      "start_char": 11008,
+      "end_char": 11586,
+      "content": "== = Discrete probability distributions === Discrete probability distribution: for many random variables with finitely or countably infinitely many values. Probability mass function (pmf): function that gives the probability that a discrete random variable is equal to some value. Frequency distribution: a table that displays the frequency of various outcomes in a sample. Relative frequency distribution: a frequency distribution where each value has been divided (normalized) by a number of outcomes in a sample (i.e. sample size). Categorical distribution: for discrete random variables with a finite set of values.",
+      "char_count": 619,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0014",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== = Absolutely continuous probability distributions ==",
+      "heading_path": "== = Absolutely continuous probability distributions ==",
+      "start_char": 11641,
+      "end_char": 12053,
+      "content": "== = Absolutely continuous probability distributions === Absolutely continuous probability distribution: for many random variables with uncountably many values. Probability density function (pdf) or probability density: function whose value at any given sample (or point) in the sample space (the set of possible values taken by the random variable) can be interpreted as providing a relative likelihood that the value of the random variable would equal that sample.",
+      "char_count": 466,
+      "token_estimate": 116,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "probabilitydistribut_c000514b_c0015",
+      "article_id": "probabilitydistribut_c000514b",
+      "section": "== = Related terms ==",
+      "heading_path": "== = Related terms ==",
+      "start_char": 12074,
+      "end_char": 12513,
+      "content": "== = Related terms === Support: set of values that can be assumed with non-zero probability (or probability density in the case of a continuous distribution) by the random variable. For a random variable X {\\displaystyle X} , it is sometimes denoted as R X {\\displaystyle R_{X}} . Tail: the regions close to the bounds of the random variable, if the pmf or pdf are relatively low therein. Usually has the form X > a {\\displaystyle X>a} , X < b {\\displaystyle X",
+      "char_count": 460,
+      "token_estimate": 115,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 8,
+    "items": [
+      {
+        "question": "What are the three elements that constitute a probability space?",
+        "answer": "A probability space is defined by the triplet (X, A, P), where X is the set of possible outcomes, A is the set of all subsets whose probability can be measured, and P is the probability function or measure.",
+        "related_chunk_ids": [
+          "probabilitydistribut_c000514b_c0008"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What function can be used to describe continuous probability distributions, and what does it represent?",
+        "answer": "Continuous probability distributions can be described by the cumulative distribution function, which represents the probability that the random variable is no larger than a given value (i.e., P(X ≤ x) for some x).",
+        "related_chunk_ids": [
+          "probabilitydistribut_c000514b_c0003"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is a probability distribution in the context of probability theory and statistics?",
+        "answer": "A probability distribution is a function that provides the probabilities of occurrence for possible events in an experiment. It acts as a mathematical description of a random phenomenon by defining its sample space and the probabilities of events within that space.",
+        "related_chunk_ids": [
+          "probabilitydistribut_c000514b_c0000"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How is probability assigned differently for discrete versus continuous random variables?",
+        "answer": "For discrete random variables, a probability mass function assigns a specific, non-zero probability to each possible outcome, such as the 1/6 probability for each of the six faces of a fair die. In contrast, for continuous random variables, any single individual outcome is assigned a probability of zero; only events that include infinitely many outcomes, such as intervals, have a probability greater than zero.",
+        "related_chunk_ids": [
+          "probabilitydistribut_c000514b_c0001",
+          "probabilitydistribut_c000514b_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How is the probability of a continuous random variable falling within a specific range, such as a package of ham weighing between 490g and 510g, determined?",
+        "answer": "The probability that a continuous random variable, like the weight of ham, lies within a specific interval (e.g., 490g to 510g) is calculated by integrating its probability density function over that interval. This integral represents the area under the probability density function curve between the interval's endpoints.",
+        "related_chunk_ids": [
+          "probabilitydistribut_c000514b_c0003",
+          "probabilitydistribut_c000514b_c0004"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What defines a probability function and what conditions must it satisfy to characterize a probability distribution?",
+        "answer": "A probability function is generally described as a function P: A -> R whose input space is a σ-algebra and whose output is a real number probability in the range [0, 1]. While it can take subsets of a sample space as arguments, it is more commonly studied in the context of random variables, using the notation P(X ∈ E) to denote the probability that a variable X's value belongs to an event E. For this function to characterize a probability distribution, it must satisfy the Kolmogorov axioms: 1) The probability must be non-negative (P(X ∈ E) ≥ 0). 2) No probability can exceed 1 (P(X ∈ E) ≤ 1). 3) The probability of the union of any countable family of disjoint sets must equal the sum of their individual probabilities.",
+        "related_chunk_ids": [
+          "probabilitydistribut_c000514b_c0006",
+          "probabilitydistribut_c000514b_c0007",
+          "probabilitydistribut_c000514b_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does the method for determining the probability of an event differ between discrete and continuous random variables?",
+        "answer": "For discrete random variables, a probability mass function assigns a specific probability to each possible outcome, and the probability of an event is the sum of the probabilities of the outcomes that satisfy it. In contrast, for continuous random variables, any single outcome has a probability of zero. Probabilities are calculated for intervals by integrating the probability density function over that interval, or by using the cumulative distribution function.",
+        "related_chunk_ids": [
+          "probabilitydistribut_c000514b_c0001",
+          "probabilitydistribut_c000514b_c0002",
+          "probabilitydistribut_c000514b_c0003",
+          "probabilitydistribut_c000514b_c0004"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Provide a comprehensive explanation of a probability distribution, including its formal definition as a pushforward measure and the axiomatic conditions its probability function must meet.",
+        "answer": "A probability distribution is formally defined as the pushforward measure of a probability measure P onto a measurable space (E, E), induced by a random variable X. This is expressed as X*(P)(B) = P(X⁻¹(B)). More generally, it can be described by a probability function, often denoted P(X ∈ E), which assigns a probability to the event that a random variable X's value falls within a specific set E. For this function to properly characterize a probability distribution, it must satisfy the three Kolmogorov axioms: 1) The probability must be non-negative (P(X ∈ E) ≥ 0). 2) No probability can be greater than 1 (P(X ∈ E) ≤ 1). 3) For any countable collection of disjoint sets, the probability of their union is the sum of their individual probabilities.",
+        "related_chunk_ids": [
+          "probabilitydistribut_c000514b_c0005",
+          "probabilitydistribut_c000514b_c0007",
+          "probabilitydistribut_c000514b_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:49.707Z",
+    "content_format": "markdown",
+    "total_chunks": 16,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

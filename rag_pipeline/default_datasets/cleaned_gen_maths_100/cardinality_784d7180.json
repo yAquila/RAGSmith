@@ -1,0 +1,634 @@
+{
+  "article": {
+    "id": "cardinality_784d7180",
+    "title": "Cardinality",
+    "url": "https://en.wikipedia.org/wiki/Cardinality",
+    "lang": "en",
+    "created_at": "2025-07-31T06:31:35.924173",
+    "content": "---\nid: cardinality_784d7180\nurl: https://en.wikipedia.org/wiki/Cardinality\ntitle: Cardinality\nlang: en\ncreated_at: '2025-07-31T06:26:15.124267'\nchecksum: 60a1147106df2c03cb6517eaf69139c7dc3ab3d50b3cce79f46da66512cafa78\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 6877\n  char_count: 40062\n  num_chunks: 40\n  original_chunks: 45\n  filtered_out: 5\n  num_sections: 0\n---\nIn mathematics, cardinality is an intrinsic property of sets, roughly meaning the number of individual objects they contain, which may be infinite. The cardinal number corresponding to a set A {\\displaystyle A} is written as | A | {\\displaystyle |A|} between two vertical bars. For finite sets, cardinality coincides with the natural number found by counting its elements. Beginning in the late 19th century, this concept of cardinality was generalized to infinite sets. Two sets are said to be equinumerous or have the same cardinality if there exists a one-to-one correspondence between them. That is, if their objects can be paired such that each object has a pair, and no object is paired more than once (see image). A set is countably infinite if it can be placed in one-to-one correspondence with the set of natural numbers { 1 , 2 , 3 , 4 , ⋯ } . {\\displaystyle \\{1,2,3,4,\\cdots \\}.} For example, the set of even numbers { 2 , 4 , 6 , . . } {\\displaystyle \\{2,4,6,..\\}} , the set of prime numbers { 2 , 3 , 5 , ⋯ } {\\displaystyle \\{2,3,5,\\cdots \\}} , and the set of rational numbers are all countable. A set is uncountable if it is both infinite and cannot be put in correspondence with the set of natural numbers—for example, the set of real numbers or the powerset of the set of natural numbers. Cardinal numbers extend the natural numbers as representatives of size. Most commonly, the aleph numbers are defined via ordinal numbers, and represent a large class of sets. The question of whether there is a set whose cardinality is greater than that of the integers but less than that of the real numbers, is known as the continuum hypothesis, which has been shown to be unprovable in standard set theories such as Zermelo–Fraenkel set theory. == Definition and etymology == Cardinality is an intrinsic property of sets which defines their size, roughly corresponding to the number of individual objects they contain. Fundamentally however, it is different from the concepts of number or counting as the cardinalities of two sets can be compared without referring to their number of elements, or defining number at all. For example, in the image above, a set of apples is compared to a set of oranges such that every fruit is used exactly once which shows these two sets have the same cardinality, even if one doesn't know how many of each there are. Thus, cardinality is measured by putting sets in one-to-one correspondence. If it is possible, the sets are said to have the same cardinality, and if not, one set is said to be strictly larger or strictly smaller than the other. Georg Cantor, the originator of the concept, defined cardinality as \"the general concept which, with the aid of our intelligence, results from a set when we abstract from the nature of its various elements and from the order of their being given.\" This definition was considered to be imprecise, unclear, and purely psychological. Thus, cardinal numbers, a means of measuring cardinality, became the main way of presenting the concept. The distinction between the two is roughly analogous to the difference between an object's mass and its mass in kilograms. However, somewhat confusingly, the phrases \"The cardinality of M\" and \"The cardinal number of M\" are used interchangeably. In English, the term cardinality originates from the post-classical Latin cardinalis, meaning \"principal\" or \"chief\", which derives from cardo, a noun meaning \"hinge\". In Latin, cardo referred to something central or pivotal, both literally and metaphorically. This concept of centrality passed into medieval Latin and then into English, where cardinal came to describe things considered to be, in some sense, fundamental, such as cardinal virtues, cardinal sins, cardinal directions, and (grammatically defined) cardinal numbers. The last of which referred to numbers used for counting (e.g., one, two, three), as opposed to ordinal numbers, which express order (e.g., first, second, third), and nominal numbers used for labeling without meaning (e.g., jersey numbers and serial numbers). In mathematics, the notion of cardinality was first introduced by Georg Cantor in the late 19th century, wherein he used the used the term Mächtigkeit, which may be translated as \"magnitude\" or \"power\", though Cantor credited the term to a work by Jakob Steiner on projective geometry. The terms cardinality and cardinal number were eventually adopted from the grammatical sense, and later translations would use these terms. == History == === Ancient history === From the 6th century BCE, the writings of Greek philosophers, such as Anaximander, show hints of comparing infinite sets or shapes, however, it was generally viewed as paradoxical and imperfect (cf. Zeno's paradoxes). Aristotle distinguished between the notions of actual infinity and potential infinity, arguing that Greek mathematicians understood the difference, and that they \"do not need the [actual] infinite and do not use it.\" The Greek notion of number (αριθμός, arithmos) was used exclusively for a definite number of definite objects (i.e. finite numbers). This would be codified in Euclid's Elements, where the fifth common notion states \"The whole is greater than the part\", often called the Euclidean principle. This principle would be the dominating philosophy in mathematics until the 19th century. Around the 4th century BCE, Jaina mathematics would be the first to discuss different sizes of infinity. They defined three major classes of number: enumerable (finite numbers), unenumerable (asamkhyata, roughly, countably infinite), and infinite (ananta). Then they had five classes of infinite numbers: infinite in one direction, infinite in both directions, infinite in area, infinite everywhere, and infinite perpetually. One of the earliest explicit uses of a one-to-one correspondence is recorded in Aristotle's Mechanics (c. 350 BCE), known as Aristotle's wheel paradox. The paradox can be briefly described as follows: A wheel is depicted as two concentric circles. The larger, outer circle is tangent to a horizontal line (e.g. a road that it rolls on), while the smaller, inner circle is rigidly affixed to the larger. Assuming the larger circle rolls along the line without slipping (or skidding) for one full revolution, the distances moved by both circles are the same: the circumference of the larger circle. Further, the lines traced by the bottom-most point of each is the same length. Since the smaller wheel does not skip any points, and no point on the smaller wheel is used more than once, there is a one-to-one correspondence between the two circles. === Pre-Cantorian set theory === Galileo Galilei presented what was later coined Galileo's paradox in his book Two New Sciences (1638), where he presents a seeming paradox in infinite sequences of numbers. It goes roughly as follows: for each perfect square ( n 2 ) {\\displaystyle (n^{2})} 1, 4, 9, 16, and so on, there is a unique square root ( n 2 = n ) {\\textstyle ({\\sqrt {n^{2}}}=n)} 1, 2, 3, 4, and so on. Therefore, there are as many perfect squares as there are square roots. However, every number is a square root, since it can be squared, but not every number is a perfect square. Moreover, the proportion of perfect squares as one passes larger values diminishes, and is eventually smaller than any given fraction. Galileo denied that this was fundamentally contradictory, however he concluded that this meant we could not compare the sizes of infinite sets, missing the opportunity to discover cardinality. In A Treatise of Human Nature (1739), David Hume is quoted for saying \"When two numbers are so combined, as that the one has always a unit answering to every unit of the other, we pronounce them equal\", now called Hume's principle, which was used extensively by Gottlob Frege later during the rise of set theory. Bernard Bolzano's Paradoxes of the Infinite (Paradoxien des Unendlichen, 1851) is often considered the first systematic attempt to introduce the concept of sets into mathematical analysis. In this work, Bolzano defended the notion of actual infinity, presented an early formulation of what would later be recognized as one-to-one correspondence between infinite sets. He discussed examples such as the pairing between the intervals [ 0 , 5 ] {\\displaystyle [0,5]} and [ 0 , 12 ] {\\displaystyle [0,12]} by the relation 5 y = 12 x , {\\displaystyle 5y=12x,} and revisited Galileo's paradox. However, he too resisted saying that these sets were, in that sense, the same size. While Paradoxes of the Infinite anticipated several ideas central to later set theory, the work had little influence on contemporary mathematics, in part due to its posthumous publication and limited circulation. === Early set theory === ==== Georg Cantor ==== The concept of cardinality emerged nearly fully formed in the work of Georg Cantor during the 1870s and 1880s, in the context of mathematical analysis. In a series of papers beginning with On a Property of the Collection of All Real Algebraic Numbers (1874), Cantor introduced the idea of comparing the sizes of infinite sets, through the notion of one-to-one correspondence. He showed that the set of real numbers was, in this sense, strictly larger than the set of natural numbers using a nested intervals argument. This result was later refined into the more widely known diagonal argument of 1891, published in Über eine elementare Frage der Mannigfaltigkeitslehre, where he also proved the more general result (now called Cantor's Theorem) that the power set of any set is strictly larger than the set itself. Cantor introduced the notion cardinal numbers in terms of ordinal numbers. He viewed cardinal numbers as an abstraction of sets, introduced the notations, where, for a given set M {\\textstyle M} , the order type of that set was written M ¯ {\\textstyle {\\overline {M}}} , and the cardinal number was M {\\textstyle M} , a double abstraction. He also introduced the Aleph sequence for infinite cardinal numbers. These notations appeared in correspondence and were formalized in his later writings, particularly the series Beiträge zur Begründung der transfiniten Mengenlehre (1895–1897). In these works, Cantor developed an arithmetic of cardinal numbers, defining addition, multiplication, and exponentiation of cardinal numbers based on set-theoretic constructions. This led to the formulation of the Continuum Hypothesis (CH), the proposition that no set has cardinality strictly between the cardinality of the natural numbers ℵ 0 {\\displaystyle \\aleph _{0}} and the cardinality of the continuum | R | {\\displaystyle |\\mathbb {R} |} , that is whether | R | = ℵ 1 {\\displaystyle |\\mathbb {R} |=\\aleph _{1}} . Cantor was unable to resolve CH and left it as an open problem. ==== Other contributors ==== Parallel to Cantor’s development, Richard Dedekind independently formulated many advanced theorems of set theory, and helped establish set-theoretic foundations of algebra and arithmetic. Dedekind’s Was sind und was sollen die Zahlen? (1888) emphasized structural properties over extensional definitions, and supported the bijective formulation of size and number. Dedekind was in correspondence with Cantor during the development of set theory; he supplied Cantor with a proof of the countability of the algebraic numbers, and gave feedback and modifications on Cantor's proofs before publishing. After Cantor's 1883 proof that all finite-dimensional spaces ( R n ) {\\displaystyle (\\mathbb {R} ^{n})} have the same cardinality, in 1890, Giuseppe Peano introduced the Peano curve, which was a more visual proof that the unit interval [ 0 , 1 ] {\\displaystyle [0,1]} has the same cardinality as the unit square on R 2 . {\\displaystyle \\mathbb {R} ^{2}.} This created a new area of mathematical analysis studying what is now called space-filling curves. German logician Gottlob Frege attempted to ground the concepts of number and arithmetic in logic using Cantor's theory of cardinality and Hume's principle in Die Grundlagen der Arithmetik (1884) and the subsequent Grundgesetze der Arithmetik (1893, 1903). Frege defined cardinal numbers as equivalence classes of sets under equinumerosity. However, Frege's approach to set theory was later shown to be flawed. His approach was eventually reformalized by Bertrand Russell and Alfred Whitehead in Principia Mathematica (1910–1913, vol. II) using a theory of types. Though Russell initially had difficulties understanding Cantor's and Frege’s intuitions of cardinality. This definition of cardinal numbers is now referred to as the Frege–Russell definition. This definition was eventually superseded by the convention established by John von Neumann in 1928 which uses representatives to define cardinal numbers. At the Paris conference of the International Congress of Mathematicians in 1900, David Hilbert, one of the most influential mathematicians of the time, gave a speech wherein he presented ten unsolved problems (of a total of 23, later published, now called Hilbert's problems). Of these, he placed \"Cantor's problem\" (now called the Continuum Hypothesis) as the first on the list. This list of problems would prove to be very influential in 20th century mathematics, and attracted a lot of attention from other mathematicians toward Cantor's theory of cardinality. === Axiomatic set theory === In 1908, Ernst Zermelo proposed the first axiomatization of set theory, now called Zermelo set theory, primarily to support his earlier (1904) proof of the Well-ordering theorem, which showed that all cardinal numbers could be represented as Alephs, though the proof required a controversial principle now known as the Axiom of Choice (AC). Zermelo's system would later be extended by Abraham Fraenkel and Thoralf Skolem in the 1920s to create the standard foundation of set theory, called Zermelo–Fraenkel set theory (ZFC, \"C\" for the Axiom of Choice). ZFC provided a rigorous foundation through which infinite cardinals could be systematically studied while avoiding the paradoxes of naive set theory. In 1940, Kurt Gödel showed that CH cannot be disproved from the axioms of ZFC. Gödel's proof shows that both CH and AC hold in his constructible universe: an inner model of ZFC where CH holds. The existence of an inner model of ZFC in which additional axioms hold shows that the additional axioms are (relatively) consistent with ZFC. In 1963, Paul Cohen showed that CH cannot be proven from the ZFC axioms, which showed that CH was independent from ZFC. To prove his result, Cohen developed the method of forcing, which has become a standard tool in set theory. Essentially, this method begins with Gödel's model of ZFC in which CH holds and constructs another model which contains more sets than the original in a way that CH does not hold. Cohen was awarded the Fields Medal in 1966 for his proof. == Comparing sets == === Introduction === The basic notions of sets and functions are used to develop the concept of cardinality, and technical terms therein are used throughout this article. A set can be understood as any collection of objects, usually represented with curly braces. For example, S = { 1 , 2 , 3 } {\\displaystyle S=\\{1,2,3\\}} specifies a set, called S {\\displaystyle S} , which contains the numbers 1, 2, and 3. The symbol ∈ {\\displaystyle \\in } represents set membership, for example 1 ∈ S {\\displaystyle 1\\in S} says \"1 is a member of the set S {\\displaystyle S} \" which is true by the definition of S {\\displaystyle S} above. A function is an association that maps elements of one set to the elements of another, often represented with an arrow diagram. For example, the adjacent image depicts a function which maps the set of natural numbers to the set of even numbers by multiplying by 2. If a function does not map two elements to the same place, it is called injective. If a function covers every element in the output space, it is called surjective. If a function is both injective and surjective, it is called bijective. (For further clarification, see Bijection, injection and surjection.) === Equinumerosity === The intuitive property of two sets having the \"same size\" is that their objects can be paired one-to-one. A one-to-one pairing between two sets defines a bijective function between them by mapping each object to its pair. Similarly, a bijection between two sets defines a pairing of their elements by pairing each object with the one it maps to. Therefore, these notions of \"pairing\" and \"bijection\" are intuitively equivalent. In fact, it is often the case that functions are defined literally as this set of pairings (see Function (mathematics) § Formal definition). Thus, the following definition is given: Two sets A {\\displaystyle A} and B {\\displaystyle B} are said to have the same cardinality if their elements can be paired one-to-one. That is, if there exists a function f : A ↦ B {\\displaystyle f:A\\mapsto B} which is bijective. This is written as A ∼ B , {\\displaystyle A\\sim B,} A ≈ B , {\\displaystyle A\\approx B,} A ≡ B , {\\displaystyle A\\equiv B,} and eventually | A | = | B | , {\\displaystyle |A|=|B|,} once | A | {\\displaystyle |A|} has been defined. Alternatively, these sets, A {\\displaystyle A} and B , {\\displaystyle B,} may be said to be equivalent, similar, equinumerous, equipotent, or equipollent. For example, the set E = { 0 , 2 , 4 , 6 , ... } {\\displaystyle E=\\{0,2,4,6,{\\text{...}}\\}} of non-negative even numbers has the same cardinality as the set N = { 0 , 1 , 2 , 3 , ... } {\\displaystyle \\mathbb {N} =\\{0,1,2,3,{\\text{...}}\\}} of natural numbers, since the function f ( n ) = 2 n {\\displaystyle f(n)=2n} is a bijection from ⁠ N {\\displaystyle \\mathbb {N} } ⁠ to ⁠ E {\\displaystyle E} ⁠ (see picture above). The intuitive property for finite sets that \"the whole is greater than the part\" is no longer true for infinite sets, and the existence of surjections or injections that don't work does not prove that there is no bijection. For example, the function ⁠ g {\\displaystyle g} ⁠ from ⁠ N {\\displaystyle \\mathbb {N} } ⁠ to ⁠ E {\\displaystyle E} ⁠, defined by g ( n ) = 4 n {\\displaystyle g(n)=4n} is injective, but not surjective (since 2, for instance, is not mapped to), and ⁠ h {\\displaystyle h} ⁠ from ⁠ N {\\displaystyle \\mathbb {N} } ⁠ to ⁠ E {\\displaystyle E} ⁠, defined by h ( n ) = 2 floor ⁡ ( n / 2 ) {\\displaystyle h(n)=2\\operatorname {floor} (n/2)} (see: floor function) is surjective, but not injective, (since 0 and 1 for instance both map to 0). Neither ⁠ g {\\displaystyle g} ⁠ nor ⁠ h {\\displaystyle h} ⁠ can challenge | E | = | N | , {\\displaystyle |E|=|\\mathbb {N} |,} which was established by the existence of ⁠ f {\\displaystyle f} ⁠. ==== Equivalence ==== A fundamental result necessary in developing a theory of cardinality is relating it to an equivalence relation. A binary relation is an equivalence relation if it satisfies the three basic properties of equality: reflexivity, symmetry, and transitivity. Reflexivity: For any set A {\\displaystyle A} , A ∼ A . {\\displaystyle A\\sim A.} Given any set A , {\\displaystyle A,} there is a bijection from A {\\displaystyle A} to itself by the identity function, therefore equinumerosity is reflexive. Symmetry: If A ∼ B {\\displaystyle A\\sim B} then B ∼ A . {\\displaystyle B\\sim A.} Given any sets A {\\displaystyle A} and B , {\\displaystyle B,} such that there is a bijection f {\\displaystyle f} from A {\\displaystyle A} to B , {\\displaystyle B,} then there is an inverse function f − 1 {\\displaystyle f^{-1}} from B {\\displaystyle B} to A , {\\displaystyle A,} which is also bijective, therefore equinumerosity is symmetric. Transitivity: If A ∼ B {\\displaystyle A\\sim B} and B ∼ C {\\displaystyle B\\sim C} then A ∼ C . {\\displaystyle A\\sim C.} Given any sets A , {\\displaystyle A,} B , {\\displaystyle B,} and C {\\displaystyle C} such that there is a bijection f {\\displaystyle f} from A {\\displaystyle A} to B , {\\displaystyle B,} and g {\\displaystyle g} from B {\\displaystyle B} to C , {\\displaystyle C,} then their composition g ∘ f {\\displaystyle g\\circ f} is a bijection from A {\\displaystyle A} to C , {\\displaystyle C,} and so cardinality is transitive. Since equinumerosity satisfies these three properties, it forms an equivalence relation. This means that cardinality, in some sense, partitions sets into equivalence classes, and one may assign a representative to denote this class. This motivates the notion of a cardinal number. Somewhat more formally, a relation must be a certain set of ordered pairs. Since there is no set of all sets in standard set theory (see: § Cantor's paradox), equinumerosity is not a relation in the usual sense, but a predicate or a relation over classes. === Inequality === A set A {\\displaystyle A} is not larger than a set B {\\displaystyle B} if it can be mapped into B {\\displaystyle B} without overlap. That is, the cardinality of A {\\displaystyle A} is less than or equal to the cardinality of B {\\displaystyle B} if there is an injective function from A {\\displaystyle A} to B {\\displaystyle B} . This is written A ⪯ B , {\\displaystyle A\\preceq B,} A ≲ B {\\displaystyle A\\lesssim B} and eventually | A | ≤ | B | , {\\displaystyle |A|\\leq |B|,} and read as A {\\displaystyle A} is not greater than B , {\\displaystyle B,} or A {\\displaystyle A} is dominated by B . {\\displaystyle B.} If A ⪯ B , {\\displaystyle A\\preceq B,} but there is no injection from B {\\displaystyle B} to A , {\\displaystyle A,} then A {\\displaystyle A} is said to be strictly smaller than B , {\\displaystyle B,} or be domwritten without the underline as A ≺ B {\\displaystyle A\\prec B} or | A | < | B | . {\\displaystyle |A|<|B|.} For example, if A {\\displaystyle A} has four elements and B {\\displaystyle B} has five, then the following are true A ⪯ A , {\\displaystyle A\\preceq A,} A ⪯ B , {\\displaystyle A\\preceq B,} and A ≺ B . {\\displaystyle A\\prec B.} The basic properties of an inequality are reflexivity (for any a , {\\displaystyle a,} a ≤ a {\\displaystyle a\\leq a} ), transitivity (if a ≤ b {\\displaystyle a\\leq b} and b ≤ c , {\\displaystyle b\\leq c,} then a ≤ c {\\displaystyle a\\leq c} ) and antisymmetry (if a ≤ b {\\displaystyle a\\leq b} and b ≤ a , {\\displaystyle b\\leq a,} then a = b {\\displaystyle a=b} ) (See Inequality § Formal definitions). Cardinal inequality ( ⪯ ) {\\displaystyle (\\preceq )} as defined above is reflexive since the identity function is injective, and is transitive by function composition. Antisymmetry is established by the Schröder–Bernstein theorem. The proof roughly goes as follows. Given sets A {\\displaystyle A} and B {\\displaystyle B} , where f : A ↦ B {\\displaystyle f:A\\mapsto B} is the function that proves A ⪯ B {\\displaystyle A\\preceq B} and g : B ↦ A {\\displaystyle g:B\\mapsto A} proves B ⪯ A {\\displaystyle B\\preceq A} , then consider the sequence of points given by applying f {\\displaystyle f} then g {\\displaystyle g} to each element over and over. Then we can define a bijection h : A ↦ B {\\displaystyle h:A\\mapsto B} as follows: If a sequence forms a cycle, begins with an element a ∈ A {\\displaystyle a\\in A} not mapped to by g {\\displaystyle g} , or extends infinitely in both directions, define h ( x ) = f ( x ) {\\displaystyle h(x)=f(x)} for each x ∈ A {\\displaystyle x\\in A} in those sequences. The last case, if a sequence begins with an element b ∈ B {\\displaystyle b\\in B} , not mapped to by f {\\displaystyle f} , define h ( x ) = g − 1 ( x ) {\\displaystyle h(x)=g^{-1}(x)} for each x ∈ A {\\displaystyle x\\in A} in that sequence. Then h {\\displaystyle h} is a bijection. The above shows that cardinal inequality is a partial order. A total order has the additional property that, for any a {\\displaystyle a} and b {\\displaystyle b} , either a ≤ b {\\displaystyle a\\leq b} or b ≤ a . {\\displaystyle b\\leq a.} This can be established by the well-ordering theorem. Every well-ordered set is isomorphic to a unique ordinal number, called the order type of the set. Then, by comparing their order types, one can show that A ⪯ B {\\displaystyle A\\preceq B} or B ⪯ A {\\displaystyle B\\preceq A} . This result is equivalent to the axiom of choice. == Countability == === Countable sets === A set is called countable if it is finite or has a bijection with the set of natural numbers ( N ) , {\\displaystyle (\\mathbb {N} ),} in which case it is called countably infinite. The term denumerable is also sometimes used for countably infinite sets. For example, the set of all even natural numbers is countable, and therefore has the same cardinality as the whole set of natural numbers, even though it is a proper subset. Similarly, the set of square numbers is countable, which was considered paradoxical for hundreds of years before modern set theory (cf. § Pre-Cantorian set theory). However, several other examples have historically been considered surprising or initially unintuitive since the rise of set theory. The rational numbers ( Q ) {\\displaystyle (\\mathbb {Q} )} are those which can be expressed as the quotient or fraction ⁠ p q {\\displaystyle {\\tfrac {p}{q}}} ⁠ of two integers. The rational numbers can be shown to be countable by considering the set of fractions as the set of all ordered pairs of integers, denoted Z × Z , {\\displaystyle \\mathbb {Z} \\times \\mathbb {Z} ,} which can be visualized as the set of all integer points on a grid. Then, an intuitive function can be described by drawing a line in a repeating pattern, or spiral, which eventually goes through each point in the grid. For example, going through each diagonal on the grid for positive fractions, or through a lattice spiral for all integer pairs. These technically over cover the rationals, since, for example, the rational number 1 2 {\\textstyle {\\frac {1}{2}}} gets mapped to by all the fractions 2 4 , 3 6 , 4 8 , … , {\\textstyle {\\frac {2}{4}},\\,{\\frac {3}{6}},\\,{\\frac {4}{8}},\\,\\dots ,} as the grid method treats these all as distinct ordered pairs. So this function shows | Q | ≤ | N | {\\displaystyle |\\mathbb {Q} |\\leq |\\mathbb {N} |} not | Q | = | N | . {\\displaystyle |\\mathbb {Q} |=|\\mathbb {N} |.} This can be corrected by \"skipping over\" these numbers in the grid, using the Schröder–Bernstein theorem, or by designing a function which does this naturally, for example using the Calkin–Wilf tree. A number is called algebraic if it is a solution of some polynomial equation (with integer coefficients). For example, the square root of two 2 {\\displaystyle {\\sqrt {2}}} is a solution to x 2 − 2 = 0 , {\\displaystyle x^{2}-2=0,} and the rational number p / q {\\displaystyle p/q} is the solution to q x − p = 0. {\\displaystyle qx-p=0.} Conversely, a number which cannot be the root of any polynomial is called transcendental. Two examples include Euler's number (e) and pi (π). In general, proving a number is transcendental is considered to be very difficult, and only a few classes of transcendental numbers are known. However, it can be shown that the set of algebraic numbers is countable by ordering the polynomials lexicographically (for example, see Cantor's first set theory article § The proofs). Since the set of algebraic numbers is countable while the real numbers are uncountable (shown in the following section), the transcendental numbers must form the vast majority of real numbers, even though they are individually much harder to identify. That is to say, almost all real numbers are transcendental. ==== Hilbert's hotel ==== Hilbert's Hotel is a thought experiment devised by the German mathematician David Hilbert to illustrate a counterintuitive property of countably infinite sets, allowing them to have the same cardinality as a proper subset of themselves. The scenario begins by imagining a hotel with an infinite number of rooms, one for each natural number, all of which are occupied. But then a new guest walks in asking for a room. The hotel accommodates by moving the occupant of room 1 to room 2, the occupant of room 2 to room 3, room 3 to room 4, and in general, room n to room n+1. Then every guest still has a room, but room 1 is open for the new guest. Then, the scenario continues by imagining an infinitely long bus of new guests seeking a room. The hotel accommodates by moving the person in room 1 to room 2, room 2 to room 4, and in general, room n to room 2n. Thus, all the even-numbered rooms are occupied, but all the odd-numbered rooms are vacant, leaving room for the infinite bus of new guests. The scenario continues further by assuming an infinite number of these infinite buses arrive at the hotel, and showing that the hotel is still able to accommodate. Finally, an infinite bus which has a seat for every real number arrives, and the hotel is no longer able to accommodate. === Uncountable sets === A set is called uncountable if it is not countable. That is, it is infinite and strictly larger than the set of natural numbers. The usual first example of this is the set of real numbers ( R ) {\\displaystyle (\\mathbb {R} )} , which can be understood as the set of all numbers on the number line. One method of proving that the reals are uncountable is called Cantor's diagonal argument, credited to Cantor for his 1891 proof, though his differs from the more common presentation. It begins by assuming, by contradiction, that there is some one-to-one mapping between the natural numbers and the set of real numbers between 0 and 1 (the interval [ 0 , 1 ] {\\displaystyle [0,1]} ). Then, take the decimal expansions of each real number, which looks like 0. d 1 d 2 d 3 . . . {\\displaystyle 0.d_{1}d_{2}d_{3}...} Considering these real numbers in a column, create a new number such that the first digit of the new number is different from that of the first number in the column, the second digit is different from the second number in the column and so on. We also need to make sure that the number we create has a unique decimal representation, that is, it cannot end in repeating nines or repeating zeros. For example, if the digit isn't a 7, make the digit of the new number a 7, and if it was a seven, make it a 3. Then, this new number will be different from each of the numbers in the list by at least one digit, and therefore must not be in the list. This shows that the real numbers cannot be put into a one-to-one correspondence with the naturals, and thus must be strictly larger. Another classical example of an uncountable set, established using a related reasoning, is the power set of the natural numbers, denoted P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} . This is the set of all subsets of N {\\displaystyle \\mathbb {N} } , including the empty set and N {\\displaystyle \\mathbb {N} } itself. The method is much closer to Cantor's original diagonal argument. Again, assume by contradiction that there exists a one-to-one correspondence f {\\displaystyle f} between N {\\displaystyle \\mathbb {N} } and P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} , so that every subset of N {\\displaystyle \\mathbb {N} } is assigned to some natural number. These subsets are then placed in a column, in the order defined by f {\\displaystyle f} (see image). Now, one may define a subset T {\\displaystyle T} of N {\\displaystyle \\mathbb {N} } which is not in the list by taking the negation of the \"diagonal\" of this column as follows: If 1 ∈ f ( 1 ) {\\displaystyle 1\\in f(1)} , then 1 ∉ T {\\displaystyle 1\\notin T} , that is, if 1 is in the first subset of the list, then 1 is not in the subset T {\\displaystyle T} . Further, if 2 ∉ f ( 2 ) {\\displaystyle 2\\notin f(2)} , then 2 ∈ T {\\displaystyle 2\\in T} , that is if the number 2 is not in the second subset of the column, then 2 is in the subset T {\\displaystyle T} . Then in general, for each natural number n {\\displaystyle n} , n ∈ T {\\displaystyle n\\in T} if and only if n ∉ f ( n ) {\\displaystyle n\\notin f(n)} , meaning n {\\displaystyle n} is put in the subset T {\\displaystyle T} only if the nth subset in the column does not contain the number n {\\displaystyle n} . Then, for each natural number n {\\displaystyle n} , T ≠ f ( n ) {\\displaystyle T\\neq f(n)} , meaning, T {\\displaystyle T} is not the nth subset in the list, for any number n {\\displaystyle n} , and so it cannot appear anywhere in the list defined by f {\\displaystyle f} . Since f {\\displaystyle f} was chosen arbitrarily, this shows that every function from N {\\displaystyle \\mathbb {N} } to P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} must be missing at least one element, therefore no such bijection can exist, and so P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} must be not be countable. These two sets, R {\\displaystyle \\mathbb {R} } and P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} can be shown to have the same cardinality (by, for example, assigning each subset to a decimal expansion). Whether there exists a set A {\\displaystyle A} with cardinality between these two sets | N | < | A | < | R | {\\displaystyle |\\mathbb {N} |<|A|<|\\mathbb {R} |} is known as the continuum hypothesis. Cantor's theorem generalizes the second theorem above, showing that every set is strictly smaller than its powerset. The proof roughly goes as follows: Given a set A {\\displaystyle A} , assume by contradiction that there is a bijection f {\\displaystyle f} from A {\\displaystyle A} to P ( A ) {\\displaystyle {\\mathcal {P}}(A)} . Then, the subset T ⊆ A {\\displaystyle T\\subseteq A} given by taking the negation of the \"diagonal\", formally, T = { a ∈ A : a ∉ f ( a ) } {\\displaystyle T=\\{a\\in A:a\\notin f(a)\\}} , cannot be in the list. Therefore, every function is missing at least one element, and so | A | < | P ( A ) | {\\displaystyle |A|<|{\\mathcal {P}}(A)|} . Further, since P ( A ) {\\displaystyle {\\mathcal {P}}(A)} is itself a set, the argument can be repeated to show | A | < | P ( A ) | < | P ( P ( A ) ) | {\\displaystyle |A|<|{\\mathcal {P}}(A)|<|{\\mathcal {P}}({\\mathcal {P}}(A))|} . Taking A = N {\\displaystyle A=\\mathbb {N} } , this shows that P ( P ( N ) ) {\\displaystyle {\\mathcal {P}}({\\mathcal {P}}(\\mathbb {N} ))} is even larger than P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} , which was already shown to be uncountable. Repeating this argument shows that there are infinitely many \"sizes\" of infinity. == Cardinal numbers == In the above section, \"cardinality\" of a set was described relationally. In other words, one set could be compared to another, intuitively comparing their \"size\". Cardinal numbers are a means of measuring this \"size\" more explicitly. For finite sets, this is simply the natural number found by counting the elements. This number is called the cardinal number of that set, or simply the cardinality of that set. The cardinal number of a set A {\\displaystyle A} is generally denoted by | A | , {\\displaystyle |A|,} with a vertical bar on each side, though it may also be denoted by A {\\displaystyle A} , card ⁡ ( A ) , {\\displaystyle \\operatorname {card} (A),} or # A . {\\displaystyle \\#A.} For infinite sets, \"cardinal number\" is somewhat more difficult to define formally. Cardinal numbers are not usually thought of in terms of their formal definition, but immaterially in terms of their arithmetic/algebraic properties. The assumption that there is some cardinal function A ↦ | A | {\\displaystyle A\\mapsto |A|} which satisfies A ∼ B ⟺ | A | = | B | {\\displaystyle A\\sim B\\iff |A|=|B|} , sometimes called the axiom of cardinal number or Hume's principle, is sufficient for deriving most properties of cardinal numbers. Commonly in mathematics, if a relation satisfies the properties of an equivalence relation, the objects used to materialize this relation are equivalence classes, which groups all the objects equivalent to one another. These called the Frege–Russell cardinal numbers. However, this would mean that cardinal numbers are too large to form sets (apart from the cardinal number 0 {\\displaystyle 0} whose only element is the empty set), since, for example, the cardinal number 1 {\\displaystyle 1} would be the set of all sets with one element, and would therefore be a proper class. Thus, due to John von Neumann, it is more common to assign representatives of these classes. For example, the set { ∅ } {\\displaystyle \\{\\varnothing \\}} would represent the cardinal number 1 {\\displaystyle 1} . === Finite sets === Given a basic sense of natural numbers, a set is said to have cardinality n {\\displaystyle n} if it can be put in one-to-one correspondence with the set { 1 , 2 , … , n } , {\\displaystyle \\{1,\\,2,\\,\\dots ,\\,n\\},} analogous to counting its elements. For example, the set S = { A , B , C , D } {\\displaystyle S=\\{A,B,C,D\\}} has a natural correspondence with the set { 1 , 2 , 3 , 4 } , {\\displaystyle \\{1,2,3,4\\},} and therefore is said to have cardinality 4. Other terminologies include \"Its cardinality is 4\" or \"Its cardinal number is 4\". In formal contexts, the natural numbers can be understood as some construction of objects satisfying the Peano axioms. Showing that such a correspondence exists is not always trivial. Combinatorics is the area of mathematics primarily concerned with counting, both as a means and as an end to obtaining results, and certain properties of finite structures. The notion cardinality of finite sets is closely tied to many basic combinatorial principles, and provides a set-theoretic foundation to prove them. It can be shown by induction on the possible sizes of sets that finite cardinality corresponds uniquely with natural numbers (cf. Finite set § Uniqueness of cardinality). The addition principle asserts that given disjoint sets A {\\displaystyle A} and B {\\displaystyle B} , | A ∪ B | = | A | + | B | {\\displaystyle |A\\cup B|=|A|+|B|} , intuitively meaning that the sum of parts is equal to the sum of the whole. The multiplication principle asserts that given two sets A {\\displaystyle A} and B {\\displaystyle B} , | A × B | = | A | ⋅ | B | {\\displaystyle |A\\times B|=|A|\\cdot |B|} , intuitively meaning that there are | A | ⋅ | B | {\\displaystyle |A|\\cdot |B|} ways to pair objects from these sets. Both of these can be proven by a bijective proof, together with induction. The more general result is the inclusion–exclusion principle, which defines how to count the number of elements in overlapping sets. Naturally, a set is defined to be finite if it can be put in correspondence with the set { 1 , 2 , … , n } , {\\displaystyle \\{1,\\,2,\\,\\dots ,\\,n\\},} for some natural number n . {\\displaystyle n.} However, there exist other definitions of \"finite\" which don't rely on a definition of \"number.\" For example, a set is called Dedekind-finite if it cannot be put in one-to-one correspondece with a proper subset of itself. === Aleph numbers === The aleph numbers are a sequence of cardinal numbers that denote the size of infinite sets, denoted with an aleph ℵ , {\\displaystyle \\aleph ,} the first letter of the Hebrew alphabet. The first aleph number is ℵ 0 , {\\displaystyle \\aleph _{0},} called \"aleph-nought\", \"aleph-zero\", or \"aleph-null\", which represents the cardinality of the set of all natural numbers: ℵ 0 = | N | = | { 0 , 1 , 2 , 3 , ⋯ } | . {\\displaystyle \\aleph _{0}=|\\mathbb {N} |=|\\{0,1,2,3,\\cdots \\}|.} Then, ℵ 1 {\\displaystyle \\aleph _{1}} represents the next largest cardinality. The most common way this is formalized in set theory is through Von Neumann ordinals, known as Von Neumann cardinal assignment. Ordinal numbers generalize the notion of order to infinite sets. For example, 2 comes after 1, denoted 1 < 2 , {\\displaystyle 1<2,} and 3 comes after both, denoted 1 < 2 < 3. {\\displaystyle 1<2<3.} Then, one defines a new number, ω , {\\displaystyle \\omega ,} which comes after every natural number, denoted 1 < 2 < 3 < ⋯ < ω . {\\displaystyle 1<2<3<\\cdots <\\omega .} Further ω < ω + 1 , {\\displaystyle \\omega <\\omega +1,} and so on. More formally, these ordinal numbers can be defined as follows: 0 := { } , {\\displaystyle 0:=\\{\\},} the empty set, 1 := { 0 } , {\\displaystyle 1:=\\{0\\},} 2 := { 0 , 1 } , {\\displaystyle 2:=\\{0,1\\},} 3 := { 0 , 1 , 2 } , {\\displaystyle 3:=\\{0,1,2\\},} and so on. Then one can define m < n , if m ∈ n , {\\displaystyle m"
+  },
+  "chunks": [
+    {
+      "id": "cardinality_784d7180_c0000",
+      "article_id": "cardinality_784d7180",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 946,
+      "content": "In mathematics, cardinality is an intrinsic property of sets, roughly meaning the number of individual objects they contain, which may be infinite. The cardinal number corresponding to a set A {\\displaystyle A} is written as | A | {\\displaystyle |A|} between two vertical bars. For finite sets, cardinality coincides with the natural number found by counting its elements. Beginning in the late 19th century, this concept of cardinality was generalized to infinite sets. Two sets are said to be equinumerous or have the same cardinality if there exists a one-to-one correspondence between them. That is, if their objects can be paired such that each object has a pair, and no object is paired more than once (see image). A set is countably infinite if it can be placed in one-to-one correspondence with the set of natural numbers { 1 , 2 , 3 , 4 , ⋯ } . {\\displaystyle \\{1,2,3,4,\\cdots \\}.} For example, the set of even numbers { 2 , 4 , 6 , . .",
+      "char_count": 945,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0001",
+      "article_id": "cardinality_784d7180",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 946,
+      "end_char": 1751,
+      "content": "} {\\displaystyle \\{2,4,6,..\\}} , the set of prime numbers { 2 , 3 , 5 , ⋯ } {\\displaystyle \\{2,3,5,\\cdots \\}} , and the set of rational numbers are all countable. A set is uncountable if it is both infinite and cannot be put in correspondence with the set of natural numbers—for example, the set of real numbers or the powerset of the set of natural numbers. Cardinal numbers extend the natural numbers as representatives of size. Most commonly, the aleph numbers are defined via ordinal numbers, and represent a large class of sets. The question of whether there is a set whose cardinality is greater than that of the integers but less than that of the real numbers, is known as the continuum hypothesis, which has been shown to be unprovable in standard set theories such as Zermelo–Fraenkel set theory.",
+      "char_count": 805,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0002",
+      "article_id": "cardinality_784d7180",
+      "section": "== Definition and etymology ==",
+      "heading_path": "== Definition and etymology ==",
+      "start_char": 1782,
+      "end_char": 2618,
+      "content": "== Definition and etymology == Cardinality is an intrinsic property of sets which defines their size, roughly corresponding to the number of individual objects they contain. Fundamentally however, it is different from the concepts of number or counting as the cardinalities of two sets can be compared without referring to their number of elements, or defining number at all. For example, in the image above, a set of apples is compared to a set of oranges such that every fruit is used exactly once which shows these two sets have the same cardinality, even if one doesn't know how many of each there are. Thus, cardinality is measured by putting sets in one-to-one correspondence. If it is possible, the sets are said to have the same cardinality, and if not, one set is said to be strictly larger or strictly smaller than the other.",
+      "char_count": 835,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0003",
+      "article_id": "cardinality_784d7180",
+      "section": "== Definition and etymology ==",
+      "heading_path": "== Definition and etymology ==",
+      "start_char": 2618,
+      "end_char": 3560,
+      "content": "Georg Cantor, the originator of the concept, defined cardinality as \"the general concept which, with the aid of our intelligence, results from a set when we abstract from the nature of its various elements and from the order of their being given.\" This definition was considered to be imprecise, unclear, and purely psychological. Thus, cardinal numbers, a means of measuring cardinality, became the main way of presenting the concept. The distinction between the two is roughly analogous to the difference between an object's mass and its mass in kilograms. However, somewhat confusingly, the phrases \"The cardinality of M\" and \"The cardinal number of M\" are used interchangeably. In English, the term cardinality originates from the post-classical Latin cardinalis, meaning \"principal\" or \"chief\", which derives from cardo, a noun meaning \"hinge\". In Latin, cardo referred to something central or pivotal, both literally and metaphorically.",
+      "char_count": 942,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0004",
+      "article_id": "cardinality_784d7180",
+      "section": "== Definition and etymology ==",
+      "heading_path": "== Definition and etymology ==",
+      "start_char": 3561,
+      "end_char": 4515,
+      "content": "This concept of centrality passed into medieval Latin and then into English, where cardinal came to describe things considered to be, in some sense, fundamental, such as cardinal virtues, cardinal sins, cardinal directions, and (grammatically defined) cardinal numbers. The last of which referred to numbers used for counting (e.g., one, two, three), as opposed to ordinal numbers, which express order (e.g., first, second, third), and nominal numbers used for labeling without meaning (e.g., jersey numbers and serial numbers). In mathematics, the notion of cardinality was first introduced by Georg Cantor in the late 19th century, wherein he used the used the term Mächtigkeit, which may be translated as \"magnitude\" or \"power\", though Cantor credited the term to a work by Jakob Steiner on projective geometry. The terms cardinality and cardinal number were eventually adopted from the grammatical sense, and later translations would use these terms.",
+      "char_count": 954,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0005",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Ancient history ==",
+      "heading_path": "== = Ancient history ==",
+      "start_char": 4523,
+      "end_char": 5468,
+      "content": "== = Ancient history === From the 6th century BCE, the writings of Greek philosophers, such as Anaximander, show hints of comparing infinite sets or shapes, however, it was generally viewed as paradoxical and imperfect (cf. Zeno's paradoxes). Aristotle distinguished between the notions of actual infinity and potential infinity, arguing that Greek mathematicians understood the difference, and that they \"do not need the [actual] infinite and do not use it.\" The Greek notion of number (αριθμός, arithmos) was used exclusively for a definite number of definite objects (i.e. finite numbers). This would be codified in Euclid's Elements, where the fifth common notion states \"The whole is greater than the part\", often called the Euclidean principle. This principle would be the dominating philosophy in mathematics until the 19th century. Around the 4th century BCE, Jaina mathematics would be the first to discuss different sizes of infinity.",
+      "char_count": 944,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0006",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Ancient history ==",
+      "heading_path": "== = Ancient history ==",
+      "start_char": 5468,
+      "end_char": 6464,
+      "content": "They defined three major classes of number: enumerable (finite numbers), unenumerable (asamkhyata, roughly, countably infinite), and infinite (ananta). Then they had five classes of infinite numbers: infinite in one direction, infinite in both directions, infinite in area, infinite everywhere, and infinite perpetually. One of the earliest explicit uses of a one-to-one correspondence is recorded in Aristotle's Mechanics (c. 350 BCE), known as Aristotle's wheel paradox. The paradox can be briefly described as follows: A wheel is depicted as two concentric circles. The larger, outer circle is tangent to a horizontal line (e.g. a road that it rolls on), while the smaller, inner circle is rigidly affixed to the larger. Assuming the larger circle rolls along the line without slipping (or skidding) for one full revolution, the distances moved by both circles are the same: the circumference of the larger circle. Further, the lines traced by the bottom-most point of each is the same length.",
+      "char_count": 996,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0007",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Ancient history ==",
+      "heading_path": "== = Ancient history ==",
+      "start_char": 6465,
+      "end_char": 6634,
+      "content": "Since the smaller wheel does not skip any points, and no point on the smaller wheel is used more than once, there is a one-to-one correspondence between the two circles.",
+      "char_count": 169,
+      "token_estimate": 42,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0008",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Pre-Cantorian set theory ==",
+      "heading_path": "== = Pre-Cantorian set theory ==",
+      "start_char": 6644,
+      "end_char": 7564,
+      "content": "== = Pre-Cantorian set theory === Galileo Galilei presented what was later coined Galileo's paradox in his book Two New Sciences (1638), where he presents a seeming paradox in infinite sequences of numbers. It goes roughly as follows: for each perfect square ( n 2 ) {\\displaystyle (n^{2})} 1, 4, 9, 16, and so on, there is a unique square root ( n 2 = n ) {\\textstyle ({\\sqrt {n^{2}}}=n)} 1, 2, 3, 4, and so on. Therefore, there are as many perfect squares as there are square roots. However, every number is a square root, since it can be squared, but not every number is a perfect square. Moreover, the proportion of perfect squares as one passes larger values diminishes, and is eventually smaller than any given fraction. Galileo denied that this was fundamentally contradictory, however he concluded that this meant we could not compare the sizes of infinite sets, missing the opportunity to discover cardinality.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0009",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Pre-Cantorian set theory ==",
+      "heading_path": "== = Pre-Cantorian set theory ==",
+      "start_char": 7564,
+      "end_char": 8548,
+      "content": "In A Treatise of Human Nature (1739), David Hume is quoted for saying \"When two numbers are so combined, as that the one has always a unit answering to every unit of the other, we pronounce them equal\", now called Hume's principle, which was used extensively by Gottlob Frege later during the rise of set theory. Bernard Bolzano's Paradoxes of the Infinite (Paradoxien des Unendlichen, 1851) is often considered the first systematic attempt to introduce the concept of sets into mathematical analysis. In this work, Bolzano defended the notion of actual infinity, presented an early formulation of what would later be recognized as one-to-one correspondence between infinite sets. He discussed examples such as the pairing between the intervals [ 0 , 5 ] {\\displaystyle [0,5]} and [ 0 , 12 ] {\\displaystyle [0,12]} by the relation 5 y = 12 x , {\\displaystyle 5y=12x,} and revisited Galileo's paradox. However, he too resisted saying that these sets were, in that sense, the same size.",
+      "char_count": 984,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0010",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Pre-Cantorian set theory ==",
+      "heading_path": "== = Pre-Cantorian set theory ==",
+      "start_char": 8549,
+      "end_char": 8761,
+      "content": "While Paradoxes of the Infinite anticipated several ideas central to later set theory, the work had little influence on contemporary mathematics, in part due to its posthumous publication and limited circulation.",
+      "char_count": 212,
+      "token_estimate": 53,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0011",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Axiomatic set theory ==",
+      "heading_path": "== = Axiomatic set theory ==",
+      "start_char": 8784,
+      "end_char": 9711,
+      "content": "== = Axiomatic set theory === In 1908, Ernst Zermelo proposed the first axiomatization of set theory, now called Zermelo set theory, primarily to support his earlier (1904) proof of the Well-ordering theorem, which showed that all cardinal numbers could be represented as Alephs, though the proof required a controversial principle now known as the Axiom of Choice (AC). Zermelo's system would later be extended by Abraham Fraenkel and Thoralf Skolem in the 1920s to create the standard foundation of set theory, called Zermelo–Fraenkel set theory (ZFC, \"C\" for the Axiom of Choice). ZFC provided a rigorous foundation through which infinite cardinals could be systematically studied while avoiding the paradoxes of naive set theory. In 1940, Kurt Gödel showed that CH cannot be disproved from the axioms of ZFC. Gödel's proof shows that both CH and AC hold in his constructible universe: an inner model of ZFC where CH holds.",
+      "char_count": 926,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0012",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Axiomatic set theory ==",
+      "heading_path": "== = Axiomatic set theory ==",
+      "start_char": 9711,
+      "end_char": 10318,
+      "content": "The existence of an inner model of ZFC in which additional axioms hold shows that the additional axioms are (relatively) consistent with ZFC. In 1963, Paul Cohen showed that CH cannot be proven from the ZFC axioms, which showed that CH was independent from ZFC. To prove his result, Cohen developed the method of forcing, which has become a standard tool in set theory. Essentially, this method begins with Gödel's model of ZFC in which CH holds and constructs another model which contains more sets than the original in a way that CH does not hold. Cohen was awarded the Fields Medal in 1966 for his proof.",
+      "char_count": 607,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0013",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Introduction ==",
+      "heading_path": "== = Introduction ==",
+      "start_char": 10332,
+      "end_char": 11307,
+      "content": "== = Introduction === The basic notions of sets and functions are used to develop the concept of cardinality, and technical terms therein are used throughout this article. A set can be understood as any collection of objects, usually represented with curly braces. For example, S = { 1 , 2 , 3 } {\\displaystyle S=\\{1,2,3\\}} specifies a set, called S {\\displaystyle S} , which contains the numbers 1, 2, and 3. The symbol ∈ {\\displaystyle \\in } represents set membership, for example 1 ∈ S {\\displaystyle 1\\in S} says \"1 is a member of the set S {\\displaystyle S} \" which is true by the definition of S {\\displaystyle S} above. A function is an association that maps elements of one set to the elements of another, often represented with an arrow diagram. For example, the adjacent image depicts a function which maps the set of natural numbers to the set of even numbers by multiplying by 2. If a function does not map two elements to the same place, it is called injective.",
+      "char_count": 974,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0014",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Introduction ==",
+      "heading_path": "== = Introduction ==",
+      "start_char": 11307,
+      "end_char": 11529,
+      "content": "If a function covers every element in the output space, it is called surjective. If a function is both injective and surjective, it is called bijective. (For further clarification, see Bijection, injection and surjection.)",
+      "char_count": 222,
+      "token_estimate": 55,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0015",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Equinumerosity ==",
+      "heading_path": "== = Equinumerosity ==",
+      "start_char": 11532,
+      "end_char": 12396,
+      "content": "== = Equinumerosity === The intuitive property of two sets having the \"same size\" is that their objects can be paired one-to-one. A one-to-one pairing between two sets defines a bijective function between them by mapping each object to its pair. Similarly, a bijection between two sets defines a pairing of their elements by pairing each object with the one it maps to. Therefore, these notions of \"pairing\" and \"bijection\" are intuitively equivalent. In fact, it is often the case that functions are defined literally as this set of pairings (see Function (mathematics) § Formal definition). Thus, the following definition is given: Two sets A {\\displaystyle A} and B {\\displaystyle B} are said to have the same cardinality if their elements can be paired one-to-one. That is, if there exists a function f : A ↦ B {\\displaystyle f:A\\mapsto B} which is bijective.",
+      "char_count": 863,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0016",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Equinumerosity ==",
+      "heading_path": "== = Equinumerosity ==",
+      "start_char": 12396,
+      "end_char": 13197,
+      "content": "This is written as A ∼ B , {\\displaystyle A\\sim B,} A ≈ B , {\\displaystyle A\\approx B,} A ≡ B , {\\displaystyle A\\equiv B,} and eventually | A | = | B | , {\\displaystyle |A|=|B|,} once | A | {\\displaystyle |A|} has been defined. Alternatively, these sets, A {\\displaystyle A} and B , {\\displaystyle B,} may be said to be equivalent, similar, equinumerous, equipotent, or equipollent. For example, the set E = { 0 , 2 , 4 , 6 , ... } {\\displaystyle E=\\{0,2,4,6,{\\text{...}}\\}} of non-negative even numbers has the same cardinality as the set N = { 0 , 1 , 2 , 3 , ... } {\\displaystyle \\mathbb {N} =\\{0,1,2,3,{\\text{...}}\\}} of natural numbers, since the function f ( n ) = 2 n {\\displaystyle f(n)=2n} is a bijection from ⁠ N {\\displaystyle \\mathbb {N} } ⁠ to ⁠ E {\\displaystyle E} ⁠ (see picture above).",
+      "char_count": 801,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0017",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Equinumerosity ==",
+      "heading_path": "== = Equinumerosity ==",
+      "start_char": 13198,
+      "end_char": 14144,
+      "content": "The intuitive property for finite sets that \"the whole is greater than the part\" is no longer true for infinite sets, and the existence of surjections or injections that don't work does not prove that there is no bijection. For example, the function ⁠ g {\\displaystyle g} ⁠ from ⁠ N {\\displaystyle \\mathbb {N} } ⁠ to ⁠ E {\\displaystyle E} ⁠, defined by g ( n ) = 4 n {\\displaystyle g(n)=4n} is injective, but not surjective (since 2, for instance, is not mapped to), and ⁠ h {\\displaystyle h} ⁠ from ⁠ N {\\displaystyle \\mathbb {N} } ⁠ to ⁠ E {\\displaystyle E} ⁠, defined by h ( n ) = 2 floor ⁡ ( n / 2 ) {\\displaystyle h(n)=2\\operatorname {floor} (n/2)} (see: floor function) is surjective, but not injective, (since 0 and 1 for instance both map to 0). Neither ⁠ g {\\displaystyle g} ⁠ nor ⁠ h {\\displaystyle h} ⁠ can challenge | E | = | N | , {\\displaystyle |E|=|\\mathbb {N} |,} which was established by the existence of ⁠ f {\\displaystyle f} ⁠.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0018",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Inequality ==",
+      "heading_path": "== = Inequality ==",
+      "start_char": 14141,
+      "end_char": 15065,
+      "content": "== = Inequality === A set A {\\displaystyle A} is not larger than a set B {\\displaystyle B} if it can be mapped into B {\\displaystyle B} without overlap. That is, the cardinality of A {\\displaystyle A} is less than or equal to the cardinality of B {\\displaystyle B} if there is an injective function from A {\\displaystyle A} to B {\\displaystyle B} . This is written A ⪯ B , {\\displaystyle A\\preceq B,} A ≲ B {\\displaystyle A\\lesssim B} and eventually | A | ≤ | B | , {\\displaystyle |A|\\leq |B|,} and read as A {\\displaystyle A} is not greater than B , {\\displaystyle B,} or A {\\displaystyle A} is dominated by B . {\\displaystyle B.} If A ⪯ B , {\\displaystyle A\\preceq B,} but there is no injection from B {\\displaystyle B} to A , {\\displaystyle A,} then A {\\displaystyle A} is said to be strictly smaller than B , {\\displaystyle B,} or be domwritten without the underline as A ≺ B {\\displaystyle A\\prec B} or | A | < | B | .",
+      "char_count": 923,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0019",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Inequality ==",
+      "heading_path": "== = Inequality ==",
+      "start_char": 15065,
+      "end_char": 15981,
+      "content": "{\\displaystyle |A|<|B|.} For example, if A {\\displaystyle A} has four elements and B {\\displaystyle B} has five, then the following are true A ⪯ A , {\\displaystyle A\\preceq A,} A ⪯ B , {\\displaystyle A\\preceq B,} and A ≺ B . {\\displaystyle A\\prec B.} The basic properties of an inequality are reflexivity (for any a , {\\displaystyle a,} a ≤ a {\\displaystyle a\\leq a} ), transitivity (if a ≤ b {\\displaystyle a\\leq b} and b ≤ c , {\\displaystyle b\\leq c,} then a ≤ c {\\displaystyle a\\leq c} ) and antisymmetry (if a ≤ b {\\displaystyle a\\leq b} and b ≤ a , {\\displaystyle b\\leq a,} then a = b {\\displaystyle a=b} ) (See Inequality § Formal definitions). Cardinal inequality ( ⪯ ) {\\displaystyle (\\preceq )} as defined above is reflexive since the identity function is injective, and is transitive by function composition. Antisymmetry is established by the Schröder–Bernstein theorem. The proof roughly goes as follows.",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0020",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Inequality ==",
+      "heading_path": "== = Inequality ==",
+      "start_char": 15982,
+      "end_char": 16951,
+      "content": "Given sets A {\\displaystyle A} and B {\\displaystyle B} , where f : A ↦ B {\\displaystyle f:A\\mapsto B} is the function that proves A ⪯ B {\\displaystyle A\\preceq B} and g : B ↦ A {\\displaystyle g:B\\mapsto A} proves B ⪯ A {\\displaystyle B\\preceq A} , then consider the sequence of points given by applying f {\\displaystyle f} then g {\\displaystyle g} to each element over and over. Then we can define a bijection h : A ↦ B {\\displaystyle h:A\\mapsto B} as follows: If a sequence forms a cycle, begins with an element a ∈ A {\\displaystyle a\\in A} not mapped to by g {\\displaystyle g} , or extends infinitely in both directions, define h ( x ) = f ( x ) {\\displaystyle h(x)=f(x)} for each x ∈ A {\\displaystyle x\\in A} in those sequences. The last case, if a sequence begins with an element b ∈ B {\\displaystyle b\\in B} , not mapped to by f {\\displaystyle f} , define h ( x ) = g − 1 ( x ) {\\displaystyle h(x)=g^{-1}(x)} for each x ∈ A {\\displaystyle x\\in A} in that sequence.",
+      "char_count": 969,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0021",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Inequality ==",
+      "heading_path": "== = Inequality ==",
+      "start_char": 16952,
+      "end_char": 17558,
+      "content": "Then h {\\displaystyle h} is a bijection. The above shows that cardinal inequality is a partial order. A total order has the additional property that, for any a {\\displaystyle a} and b {\\displaystyle b} , either a ≤ b {\\displaystyle a\\leq b} or b ≤ a . {\\displaystyle b\\leq a.} This can be established by the well-ordering theorem. Every well-ordered set is isomorphic to a unique ordinal number, called the order type of the set. Then, by comparing their order types, one can show that A ⪯ B {\\displaystyle A\\preceq B} or B ⪯ A {\\displaystyle B\\preceq A} . This result is equivalent to the axiom of choice.",
+      "char_count": 606,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0022",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Countable sets ==",
+      "heading_path": "== = Countable sets ==",
+      "start_char": 17582,
+      "end_char": 18506,
+      "content": "== = Countable sets === A set is called countable if it is finite or has a bijection with the set of natural numbers ( N ) , {\\displaystyle (\\mathbb {N} ),} in which case it is called countably infinite. The term denumerable is also sometimes used for countably infinite sets. For example, the set of all even natural numbers is countable, and therefore has the same cardinality as the whole set of natural numbers, even though it is a proper subset. Similarly, the set of square numbers is countable, which was considered paradoxical for hundreds of years before modern set theory (cf. § Pre-Cantorian set theory). However, several other examples have historically been considered surprising or initially unintuitive since the rise of set theory. The rational numbers ( Q ) {\\displaystyle (\\mathbb {Q} )} are those which can be expressed as the quotient or fraction ⁠ p q {\\displaystyle {\\tfrac {p}{q}}} ⁠ of two integers.",
+      "char_count": 923,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0023",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Countable sets ==",
+      "heading_path": "== = Countable sets ==",
+      "start_char": 18506,
+      "end_char": 19465,
+      "content": "The rational numbers can be shown to be countable by considering the set of fractions as the set of all ordered pairs of integers, denoted Z × Z , {\\displaystyle \\mathbb {Z} \\times \\mathbb {Z} ,} which can be visualized as the set of all integer points on a grid. Then, an intuitive function can be described by drawing a line in a repeating pattern, or spiral, which eventually goes through each point in the grid. For example, going through each diagonal on the grid for positive fractions, or through a lattice spiral for all integer pairs. These technically over cover the rationals, since, for example, the rational number 1 2 {\\textstyle {\\frac {1}{2}}} gets mapped to by all the fractions 2 4 , 3 6 , 4 8 , … , {\\textstyle {\\frac {2}{4}},\\,{\\frac {3}{6}},\\,{\\frac {4}{8}},\\,\\dots ,} as the grid method treats these all as distinct ordered pairs. So this function shows | Q | ≤ | N | {\\displaystyle |\\mathbb {Q} |\\leq |\\mathbb {N} |} not | Q | = | N | .",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0024",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Countable sets ==",
+      "heading_path": "== = Countable sets ==",
+      "start_char": 19466,
+      "end_char": 20333,
+      "content": "{\\displaystyle |\\mathbb {Q} |=|\\mathbb {N} |.} This can be corrected by \"skipping over\" these numbers in the grid, using the Schröder–Bernstein theorem, or by designing a function which does this naturally, for example using the Calkin–Wilf tree. A number is called algebraic if it is a solution of some polynomial equation (with integer coefficients). For example, the square root of two 2 {\\displaystyle {\\sqrt {2}}} is a solution to x 2 − 2 = 0 , {\\displaystyle x^{2}-2=0,} and the rational number p / q {\\displaystyle p/q} is the solution to q x − p = 0. {\\displaystyle qx-p=0.} Conversely, a number which cannot be the root of any polynomial is called transcendental. Two examples include Euler's number (e) and pi (π). In general, proving a number is transcendental is considered to be very difficult, and only a few classes of transcendental numbers are known.",
+      "char_count": 867,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0025",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Countable sets ==",
+      "heading_path": "== = Countable sets ==",
+      "start_char": 20334,
+      "end_char": 20830,
+      "content": "However, it can be shown that the set of algebraic numbers is countable by ordering the polynomials lexicographically (for example, see Cantor's first set theory article § The proofs). Since the set of algebraic numbers is countable while the real numbers are uncountable (shown in the following section), the transcendental numbers must form the vast majority of real numbers, even though they are individually much harder to identify. That is to say, almost all real numbers are transcendental.",
+      "char_count": 496,
+      "token_estimate": 124,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0026",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Uncountable sets ==",
+      "heading_path": "== = Uncountable sets ==",
+      "start_char": 20833,
+      "end_char": 21633,
+      "content": "== = Uncountable sets === A set is called uncountable if it is not countable. That is, it is infinite and strictly larger than the set of natural numbers. The usual first example of this is the set of real numbers ( R ) {\\displaystyle (\\mathbb {R} )} , which can be understood as the set of all numbers on the number line. One method of proving that the reals are uncountable is called Cantor's diagonal argument, credited to Cantor for his 1891 proof, though his differs from the more common presentation. It begins by assuming, by contradiction, that there is some one-to-one mapping between the natural numbers and the set of real numbers between 0 and 1 (the interval [ 0 , 1 ] {\\displaystyle [0,1]} ). Then, take the decimal expansions of each real number, which looks like 0. d 1 d 2 d 3 . . .",
+      "char_count": 799,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0027",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Uncountable sets ==",
+      "heading_path": "== = Uncountable sets ==",
+      "start_char": 21633,
+      "end_char": 22447,
+      "content": "{\\displaystyle 0.d_{1}d_{2}d_{3}...} Considering these real numbers in a column, create a new number such that the first digit of the new number is different from that of the first number in the column, the second digit is different from the second number in the column and so on. We also need to make sure that the number we create has a unique decimal representation, that is, it cannot end in repeating nines or repeating zeros. For example, if the digit isn't a 7, make the digit of the new number a 7, and if it was a seven, make it a 3. Then, this new number will be different from each of the numbers in the list by at least one digit, and therefore must not be in the list. This shows that the real numbers cannot be put into a one-to-one correspondence with the naturals, and thus must be strictly larger.",
+      "char_count": 814,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0028",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Uncountable sets ==",
+      "heading_path": "== = Uncountable sets ==",
+      "start_char": 22448,
+      "end_char": 23225,
+      "content": "Another classical example of an uncountable set, established using a related reasoning, is the power set of the natural numbers, denoted P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} . This is the set of all subsets of N {\\displaystyle \\mathbb {N} } , including the empty set and N {\\displaystyle \\mathbb {N} } itself. The method is much closer to Cantor's original diagonal argument. Again, assume by contradiction that there exists a one-to-one correspondence f {\\displaystyle f} between N {\\displaystyle \\mathbb {N} } and P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} , so that every subset of N {\\displaystyle \\mathbb {N} } is assigned to some natural number. These subsets are then placed in a column, in the order defined by f {\\displaystyle f} (see image).",
+      "char_count": 777,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0029",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Uncountable sets ==",
+      "heading_path": "== = Uncountable sets ==",
+      "start_char": 23226,
+      "end_char": 24093,
+      "content": "Now, one may define a subset T {\\displaystyle T} of N {\\displaystyle \\mathbb {N} } which is not in the list by taking the negation of the \"diagonal\" of this column as follows: If 1 ∈ f ( 1 ) {\\displaystyle 1\\in f(1)} , then 1 ∉ T {\\displaystyle 1\\notin T} , that is, if 1 is in the first subset of the list, then 1 is not in the subset T {\\displaystyle T} . Further, if 2 ∉ f ( 2 ) {\\displaystyle 2\\notin f(2)} , then 2 ∈ T {\\displaystyle 2\\in T} , that is if the number 2 is not in the second subset of the column, then 2 is in the subset T {\\displaystyle T} . Then in general, for each natural number n {\\displaystyle n} , n ∈ T {\\displaystyle n\\in T} if and only if n ∉ f ( n ) {\\displaystyle n\\notin f(n)} , meaning n {\\displaystyle n} is put in the subset T {\\displaystyle T} only if the nth subset in the column does not contain the number n {\\displaystyle n} .",
+      "char_count": 867,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0030",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Uncountable sets ==",
+      "heading_path": "== = Uncountable sets ==",
+      "start_char": 24094,
+      "end_char": 24912,
+      "content": "Then, for each natural number n {\\displaystyle n} , T ≠ f ( n ) {\\displaystyle T\\neq f(n)} , meaning, T {\\displaystyle T} is not the nth subset in the list, for any number n {\\displaystyle n} , and so it cannot appear anywhere in the list defined by f {\\displaystyle f} . Since f {\\displaystyle f} was chosen arbitrarily, this shows that every function from N {\\displaystyle \\mathbb {N} } to P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} must be missing at least one element, therefore no such bijection can exist, and so P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} must be not be countable. These two sets, R {\\displaystyle \\mathbb {R} } and P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} can be shown to have the same cardinality (by, for example, assigning each subset to a decimal expansion).",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0031",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Uncountable sets ==",
+      "heading_path": "== = Uncountable sets ==",
+      "start_char": 24913,
+      "end_char": 25770,
+      "content": "Whether there exists a set A {\\displaystyle A} with cardinality between these two sets | N | < | A | < | R | {\\displaystyle |\\mathbb {N} |<|A|<|\\mathbb {R} |} is known as the continuum hypothesis. Cantor's theorem generalizes the second theorem above, showing that every set is strictly smaller than its powerset. The proof roughly goes as follows: Given a set A {\\displaystyle A} , assume by contradiction that there is a bijection f {\\displaystyle f} from A {\\displaystyle A} to P ( A ) {\\displaystyle {\\mathcal {P}}(A)} . Then, the subset T ⊆ A {\\displaystyle T\\subseteq A} given by taking the negation of the \"diagonal\", formally, T = { a ∈ A : a ∉ f ( a ) } {\\displaystyle T=\\{a\\in A:a\\notin f(a)\\}} , cannot be in the list. Therefore, every function is missing at least one element, and so | A | < | P ( A ) | {\\displaystyle |A|<|{\\mathcal {P}}(A)|} .",
+      "char_count": 857,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0032",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Uncountable sets ==",
+      "heading_path": "== = Uncountable sets ==",
+      "start_char": 25771,
+      "end_char": 26336,
+      "content": "Further, since P ( A ) {\\displaystyle {\\mathcal {P}}(A)} is itself a set, the argument can be repeated to show | A | < | P ( A ) | < | P ( P ( A ) ) | {\\displaystyle |A|<|{\\mathcal {P}}(A)|<|{\\mathcal {P}}({\\mathcal {P}}(A))|} . Taking A = N {\\displaystyle A=\\mathbb {N} } , this shows that P ( P ( N ) ) {\\displaystyle {\\mathcal {P}}({\\mathcal {P}}(\\mathbb {N} ))} is even larger than P ( N ) {\\displaystyle {\\mathcal {P}}(\\mathbb {N} )} , which was already shown to be uncountable. Repeating this argument shows that there are infinitely many \"sizes\" of infinity.",
+      "char_count": 565,
+      "token_estimate": 141,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0033",
+      "article_id": "cardinality_784d7180",
+      "section": "== Cardinal numbers ==",
+      "heading_path": "== Cardinal numbers ==",
+      "start_char": 26335,
+      "end_char": 27280,
+      "content": "== Cardinal numbers == In the above section, \"cardinality\" of a set was described relationally. In other words, one set could be compared to another, intuitively comparing their \"size\". Cardinal numbers are a means of measuring this \"size\" more explicitly. For finite sets, this is simply the natural number found by counting the elements. This number is called the cardinal number of that set, or simply the cardinality of that set. The cardinal number of a set A {\\displaystyle A} is generally denoted by | A | , {\\displaystyle |A|,} with a vertical bar on each side, though it may also be denoted by A {\\displaystyle A} , card ⁡ ( A ) , {\\displaystyle \\operatorname {card} (A),} or # A . {\\displaystyle \\#A.} For infinite sets, \"cardinal number\" is somewhat more difficult to define formally. Cardinal numbers are not usually thought of in terms of their formal definition, but immaterially in terms of their arithmetic/algebraic properties.",
+      "char_count": 944,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0034",
+      "article_id": "cardinality_784d7180",
+      "section": "== Cardinal numbers ==",
+      "heading_path": "== Cardinal numbers ==",
+      "start_char": 27280,
+      "end_char": 28248,
+      "content": "The assumption that there is some cardinal function A ↦ | A | {\\displaystyle A\\mapsto |A|} which satisfies A ∼ B ⟺ | A | = | B | {\\displaystyle A\\sim B\\iff |A|=|B|} , sometimes called the axiom of cardinal number or Hume's principle, is sufficient for deriving most properties of cardinal numbers. Commonly in mathematics, if a relation satisfies the properties of an equivalence relation, the objects used to materialize this relation are equivalence classes, which groups all the objects equivalent to one another. These called the Frege–Russell cardinal numbers. However, this would mean that cardinal numbers are too large to form sets (apart from the cardinal number 0 {\\displaystyle 0} whose only element is the empty set), since, for example, the cardinal number 1 {\\displaystyle 1} would be the set of all sets with one element, and would therefore be a proper class. Thus, due to John von Neumann, it is more common to assign representatives of these classes.",
+      "char_count": 968,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0035",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Finite sets ==",
+      "heading_path": "== = Finite sets ==",
+      "start_char": 28364,
+      "end_char": 29282,
+      "content": "== = Finite sets === Given a basic sense of natural numbers, a set is said to have cardinality n {\\displaystyle n} if it can be put in one-to-one correspondence with the set { 1 , 2 , … , n } , {\\displaystyle \\{1,\\,2,\\,\\dots ,\\,n\\},} analogous to counting its elements. For example, the set S = { A , B , C , D } {\\displaystyle S=\\{A,B,C,D\\}} has a natural correspondence with the set { 1 , 2 , 3 , 4 } , {\\displaystyle \\{1,2,3,4\\},} and therefore is said to have cardinality 4. Other terminologies include \"Its cardinality is 4\" or \"Its cardinal number is 4\". In formal contexts, the natural numbers can be understood as some construction of objects satisfying the Peano axioms. Showing that such a correspondence exists is not always trivial. Combinatorics is the area of mathematics primarily concerned with counting, both as a means and as an end to obtaining results, and certain properties of finite structures.",
+      "char_count": 917,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0036",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Finite sets ==",
+      "heading_path": "== = Finite sets ==",
+      "start_char": 29282,
+      "end_char": 30204,
+      "content": "The notion cardinality of finite sets is closely tied to many basic combinatorial principles, and provides a set-theoretic foundation to prove them. It can be shown by induction on the possible sizes of sets that finite cardinality corresponds uniquely with natural numbers (cf. Finite set § Uniqueness of cardinality). The addition principle asserts that given disjoint sets A {\\displaystyle A} and B {\\displaystyle B} , | A ∪ B | = | A | + | B | {\\displaystyle |A\\cup B|=|A|+|B|} , intuitively meaning that the sum of parts is equal to the sum of the whole. The multiplication principle asserts that given two sets A {\\displaystyle A} and B {\\displaystyle B} , | A × B | = | A | ⋅ | B | {\\displaystyle |A\\times B|=|A|\\cdot |B|} , intuitively meaning that there are | A | ⋅ | B | {\\displaystyle |A|\\cdot |B|} ways to pair objects from these sets. Both of these can be proven by a bijective proof, together with induction.",
+      "char_count": 922,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0037",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Finite sets ==",
+      "heading_path": "== = Finite sets ==",
+      "start_char": 30205,
+      "end_char": 30755,
+      "content": "The more general result is the inclusion–exclusion principle, which defines how to count the number of elements in overlapping sets. Naturally, a set is defined to be finite if it can be put in correspondence with the set { 1 , 2 , … , n } , {\\displaystyle \\{1,\\,2,\\,\\dots ,\\,n\\},} for some natural number n . {\\displaystyle n.} However, there exist other definitions of \"finite\" which don't rely on a definition of \"number.\" For example, a set is called Dedekind-finite if it cannot be put in one-to-one correspondece with a proper subset of itself.",
+      "char_count": 550,
+      "token_estimate": 137,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0038",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Aleph numbers ==",
+      "heading_path": "== = Aleph numbers ==",
+      "start_char": 30758,
+      "end_char": 31638,
+      "content": "== = Aleph numbers === The aleph numbers are a sequence of cardinal numbers that denote the size of infinite sets, denoted with an aleph ℵ , {\\displaystyle \\aleph ,} the first letter of the Hebrew alphabet. The first aleph number is ℵ 0 , {\\displaystyle \\aleph _{0},} called \"aleph-nought\", \"aleph-zero\", or \"aleph-null\", which represents the cardinality of the set of all natural numbers: ℵ 0 = | N | = | { 0 , 1 , 2 , 3 , ⋯ } | . {\\displaystyle \\aleph _{0}=|\\mathbb {N} |=|\\{0,1,2,3,\\cdots \\}|.} Then, ℵ 1 {\\displaystyle \\aleph _{1}} represents the next largest cardinality. The most common way this is formalized in set theory is through Von Neumann ordinals, known as Von Neumann cardinal assignment. Ordinal numbers generalize the notion of order to infinite sets. For example, 2 comes after 1, denoted 1 < 2 , {\\displaystyle 1<2,} and 3 comes after both, denoted 1 < 2 < 3.",
+      "char_count": 879,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "cardinality_784d7180_c0039",
+      "article_id": "cardinality_784d7180",
+      "section": "== = Aleph numbers ==",
+      "heading_path": "== = Aleph numbers ==",
+      "start_char": 31638,
+      "end_char": 32211,
+      "content": "{\\displaystyle 1<2<3.} Then, one defines a new number, ω , {\\displaystyle \\omega ,} which comes after every natural number, denoted 1 < 2 < 3 < ⋯ < ω . {\\displaystyle 1<2<3<\\cdots <\\omega .} Further ω < ω + 1 , {\\displaystyle \\omega <\\omega +1,} and so on. More formally, these ordinal numbers can be defined as follows: 0 := { } , {\\displaystyle 0:=\\{\\},} the empty set, 1 := { 0 } , {\\displaystyle 1:=\\{0\\},} 2 := { 0 , 1 } , {\\displaystyle 2:=\\{0,1\\},} 3 := { 0 , 1 , 2 } , {\\displaystyle 3:=\\{0,1,2\\},} and so on. Then one can define m < n , if m ∈ n , {\\displaystyle m",
+      "char_count": 573,
+      "token_estimate": 143,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What information is provided about == = Ancient history ==?",
+        "answer": "The text provides information about == = Ancient history == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What work is often considered the first systematic attempt to introduce the concept of sets into mathematical analysis?",
+        "answer": "Bernard Bolzano's \"Paradoxes of the Infinite\" (Paradoxien des Unendlichen), published in 1851, is often considered the first systematic attempt to introduce the concept of sets into mathematical analysis.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0009"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What information is provided about == = Introduction ==?",
+        "answer": "The text provides information about == = Introduction == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0013"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How is the principle of one-to-one correspondence used to differentiate between countably infinite and uncountable sets?",
+        "answer": "A set is defined as countably infinite if it can be placed in a one-to-one correspondence with the set of natural numbers, with examples including the sets of even numbers, prime numbers, and rational numbers. In contrast, a set is considered uncountable if it is infinite but cannot be put into such a correspondence with the natural numbers, with the set of real numbers being a key example.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0000",
+          "cardinality_784d7180_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How did Georg Cantor's introduction of cardinality in the late 19th century challenge the long-standing mathematical philosophy that originated with ancient Greek mathematicians?",
+        "answer": "Georg Cantor's work on cardinality in the late 19th century challenged the dominant mathematical philosophy established in ancient Greece, which was codified in Euclid's Elements. The Greek principle, which stated \"The whole is greater than the part,\" was the prevailing view until the 19th century and was used exclusively for finite numbers. Cantor's concept of cardinality, however, introduced a way to compare the sizes of infinite sets, an idea that ancient Greeks had considered paradoxical. This directly conflicted with the Euclidean principle and marked a significant shift in mathematical thought.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0003",
+          "cardinality_784d7180_c0004",
+          "cardinality_784d7180_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do both Aristotle's wheel paradox and Galileo's paradox use the concept of one-to-one correspondence to challenge intuitive ideas about size?",
+        "answer": "Aristotle's wheel paradox demonstrates a one-to-one correspondence between the points on two concentric circles of different sizes, as they both trace paths of the same length when rolled. This is paradoxical because the larger circle would intuitively seem to have more points. Similarly, Galileo's paradox shows a one-to-one correspondence between the set of perfect squares and the set of their square roots (all numbers), which is also paradoxical because not every number is a perfect square, suggesting the set of perfect squares should be smaller. Both paradoxes use this correspondence to illustrate that two sets, where one seems to be a proper subset of the other, can have their elements matched up, questioning how we compare the sizes of infinite sets.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0006",
+          "cardinality_784d7180_c0007",
+          "cardinality_784d7180_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain the distinction between a countably infinite set and an uncountable set, providing an example of each.",
+        "answer": "A set is countably infinite if it can be placed in a one-to-one correspondence with the set of natural numbers, such as the set of even numbers or the set of rational numbers. In contrast, an uncountable set is an infinite set that cannot be put into such a correspondence with the natural numbers; an example is the set of real numbers.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0000",
+          "cardinality_784d7180_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What term did Georg Cantor initially use for his concept of set size, and what is the etymological origin of the terms \"cardinality\" and \"cardinal number\" that were eventually adopted?",
+        "answer": "Georg Cantor originally used the German term \"Mächtigkeit,\" which translates to \"magnitude\" or \"power.\" The terms \"cardinality\" and \"cardinal number\" were later adopted from their grammatical sense, where cardinal numbers are used for counting (e.g., one, two, three). The word \"cardinality\" itself originates from the post-classical Latin \"cardinalis,\" meaning \"principal\" or \"chief,\" which derives from the noun \"cardo,\" meaning \"hinge.\"",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0003",
+          "cardinality_784d7180_c0004"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How did Aristotle's wheel paradox conflict with the dominant Greek mathematical philosophy of its era?",
+        "answer": "The dominant Greek mathematical philosophy, codified in Euclid's Elements, was based on the principle that \"The whole is greater than the part.\" Aristotle's wheel paradox presented a situation where two concentric circles of different sizes roll for one revolution, tracing lines of the same length. This implies a one-to-one correspondence between the points on the larger circle and the smaller circle, which contradicts the Euclidean principle that the larger circle (the whole) should be greater than its smaller, inner part.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0005",
+          "cardinality_784d7180_c0006",
+          "cardinality_784d7180_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Describe Bernard Bolzano's contributions to the study of infinite sets as detailed in 'Paradoxes of the Infinite' and explain why his work had limited impact.",
+        "answer": "In his 1851 work \"Paradoxes of the Infinite,\" Bernard Bolzano defended the notion of actual infinity and presented an early formulation of one-to-one correspondence between infinite sets. He explored examples like pairing the intervals [0, 5] and [0, 12] and revisited Galileo's paradox, but like Galileo, he resisted concluding that sets with such a correspondence were the same size. Despite anticipating key ideas of later set theory, his work had little influence on contemporary mathematics because it was published posthumously and had limited circulation.",
+        "related_chunk_ids": [
+          "cardinality_784d7180_c0008",
+          "cardinality_784d7180_c0009",
+          "cardinality_784d7180_c0010"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:49.658Z",
+    "content_format": "markdown",
+    "total_chunks": 40,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

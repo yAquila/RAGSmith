@@ -1,0 +1,463 @@
+{
+  "article": {
+    "id": "modeltheory_d37f9a58",
+    "title": "Model theory",
+    "url": "https://en.wikipedia.org/wiki/Model_theory",
+    "lang": "en",
+    "created_at": "2025-07-31T06:34:56.170753",
+    "content": "---\nid: modeltheory_d37f9a58\nurl: https://en.wikipedia.org/wiki/Model_theory\ntitle: Model theory\nlang: en\ncreated_at: '2025-07-31T06:27:25.118556'\nchecksum: eeb7452a2571d35edc493ef0cd90268c62aef706d094e88ddb5fb9b91b87bf25\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3591\n  char_count: 21253\n  num_chunks: 27\n  original_chunks: 31\n  filtered_out: 4\n  num_sections: 0\n---\nIn mathematical logic, model theory is the study of the relationship between formal theories (a collection of sentences in a formal language expressing statements about a mathematical structure), and their models (those structures in which the statements of the theory hold). The aspects investigated include the number and size of models of a theory, the relationship of different models to each other, and their interaction with the formal language itself. In particular, model theorists also investigate the sets that can be defined in a model of a theory, and the relationship of such definable sets to each other. As a separate discipline, model theory goes back to Alfred Tarski, who first used the term \"Theory of Models\" in publication in 1954. Since the 1970s, the subject has been shaped decisively by Saharon Shelah's stability theory. Compared to other areas of mathematical logic such as proof theory, model theory is often less concerned with formal rigour and closer in spirit to classical mathematics. This has prompted the comment that \"if proof theory is about the sacred, then model theory is about the profane\". The applications of model theory to algebraic and Diophantine geometry reflect this proximity to classical mathematics, as they often involve an integration of algebraic and model-theoretic results and techniques. Consequently, proof theory is syntactic in nature, in contrast to model theory, which is semantic in nature. The most prominent scholarly organization in the field of model theory is the Association for Symbolic Logic. == Overview == This page focuses on finitary first order model theory of infinite structures. The relative emphasis placed on the class of models of a theory as opposed to the class of definable sets within a model fluctuated in the history of the subject, and the two directions are summarised by the pithy characterisations from 1973 and 1997 respectively: model theory = universal algebra + logic where universal algebra stands for mathematical structures and logic for logical theories; and model theory = algebraic geometry − fields. where logical formulas are to definable sets what equations are to varieties over a field. Nonetheless, the interplay of classes of models and the sets definable in them has been crucial to the development of model theory throughout its history. For instance, while stability was originally introduced to classify theories by their numbers of models in a given cardinality, stability theory proved crucial to understanding the geometry of definable sets. == Fundamental notions of first-order model theory == === First-order logic === A first-order formula is built out of atomic formulas such as R ( f ( x , y ) , z ) {\\displaystyle R(f(x,y),z)} or y = x + 1 {\\displaystyle y=x+1} by means of the Boolean connectives ¬ , ∧ , ∨ , → {\\displaystyle \\neg ,\\land ,\\lor ,\\rightarrow } and prefixing of quantifiers ∀ v {\\displaystyle \\forall v} or ∃ v {\\displaystyle \\exists v} . A sentence is a formula in which each occurrence of a variable is in the scope of a corresponding quantifier. Examples for formulas are φ {\\displaystyle \\varphi } (or φ ( x ) {\\displaystyle \\varphi (x)} to indicate x {\\displaystyle x} is the unbound variable in φ {\\displaystyle \\varphi } ) and ψ {\\displaystyle \\psi } (or ψ ( x ) {\\displaystyle \\psi (x)} ), defined as follows: φ = ∀ u ∀ v ( ∃ w ( x × w = u × v ) → ( ∃ w ( x × w = u ) ∨ ∃ w ( x × w = v ) ) ) ∧ x ≠ 0 ∧ x ≠ 1 , ψ = ∀ u ∀ v ( ( u × v = x ) → ( u = x ) ∨ ( v = x ) ) ∧ x ≠ 0 ∧ x ≠ 1. {\\displaystyle {\\begin{array}{lcl}\\varphi &=&\\forall u\\forall v(\\exists w(x\\times w=u\\times v)\\rightarrow (\\exists w(x\\times w=u)\\lor \\exists w(x\\times w=v)))\\land x\\neq 0\\land x\\neq 1,\\\\\\psi &=&\\forall u\\forall v((u\\times v=x)\\rightarrow (u=x)\\lor (v=x))\\land x\\neq 0\\land x\\neq 1.\\end{array}}} (Note that the equality symbol has a double meaning here.) It is intuitively clear how to translate such formulas into mathematical meaning. In the semiring of natural numbers N {\\displaystyle {\\mathcal {N}}} , viewed as a structure with binary functions for addition and multiplication and constants for 0 and 1 of the natural numbers, for example, an element n {\\displaystyle n} satisfies the formula φ {\\displaystyle \\varphi } if and only if n {\\displaystyle n} is a prime number. The formula ψ {\\displaystyle \\psi } similarly defines irreducibility. Tarski gave a rigorous definition, sometimes called \"Tarski's definition of truth\", for the satisfaction relation ⊨ {\\displaystyle \\models } , so that one easily proves: N ⊨ φ ( n ) ⟺ n {\\displaystyle {\\mathcal {N}}\\models \\varphi (n)\\iff n} is a prime number. N ⊨ ψ ( n ) ⟺ n {\\displaystyle {\\mathcal {N}}\\models \\psi (n)\\iff n} is irreducible. A set T {\\displaystyle T} of sentences is called a (first-order) theory, which takes the sentences in the set as its axioms. A theory is satisfiable if it has a model M ⊨ T {\\displaystyle {\\mathcal {M}}\\models T} , i.e. a structure (of the appropriate signature) which satisfies all the sentences in the set T {\\displaystyle T} . A complete theory is a theory that contains every sentence or its negation. The complete theory of all sentences satisfied by a structure is also called the theory of that structure. It's a consequence of Gödel's completeness theorem (not to be confused with his incompleteness theorems) that a theory has a model if and only if it is consistent, i.e. no contradiction is proved by the theory. Therefore, model theorists often use \"consistent\" as a synonym for \"satisfiable\". === Basic model-theoretic concepts === A signature or language is a set of non-logical symbols such that each symbol is either a constant symbol, or a function or relation symbol with a specified arity. Note that in some literature, constant symbols are considered as function symbols with zero arity, and hence are omitted. A structure is a set M {\\displaystyle M} together with interpretations of each of the symbols of the signature as relations and functions on M {\\displaystyle M} (not to be confused with the formal notion of an \"interpretation\" of one structure in another). Example: A common signature for ordered rings is σ o r = ( 0 , 1 , + , × , − , < ) {\\displaystyle \\sigma _{or}=(0,1,+,\\times ,-,<)} , where 0 {\\displaystyle 0} and 1 {\\displaystyle 1} are 0-ary function symbols (also known as constant symbols), + {\\displaystyle +} and × {\\displaystyle \\times } are binary (= 2-ary) function symbols, − {\\displaystyle -} is a unary (= 1-ary) function symbol, and < {\\displaystyle <} is a binary relation symbol. Then, when these symbols are interpreted to correspond with their usual meaning on Q {\\displaystyle \\mathbb {Q} } (so that e.g. + {\\displaystyle +} is a function from Q 2 {\\displaystyle \\mathbb {Q} ^{2}} to Q {\\displaystyle \\mathbb {Q} } and < {\\displaystyle <} is a subset of Q 2 {\\displaystyle \\mathbb {Q} ^{2}} ), one obtains a structure ( Q , σ o r ) {\\displaystyle (\\mathbb {Q} ,\\sigma _{or})} . A structure N {\\displaystyle {\\mathcal {N}}} is said to model a set of first-order sentences T {\\displaystyle T} in the given language if each sentence in T {\\displaystyle T} is true in N {\\displaystyle {\\mathcal {N}}} with respect to the interpretation of the signature previously specified for N {\\displaystyle {\\mathcal {N}}} . (Again, not to be confused with the formal notion of an \"interpretation\" of one structure in another) A model of T {\\displaystyle T} is a structure that models T {\\displaystyle T} . A substructure A {\\displaystyle {\\mathcal {A}}} of a σ-structure B {\\displaystyle {\\mathcal {B}}} is a subset of its domain, closed under all functions in its signature σ, which is regarded as a σ-structure by restricting all functions and relations in σ to the subset. This generalises the analogous concepts from algebra; for instance, a subgroup is a substructure in the signature with multiplication and inverse. A substructure is said to be elementary if for any first-order formula φ {\\displaystyle \\varphi } and any elements a1, ..., an of A {\\displaystyle {\\mathcal {A}}} , A ⊨ φ ( a 1 , . . . , a n ) {\\displaystyle {\\mathcal {A}}\\models \\varphi (a_{1},...,a_{n})} if and only if B ⊨ φ ( a 1 , . . . , a n ) {\\displaystyle {\\mathcal {B}}\\models \\varphi (a_{1},...,a_{n})} . In particular, if φ {\\displaystyle \\varphi } is a sentence and A {\\displaystyle {\\mathcal {A}}} an elementary substructure of B {\\displaystyle {\\mathcal {B}}} , then A ⊨ φ {\\displaystyle {\\mathcal {A}}\\models \\varphi } if and only if B ⊨ φ {\\displaystyle {\\mathcal {B}}\\models \\varphi } . Thus, an elementary substructure is a model of a theory exactly when the superstructure is a model. Example: While the field of algebraic numbers Q ¯ {\\displaystyle {\\overline {\\mathbb {Q} }}} is an elementary substructure of the field of complex numbers C {\\displaystyle \\mathbb {C} } , the rational field Q {\\displaystyle \\mathbb {Q} } is not, as we can express \"There is a square root of 2\" as a first-order sentence satisfied by C {\\displaystyle \\mathbb {C} } but not by Q {\\displaystyle \\mathbb {Q} } . An embedding of a σ-structure A {\\displaystyle {\\mathcal {A}}} into another σ-structure B {\\displaystyle {\\mathcal {B}}} is a map f: A → B between the domains which can be written as an isomorphism of A {\\displaystyle {\\mathcal {A}}} with a substructure of B {\\displaystyle {\\mathcal {B}}} . If it can be written as an isomorphism with an elementary substructure, it is called an elementary embedding. Every embedding is an injective homomorphism, but the converse holds only if the signature contains no relation symbols, such as in groups or fields. A field or a vector space can be regarded as a (commutative) group by simply ignoring some of its structure. The corresponding notion in model theory is that of a reduct of a structure to a subset of the original signature. The opposite relation is called an expansion - e.g. the (additive) group of the rational numbers, regarded as a structure in the signature {+,0} can be expanded to a field with the signature {×,+,1,0} or to an ordered group with the signature {+,0,<}. Similarly, if σ' is a signature that extends another signature σ, then a complete σ'-theory can be restricted to σ by intersecting the set of its sentences with the set of σ-formulas. Conversely, a complete σ-theory can be regarded as a σ'-theory, and one can extend it (in more than one way) to a complete σ'-theory. The terms reduct and expansion are sometimes applied to this relation as well. === Compactness and the Löwenheim–Skolem theorem === The compactness theorem states that a set of sentences S is satisfiable if every finite subset of S is satisfiable. The analogous statement with consistent instead of satisfiable is trivial, since every proof can have only a finite number of antecedents used in the proof. The completeness theorem allows us to transfer this to satisfiability. However, there are also several direct (semantic) proofs of the compactness theorem. As a corollary (i.e., its contrapositive), the compactness theorem says that every unsatisfiable first-order theory has a finite unsatisfiable subset. This theorem is of central importance in model theory, where the words \"by compactness\" are commonplace. Another cornerstone of first-order model theory is the Löwenheim–Skolem theorem. According to the theorem, every infinite structure in a countable signature has a countable elementary substructure. Conversely, for any infinite cardinal κ every infinite structure in a countable signature that is of cardinality less than κ can be elementarily embedded in another structure of cardinality κ (There is a straightforward generalisation to uncountable signatures). In particular, the Löwenheim-Skolem theorem implies that any theory in a countable signature with infinite models has a countable model as well as arbitrarily large models. In a certain sense made precise by Lindström's theorem, first-order logic is the most expressive logic for which both the Löwenheim–Skolem theorem and the compactness theorem hold. == Definability == === Definable sets === In model theory, definable sets are important objects of study. For instance, in N {\\displaystyle \\mathbb {N} } the formula ∀ u ∀ v ( ∃ w ( x × w = u × v ) → ( ∃ w ( x × w = u ) ∨ ∃ w ( x × w = v ) ) ) ∧ x ≠ 0 ∧ x ≠ 1 {\\displaystyle \\forall u\\forall v(\\exists w(x\\times w=u\\times v)\\rightarrow (\\exists w(x\\times w=u)\\lor \\exists w(x\\times w=v)))\\land x\\neq 0\\land x\\neq 1} defines the subset of prime numbers, while the formula ∃ y ( 2 × y = x ) {\\displaystyle \\exists y(2\\times y=x)} defines the subset of even numbers. In a similar way, formulas with n free variables define subsets of M n {\\displaystyle {\\mathcal {M}}^{n}} . For example, in a field, the formula y = x × x {\\displaystyle y=x\\times x} defines the curve of all ( x , y ) {\\displaystyle (x,y)} such that y = x 2 {\\displaystyle y=x^{2}} . Both of the definitions mentioned here are parameter-free, that is, the defining formulas don't mention any fixed domain elements. However, one can also consider definitions with parameters from the model. For instance, in R {\\displaystyle \\mathbb {R} } , the formula y = x × x + π {\\displaystyle y=x\\times x+\\pi } uses the parameter π {\\displaystyle \\pi } from R {\\displaystyle \\mathbb {R} } to define a curve. === Eliminating quantifiers === In general, definable sets without quantifiers are easy to describe, while definable sets involving possibly nested quantifiers can be much more complicated. This makes quantifier elimination a crucial tool for analysing definable sets: A theory T has quantifier elimination if every first-order formula φ(x1, ..., xn) over its signature is equivalent modulo T to a first-order formula ψ(x1, ..., xn) without quantifiers, i.e. ∀ x 1 … ∀ x n ( ϕ ( x 1 , … , x n ) ↔ ψ ( x 1 , … , x n ) ) {\\displaystyle \\forall x_{1}\\dots \\forall x_{n}(\\phi (x_{1},\\dots ,x_{n})\\leftrightarrow \\psi (x_{1},\\dots ,x_{n}))} holds in all models of T. If the theory of a structure has quantifier elimination, every set definable in a structure is definable by a quantifier-free formula over the same parameters as the original definition. For example, the theory of algebraically closed fields in the signature σring = (×,+,−,0,1) has quantifier elimination. This means that in an algebraically closed field, every formula is equivalent to a Boolean combination of equations between polynomials. If a theory does not have quantifier elimination, one can add additional symbols to its signature so that it does. Axiomatisability and quantifier elimination results for specific theories, especially in algebra, were among the early landmark results of model theory. But often instead of quantifier elimination a weaker property suffices: A theory T is called model-complete if every substructure of a model of T which is itself a model of T is an elementary substructure. There is a useful criterion for testing whether a substructure is an elementary substructure, called the Tarski–Vaught test. It follows from this criterion that a theory T is model-complete if and only if every first-order formula φ(x1, ..., xn) over its signature is equivalent modulo T to an existential first-order formula, i.e. a formula of the following form: ∃ v 1 … ∃ v m ψ ( x 1 , … , x n , v 1 , … , v m ) {\\displaystyle \\exists v_{1}\\dots \\exists v_{m}\\psi (x_{1},\\dots ,x_{n},v_{1},\\dots ,v_{m})} , where ψ is quantifier free. A theory that is not model-complete may have a model completion, which is a related model-complete theory that is not, in general, an extension of the original theory. A more general notion is that of a model companion. === Minimality === In every structure, every finite subset { a 1 , … , a n } {\\displaystyle \\{a_{1},\\dots ,a_{n}\\}} is definable with parameters: Simply use the formula x = a 1 ∨ ⋯ ∨ x = a n {\\displaystyle x=a_{1}\\vee \\dots \\vee x=a_{n}} . Since we can negate this formula, every cofinite subset (which includes all but finitely many elements of the domain) is also always definable. This leads to the concept of a minimal structure. A structure M {\\displaystyle {\\mathcal {M}}} is called minimal if every subset A ⊆ M {\\displaystyle A\\subseteq {\\mathcal {M}}} definable with parameters from M {\\displaystyle {\\mathcal {M}}} is either finite or cofinite. The corresponding concept at the level of theories is called strong minimality: A theory T is called strongly minimal if every model of T is minimal. A structure is called strongly minimal if the theory of that structure is strongly minimal. Equivalently, a structure is strongly minimal if every elementary extension is minimal. Since the theory of algebraically closed fields has quantifier elimination, every definable subset of an algebraically closed field is definable by a quantifier-free formula in one variable. Quantifier-free formulas in one variable express Boolean combinations of polynomial equations in one variable, and since a nontrivial polynomial equation in one variable has only a finite number of solutions, the theory of algebraically closed fields is strongly minimal. On the other hand, the field R {\\displaystyle \\mathbb {R} } of real numbers is not minimal: Consider, for instance, the definable set φ ( x ) = ∃ y ( y × y = x ) {\\displaystyle \\varphi (x)\\;=\\;\\exists y(y\\times y=x)} . This defines the subset of non-negative real numbers, which is neither finite nor cofinite. One can in fact use φ {\\displaystyle \\varphi } to define arbitrary intervals on the real number line. It turns out that these suffice to represent every definable subset of R {\\displaystyle \\mathbb {R} } . This generalisation of minimality has been very useful in the model theory of ordered structures. A densely totally ordered structure M {\\displaystyle {\\mathcal {M}}} in a signature including a symbol for the order relation is called o-minimal if every subset A ⊆ M {\\displaystyle A\\subseteq {\\mathcal {M}}} definable with parameters from M {\\displaystyle {\\mathcal {M}}} is a finite union of points and intervals. === Definable and interpretable structures === Particularly important are those definable sets that are also substructures, i. e. contain all constants and are closed under function application. For instance, one can study the definable subgroups of a certain group. However, there is no need to limit oneself to substructures in the same signature. Since formulas with n free variables define subsets of M n {\\displaystyle {\\mathcal {M}}^{n}} , n-ary relations can also be definable. Functions are definable if the function graph is a definable relation, and constants a ∈ M {\\displaystyle a\\in {\\mathcal {M}}} are definable if there is a formula φ ( x ) {\\displaystyle \\varphi (x)} such that a is the only element of M {\\displaystyle {\\mathcal {M}}} such that φ ( a ) {\\displaystyle \\varphi (a)} is true. In this way, one can study definable groups and fields in general structures, for instance, which has been important in geometric stability theory. One can even go one step further, and move beyond immediate substructures. Given a mathematical structure, there are very often associated structures which can be constructed as a quotient of part of the original structure via an equivalence relation. An important example is a quotient group of a group. One might say that to understand the full structure one must understand these quotients. When the equivalence relation is definable, we can give the previous sentence a precise meaning. We say that these structures are interpretable. A key fact is that one can translate sentences from the language of the interpreted structures to the language of the original structure. Thus one can show that if a structure M {\\displaystyle {\\mathcal {M}}} interprets another whose theory is undecidable, then M {\\displaystyle {\\mathcal {M}}} itself is undecidable. == Types == === Basic notions === For a sequence of elements a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} of a structure M {\\displaystyle {\\mathcal {M}}} and a subset A of M {\\displaystyle {\\mathcal {M}}} , one can consider the set of all first-order formulas φ ( x 1 , … , x n ) {\\displaystyle \\varphi (x_{1},\\dots ,x_{n})} with parameters in A that are satisfied by a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} . This is called the complete (n-)type realised by a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} over A. If there is an automorphism of M {\\displaystyle {\\mathcal {M}}} that is constant on A and sends a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} to b 1 , … , b n {\\displaystyle b_{1},\\dots ,b_{n}} respectively, then a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} and b 1 , … , b n {\\displaystyle b_{1},\\dots ,b_{n}} realise the same complete type over A. The real number line R {\\displaystyle \\mathbb {R} } , viewed as a structure with only the order relation {<}, will serve as a running example in this section. Every element a ∈ R {\\displaystyle a\\in \\mathbb {R} } satisfies the same 1-type over the empty set. This is clear since any two real numbers a and b are connected by the order automorphism that shifts all numbers by b-a. The complete 2-type over the empty set realised by a pair of numbers a 1 , a 2 {\\displaystyle a_{1},a_{2}} depends on their order: either a 1 < a 2 {\\displaystyle a_{1}"
+  },
+  "chunks": [
+    {
+      "id": "modeltheory_d37f9a58_c0000",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 847,
+      "content": "In mathematical logic, model theory is the study of the relationship between formal theories (a collection of sentences in a formal language expressing statements about a mathematical structure), and their models (those structures in which the statements of the theory hold). The aspects investigated include the number and size of models of a theory, the relationship of different models to each other, and their interaction with the formal language itself. In particular, model theorists also investigate the sets that can be defined in a model of a theory, and the relationship of such definable sets to each other. As a separate discipline, model theory goes back to Alfred Tarski, who first used the term \"Theory of Models\" in publication in 1954. Since the 1970s, the subject has been shaped decisively by Saharon Shelah's stability theory.",
+      "char_count": 846,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0001",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 847,
+      "end_char": 1564,
+      "content": "Compared to other areas of mathematical logic such as proof theory, model theory is often less concerned with formal rigour and closer in spirit to classical mathematics. This has prompted the comment that \"if proof theory is about the sacred, then model theory is about the profane\". The applications of model theory to algebraic and Diophantine geometry reflect this proximity to classical mathematics, as they often involve an integration of algebraic and model-theoretic results and techniques. Consequently, proof theory is syntactic in nature, in contrast to model theory, which is semantic in nature. The most prominent scholarly organization in the field of model theory is the Association for Symbolic Logic.",
+      "char_count": 717,
+      "token_estimate": 179,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0002",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 1579,
+      "end_char": 2559,
+      "content": "== Overview == This page focuses on finitary first order model theory of infinite structures. The relative emphasis placed on the class of models of a theory as opposed to the class of definable sets within a model fluctuated in the history of the subject, and the two directions are summarised by the pithy characterisations from 1973 and 1997 respectively: model theory = universal algebra + logic where universal algebra stands for mathematical structures and logic for logical theories; and model theory = algebraic geometry − fields. where logical formulas are to definable sets what equations are to varieties over a field. Nonetheless, the interplay of classes of models and the sets definable in them has been crucial to the development of model theory throughout its history. For instance, while stability was originally introduced to classify theories by their numbers of models in a given cardinality, stability theory proved crucial to understanding the geometry of definable sets.",
+      "char_count": 993,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0003",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = First-order logic ==",
+      "heading_path": "== = First-order logic ==",
+      "start_char": 2638,
+      "end_char": 3554,
+      "content": "== = First-order logic === A first-order formula is built out of atomic formulas such as R ( f ( x , y ) , z ) {\\displaystyle R(f(x,y),z)} or y = x + 1 {\\displaystyle y=x+1} by means of the Boolean connectives ¬ , ∧ , ∨ , → {\\displaystyle \\neg ,\\land ,\\lor ,\\rightarrow } and prefixing of quantifiers ∀ v {\\displaystyle \\forall v} or ∃ v {\\displaystyle \\exists v} . A sentence is a formula in which each occurrence of a variable is in the scope of a corresponding quantifier. Examples for formulas are φ {\\displaystyle \\varphi } (or φ ( x ) {\\displaystyle \\varphi (x)} to indicate x {\\displaystyle x} is the unbound variable in φ {\\displaystyle \\varphi } ) and ψ {\\displaystyle \\psi } (or ψ ( x ) {\\displaystyle \\psi (x)} ), defined as follows: φ = ∀ u ∀ v ( ∃ w ( x × w = u × v ) → ( ∃ w ( x × w = u ) ∨ ∃ w ( x × w = v ) ) ) ∧ x ≠ 0 ∧ x ≠ 1 , ψ = ∀ u ∀ v ( ( u × v = x ) → ( u = x ) ∨ ( v = x ) ) ∧ x ≠ 0 ∧ x ≠ 1.",
+      "char_count": 915,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0004",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = First-order logic ==",
+      "heading_path": "== = First-order logic ==",
+      "start_char": 3554,
+      "end_char": 4403,
+      "content": "{\\displaystyle {\\begin{array}{lcl}\\varphi &=&\\forall u\\forall v(\\exists w(x\\times w=u\\times v)\\rightarrow (\\exists w(x\\times w=u)\\lor \\exists w(x\\times w=v)))\\land x\\neq 0\\land x\\neq 1,\\\\\\psi &=&\\forall u\\forall v((u\\times v=x)\\rightarrow (u=x)\\lor (v=x))\\land x\\neq 0\\land x\\neq 1.\\end{array}}} (Note that the equality symbol has a double meaning here.) It is intuitively clear how to translate such formulas into mathematical meaning. In the semiring of natural numbers N {\\displaystyle {\\mathcal {N}}} , viewed as a structure with binary functions for addition and multiplication and constants for 0 and 1 of the natural numbers, for example, an element n {\\displaystyle n} satisfies the formula φ {\\displaystyle \\varphi } if and only if n {\\displaystyle n} is a prime number. The formula ψ {\\displaystyle \\psi } similarly defines irreducibility.",
+      "char_count": 849,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0005",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = First-order logic ==",
+      "heading_path": "== = First-order logic ==",
+      "start_char": 4404,
+      "end_char": 5262,
+      "content": "Tarski gave a rigorous definition, sometimes called \"Tarski's definition of truth\", for the satisfaction relation ⊨ {\\displaystyle \\models } , so that one easily proves: N ⊨ φ ( n ) ⟺ n {\\displaystyle {\\mathcal {N}}\\models \\varphi (n)\\iff n} is a prime number. N ⊨ ψ ( n ) ⟺ n {\\displaystyle {\\mathcal {N}}\\models \\psi (n)\\iff n} is irreducible. A set T {\\displaystyle T} of sentences is called a (first-order) theory, which takes the sentences in the set as its axioms. A theory is satisfiable if it has a model M ⊨ T {\\displaystyle {\\mathcal {M}}\\models T} , i.e. a structure (of the appropriate signature) which satisfies all the sentences in the set T {\\displaystyle T} . A complete theory is a theory that contains every sentence or its negation. The complete theory of all sentences satisfied by a structure is also called the theory of that structure.",
+      "char_count": 858,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0006",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = First-order logic ==",
+      "heading_path": "== = First-order logic ==",
+      "start_char": 5263,
+      "end_char": 5555,
+      "content": "It's a consequence of Gödel's completeness theorem (not to be confused with his incompleteness theorems) that a theory has a model if and only if it is consistent, i.e. no contradiction is proved by the theory. Therefore, model theorists often use \"consistent\" as a synonym for \"satisfiable\".",
+      "char_count": 292,
+      "token_estimate": 73,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0007",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Basic model-theoretic concepts ==",
+      "heading_path": "== = Basic model-theoretic concepts ==",
+      "start_char": 5569,
+      "end_char": 6152,
+      "content": "== = Basic model-theoretic concepts === A signature or language is a set of non-logical symbols such that each symbol is either a constant symbol, or a function or relation symbol with a specified arity. Note that in some literature, constant symbols are considered as function symbols with zero arity, and hence are omitted. A structure is a set M {\\displaystyle M} together with interpretations of each of the symbols of the signature as relations and functions on M {\\displaystyle M} (not to be confused with the formal notion of an \"interpretation\" of one structure in another).",
+      "char_count": 582,
+      "token_estimate": 145,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0008",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Basic model-theoretic concepts ==",
+      "heading_path": "== = Basic model-theoretic concepts ==",
+      "start_char": 6152,
+      "end_char": 6997,
+      "content": "Example: A common signature for ordered rings is σ o r = ( 0 , 1 , + , × , − , < ) {\\displaystyle \\sigma _{or}=(0,1,+,\\times ,-,<)} , where 0 {\\displaystyle 0} and 1 {\\displaystyle 1} are 0-ary function symbols (also known as constant symbols), + {\\displaystyle +} and × {\\displaystyle \\times } are binary (= 2-ary) function symbols, − {\\displaystyle -} is a unary (= 1-ary) function symbol, and < {\\displaystyle <} is a binary relation symbol. Then, when these symbols are interpreted to correspond with their usual meaning on Q {\\displaystyle \\mathbb {Q} } (so that e.g. + {\\displaystyle +} is a function from Q 2 {\\displaystyle \\mathbb {Q} ^{2}} to Q {\\displaystyle \\mathbb {Q} } and < {\\displaystyle <} is a subset of Q 2 {\\displaystyle \\mathbb {Q} ^{2}} ), one obtains a structure ( Q , σ o r ) {\\displaystyle (\\mathbb {Q} ,\\sigma _{or})} .",
+      "char_count": 845,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0009",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Basic model-theoretic concepts ==",
+      "heading_path": "== = Basic model-theoretic concepts ==",
+      "start_char": 6998,
+      "end_char": 7927,
+      "content": "A structure N {\\displaystyle {\\mathcal {N}}} is said to model a set of first-order sentences T {\\displaystyle T} in the given language if each sentence in T {\\displaystyle T} is true in N {\\displaystyle {\\mathcal {N}}} with respect to the interpretation of the signature previously specified for N {\\displaystyle {\\mathcal {N}}} . (Again, not to be confused with the formal notion of an \"interpretation\" of one structure in another) A model of T {\\displaystyle T} is a structure that models T {\\displaystyle T} . A substructure A {\\displaystyle {\\mathcal {A}}} of a σ-structure B {\\displaystyle {\\mathcal {B}}} is a subset of its domain, closed under all functions in its signature σ, which is regarded as a σ-structure by restricting all functions and relations in σ to the subset. This generalises the analogous concepts from algebra; for instance, a subgroup is a substructure in the signature with multiplication and inverse.",
+      "char_count": 929,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0010",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Basic model-theoretic concepts ==",
+      "heading_path": "== = Basic model-theoretic concepts ==",
+      "start_char": 7928,
+      "end_char": 8682,
+      "content": "A substructure is said to be elementary if for any first-order formula φ {\\displaystyle \\varphi } and any elements a1, ..., an of A {\\displaystyle {\\mathcal {A}}} , A ⊨ φ ( a 1 , . . . , a n ) {\\displaystyle {\\mathcal {A}}\\models \\varphi (a_{1},...,a_{n})} if and only if B ⊨ φ ( a 1 , . . . , a n ) {\\displaystyle {\\mathcal {B}}\\models \\varphi (a_{1},...,a_{n})} . In particular, if φ {\\displaystyle \\varphi } is a sentence and A {\\displaystyle {\\mathcal {A}}} an elementary substructure of B {\\displaystyle {\\mathcal {B}}} , then A ⊨ φ {\\displaystyle {\\mathcal {A}}\\models \\varphi } if and only if B ⊨ φ {\\displaystyle {\\mathcal {B}}\\models \\varphi } . Thus, an elementary substructure is a model of a theory exactly when the superstructure is a model.",
+      "char_count": 754,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0011",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Basic model-theoretic concepts ==",
+      "heading_path": "== = Basic model-theoretic concepts ==",
+      "start_char": 8683,
+      "end_char": 9642,
+      "content": "Example: While the field of algebraic numbers Q ¯ {\\displaystyle {\\overline {\\mathbb {Q} }}} is an elementary substructure of the field of complex numbers C {\\displaystyle \\mathbb {C} } , the rational field Q {\\displaystyle \\mathbb {Q} } is not, as we can express \"There is a square root of 2\" as a first-order sentence satisfied by C {\\displaystyle \\mathbb {C} } but not by Q {\\displaystyle \\mathbb {Q} } . An embedding of a σ-structure A {\\displaystyle {\\mathcal {A}}} into another σ-structure B {\\displaystyle {\\mathcal {B}}} is a map f: A → B between the domains which can be written as an isomorphism of A {\\displaystyle {\\mathcal {A}}} with a substructure of B {\\displaystyle {\\mathcal {B}}} . If it can be written as an isomorphism with an elementary substructure, it is called an elementary embedding. Every embedding is an injective homomorphism, but the converse holds only if the signature contains no relation symbols, such as in groups or fields.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0012",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Basic model-theoretic concepts ==",
+      "heading_path": "== = Basic model-theoretic concepts ==",
+      "start_char": 9643,
+      "end_char": 10515,
+      "content": "A field or a vector space can be regarded as a (commutative) group by simply ignoring some of its structure. The corresponding notion in model theory is that of a reduct of a structure to a subset of the original signature. The opposite relation is called an expansion - e.g. the (additive) group of the rational numbers, regarded as a structure in the signature {+,0} can be expanded to a field with the signature {×,+,1,0} or to an ordered group with the signature {+,0,<}. Similarly, if σ' is a signature that extends another signature σ, then a complete σ'-theory can be restricted to σ by intersecting the set of its sentences with the set of σ-formulas. Conversely, a complete σ-theory can be regarded as a σ'-theory, and one can extend it (in more than one way) to a complete σ'-theory. The terms reduct and expansion are sometimes applied to this relation as well.",
+      "char_count": 872,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0013",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Compactness and the Löwenheim–Skolem theorem ==",
+      "heading_path": "== = Compactness and the Löwenheim–Skolem theorem ==",
+      "start_char": 10530,
+      "end_char": 11467,
+      "content": "== = Compactness and the Löwenheim–Skolem theorem === The compactness theorem states that a set of sentences S is satisfiable if every finite subset of S is satisfiable. The analogous statement with consistent instead of satisfiable is trivial, since every proof can have only a finite number of antecedents used in the proof. The completeness theorem allows us to transfer this to satisfiability. However, there are also several direct (semantic) proofs of the compactness theorem. As a corollary (i.e., its contrapositive), the compactness theorem says that every unsatisfiable first-order theory has a finite unsatisfiable subset. This theorem is of central importance in model theory, where the words \"by compactness\" are commonplace. Another cornerstone of first-order model theory is the Löwenheim–Skolem theorem. According to the theorem, every infinite structure in a countable signature has a countable elementary substructure.",
+      "char_count": 936,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0014",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Compactness and the Löwenheim–Skolem theorem ==",
+      "heading_path": "== = Compactness and the Löwenheim–Skolem theorem ==",
+      "start_char": 11467,
+      "end_char": 12083,
+      "content": "Conversely, for any infinite cardinal κ every infinite structure in a countable signature that is of cardinality less than κ can be elementarily embedded in another structure of cardinality κ (There is a straightforward generalisation to uncountable signatures). In particular, the Löwenheim-Skolem theorem implies that any theory in a countable signature with infinite models has a countable model as well as arbitrarily large models. In a certain sense made precise by Lindström's theorem, first-order logic is the most expressive logic for which both the Löwenheim–Skolem theorem and the compactness theorem hold.",
+      "char_count": 616,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0015",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Definable sets ==",
+      "heading_path": "== = Definable sets ==",
+      "start_char": 12073,
+      "end_char": 13034,
+      "content": "== = Definable sets === In model theory, definable sets are important objects of study. For instance, in N {\\displaystyle \\mathbb {N} } the formula ∀ u ∀ v ( ∃ w ( x × w = u × v ) → ( ∃ w ( x × w = u ) ∨ ∃ w ( x × w = v ) ) ) ∧ x ≠ 0 ∧ x ≠ 1 {\\displaystyle \\forall u\\forall v(\\exists w(x\\times w=u\\times v)\\rightarrow (\\exists w(x\\times w=u)\\lor \\exists w(x\\times w=v)))\\land x\\neq 0\\land x\\neq 1} defines the subset of prime numbers, while the formula ∃ y ( 2 × y = x ) {\\displaystyle \\exists y(2\\times y=x)} defines the subset of even numbers. In a similar way, formulas with n free variables define subsets of M n {\\displaystyle {\\mathcal {M}}^{n}} . For example, in a field, the formula y = x × x {\\displaystyle y=x\\times x} defines the curve of all ( x , y ) {\\displaystyle (x,y)} such that y = x 2 {\\displaystyle y=x^{2}} . Both of the definitions mentioned here are parameter-free, that is, the defining formulas don't mention any fixed domain elements.",
+      "char_count": 960,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0016",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Definable sets ==",
+      "heading_path": "== = Definable sets ==",
+      "start_char": 13034,
+      "end_char": 13314,
+      "content": "However, one can also consider definitions with parameters from the model. For instance, in R {\\displaystyle \\mathbb {R} } , the formula y = x × x + π {\\displaystyle y=x\\times x+\\pi } uses the parameter π {\\displaystyle \\pi } from R {\\displaystyle \\mathbb {R} } to define a curve.",
+      "char_count": 280,
+      "token_estimate": 70,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0017",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Eliminating quantifiers ==",
+      "heading_path": "== = Eliminating quantifiers ==",
+      "start_char": 13324,
+      "end_char": 14174,
+      "content": "== = Eliminating quantifiers === In general, definable sets without quantifiers are easy to describe, while definable sets involving possibly nested quantifiers can be much more complicated. This makes quantifier elimination a crucial tool for analysing definable sets: A theory T has quantifier elimination if every first-order formula φ(x1, ..., xn) over its signature is equivalent modulo T to a first-order formula ψ(x1, ..., xn) without quantifiers, i.e. ∀ x 1 … ∀ x n ( ϕ ( x 1 , … , x n ) ↔ ψ ( x 1 , … , x n ) ) {\\displaystyle \\forall x_{1}\\dots \\forall x_{n}(\\phi (x_{1},\\dots ,x_{n})\\leftrightarrow \\psi (x_{1},\\dots ,x_{n}))} holds in all models of T. If the theory of a structure has quantifier elimination, every set definable in a structure is definable by a quantifier-free formula over the same parameters as the original definition.",
+      "char_count": 849,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0018",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Eliminating quantifiers ==",
+      "heading_path": "== = Eliminating quantifiers ==",
+      "start_char": 14174,
+      "end_char": 15029,
+      "content": "For example, the theory of algebraically closed fields in the signature σring = (×,+,−,0,1) has quantifier elimination. This means that in an algebraically closed field, every formula is equivalent to a Boolean combination of equations between polynomials. If a theory does not have quantifier elimination, one can add additional symbols to its signature so that it does. Axiomatisability and quantifier elimination results for specific theories, especially in algebra, were among the early landmark results of model theory. But often instead of quantifier elimination a weaker property suffices: A theory T is called model-complete if every substructure of a model of T which is itself a model of T is an elementary substructure. There is a useful criterion for testing whether a substructure is an elementary substructure, called the Tarski–Vaught test.",
+      "char_count": 855,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0019",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Eliminating quantifiers ==",
+      "heading_path": "== = Eliminating quantifiers ==",
+      "start_char": 15030,
+      "end_char": 15662,
+      "content": "It follows from this criterion that a theory T is model-complete if and only if every first-order formula φ(x1, ..., xn) over its signature is equivalent modulo T to an existential first-order formula, i.e. a formula of the following form: ∃ v 1 … ∃ v m ψ ( x 1 , … , x n , v 1 , … , v m ) {\\displaystyle \\exists v_{1}\\dots \\exists v_{m}\\psi (x_{1},\\dots ,x_{n},v_{1},\\dots ,v_{m})} , where ψ is quantifier free. A theory that is not model-complete may have a model completion, which is a related model-complete theory that is not, in general, an extension of the original theory. A more general notion is that of a model companion.",
+      "char_count": 632,
+      "token_estimate": 158,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0020",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Minimality ==",
+      "heading_path": "== = Minimality ==",
+      "start_char": 15650,
+      "end_char": 16548,
+      "content": "== = Minimality === In every structure, every finite subset { a 1 , … , a n } {\\displaystyle \\{a_{1},\\dots ,a_{n}\\}} is definable with parameters: Simply use the formula x = a 1 ∨ ⋯ ∨ x = a n {\\displaystyle x=a_{1}\\vee \\dots \\vee x=a_{n}} . Since we can negate this formula, every cofinite subset (which includes all but finitely many elements of the domain) is also always definable. This leads to the concept of a minimal structure. A structure M {\\displaystyle {\\mathcal {M}}} is called minimal if every subset A ⊆ M {\\displaystyle A\\subseteq {\\mathcal {M}}} definable with parameters from M {\\displaystyle {\\mathcal {M}}} is either finite or cofinite. The corresponding concept at the level of theories is called strong minimality: A theory T is called strongly minimal if every model of T is minimal. A structure is called strongly minimal if the theory of that structure is strongly minimal.",
+      "char_count": 897,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0021",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Minimality ==",
+      "heading_path": "== = Minimality ==",
+      "start_char": 16548,
+      "end_char": 17511,
+      "content": "Equivalently, a structure is strongly minimal if every elementary extension is minimal. Since the theory of algebraically closed fields has quantifier elimination, every definable subset of an algebraically closed field is definable by a quantifier-free formula in one variable. Quantifier-free formulas in one variable express Boolean combinations of polynomial equations in one variable, and since a nontrivial polynomial equation in one variable has only a finite number of solutions, the theory of algebraically closed fields is strongly minimal. On the other hand, the field R {\\displaystyle \\mathbb {R} } of real numbers is not minimal: Consider, for instance, the definable set φ ( x ) = ∃ y ( y × y = x ) {\\displaystyle \\varphi (x)\\;=\\;\\exists y(y\\times y=x)} . This defines the subset of non-negative real numbers, which is neither finite nor cofinite. One can in fact use φ {\\displaystyle \\varphi } to define arbitrary intervals on the real number line.",
+      "char_count": 963,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0022",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Minimality ==",
+      "heading_path": "== = Minimality ==",
+      "start_char": 17512,
+      "end_char": 18030,
+      "content": "It turns out that these suffice to represent every definable subset of R {\\displaystyle \\mathbb {R} } . This generalisation of minimality has been very useful in the model theory of ordered structures. A densely totally ordered structure M {\\displaystyle {\\mathcal {M}}} in a signature including a symbol for the order relation is called o-minimal if every subset A ⊆ M {\\displaystyle A\\subseteq {\\mathcal {M}}} definable with parameters from M {\\displaystyle {\\mathcal {M}}} is a finite union of points and intervals.",
+      "char_count": 518,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0023",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Definable and interpretable structures ==",
+      "heading_path": "== = Definable and interpretable structures ==",
+      "start_char": 18059,
+      "end_char": 18867,
+      "content": "== = Definable and interpretable structures === Particularly important are those definable sets that are also substructures, i. e. contain all constants and are closed under function application. For instance, one can study the definable subgroups of a certain group. However, there is no need to limit oneself to substructures in the same signature. Since formulas with n free variables define subsets of M n {\\displaystyle {\\mathcal {M}}^{n}} , n-ary relations can also be definable. Functions are definable if the function graph is a definable relation, and constants a ∈ M {\\displaystyle a\\in {\\mathcal {M}}} are definable if there is a formula φ ( x ) {\\displaystyle \\varphi (x)} such that a is the only element of M {\\displaystyle {\\mathcal {M}}} such that φ ( a ) {\\displaystyle \\varphi (a)} is true.",
+      "char_count": 807,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0024",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Definable and interpretable structures ==",
+      "heading_path": "== = Definable and interpretable structures ==",
+      "start_char": 18867,
+      "end_char": 19691,
+      "content": "In this way, one can study definable groups and fields in general structures, for instance, which has been important in geometric stability theory. One can even go one step further, and move beyond immediate substructures. Given a mathematical structure, there are very often associated structures which can be constructed as a quotient of part of the original structure via an equivalence relation. An important example is a quotient group of a group. One might say that to understand the full structure one must understand these quotients. When the equivalence relation is definable, we can give the previous sentence a precise meaning. We say that these structures are interpretable. A key fact is that one can translate sentences from the language of the interpreted structures to the language of the original structure.",
+      "char_count": 824,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0025",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Basic notions ==",
+      "heading_path": "== = Basic notions ==",
+      "start_char": 19859,
+      "end_char": 20734,
+      "content": "== = Basic notions === For a sequence of elements a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} of a structure M {\\displaystyle {\\mathcal {M}}} and a subset A of M {\\displaystyle {\\mathcal {M}}} , one can consider the set of all first-order formulas φ ( x 1 , … , x n ) {\\displaystyle \\varphi (x_{1},\\dots ,x_{n})} with parameters in A that are satisfied by a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} . This is called the complete (n-)type realised by a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} over A. If there is an automorphism of M {\\displaystyle {\\mathcal {M}}} that is constant on A and sends a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} to b 1 , … , b n {\\displaystyle b_{1},\\dots ,b_{n}} respectively, then a 1 , … , a n {\\displaystyle a_{1},\\dots ,a_{n}} and b 1 , … , b n {\\displaystyle b_{1},\\dots ,b_{n}} realise the same complete type over A.",
+      "char_count": 874,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "modeltheory_d37f9a58_c0026",
+      "article_id": "modeltheory_d37f9a58",
+      "section": "== = Basic notions ==",
+      "heading_path": "== = Basic notions ==",
+      "start_char": 20734,
+      "end_char": 21282,
+      "content": "The real number line R {\\displaystyle \\mathbb {R} } , viewed as a structure with only the order relation {<}, will serve as a running example in this section. Every element a ∈ R {\\displaystyle a\\in \\mathbb {R} } satisfies the same 1-type over the empty set. This is clear since any two real numbers a and b are connected by the order automorphism that shifts all numbers by b-a. The complete 2-type over the empty set realised by a pair of numbers a 1 , a 2 {\\displaystyle a_{1},a_{2}} depends on their order: either a 1 < a 2 {\\displaystyle a_{1}",
+      "char_count": 548,
+      "token_estimate": 137,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What was the 1973 characterization of model theory?",
+        "answer": "The 1973 characterization of model theory is \"universal algebra + logic,\" where universal algebra represents mathematical structures and logic stands for logical theories.",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0002"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Why is the field of real numbers given as an example of a structure that is not minimal?",
+        "answer": "The field of real numbers is not minimal because it is possible to define a subset, such as the non-negative real numbers, which is neither finite nor cofinite. The text provides the formula φ(x) = ∃y(y×y=x) as an example that defines this subset.",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0021"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What formula is provided as an example for defining the subset of even numbers?",
+        "answer": "The formula that defines the subset of even numbers is ∃ y ( 2 × y = x ).",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0015"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the different ways model theory is defined or characterized?",
+        "answer": "Model theory is primarily defined as the study of the relationship between formal theories and their models. It has also been characterized in two other ways: as a combination of universal algebra and logic, and as being analogous to \"algebraic geometry minus fields,\" where logical formulas relate to definable sets in the same way equations relate to varieties over a field.",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0000",
+          "modeltheory_d37f9a58_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Using the provided examples, explain how a first-order formula can define a mathematical property within a specific structure.",
+        "answer": "A first-order formula, such as φ or ψ, is built from atomic formulas, connectives, and quantifiers. When interpreted in a specific structure, like the semiring of natural numbers (N), these formulas can define specific mathematical properties. For instance, an element `n` in the natural numbers satisfies formula φ if and only if `n` is a prime number. Similarly, formula ψ defines the property of irreducibility. This relationship is formally expressed using Tarski's satisfaction relation (⊨), where `N ⊨ φ(n)` signifies that `n` has the property defined by φ within the structure N.",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0003",
+          "modeltheory_d37f9a58_c0004",
+          "modeltheory_d37f9a58_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is a structure in model theory, and provide a specific example of one?",
+        "answer": "A structure is a set, M, combined with interpretations of each symbol from a given signature as functions and relations on M. An example is the structure for ordered rings, which uses the signature σ_or = (0, 1, +, ×, −, <) and interprets these symbols with their standard meanings on the set of rational numbers, Q.",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0007",
+          "modeltheory_d37f9a58_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How is model theory distinguished from proof theory in terms of its fundamental nature and focus?",
+        "answer": "Model theory is semantic in nature, focusing on the relationship between formal theories and their models, which are the structures where the theory's statements are true. In contrast, proof theory is syntactic in nature and is generally more concerned with formal rigour. This distinction has led to the characterization that \"if proof theory is about the sacred, then model theory is about the profane.\"",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0000",
+          "modeltheory_d37f9a58_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What mathematical concepts do the first-order formulas φ and ψ define within the semiring of natural numbers, and what formal notation is used to express this relationship?",
+        "answer": "Within the semiring of natural numbers (N), the first-order formula φ defines a prime number, while the formula ψ defines irreducibility. This relationship is formally expressed using Tarski's satisfaction relation (⊨), written as: N ⊨ φ(n) if and only if n is a prime number, and N ⊨ ψ(n) if and only if n is irreducible.",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0003",
+          "modeltheory_d37f9a58_c0004",
+          "modeltheory_d37f9a58_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What distinguishes an elementary substructure from a general substructure, and what is the implication of this difference regarding whether it can be a model of a theory?",
+        "answer": "A general substructure is a subset of a structure's domain that is closed under all its functions. An elementary substructure has a more stringent requirement: any first-order formula with elements from the substructure is true in the substructure if and only if it is also true in the larger structure. The key implication of this distinction is that an elementary substructure is a model of a theory if and only if its superstructure is also a model, a property not guaranteed for a general substructure.",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0009",
+          "modeltheory_d37f9a58_c0010"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the shared significance of the compactness theorem and the Löwenheim–Skolem theorem in the context of first-order logic?",
+        "answer": "Both the compactness theorem and the Löwenheim–Skolem theorem are considered cornerstones of first-order model theory. Their combined validity is a defining characteristic of first-order logic, as Lindström's theorem states that it is the most expressive logic for which both theorems hold.",
+        "related_chunk_ids": [
+          "modeltheory_d37f9a58_c0013",
+          "modeltheory_d37f9a58_c0014"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:48.439Z",
+    "content_format": "markdown",
+    "total_chunks": 27,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

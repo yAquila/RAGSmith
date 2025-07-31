@@ -1,0 +1,501 @@
+{
+  "article": {
+    "id": "emathematicalconstan_4c628054",
+    "title": "E (mathematical constant)",
+    "url": "https://en.wikipedia.org/wiki/E_(mathematical_constant)",
+    "lang": "en",
+    "created_at": "2025-07-31T06:30:46.254056",
+    "content": "---\nid: emathematicalconstan_4c628054\nurl: https://en.wikipedia.org/wiki/E_(mathematical_constant)\ntitle: E (mathematical constant)\nlang: en\ncreated_at: '2025-07-31T06:25:30.207094'\nchecksum: b936982ab04f99017085380a17cb62c615070f858a7fa836e6438ff8bbe63390\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3823\n  char_count: 21775\n  num_chunks: 30\n  original_chunks: 37\n  filtered_out: 7\n  num_sections: 0\n---\nThe number e is a mathematical constant approximately equal to 2.71828 that is the base of the natural logarithm and exponential function. It is sometimes called Euler's number, after the Swiss mathematician Leonhard Euler, though this can invite confusion with Euler numbers, or with Euler's constant, a different constant typically denoted γ {\\displaystyle \\gamma } . Alternatively, e can be called Napier's constant after John Napier. The Swiss mathematician Jacob Bernoulli discovered the constant while studying compound interest. The number e is of great importance in mathematics, alongside 0, 1, π, and i. All five appear in one formulation of Euler's identity e i π + 1 = 0 {\\displaystyle e^{i\\pi }+1=0} and play important and recurring roles across mathematics. Like the constant π, e is irrational, meaning that it cannot be represented as a ratio of integers, and moreover it is transcendental, meaning that it is not a root of any non-zero polynomial with rational coefficients. To 30 decimal places, the value of e is: == Definitions == The number e is the limit lim n → ∞ ( 1 + 1 n ) n , {\\displaystyle \\lim _{n\\to \\infty }\\left(1+{\\frac {1}{n}}\\right)^{n},} an expression that arises in the computation of compound interest. It is the sum of the infinite series e = ∑ n = 0 ∞ 1 n ! = 1 + 1 1 + 1 1 ⋅ 2 + 1 1 ⋅ 2 ⋅ 3 + ⋯ . {\\displaystyle e=\\sum \\limits _{n=0}^{\\infty }{\\frac {1}{n!}}=1+{\\frac {1}{1}}+{\\frac {1}{1\\cdot 2}}+{\\frac {1}{1\\cdot 2\\cdot 3}}+\\cdots .} It is the unique positive number a such that the graph of the function y = ax has a slope of 1 at x = 0. One has e = exp ⁡ ( 1 ) , {\\displaystyle e=\\exp(1),} where exp {\\displaystyle \\exp } is the (natural) exponential function, the unique function that equals its own derivative and satisfies the equation exp ⁡ ( 0 ) = 1. {\\displaystyle \\exp(0)=1.} Since the exponential function is commonly denoted as x ↦ e x , {\\displaystyle x\\mapsto e^{x},} one has also e = e 1 . {\\displaystyle e=e^{1}.} The logarithm of base b can be defined as the inverse function of the function x ↦ b x . {\\displaystyle x\\mapsto b^{x}.} Since b = b 1 , {\\displaystyle b=b^{1},} one has log b ⁡ b = 1. {\\displaystyle \\log _{b}b=1.} The equation e = e 1 {\\displaystyle e=e^{1}} implies therefore that e is the base of the natural logarithm. The number e can also be characterized in terms of an integral: ∫ 1 e d x x = 1. {\\displaystyle \\int _{1}^{e}{\\frac {dx}{x}}=1.} For other characterizations, see § Representations. == History == The first references to the constant were published in 1618 in the table of an appendix of a work on logarithms by John Napier. However, this did not contain the constant itself, but simply a list of logarithms to the base e {\\displaystyle e} . It is assumed that the table was written by William Oughtred. In 1661, Christiaan Huygens studied how to compute logarithms by geometrical methods and calculated a quantity that, in retrospect, is the base-10 logarithm of e, but he did not recognize e itself as a quantity of interest. The constant itself was introduced by Jacob Bernoulli in 1683, for solving the problem of continuous compounding of interest. In his solution, the constant e occurs as the limit lim n → ∞ ( 1 + 1 n ) n , {\\displaystyle \\lim _{n\\to \\infty }\\left(1+{\\frac {1}{n}}\\right)^{n},} where n represents the number of intervals in a year on which the compound interest is evaluated (for example, n = 12 {\\displaystyle n=12} for monthly compounding). The first symbol used for this constant was the letter b by Gottfried Leibniz in letters to Christiaan Huygens in 1690 and 1691. Leonhard Euler started to use the letter e for the constant in 1727 or 1728, in an unpublished paper on explosive forces in cannons, and in a letter to Christian Goldbach on 25 November 1731. The first appearance of e in a printed publication was in Euler's Mechanica (1736). It is unknown why Euler chose the letter e. Although some researchers used the letter c in the subsequent years, the letter e was more common and eventually became standard. Euler proved that e is the sum of the infinite series e = ∑ n = 0 ∞ 1 n ! = 1 0 ! + 1 1 ! + 1 2 ! + 1 3 ! + 1 4 ! + ⋯ , {\\displaystyle e=\\sum _{n=0}^{\\infty }{\\frac {1}{n!}}={\\frac {1}{0!}}+{\\frac {1}{1!}}+{\\frac {1}{2!}}+{\\frac {1}{3!}}+{\\frac {1}{4!}}+\\cdots ,} where n! is the factorial of n. The equivalence of the two characterizations using the limit and the infinite series can be proved via the binomial theorem. == Applications == === Compound interest === Jacob Bernoulli discovered this constant in 1683, while studying a question about compound interest: An account starts with $1.00 and pays 100 percent interest per year. If the interest is credited once, at the end of the year, the value of the account at year-end will be $2.00. What happens if the interest is computed and credited more frequently during the year? If the interest is credited twice in the year, the interest rate for each 6 months will be 50%, so the initial $1 is multiplied by 1.5 twice, yielding $1.00 × 1.52 = $2.25 at the end of the year. Compounding quarterly yields $1.00 × 1.254 = $2.44140625, and compounding monthly yields $1.00 × (1 + 1/12)12 = $2.613035.... If there are n compounding intervals, the interest for each interval will be 100%/n and the value at the end of the year will be $1.00 × (1 + 1/n)n. Bernoulli noticed that this sequence approaches a limit (the force of interest) with larger n and, thus, smaller compounding intervals. Compounding weekly (n = 52) yields $2.692596..., while compounding daily (n = 365) yields $2.714567... (approximately two cents more). The limit as n grows large is the number that came to be known as e. That is, with continuous compounding, the account value will reach $2.718281828... More generally, an account that starts at $1 and offers an annual interest rate of R will, after t years, yield eRt dollars with continuous compounding. Here, R is the decimal equivalent of the rate of interest expressed as a percentage, so for 5% interest, R = 5/100 = 0.05. === Bernoulli trials === The number e itself also has applications in probability theory, in a way that is not obviously related to exponential growth. Suppose that a gambler plays a slot machine that pays out with a probability of one in n and plays it n times. As n increases, the probability that gambler will lose all n bets approaches 1/e, which is approximately 36.79%. For n = 20, this is already 1/2.789509... (approximately 35.85%). This is an example of a Bernoulli trial process. Each time the gambler plays the slots, there is a one in n chance of winning. Playing n times is modeled by the binomial distribution, which is closely related to the binomial theorem and Pascal's triangle. The probability of winning k times out of n trials is: Pr [ k w i n s o f n ] = ( n k ) ( 1 n ) k ( 1 − 1 n ) n − k . {\\displaystyle \\Pr[k~\\mathrm {wins~of} ~n]={\\binom {n}{k}}\\left({\\frac {1}{n}}\\right)^{k}\\left(1-{\\frac {1}{n}}\\right)^{n-k}.} In particular, the probability of winning zero times (k = 0) is Pr [ 0 w i n s o f n ] = ( 1 − 1 n ) n . {\\displaystyle \\Pr[0~\\mathrm {wins~of} ~n]=\\left(1-{\\frac {1}{n}}\\right)^{n}.} The limit of the above expression, as n tends to infinity, is precisely 1/e. === Exponential growth and decay === Exponential growth is a process that increases quantity over time at an ever-increasing rate. It occurs when the instantaneous rate of change (that is, the derivative) of a quantity with respect to time is proportional to the quantity itself. Described as a function, a quantity undergoing exponential growth is an exponential function of time, that is, the variable representing time is the exponent (in contrast to other types of growth, such as quadratic growth). If the constant of proportionality is negative, then the quantity decreases over time, and is said to be undergoing exponential decay instead. The law of exponential growth can be written in different but mathematically equivalent forms, by using a different base, for which the number e is a common and convenient choice: x ( t ) = x 0 ⋅ e k t = x 0 ⋅ e t / τ . {\\displaystyle x(t)=x_{0}\\cdot e^{kt}=x_{0}\\cdot e^{t/\\tau }.} Here, x 0 {\\displaystyle x_{0}} denotes the initial value of the quantity x, k is the growth constant, and τ {\\displaystyle \\tau } is the time it takes the quantity to grow by a factor of e. === Standard normal distribution === The normal distribution with zero mean and unit standard deviation is known as the standard normal distribution, given by the probability density function ϕ ( x ) = 1 2 π e − 1 2 x 2 . {\\displaystyle \\phi (x)={\\frac {1}{\\sqrt {2\\pi }}}e^{-{\\frac {1}{2}}x^{2}}.} The constraint of unit standard deviation (and thus also unit variance) results in the ⁠1/2⁠ in the exponent, and the constraint of unit total area under the curve ϕ ( x ) {\\displaystyle \\phi (x)} results in the factor 1 / 2 π {\\displaystyle \\textstyle 1/{\\sqrt {2\\pi }}} . This function is symmetric around x = 0, where it attains its maximum value 1 / 2 π {\\displaystyle \\textstyle 1/{\\sqrt {2\\pi }}} , and has inflection points at x = ±1. === Derangements === Another application of e, also discovered in part by Jacob Bernoulli along with Pierre Remond de Montmort, is in the problem of derangements, also known as the hat check problem: n guests are invited to a party and, at the door, the guests all check their hats with the butler, who in turn places the hats into n boxes, each labelled with the name of one guest. But the butler has not asked the identities of the guests, and so puts the hats into boxes selected at random. The problem of de Montmort is to find the probability that none of the hats gets put into the right box. This probability, denoted by p n {\\displaystyle p_{n}\\!} , is: p n = 1 − 1 1 ! + 1 2 ! − 1 3 ! + ⋯ + ( − 1 ) n n ! = ∑ k = 0 n ( − 1 ) k k ! . {\\displaystyle p_{n}=1-{\\frac {1}{1!}}+{\\frac {1}{2!}}-{\\frac {1}{3!}}+\\cdots +{\\frac {(-1)^{n}}{n!}}=\\sum _{k=0}^{n}{\\frac {(-1)^{k}}{k!}}.} As n tends to infinity, pn approaches 1/e. Furthermore, the number of ways the hats can be placed into the boxes so that none of the hats are in the right box is n!/e, rounded to the nearest integer, for every positive n. === Optimal planning problems === The maximum value of x x {\\displaystyle {\\sqrt[{x}]{x}}} occurs at x = e {\\displaystyle x=e} . Equivalently, for any value of the base b > 1, it is the case that the maximum value of x − 1 log b ⁡ x {\\displaystyle x^{-1}\\log _{b}x} occurs at x = e {\\displaystyle x=e} (Steiner's problem, discussed below). This is useful in the problem of a stick of length L that is broken into n equal parts. The value of n that maximizes the product of the lengths is then either n = ⌊ L e ⌋ {\\displaystyle n=\\left\\lfloor {\\frac {L}{e}}\\right\\rfloor } or ⌈ L e ⌉ . {\\displaystyle \\left\\lceil {\\frac {L}{e}}\\right\\rceil .} The quantity x − 1 log b ⁡ x {\\displaystyle x^{-1}\\log _{b}x} is also a measure of information gleaned from an event occurring with probability 1 / x {\\displaystyle 1/x} (approximately 36.8 % {\\displaystyle 36.8\\%} when x = e {\\displaystyle x=e} ), so that essentially the same optimal division appears in optimal planning problems like the secretary problem. === Asymptotics === The number e occurs naturally in connection with many problems involving asymptotics. An example is Stirling's formula for the asymptotics of the factorial function, in which both the numbers e and π appear: n ! ∼ 2 π n ( n e ) n . {\\displaystyle n!\\sim {\\sqrt {2\\pi n}}\\left({\\frac {n}{e}}\\right)^{n}.} As a consequence, e = lim n → ∞ n n ! n . {\\displaystyle e=\\lim _{n\\to \\infty }{\\frac {n}{\\sqrt[{n}]{n!}}}.} == Properties == === Calculus === The principal motivation for introducing the number e, particularly in calculus, is to perform differential and integral calculus with exponential functions and logarithms. A general exponential function y = ax has a derivative, given by a limit: d d x a x = lim h → 0 a x + h − a x h = lim h → 0 a x a h − a x h = a x ⋅ ( lim h → 0 a h − 1 h ) . {\\displaystyle {\\begin{aligned}{\\frac {d}{dx}}a^{x}&=\\lim _{h\\to 0}{\\frac {a^{x+h}-a^{x}}{h}}=\\lim _{h\\to 0}{\\frac {a^{x}a^{h}-a^{x}}{h}}\\\\&=a^{x}\\cdot \\left(\\lim _{h\\to 0}{\\frac {a^{h}-1}{h}}\\right).\\end{aligned}}} The parenthesized limit on the right is independent of the variable x. Its value turns out to be the logarithm of a to base e. Thus, when the value of a is set to e, this limit is equal to 1, and so one arrives at the following simple identity: d d x e x = e x . {\\displaystyle {\\frac {d}{dx}}e^{x}=e^{x}.} Consequently, the exponential function with base e is particularly suited to doing calculus. Choosing e (as opposed to some other number) as the base of the exponential function makes calculations involving the derivatives much simpler. Another motivation comes from considering the derivative of the base-a logarithm (i.e., loga x), for x > 0: d d x log a ⁡ x = lim h → 0 log a ⁡ ( x + h ) − log a ⁡ ( x ) h = lim h → 0 log a ⁡ ( 1 + h / x ) x ⋅ h / x = 1 x log a ⁡ ( lim u → 0 ( 1 + u ) 1 u ) = 1 x log a ⁡ e , {\\displaystyle {\\begin{aligned}{\\frac {d}{dx}}\\log _{a}x&=\\lim _{h\\to 0}{\\frac {\\log _{a}(x+h)-\\log _{a}(x)}{h}}\\\\&=\\lim _{h\\to 0}{\\frac {\\log _{a}(1+h/x)}{x\\cdot h/x}}\\\\&={\\frac {1}{x}}\\log _{a}\\left(\\lim _{u\\to 0}(1+u)^{\\frac {1}{u}}\\right)\\\\&={\\frac {1}{x}}\\log _{a}e,\\end{aligned}}} where the substitution u = h/x was made. The base-a logarithm of e is 1, if a equals e. So symbolically, d d x log e ⁡ x = 1 x . {\\displaystyle {\\frac {d}{dx}}\\log _{e}x={\\frac {1}{x}}.} The logarithm with this special base is called the natural logarithm, and is usually denoted as ln; it behaves well under differentiation since there is no undetermined limit to carry through the calculations. Thus, there are two ways of selecting such special numbers a. One way is to set the derivative of the exponential function ax equal to ax, and solve for a. The other way is to set the derivative of the base a logarithm to 1/x and solve for a. In each case, one arrives at a convenient choice of base for doing calculus. It turns out that these two solutions for a are actually the same: the number e. The Taylor series for the exponential function can be deduced from the facts that the exponential function is its own derivative and that it equals 1 when evaluated at 0: e x = ∑ n = 0 ∞ x n n ! . {\\displaystyle e^{x}=\\sum _{n=0}^{\\infty }{\\frac {x^{n}}{n!}}.} Setting x = 1 {\\displaystyle x=1} recovers the definition of e as the sum of an infinite series. The natural logarithm function can be defined as the integral from 1 to x {\\displaystyle x} of 1 / t {\\displaystyle 1/t} , and the exponential function can then be defined as the inverse function of the natural logarithm. The number e is the value of the exponential function evaluated at x = 1 {\\displaystyle x=1} , or equivalently, the number whose natural logarithm is 1. It follows that e is the unique positive real number such that ∫ 1 e 1 t d t = 1. {\\displaystyle \\int _{1}^{e}{\\frac {1}{t}}\\,dt=1.} Because ex is the unique function (up to multiplication by a constant K) that is equal to its own derivative, d d x K e x = K e x , {\\displaystyle {\\frac {d}{dx}}Ke^{x}=Ke^{x},} it is therefore its own antiderivative as well: ∫ K e x d x = K e x + C . {\\displaystyle \\int Ke^{x}\\,dx=Ke^{x}+C.} Equivalently, the family of functions y ( x ) = K e x {\\displaystyle y(x)=Ke^{x}} where K is any real or complex number, is the full solution to the differential equation y ′ = y . {\\displaystyle y'=y.} === Inequalities === The number e is the unique real number such that ( 1 + 1 x ) x < e < ( 1 + 1 x ) x + 1 {\\displaystyle \\left(1+{\\frac {1}{x}}\\right)^{x} 1 } . {\\displaystyle V=\\min \\left\\{n\\mid X_{1}+X_{2}+\\cdots +X_{n}>1\\right\\}.} Then the expected value of V is e: E(V) = e. === Known digits === The number of known digits of e has increased substantially since the introduction of the computer, due both to increasing performance of computers and to algorithmic improvements. Since around 2010, the proliferation of modern high-speed desktop computers has made it feasible for amateurs to compute trillions of digits of e within acceptable amounts of time. On December 24, 2023, a record-setting calculation was made by Jordan Ranous, giving e to 35,000,000,000,000 digits. == Computing the digits == One way to compute the digits of e is with the series e = ∑ k = 0 ∞ 1 k ! . {\\displaystyle e=\\sum _{k=0}^{\\infty }{\\frac {1}{k!}}.} A faster method involves two recursive functions p ( a , b ) {\\displaystyle p(a,b)} and q ( a , b ) {\\displaystyle q(a,b)} . The functions are defined as ( p ( a , b ) q ( a , b ) ) = { ( 1 b ) , if b = a + 1 , ( p ( a , m ) q ( m , b ) + p ( m , b ) q ( a , m ) q ( m , b ) ) , otherwise, where m = ⌊ ( a + b ) / 2 ⌋ . {\\displaystyle {\\binom {p(a,b)}{q(a,b)}}={\\begin{cases}{\\binom {1}{b}},&{\\text{if }}b=a+1{\\text{,}}\\\\{\\binom {p(a,m)q(m,b)+p(m,b)}{q(a,m)q(m,b)}},&{\\text{otherwise, where }}m=\\lfloor (a+b)/2\\rfloor .\\end{cases}}} The expression 1 + p ( 0 , n ) q ( 0 , n ) {\\displaystyle 1+{\\frac {p(0,n)}{q(0,n)}}} produces the nth partial sum of the series above. This method uses binary splitting to compute e with fewer single-digit arithmetic operations and thus reduced bit complexity. Combining this with fast Fourier transform-based methods of multiplying integers makes computing the digits very fast. == In computer culture == During the emergence of internet culture, individuals and organizations sometimes paid homage to the number e. In an early example, the computer scientist Donald Knuth let the version numbers of his program Metafont approach e. The versions are 2, 2.7, 2.71, 2.718, and so forth. In another instance, the IPO filing for Google in 2004, rather than a typical round-number amount of money, the company announced its intention to raise 2,718,281,828 USD, which is e billion dollars rounded to the nearest dollar. Google was also responsible for a billboard that appeared in the heart of Silicon Valley, and later in Cambridge, Massachusetts; Seattle, Washington; and Austin, Texas. It read \"{first 10-digit prime found in consecutive digits of e}.com\". The first 10-digit prime in e is 7427466391, which starts at the 99th digit. Solving this problem and visiting the advertised (now defunct) website led to an even more difficult problem to solve, which consisted of finding the fifth term in the sequence 7182818284, 8182845904, 8747135266, 7427466391. It turned out that the sequence consisted of 10-digit numbers found in consecutive digits of e whose digits summed to 49. The fifth term in the sequence is 5966290435, which starts at the 127th digit. Solving this second problem finally led to a Google Labs webpage where the visitor was invited to submit a résumé. The last release of the official Python 2 interpreter has version number 2.7.18, a reference to e. == In computing == In scientific computing, the constant e {\\displaystyle e} is often hard-coded. For example, the Python standard library includes math.e = 2.718281828459045, a floating-point approximation of e {\\displaystyle e} . Despite this, it is generally more numerically stable and efficient to use the built-in exponential function—such as math.exp(x) in Python—rather than computing e x {\\displaystyle e^{x}} via pow(e, x), even when x {\\displaystyle x} is an integer. Most implementations of the exponential function use range reduction, lookup tables, and polynomial or rational approximations (such as Padé approximants or Taylor expansions) to achieve accurate results across a wide range of inputs. In contrast, general-purpose exponentiation functions—like pow—may involve additional intermediate computations, such as logarithms and multiplications, and may accumulate more rounding error, particularly when e {\\displaystyle e} is used in floating-point form. At very high precision, methods based on elliptic functions and fast convergence of the AGM and Newton's method can be used to compute the exponential function. The digit expansion of e {\\displaystyle e} can then be obtained as exp ⁡ ( 1 ) . {\\displaystyle \\exp(1).} Although this is asymptotically faster than other known methods for computing the exponential function, it is impractical because of high overhead cost. Tools such as y-cruncher are optimized for computing many digits of individual constants like e {\\displaystyle e} , and use the Taylor series for e {\\displaystyle e} because it converges very rapidly, especially when combined with various optimizations. In particular, the method of binary splitting applies to computing the series for e {\\displaystyle e} , as opposed to the series for exp ⁡ ( x ) {\\displaystyle \\exp(x)} , because the summands in the former series are simple rational numbers. This allows the complexity of computing n {\\displaystyle n} digits of e {\\displaystyle e} to be reduced to O ( n log 2 ⁡ n ) {\\displaystyle O(n\\log ^{2}n)} , asymptotically the same as AGM methods, but much cheaper in practice. == References == == Further reading == Maor, Eli, ed. (2009). e: The Story of a Number. Princeton science library. Princeton, N.J: Princeton University Press. ISBN 978-0-691-05854-2. Commentary on Endnote 10 of the book Prime Obsession for another stochastic representation McCartin, Brian J. (March 2006). \"e: The Master of All\" (PDF). The Mathematical Intelligencer. 28 (2): 10–21. doi:10.1007/BF02987150. ISSN 0343-6993. S2CID 123033482. == External links == The number e to 1 million places and NASA.gov 2 and 5 million places e Approximations – Wolfram MathWorld Earliest Uses of Symbols for Constants Jan. 13, 2008 \"The story of e\", by Robin Wilson at Gresham College, 28 February 2007 (available for audio and video download) e Search Engine 2 billion searchable digits of e, π and √2"
+  },
+  "chunks": [
+    {
+      "id": "emathematicalconstan_4c628054_c0000",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 992,
+      "content": "The number e is a mathematical constant approximately equal to 2.71828 that is the base of the natural logarithm and exponential function. It is sometimes called Euler's number, after the Swiss mathematician Leonhard Euler, though this can invite confusion with Euler numbers, or with Euler's constant, a different constant typically denoted γ {\\displaystyle \\gamma } . Alternatively, e can be called Napier's constant after John Napier. The Swiss mathematician Jacob Bernoulli discovered the constant while studying compound interest. The number e is of great importance in mathematics, alongside 0, 1, π, and i. All five appear in one formulation of Euler's identity e i π + 1 = 0 {\\displaystyle e^{i\\pi }+1=0} and play important and recurring roles across mathematics. Like the constant π, e is irrational, meaning that it cannot be represented as a ratio of integers, and moreover it is transcendental, meaning that it is not a root of any non-zero polynomial with rational coefficients.",
+      "char_count": 991,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0001",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== Definitions ==",
+      "heading_path": "== Definitions ==",
+      "start_char": 1050,
+      "end_char": 1965,
+      "content": "== Definitions == The number e is the limit lim n → ∞ ( 1 + 1 n ) n , {\\displaystyle \\lim _{n\\to \\infty }\\left(1+{\\frac {1}{n}}\\right)^{n},} an expression that arises in the computation of compound interest. It is the sum of the infinite series e = ∑ n = 0 ∞ 1 n ! = 1 + 1 1 + 1 1 ⋅ 2 + 1 1 ⋅ 2 ⋅ 3 + ⋯ . {\\displaystyle e=\\sum \\limits _{n=0}^{\\infty }{\\frac {1}{n!}}=1+{\\frac {1}{1}}+{\\frac {1}{1\\cdot 2}}+{\\frac {1}{1\\cdot 2\\cdot 3}}+\\cdots .} It is the unique positive number a such that the graph of the function y = ax has a slope of 1 at x = 0. One has e = exp ⁡ ( 1 ) , {\\displaystyle e=\\exp(1),} where exp {\\displaystyle \\exp } is the (natural) exponential function, the unique function that equals its own derivative and satisfies the equation exp ⁡ ( 0 ) = 1. {\\displaystyle \\exp(0)=1.} Since the exponential function is commonly denoted as x ↦ e x , {\\displaystyle x\\mapsto e^{x},} one has also e = e 1 .",
+      "char_count": 914,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0002",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== Definitions ==",
+      "heading_path": "== Definitions ==",
+      "start_char": 1965,
+      "end_char": 2493,
+      "content": "{\\displaystyle e=e^{1}.} The logarithm of base b can be defined as the inverse function of the function x ↦ b x . {\\displaystyle x\\mapsto b^{x}.} Since b = b 1 , {\\displaystyle b=b^{1},} one has log b ⁡ b = 1. {\\displaystyle \\log _{b}b=1.} The equation e = e 1 {\\displaystyle e=e^{1}} implies therefore that e is the base of the natural logarithm. The number e can also be characterized in terms of an integral: ∫ 1 e d x x = 1. {\\displaystyle \\int _{1}^{e}{\\frac {dx}{x}}=1.} For other characterizations, see § Representations.",
+      "char_count": 528,
+      "token_estimate": 132,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0003",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2490,
+      "end_char": 3475,
+      "content": "== History == The first references to the constant were published in 1618 in the table of an appendix of a work on logarithms by John Napier. However, this did not contain the constant itself, but simply a list of logarithms to the base e {\\displaystyle e} . It is assumed that the table was written by William Oughtred. In 1661, Christiaan Huygens studied how to compute logarithms by geometrical methods and calculated a quantity that, in retrospect, is the base-10 logarithm of e, but he did not recognize e itself as a quantity of interest. The constant itself was introduced by Jacob Bernoulli in 1683, for solving the problem of continuous compounding of interest. In his solution, the constant e occurs as the limit lim n → ∞ ( 1 + 1 n ) n , {\\displaystyle \\lim _{n\\to \\infty }\\left(1+{\\frac {1}{n}}\\right)^{n},} where n represents the number of intervals in a year on which the compound interest is evaluated (for example, n = 12 {\\displaystyle n=12} for monthly compounding).",
+      "char_count": 984,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0004",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3475,
+      "end_char": 4474,
+      "content": "The first symbol used for this constant was the letter b by Gottfried Leibniz in letters to Christiaan Huygens in 1690 and 1691. Leonhard Euler started to use the letter e for the constant in 1727 or 1728, in an unpublished paper on explosive forces in cannons, and in a letter to Christian Goldbach on 25 November 1731. The first appearance of e in a printed publication was in Euler's Mechanica (1736). It is unknown why Euler chose the letter e. Although some researchers used the letter c in the subsequent years, the letter e was more common and eventually became standard. Euler proved that e is the sum of the infinite series e = ∑ n = 0 ∞ 1 n ! = 1 0 ! + 1 1 ! + 1 2 ! + 1 3 ! + 1 4 ! + ⋯ , {\\displaystyle e=\\sum _{n=0}^{\\infty }{\\frac {1}{n!}}={\\frac {1}{0!}}+{\\frac {1}{1!}}+{\\frac {1}{2!}}+{\\frac {1}{3!}}+{\\frac {1}{4!}}+\\cdots ,} where n! is the factorial of n. The equivalence of the two characterizations using the limit and the infinite series can be proved via the binomial theorem.",
+      "char_count": 999,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0005",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Compound interest ==",
+      "heading_path": "== = Compound interest ==",
+      "start_char": 4506,
+      "end_char": 5371,
+      "content": "== = Compound interest === Jacob Bernoulli discovered this constant in 1683, while studying a question about compound interest: An account starts with $1.00 and pays 100 percent interest per year. If the interest is credited once, at the end of the year, the value of the account at year-end will be $2.00. What happens if the interest is computed and credited more frequently during the year? If the interest is credited twice in the year, the interest rate for each 6 months will be 50%, so the initial $1 is multiplied by 1.5 twice, yielding $1.00 × 1.52 = $2.25 at the end of the year. Compounding quarterly yields $1.00 × 1.254 = $2.44140625, and compounding monthly yields $1.00 × (1 + 1/12)12 = $2.613035.... If there are n compounding intervals, the interest for each interval will be 100%/n and the value at the end of the year will be $1.00 × (1 + 1/n)n.",
+      "char_count": 864,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0006",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Compound interest ==",
+      "heading_path": "== = Compound interest ==",
+      "start_char": 5371,
+      "end_char": 6069,
+      "content": "Bernoulli noticed that this sequence approaches a limit (the force of interest) with larger n and, thus, smaller compounding intervals. Compounding weekly (n = 52) yields $2.692596..., while compounding daily (n = 365) yields $2.714567... (approximately two cents more). The limit as n grows large is the number that came to be known as e. That is, with continuous compounding, the account value will reach $2.718281828... More generally, an account that starts at $1 and offers an annual interest rate of R will, after t years, yield eRt dollars with continuous compounding. Here, R is the decimal equivalent of the rate of interest expressed as a percentage, so for 5% interest, R = 5/100 = 0.05.",
+      "char_count": 698,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0007",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Bernoulli trials ==",
+      "heading_path": "== = Bernoulli trials ==",
+      "start_char": 6069,
+      "end_char": 6886,
+      "content": "== = Bernoulli trials === The number e itself also has applications in probability theory, in a way that is not obviously related to exponential growth. Suppose that a gambler plays a slot machine that pays out with a probability of one in n and plays it n times. As n increases, the probability that gambler will lose all n bets approaches 1/e, which is approximately 36.79%. For n = 20, this is already 1/2.789509... (approximately 35.85%). This is an example of a Bernoulli trial process. Each time the gambler plays the slots, there is a one in n chance of winning. Playing n times is modeled by the binomial distribution, which is closely related to the binomial theorem and Pascal's triangle. The probability of winning k times out of n trials is: Pr [ k w i n s o f n ] = ( n k ) ( 1 n ) k ( 1 − 1 n ) n − k .",
+      "char_count": 816,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0008",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Bernoulli trials ==",
+      "heading_path": "== = Bernoulli trials ==",
+      "start_char": 6886,
+      "end_char": 7273,
+      "content": "{\\displaystyle \\Pr[k~\\mathrm {wins~of} ~n]={\\binom {n}{k}}\\left({\\frac {1}{n}}\\right)^{k}\\left(1-{\\frac {1}{n}}\\right)^{n-k}.} In particular, the probability of winning zero times (k = 0) is Pr [ 0 w i n s o f n ] = ( 1 − 1 n ) n . {\\displaystyle \\Pr[0~\\mathrm {wins~of} ~n]=\\left(1-{\\frac {1}{n}}\\right)^{n}.} The limit of the above expression, as n tends to infinity, is precisely 1/e.",
+      "char_count": 387,
+      "token_estimate": 96,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0009",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Exponential growth and decay ==",
+      "heading_path": "== = Exponential growth and decay ==",
+      "start_char": 7286,
+      "end_char": 8154,
+      "content": "== = Exponential growth and decay === Exponential growth is a process that increases quantity over time at an ever-increasing rate. It occurs when the instantaneous rate of change (that is, the derivative) of a quantity with respect to time is proportional to the quantity itself. Described as a function, a quantity undergoing exponential growth is an exponential function of time, that is, the variable representing time is the exponent (in contrast to other types of growth, such as quadratic growth). If the constant of proportionality is negative, then the quantity decreases over time, and is said to be undergoing exponential decay instead. The law of exponential growth can be written in different but mathematically equivalent forms, by using a different base, for which the number e is a common and convenient choice: x ( t ) = x 0 ⋅ e k t = x 0 ⋅ e t / τ .",
+      "char_count": 867,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0010",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Exponential growth and decay ==",
+      "heading_path": "== = Exponential growth and decay ==",
+      "start_char": 8154,
+      "end_char": 8407,
+      "content": "{\\displaystyle x(t)=x_{0}\\cdot e^{kt}=x_{0}\\cdot e^{t/\\tau }.} Here, x 0 {\\displaystyle x_{0}} denotes the initial value of the quantity x, k is the growth constant, and τ {\\displaystyle \\tau } is the time it takes the quantity to grow by a factor of e.",
+      "char_count": 253,
+      "token_estimate": 63,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0011",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Standard normal distribution ==",
+      "heading_path": "== = Standard normal distribution ==",
+      "start_char": 8408,
+      "end_char": 9114,
+      "content": "== = Standard normal distribution === The normal distribution with zero mean and unit standard deviation is known as the standard normal distribution, given by the probability density function ϕ ( x ) = 1 2 π e − 1 2 x 2 . {\\displaystyle \\phi (x)={\\frac {1}{\\sqrt {2\\pi }}}e^{-{\\frac {1}{2}}x^{2}}.} The constraint of unit standard deviation (and thus also unit variance) results in the ⁠1/2⁠ in the exponent, and the constraint of unit total area under the curve ϕ ( x ) {\\displaystyle \\phi (x)} results in the factor 1 / 2 π {\\displaystyle \\textstyle 1/{\\sqrt {2\\pi }}} . This function is symmetric around x = 0, where it attains its maximum value 1 / 2 π {\\displaystyle \\textstyle 1/{\\sqrt {2\\pi }}} , and has inflection points at x = ±1.",
+      "char_count": 741,
+      "token_estimate": 185,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0012",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Derangements ==",
+      "heading_path": "== = Derangements ==",
+      "start_char": 9134,
+      "end_char": 10062,
+      "content": "== = Derangements === Another application of e, also discovered in part by Jacob Bernoulli along with Pierre Remond de Montmort, is in the problem of derangements, also known as the hat check problem: n guests are invited to a party and, at the door, the guests all check their hats with the butler, who in turn places the hats into n boxes, each labelled with the name of one guest. But the butler has not asked the identities of the guests, and so puts the hats into boxes selected at random. The problem of de Montmort is to find the probability that none of the hats gets put into the right box. This probability, denoted by p n {\\displaystyle p_{n}\\!} , is: p n = 1 − 1 1 ! + 1 2 ! − 1 3 ! + ⋯ + ( − 1 ) n n ! = ∑ k = 0 n ( − 1 ) k k ! . {\\displaystyle p_{n}=1-{\\frac {1}{1!}}+{\\frac {1}{2!}}-{\\frac {1}{3!}}+\\cdots +{\\frac {(-1)^{n}}{n!}}=\\sum _{k=0}^{n}{\\frac {(-1)^{k}}{k!}}.} As n tends to infinity, pn approaches 1/e.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0013",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Derangements ==",
+      "heading_path": "== = Derangements ==",
+      "start_char": 10062,
+      "end_char": 10240,
+      "content": "Furthermore, the number of ways the hats can be placed into the boxes so that none of the hats are in the right box is n!/e, rounded to the nearest integer, for every positive n.",
+      "char_count": 178,
+      "token_estimate": 44,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0014",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Optimal planning problems ==",
+      "heading_path": "== = Optimal planning problems ==",
+      "start_char": 10254,
+      "end_char": 10840,
+      "content": "== = Optimal planning problems === The maximum value of x x {\\displaystyle {\\sqrt[{x}]{x}}} occurs at x = e {\\displaystyle x=e} . Equivalently, for any value of the base b > 1, it is the case that the maximum value of x − 1 log b ⁡ x {\\displaystyle x^{-1}\\log _{b}x} occurs at x = e {\\displaystyle x=e} (Steiner's problem, discussed below). This is useful in the problem of a stick of length L that is broken into n equal parts. The value of n that maximizes the product of the lengths is then either n = ⌊ L e ⌋ {\\displaystyle n=\\left\\lfloor {\\frac {L}{e}}\\right\\rfloor } or ⌈ L e ⌉ .",
+      "char_count": 585,
+      "token_estimate": 146,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0015",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Optimal planning problems ==",
+      "heading_path": "== = Optimal planning problems ==",
+      "start_char": 10840,
+      "end_char": 11256,
+      "content": "{\\displaystyle \\left\\lceil {\\frac {L}{e}}\\right\\rceil .} The quantity x − 1 log b ⁡ x {\\displaystyle x^{-1}\\log _{b}x} is also a measure of information gleaned from an event occurring with probability 1 / x {\\displaystyle 1/x} (approximately 36.8 % {\\displaystyle 36.8\\%} when x = e {\\displaystyle x=e} ), so that essentially the same optimal division appears in optimal planning problems like the secretary problem.",
+      "char_count": 416,
+      "token_estimate": 104,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0016",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Asymptotics ==",
+      "heading_path": "== = Asymptotics ==",
+      "start_char": 11243,
+      "end_char": 11658,
+      "content": "== = Asymptotics === The number e occurs naturally in connection with many problems involving asymptotics. An example is Stirling's formula for the asymptotics of the factorial function, in which both the numbers e and π appear: n ! ∼ 2 π n ( n e ) n . {\\displaystyle n!\\sim {\\sqrt {2\\pi n}}\\left({\\frac {n}{e}}\\right)^{n}.} As a consequence, e = lim n → ∞ n n ! n . {\\displaystyle e=\\lim _{n\\to \\infty }{\\frac {n}{\\sqrt[{n}]{n!}}}.}",
+      "char_count": 433,
+      "token_estimate": 108,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0017",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Calculus ==",
+      "heading_path": "== = Calculus ==",
+      "start_char": 11691,
+      "end_char": 12672,
+      "content": "== = Calculus === The principal motivation for introducing the number e, particularly in calculus, is to perform differential and integral calculus with exponential functions and logarithms. A general exponential function y = ax has a derivative, given by a limit: d d x a x = lim h → 0 a x + h − a x h = lim h → 0 a x a h − a x h = a x ⋅ ( lim h → 0 a h − 1 h ) . {\\displaystyle {\\begin{aligned}{\\frac {d}{dx}}a^{x}&=\\lim _{h\\to 0}{\\frac {a^{x+h}-a^{x}}{h}}=\\lim _{h\\to 0}{\\frac {a^{x}a^{h}-a^{x}}{h}}\\\\&=a^{x}\\cdot \\left(\\lim _{h\\to 0}{\\frac {a^{h}-1}{h}}\\right).\\end{aligned}}} The parenthesized limit on the right is independent of the variable x. Its value turns out to be the logarithm of a to base e. Thus, when the value of a is set to e, this limit is equal to 1, and so one arrives at the following simple identity: d d x e x = e x . {\\displaystyle {\\frac {d}{dx}}e^{x}=e^{x}.} Consequently, the exponential function with base e is particularly suited to doing calculus.",
+      "char_count": 980,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0018",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Calculus ==",
+      "heading_path": "== = Calculus ==",
+      "start_char": 12672,
+      "end_char": 13507,
+      "content": "Choosing e (as opposed to some other number) as the base of the exponential function makes calculations involving the derivatives much simpler. Another motivation comes from considering the derivative of the base-a logarithm (i.e., loga x), for x > 0: d d x log a ⁡ x = lim h → 0 log a ⁡ ( x + h ) − log a ⁡ ( x ) h = lim h → 0 log a ⁡ ( 1 + h / x ) x ⋅ h / x = 1 x log a ⁡ ( lim u → 0 ( 1 + u ) 1 u ) = 1 x log a ⁡ e , {\\displaystyle {\\begin{aligned}{\\frac {d}{dx}}\\log _{a}x&=\\lim _{h\\to 0}{\\frac {\\log _{a}(x+h)-\\log _{a}(x)}{h}}\\\\&=\\lim _{h\\to 0}{\\frac {\\log _{a}(1+h/x)}{x\\cdot h/x}}\\\\&={\\frac {1}{x}}\\log _{a}\\left(\\lim _{u\\to 0}(1+u)^{\\frac {1}{u}}\\right)\\\\&={\\frac {1}{x}}\\log _{a}e,\\end{aligned}}} where the substitution u = h/x was made. The base-a logarithm of e is 1, if a equals e. So symbolically, d d x log e ⁡ x = 1 x .",
+      "char_count": 835,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0019",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Calculus ==",
+      "heading_path": "== = Calculus ==",
+      "start_char": 13508,
+      "end_char": 14373,
+      "content": "{\\displaystyle {\\frac {d}{dx}}\\log _{e}x={\\frac {1}{x}}.} The logarithm with this special base is called the natural logarithm, and is usually denoted as ln; it behaves well under differentiation since there is no undetermined limit to carry through the calculations. Thus, there are two ways of selecting such special numbers a. One way is to set the derivative of the exponential function ax equal to ax, and solve for a. The other way is to set the derivative of the base a logarithm to 1/x and solve for a. In each case, one arrives at a convenient choice of base for doing calculus. It turns out that these two solutions for a are actually the same: the number e. The Taylor series for the exponential function can be deduced from the facts that the exponential function is its own derivative and that it equals 1 when evaluated at 0: e x = ∑ n = 0 ∞ x n n ! .",
+      "char_count": 865,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0020",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Calculus ==",
+      "heading_path": "== = Calculus ==",
+      "start_char": 14374,
+      "end_char": 15294,
+      "content": "{\\displaystyle e^{x}=\\sum _{n=0}^{\\infty }{\\frac {x^{n}}{n!}}.} Setting x = 1 {\\displaystyle x=1} recovers the definition of e as the sum of an infinite series. The natural logarithm function can be defined as the integral from 1 to x {\\displaystyle x} of 1 / t {\\displaystyle 1/t} , and the exponential function can then be defined as the inverse function of the natural logarithm. The number e is the value of the exponential function evaluated at x = 1 {\\displaystyle x=1} , or equivalently, the number whose natural logarithm is 1. It follows that e is the unique positive real number such that ∫ 1 e 1 t d t = 1. {\\displaystyle \\int _{1}^{e}{\\frac {1}{t}}\\,dt=1.} Because ex is the unique function (up to multiplication by a constant K) that is equal to its own derivative, d d x K e x = K e x , {\\displaystyle {\\frac {d}{dx}}Ke^{x}=Ke^{x},} it is therefore its own antiderivative as well: ∫ K e x d x = K e x + C .",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0021",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Calculus ==",
+      "heading_path": "== = Calculus ==",
+      "start_char": 15295,
+      "end_char": 15539,
+      "content": "{\\displaystyle \\int Ke^{x}\\,dx=Ke^{x}+C.} Equivalently, the family of functions y ( x ) = K e x {\\displaystyle y(x)=Ke^{x}} where K is any real or complex number, is the full solution to the differential equation y ′ = y . {\\displaystyle y'=y.}",
+      "char_count": 244,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0022",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Inequalities ==",
+      "heading_path": "== = Inequalities ==",
+      "start_char": 15544,
+      "end_char": 15806,
+      "content": "== = Inequalities === The number e is the unique real number such that ( 1 + 1 x ) x < e < ( 1 + 1 x ) x + 1 {\\displaystyle \\left(1+{\\frac {1}{x}}\\right)^{x} 1 } . {\\displaystyle V=\\min \\left\\{n\\mid X_{1}+X_{2}+\\cdots +X_{n}>1\\right\\}.} Then the expected value of V is e: E(V) = e.",
+      "char_count": 281,
+      "token_estimate": 70,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0023",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== = Known digits ==",
+      "heading_path": "== = Known digits ==",
+      "start_char": 15826,
+      "end_char": 16307,
+      "content": "== = Known digits === The number of known digits of e has increased substantially since the introduction of the computer, due both to increasing performance of computers and to algorithmic improvements. Since around 2010, the proliferation of modern high-speed desktop computers has made it feasible for amateurs to compute trillions of digits of e within acceptable amounts of time. On December 24, 2023, a record-setting calculation was made by Jordan Ranous, giving e to 35,000,000,000,000 digits.",
+      "char_count": 500,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0024",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== Computing the digits ==",
+      "heading_path": "== Computing the digits ==",
+      "start_char": 16333,
+      "end_char": 17287,
+      "content": "== Computing the digits == One way to compute the digits of e is with the series e = ∑ k = 0 ∞ 1 k ! . {\\displaystyle e=\\sum _{k=0}^{\\infty }{\\frac {1}{k!}}.} A faster method involves two recursive functions p ( a , b ) {\\displaystyle p(a,b)} and q ( a , b ) {\\displaystyle q(a,b)} . The functions are defined as ( p ( a , b ) q ( a , b ) ) = { ( 1 b ) , if b = a + 1 , ( p ( a , m ) q ( m , b ) + p ( m , b ) q ( a , m ) q ( m , b ) ) , otherwise, where m = ⌊ ( a + b ) / 2 ⌋ . {\\displaystyle {\\binom {p(a,b)}{q(a,b)}}={\\begin{cases}{\\binom {1}{b}},&{\\text{if }}b=a+1{\\text{,}}\\\\{\\binom {p(a,m)q(m,b)+p(m,b)}{q(a,m)q(m,b)}},&{\\text{otherwise, where }}m=\\lfloor (a+b)/2\\rfloor .\\end{cases}}} The expression 1 + p ( 0 , n ) q ( 0 , n ) {\\displaystyle 1+{\\frac {p(0,n)}{q(0,n)}}} produces the nth partial sum of the series above. This method uses binary splitting to compute e with fewer single-digit arithmetic operations and thus reduced bit complexity.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0025",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== In computer culture ==",
+      "heading_path": "== In computer culture ==",
+      "start_char": 17405,
+      "end_char": 18258,
+      "content": "== In computer culture == During the emergence of internet culture, individuals and organizations sometimes paid homage to the number e. In an early example, the computer scientist Donald Knuth let the version numbers of his program Metafont approach e. The versions are 2, 2.7, 2.71, 2.718, and so forth. In another instance, the IPO filing for Google in 2004, rather than a typical round-number amount of money, the company announced its intention to raise 2,718,281,828 USD, which is e billion dollars rounded to the nearest dollar. Google was also responsible for a billboard that appeared in the heart of Silicon Valley, and later in Cambridge, Massachusetts; Seattle, Washington; and Austin, Texas. It read \"{first 10-digit prime found in consecutive digits of e}.com\". The first 10-digit prime in e is 7427466391, which starts at the 99th digit.",
+      "char_count": 852,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0026",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== In computer culture ==",
+      "heading_path": "== In computer culture ==",
+      "start_char": 18258,
+      "end_char": 18897,
+      "content": "Solving this problem and visiting the advertised (now defunct) website led to an even more difficult problem to solve, which consisted of finding the fifth term in the sequence 7182818284, 8182845904, 8747135266, 7427466391. It turned out that the sequence consisted of 10-digit numbers found in consecutive digits of e whose digits summed to 49. The fifth term in the sequence is 5966290435, which starts at the 127th digit. Solving this second problem finally led to a Google Labs webpage where the visitor was invited to submit a résumé. The last release of the official Python 2 interpreter has version number 2.7.18, a reference to e.",
+      "char_count": 639,
+      "token_estimate": 159,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0027",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== In computing ==",
+      "heading_path": "== In computing ==",
+      "start_char": 18891,
+      "end_char": 19868,
+      "content": "== In computing == In scientific computing, the constant e {\\displaystyle e} is often hard-coded. For example, the Python standard library includes math.e = 2.718281828459045, a floating-point approximation of e {\\displaystyle e} . Despite this, it is generally more numerically stable and efficient to use the built-in exponential function—such as math.exp(x) in Python—rather than computing e x {\\displaystyle e^{x}} via pow(e, x), even when x {\\displaystyle x} is an integer. Most implementations of the exponential function use range reduction, lookup tables, and polynomial or rational approximations (such as Padé approximants or Taylor expansions) to achieve accurate results across a wide range of inputs. In contrast, general-purpose exponentiation functions—like pow—may involve additional intermediate computations, such as logarithms and multiplications, and may accumulate more rounding error, particularly when e {\\displaystyle e} is used in floating-point form.",
+      "char_count": 976,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0028",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== In computing ==",
+      "heading_path": "== In computing ==",
+      "start_char": 19868,
+      "end_char": 20783,
+      "content": "At very high precision, methods based on elliptic functions and fast convergence of the AGM and Newton's method can be used to compute the exponential function. The digit expansion of e {\\displaystyle e} can then be obtained as exp ⁡ ( 1 ) . {\\displaystyle \\exp(1).} Although this is asymptotically faster than other known methods for computing the exponential function, it is impractical because of high overhead cost. Tools such as y-cruncher are optimized for computing many digits of individual constants like e {\\displaystyle e} , and use the Taylor series for e {\\displaystyle e} because it converges very rapidly, especially when combined with various optimizations. In particular, the method of binary splitting applies to computing the series for e {\\displaystyle e} , as opposed to the series for exp ⁡ ( x ) {\\displaystyle \\exp(x)} , because the summands in the former series are simple rational numbers.",
+      "char_count": 915,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "emathematicalconstan_4c628054_c0029",
+      "article_id": "emathematicalconstan_4c628054",
+      "section": "== In computing ==",
+      "heading_path": "== In computing ==",
+      "start_char": 20784,
+      "end_char": 21011,
+      "content": "This allows the complexity of computing n {\\displaystyle n} digits of e {\\displaystyle e} to be reduced to O ( n log 2 ⁡ n ) {\\displaystyle O(n\\log ^{2}n)} , asymptotically the same as AGM methods, but much cheaper in practice.",
+      "char_count": 227,
+      "token_estimate": 56,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "In which publication did the symbol 'e' for the mathematical constant first appear in print, and in what year?",
+        "answer": "The first appearance of the symbol 'e' in a printed publication was in Leonhard Euler's \"Mechanica\" in 1736.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0004"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Who discovered the constant e and in what context?",
+        "answer": "The Swiss mathematician Jacob Bernoulli discovered the constant while studying compound interest.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0000"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Why is the exponential function with base 'e' particularly well-suited for calculus?",
+        "answer": "The exponential function with base 'e' is particularly suited for calculus because its derivative is the function itself. When deriving a general exponential function a^x, the result is a^x multiplied by a limit term. When the base 'a' is set to 'e', this limit equals 1, which simplifies the derivative of e^x to just e^x.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0017"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are the various mathematical definitions and characterizations of the number e?",
+        "answer": "The number e is characterized in several ways. It is described as the base of the natural logarithm and the exponential function. Formally, it is defined as the limit lim n→∞ (1 + 1/n)^n, an expression from compound interest, and as the sum of the infinite series Σ 1/n!. It is also the unique positive number 'a' for which the graph of y = a^x has a slope of 1 at x = 0, and it can be expressed as exp(1). Lastly, it can be characterized by the integral ∫(from 1 to e) dx/x = 1.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0000",
+          "emathematicalconstan_4c628054_c0001",
+          "emathematicalconstan_4c628054_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How did Jacob Bernoulli's 1683 study of compound interest lead to a formal definition of the constant e?",
+        "answer": "In 1683, Jacob Bernoulli investigated a problem concerning an account starting with $1.00 and paying 100% interest per year. He analyzed how the final value changed as the interest was credited more frequently. This led to the expression (1 + 1/n)^n, where 'n' is the number of compounding intervals. Bernoulli discovered that as 'n' approaches infinity (continuous compounding), the value of this expression converges to a limit, which he introduced as the constant e, formally defined as lim n→∞ (1 + 1/n)^n.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0003",
+          "emathematicalconstan_4c628054_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "In what two different mathematical contexts does the number 'e' appear, and what is its significance in each?",
+        "answer": "The number 'e' appears in the contexts of compound interest and probability theory. In compound interest, 'e' represents the limit of growth for an investment with continuous compounding; an account starting at $1 with an annual interest rate R will yield e^(Rt) dollars after t years. In probability, specifically Bernoulli trials, if a gambler plays a slot machine n times with a 1/n probability of winning, the chance of losing all n bets approaches 1/e as n becomes very large.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0006",
+          "emathematicalconstan_4c628054_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain the reasoning that establishes 'e' as the base of the natural logarithm, starting from its relationship with the exponential function.",
+        "answer": "The number 'e' is related to the natural exponential function, commonly denoted as x ↦ e^x, which leads to the identity e = e^1. The logarithm of a base 'b' is defined as the inverse of the function x ↦ b^x, which means that log_b(b) = 1. Therefore, the identity e = e^1 implies that 'e' is the base of the natural logarithm.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0001",
+          "emathematicalconstan_4c628054_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Describe the evolution of the mathematical characterization of the constant 'e' from Jacob Bernoulli's work to Leonhard Euler's contributions.",
+        "answer": "The constant 'e' was first introduced by Jacob Bernoulli in 1683 as the limit lim(n→∞) (1 + 1/n)^n, in the context of continuous compound interest. Later, Leonhard Euler proved that 'e' is also the sum of the infinite series ∑(n=0 to ∞) 1/n!, which is 1/0! + 1/1! + 1/2! + ... . The text notes that these two characterizations are equivalent.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0003",
+          "emathematicalconstan_4c628054_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How did Jacob Bernoulli's study of compound interest lead to the discovery of the mathematical constant 'e'?",
+        "answer": "In 1683, Jacob Bernoulli studied a problem where a $1.00 account earns 100% interest per year. He observed that as the frequency of compounding interest (n) increased, the account's final value, calculated by the formula (1 + 1/n)^n, approached a specific limit. This limit, which represents the value under continuous compounding, is the constant that became known as 'e', approximately 2.718281828.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0005",
+          "emathematicalconstan_4c628054_c0006"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "In the context of a Bernoulli trial where a gambler plays a slot machine `n` times with a `1/n` probability of winning, how is the probability of losing every time related to the constant `e`?",
+        "answer": "The probability of winning zero times in `n` trials is represented by the formula (1 - 1/n)^n. As the number of trials, `n`, approaches infinity, the limit of this expression is 1/e. Thus, as `n` increases, the probability that the gambler will lose all `n` bets gets closer to 1/e.",
+        "related_chunk_ids": [
+          "emathematicalconstan_4c628054_c0007",
+          "emathematicalconstan_4c628054_c0008"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:46.595Z",
+    "content_format": "markdown",
+    "total_chunks": 30,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

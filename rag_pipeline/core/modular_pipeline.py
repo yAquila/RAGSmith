@@ -11,6 +11,7 @@ import logging
 import time
 from typing import List, Dict, Any, Optional, Type
 from dataclasses import asdict
+from copy import deepcopy
 
 from .modular_framework import (
     PreEmbeddingComponent, QueryExpansionComponent, RetrievalComponent,
@@ -218,7 +219,7 @@ class ModularRAGPipeline:
                     for expanded_query in processed_query.expanded_queries:
                         retrieval_result: RetrievalComponentResult = await self.components["retrieval"].retrieve(
                             expanded_query, 
-                            k=self.config_dict["retrieval"].top_k
+                            k=self.config_dict["query_expansion"].excessive_k
                         )
                         parsed_result = self._parse_component_result(
                             retrieval_result, "retrieval", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
@@ -232,26 +233,23 @@ class ModularRAGPipeline:
                             results_list=results_list,
                             method_names=[f"retrieval_query_{i}" for i in range(len(processed_query.expanded_queries))],
                             weights=weights,
-                            normalization_method=self.config_dict["query_expansion"].normalization_method,
-                            excessive_k=self.config_dict["query_expansion"].excessive_k
+                            normalization_method=self.config_dict["query_expansion"].normalization_method
                         )
                     elif combination_method == "reciprocal_rank_fusion":
                         retrieved_documents = HybridUtils.combine_with_rrf(
                             results_list=results_list,
-                            method_names=[f"retrieval_query_{i}" for i in range(len(processed_query.expanded_queries))],
-                            excessive_k=self.config_dict["query_expansion"].excessive_k
+                            method_names=[f"retrieval_query_{i}" for i in range(len(processed_query.expanded_queries))]
                         )
                     elif combination_method == "borda_count":
                         retrieved_documents = HybridUtils.combine_with_borda_count(
                             results_list=results_list,
                             method_names=[f"retrieval_query_{i}" for i in range(len(processed_query.expanded_queries))],
-                            excessive_k=self.config_dict["query_expansion"].excessive_k
                         )
                     else:
                         retrieved_documents = results_list[0]
                         raise ValueError(f"Invalid combination method: {combination_method}")
                     retrieved_documents = HybridUtils.convert_to_documents(retrieved_documents)
-
+                logger.debug(f"Retrieved documents: {retrieved_documents}")
                 timing_info["retrieval_time"] = time.time() - step_start
                 components_used["retrieval"] = self.config_dict["retrieval"].technique
                 logger.debug(f"Retrieval completed in {timing_info['retrieval_time']:.3f}s, found {len(retrieved_documents)} documents")
@@ -287,7 +285,8 @@ class ModularRAGPipeline:
                 timing_info["passage_filter_time"] = 0.0
             
             # Step 6: Passage augmentation
-            final_documents = retrieved_documents
+
+            final_documents = deepcopy(retrieved_documents)
             if "passage_augment" in self.components and final_documents:
                 step_start = time.time()
                 passage_augment_result: PassageAugmentResult = await self.components["passage_augment"].augment_passages(
@@ -466,7 +465,7 @@ class ModularRAGPipeline:
                     try:
                         exec_result = await pipeline.execute_pipeline(test_case.query, documents)
                         retrieved_docs = [
-                            {"doc_id": doc.doc_id, "content": doc.content, "score": getattr(doc, 'score', None)}
+                            {"doc_id": doc.doc_id, "content": doc.content, "score": getattr(doc, 'score', None), "metadata": doc.metadata}
                             for doc in exec_result.retrieved_documents
                         ]
                         retrieval_result = RetrievalResult(

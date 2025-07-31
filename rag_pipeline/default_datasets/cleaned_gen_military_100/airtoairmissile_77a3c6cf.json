@@ -1,0 +1,648 @@
+{
+  "article": {
+    "id": "airtoairmissile_77a3c6cf",
+    "title": "Air-to-air missile",
+    "url": "https://en.wikipedia.org/wiki/Air-to-air_missile",
+    "lang": "en",
+    "created_at": "2025-07-31T08:51:12.251760",
+    "content": "---\nid: airtoairmissile_77a3c6cf\nurl: https://en.wikipedia.org/wiki/Air-to-air_missile\ntitle: Air-to-air missile\nlang: en\ncreated_at: '2025-07-31T08:44:34.764225'\nchecksum: 19bddb12eee678ec48cd7f676afd07903ec009256201b1e3ef08cceb74e94b3b\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 5121\n  char_count: 32634\n  num_chunks: 41\n  original_chunks: 55\n  filtered_out: 14\n  num_sections: 0\n---\nAn air-to-air missile (AAM) is a missile fired from an aircraft for the purpose of destroying another aircraft (including unmanned aircraft such as cruise missiles). AAMs are typically powered by one or more rocket motors, usually solid fueled but sometimes liquid fueled. Ramjet engines, as used on the Meteor, are emerging as propulsion that will enable future medium- to long-range missiles to maintain higher average speed across their engagement envelope. Air-to-air missiles are broadly put in two groups. Those designed to engage opposing aircraft at ranges of around 30 km to 40 km maximum are known as short-range or \"within visual range\" missiles (SRAAMs or WVRAAMs) and are sometimes called \"dogfight\" missiles because they are designed to optimize their agility rather than range. Most use infrared guidance and are called heat-seeking missiles. In contrast, medium- or long-range missiles (MRAAMs or LRAAMs), which both fall under the category of beyond-visual-range missiles (BVRAAMs), tend to rely upon radar guidance, of which there are many forms. Some modern ones use inertial guidance and/or \"mid-course updates\" to get the missile close enough to use an active homing sensor. The concepts of air-to-air missiles and surface-to-air missiles are closely related, and in some cases versions of the same weapon may be used for both roles, such as the ASRAAM and Sea Ceptor. == History == The air-to-air missile grew out of the unguided air-to-air rockets used during the First World War. Le Prieur rockets were sometimes attached to the struts of biplanes and fired electrically, usually against observation balloons, by such early pilots as Albert Ball and A. M. Walters. Facing the Allied air superiority, Germany in World War II invested limited effort into missile research, initially adapting the projectile of the unguided 21 cm Nebelwerfer 42 infantry barrage rocket system into the air-launched BR 21 anti-aircraft rocket in 1943; leading to the deployment of the R4M unguided rocket and the development of various guided missile prototypes such as the Ruhrstahl X-4. The US Navy and US Air Force began equipping guided missiles in 1956, deploying the USAF's AIM-4 Falcon and the USN's AIM-7 Sparrow and AIM-9 Sidewinder. Post-war research led the Royal Air Force to introduce Fairey Fireflash into service in 1957 but their results were unsuccessful. The Soviet Air Force introduced its K-5 into service in 1957. The first-ever successful combat deployment and shoot-down of an adversary aircraft happened during the 1958 Kinmen (Quemoy) Crisis, when RoCAF F-86 Sabres shot down at least one Soviet-made PLAAF MiG-17 using U.S.-supplied AIM-9 Sidewinder AAMs; the PLAAF fortuitously recovered a largely-intact AIM-9 Sidewinder that hit and got lodged into one of their MiG-17s, but did not explode, and reportedly turned over to the Soviets for reverse-engineering into the K-13 AAM. As missile systems have continued to advance, modern air warfare consists almost entirely of missile firing. The use of beyond-visual-range combat became so pervasive in the US that early F-4 variants were armed only with missiles in the 1960s. High casualty rates during the Vietnam War caused the US to reintroduce autocannon and traditional dogfighting tactics but the missile remains the primary weapon in air combat. In the Falklands War British Harriers, using AIM-9L missiles were able to defeat faster Argentinian opponents. Since the late 20th century all-aspect heat-seeking designs can lock-on to a target from various angles, not just from behind, where the heat signature from the engines is strongest. Other types rely on radar guidance (either on-board or \"painted\" by the launching aircraft). === Use of air-to-air missiles as surface-to-air missiles === In 1999 R-73 missile were adapted by Serb forces for surface to air missiles. The Houthi movement Missile Research and Development Centre and the Missile Force have tried to fire R-27/R-60/R-73/R-77 against Saudi aircraft using stockpiles of missiles from Yemeni Air Force stocks. The issue for the R-27 and R-77 is the lack of a radar to support their guidance to the target. However the R-73 and R-60 are infra-red heat seeking missiles. They only require power, liquid nitrogen \"to cool the seeker head\", and a pylon to launch the missile. These missiles have been paired with a \"US made FLIR Systems ULTRA 8500 turrets\". Only one near miss has been verified and that was a R-27T fired at Royal Saudi Air Force F-15SA. However the drawback is that these missiles are intended to be fired from one jet fighter against another. So the motors and fuel load are smaller than a purpose built surface to air missile. On the Western side, the Norwegian-American made NASAMS air defense system has been developed for using AIM-9 Sidewinder, IRIS-T and AMRAAM air-to-air missiles to intercept targets. None of these missiles require modifications and hence it is possible for the system to take missiles straight from an aircraft. After a live-fire test occurred in September 2020 off the coasts of Florida, during which it successfully engaged a simulated cruise missile, in 2022 NASAMS was deployed to Ukraine, where for the first time this missile system was used in real combat conditions, and, according to Ukrainian government, was able to shoot down more than 100 aerial targets. == Warhead == A conventional explosive blast warhead, fragmentation warhead, or continuous rod warhead (or a combination of any of those three warhead types) is typically used in the attempt to disable or destroy the target aircraft. Warheads are typically detonated by a proximity fuze or by an impact fuze if it scores a direct hit. Less commonly, nuclear warheads have been mounted on a small number of air-to-air missile types (such as the AIM-26 Falcon) although these have never been used in combat. == Guidance == Guided missiles operate by detecting their target (usually by either radar or infrared methods, although rarely others such as laser guidance or optical tracking), and then \"homing\" in on the target on a collision course. Although the missile may use radar or infra-red guidance to home on the target, the launching aircraft may detect and track the target before launch by other means. Infra-red guided missiles can be \"slaved\" to an attack radar in order to find the target and radar-guided missiles can be launched at targets detected visually or via an infra-red search and track (IRST) system, although they may require the attack radar to illuminate the target during part or all of the missile interception itself. === Radar guidance === Radar guidance is normally used for medium- or long-range missiles, where the infra-red signature of the target would be too faint for an infra-red detector to track. There are three major types of radar-guided missile – active, semi-active, and passive. Radar-guided missiles can be countered by rapid maneuvering (which may result in them \"breaking lock\", or may cause them to overshoot), deploying chaff or using electronic counter-measures. ==== Active radar homing ==== Active radar (AR)-guided missiles carry their own radar system to detect and track their target. However, the size of the radar antenna is limited by the small diameter of missiles, limiting its range which typically means such missiles are launched at a predicted future location of the target, often relying on separate guidance systems such as Global Positioning System, inertial guidance, or a mid-course update from either the launching aircraft or other system that can communicate with the missile to get the missile close to the target. At a predetermined point (frequently based on time since launch or arrival near the predicted target location) the missile's radar system is activated (the missile is said to \"go active\"), and the missile then homes in on the target. If the range from the attacking aircraft to the target is within the range of the missile's radar system, the missile can \"go active\" immediately upon launch. The great advantage of an active radar homing system is that it enables a \"fire-and-forget\" mode of attack, where the attacking aircraft is free to pursue other targets or escape the area after launching the missile. ==== Semi-active radar homing ==== Semi-active radar homing (SARH) guided missiles are simpler and more common. They function by detecting radar energy reflected from the target. The radar energy is emitted from the launching aircraft's own radar system. However, this means that the launch aircraft has to maintain a \"lock\" on the target (keep illuminating the target aircraft with its own radar) until the missile makes the interception. This limits the attacking aircraft's ability to maneuver, which may be necessary should threats to the attacking aircraft appear. An advantage of SARH-guided missiles is that they are homing on the reflected radar signal, so accuracy actually increases as the missile gets closer because the reflection comes from a \"point source\": the target. Against this, if there are multiple targets, each will be reflecting the same radar signal and the missile may become confused as to which target is its intended victim. The missile may well be unable to pick a specific target and fly through a formation without passing within lethal range of any specific aircraft. Newer missiles have logic circuits in their guidance systems to help prevent this problem. At the same time, jamming the missile lock-on is easier because the launching aircraft is further from the target than the missile, so the radar signal has to travel further and is greatly attenuated over the distance. This means that the missile may be jammed or \"spoofed\" by countermeasures whose signals grow stronger as the missile gets closer. One counter to this is a \"home on jam\" capability in the missile that allows it to home in on the jamming signal. ==== Beam riding ==== An early form of radar guidance was \"beam-riding\" (BR). In this method, the attacking aircraft directs a narrow beam of radar energy at the target. The air-to-air missile was launched into the beam, where sensors on the aft of the missile controlled the missile, keeping it within the beam. So long as the beam was kept on the target aircraft, the missile would ride the beam until making the interception. While conceptually simple, the move is hard because of the challenge of simultaneously keeping the beam solidly on the target (which could not be relied upon to cooperate by flying straight and level), continuing to fly one's own aircraft, and monitoring enemy countermeasures. An added complication was that the beam will spread out into a cone shape as the distance from the attacking aircraft increases. This will result in less accuracy for the missile because the beam may actually be larger than the target aircraft when the missile arrives. The missile could be securely within the beam but still not be close enough to destroy the target. === Infrared guidance === Infrared guided (IR) missiles home on the heat produced by an aircraft. Early infra-red detectors had poor sensitivity, so could only track the hot exhaust pipes of an aircraft. This meant an attacking aircraft had to maneuver to a position behind its target before it could fire an infra-red guided missile. This also limited the range of the missile as the infra-red signature soon become too small to detect with increasing distance and after launch the missile was playing \"catch-up\" with its target. Early infrared seekers were unusable in clouds or rain (which is still a limitation to some degree) and could be distracted by the sun, a reflection of the sun off of a cloud or ground object, or any other \"hot\" object within its view. More modern infra-red guided missiles can detect the heat of an aircraft's skin, warmed by the friction of airflow, in addition to the fainter heat signature of the engine when the aircraft is seen from the side or head-on. This, combined with greater maneuverability, gives them an \"all-aspect\" capability, and an attacking aircraft no longer had to be behind its target to fire. Although launching from behind the target increases the probability of a hit, the launching aircraft usually has to be closer to the target in such a tail-chase engagement. An aircraft can defend against infra-red missiles by dropping flares that are hotter than the aircraft, so the missile homes in on the brighter, hotter target. In turn, IR missiles may employ filters to enable it to ignore targets whose temperature is not within a specified range. Towed decoys which closely mimic engine heat and infra-red jammers can also be used. Some large aircraft and many combat helicopters make use of so-called \"hot brick\" infra-red jammers, typically mounted near the engines. Current research is developing laser devices which can spoof or destroy the guidance systems of infra-red guided missiles. See Infrared countermeasure. Start of the 21st century missiles such as the ASRAAM use an \"imaging infrared\" seeker which \"sees\" the target (much like a digital video camera), and can distinguish between an aircraft and a point heat source such as a flare. They also feature a very wide detection angle, so the attacking aircraft does not have to be pointing straight at the target for the missile to lock on. The pilot can use a helmet mounted sight (HMS) and target another aircraft by looking at it, and then firing. This is called \"off-boresight\" launch. For example, the Russian Su-27 is equipped with an infra-red search and track (IRST) system with laser rangefinder for its HMS-aimed missiles. === Electro-optical === A recent advancement in missile guidance is electro-optical imaging. The Israeli Python-5 has an electro-optical seeker that scans designated area for targets via optical imaging. Once a target is acquired, the missile will lock-on to it for the kill. Electro-optical seekers can be programmed to target vital area of an aircraft, such as the cockpit. Since it does not depend on the target aircraft's heat signature, it can be used against low-heat targets such as UAVs and cruise missiles. However, clouds can get in the way of electro-optical sensors. === Passive anti-radiation === Evolving missile guidance designs are converting the anti-radiation missile (ARM) design, pioneered during Vietnam and used to home in against emitting surface-to-air missile (SAM) sites, to an air intercept weapon. Current air-to-air passive anti-radiation missile development is thought to be a countermeasure to airborne early warning and control (AEW&C – also known as AEW or AWACS) aircraft which typically mount powerful search radars. Due to their dependence on target aircraft radar emissions, when used against fighter aircraft passive anti-radiation missiles are primarily limited to forward-aspect intercept geometry. For examples, see Vympel R-27 and Brazo. Another aspect of passive anti-radiation homing is the \"home on jam\" mode which, when installed, allows a radar-guided missile to home in on the jammer of the target aircraft if the primary seeker is jammed by the electronic countermeasures of the target aircraft. == Design == Air-to-air missiles are typically long, thin cylinders in order to reduce their cross section and thus minimize drag at the high speeds at which they travel. Missiles are divided into five primary systems (moving forward to aft): seeker, guidance, warhead, motor, and control actuation. At the front is the seeker, either a radar system, radar homer, or infra-red detector. Behind that lies the avionics which control the missile. Typically after that, in the centre of the missile, is the warhead, usually several kilograms of high explosive surrounded by metal that fragments on detonation (or in some cases, pre-fragmented metal). The rear part of the missile contains the propulsion system, usually a rocket of some type and the control actuation system or CAS. Dual-thrust solid-fuel rockets are common, but some longer-range missiles use liquid-fuel motors that can \"throttle\" to extend their range and preserve fuel for energy-intensive final maneuvering. Some solid-fuelled missiles mimic this technique with a second rocket motor which burns during the terminal homing phase. There are missiles, such as the MBDA Meteor, that \"breathe\" air (using a ramjet, similar to a jet engine) in order to extend their range. Modern missiles use \"low-smoke\" motors – early missiles produced thick smoke trails, which were easily seen by the crew of the target aircraft alerting them to the attack and helping them determine how to evade it. The CAS is typically an electro-mechanical, servo control actuation system, which takes input from the guidance system and manipulates the airfoils or fins at the rear of the missile that guide or steers the weapon to target. Nowadays, countries start developing hypersonic air-to-air missile using scramjet engines (such as R-37, or AIM-260 JATM), which not only increases efficiency for BVR battles, but it also makes survival chances of target aircraft drop to nearly zero. == Performance == A number of terms frequently crop up in discussions of air-to-air missile performance. Launch success zone The Launch Success Zone is the range within which there is a high (defined) kill probability against a target that remains unaware of its engagement until the final moment. When alerted visually or by a warning system the target attempts a last-ditch-manoeuvre sequence. F-pole A closely related term is the F-Pole. This is the slant range between the launch aircraft and target, at the time of interception. The greater the F-Pole, the greater the confidence that the launch aircraft will achieve air superiority with that missile. A-pole This is the slant range between the launch aircraft and target at the time that the missile begins active guidance or acquires the target with the missile's active seeker. The greater the A-Pole means less time and possibly greater distance that the launch aircraft needs to support the missile guidance until missile seeker acquisition. No-escape zone The no-escape zone is the zone within which there is a high (defined) kill probability against a target even if it has been alerted. This zone is defined as a conical shape with the tip at the missile launch. The cone's length and width are determined by the missile and seeker performance. A missile's speed, range and seeker sensitivity will mostly determine the length of this imaginary cone, while its agility (turn rate) and seeker complexity (speed of detection and ability to detect off axis targets) will determine the width of the cone. === Missile minimum range === A missile is subject to a minimum range, before which it cannot maneuver effectively. In order to maneuver sufficiently from a poor launch angle at short ranges to hit its target, some missiles use thrust vectoring, which allow the missile to start turning \"off the rail\", before its motor has accelerated it up to high enough speeds for its small aerodynamic surfaces to be useful. == Short-range air-to-air missile == Short-range air-to-air missiles (SRAAMs), typically used in \"dogfighting\" or close range air combat compare to the beyond-visual-range missiles. Most of the short-range air-to-air missiles are infrared guided. === SRAAM missile evolution === Those missiles usually classified into five \"generations\" according to the historical technological advances. Most of these advances were in infrared seeker technology (later combined with digital signal processing). === First generation === Early short-range missiles such as the early Sidewinders and K-13 (missile) (AA-2 Atoll) had infrared seekers with a narrow (30-degree) field of view and required the attacker to position himself behind the target (rear aspect engagement). This meant that the target aircraft only had to perform a slight turn to move outside the missile seeker's field of view and cause the missile to lose track of the target (\"break lock\"). === Second generation === The second-generation of short-range missiles utilized more effective seekers that were better cooled than its predecessors while being typically \"uncaged\"; resulting in improved sensitivity to heat signatures, an increase in field of view as well as allowing the possibility of leading a missile within its FOV for an increased probability of kill against a maneuvering target. In some cases, the improved sensitivity to heat signatures allows for a very limited side and even all-aspect tracking, as is the case with the Red Top missile. In conjunction with improved control surfaces and propulsion motors over the first generation of dogfight missiles, the technological advances of the second-generation short-range missiles allowed them to be used not just on non-maneuvering bombers, but also actively maneuvering fighters. Examples include advanced derivatives of the K-13 (missile) and AIM-9 such as K-13M (R-13M, Object 380) or AIM-9D / G / H. === Third generation === This generation introduced much more sensitive seekers that are capable of locking onto the warm heat irradiated by the skins of aircraft from the front or side aspects, as opposed to just the hotter engine nozzle(s) from rear-aspect, allowing for a true all-aspect capability. This significantly expanded potential attacking envelopes, allowing the attacker to fire at a target which was side-on or front-on to itself as opposed to just the rear. While the field-of-view was still restricted to a fairly narrow cone, the attack at least did not have to be behind the target. Also typical of the third generation of short-range missiles are further improved agility over the previous generation as well as their ability to radar-slave; which is acquiring tracking data from the launching aircraft's radar or IRST systems, allowing attackers to launch missiles without ever pointing the nose of the aircraft at an enemy prior to leading the missile. Examples of this generation of dogfight missiles include the R-60M or the Python-3. === Fourth generation === The R-73 (missile) (AA-11 Archer) entered service in 1985 and marked a new generation of dogfight missile. It had a wider field of view and could be cued onto a target using a helmet mounted sight. This allowed it to be launched at targets that would otherwise not be seen by older generation missiles that generally stared forward while waiting to be launched. This capability, combined with a more powerful motor that allows the missile to maneuver against crossing targets and launch at greater ranges, gives the launching aircraft improved tactical freedom. Other members of the 4th generation use focal plane arrays to offer greatly improved scanning and countermeasures resistance (especially against flares). These missiles are also much more agile, some by employing thrust vectoring (typically gimballed thrust). === Fifth generation === The latest generation of short-range missiles again defined by advances in seeker technologies, this time electro-optical imaging infrared (IIR) seekers that allow the missiles to \"see\" images rather than single \"points\" of infrared radiation (heat). The sensors combined with more powerful digital signal processing provide the following benefits: greater infrared counter countermeasures (IRCCM) ability, by being able to distinguish aircraft from infrared countermeasures (IRCM) such as flares. greater sensitivity means greater range and ability to identify smaller low flying targets such as UAVs. more detailed target image allows targeting of more vulnerable parts of aircraft instead of just homing in on the brightest infrared source (exhaust). Examples of fifth generation short-range missiles include: R-73M (\"AA-11 Archer\") – Russia (1994–) ASRAAM – UK (1998–) AIM-9X Sidewinder – US (2003–) Python 5 – Israel (2003–) AAM-5 – Japan (2004–) IRIS-T – Germany (2005–) PL-10 – China (2015–) R-74M2 (\"AA-11 Archer\") – Russia (2019–) A-Darter – South Africa and Brazil (2019–) Bozdoğan – Turkey (2024–) == List of missiles by country == For each missile, short notes are given, including an indication of its range and guidance mechanism. === Brazil === MAA-1A Piranha – Short-range IR MAA-1B Piranha – IR-guided missile. A-Darter – Short-range IR (With South Africa) === Canada === Velvet Glove - short range, semi-active radar-guided === France === Nord AA.20, AA.25 – radio-guided, beam-riding Matra R.510 – IR-guided Matra R.511 – radar-guided Matra R.550 Magic – short-range, IR-guided Matra Magic II – IR-guided Matra R.530 – medium-range, IR- or radar-guided Matra Super 530F/Super 530D – medium-range, radar-guided Matra Mistral – IR-guided MBDA MICA – medium-range, IR- or active radar-guided MBDA Meteor – long-range active radar-guided missile, integrated on Rafale. TRIGAT LR === Germany === Henschel Hs 298 – World War II design, MCLOS, never saw service IRIS-T MBDA Meteor long-range, active radar-guided, pending contract for integration on Eurofighter. Ruhrstahl X-4 – World War II design, first practical anti-aircraft missile, MCLOS, never saw service RZ 65 missile project developed by Rheinmetall-Borsig in 1941. After about 3000 tests it revealed itself unsatisfactory owing to an accuracy of only 15%. The project was terminated by the end of the war. Dornier Viper === India === Astra Mk 1 – Long-range radar-guided Astra Mk 2 – Long-range radar-guided Astra Mk 3 – Long-range radar-guided Astra IR – Short-range infrared homing K-100 (missile) – Inertial navigation and active radar homing (with Russia) === Iran === Fatter – copy of U.S. AIM-9 Sidewinder Sedjil – copy of U.S. MIM-23 Hawk converted to be carried by aircraft Fakour-90 – copy of U.S. AIM-54 Phoenix === Iraq === Al Humurrabi – Long-range, semi active radar === Israel === Python: Rafael Shafrir – first Israeli domestic AAM Rafael Shafrir 2 – improved Shafrir missile Rafael Python 3 – medium-range IR-homing missile with all aspect capability  Rafael Python 4 – medium-range IR-homing missile with HMS-guidance capability  Python-5 – improved Python 4 with electro-optical imaging seeker, and 360 degrees lock on. (and launch)  Rafael Derby – Also known as the Alto, this is a medium-range, BVR active radar-homing missile  I-Derby ER – long range BVR active radar-homing missile Sky Spear – 6th generation long-range, air-to-air missile === Italy === Alenia Aspide – Copy of the U.S.AIM-7 Sparrow, based on the AIM-7E. === Japan === AAM-1 – (Type 69 air-to-air missile) short-range, IR-seeking air-to-air missile. AAM-2 – short-range, IR-seeking air-to-air missile; similar to AIM-4D, prototype-only. AAM-3 – (Type 90 air-to-air missile) short-range, all-aspect IR-seeking air-to-air missile. AAM-4 – (Type 99 air-to-air missile) medium-range, active radar-guided air-to-air missile. AAM-5 – (Type 04 air-to-air missile) short-range, all-aspect IR-seeking air-to-air missile. === People's Republic of China === PL-1 – PRC version of the Soviet K-5 (missile) (AA-1 Alkali), retired. PL-2 – PRC version of the Soviet Vympel K-13 (AA-2 Atoll), which was based on AIM-9B Sidewinder.  Retired & replaced by PL-5 in PLAAF service. PL-3 – updated version of the PL-2, did not enter service. PL-4 – experimental BVR missile based on AIM-7D, did not enter service. PL-6 – updated version of PL-3, also did not enter service. PL-5 – updated version of the PL-2, known versions include:  PL-5A – semi-active radar-homing AAM intended to replace the PL-2, did not enter service. Resembles AIM-9G in appearance. PL-5B – IR version, entered service in the 1990s to replace the PL-2 SRAAM. Limited off-boresight PL-5C – Improved version comparable to AIM-9H or AIM-9L in performance PL-5E – All-aspect attack version, resembles AIM-9P in appearance. PL-7 – PRC version of the IR-homing French R550 Magic AAM, did not enter service.  PL-8 – PRC version of the Israeli Rafael Python 3  PL-9 – short-range IR-guided missile, marketed for export. One known improved version (PL-9C).  PL-10(old);– semi-active radar-homing medium-range missile based on the HQ-61 SAM,  often confused with PL-11. Did not enter service. PL-10(new)/PL-ASR – short-range off-boresight all-aspect IR-guided missile. PL-11 – medium-range air-to-air missile (MRAAM), based on the HQ-61C & Italian Aspide (AIM-7) technology. Limited service with J-8-B/D/H fighters. Known versions include:  PL-11 – MRAAM with semi-active radar homing, based on the HQ-61C SAM and Aspide seeker technology, exported as FD-60  PL-11A – Improved PL-11 with increased range, warhead, and more effective seeker. The new seeker only requires fire-control radar guidance during the terminal stage, providing a basic LOAL (lock-on after launch) capability. PL-11B – Also known as PL-11 AMR, improved PL-11 with AMR-1 active radar-homing seeker. LY-60 – PL-11 adopted for navy ships for air-defense, sold to Pakistan but does not appear to be in service with the Chinese Navy.  PL-12 (SD-10) – medium-range active radar missile  PL-12A – with upgraded motor PL-12B – with upgraded guidance PL-12C – with foldable tailfins PL-12D – with belly inlet and ramjet motors F80 – medium-range active radar missile PL-15 – long-range active radar missile PL-17 – extreme long-range active radar missile PL-21 - long-range active radar missile (In Development) TY-90 – light IR-homing air-to-air missile designed for helicopters  === Soviet Union/Russian Federation === K-5 (missile) (NATO reporting name AA-1 'Alkali') – beam-riding Vympel K-13 (NATO reporting name AA-2 'Atoll') – short-range IR or SARH Kaliningrad K-8 (NATO reporting name AA-3 'Anab') – IR or SARH Raduga K-9 (NATO reporting name AA-4 'Awl') – IR or SARH Bisnovat R-4 (NATO reporting name AA-5 'Ash') – IR or SARH Bisnovat R-40 (NATO reporting name AA-6 'Acrid') – long-range IR or SARH Vympel R-23/R-24 (NATO reporting name AA-7 'Apex') – medium-range SARH or IR Molniya R-60 (NATO reporting name AA-8 'Aphid') – short-range IR Vympel R-33 (NATO reporting name AA-9 'Amos') – long-range active radar Vympel R-27 (NATO reporting name AA-10 'Alamo') – medium-range SARH or IR Vympel R-73 and R-74 (NATO reporting name AA-11 'Archer') – short-range IR Vympel R-77 (NATO reporting name AA-12 'Adder') – medium-range active radar Vympel R-37 (NATO reporting name AA-13 'Axehead') – long-range SARH or active radar homing Novator KS-172 AAM-L – extreme long-range, inertial navigation with terminal active radar homing === South Africa === A-Darter – Short-range IR (With Brazil) V3 Kukri – Short-range IR R-Darter – Beyond-visual-range (BVR) radar-guided missile === Taiwan === Sky Sword I (TC-1) – air-to-air Sky Sword II (TC-2) – air-to-air === Turkey === Bozdoğan (Merlin) – WVRAAM (within-visual-range air-to-air missile) Gökdoğan (Peregrine) – BVRAAM (beyond-visual-range air-to-air missile) Akdoğan (Gyrfalcon) – Akdoğan is a 'mini' air-to-air missile intended to be cost-effective and to be used in UAVs such as Bayraktar Akıncı and TAI Aksungur. Gökhan – it was officially confirmed that this variant would have a Ramjet. Sungur - MANPADS Air-to-air version also available for use on UAVs === United Kingdom === Fireflash – short-range beam-riding Firestreak – short-range IR Red Top – short-range IR Taildog/SRAAM – short-range IR Skyflash – medium-range radar-guided missile based on the AIM-7E2, said to have quick warm-up times of 1 to 2 seconds. AIM-132 ASRAAM – short-range IR MBDA Meteor – long-range active radar-guided missile with a solid fuel ducted ramjet === United States === ==== Retired ==== AIM-4 Falcon – radar-guided (later IR-seeking) AIM-26 Falcon AIM-47 Falcon AIM-54 Phoenix – long-range, semi-active-guided and active radar-guided; retired in 2004 ==== Operational ==== AIM-7 Sparrow – medium-range, semi-active radar-guided AIM-9 Sidewinder – short-range, IR-seeking AIM-92 Stinger – short-range, IR-seeking; launched from helicopters AIM-120 AMRAAM – medium-range, active radar-guided; replaces AIM-7 Sparrow AIM-174 - extreme long-range, active radar-guided ==== In development ==== AIM-260 JATM – Under development by Lockheed Martin AIM-160 CUDA/SACM – Under development Boeing LRAAM LREW (Long-Range Engagement Weapon programme) MAM (Modular Advanced Missile) Raytheon Peregrine – Compact medium-range active radar missile == Typical air-to-air missiles == == See also == Air-to-air rocket Missile Missile guidance Guided missile List of missiles Missile designation == References == == Bibliography == Albert Ball, V. C. Chaz Bowyer. Crecy Publishing, 2002. ISBN 0-947554-89-0, ISBN 978-0-947554-89-7. == External links == Air-to-air missile non-comparison table"
+  },
+  "chunks": [
+    {
+      "id": "airtoairmissile_77a3c6cf_c0000",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 858,
+      "content": "An air-to-air missile (AAM) is a missile fired from an aircraft for the purpose of destroying another aircraft (including unmanned aircraft such as cruise missiles). AAMs are typically powered by one or more rocket motors, usually solid fueled but sometimes liquid fueled. Ramjet engines, as used on the Meteor, are emerging as propulsion that will enable future medium- to long-range missiles to maintain higher average speed across their engagement envelope. Air-to-air missiles are broadly put in two groups. Those designed to engage opposing aircraft at ranges of around 30 km to 40 km maximum are known as short-range or \"within visual range\" missiles (SRAAMs or WVRAAMs) and are sometimes called \"dogfight\" missiles because they are designed to optimize their agility rather than range. Most use infrared guidance and are called heat-seeking missiles.",
+      "char_count": 857,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0001",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 858,
+      "end_char": 1389,
+      "content": "In contrast, medium- or long-range missiles (MRAAMs or LRAAMs), which both fall under the category of beyond-visual-range missiles (BVRAAMs), tend to rely upon radar guidance, of which there are many forms. Some modern ones use inertial guidance and/or \"mid-course updates\" to get the missile close enough to use an active homing sensor. The concepts of air-to-air missiles and surface-to-air missiles are closely related, and in some cases versions of the same weapon may be used for both roles, such as the ASRAAM and Sea Ceptor.",
+      "char_count": 531,
+      "token_estimate": 132,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0002",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1403,
+      "end_char": 2259,
+      "content": "== History == The air-to-air missile grew out of the unguided air-to-air rockets used during the First World War. Le Prieur rockets were sometimes attached to the struts of biplanes and fired electrically, usually against observation balloons, by such early pilots as Albert Ball and A. M. Walters. Facing the Allied air superiority, Germany in World War II invested limited effort into missile research, initially adapting the projectile of the unguided 21 cm Nebelwerfer 42 infantry barrage rocket system into the air-launched BR 21 anti-aircraft rocket in 1943; leading to the deployment of the R4M unguided rocket and the development of various guided missile prototypes such as the Ruhrstahl X-4. The US Navy and US Air Force began equipping guided missiles in 1956, deploying the USAF's AIM-4 Falcon and the USN's AIM-7 Sparrow and AIM-9 Sidewinder.",
+      "char_count": 855,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0003",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2259,
+      "end_char": 3166,
+      "content": "Post-war research led the Royal Air Force to introduce Fairey Fireflash into service in 1957 but their results were unsuccessful. The Soviet Air Force introduced its K-5 into service in 1957. The first-ever successful combat deployment and shoot-down of an adversary aircraft happened during the 1958 Kinmen (Quemoy) Crisis, when RoCAF F-86 Sabres shot down at least one Soviet-made PLAAF MiG-17 using U.S.-supplied AIM-9 Sidewinder AAMs; the PLAAF fortuitously recovered a largely-intact AIM-9 Sidewinder that hit and got lodged into one of their MiG-17s, but did not explode, and reportedly turned over to the Soviets for reverse-engineering into the K-13 AAM. As missile systems have continued to advance, modern air warfare consists almost entirely of missile firing. The use of beyond-visual-range combat became so pervasive in the US that early F-4 variants were armed only with missiles in the 1960s.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0004",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3167,
+      "end_char": 3730,
+      "content": "High casualty rates during the Vietnam War caused the US to reintroduce autocannon and traditional dogfighting tactics but the missile remains the primary weapon in air combat. In the Falklands War British Harriers, using AIM-9L missiles were able to defeat faster Argentinian opponents. Since the late 20th century all-aspect heat-seeking designs can lock-on to a target from various angles, not just from behind, where the heat signature from the engines is strongest. Other types rely on radar guidance (either on-board or \"painted\" by the launching aircraft).",
+      "char_count": 563,
+      "token_estimate": 140,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0005",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Use of air-to-air missiles as surface-to-air missiles ==",
+      "heading_path": "== = Use of air-to-air missiles as surface-to-air missiles ==",
+      "start_char": 3779,
+      "end_char": 4671,
+      "content": "== = Use of air-to-air missiles as surface-to-air missiles === In 1999 R-73 missile were adapted by Serb forces for surface to air missiles. The Houthi movement Missile Research and Development Centre and the Missile Force have tried to fire R-27/R-60/R-73/R-77 against Saudi aircraft using stockpiles of missiles from Yemeni Air Force stocks. The issue for the R-27 and R-77 is the lack of a radar to support their guidance to the target. However the R-73 and R-60 are infra-red heat seeking missiles. They only require power, liquid nitrogen \"to cool the seeker head\", and a pylon to launch the missile. These missiles have been paired with a \"US made FLIR Systems ULTRA 8500 turrets\". Only one near miss has been verified and that was a R-27T fired at Royal Saudi Air Force F-15SA. However the drawback is that these missiles are intended to be fired from one jet fighter against another.",
+      "char_count": 891,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0006",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Use of air-to-air missiles as surface-to-air missiles ==",
+      "heading_path": "== = Use of air-to-air missiles as surface-to-air missiles ==",
+      "start_char": 4671,
+      "end_char": 5422,
+      "content": "So the motors and fuel load are smaller than a purpose built surface to air missile. On the Western side, the Norwegian-American made NASAMS air defense system has been developed for using AIM-9 Sidewinder, IRIS-T and AMRAAM air-to-air missiles to intercept targets. None of these missiles require modifications and hence it is possible for the system to take missiles straight from an aircraft. After a live-fire test occurred in September 2020 off the coasts of Florida, during which it successfully engaged a simulated cruise missile, in 2022 NASAMS was deployed to Ukraine, where for the first time this missile system was used in real combat conditions, and, according to Ukrainian government, was able to shoot down more than 100 aerial targets.",
+      "char_count": 751,
+      "token_estimate": 187,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0007",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== Warhead ==",
+      "heading_path": "== Warhead ==",
+      "start_char": 5375,
+      "end_char": 5868,
+      "content": "== Warhead == A conventional explosive blast warhead, fragmentation warhead, or continuous rod warhead (or a combination of any of those three warhead types) is typically used in the attempt to disable or destroy the target aircraft. Warheads are typically detonated by a proximity fuze or by an impact fuze if it scores a direct hit. Less commonly, nuclear warheads have been mounted on a small number of air-to-air missile types (such as the AIM-26 Falcon) although these have never been used in combat.",
+      "char_count": 505,
+      "token_estimate": 126,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0008",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== Guidance ==",
+      "heading_path": "== Guidance ==",
+      "start_char": 5882,
+      "end_char": 6605,
+      "content": "== Guidance == Guided missiles operate by detecting their target (usually by either radar or infrared methods, although rarely others such as laser guidance or optical tracking), and then \"homing\" in on the target on a collision course. Although the missile may use radar or infra-red guidance to home on the target, the launching aircraft may detect and track the target before launch by other means. Infra-red guided missiles can be \"slaved\" to an attack radar in order to find the target and radar-guided missiles can be launched at targets detected visually or via an infra-red search and track (IRST) system, although they may require the attack radar to illuminate the target during part or all of the missile interception itself.",
+      "char_count": 736,
+      "token_estimate": 184,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0009",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Radar guidance ==",
+      "heading_path": "== = Radar guidance ==",
+      "start_char": 6627,
+      "end_char": 7074,
+      "content": "== = Radar guidance === Radar guidance is normally used for medium- or long-range missiles, where the infra-red signature of the target would be too faint for an infra-red detector to track. There are three major types of radar-guided missile – active, semi-active, and passive. Radar-guided missiles can be countered by rapid maneuvering (which may result in them \"breaking lock\", or may cause them to overshoot), deploying chaff or using electronic counter-measures.",
+      "char_count": 468,
+      "token_estimate": 117,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0010",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Infrared guidance ==",
+      "heading_path": "== = Infrared guidance ==",
+      "start_char": 7099,
+      "end_char": 7867,
+      "content": "== = Infrared guidance === Infrared guided (IR) missiles home on the heat produced by an aircraft. Early infra-red detectors had poor sensitivity, so could only track the hot exhaust pipes of an aircraft. This meant an attacking aircraft had to maneuver to a position behind its target before it could fire an infra-red guided missile. This also limited the range of the missile as the infra-red signature soon become too small to detect with increasing distance and after launch the missile was playing \"catch-up\" with its target. Early infrared seekers were unusable in clouds or rain (which is still a limitation to some degree) and could be distracted by the sun, a reflection of the sun off of a cloud or ground object, or any other \"hot\" object within its view.",
+      "char_count": 767,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0011",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Infrared guidance ==",
+      "heading_path": "== = Infrared guidance ==",
+      "start_char": 7867,
+      "end_char": 8787,
+      "content": "More modern infra-red guided missiles can detect the heat of an aircraft's skin, warmed by the friction of airflow, in addition to the fainter heat signature of the engine when the aircraft is seen from the side or head-on. This, combined with greater maneuverability, gives them an \"all-aspect\" capability, and an attacking aircraft no longer had to be behind its target to fire. Although launching from behind the target increases the probability of a hit, the launching aircraft usually has to be closer to the target in such a tail-chase engagement. An aircraft can defend against infra-red missiles by dropping flares that are hotter than the aircraft, so the missile homes in on the brighter, hotter target. In turn, IR missiles may employ filters to enable it to ignore targets whose temperature is not within a specified range. Towed decoys which closely mimic engine heat and infra-red jammers can also be used.",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0012",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Infrared guidance ==",
+      "heading_path": "== = Infrared guidance ==",
+      "start_char": 8788,
+      "end_char": 9749,
+      "content": "Some large aircraft and many combat helicopters make use of so-called \"hot brick\" infra-red jammers, typically mounted near the engines. Current research is developing laser devices which can spoof or destroy the guidance systems of infra-red guided missiles. See Infrared countermeasure. Start of the 21st century missiles such as the ASRAAM use an \"imaging infrared\" seeker which \"sees\" the target (much like a digital video camera), and can distinguish between an aircraft and a point heat source such as a flare. They also feature a very wide detection angle, so the attacking aircraft does not have to be pointing straight at the target for the missile to lock on. The pilot can use a helmet mounted sight (HMS) and target another aircraft by looking at it, and then firing. This is called \"off-boresight\" launch. For example, the Russian Su-27 is equipped with an infra-red search and track (IRST) system with laser rangefinder for its HMS-aimed missiles.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0013",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Electro-optical ==",
+      "heading_path": "== = Electro-optical ==",
+      "start_char": 9748,
+      "end_char": 10305,
+      "content": "== = Electro-optical === A recent advancement in missile guidance is electro-optical imaging. The Israeli Python-5 has an electro-optical seeker that scans designated area for targets via optical imaging. Once a target is acquired, the missile will lock-on to it for the kill. Electro-optical seekers can be programmed to target vital area of an aircraft, such as the cockpit. Since it does not depend on the target aircraft's heat signature, it can be used against low-heat targets such as UAVs and cruise missiles. However, clouds can get in the way of electro-optical sensors.",
+      "char_count": 579,
+      "token_estimate": 144,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0014",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Passive anti-radiation ==",
+      "heading_path": "== = Passive anti-radiation ==",
+      "start_char": 10335,
+      "end_char": 11272,
+      "content": "== = Passive anti-radiation === Evolving missile guidance designs are converting the anti-radiation missile (ARM) design, pioneered during Vietnam and used to home in against emitting surface-to-air missile (SAM) sites, to an air intercept weapon. Current air-to-air passive anti-radiation missile development is thought to be a countermeasure to airborne early warning and control (AEW&C – also known as AEW or AWACS) aircraft which typically mount powerful search radars. Due to their dependence on target aircraft radar emissions, when used against fighter aircraft passive anti-radiation missiles are primarily limited to forward-aspect intercept geometry. For examples, see Vympel R-27 and Brazo. Another aspect of passive anti-radiation homing is the \"home on jam\" mode which, when installed, allows a radar-guided missile to home in on the jammer of the target aircraft if the primary seeker is jammed by the electronic countermeasures of the target aircraft.",
+      "char_count": 966,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0015",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== Design ==",
+      "heading_path": "== Design ==",
+      "start_char": 11284,
+      "end_char": 12260,
+      "content": "== Design == Air-to-air missiles are typically long, thin cylinders in order to reduce their cross section and thus minimize drag at the high speeds at which they travel. Missiles are divided into five primary systems (moving forward to aft): seeker, guidance, warhead, motor, and control actuation. At the front is the seeker, either a radar system, radar homer, or infra-red detector. Behind that lies the avionics which control the missile. Typically after that, in the centre of the missile, is the warhead, usually several kilograms of high explosive surrounded by metal that fragments on detonation (or in some cases, pre-fragmented metal). The rear part of the missile contains the propulsion system, usually a rocket of some type and the control actuation system or CAS. Dual-thrust solid-fuel rockets are common, but some longer-range missiles use liquid-fuel motors that can \"throttle\" to extend their range and preserve fuel for energy-intensive final maneuvering.",
+      "char_count": 975,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0016",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== Design ==",
+      "heading_path": "== Design ==",
+      "start_char": 12260,
+      "end_char": 13211,
+      "content": "Some solid-fuelled missiles mimic this technique with a second rocket motor which burns during the terminal homing phase. There are missiles, such as the MBDA Meteor, that \"breathe\" air (using a ramjet, similar to a jet engine) in order to extend their range. Modern missiles use \"low-smoke\" motors – early missiles produced thick smoke trails, which were easily seen by the crew of the target aircraft alerting them to the attack and helping them determine how to evade it. The CAS is typically an electro-mechanical, servo control actuation system, which takes input from the guidance system and manipulates the airfoils or fins at the rear of the missile that guide or steers the weapon to target. Nowadays, countries start developing hypersonic air-to-air missile using scramjet engines (such as R-37, or AIM-260 JATM), which not only increases efficiency for BVR battles, but it also makes survival chances of target aircraft drop to nearly zero.",
+      "char_count": 951,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0017",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== Performance ==",
+      "heading_path": "== Performance ==",
+      "start_char": 13217,
+      "end_char": 14054,
+      "content": "== Performance == A number of terms frequently crop up in discussions of air-to-air missile performance. Launch success zone The Launch Success Zone is the range within which there is a high (defined) kill probability against a target that remains unaware of its engagement until the final moment. When alerted visually or by a warning system the target attempts a last-ditch-manoeuvre sequence. F-pole A closely related term is the F-Pole. This is the slant range between the launch aircraft and target, at the time of interception. The greater the F-Pole, the greater the confidence that the launch aircraft will achieve air superiority with that missile. A-pole This is the slant range between the launch aircraft and target at the time that the missile begins active guidance or acquires the target with the missile's active seeker.",
+      "char_count": 836,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0018",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== Performance ==",
+      "heading_path": "== Performance ==",
+      "start_char": 14054,
+      "end_char": 14780,
+      "content": "The greater the A-Pole means less time and possibly greater distance that the launch aircraft needs to support the missile guidance until missile seeker acquisition. No-escape zone The no-escape zone is the zone within which there is a high (defined) kill probability against a target even if it has been alerted. This zone is defined as a conical shape with the tip at the missile launch. The cone's length and width are determined by the missile and seeker performance. A missile's speed, range and seeker sensitivity will mostly determine the length of this imaginary cone, while its agility (turn rate) and seeker complexity (speed of detection and ability to detect off axis targets) will determine the width of the cone.",
+      "char_count": 726,
+      "token_estimate": 181,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0019",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Missile minimum range ==",
+      "heading_path": "== = Missile minimum range ==",
+      "start_char": 14793,
+      "end_char": 15178,
+      "content": "== = Missile minimum range === A missile is subject to a minimum range, before which it cannot maneuver effectively. In order to maneuver sufficiently from a poor launch angle at short ranges to hit its target, some missiles use thrust vectoring, which allow the missile to start turning \"off the rail\", before its motor has accelerated it up to high enough speeds for its small aerodynamic surfaces to be useful.",
+      "char_count": 413,
+      "token_estimate": 103,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0020",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== Short-range air-to-air missile ==",
+      "heading_path": "== Short-range air-to-air missile ==",
+      "start_char": 15214,
+      "end_char": 15425,
+      "content": "== Short-range air-to-air missile == Short-range air-to-air missiles (SRAAMs), typically used in \"dogfighting\" or close range air combat compare to the beyond-visual-range missiles. Most of the short-range air-to-air missiles are infrared guided.",
+      "char_count": 246,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0021",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = SRAAM missile evolution ==",
+      "heading_path": "== = SRAAM missile evolution ==",
+      "start_char": 15456,
+      "end_char": 15675,
+      "content": "== = SRAAM missile evolution === Those missiles usually classified into five \"generations\" according to the historical technological advances. Most of these advances were in infrared seeker technology (later combined with digital signal processing).",
+      "char_count": 249,
+      "token_estimate": 62,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0022",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = First generation ==",
+      "heading_path": "== = First generation ==",
+      "start_char": 15699,
+      "end_char": 16128,
+      "content": "== = First generation === Early short-range missiles such as the early Sidewinders and K-13 (missile) (AA-2 Atoll) had infrared seekers with a narrow (30-degree) field of view and required the attacker to position himself behind the target (rear aspect engagement). This meant that the target aircraft only had to perform a slight turn to move outside the missile seeker's field of view and cause the missile to lose track of the target (\"break lock\").",
+      "char_count": 452,
+      "token_estimate": 113,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0023",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Second generation ==",
+      "heading_path": "== = Second generation ==",
+      "start_char": 16153,
+      "end_char": 17108,
+      "content": "== = Second generation === The second-generation of short-range missiles utilized more effective seekers that were better cooled than its predecessors while being typically \"uncaged\"; resulting in improved sensitivity to heat signatures, an increase in field of view as well as allowing the possibility of leading a missile within its FOV for an increased probability of kill against a maneuvering target. In some cases, the improved sensitivity to heat signatures allows for a very limited side and even all-aspect tracking, as is the case with the Red Top missile. In conjunction with improved control surfaces and propulsion motors over the first generation of dogfight missiles, the technological advances of the second-generation short-range missiles allowed them to be used not just on non-maneuvering bombers, but also actively maneuvering fighters. Examples include advanced derivatives of the K-13 (missile) and AIM-9 such as K-13M (R-13M, Object 380) or AIM-9D / G / H.",
+      "char_count": 979,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0024",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Third generation ==",
+      "heading_path": "== = Third generation ==",
+      "start_char": 17132,
+      "end_char": 17734,
+      "content": "== = Third generation === This generation introduced much more sensitive seekers that are capable of locking onto the warm heat irradiated by the skins of aircraft from the front or side aspects, as opposed to just the hotter engine nozzle(s) from rear-aspect, allowing for a true all-aspect capability. This significantly expanded potential attacking envelopes, allowing the attacker to fire at a target which was side-on or front-on to itself as opposed to just the rear. While the field-of-view was still restricted to a fairly narrow cone, the attack at least did not have to be behind the target.",
+      "char_count": 601,
+      "token_estimate": 150,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0025",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Third generation ==",
+      "heading_path": "== = Third generation ==",
+      "start_char": 17734,
+      "end_char": 18190,
+      "content": "Also typical of the third generation of short-range missiles are further improved agility over the previous generation as well as their ability to radar-slave; which is acquiring tracking data from the launching aircraft's radar or IRST systems, allowing attackers to launch missiles without ever pointing the nose of the aircraft at an enemy prior to leading the missile. Examples of this generation of dogfight missiles include the R-60M or the Python-3.",
+      "char_count": 456,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0026",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Fourth generation ==",
+      "heading_path": "== = Fourth generation ==",
+      "start_char": 18192,
+      "end_char": 19016,
+      "content": "== = Fourth generation === The R-73 (missile) (AA-11 Archer) entered service in 1985 and marked a new generation of dogfight missile. It had a wider field of view and could be cued onto a target using a helmet mounted sight. This allowed it to be launched at targets that would otherwise not be seen by older generation missiles that generally stared forward while waiting to be launched. This capability, combined with a more powerful motor that allows the missile to maneuver against crossing targets and launch at greater ranges, gives the launching aircraft improved tactical freedom. Other members of the 4th generation use focal plane arrays to offer greatly improved scanning and countermeasures resistance (especially against flares). These missiles are also much more agile, some by employing thrust vectoring (typically gimballed thrust).",
+      "char_count": 848,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0027",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Fifth generation ==",
+      "heading_path": "== = Fifth generation ==",
+      "start_char": 19040,
+      "end_char": 19820,
+      "content": "== = Fifth generation === The latest generation of short-range missiles again defined by advances in seeker technologies, this time electro-optical imaging infrared (IIR) seekers that allow the missiles to \"see\" images rather than single \"points\" of infrared radiation (heat). The sensors combined with more powerful digital signal processing provide the following benefits: greater infrared counter countermeasures (IRCCM) ability, by being able to distinguish aircraft from infrared countermeasures (IRCM) such as flares. greater sensitivity means greater range and ability to identify smaller low flying targets such as UAVs. more detailed target image allows targeting of more vulnerable parts of aircraft instead of just homing in on the brightest infrared source (exhaust).",
+      "char_count": 779,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0028",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Fifth generation ==",
+      "heading_path": "== = Fifth generation ==",
+      "start_char": 19820,
+      "end_char": 20174,
+      "content": "Examples of fifth generation short-range missiles include: R-73M (\"AA-11 Archer\") – Russia (1994–) ASRAAM – UK (1998–) AIM-9X Sidewinder – US (2003–) Python 5 – Israel (2003–) AAM-5 – Japan (2004–) IRIS-T – Germany (2005–) PL-10 – China (2015–) R-74M2 (\"AA-11 Archer\") – Russia (2019–) A-Darter – South Africa and Brazil (2019–) Bozdoğan – Turkey (2024–)",
+      "char_count": 354,
+      "token_estimate": 88,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0029",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = France ==",
+      "heading_path": "== = France ==",
+      "start_char": 20500,
+      "end_char": 20939,
+      "content": "== = France === Nord AA.20, AA.25 – radio-guided, beam-riding Matra R.510 – IR-guided Matra R.511 – radar-guided Matra R.550 Magic – short-range, IR-guided Matra Magic II – IR-guided Matra R.530 – medium-range, IR- or radar-guided Matra Super 530F/Super 530D – medium-range, radar-guided Matra Mistral – IR-guided MBDA MICA – medium-range, IR- or active radar-guided MBDA Meteor – long-range active radar-guided missile, integrated on Rafale. TRIGAT LR",
+      "char_count": 452,
+      "token_estimate": 113,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0030",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Germany ==",
+      "heading_path": "== = Germany ==",
+      "start_char": 20954,
+      "end_char": 21440,
+      "content": "== = Germany === Henschel Hs 298 – World War II design, MCLOS, never saw service IRIS-T MBDA Meteor long-range, active radar-guided, pending contract for integration on Eurofighter. Ruhrstahl X-4 – World War II design, first practical anti-aircraft missile, MCLOS, never saw service RZ 65 missile project developed by Rheinmetall-Borsig in 1941. After about 3000 tests it revealed itself unsatisfactory owing to an accuracy of only 15%. The project was terminated by the end of the war. Dornier Viper",
+      "char_count": 500,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0031",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 21453,
+      "end_char": 21681,
+      "content": "== = India === Astra Mk 1 – Long-range radar-guided Astra Mk 2 – Long-range radar-guided Astra Mk 3 – Long-range radar-guided Astra IR – Short-range infrared homing K-100 (missile) – Inertial navigation and active radar homing (with Russia)",
+      "char_count": 240,
+      "token_estimate": 60,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0032",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Iran ==",
+      "heading_path": "== = Iran ==",
+      "start_char": 21693,
+      "end_char": 21844,
+      "content": "== = Iran === Fatter – copy of U.S. AIM-9 Sidewinder Sedjil – copy of U.S. MIM-23 Hawk converted to be carried by aircraft Fakour-90 – copy of U.S. AIM-54 Phoenix",
+      "char_count": 162,
+      "token_estimate": 40,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0033",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Israel ==",
+      "heading_path": "== = Israel ==",
+      "start_char": 21917,
+      "end_char": 22486,
+      "content": "== = Israel === Python: Rafael Shafrir – first Israeli domestic AAM Rafael Shafrir 2 – improved Shafrir missile Rafael Python 3 – medium-range IR-homing missile with all aspect capability  Rafael Python 4 – medium-range IR-homing missile with HMS-guidance capability  Python-5 – improved Python 4 with electro-optical imaging seeker, and 360 degrees lock on. (and launch)  Rafael Derby – Also known as the Alto, this is a medium-range, BVR active radar-homing missile  I-Derby ER – long range BVR active radar-homing missile Sky Spear – 6th generation long-range, air-to-air missile",
+      "char_count": 582,
+      "token_estimate": 145,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0034",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Japan ==",
+      "heading_path": "== = Japan ==",
+      "start_char": 22582,
+      "end_char": 23027,
+      "content": "== = Japan === AAM-1 – (Type 69 air-to-air missile) short-range, IR-seeking air-to-air missile. AAM-2 – short-range, IR-seeking air-to-air missile; similar to AIM-4D, prototype-only. AAM-3 – (Type 90 air-to-air missile) short-range, all-aspect IR-seeking air-to-air missile. AAM-4 – (Type 99 air-to-air missile) medium-range, active radar-guided air-to-air missile. AAM-5 – (Type 04 air-to-air missile) short-range, all-aspect IR-seeking air-to-air missile.",
+      "char_count": 457,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0035",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = People's Republic of China ==",
+      "heading_path": "== = People's Republic of China ==",
+      "start_char": 23061,
+      "end_char": 24003,
+      "content": "== = People's Republic of China === PL-1 – PRC version of the Soviet K-5 (missile) (AA-1 Alkali), retired. PL-2 – PRC version of the Soviet Vympel K-13 (AA-2 Atoll), which was based on AIM-9B Sidewinder.  Retired & replaced by PL-5 in PLAAF service. PL-3 – updated version of the PL-2, did not enter service. PL-4 – experimental BVR missile based on AIM-7D, did not enter service. PL-6 – updated version of PL-3, also did not enter service. PL-5 – updated version of the PL-2, known versions include:  PL-5A – semi-active radar-homing AAM intended to replace the PL-2, did not enter service. Resembles AIM-9G in appearance. PL-5B – IR version, entered service in the 1990s to replace the PL-2 SRAAM. Limited off-boresight PL-5C – Improved version comparable to AIM-9H or AIM-9L in performance PL-5E – All-aspect attack version, resembles AIM-9P in appearance. PL-7 – PRC version of the IR-homing French R550 Magic AAM, did not enter service.",
+      "char_count": 941,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0036",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = People's Republic of China ==",
+      "heading_path": "== = People's Republic of China ==",
+      "start_char": 24003,
+      "end_char": 24961,
+      "content": "PL-8 – PRC version of the Israeli Rafael Python 3  PL-9 – short-range IR-guided missile, marketed for export. One known improved version (PL-9C).  PL-10(old);– semi-active radar-homing medium-range missile based on the HQ-61 SAM,  often confused with PL-11. Did not enter service. PL-10(new)/PL-ASR – short-range off-boresight all-aspect IR-guided missile. PL-11 – medium-range air-to-air missile (MRAAM), based on the HQ-61C & Italian Aspide (AIM-7) technology. Limited service with J-8-B/D/H fighters. Known versions include:  PL-11 – MRAAM with semi-active radar homing, based on the HQ-61C SAM and Aspide seeker technology, exported as FD-60  PL-11A – Improved PL-11 with increased range, warhead, and more effective seeker. The new seeker only requires fire-control radar guidance during the terminal stage, providing a basic LOAL (lock-on after launch) capability. PL-11B – Also known as PL-11 AMR, improved PL-11 with AMR-1 active radar-homing seeker.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0037",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = People's Republic of China ==",
+      "heading_path": "== = People's Republic of China ==",
+      "start_char": 24962,
+      "end_char": 25534,
+      "content": "LY-60 – PL-11 adopted for navy ships for air-defense, sold to Pakistan but does not appear to be in service with the Chinese Navy.  PL-12 (SD-10) – medium-range active radar missile  PL-12A – with upgraded motor PL-12B – with upgraded guidance PL-12C – with foldable tailfins PL-12D – with belly inlet and ramjet motors F80 – medium-range active radar missile PL-15 – long-range active radar missile PL-17 – extreme long-range active radar missile PL-21 - long-range active radar missile (In Development) TY-90 – light IR-homing air-to-air missile designed for helicopters",
+      "char_count": 572,
+      "token_estimate": 143,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0038",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Soviet Union/Russian Federation ==",
+      "heading_path": "== = Soviet Union/Russian Federation ==",
+      "start_char": 25542,
+      "end_char": 26501,
+      "content": "== = Soviet Union/Russian Federation === K-5 (missile) (NATO reporting name AA-1 'Alkali') – beam-riding Vympel K-13 (NATO reporting name AA-2 'Atoll') – short-range IR or SARH Kaliningrad K-8 (NATO reporting name AA-3 'Anab') – IR or SARH Raduga K-9 (NATO reporting name AA-4 'Awl') – IR or SARH Bisnovat R-4 (NATO reporting name AA-5 'Ash') – IR or SARH Bisnovat R-40 (NATO reporting name AA-6 'Acrid') – long-range IR or SARH Vympel R-23/R-24 (NATO reporting name AA-7 'Apex') – medium-range SARH or IR Molniya R-60 (NATO reporting name AA-8 'Aphid') – short-range IR Vympel R-33 (NATO reporting name AA-9 'Amos') – long-range active radar Vympel R-27 (NATO reporting name AA-10 'Alamo') – medium-range SARH or IR Vympel R-73 and R-74 (NATO reporting name AA-11 'Archer') – short-range IR Vympel R-77 (NATO reporting name AA-12 'Adder') – medium-range active radar Vympel R-37 (NATO reporting name AA-13 'Axehead') – long-range SARH or active radar homing",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0039",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = Turkey ==",
+      "heading_path": "== = Turkey ==",
+      "start_char": 26800,
+      "end_char": 27241,
+      "content": "== = Turkey === Bozdoğan (Merlin) – WVRAAM (within-visual-range air-to-air missile) Gökdoğan (Peregrine) – BVRAAM (beyond-visual-range air-to-air missile) Akdoğan (Gyrfalcon) – Akdoğan is a 'mini' air-to-air missile intended to be cost-effective and to be used in UAVs such as Bayraktar Akıncı and TAI Aksungur. Gökhan – it was officially confirmed that this variant would have a Ramjet. Sungur - MANPADS Air-to-air version also available for use on UAVs",
+      "char_count": 454,
+      "token_estimate": 113,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "airtoairmissile_77a3c6cf_c0040",
+      "article_id": "airtoairmissile_77a3c6cf",
+      "section": "== = United Kingdom ==",
+      "heading_path": "== = United Kingdom ==",
+      "start_char": 27263,
+      "end_char": 27621,
+      "content": "== = United Kingdom === Fireflash – short-range beam-riding Firestreak – short-range IR Red Top – short-range IR Taildog/SRAAM – short-range IR Skyflash – medium-range radar-guided missile based on the AIM-7E2, said to have quick warm-up times of 1 to 2 seconds. AIM-132 ASRAAM – short-range IR MBDA Meteor – long-range active radar-guided missile with a solid fuel ducted ramjet",
+      "char_count": 379,
+      "token_estimate": 94,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What technological advancements enabled second-generation short-range missiles to be effective against maneuvering fighters?",
+        "answer": "Second-generation short-range missiles incorporated more effective, better-cooled, and \"uncaged\" seekers, which increased sensitivity to heat signatures and expanded the field of view. These seeker improvements, along with better control surfaces and propulsion motors, allowed the missiles to be used against actively maneuvering fighters, not just non-maneuvering bombers.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0023"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What information is provided about == Design ==?",
+        "answer": "The text provides information about == Design == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0015"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What is the \"home on jam\" mode for a radar-guided missile?",
+        "answer": "The \"home on jam\" mode is a feature that allows a radar-guided missile to home in on the jammer of a target aircraft if the missile's primary seeker is jammed by the target's electronic countermeasures.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0014"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0000",
+          "airtoairmissile_77a3c6cf_c0001",
+          "airtoairmissile_77a3c6cf_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the primary types of air-to-air missile guidance systems, and how does the guidance technology affect the feasibility of adapting them for surface-to-air use?",
+        "answer": "The primary types of guidance are heat-seeking (infra-red) and radar guidance. The first successful combat use involved the heat-seeking AIM-9 Sidewinder in 1958. The guidance technology significantly impacts their adaptation for surface-to-air roles. Heat-seeking missiles like the R-60 and R-73 are easier to adapt as they only need power, liquid nitrogen to cool the seeker, and a pylon. In contrast, radar-guided missiles like the R-27 and R-77 are much more difficult to use from the ground because they require a supporting radar to guide them to the target.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0003",
+          "airtoairmissile_77a3c6cf_c0004",
+          "airtoairmissile_77a3c6cf_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does a missile launched from a NASAMS air defense system, such as an AMRAAM or IRIS-T, guide itself to a target and what type of warhead does it use to destroy it?",
+        "answer": "A missile launched from a NASAMS system guides itself by detecting its target, typically using radar or infrared methods, and then homing in on a collision course. To destroy the target, it uses a conventional explosive blast, fragmentation, or continuous rod warhead, which is detonated by a proximity fuze or an impact fuze upon a direct hit.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0006",
+          "airtoairmissile_77a3c6cf_c0007",
+          "airtoairmissile_77a3c6cf_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0000",
+          "airtoairmissile_77a3c6cf_c0001"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Trace the history of the AIM-9 Sidewinder missile, including its initial deployment, first combat use, influence on Soviet technology, and use in the Falklands War.",
+        "answer": "The AIM-9 Sidewinder was first deployed by the US Navy in 1956. Its first successful combat use occurred in 1958 when the Republic of China Air Force used it to shoot down a PLAAF MiG-17. During that conflict, a largely intact Sidewinder was recovered by the PLAAF and turned over to the Soviets, who reverse-engineered it to create their K-13 AAM. Later, during the Falklands War, British Harriers used an advanced version, the AIM-9L, to defeat faster Argentinian opponents.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0002",
+          "airtoairmissile_77a3c6cf_c0003",
+          "airtoairmissile_77a3c6cf_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does the Western approach to using air-to-air missiles as surface-to-air missiles, such as with the NASAMS system, differ from the improvised methods used by Serb and Houthi forces?",
+        "answer": "The Western approach, exemplified by the Norwegian-American NASAMS, is a purpose-built air defense system designed to fire unmodified air-to-air missiles like the AIM-9 Sidewinder and AMRAAM. This integrated system has proven highly effective, with over 100 successful shoot-downs reported in Ukraine. In contrast, the methods used by Serb and Houthi forces are ad-hoc adaptations of Soviet-era missiles (e.g., R-73, R-27), requiring external components like FLIR turrets and facing challenges like the lack of proper radar guidance. This improvised approach has demonstrated very limited success, with only one verified near miss mentioned.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0005",
+          "airtoairmissile_77a3c6cf_c0006"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How have infrared guided missiles and their associated countermeasures evolved over time?",
+        "answer": "Early infrared (IR) missiles had poor sensitivity, could only track hot engine exhausts from behind, and were easily confused by the sun or clouds. To counter these, aircraft began using flares, which are hotter than the aircraft, to act as decoys. In response, more modern IR missiles developed filters to ignore heat sources outside a specific temperature range and could detect the heat from an aircraft's skin, giving them \"all-aspect\" capability. Further countermeasures include towed decoys and \"hot brick\" jammers. The most recent evolution includes 21st-century missiles with \"imaging infrared\" seekers that can visually distinguish an aircraft from a flare, and research is underway on laser devices to spoof or destroy IR guidance systems.",
+        "related_chunk_ids": [
+          "airtoairmissile_77a3c6cf_c0010",
+          "airtoairmissile_77a3c6cf_c0011",
+          "airtoairmissile_77a3c6cf_c0012"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T10:54:57.627Z",
+    "content_format": "markdown",
+    "total_chunks": 41,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

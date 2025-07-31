@@ -108,14 +108,22 @@ async def run_rag_evaluation():
             #     combination_method="borda_count",
             #     excessive_k=60
             # )
-            RetrievalConfig(
-                name="graph_rag",
-                enabled=True,
-                technique="graph_rag",
-                top_k=10,
-                embedding_model="mxbai-embed-large",
-                similarity_metric="cosine"
-            )
+            # RetrievalConfig(
+            #     name="graph_rag",
+            #     enabled=True,
+            #     technique="graph_rag",
+            #     top_k=10,
+            #     embedding_model="mxbai-embed-large",
+            #     similarity_metric="cosine"
+            # ),
+            # RetrievalConfig(
+            #     name="hypergraph_rag",
+            #     enabled=True,
+            #     technique="hypergraph_rag",
+            #     top_k=10,
+            #     embedding_model="mxbai-embed-large",
+            #     similarity_metric="cosine"
+            # )
         ],
         # Passage rerank: (optional, can add more configs)
         passage_rerank=[
@@ -310,26 +318,26 @@ async def run_rag_evaluation():
         
 
         passage_augment=[
-            # PassageAugmentConfig(
-            #     name="no_augment",
-            #     enabled=True,
-            #     technique="none",
-            # ),
+            PassageAugmentConfig(
+                name="no_augment",
+                enabled=True,
+                technique="none",
+            ),
             # PassageAugmentConfig(
             #     name="prev_next_augmenter",
             #     enabled=True,
             #     technique="prev_next_augmenter",
             #     n=1
             # )
-            # PassageAugmentConfig(
-            #     name="relevant_segment_extractor",
-            #     enabled=True,
-            #     technique="relevant_segment_extractor",
-            #     max_chunk_number_in_segment=5,
-            #     irrelevant_chunk_penalty=0.18,
-            #     decay_rate=30,
-            #     overall_max_chunk_number=10
-            # )
+            PassageAugmentConfig(
+                name="relevant_segment_extractor",
+                enabled=True,
+                technique="relevant_segment_extractor",
+                max_chunk_number_in_segment=5,
+                irrelevant_chunk_penalty=0.18,
+                decay_rate=30,
+                overall_max_chunk_number=10
+            )
         ],
         post_generation=[],
 
