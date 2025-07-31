@@ -188,11 +188,19 @@ async def run_rag_evaluation():
             #     llm_summarize_max_tokens=500,
             #     llm_summarize_temperature=0.1,
             # ),
-            # PassageCompressConfig(
-            #     name="no_compress",
-            #     enabled=True,
-            #     technique="none",
-            # )
+            PassageCompressConfig(
+                name="no_compress",
+                enabled=True,
+                technique="none",
+            ),
+            PassageCompressConfig(
+                name="tree_summarize",
+                enabled=True,
+                technique="tree_summarize",
+                provider="ollama",
+                tree_summarize_model="gemma3:4b",
+                max_fan_in=3
+            )
         ],
 
         # Prompt maker: one config

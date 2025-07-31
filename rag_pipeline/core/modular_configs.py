@@ -269,9 +269,8 @@ class PassageCompressConfig(BaseModel):
     technique: str = "none"  # Options: "none", "tree_summarize", "long_context", "multi_llm_ensemble", "multi_llm_fusion", "window_replacement", "step_back"
     
     # Tree Summarize settings
-    tree_summarize_chunk_size: int = 2000
-    tree_summarize_overlap: int = 200
-    tree_levels: int = 3
+    tree_summarize_model: str = "gemma3:4b"
+    max_fan_in: int = 3
     
     # LLM Summarize settings
     provider: str = "ollama"
@@ -280,27 +279,6 @@ class PassageCompressConfig(BaseModel):
     llm_summarize_max_tokens: int = 500
     llm_summarize_temperature: float = 0.1
     
-    # # Long Context Readers settings
-    # use_long_context: bool = False
-    # context_length_limit: int = 8192
-    # compression_ratio: float = 0.5
-    
-    # # Multi-LLM Model Ensemble settings
-    # ensemble_models: List[str] = []
-    # ensemble_method: str = "voting"  # Options: "voting", "weighted", "consensus"
-    
-    # # Multi-LLM Model Fusion settings
-    # fusion_models: List[str] = []
-    # fusion_weights: List[float] = []
-    
-    # # Window Replacement settings
-    # window_size: int = 512
-    # stride: int = 256
-    
-    # # Step-back Prompting settings
-    # use_step_back: bool = False
-    # step_back_template: str = "What are the key concepts related to: {query}"
-
 
 class PromptMakerConfig(BaseModel):
     """Configuration for prompt construction techniques"""

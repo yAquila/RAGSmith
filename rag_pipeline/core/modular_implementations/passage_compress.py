@@ -1,5 +1,5 @@
 import logging
-from typing import List, Dict, Any, TypedDict
+from typing import List, Dict, Any, TypedDict, Tuple
 
 from rag_pipeline.core.modular_framework import (
     PassageCompressComponent, Document, Query
@@ -29,17 +29,87 @@ class NonePassageCompress(PassageCompressComponent):
 
 class TreeSummarize(PassageCompressComponent):
     """Compress passages using tree summarization"""
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        self.client = None
+        self._setup_client()
     
+    def _setup_client(self):
+        """Setup the appropriate LLM client"""
+        provider = self.config.get("provider", "ollama")
+        if provider.lower() == "ollama":
+            from rag_pipeline.util.api.ollama_client import OllamaUtil
+            self.client = OllamaUtil
+        elif provider.lower() == "gemini":
+            from rag_pipeline.util.api.gemini_client import GeminiUtil
+            self.client = GeminiUtil
+        else:
+            raise ValueError(f"Unsupported provider: {provider}")
+    
+
+    def summarize_chunk(self, text: str) -> Tuple[str, int, int]:
+        prompt = (
+            "Write a summary of the following. Try to use only the information provided. Try to include as many key details as possible.\n"
+            "{context_str}\n"
+            'SUMMARY:\n'
+        )
+
+        response = self.client.get_ollama_response(self.config.get("tree_summarize_model", "gemma3:4b"), prompt.format(context_str=text))
+        if isinstance(response, dict):
+            return response.get('response', '').strip(), response.get('prompt_tokens', 0), response.get('eval_count', 0)
+        else:
+            return response.strip(), 0, 0
+
     async def compress_passages(self, documents: List[Document], query: Query) -> PassageCompressResult:
-        """Compress documents using tree summarization"""
-        # Placeholder implementation
-        logger.warning("TreeSummarize not fully implemented yet")
+        """
+        Recursively summarize the content of the provided documents using a tree summarization approach.
+        Each document's content is treated as a chunk. Summarization is performed in groups of max_fan_in.
+        """
+        # Extract text chunks from documents
+        text_chunks = [doc.content for doc in documents]
+        doc_metadatas = [doc.metadata for doc in documents]
+
+        current_level = text_chunks
+        current_metadatas = doc_metadatas
+
+        llm_input_token_count = 0.0
+        llm_output_token_count = 0.0
+
+        # Helper to estimate token count (very rough)
+        def estimate_tokens(text):
+            return len(text.split()) / 0.75  # crude: 0.75 words/token
+
+        while len(current_level) > 1:
+            next_level = []
+            next_metadatas = []
+            for i in range(0, len(current_level), self.config.get("max_fan_in", 3)):
+                group = current_level[i:i+self.config.get("max_fan_in", 3)]
+                group_metadata = current_metadatas[i:i+self.config.get("max_fan_in", 3)]
+                combined = "\n\n".join(group)
+                summary, prompt_tokens, eval_count = self.summarize_chunk(combined)
+                llm_input_token_count += prompt_tokens if prompt_tokens > 0 else estimate_tokens(combined)
+                llm_output_token_count += eval_count if eval_count > 0 else estimate_tokens(summary)
+                next_level.append(summary)
+                next_metadatas.append(group_metadata[0] if group_metadata else {})
+            current_level = next_level
+            current_metadatas = next_metadatas
+
+        # Final summarized document
+        summarized_content = current_level[0] if current_level else ""
+        summarized_metadata = current_metadatas[0] if current_metadatas else {}
+
+        summarized_doc = Document(
+            doc_id=documents[0].doc_id,
+            content=summarized_content,
+            metadata=summarized_metadata
+        )
+
         result = PassageCompressResult(
-            documents=documents,
-                embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
-            )
+            documents=[summarized_doc],
+            embedding_token_count=estimate_tokens(summarized_content),
+            llm_input_token_count=llm_input_token_count,
+            llm_output_token_count=llm_output_token_count
+        )
         return result
 
 class LLMSummarize(PassageCompressComponent):
@@ -88,7 +158,7 @@ You are an efficient Document Compressor. Your task is to read the document prov
 ### Compressed Summary
             """
             prompt = self.config.get("prompt", default_prompt)
-            response = self.client.get_ollama_response(self.config.get("model", "gemma3:4b"), prompt.format(document=doc.content))
+            response = self.client.get_ollama_response(self.config.get("llm_summarize_model", "gemma3:4b"), prompt.format(document=doc.content))
             if isinstance(response, dict):
                 total_prompt_tokens += float(response.get('prompt_tokens', len(prompt.split())))
                 total_eval_count += float(response.get('eval_count', 0))
