@@ -333,19 +333,18 @@ class PostGenerationConfig(BaseModel):
     technique: str = "none"  # Options: "none", "reflection_revising"
     
     # Reflection and Revising settings
-    use_reflection: bool = False
-    reflection_model: str = "gpt-3.5-turbo"
-    reflection_prompt: str = "Review and improve this answer: {answer}\n\nOriginal question: {query}\nContext: {context}"
+    provider: str = "ollama"
+    reflection_revising_model: str = "gemma3:4b"
     max_revisions: int = 2
     
-    # Quality checks
-    check_hallucination: bool = False
-    check_relevance: bool = False
-    relevance_threshold: float = 0.8
+    # # Quality checks
+    # check_hallucination: bool = False
+    # check_relevance: bool = False
+    # relevance_threshold: float = 0.8
     
-    # Answer formatting
-    format_answer: bool = False
-    output_format: str = "text"  # Options: "text", "markdown", "json"
+    # # Answer formatting
+    # format_answer: bool = False
+    # output_format: str = "text"  # Options: "text", "markdown", "json"
 
 
 # ==================== UNIFIED RAG CONFIGURATION ====================
