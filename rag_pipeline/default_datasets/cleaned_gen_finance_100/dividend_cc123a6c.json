@@ -1,0 +1,516 @@
+{
+  "article": {
+    "id": "dividend_cc123a6c",
+    "title": "Dividend",
+    "url": "https://en.wikipedia.org/wiki/Dividend",
+    "lang": "en",
+    "created_at": "2025-07-30T14:07:21.029582",
+    "content": "---\nid: dividend_cc123a6c\nurl: https://en.wikipedia.org/wiki/Dividend\ntitle: Dividend\nlang: en\ncreated_at: '2025-07-30T14:01:32.158540'\nchecksum: abaf673973873cd34cf47095eca28b81ebb10fe4a818cfe5318afd0bf226a4f7\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4118\n  char_count: 25136\n  num_chunks: 31\n  original_chunks: 36\n  filtered_out: 5\n  num_sections: 0\n---\nA dividend is a distribution of profits by a corporation to its shareholders, after which the stock exchange decreases the price of the stock by the dividend to remove volatility. The market has no control over the stock price on open on the ex-dividend date, though more often than not it may open higher. When a corporation earns a profit or surplus, it is able to pay a portion of the profit as a dividend to shareholders. Any amount not distributed is taken to be re-invested in the business (called retained earnings). The current year profit as well as the retained earnings of previous years are available for distribution; a corporation is usually prohibited from paying a dividend out of its capital. Distribution to shareholders may be in cash (usually by bank transfer) or, if the corporation has a dividend reinvestment plan, the amount can be paid by the issue of further shares or by share repurchase. In some cases, the distribution may be of assets. The dividend received by a shareholder is income of the shareholder and may be subject to income tax (see dividend tax). The tax treatment of this income varies considerably between jurisdictions. The corporation does not receive a tax deduction for the dividends it pays. A dividend is allocated as a fixed amount per share, with shareholders receiving a dividend in proportion to their shareholding. Dividends can provide at least temporarily stable income and raise morale among shareholders, but are not guaranteed to continue. For the joint-stock company, paying dividends is not an expense; rather, it is the division of after-tax profits among shareholders. Retained earnings (profits that have not been distributed as dividends) are shown in the shareholders' equity section on the company's balance sheet – the same as its issued share capital. Public companies usually pay dividends on a fixed schedule, but may cancel a scheduled dividend, or declare an unscheduled dividend at any time, sometimes called a special dividend to distinguish it from the regular dividends. (more usually a special dividend is paid at the same time as the regular dividend, but for a one-off higher amount). Cooperatives, on the other hand, allocate dividends according to members' activity, so their dividends are often considered to be a pre-tax expense. The usually fixed payments to holders of preference shares (or preferred stock in American English) are classed as dividends. The word dividend comes from the Latin word dividendum (\"thing to be divided\"). == History == The Dutch East India Company (VOC) was the first recorded (public) company to pay regular dividends. The VOC paid annual dividends worth around 18 percent of the value of the shares for almost 200 years of existence (1602–1800). In common law jurisdictions, courts have typically refused to intervene in companies' dividend policies, giving directors wide discretion as to the declaration or payment of dividends. The principle of non-interference was established in the Canadian case of Burland v Earle (1902), the British case of Bond v Barrow Haematite Steel Co (1902), and the Australian case of Miles v Sydney Meat-Preserving Co Ltd (1912). However in Sumiseki Materials Co Ltd v Wambo Coal Pty Ltd (2013) the Supreme Court of New South Wales broke with this precedent and recognised a shareholder's contractual right to a dividend. == Forms of payment == Cash dividends are the most common form of payment and are paid out in currency, usually via electronic funds transfer or a printed paper check. Such dividends are a form of investment income of the shareholder, usually treated as earned in the year they are paid (and not necessarily in the year a dividend was declared). For each share owned, a declared amount of money is distributed. Thus, if a person owns 100 shares and the cash dividend is 50 cents per share, the holder of the stock will be paid $50. Dividends paid are not classified as an expense, but rather a deduction of retained earnings. Dividends paid does not appear on an income statement, but does appear on the balance sheet. Different classes of stocks have different priorities when it comes to dividend payments. Preferred stocks have priority claims on a company's income. A company must pay dividends on its preferred shares before distributing income to common share shareholders. Stock or scrip dividends are those paid out in the form of additional shares of the issuing corporation, or another corporation (such as its subsidiary corporation). They are usually issued in proportion to shares owned (for example, for every 100 shares of stock owned, a 5% stock dividend will yield 5 extra shares). Nothing tangible will be gained if the stock is split because the total number of shares increases, lowering the price of each share, without changing the total value of the shares held. (See also Stock dilution.) Stock dividend distributions do not affect the market capitalization of a company. Stock dividends are not includable in the gross income of the shareholder for US income tax purposes. Because the shares are issued for proceeds equal to the pre-existing market price of the shares; there is no negative dilution in the amount recoverable. Property dividends or dividends in specie (Latin for \"in kind\") are those paid out in the form of assets from the issuing corporation or another corporation, such as a subsidiary corporation. They are relatively rare and most frequently are securities of other companies owned by the issuer, however, they can take other forms, such as products and services. Interim dividends are dividend payments made before a company's Annual General Meeting (AGM) and final financial statements. This declared dividend usually accompanies the company's interim financial statements. Other dividends can be used in structured finance. Financial assets with known market value can be distributed as dividends; warrants are sometimes distributed in this way. For large companies with subsidiaries, dividends can take the form of shares in a subsidiary company. A common technique for \"spinning off\" a company from its parent is to distribute shares in the new company to the old company's shareholders. The new shares can then be traded independently. == Payout ratio == A dividend payout ratio characterizes how much of a company's earnings (or its cash flow) is paid out in the form of dividends. Most often, the payout ratio is calculated based on dividends per share and earnings per share: A payout ratio greater than 100% means the company paid out more in dividends for the year than it earned. Since earnings are an accountancy measure, they do not necessarily closely correspond to the actual cash flow of the company. Hence another way to determine the safety of a dividend is to replace earnings in the payout ratio by free cash flow. Free cash flow is the business's operating cash flow minus its capital expenditures: this is a measure of how much incoming cash is \"free\" to pay out to stockholders and/or to grow the business. A free cash flow payout ratio greater than 100% means the company paid out more cash in dividends for the year than the \"free\" cash it took in. == Dividend dates == A dividend that is declared must be approved by a company's board of directors before it is paid. For public companies in the US, four dates are relevant regarding dividends: The position in the UK is very similar, except that the expression \"in-dividend date\" is not used. Declaration date – the day the board of directors announces its intention to pay a dividend. On that day, a liability is created and the company records that liability on its books; it now owes the money to the shareholders. In-dividend date – the last day, which is one trading day before the ex-dividend date, where shares are said to be cum dividend ('with [including] dividend'). That is, existing shareholders and anyone who buys the shares on this day will receive the dividend, and any shareholders who have sold the shares lose their right to the dividend. After this date the shares becomes ex dividend. Ex-dividend date – the day on which shares bought and sold no longer come attached with the right to be paid the most recently declared dividend. In the United States and many European countries, it is typically one trading day before the record date. This is an important date for any company that has many shareholders, including those that trade on exchanges, to enable reconciliation of who is entitled to be paid the dividend. Existing shareholders will receive the dividend even if they sell the shares on or after that date, whereas anyone who bought the shares will not receive the dividend. It is relatively common for a share's price to decrease on the ex-dividend date by an amount roughly equal to the dividend being paid, which reflects the decrease in the company's assets resulting from the payment of the dividend. Book closure date – when a company announces a dividend, it will also announce the date on which the company will temporarily close its books for share transfers, which is also usually the record date. Record date – shareholders registered in the company's record as of the record date will be paid the dividend, while shareholders who are not registered as of this date will not receive the dividend. Registration in most countries is essentially automatic for shares purchased before the ex-dividend date. Payment date – the day on which dividend cheques will actually be mailed to shareholders or the dividend amount credited to their bank account. == Dividend frequency == The dividend frequency is the number of dividend payments within a single business year. The most usual dividend frequencies are yearly, semi-annually, quarterly and monthly. Some common dividend frequencies are quarterly in the US, semi-annually in Japan, UK and Australia and annually in Germany. == Dividend-reinvestment == Some companies have dividend reinvestment plans, or DRIPs, not to be confused with scrips. DRIPs allow shareholders to use dividends to systematically buy small amounts of stock, usually with no commission and sometimes at a slight discount. In some cases, the shareholder might not need to pay taxes on these re-invested dividends, but in most cases they do. Utilizing a DRIP is a powerful investment tool because it takes advantage of both dollar cost averaging and compounding. Dollar cost averaging is the principle of investing a set amount of capital at recurring intervals. In this case, if the dividend is paid quarterly, then every quarter you are investing a set amount (the number of shares you own multiplied by the dividend per share). By doing this, you buy more shares when the price is low and fewer when the price is high. Additionally, the fractional shares that are purchased then begin paying dividends, compounding your investment and increasing the number of shares and total dividend earned each time a dividend distribution is made. == Law and government policy on dividends == Governments may adopt policies on dividend distribution for the protection of shareholders and the preservation of company viability, as well as treating dividends as a potential source of revenue. Most countries impose a corporate tax on the profits made by a company. Many jurisdictions also impose a tax on dividends paid by a company to its shareholders (stockholders), but the tax treatment of a dividend income varies considerably between jurisdictions. The primary tax liability is that of the shareholder, although a tax obligation may also be imposed on the corporation in the form of a withholding tax. In some cases, the withholding tax may be the extent of the tax liability in relation to the dividend. A dividend tax is in addition to any tax imposed directly on the corporation on its profits. A dividend paid by a company is not an expense of the company. === Australia and New Zealand === Australia and New Zealand have a dividend imputation system, wherein companies can attach franking credits or imputation credits to dividends. These franking credits represent the tax paid by the company upon its pre-tax profits. One dollar of company tax paid generates one franking credit. Companies can attach any proportion of franking up to a maximum amount that is calculated from the prevailing company tax rate: for each dollar of dividend paid, the maximum level of franking is the company tax rate divided by (1 − company tax rate). At the current 30% rate, this works out at 0.30 of a credit per 70 cents of dividend, or 42.857 cents per dollar of dividend. The shareholders who are able to use them, apply these credits against their income tax bills at a rate of a dollar per credit, thereby effectively eliminating the double taxation of company profits. === India === In India, a company declaring or distributing dividends is required to pay a Corporate Dividend Tax in addition to the tax levied on their income. The dividend received by the shareholders is then exempt in their hands. Dividend-paying firms in India fell from 24 percent in 2001 to almost 19 percent in 2009 before rising to 19 percent in 2010. However, dividend income over and above ₹1,000,000 attracts 10 percent dividend tax in the hands of the shareholder with effect from April 2016. Since the Budget 2020–2021, DDT has been abolished. Now, the Indian government taxes dividend income in the hands of investor according to income tax slab rates. === United States and Canada === The United States and Canada impose a lower tax rate on dividend income than ordinary income, on the assertion that company profits had already been taxed as corporate tax. In the United States, shareholders of corporations face double taxation – taxes on both corporate profits and taxes on distribution of dividends. === United Kingdom === The rules in Part 23 of the Companies Act 2006 (sections 829–853) govern the payment of dividends to shareholders. The Act refers in this section to \"distribution\", covering any kind of distribution of a company's assets to its members (with some exceptions), \"whether in cash or otherwise\". A company is only able to make a distribution out of its accumulated, realised profits, \"so far as not previously utilised by distribution or capitalisation, less its accumulated, realised losses, so far as not previously written off in a reduction or reorganisation of capital duly made\". The United Kingdom government announced in 2018 that it was considering a review of the existing rules on dividend distribution following a consultation exercise on insolvency and corporate governance. The aim was to address concerns which had emerged where companies in financial distress were still able to distribute \"significant dividends\" to their shareholders. A requirement has been proposed under which the largest companies would be required to publish a distribution policy statement covering dividend distribution. The law in England and Wales regarding dividend payment was clarified in 2018 by the England and Wales Court of Appeal in the case of Global Corporate Ltd v Hale  EWCA Civ 2618. Certain payments made to a director/shareholder had been treated by the High Court as quantum meruit payments to Hale in his capacity as a company director but the Appeal Court reversed this judgment and treated the payments as dividends. At the time of payment they had been treated as \"dividends\" payable from an anticipated profit. The company subsequently went into liquidation; an attempt to recharacterise the payments as payments for services rendered was held to be unlawful. == Effect on stock price == After a stock goes ex-dividend (when a dividend has just been paid, so there is no anticipation of another imminent dividend payment), the stock price should drop. To calculate the amount of the drop, the traditional method is to view the financial effects of the dividend from the perspective of the company. Since the company has paid say £x in dividends per share out of its cash account on the left hand side of the balance sheet, the equity account on the right side should decrease an equivalent amount. This means that a £x dividend should result in a £x drop in the share price. A more accurate method of calculating the fall in price is to look at the share price and dividend from the after-tax perspective of a shareholder. The after-tax drop in the share price (or capital gain/loss) should be equivalent to the after-tax dividend. For example, if the tax of capital gains Tcg is 35%, and the tax on dividends Td is 15%, then a £1 dividend is equivalent to £0.85 of after-tax money. To get the same financial benefit from a, the after-tax capital loss value should equal £0.85. The pre-tax capital loss would be ⁠£0.85/1 − Tcg⁠ = ⁠£0.85/1 − 0.35⁠ = ⁠£0.85/0.65⁠ = £1.31. In this case, a dividend of £1 has led to a larger drop in the share price of £1.31, because the tax rate on capital losses is higher than the dividend tax rate. However in many countries the stock market is dominated by institutions which pay no additional tax on dividends received (as opposed to tax on overall profits). If that is the case, then the share price should fall by the full amount of the dividend. Finally, security analysis that does not take dividends into account may mute the decline in share price, for example in the case of a price–earnings ratio target that does not back out cash; or amplify the decline when comparing different periods. The effect of a dividend payment on share price is an important reason why it can sometimes be desirable to exercise an American option early. === Criticism and analysis === Some believe company profits are best re-invested in the company with actions such as research and development, capital investment or expansion. Proponents of this view (and thus critics of dividends per se) suggest that an eagerness to return profits to shareholders may indicate the management having run out of good ideas for the future of the company. A counter-argument to this position came from Peter Lynch of Fidelity investments, who declared: \"One strong argument in favor of companies that pay dividends is that companies that don’t pay dividends have a sorry history of blowing the money on a string of stupid diworseifications\"; using his self-created term for diversification that results in worse effects, not better. Additionally, studies have demonstrated that companies that pay dividends have higher earnings growth, suggesting dividend payments may be evidence of confidence in earnings growth and sufficient profitability to fund future expansion. Benjamin Graham and David Dodd wrote in Securities Analysis (1934): \"The prime purpose of a business corporation is to pay dividends to its owners. A successful company is one that can pay dividends regularly and presumably increase the rate as time goes on.\" Other studies indicate that dividend-paying stocks tend to offer superior long-term performance relative to the overall market at least in developed economies, relative to a stock index such as the S&P 500 or Dow Jones Industrial Average or relative to stocks that do not pay dividends. Several explanations have been proposed for this outperformance such as dividends being associated with value stocks which are themselves associated with long-term outperformance; being more durable in crashes or bear markets; being associated with profitable companies exhibiting high levels of free cashflow; and being associated with mature, unfashionable companies that are overlooked by many investors and thus an effective contrarian strategy. Asset managers at Tweedy, Browne and Capital Group have suggested dividends are an effective measure of a given company's overall financial status. Shareholders in companies that pay little or no cash dividends can potentially reap the benefit of the company's profits when they sell their shareholding, or when a company is wound down and all assets liquidated and distributed amongst shareholders. However, data from professor Jeremy Siegel found stocks that do not pay dividends tend to have worse long-term performance, as a group, than the general stock market and also perform worse than dividend-paying stocks. ==== Tax implications ==== Taxation of dividends is often used as justification for retaining earnings, or for performing a stock buyback, in which the company buys back stock, thereby increasing the value of the stock left outstanding. When dividends are paid, individual shareholders in many countries suffer from double taxation of those dividends: the company pays income tax to the government when it earns any income, and then when the dividend is paid, the individual shareholder pays income tax on the dividend payment. In many countries, the tax rate on dividend income is lower than for other forms of income to compensate for tax paid at the corporate level. A capital gain should not be confused with a dividend. Generally, a capital gain occurs where a capital asset is sold for an amount greater than the amount of its cost at the time the investment was purchased. A dividend is a parsing out a share of the profits, and is taxed at the dividend tax rate. If there is an increase of value of stock, and a shareholder chooses to sell the stock, the shareholder will pay a tax on capital gains (often taxed at a lower rate than ordinary income). If a holder of the stock chooses to not participate in the buyback, the price of the holder's shares could rise (as well as it could fall), but the tax on these gains is delayed until the sale of the shares. Certain types of specialized investment companies (such as a REIT in the U.S.) allow the shareholder to partially or fully avoid double taxation of dividends. == Other corporate entities == === Cooperatives === Cooperative businesses may retain their earnings, or distribute part or all of them as dividends to their members. They distribute their dividends in proportion to their members' activity, instead of the value of members' shareholding. Therefore, co-op dividends are often treated as pre-tax expenses. In other words, local tax or accounting rules may treat a dividend as a form of customer rebate or a staff bonus to be deducted from turnover before profit (tax profit or operating profit) is calculated. Consumers' cooperatives allocate dividends according to their members' trade with the co-op. For example, a credit union will pay a dividend to represent interest on a saver's deposit. A retail co-op store chain may return a percentage of a member's purchases from the co-op, in the form of cash, store credit, or equity. This type of dividend is sometimes known as a patronage dividend or patronage refund, as well as being informally named divi or divvy. Producer cooperatives, such as worker cooperatives, allocate dividends according to their members' contribution, such as the hours they worked or their salary. === Trusts === In real estate investment trusts and royalty trusts, the distributions paid often will be consistently greater than the company earnings. This can be sustainable because the accounting earnings do not recognize any increasing value of real estate holdings and resource reserves. If there is no economic increase in the value of the company's assets then the excess distribution (or dividend) will be a return of capital and the book value of the company will have shrunk by an equal amount. This may result in capital gains which may be taxed differently from dividends representing distribution of earnings. The distribution of profits by other forms of mutual organization also varies from that of joint-stock companies, though may not take the form of a dividend. In the case of mutual insurance, for example, in the United States, a distribution of profits to holders of participating life policies is called a dividend. These profits are generated by the investment returns of the insurer's general account, in which premiums are invested and from which claims are paid. The participating dividend may be used to decrease premiums, or to increase the cash value of the policy. Some life policies pay nonparticipating dividends. As a contrasting example, in the United Kingdom, the surrender value of a with-profits policy is increased by a bonus, which also serves the purpose of distributing profits. Life insurance dividends and bonuses, while typical of mutual insurance, are also paid by some joint stock insurers. Insurance dividend payments are not restricted to life policies. For example, general insurer State Farm Mutual Automobile Insurance Company can distribute dividends to its vehicle insurance policyholders. == See also == == References == == External links == Ex-Dividend Dates: When Are You Entitled to Stock and Cash Dividends – U.S. Securities and Exchange Commission Why Should Companies Pay Dividends? Dividend Policy Archived 16 December 2021 at the Wayback Machine from studyfinance.com at the University of Arizona The new U.S. dividend tax cut traps from Tennessee CPA Journal, Nov. 2004 Learn Strategy to Earn Money from Dividends"
+  },
+  "chunks": [
+    {
+      "id": "dividend_cc123a6c_c0000",
+      "article_id": "dividend_cc123a6c",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 966,
+      "content": "A dividend is a distribution of profits by a corporation to its shareholders, after which the stock exchange decreases the price of the stock by the dividend to remove volatility. The market has no control over the stock price on open on the ex-dividend date, though more often than not it may open higher. When a corporation earns a profit or surplus, it is able to pay a portion of the profit as a dividend to shareholders. Any amount not distributed is taken to be re-invested in the business (called retained earnings). The current year profit as well as the retained earnings of previous years are available for distribution; a corporation is usually prohibited from paying a dividend out of its capital. Distribution to shareholders may be in cash (usually by bank transfer) or, if the corporation has a dividend reinvestment plan, the amount can be paid by the issue of further shares or by share repurchase. In some cases, the distribution may be of assets.",
+      "char_count": 965,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0001",
+      "article_id": "dividend_cc123a6c",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 966,
+      "end_char": 1819,
+      "content": "The dividend received by a shareholder is income of the shareholder and may be subject to income tax (see dividend tax). The tax treatment of this income varies considerably between jurisdictions. The corporation does not receive a tax deduction for the dividends it pays. A dividend is allocated as a fixed amount per share, with shareholders receiving a dividend in proportion to their shareholding. Dividends can provide at least temporarily stable income and raise morale among shareholders, but are not guaranteed to continue. For the joint-stock company, paying dividends is not an expense; rather, it is the division of after-tax profits among shareholders. Retained earnings (profits that have not been distributed as dividends) are shown in the shareholders' equity section on the company's balance sheet – the same as its issued share capital.",
+      "char_count": 853,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0002",
+      "article_id": "dividend_cc123a6c",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1820,
+      "end_char": 2518,
+      "content": "Public companies usually pay dividends on a fixed schedule, but may cancel a scheduled dividend, or declare an unscheduled dividend at any time, sometimes called a special dividend to distinguish it from the regular dividends. (more usually a special dividend is paid at the same time as the regular dividend, but for a one-off higher amount). Cooperatives, on the other hand, allocate dividends according to members' activity, so their dividends are often considered to be a pre-tax expense. The usually fixed payments to holders of preference shares (or preferred stock in American English) are classed as dividends. The word dividend comes from the Latin word dividendum (\"thing to be divided\").",
+      "char_count": 698,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0003",
+      "article_id": "dividend_cc123a6c",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2532,
+      "end_char": 3371,
+      "content": "== History == The Dutch East India Company (VOC) was the first recorded (public) company to pay regular dividends. The VOC paid annual dividends worth around 18 percent of the value of the shares for almost 200 years of existence (1602–1800). In common law jurisdictions, courts have typically refused to intervene in companies' dividend policies, giving directors wide discretion as to the declaration or payment of dividends. The principle of non-interference was established in the Canadian case of Burland v Earle (1902), the British case of Bond v Barrow Haematite Steel Co (1902), and the Australian case of Miles v Sydney Meat-Preserving Co Ltd (1912). However in Sumiseki Materials Co Ltd v Wambo Coal Pty Ltd (2013) the Supreme Court of New South Wales broke with this precedent and recognised a shareholder's contractual right to a dividend.",
+      "char_count": 851,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0004",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Forms of payment ==",
+      "heading_path": "== Forms of payment ==",
+      "start_char": 3393,
+      "end_char": 4263,
+      "content": "== Forms of payment == Cash dividends are the most common form of payment and are paid out in currency, usually via electronic funds transfer or a printed paper check. Such dividends are a form of investment income of the shareholder, usually treated as earned in the year they are paid (and not necessarily in the year a dividend was declared). For each share owned, a declared amount of money is distributed. Thus, if a person owns 100 shares and the cash dividend is 50 cents per share, the holder of the stock will be paid $50. Dividends paid are not classified as an expense, but rather a deduction of retained earnings. Dividends paid does not appear on an income statement, but does appear on the balance sheet. Different classes of stocks have different priorities when it comes to dividend payments. Preferred stocks have priority claims on a company's income.",
+      "char_count": 869,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0005",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Forms of payment ==",
+      "heading_path": "== Forms of payment ==",
+      "start_char": 4263,
+      "end_char": 5244,
+      "content": "A company must pay dividends on its preferred shares before distributing income to common share shareholders. Stock or scrip dividends are those paid out in the form of additional shares of the issuing corporation, or another corporation (such as its subsidiary corporation). They are usually issued in proportion to shares owned (for example, for every 100 shares of stock owned, a 5% stock dividend will yield 5 extra shares). Nothing tangible will be gained if the stock is split because the total number of shares increases, lowering the price of each share, without changing the total value of the shares held. (See also Stock dilution.) Stock dividend distributions do not affect the market capitalization of a company. Stock dividends are not includable in the gross income of the shareholder for US income tax purposes. Because the shares are issued for proceeds equal to the pre-existing market price of the shares; there is no negative dilution in the amount recoverable.",
+      "char_count": 981,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0006",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Forms of payment ==",
+      "heading_path": "== Forms of payment ==",
+      "start_char": 5245,
+      "end_char": 6232,
+      "content": "Property dividends or dividends in specie (Latin for \"in kind\") are those paid out in the form of assets from the issuing corporation or another corporation, such as a subsidiary corporation. They are relatively rare and most frequently are securities of other companies owned by the issuer, however, they can take other forms, such as products and services. Interim dividends are dividend payments made before a company's Annual General Meeting (AGM) and final financial statements. This declared dividend usually accompanies the company's interim financial statements. Other dividends can be used in structured finance. Financial assets with known market value can be distributed as dividends; warrants are sometimes distributed in this way. For large companies with subsidiaries, dividends can take the form of shares in a subsidiary company. A common technique for \"spinning off\" a company from its parent is to distribute shares in the new company to the old company's shareholders.",
+      "char_count": 987,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0007",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Payout ratio ==",
+      "heading_path": "== Payout ratio ==",
+      "start_char": 6278,
+      "end_char": 7193,
+      "content": "== Payout ratio == A dividend payout ratio characterizes how much of a company's earnings (or its cash flow) is paid out in the form of dividends. Most often, the payout ratio is calculated based on dividends per share and earnings per share: A payout ratio greater than 100% means the company paid out more in dividends for the year than it earned. Since earnings are an accountancy measure, they do not necessarily closely correspond to the actual cash flow of the company. Hence another way to determine the safety of a dividend is to replace earnings in the payout ratio by free cash flow. Free cash flow is the business's operating cash flow minus its capital expenditures: this is a measure of how much incoming cash is \"free\" to pay out to stockholders and/or to grow the business. A free cash flow payout ratio greater than 100% means the company paid out more cash in dividends for the year than the \"free\" cash it took in.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0008",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Dividend dates ==",
+      "heading_path": "== Dividend dates ==",
+      "start_char": 7213,
+      "end_char": 8121,
+      "content": "== Dividend dates == A dividend that is declared must be approved by a company's board of directors before it is paid. For public companies in the US, four dates are relevant regarding dividends: The position in the UK is very similar, except that the expression \"in-dividend date\" is not used. Declaration date – the day the board of directors announces its intention to pay a dividend. On that day, a liability is created and the company records that liability on its books; it now owes the money to the shareholders. In-dividend date – the last day, which is one trading day before the ex-dividend date, where shares are said to be cum dividend ('with [including] dividend'). That is, existing shareholders and anyone who buys the shares on this day will receive the dividend, and any shareholders who have sold the shares lose their right to the dividend. After this date the shares becomes ex dividend.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0009",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Dividend dates ==",
+      "heading_path": "== Dividend dates ==",
+      "start_char": 8121,
+      "end_char": 8951,
+      "content": "Ex-dividend date – the day on which shares bought and sold no longer come attached with the right to be paid the most recently declared dividend. In the United States and many European countries, it is typically one trading day before the record date. This is an important date for any company that has many shareholders, including those that trade on exchanges, to enable reconciliation of who is entitled to be paid the dividend. Existing shareholders will receive the dividend even if they sell the shares on or after that date, whereas anyone who bought the shares will not receive the dividend. It is relatively common for a share's price to decrease on the ex-dividend date by an amount roughly equal to the dividend being paid, which reflects the decrease in the company's assets resulting from the payment of the dividend.",
+      "char_count": 830,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0010",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Dividend dates ==",
+      "heading_path": "== Dividend dates ==",
+      "start_char": 8952,
+      "end_char": 9603,
+      "content": "Book closure date – when a company announces a dividend, it will also announce the date on which the company will temporarily close its books for share transfers, which is also usually the record date. Record date – shareholders registered in the company's record as of the record date will be paid the dividend, while shareholders who are not registered as of this date will not receive the dividend. Registration in most countries is essentially automatic for shares purchased before the ex-dividend date. Payment date – the day on which dividend cheques will actually be mailed to shareholders or the dividend amount credited to their bank account.",
+      "char_count": 651,
+      "token_estimate": 162,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0011",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Dividend frequency ==",
+      "heading_path": "== Dividend frequency ==",
+      "start_char": 9608,
+      "end_char": 9908,
+      "content": "== Dividend frequency == The dividend frequency is the number of dividend payments within a single business year. The most usual dividend frequencies are yearly, semi-annually, quarterly and monthly. Some common dividend frequencies are quarterly in the US, semi-annually in Japan, UK and Australia and annually in Germany.",
+      "char_count": 323,
+      "token_estimate": 80,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0012",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Dividend-reinvestment ==",
+      "heading_path": "== Dividend-reinvestment ==",
+      "start_char": 9935,
+      "end_char": 10803,
+      "content": "== Dividend-reinvestment == Some companies have dividend reinvestment plans, or DRIPs, not to be confused with scrips. DRIPs allow shareholders to use dividends to systematically buy small amounts of stock, usually with no commission and sometimes at a slight discount. In some cases, the shareholder might not need to pay taxes on these re-invested dividends, but in most cases they do. Utilizing a DRIP is a powerful investment tool because it takes advantage of both dollar cost averaging and compounding. Dollar cost averaging is the principle of investing a set amount of capital at recurring intervals. In this case, if the dividend is paid quarterly, then every quarter you are investing a set amount (the number of shares you own multiplied by the dividend per share). By doing this, you buy more shares when the price is low and fewer when the price is high.",
+      "char_count": 867,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0013",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Dividend-reinvestment ==",
+      "heading_path": "== Dividend-reinvestment ==",
+      "start_char": 10803,
+      "end_char": 11019,
+      "content": "Additionally, the fractional shares that are purchased then begin paying dividends, compounding your investment and increasing the number of shares and total dividend earned each time a dividend distribution is made.",
+      "char_count": 216,
+      "token_estimate": 54,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0014",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Law and government policy on dividends ==",
+      "heading_path": "== Law and government policy on dividends ==",
+      "start_char": 11037,
+      "end_char": 11910,
+      "content": "== Law and government policy on dividends == Governments may adopt policies on dividend distribution for the protection of shareholders and the preservation of company viability, as well as treating dividends as a potential source of revenue. Most countries impose a corporate tax on the profits made by a company. Many jurisdictions also impose a tax on dividends paid by a company to its shareholders (stockholders), but the tax treatment of a dividend income varies considerably between jurisdictions. The primary tax liability is that of the shareholder, although a tax obligation may also be imposed on the corporation in the form of a withholding tax. In some cases, the withholding tax may be the extent of the tax liability in relation to the dividend. A dividend tax is in addition to any tax imposed directly on the corporation on its profits. A dividend paid by a company is not an expense of the company.",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0015",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Australia and New Zealand ==",
+      "heading_path": "== = Australia and New Zealand ==",
+      "start_char": 11943,
+      "end_char": 12814,
+      "content": "== = Australia and New Zealand === Australia and New Zealand have a dividend imputation system, wherein companies can attach franking credits or imputation credits to dividends. These franking credits represent the tax paid by the company upon its pre-tax profits. One dollar of company tax paid generates one franking credit. Companies can attach any proportion of franking up to a maximum amount that is calculated from the prevailing company tax rate: for each dollar of dividend paid, the maximum level of franking is the company tax rate divided by (1 − company tax rate). At the current 30% rate, this works out at 0.30 of a credit per 70 cents of dividend, or 42.857 cents per dollar of dividend. The shareholders who are able to use them, apply these credits against their income tax bills at a rate of a dollar per credit, thereby effectively eliminating the double taxation of company profits.",
+      "char_count": 903,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0016",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 12827,
+      "end_char": 13482,
+      "content": "== = India === In India, a company declaring or distributing dividends is required to pay a Corporate Dividend Tax in addition to the tax levied on their income. The dividend received by the shareholders is then exempt in their hands. Dividend-paying firms in India fell from 24 percent in 2001 to almost 19 percent in 2009 before rising to 19 percent in 2010. However, dividend income over and above ₹1,000,000 attracts 10 percent dividend tax in the hands of the shareholder with effect from April 2016. Since the Budget 2020–2021, DDT has been abolished. Now, the Indian government taxes dividend income in the hands of investor according to income tax slab rates.",
+      "char_count": 667,
+      "token_estimate": 166,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0017",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = United States and Canada ==",
+      "heading_path": "== = United States and Canada ==",
+      "start_char": 13514,
+      "end_char": 13835,
+      "content": "== = United States and Canada === The United States and Canada impose a lower tax rate on dividend income than ordinary income, on the assertion that company profits had already been taxed as corporate tax. In the United States, shareholders of corporations face double taxation – taxes on both corporate profits and taxes on distribution of dividends.",
+      "char_count": 352,
+      "token_estimate": 88,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0018",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = United Kingdom ==",
+      "heading_path": "== = United Kingdom ==",
+      "start_char": 13857,
+      "end_char": 14830,
+      "content": "== = United Kingdom === The rules in Part 23 of the Companies Act 2006 (sections 829–853) govern the payment of dividends to shareholders. The Act refers in this section to \"distribution\", covering any kind of distribution of a company's assets to its members (with some exceptions), \"whether in cash or otherwise\". A company is only able to make a distribution out of its accumulated, realised profits, \"so far as not previously utilised by distribution or capitalisation, less its accumulated, realised losses, so far as not previously written off in a reduction or reorganisation of capital duly made\". The United Kingdom government announced in 2018 that it was considering a review of the existing rules on dividend distribution following a consultation exercise on insolvency and corporate governance. The aim was to address concerns which had emerged where companies in financial distress were still able to distribute \"significant dividends\" to their shareholders.",
+      "char_count": 972,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0019",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = United Kingdom ==",
+      "heading_path": "== = United Kingdom ==",
+      "start_char": 14830,
+      "end_char": 15650,
+      "content": "A requirement has been proposed under which the largest companies would be required to publish a distribution policy statement covering dividend distribution. The law in England and Wales regarding dividend payment was clarified in 2018 by the England and Wales Court of Appeal in the case of Global Corporate Ltd v Hale  EWCA Civ 2618. Certain payments made to a director/shareholder had been treated by the High Court as quantum meruit payments to Hale in his capacity as a company director but the Appeal Court reversed this judgment and treated the payments as dividends. At the time of payment they had been treated as \"dividends\" payable from an anticipated profit. The company subsequently went into liquidation; an attempt to recharacterise the payments as payments for services rendered was held to be unlawful.",
+      "char_count": 820,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0020",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Effect on stock price ==",
+      "heading_path": "== Effect on stock price ==",
+      "start_char": 15656,
+      "end_char": 16528,
+      "content": "== Effect on stock price == After a stock goes ex-dividend (when a dividend has just been paid, so there is no anticipation of another imminent dividend payment), the stock price should drop. To calculate the amount of the drop, the traditional method is to view the financial effects of the dividend from the perspective of the company. Since the company has paid say £x in dividends per share out of its cash account on the left hand side of the balance sheet, the equity account on the right side should decrease an equivalent amount. This means that a £x dividend should result in a £x drop in the share price. A more accurate method of calculating the fall in price is to look at the share price and dividend from the after-tax perspective of a shareholder. The after-tax drop in the share price (or capital gain/loss) should be equivalent to the after-tax dividend.",
+      "char_count": 871,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0021",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Effect on stock price ==",
+      "heading_path": "== Effect on stock price ==",
+      "start_char": 16528,
+      "end_char": 17280,
+      "content": "For example, if the tax of capital gains Tcg is 35%, and the tax on dividends Td is 15%, then a £1 dividend is equivalent to £0.85 of after-tax money. To get the same financial benefit from a, the after-tax capital loss value should equal £0.85. The pre-tax capital loss would be ⁠£0.85/1 − Tcg⁠ = ⁠£0.85/1 − 0.35⁠ = ⁠£0.85/0.65⁠ = £1.31. In this case, a dividend of £1 has led to a larger drop in the share price of £1.31, because the tax rate on capital losses is higher than the dividend tax rate. However in many countries the stock market is dominated by institutions which pay no additional tax on dividends received (as opposed to tax on overall profits). If that is the case, then the share price should fall by the full amount of the dividend.",
+      "char_count": 752,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0022",
+      "article_id": "dividend_cc123a6c",
+      "section": "== Effect on stock price ==",
+      "heading_path": "== Effect on stock price ==",
+      "start_char": 17281,
+      "end_char": 17672,
+      "content": "Finally, security analysis that does not take dividends into account may mute the decline in share price, for example in the case of a price–earnings ratio target that does not back out cash; or amplify the decline when comparing different periods. The effect of a dividend payment on share price is an important reason why it can sometimes be desirable to exercise an American option early.",
+      "char_count": 391,
+      "token_estimate": 97,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0023",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Criticism and analysis ==",
+      "heading_path": "== = Criticism and analysis ==",
+      "start_char": 17676,
+      "end_char": 18441,
+      "content": "== = Criticism and analysis === Some believe company profits are best re-invested in the company with actions such as research and development, capital investment or expansion. Proponents of this view (and thus critics of dividends per se) suggest that an eagerness to return profits to shareholders may indicate the management having run out of good ideas for the future of the company. A counter-argument to this position came from Peter Lynch of Fidelity investments, who declared: \"One strong argument in favor of companies that pay dividends is that companies that don’t pay dividends have a sorry history of blowing the money on a string of stupid diworseifications\"; using his self-created term for diversification that results in worse effects, not better.",
+      "char_count": 764,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0024",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Criticism and analysis ==",
+      "heading_path": "== = Criticism and analysis ==",
+      "start_char": 18441,
+      "end_char": 19223,
+      "content": "Additionally, studies have demonstrated that companies that pay dividends have higher earnings growth, suggesting dividend payments may be evidence of confidence in earnings growth and sufficient profitability to fund future expansion. Benjamin Graham and David Dodd wrote in Securities Analysis (1934): \"The prime purpose of a business corporation is to pay dividends to its owners. A successful company is one that can pay dividends regularly and presumably increase the rate as time goes on.\" Other studies indicate that dividend-paying stocks tend to offer superior long-term performance relative to the overall market at least in developed economies, relative to a stock index such as the S&P 500 or Dow Jones Industrial Average or relative to stocks that do not pay dividends.",
+      "char_count": 782,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0025",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Criticism and analysis ==",
+      "heading_path": "== = Criticism and analysis ==",
+      "start_char": 19224,
+      "end_char": 20073,
+      "content": "Several explanations have been proposed for this outperformance such as dividends being associated with value stocks which are themselves associated with long-term outperformance; being more durable in crashes or bear markets; being associated with profitable companies exhibiting high levels of free cashflow; and being associated with mature, unfashionable companies that are overlooked by many investors and thus an effective contrarian strategy. Asset managers at Tweedy, Browne and Capital Group have suggested dividends are an effective measure of a given company's overall financial status. Shareholders in companies that pay little or no cash dividends can potentially reap the benefit of the company's profits when they sell their shareholding, or when a company is wound down and all assets liquidated and distributed amongst shareholders.",
+      "char_count": 849,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0026",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Criticism and analysis ==",
+      "heading_path": "== = Criticism and analysis ==",
+      "start_char": 20074,
+      "end_char": 20291,
+      "content": "However, data from professor Jeremy Siegel found stocks that do not pay dividends tend to have worse long-term performance, as a group, than the general stock market and also perform worse than dividend-paying stocks.",
+      "char_count": 217,
+      "token_estimate": 54,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0027",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Cooperatives ==",
+      "heading_path": "== = Cooperatives ==",
+      "start_char": 20313,
+      "end_char": 21163,
+      "content": "== = Cooperatives === Cooperative businesses may retain their earnings, or distribute part or all of them as dividends to their members. They distribute their dividends in proportion to their members' activity, instead of the value of members' shareholding. Therefore, co-op dividends are often treated as pre-tax expenses. In other words, local tax or accounting rules may treat a dividend as a form of customer rebate or a staff bonus to be deducted from turnover before profit (tax profit or operating profit) is calculated. Consumers' cooperatives allocate dividends according to their members' trade with the co-op. For example, a credit union will pay a dividend to represent interest on a saver's deposit. A retail co-op store chain may return a percentage of a member's purchases from the co-op, in the form of cash, store credit, or equity.",
+      "char_count": 849,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0028",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Cooperatives ==",
+      "heading_path": "== = Cooperatives ==",
+      "start_char": 21163,
+      "end_char": 21457,
+      "content": "This type of dividend is sometimes known as a patronage dividend or patronage refund, as well as being informally named divi or divvy. Producer cooperatives, such as worker cooperatives, allocate dividends according to their members' contribution, such as the hours they worked or their salary.",
+      "char_count": 294,
+      "token_estimate": 73,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0029",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Trusts ==",
+      "heading_path": "== = Trusts ==",
+      "start_char": 21452,
+      "end_char": 22393,
+      "content": "== = Trusts === In real estate investment trusts and royalty trusts, the distributions paid often will be consistently greater than the company earnings. This can be sustainable because the accounting earnings do not recognize any increasing value of real estate holdings and resource reserves. If there is no economic increase in the value of the company's assets then the excess distribution (or dividend) will be a return of capital and the book value of the company will have shrunk by an equal amount. This may result in capital gains which may be taxed differently from dividends representing distribution of earnings. The distribution of profits by other forms of mutual organization also varies from that of joint-stock companies, though may not take the form of a dividend. In the case of mutual insurance, for example, in the United States, a distribution of profits to holders of participating life policies is called a dividend.",
+      "char_count": 940,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "dividend_cc123a6c_c0030",
+      "article_id": "dividend_cc123a6c",
+      "section": "== = Trusts ==",
+      "heading_path": "== = Trusts ==",
+      "start_char": 22393,
+      "end_char": 23197,
+      "content": "These profits are generated by the investment returns of the insurer's general account, in which premiums are invested and from which claims are paid. The participating dividend may be used to decrease premiums, or to increase the cash value of the policy. Some life policies pay nonparticipating dividends. As a contrasting example, in the United Kingdom, the surrender value of a with-profits policy is increased by a bonus, which also serves the purpose of distributing profits. Life insurance dividends and bonuses, while typical of mutual insurance, are also paid by some joint stock insurers. Insurance dividend payments are not restricted to life policies. For example, general insurer State Farm Mutual Automobile Insurance Company can distribute dividends to its vehicle insurance policyholders.",
+      "char_count": 804,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "When are interim dividend payments made?",
+        "answer": "Interim dividends are payments made before a company's Annual General Meeting (AGM) and its final financial statements.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0006"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What specific part of the Companies Act 2006 governs the payment of dividends in the United Kingdom?",
+        "answer": "Part 23 of the Companies Act 2006, specifically sections 829–853, governs the payment of dividends to shareholders in the United Kingdom.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0018"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What are the different forms a dividend distribution can take?",
+        "answer": "A dividend distribution to shareholders can be in cash (usually by bank transfer), an issue of further shares through a dividend reinvestment plan, a share repurchase, or a distribution of assets.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0000"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "From a corporation's perspective, what is the source of funds for a dividend, and how is this payment treated for accounting and tax purposes?",
+        "answer": "A dividend is funded from a corporation's profit or surplus, which includes the current year's profit and retained earnings from previous years; it is generally prohibited from being paid out of capital. For the corporation, paying a dividend is not considered an expense but rather a division of after-tax profits. Consequently, the corporation does not receive a tax deduction for the dividends it pays.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0000",
+          "dividend_cc123a6c_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Provide a comprehensive overview of dividends, including their historical origins, the most common forms of payment, and the hierarchy of payment among different types of shares.",
+        "answer": "The first recorded public company to pay regular dividends was the Dutch East India Company, which did so annually for nearly 200 years starting in 1602. The most common form of dividend payment is cash, distributed in currency per share owned. Another form is a stock or scrip dividend, where payment is made in additional shares of the corporation. In terms of payment hierarchy, preferred stocks have priority claims on a company's income, and a company must pay dividends on its preferred shares before it can distribute income to common shareholders.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0003",
+          "dividend_cc123a6c_c0004",
+          "dividend_cc123a6c_c0005"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What steps must a company's board of directors take before a non-cash dividend, such as shares in a subsidiary company, can be paid out to shareholders?",
+        "answer": "Before a non-cash dividend, like shares in a subsidiary, can be paid, it must first be declared and approved by the company's board of directors. On this 'declaration date,' the board announces its intention to pay the dividend, and a liability is created on the company's books. This process applies to various forms of dividends, including the distribution of shares in a subsidiary company, which is a common technique for a 'spin-off'.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0006",
+          "dividend_cc123a6c_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How does the financial treatment of dividends differ between a joint-stock company and a cooperative?",
+        "answer": "For a joint-stock company, paying a dividend is not considered an expense but is a division of after-tax profits among its shareholders. In contrast, for a cooperative, dividends are allocated based on the members' activity and are often considered a pre-tax expense.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0001",
+          "dividend_cc123a6c_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Compare and contrast the forms of payment for cash, stock, and property dividends.",
+        "answer": "Cash dividends, the most common type, are paid in currency via electronic transfer or check. Stock dividends are paid out in the form of additional shares of the issuing corporation or its subsidiary. Property dividends, which are relatively rare, are paid out in the form of non-monetary assets, such as securities of other companies, products, or services.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0004",
+          "dividend_cc123a6c_c0005",
+          "dividend_cc123a6c_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How do the in-dividend date, ex-dividend date, and record date work together to determine which shareholder is entitled to a dividend payment?",
+        "answer": "The in-dividend date is the final day an investor can purchase shares and still be entitled to the dividend. The following day is the ex-dividend date, on which shares begin trading without the right to the dividend. The ex-dividend date is typically set one trading day before the record date. To receive the dividend, a shareholder must be officially registered on the company's books on the record date. Because registration is automatic for shares purchased before the ex-dividend date, this sequence ensures that only those who bought the stock on or before the in-dividend date are registered in time for the record date and thus receive the payment.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0008",
+          "dividend_cc123a6c_c0009",
+          "dividend_cc123a6c_c0010"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do Dividend Reinvestment Plans (DRIPs) utilize both dollar cost averaging and compounding to create a powerful investment tool?",
+        "answer": "DRIPs utilize dollar cost averaging by allowing shareholders to use their dividends to systematically buy small amounts of stock at recurring intervals. This means more shares are purchased when the price is low and fewer when the price is high. The tool is further enhanced by compounding, as the newly acquired fractional shares also begin to pay dividends, which increases the total dividend earned and reinvested in the subsequent distribution, leading to accelerated growth of the investment.",
+        "related_chunk_ids": [
+          "dividend_cc123a6c_c0012",
+          "dividend_cc123a6c_c0013"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:26.294Z",
+    "content_format": "markdown",
+    "total_chunks": 31,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

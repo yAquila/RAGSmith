@@ -1,0 +1,610 @@
+{
+  "article": {
+    "id": "settheory_84fc6d63",
+    "title": "Set theory",
+    "url": "https://en.wikipedia.org/wiki/Set_theory",
+    "lang": "en",
+    "created_at": "2025-07-31T06:32:40.795523",
+    "content": "---\nid: settheory_84fc6d63\nurl: https://en.wikipedia.org/wiki/Set_theory\ntitle: Set theory\nlang: en\ncreated_at: '2025-07-31T06:26:15.080380'\nchecksum: edee5c20d083b1a576e862e7c1f02b3f5e3225e82f04b3cf1bba55fda333fb6b\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 5210\n  char_count: 31939\n  num_chunks: 38\n  original_chunks: 47\n  filtered_out: 9\n  num_sections: 0\n---\nSet theory is the branch of mathematical logic that studies sets, which can be informally described as collections of objects. Although objects of any kind can be collected into a set, set theory – as a branch of mathematics – is mostly concerned with those that are relevant to mathematics as a whole. The modern study of set theory was initiated by the German mathematicians Richard Dedekind and Georg Cantor in the 1870s. In particular, Georg Cantor is commonly considered the founder of set theory. The non-formalized systems investigated during this early stage go under the name of naive set theory. After the discovery of paradoxes within naive set theory (such as Russell's paradox, Cantor's paradox and the Burali-Forti paradox), various axiomatic systems were proposed in the early twentieth century, of which Zermelo–Fraenkel set theory (with or without the axiom of choice) is still the best-known and most studied. Set theory is commonly employed as a foundational system for the whole of mathematics, particularly in the form of Zermelo–Fraenkel set theory with the axiom of choice. Besides its foundational role, set theory also provides the framework to develop a mathematical theory of infinity, and has various applications in computer science (such as in the theory of relational algebra), philosophy, formal semantics, and evolutionary dynamics. Its foundational appeal, together with its paradoxes, and its implications for the concept of infinity and its multiple applications have made set theory an area of major interest for logicians and philosophers of mathematics. Contemporary research into set theory covers a vast array of topics, ranging from the structure of the real number line to the study of the consistency of large cardinals. == History == === Early history === The basic notion of grouping objects has existed since at least the emergence of numbers, and the notion of treating sets as their own objects has existed since at least the Tree of Porphyry in 3rd-century AD. The simplicity and ubiquity of sets makes it hard to determine the origin of sets as now used in mathematics; however, Bernard Bolzano's Paradoxes of the Infinite (Paradoxien des Unendlichen, 1851) is generally considered the first rigorous introduction of sets to mathematics. In his work, he (among other things) expanded on Galileo's paradox, and introduced one-to-one correspondence of infinite sets, for example between the intervals [ 0 , 5 ] {\\displaystyle [0,5]} and [ 0 , 12 ] {\\displaystyle [0,12]} by the relation 5 y = 12 x {\\displaystyle 5y=12x} . However, he resisted saying these sets were equinumerous, and his work is generally considered to have been uninfluential in mathematics of his time. Before mathematical set theory, basic concepts of infinity were considered to be in the domain of philosophy (see: Infinity (philosophy) and Infinity § History). Since the 5th century BC, beginning with Greek philosopher Zeno of Elea in the West (and early Indian mathematicians in the East), mathematicians had struggled with the concept of infinity. With the development of calculus in the late 17th century, philosophers began to generally distinguish between potential and actual infinity, wherein mathematics was only considered in the latter. Carl Friedrich Gauss famously stated: \"Infinity is nothing more than a figure of speech which helps us talk about limits. The notion of a completed infinity doesn't belong in mathematics.\" Development of mathematical set theory was motivated by several mathematicians. Bernhard Riemann's lecture On the Hypotheses which lie at the Foundations of Geometry (1854) proposed new ideas about topology. His lectures also introduced the concept of basing mathematics in terms of sets or manifolds in the sense of a class (which he called Mannigfaltigkeit) now called point-set topology. The lecture was published by Richard Dedekind in 1868, along with Riemann's paper on trigonometric series (which presented the Riemann integral), The latter was a starting point a movement in real analysis for the study of “seriously” discontinuous functions. A young Georg Cantor entered into this area, which led him to the study of point-sets. Around 1871, influenced by Riemann, Dedekind began working with sets in his publications, which dealt very clearly and precisely with equivalence relations, partitions of sets, and homomorphisms. Thus, many of the usual set-theoretic procedures of twentieth-century mathematics go back to his work. However, he did not publish a formal explanation of his set theory until 1888. === Naive set theory === Set theory, as understood by modern mathematicians, is generally considered to be founded by a single paper in 1874 by Georg Cantor titled On a Property of the Collection of All Real Algebraic Numbers. In his paper, he developed the notion of cardinality, comparing the sizes of two sets by setting them in one-to-one correspondence. His \"revolutionary discovery\" was that the set of all real numbers is uncountable, that is, one cannot put all real numbers in a list. This theorem is proved using Cantor's first uncountability proof, which differs from the more familiar proof using his diagonal argument. Cantor introduced fundamental constructions in set theory, such as the power set of a set A, which is the set of all possible subsets of A. He later proved that the size of the power set of A is strictly larger than the size of A, even when A is an infinite set; this result soon became known as Cantor's theorem. Cantor developed a theory of transfinite numbers, called cardinals and ordinals, which extended the arithmetic of the natural numbers. His notation for the cardinal numbers was the Hebrew letter ℵ {\\displaystyle \\aleph } (ℵ, aleph) with a natural number subscript; for the ordinals he employed the Greek letter ω {\\displaystyle \\omega } (ω, omega). Set theory was beginning to become an essential ingredient of the new “modern” approach to mathematics. Originally, Cantor's theory of transfinite numbers was regarded as counter-intuitive – even shocking. This caused it to encounter resistance from mathematical contemporaries such as Leopold Kronecker and Henri Poincaré and later from Hermann Weyl and L. E. J. Brouwer, while Ludwig Wittgenstein raised philosophical objections (see: Controversy over Cantor's theory). Dedekind's algebraic style only began to find followers in the 1890s Despite the controversy, Cantor's set theory gained remarkable ground around the turn of the 20th century with the work of several notable mathematicians and philosophers. Richard Dedekind, around the same time, began working with sets in his publications, and famously constructing the real numbers using Dedekind cuts. He also worked with Giuseppe Peano in developing the Peano axioms, which formalized natural-number arithmetic, using set-theoretic ideas, which also introduced the epsilon symbol for set membership. Possibly most prominently, Gottlob Frege began to develop his Foundations of Arithmetic. In his work, Frege tries to ground all mathematics in terms of logical axioms using Cantor's cardinality. For example, the sentence \"the number of horses in the barn is four\" means that four objects fall under the concept horse in the barn. Frege attempted to explain our grasp of numbers through cardinality ('the number of...', or N x : F x {\\displaystyle Nx:Fx} ), relying on Hume's principle. However, Frege's work was short-lived, as it was found by Bertrand Russell that his axioms lead to a contradiction. Specifically, Frege's Basic Law V (now known as the axiom schema of unrestricted comprehension). According to Basic Law V, for any sufficiently well-defined property, there is the set of all and only the objects that have that property. The contradiction, called Russell's paradox, is shown as follows: Let R be the set of all sets that are not members of themselves. (This set is sometimes called \"the Russell set\".) If R is not a member of itself, then its definition entails that it is a member of itself; yet, if it is a member of itself, then it is not a member of itself, since it is the set of all sets that are not members of themselves. The resulting contradiction is Russell's paradox. In symbols: Let R = { x ∣ x ∉ x } , then R ∈ R ⟺ R ∉ R {\\displaystyle {\\text{Let }}R=\\{x\\mid x\\not \\in x\\}{\\text{, then }}R\\in R\\iff R\\not \\in R} This came around a time of several paradoxes or counter-intuitive results. For example, that the parallel postulate cannot be proved, the existence of mathematical objects that cannot be computed or explicitly described, and the existence of theorems of arithmetic that cannot be proved with Peano arithmetic. The result was a foundational crisis of mathematics. == Basic concepts and notation == Set theory begins with a fundamental binary relation between an object o and a set A. If o is a member (or element) of A, the notation o ∈ A is used. A set is described by listing elements separated by commas, or by a characterizing property of its elements, within braces { }. Since sets are objects, the membership relation can relate sets as well, i.e., sets themselves can be members of other sets. A derived binary relation between two sets is the subset relation, also called set inclusion. If all the members of set A are also members of set B, then A is a subset of B, denoted A ⊆ B. For example, {1, 2} is a subset of {1, 2, 3}, and so is {2} but {1, 4} is not. As implied by this definition, a set is a subset of itself. For cases where this possibility is unsuitable or would make sense to be rejected, the term proper subset is defined, variously denoted A ⊂ B {\\displaystyle A\\subset B} , A ⊊ B {\\displaystyle A\\subsetneq B} , or A ⫋ B {\\displaystyle A\\subsetneqq B} (note however that the notation A ⊂ B {\\displaystyle A\\subset B} is sometimes used synonymously with A ⊆ B {\\displaystyle A\\subseteq B} ; that is, allowing the possibility that A and B are equal). We call A a proper subset of B if and only if A is a subset of B, but A is not equal to B. Also, 1, 2, and 3 are members (elements) of the set {1, 2, 3}, but are not subsets of it; and in turn, the subsets, such as {1}, are not members of the set {1, 2, 3}. More complicated relations can exist; for example, the set {1} is both a member and a proper subset of the set {1, {1}}. Just as arithmetic features binary operations on numbers, set theory features binary operations on sets. The following is a partial list of them: Union of the sets A and B, denoted A ∪ B, is the set of all objects that are a member of A, or B, or both. For example, the union of {1, 2, 3} and {2, 3, 4} is the set {1, 2, 3, 4}. Intersection of the sets A and B, denoted A ∩ B, is the set of all objects that are members of both A and B. For example, the intersection of {1, 2, 3} and {2, 3, 4} is the set {2, 3}. Set difference of U and A, denoted U ∖ A, is the set of all members of U that are not members of A. The set difference {1, 2, 3} ∖ {2, 3, 4} is {1}, while conversely, the set difference {2, 3, 4} ∖ {1, 2, 3} is {4}. When A is a subset of U, the set difference U ∖ A is also called the complement of A in U. In this case, if the choice of U is clear from the context, the notation Ac is sometimes used instead of U ∖ A, particularly if U is a universal set as in the study of Venn diagrams. Symmetric difference of sets A and B, denoted A △ B or A ⊖ B, is the set of all objects that are a member of exactly one of A and B (elements which are in one of the sets, but not in both). For instance, for the sets {1, 2, 3} and {2, 3, 4}, the symmetric difference set is {1, 4}. It is the set difference of the union and the intersection, (A ∪ B) ∖ (A ∩ B) or (A ∖ B) ∪ (B ∖ A). Cartesian product of A and B, denoted A × B, is the set whose members are all possible ordered pairs (a, b), where a is a member of A and b is a member of B. For example, the Cartesian product of {1, 2} and {red, white} is {(1, red), (1, white), (2, red), (2, white)}. Some basic sets of central importance are the set of natural numbers, the set of real numbers and the empty set – the unique set containing no elements. The empty set is also occasionally called the null set, though this name is ambiguous and can lead to several interpretations. The empty set can be denoted with empty braces \" { } {\\displaystyle \\{\\}} \" or the symbol \" ∅ {\\displaystyle \\varnothing } \" or \" ∅ {\\displaystyle \\emptyset } \". The power set of a set A, denoted P ( A ) {\\displaystyle {\\mathcal {P}}(A)} , is the set whose members are all of the possible subsets of A. For example, the power set of {1, 2} is { {}, {1}, {2}, {1, 2} }. Notably, P ( A ) {\\displaystyle {\\mathcal {P}}(A)} contains both A and the empty set. == Ontology == A set is pure if all of its members are sets, all members of its members are sets, and so on. For example, the set containing only the empty set is a nonempty pure set. In modern set theory, it is common to restrict attention to the von Neumann universe of pure sets, and many systems of axiomatic set theory are designed to axiomatize the pure sets only. There are many technical advantages to this restriction, and little generality is lost, because essentially all mathematical concepts can be modeled by pure sets. Sets in the von Neumann universe are organized into a cumulative hierarchy, based on how deeply their members, members of members, etc. are nested. Each set in this hierarchy is assigned (by transfinite recursion) an ordinal number α {\\displaystyle \\alpha } , known as its rank. The rank of a pure set X {\\displaystyle X} is defined to be the least ordinal that is strictly greater than the rank of any of its elements. For example, the empty set is assigned rank 0, while the set containing only the empty set is assigned rank 1. For each ordinal α {\\displaystyle \\alpha } , the set V α {\\displaystyle V_{\\alpha }} is defined to consist of all pure sets with rank less than α {\\displaystyle \\alpha } . The entire von Neumann universe is denoted V {\\displaystyle V} . == Formalized set theory == Elementary set theory can be studied informally and intuitively, and so can be taught in primary schools using Venn diagrams. The intuitive approach tacitly assumes that a set may be formed from the class of all objects satisfying any particular defining condition. This assumption gives rise to paradoxes, the simplest and best known of which are Russell's paradox and the Burali-Forti paradox. Axiomatic set theory was originally devised to rid set theory of such paradoxes. The most widely studied systems of axiomatic set theory imply that all sets form a cumulative hierarchy. Such systems come in two flavors, those whose ontology consists of: Sets alone. This includes the most common axiomatic set theory, Zermelo–Fraenkel set theory with the axiom of choice (ZFC). Fragments of ZFC include: Zermelo set theory, which replaces the axiom schema of replacement with that of separation; General set theory, a small fragment of Zermelo set theory sufficient for the Peano axioms and finite sets; Kripke–Platek set theory, which omits the axioms of infinity, powerset, and choice, and weakens the axiom schemata of separation and replacement. Sets and proper classes. These include Von Neumann–Bernays–Gödel set theory, which has the same strength as ZFC for theorems about sets alone, and Morse–Kelley set theory and Tarski–Grothendieck set theory, both of which are stronger than ZFC. The above systems can be modified to allow urelements, objects that can be members of sets but that are not themselves sets and do not have any members. The New Foundations systems of NFU (allowing urelements) and NF (lacking them), associate with Willard Van Orman Quine, are not based on a cumulative hierarchy. NF and NFU include a \"set of everything\", relative to which every set has a complement. In these systems urelements matter, because NF, but not NFU, produces sets for which the axiom of choice does not hold. Despite NF's ontology not reflecting the traditional cumulative hierarchy and violating well-foundedness, Thomas Forster has argued that it does reflect an iterative conception of set. Systems of constructive set theory, such as CST, CZF, and IZF, embed their set axioms in intuitionistic instead of classical logic. Yet other systems accept classical logic but feature a nonstandard membership relation. These include rough set theory and fuzzy set theory, in which the value of an atomic formula embodying the membership relation is not simply True or False. The Boolean-valued models of ZFC are a related subject. An enrichment of ZFC called internal set theory was proposed by Edward Nelson in 1977. == Applications == Many mathematical concepts can be defined precisely using only set theoretic concepts. For example, mathematical structures as diverse as graphs, manifolds, rings, vector spaces, and relational algebras can all be defined as sets satisfying various (axiomatic) properties. Equivalence and order relations are ubiquitous in mathematics, and the theory of mathematical relations can be described in set theory. Set theory is also a promising foundational system for much of mathematics. Since the publication of the first volume of Principia Mathematica, it has been claimed that most (or even all) mathematical theorems can be derived using an aptly designed set of axioms for set theory, augmented with many definitions, using first or second-order logic. For example, properties of the natural and real numbers can be derived within set theory, as each of these number systems can be defined by representing their elements as sets of specific forms. Set theory as a foundation for mathematical analysis, topology, abstract algebra, and discrete mathematics is likewise uncontroversial; mathematicians accept (in principle) that theorems in these areas can be derived from the relevant definitions and the axioms of set theory. However, it remains that few full derivations of complex mathematical theorems from set theory have been formally verified, since such formal derivations are often much longer than the natural language proofs mathematicians commonly present. One verification project, Metamath, includes human-written, computer-verified derivations of more than 12,000 theorems starting from ZFC set theory, first-order logic and propositional logic. == Areas of study == Set theory is a major area of research in mathematics with many interrelated subfields: === Combinatorial set theory === Combinatorial set theory concerns extensions of finite combinatorics to infinite sets. This includes the study of cardinal arithmetic and the study of extensions of Ramsey's theorem such as the Erdős–Rado theorem. === Descriptive set theory === Descriptive set theory is the study of subsets of the real line and, more generally, subsets of Polish spaces. It begins with the study of pointclasses in the Borel hierarchy and extends to the study of more complex hierarchies such as the projective hierarchy and the Wadge hierarchy. Many properties of Borel sets can be established in ZFC, but proving these properties hold for more complicated sets requires additional axioms related to determinacy and large cardinals. The field of effective descriptive set theory is between set theory and recursion theory. It includes the study of lightface pointclasses, and is closely related to hyperarithmetical theory. In many cases, results of classical descriptive set theory have effective versions; in some cases, new results are obtained by proving the effective version first and then extending (\"relativizing\") it to make it more broadly applicable. A recent area of research concerns Borel equivalence relations and more complicated definable equivalence relations. This has important applications to the study of invariants in many fields of mathematics. === Fuzzy set theory === In set theory as Cantor defined and Zermelo and Fraenkel axiomatized, an object is either a member of a set or not. In fuzzy set theory this condition was relaxed by Lotfi A. Zadeh so an object has a degree of membership in a set, a number between 0 and 1. For example, the degree of membership of a person in the set of \"tall people\" is more flexible than a simple yes or no answer and can be a real number such as 0.75. === Inner model theory === An inner model of Zermelo–Fraenkel set theory (ZF) is a transitive class that includes all the ordinals and satisfies all the axioms of ZF. The canonical example is the constructible universe L developed by Gödel. One reason that the study of inner models is of interest is that it can be used to prove consistency results. For example, it can be shown that regardless of whether a model V of ZF satisfies the continuum hypothesis or the axiom of choice, the inner model L constructed inside the original model will satisfy both the generalized continuum hypothesis and the axiom of choice. Thus the assumption that ZF is consistent (has at least one model) implies that ZF together with these two principles is consistent. The study of inner models is common in the study of determinacy and large cardinals, especially when considering axioms such as the axiom of determinacy that contradict the axiom of choice. Even if a fixed model of set theory satisfies the axiom of choice, it is possible for an inner model to fail to satisfy the axiom of choice. For example, the existence of sufficiently large cardinals implies that there is an inner model satisfying the axiom of determinacy (and thus not satisfying the axiom of choice). === Large cardinals === A large cardinal is a cardinal number with an extra property. Many such properties are studied, including inaccessible cardinals, measurable cardinals, and many more. These properties typically imply the cardinal number must be very large, with the existence of a cardinal with the specified property unprovable in Zermelo–Fraenkel set theory. === Determinacy === Determinacy refers to the fact that, under appropriate assumptions, certain two-player games of perfect information are determined from the start in the sense that one player must have a winning strategy. The existence of these strategies has important consequences in descriptive set theory, as the assumption that a broader class of games is determined often implies that a broader class of sets will have a topological property. The axiom of determinacy (AD) is an important object of study; although incompatible with the axiom of choice, AD implies that all subsets of the real line are well behaved (in particular, measurable and with the perfect set property). AD can be used to prove that the Wadge degrees have an elegant structure. === Forcing === Paul Cohen invented the method of forcing while searching for a model of ZFC in which the continuum hypothesis fails, or a model of ZF in which the axiom of choice fails. Forcing adjoins to some given model of set theory additional sets in order to create a larger model with properties determined (i.e. \"forced\") by the construction and the original model. For example, Cohen's construction adjoins additional subsets of the natural numbers without changing any of the cardinal numbers of the original model. Forcing is also one of two methods for proving relative consistency by finitistic methods, the other method being Boolean-valued models. === Cardinal invariants === A cardinal invariant is a property of the real line measured by a cardinal number. For example, a well-studied invariant is the smallest cardinality of a collection of meagre sets of reals whose union is the entire real line. These are invariants in the sense that any two isomorphic models of set theory must give the same cardinal for each invariant. Many cardinal invariants have been studied, and the relationships between them are often complex and related to axioms of set theory. === Set-theoretic topology === Set-theoretic topology studies questions of general topology that are set-theoretic in nature or that require advanced methods of set theory for their solution. Many of these theorems are independent of ZFC, requiring stronger axioms for their proof. A famous problem is the normal Moore space question, a question in general topology that was the subject of intense research. The answer to the normal Moore space question was eventually proved to be independent of ZFC. == Controversy == From set theory's inception, some mathematicians have objected to it as a foundation for mathematics. The most common objection to set theory, one Kronecker voiced in set theory's earliest years, starts from the constructivist view that mathematics is loosely related to computation. If this view is granted, then the treatment of infinite sets, both in naive and in axiomatic set theory, introduces into mathematics methods and objects that are not computable even in principle. The feasibility of constructivism as a substitute foundation for mathematics was greatly increased by Errett Bishop's influential book Foundations of Constructive Analysis. A different objection put forth by Henri Poincaré is that defining sets using the axiom schemas of specification and replacement, as well as the axiom of power set, introduces impredicativity, a type of circularity, into the definitions of mathematical objects. The scope of predicatively founded mathematics, while less than that of the commonly accepted Zermelo–Fraenkel theory, is much greater than that of constructive mathematics, to the point that Solomon Feferman has said that \"all of scientifically applicable analysis can be developed [using predicative methods]\". Ludwig Wittgenstein condemned set theory philosophically for its connotations of mathematical platonism. He wrote that \"set theory is wrong\", since it builds on the \"nonsense\" of fictitious symbolism, has \"pernicious idioms\", and that it is nonsensical to talk about \"all numbers\". Wittgenstein identified mathematics with algorithmic human deduction; the need for a secure foundation for mathematics seemed, to him, nonsensical. Moreover, since human effort is necessarily finite, Wittgenstein's philosophy required an ontological commitment to radical constructivism and finitism. Meta-mathematical statements – which, for Wittgenstein, included any statement quantifying over infinite domains, and thus almost all modern set theory – are not mathematics. Few modern philosophers have adopted Wittgenstein's views after a spectacular blunder in Remarks on the Foundations of Mathematics: Wittgenstein attempted to refute Gödel's incompleteness theorems after having only read the abstract. As reviewers Kreisel, Bernays, Dummett, and Goodstein all pointed out, many of his critiques did not apply to the paper in full. Only recently have philosophers such as Crispin Wright begun to rehabilitate Wittgenstein's arguments. Category theorists have proposed topos theory as an alternative to traditional axiomatic set theory. Topos theory can interpret various alternatives to that theory, such as constructivism, finite set theory, and computable set theory. Topoi also give a natural setting for forcing and discussions of the independence of choice from ZF, as well as providing the framework for pointless topology and Stone spaces. An active area of research is the univalent foundations and related to it homotopy type theory. Within homotopy type theory, a set may be regarded as a homotopy 0-type, with universal properties of sets arising from the inductive and recursive properties of higher inductive types. Principles such as the axiom of choice and the law of the excluded middle can be formulated in a manner corresponding to the classical formulation in set theory or perhaps in a spectrum of distinct ways unique to type theory. Some of these principles may be proven to be a consequence of other principles. The variety of formulations of these axiomatic principles allows for a detailed analysis of the formulations required in order to derive various mathematical results. == Mathematical education == As set theory gained popularity as a foundation for modern mathematics, there has been support for the idea of introducing the basics of naive set theory early in mathematics education. In the US in the 1960s, the New Math experiment aimed to teach basic set theory, among other abstract concepts, to primary school students but was met with much criticism. The math syllabus in European schools followed this trend and currently includes the subject at different levels in all grades. Venn diagrams are widely employed to explain basic set-theoretic relationships to primary school students (even though John Venn originally devised them as part of a procedure to assess the validity of inferences in term logic). Set theory is used to introduce students to logical operators (NOT, AND, OR), and semantic or rule description (technically intensional definition) of sets (e.g. \"months starting with the letter A\"), which may be useful when learning computer programming, since Boolean logic is used in various programming languages. Likewise, sets and other collection-like objects, such as multisets and lists, are common datatypes in computer science and programming. In addition to that, certain sets are commonly used in mathematical teaching, such as the sets N {\\displaystyle \\mathbb {N} } of natural numbers, Z {\\displaystyle \\mathbb {Z} } of integers, R {\\displaystyle \\mathbb {R} } of real numbers, etc.). These are commonly used when defining a mathematical function as a relation from one set (the domain) to another set (the range). == See also == Glossary of set theory Class (set theory) List of set theory topics Relational model – borrows from set theory Venn diagram Elementary Theory of the Category of Sets Structural set theory == Notes == == Citations == == References == Devlin, Keith (1993), The Joy of Sets: Fundamentals of Contemporary Set Theory, Undergraduate Texts in Mathematics (2nd ed.), Springer Verlag, doi:10.1007/978-1-4612-0903-4, ISBN 0-387-94094-4 Ferreirós, Jose (2001), Labyrinth of Thought: A History of Set Theory and Its Role in Modern Mathematics, Berlin: Springer, ISBN 978-3-7643-5749-8 Monk, J. Donald (1969), Introduction to Set Theory, McGraw-Hill Book Company, ISBN 978-0-898-74006-6 Potter, Michael (2004), Set Theory and Its Philosophy: A Critical Introduction, Oxford University Press, ISBN 978-0-191-55643-2 Smullyan, Raymond M.; Fitting, Melvin (2010), Set Theory and the Continuum Problem, Dover Publications, ISBN 978-0-486-47484-7 Tiles, Mary (2004), The Philosophy of Set Theory: An Historical Introduction to Cantor's Paradise, Dover Publications, ISBN 978-0-486-43520-6 Dauben, Joseph W. (1977), \"Georg Cantor and Pope Leo XIII: Mathematics, Theology, and the Infinite\", Journal of the History of Ideas, 38 (1): 85–108, doi:10.2307/2708842, JSTOR 2708842 Dauben, Joseph W. (1979), [Unavailable on archive.org] Georg Cantor: his mathematics and philosophy of the infinite, Boston: Harvard University Press, ISBN 978-0-691-02447-9 == External links == Daniel Cunningham, Set Theory article in the Internet Encyclopedia of Philosophy. Jose Ferreiros, \"The Early Development of Set Theory\" article in the [Stanford Encyclopedia of Philosophy]. Foreman, Matthew, Akihiro Kanamori, eds. Handbook of Set Theory. 3 vols., 2010. Each chapter surveys some aspect of contemporary research in set theory. Does not cover established elementary set theory, on which see Devlin (1993). \"Axiomatic set theory\", Encyclopedia of Mathematics, EMS Press, 2001  \"Set theory\", Encyclopedia of Mathematics, EMS Press, 2001  Schoenflies, Arthur (1898). Mengenlehre in Klein's encyclopedia. Online books, and library resources in your library and in other libraries about set theory Rudin, Walter B. (April 6, 1990), \"Set Theory: An Offspring of Analysis\", Marden Lecture in Mathematics, University of Wisconsin-Milwaukee, archived from the original on 2021-10-31 – via YouTube"
+  },
+  "chunks": [
+    {
+      "id": "settheory_84fc6d63_c0000",
+      "article_id": "settheory_84fc6d63",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 928,
+      "content": "Set theory is the branch of mathematical logic that studies sets, which can be informally described as collections of objects. Although objects of any kind can be collected into a set, set theory – as a branch of mathematics – is mostly concerned with those that are relevant to mathematics as a whole. The modern study of set theory was initiated by the German mathematicians Richard Dedekind and Georg Cantor in the 1870s. In particular, Georg Cantor is commonly considered the founder of set theory. The non-formalized systems investigated during this early stage go under the name of naive set theory. After the discovery of paradoxes within naive set theory (such as Russell's paradox, Cantor's paradox and the Burali-Forti paradox), various axiomatic systems were proposed in the early twentieth century, of which Zermelo–Fraenkel set theory (with or without the axiom of choice) is still the best-known and most studied.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0001",
+      "article_id": "settheory_84fc6d63",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 928,
+      "end_char": 1764,
+      "content": "Set theory is commonly employed as a foundational system for the whole of mathematics, particularly in the form of Zermelo–Fraenkel set theory with the axiom of choice. Besides its foundational role, set theory also provides the framework to develop a mathematical theory of infinity, and has various applications in computer science (such as in the theory of relational algebra), philosophy, formal semantics, and evolutionary dynamics. Its foundational appeal, together with its paradoxes, and its implications for the concept of infinity and its multiple applications have made set theory an area of major interest for logicians and philosophers of mathematics. Contemporary research into set theory covers a vast array of topics, ranging from the structure of the real number line to the study of the consistency of large cardinals.",
+      "char_count": 836,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0002",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Early history ==",
+      "heading_path": "== = Early history ==",
+      "start_char": 1800,
+      "end_char": 2744,
+      "content": "== = Early history === The basic notion of grouping objects has existed since at least the emergence of numbers, and the notion of treating sets as their own objects has existed since at least the Tree of Porphyry in 3rd-century AD. The simplicity and ubiquity of sets makes it hard to determine the origin of sets as now used in mathematics; however, Bernard Bolzano's Paradoxes of the Infinite (Paradoxien des Unendlichen, 1851) is generally considered the first rigorous introduction of sets to mathematics. In his work, he (among other things) expanded on Galileo's paradox, and introduced one-to-one correspondence of infinite sets, for example between the intervals [ 0 , 5 ] {\\displaystyle [0,5]} and [ 0 , 12 ] {\\displaystyle [0,12]} by the relation 5 y = 12 x {\\displaystyle 5y=12x} . However, he resisted saying these sets were equinumerous, and his work is generally considered to have been uninfluential in mathematics of his time.",
+      "char_count": 943,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0003",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Early history ==",
+      "heading_path": "== = Early history ==",
+      "start_char": 2744,
+      "end_char": 3689,
+      "content": "Before mathematical set theory, basic concepts of infinity were considered to be in the domain of philosophy (see: Infinity (philosophy) and Infinity § History). Since the 5th century BC, beginning with Greek philosopher Zeno of Elea in the West (and early Indian mathematicians in the East), mathematicians had struggled with the concept of infinity. With the development of calculus in the late 17th century, philosophers began to generally distinguish between potential and actual infinity, wherein mathematics was only considered in the latter. Carl Friedrich Gauss famously stated: \"Infinity is nothing more than a figure of speech which helps us talk about limits. The notion of a completed infinity doesn't belong in mathematics.\" Development of mathematical set theory was motivated by several mathematicians. Bernhard Riemann's lecture On the Hypotheses which lie at the Foundations of Geometry (1854) proposed new ideas about topology.",
+      "char_count": 945,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0004",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Early history ==",
+      "heading_path": "== = Early history ==",
+      "start_char": 3690,
+      "end_char": 4597,
+      "content": "His lectures also introduced the concept of basing mathematics in terms of sets or manifolds in the sense of a class (which he called Mannigfaltigkeit) now called point-set topology. The lecture was published by Richard Dedekind in 1868, along with Riemann's paper on trigonometric series (which presented the Riemann integral), The latter was a starting point a movement in real analysis for the study of “seriously” discontinuous functions. A young Georg Cantor entered into this area, which led him to the study of point-sets. Around 1871, influenced by Riemann, Dedekind began working with sets in his publications, which dealt very clearly and precisely with equivalence relations, partitions of sets, and homomorphisms. Thus, many of the usual set-theoretic procedures of twentieth-century mathematics go back to his work. However, he did not publish a formal explanation of his set theory until 1888.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0005",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Naive set theory ==",
+      "heading_path": "== = Naive set theory ==",
+      "start_char": 4601,
+      "end_char": 5548,
+      "content": "== = Naive set theory === Set theory, as understood by modern mathematicians, is generally considered to be founded by a single paper in 1874 by Georg Cantor titled On a Property of the Collection of All Real Algebraic Numbers. In his paper, he developed the notion of cardinality, comparing the sizes of two sets by setting them in one-to-one correspondence. His \"revolutionary discovery\" was that the set of all real numbers is uncountable, that is, one cannot put all real numbers in a list. This theorem is proved using Cantor's first uncountability proof, which differs from the more familiar proof using his diagonal argument. Cantor introduced fundamental constructions in set theory, such as the power set of a set A, which is the set of all possible subsets of A. He later proved that the size of the power set of A is strictly larger than the size of A, even when A is an infinite set; this result soon became known as Cantor's theorem.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0006",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Naive set theory ==",
+      "heading_path": "== = Naive set theory ==",
+      "start_char": 5548,
+      "end_char": 6368,
+      "content": "Cantor developed a theory of transfinite numbers, called cardinals and ordinals, which extended the arithmetic of the natural numbers. His notation for the cardinal numbers was the Hebrew letter ℵ {\\displaystyle \\aleph } (ℵ, aleph) with a natural number subscript; for the ordinals he employed the Greek letter ω {\\displaystyle \\omega } (ω, omega). Set theory was beginning to become an essential ingredient of the new “modern” approach to mathematics. Originally, Cantor's theory of transfinite numbers was regarded as counter-intuitive – even shocking. This caused it to encounter resistance from mathematical contemporaries such as Leopold Kronecker and Henri Poincaré and later from Hermann Weyl and L. E. J. Brouwer, while Ludwig Wittgenstein raised philosophical objections (see: Controversy over Cantor's theory).",
+      "char_count": 820,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0007",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Naive set theory ==",
+      "heading_path": "== = Naive set theory ==",
+      "start_char": 6369,
+      "end_char": 7287,
+      "content": "Dedekind's algebraic style only began to find followers in the 1890s Despite the controversy, Cantor's set theory gained remarkable ground around the turn of the 20th century with the work of several notable mathematicians and philosophers. Richard Dedekind, around the same time, began working with sets in his publications, and famously constructing the real numbers using Dedekind cuts. He also worked with Giuseppe Peano in developing the Peano axioms, which formalized natural-number arithmetic, using set-theoretic ideas, which also introduced the epsilon symbol for set membership. Possibly most prominently, Gottlob Frege began to develop his Foundations of Arithmetic. In his work, Frege tries to ground all mathematics in terms of logical axioms using Cantor's cardinality. For example, the sentence \"the number of horses in the barn is four\" means that four objects fall under the concept horse in the barn.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0008",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Naive set theory ==",
+      "heading_path": "== = Naive set theory ==",
+      "start_char": 7288,
+      "end_char": 8255,
+      "content": "Frege attempted to explain our grasp of numbers through cardinality ('the number of...', or N x : F x {\\displaystyle Nx:Fx} ), relying on Hume's principle. However, Frege's work was short-lived, as it was found by Bertrand Russell that his axioms lead to a contradiction. Specifically, Frege's Basic Law V (now known as the axiom schema of unrestricted comprehension). According to Basic Law V, for any sufficiently well-defined property, there is the set of all and only the objects that have that property. The contradiction, called Russell's paradox, is shown as follows: Let R be the set of all sets that are not members of themselves. (This set is sometimes called \"the Russell set\".) If R is not a member of itself, then its definition entails that it is a member of itself; yet, if it is a member of itself, then it is not a member of itself, since it is the set of all sets that are not members of themselves. The resulting contradiction is Russell's paradox.",
+      "char_count": 967,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0009",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Naive set theory ==",
+      "heading_path": "== = Naive set theory ==",
+      "start_char": 8256,
+      "end_char": 8764,
+      "content": "In symbols: Let R = { x ∣ x ∉ x } , then R ∈ R ⟺ R ∉ R {\\displaystyle {\\text{Let }}R=\\{x\\mid x\\not \\in x\\}{\\text{, then }}R\\in R\\iff R\\not \\in R} This came around a time of several paradoxes or counter-intuitive results. For example, that the parallel postulate cannot be proved, the existence of mathematical objects that cannot be computed or explicitly described, and the existence of theorems of arithmetic that cannot be proved with Peano arithmetic. The result was a foundational crisis of mathematics.",
+      "char_count": 508,
+      "token_estimate": 127,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0010",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Basic concepts and notation ==",
+      "heading_path": "== Basic concepts and notation ==",
+      "start_char": 8774,
+      "end_char": 9539,
+      "content": "== Basic concepts and notation == Set theory begins with a fundamental binary relation between an object o and a set A. If o is a member (or element) of A, the notation o ∈ A is used. A set is described by listing elements separated by commas, or by a characterizing property of its elements, within braces { }. Since sets are objects, the membership relation can relate sets as well, i.e., sets themselves can be members of other sets. A derived binary relation between two sets is the subset relation, also called set inclusion. If all the members of set A are also members of set B, then A is a subset of B, denoted A ⊆ B. For example, {1, 2} is a subset of {1, 2, 3}, and so is {2} but {1, 4} is not. As implied by this definition, a set is a subset of itself.",
+      "char_count": 764,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0011",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Basic concepts and notation ==",
+      "heading_path": "== Basic concepts and notation ==",
+      "start_char": 9539,
+      "end_char": 10468,
+      "content": "For cases where this possibility is unsuitable or would make sense to be rejected, the term proper subset is defined, variously denoted A ⊂ B {\\displaystyle A\\subset B} , A ⊊ B {\\displaystyle A\\subsetneq B} , or A ⫋ B {\\displaystyle A\\subsetneqq B} (note however that the notation A ⊂ B {\\displaystyle A\\subset B} is sometimes used synonymously with A ⊆ B {\\displaystyle A\\subseteq B} ; that is, allowing the possibility that A and B are equal). We call A a proper subset of B if and only if A is a subset of B, but A is not equal to B. Also, 1, 2, and 3 are members (elements) of the set {1, 2, 3}, but are not subsets of it; and in turn, the subsets, such as {1}, are not members of the set {1, 2, 3}. More complicated relations can exist; for example, the set {1} is both a member and a proper subset of the set {1, {1}}. Just as arithmetic features binary operations on numbers, set theory features binary operations on sets.",
+      "char_count": 929,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0012",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Basic concepts and notation ==",
+      "heading_path": "== Basic concepts and notation ==",
+      "start_char": 10469,
+      "end_char": 11366,
+      "content": "The following is a partial list of them: Union of the sets A and B, denoted A ∪ B, is the set of all objects that are a member of A, or B, or both. For example, the union of {1, 2, 3} and {2, 3, 4} is the set {1, 2, 3, 4}. Intersection of the sets A and B, denoted A ∩ B, is the set of all objects that are members of both A and B. For example, the intersection of {1, 2, 3} and {2, 3, 4} is the set {2, 3}. Set difference of U and A, denoted U ∖ A, is the set of all members of U that are not members of A. The set difference {1, 2, 3} ∖ {2, 3, 4} is {1}, while conversely, the set difference {2, 3, 4} ∖ {1, 2, 3} is {4}. When A is a subset of U, the set difference U ∖ A is also called the complement of A in U. In this case, if the choice of U is clear from the context, the notation Ac is sometimes used instead of U ∖ A, particularly if U is a universal set as in the study of Venn diagrams.",
+      "char_count": 897,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0013",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Basic concepts and notation ==",
+      "heading_path": "== Basic concepts and notation ==",
+      "start_char": 11367,
+      "end_char": 12297,
+      "content": "Symmetric difference of sets A and B, denoted A △ B or A ⊖ B, is the set of all objects that are a member of exactly one of A and B (elements which are in one of the sets, but not in both). For instance, for the sets {1, 2, 3} and {2, 3, 4}, the symmetric difference set is {1, 4}. It is the set difference of the union and the intersection, (A ∪ B) ∖ (A ∩ B) or (A ∖ B) ∪ (B ∖ A). Cartesian product of A and B, denoted A × B, is the set whose members are all possible ordered pairs (a, b), where a is a member of A and b is a member of B. For example, the Cartesian product of {1, 2} and {red, white} is {(1, red), (1, white), (2, red), (2, white)}. Some basic sets of central importance are the set of natural numbers, the set of real numbers and the empty set – the unique set containing no elements. The empty set is also occasionally called the null set, though this name is ambiguous and can lead to several interpretations.",
+      "char_count": 930,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0014",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Basic concepts and notation ==",
+      "heading_path": "== Basic concepts and notation ==",
+      "start_char": 12298,
+      "end_char": 12752,
+      "content": "The empty set can be denoted with empty braces \" { } {\\displaystyle \\{\\}} \" or the symbol \" ∅ {\\displaystyle \\varnothing } \" or \" ∅ {\\displaystyle \\emptyset } \". The power set of a set A, denoted P ( A ) {\\displaystyle {\\mathcal {P}}(A)} , is the set whose members are all of the possible subsets of A. For example, the power set of {1, 2} is { {}, {1}, {2}, {1, 2} }. Notably, P ( A ) {\\displaystyle {\\mathcal {P}}(A)} contains both A and the empty set.",
+      "char_count": 454,
+      "token_estimate": 113,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0015",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Ontology ==",
+      "heading_path": "== Ontology ==",
+      "start_char": 12734,
+      "end_char": 13688,
+      "content": "== Ontology == A set is pure if all of its members are sets, all members of its members are sets, and so on. For example, the set containing only the empty set is a nonempty pure set. In modern set theory, it is common to restrict attention to the von Neumann universe of pure sets, and many systems of axiomatic set theory are designed to axiomatize the pure sets only. There are many technical advantages to this restriction, and little generality is lost, because essentially all mathematical concepts can be modeled by pure sets. Sets in the von Neumann universe are organized into a cumulative hierarchy, based on how deeply their members, members of members, etc. are nested. Each set in this hierarchy is assigned (by transfinite recursion) an ordinal number α {\\displaystyle \\alpha } , known as its rank. The rank of a pure set X {\\displaystyle X} is defined to be the least ordinal that is strictly greater than the rank of any of its elements.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0016",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Ontology ==",
+      "heading_path": "== Ontology ==",
+      "start_char": 13688,
+      "end_char": 14035,
+      "content": "For example, the empty set is assigned rank 0, while the set containing only the empty set is assigned rank 1. For each ordinal α {\\displaystyle \\alpha } , the set V α {\\displaystyle V_{\\alpha }} is defined to consist of all pure sets with rank less than α {\\displaystyle \\alpha } . The entire von Neumann universe is denoted V {\\displaystyle V} .",
+      "char_count": 347,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0017",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Formalized set theory ==",
+      "heading_path": "== Formalized set theory ==",
+      "start_char": 14049,
+      "end_char": 14851,
+      "content": "== Formalized set theory == Elementary set theory can be studied informally and intuitively, and so can be taught in primary schools using Venn diagrams. The intuitive approach tacitly assumes that a set may be formed from the class of all objects satisfying any particular defining condition. This assumption gives rise to paradoxes, the simplest and best known of which are Russell's paradox and the Burali-Forti paradox. Axiomatic set theory was originally devised to rid set theory of such paradoxes. The most widely studied systems of axiomatic set theory imply that all sets form a cumulative hierarchy. Such systems come in two flavors, those whose ontology consists of: Sets alone. This includes the most common axiomatic set theory, Zermelo–Fraenkel set theory with the axiom of choice (ZFC).",
+      "char_count": 801,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0018",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Formalized set theory ==",
+      "heading_path": "== Formalized set theory ==",
+      "start_char": 14851,
+      "end_char": 15780,
+      "content": "Fragments of ZFC include: Zermelo set theory, which replaces the axiom schema of replacement with that of separation; General set theory, a small fragment of Zermelo set theory sufficient for the Peano axioms and finite sets; Kripke–Platek set theory, which omits the axioms of infinity, powerset, and choice, and weakens the axiom schemata of separation and replacement. Sets and proper classes. These include Von Neumann–Bernays–Gödel set theory, which has the same strength as ZFC for theorems about sets alone, and Morse–Kelley set theory and Tarski–Grothendieck set theory, both of which are stronger than ZFC. The above systems can be modified to allow urelements, objects that can be members of sets but that are not themselves sets and do not have any members. The New Foundations systems of NFU (allowing urelements) and NF (lacking them), associate with Willard Van Orman Quine, are not based on a cumulative hierarchy.",
+      "char_count": 929,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0019",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Formalized set theory ==",
+      "heading_path": "== Formalized set theory ==",
+      "start_char": 15781,
+      "end_char": 16692,
+      "content": "NF and NFU include a \"set of everything\", relative to which every set has a complement. In these systems urelements matter, because NF, but not NFU, produces sets for which the axiom of choice does not hold. Despite NF's ontology not reflecting the traditional cumulative hierarchy and violating well-foundedness, Thomas Forster has argued that it does reflect an iterative conception of set. Systems of constructive set theory, such as CST, CZF, and IZF, embed their set axioms in intuitionistic instead of classical logic. Yet other systems accept classical logic but feature a nonstandard membership relation. These include rough set theory and fuzzy set theory, in which the value of an atomic formula embodying the membership relation is not simply True or False. The Boolean-valued models of ZFC are a related subject. An enrichment of ZFC called internal set theory was proposed by Edward Nelson in 1977.",
+      "char_count": 911,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0020",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 16684,
+      "end_char": 17654,
+      "content": "== Applications == Many mathematical concepts can be defined precisely using only set theoretic concepts. For example, mathematical structures as diverse as graphs, manifolds, rings, vector spaces, and relational algebras can all be defined as sets satisfying various (axiomatic) properties. Equivalence and order relations are ubiquitous in mathematics, and the theory of mathematical relations can be described in set theory. Set theory is also a promising foundational system for much of mathematics. Since the publication of the first volume of Principia Mathematica, it has been claimed that most (or even all) mathematical theorems can be derived using an aptly designed set of axioms for set theory, augmented with many definitions, using first or second-order logic. For example, properties of the natural and real numbers can be derived within set theory, as each of these number systems can be defined by representing their elements as sets of specific forms.",
+      "char_count": 969,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0021",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 17654,
+      "end_char": 18364,
+      "content": "Set theory as a foundation for mathematical analysis, topology, abstract algebra, and discrete mathematics is likewise uncontroversial; mathematicians accept (in principle) that theorems in these areas can be derived from the relevant definitions and the axioms of set theory. However, it remains that few full derivations of complex mathematical theorems from set theory have been formally verified, since such formal derivations are often much longer than the natural language proofs mathematicians commonly present. One verification project, Metamath, includes human-written, computer-verified derivations of more than 12,000 theorems starting from ZFC set theory, first-order logic and propositional logic.",
+      "char_count": 710,
+      "token_estimate": 177,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0022",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Combinatorial set theory ==",
+      "heading_path": "== = Combinatorial set theory ==",
+      "start_char": 18488,
+      "end_char": 18704,
+      "content": "== = Combinatorial set theory === Combinatorial set theory concerns extensions of finite combinatorics to infinite sets. This includes the study of cardinal arithmetic and the study of extensions of Ramsey's theorem such as the Erdős–Rado theorem.",
+      "char_count": 247,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0023",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Descriptive set theory ==",
+      "heading_path": "== = Descriptive set theory ==",
+      "start_char": 18734,
+      "end_char": 19669,
+      "content": "== = Descriptive set theory === Descriptive set theory is the study of subsets of the real line and, more generally, subsets of Polish spaces. It begins with the study of pointclasses in the Borel hierarchy and extends to the study of more complex hierarchies such as the projective hierarchy and the Wadge hierarchy. Many properties of Borel sets can be established in ZFC, but proving these properties hold for more complicated sets requires additional axioms related to determinacy and large cardinals. The field of effective descriptive set theory is between set theory and recursion theory. It includes the study of lightface pointclasses, and is closely related to hyperarithmetical theory. In many cases, results of classical descriptive set theory have effective versions; in some cases, new results are obtained by proving the effective version first and then extending (\"relativizing\") it to make it more broadly applicable.",
+      "char_count": 934,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0024",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Fuzzy set theory ==",
+      "heading_path": "== = Fuzzy set theory ==",
+      "start_char": 19870,
+      "end_char": 20294,
+      "content": "== = Fuzzy set theory === In set theory as Cantor defined and Zermelo and Fraenkel axiomatized, an object is either a member of a set or not. In fuzzy set theory this condition was relaxed by Lotfi A. Zadeh so an object has a degree of membership in a set, a number between 0 and 1. For example, the degree of membership of a person in the set of \"tall people\" is more flexible than a simple yes or no answer and can be a real number such as 0.75.",
+      "char_count": 447,
+      "token_estimate": 111,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0025",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Inner model theory ==",
+      "heading_path": "== = Inner model theory ==",
+      "start_char": 20320,
+      "end_char": 21262,
+      "content": "== = Inner model theory === An inner model of Zermelo–Fraenkel set theory (ZF) is a transitive class that includes all the ordinals and satisfies all the axioms of ZF. The canonical example is the constructible universe L developed by Gödel. One reason that the study of inner models is of interest is that it can be used to prove consistency results. For example, it can be shown that regardless of whether a model V of ZF satisfies the continuum hypothesis or the axiom of choice, the inner model L constructed inside the original model will satisfy both the generalized continuum hypothesis and the axiom of choice. Thus the assumption that ZF is consistent (has at least one model) implies that ZF together with these two principles is consistent. The study of inner models is common in the study of determinacy and large cardinals, especially when considering axioms such as the axiom of determinacy that contradict the axiom of choice.",
+      "char_count": 941,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0026",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Inner model theory ==",
+      "heading_path": "== = Inner model theory ==",
+      "start_char": 21262,
+      "end_char": 21581,
+      "content": "Even if a fixed model of set theory satisfies the axiom of choice, it is possible for an inner model to fail to satisfy the axiom of choice. For example, the existence of sufficiently large cardinals implies that there is an inner model satisfying the axiom of determinacy (and thus not satisfying the axiom of choice).",
+      "char_count": 319,
+      "token_estimate": 79,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0027",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Large cardinals ==",
+      "heading_path": "== = Large cardinals ==",
+      "start_char": 21579,
+      "end_char": 21925,
+      "content": "== = Large cardinals === A large cardinal is a cardinal number with an extra property. Many such properties are studied, including inaccessible cardinals, measurable cardinals, and many more. These properties typically imply the cardinal number must be very large, with the existence of a cardinal with the specified property unprovable in Zermelo–Fraenkel set theory.",
+      "char_count": 368,
+      "token_estimate": 92,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0028",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Determinacy ==",
+      "heading_path": "== = Determinacy ==",
+      "start_char": 21944,
+      "end_char": 22688,
+      "content": "== = Determinacy === Determinacy refers to the fact that, under appropriate assumptions, certain two-player games of perfect information are determined from the start in the sense that one player must have a winning strategy. The existence of these strategies has important consequences in descriptive set theory, as the assumption that a broader class of games is determined often implies that a broader class of sets will have a topological property. The axiom of determinacy (AD) is an important object of study; although incompatible with the axiom of choice, AD implies that all subsets of the real line are well behaved (in particular, measurable and with the perfect set property). AD can be used to prove that the Wadge degrees have an elegant structure.",
+      "char_count": 762,
+      "token_estimate": 190,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0029",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Forcing ==",
+      "heading_path": "== = Forcing ==",
+      "start_char": 22703,
+      "end_char": 23352,
+      "content": "== = Forcing === Paul Cohen invented the method of forcing while searching for a model of ZFC in which the continuum hypothesis fails, or a model of ZF in which the axiom of choice fails. Forcing adjoins to some given model of set theory additional sets in order to create a larger model with properties determined (i.e. \"forced\") by the construction and the original model. For example, Cohen's construction adjoins additional subsets of the natural numbers without changing any of the cardinal numbers of the original model. Forcing is also one of two methods for proving relative consistency by finitistic methods, the other method being Boolean-valued models.",
+      "char_count": 663,
+      "token_estimate": 165,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0030",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Cardinal invariants ==",
+      "heading_path": "== = Cardinal invariants ==",
+      "start_char": 23379,
+      "end_char": 23868,
+      "content": "== = Cardinal invariants === A cardinal invariant is a property of the real line measured by a cardinal number. For example, a well-studied invariant is the smallest cardinality of a collection of meagre sets of reals whose union is the entire real line. These are invariants in the sense that any two isomorphic models of set theory must give the same cardinal for each invariant. Many cardinal invariants have been studied, and the relationships between them are often complex and related to axioms of set theory.",
+      "char_count": 515,
+      "token_estimate": 128,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0031",
+      "article_id": "settheory_84fc6d63",
+      "section": "== = Set-theoretic topology ==",
+      "heading_path": "== = Set-theoretic topology ==",
+      "start_char": 23898,
+      "end_char": 24371,
+      "content": "== = Set-theoretic topology === Set-theoretic topology studies questions of general topology that are set-theoretic in nature or that require advanced methods of set theory for their solution. Many of these theorems are independent of ZFC, requiring stronger axioms for their proof. A famous problem is the normal Moore space question, a question in general topology that was the subject of intense research. The answer to the normal Moore space question was eventually proved to be independent of ZFC.",
+      "char_count": 502,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0032",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Controversy ==",
+      "heading_path": "== Controversy ==",
+      "start_char": 24388,
+      "end_char": 25321,
+      "content": "== Controversy == From set theory's inception, some mathematicians have objected to it as a foundation for mathematics. The most common objection to set theory, one Kronecker voiced in set theory's earliest years, starts from the constructivist view that mathematics is loosely related to computation. If this view is granted, then the treatment of infinite sets, both in naive and in axiomatic set theory, introduces into mathematics methods and objects that are not computable even in principle. The feasibility of constructivism as a substitute foundation for mathematics was greatly increased by Errett Bishop's influential book Foundations of Constructive Analysis. A different objection put forth by Henri Poincaré is that defining sets using the axiom schemas of specification and replacement, as well as the axiom of power set, introduces impredicativity, a type of circularity, into the definitions of mathematical objects.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0033",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Controversy ==",
+      "heading_path": "== Controversy ==",
+      "start_char": 25321,
+      "end_char": 26216,
+      "content": "The scope of predicatively founded mathematics, while less than that of the commonly accepted Zermelo–Fraenkel theory, is much greater than that of constructive mathematics, to the point that Solomon Feferman has said that \"all of scientifically applicable analysis can be developed [using predicative methods]\". Ludwig Wittgenstein condemned set theory philosophically for its connotations of mathematical platonism. He wrote that \"set theory is wrong\", since it builds on the \"nonsense\" of fictitious symbolism, has \"pernicious idioms\", and that it is nonsensical to talk about \"all numbers\". Wittgenstein identified mathematics with algorithmic human deduction; the need for a secure foundation for mathematics seemed, to him, nonsensical. Moreover, since human effort is necessarily finite, Wittgenstein's philosophy required an ontological commitment to radical constructivism and finitism.",
+      "char_count": 895,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0034",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Controversy ==",
+      "heading_path": "== Controversy ==",
+      "start_char": 26217,
+      "end_char": 27092,
+      "content": "Meta-mathematical statements – which, for Wittgenstein, included any statement quantifying over infinite domains, and thus almost all modern set theory – are not mathematics. Few modern philosophers have adopted Wittgenstein's views after a spectacular blunder in Remarks on the Foundations of Mathematics: Wittgenstein attempted to refute Gödel's incompleteness theorems after having only read the abstract. As reviewers Kreisel, Bernays, Dummett, and Goodstein all pointed out, many of his critiques did not apply to the paper in full. Only recently have philosophers such as Crispin Wright begun to rehabilitate Wittgenstein's arguments. Category theorists have proposed topos theory as an alternative to traditional axiomatic set theory. Topos theory can interpret various alternatives to that theory, such as constructivism, finite set theory, and computable set theory.",
+      "char_count": 875,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0035",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Controversy ==",
+      "heading_path": "== Controversy ==",
+      "start_char": 27093,
+      "end_char": 28024,
+      "content": "Topoi also give a natural setting for forcing and discussions of the independence of choice from ZF, as well as providing the framework for pointless topology and Stone spaces. An active area of research is the univalent foundations and related to it homotopy type theory. Within homotopy type theory, a set may be regarded as a homotopy 0-type, with universal properties of sets arising from the inductive and recursive properties of higher inductive types. Principles such as the axiom of choice and the law of the excluded middle can be formulated in a manner corresponding to the classical formulation in set theory or perhaps in a spectrum of distinct ways unique to type theory. Some of these principles may be proven to be a consequence of other principles. The variety of formulations of these axiomatic principles allows for a detailed analysis of the formulations required in order to derive various mathematical results.",
+      "char_count": 931,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0036",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Mathematical education ==",
+      "heading_path": "== Mathematical education ==",
+      "start_char": 28036,
+      "end_char": 28942,
+      "content": "== Mathematical education == As set theory gained popularity as a foundation for modern mathematics, there has been support for the idea of introducing the basics of naive set theory early in mathematics education. In the US in the 1960s, the New Math experiment aimed to teach basic set theory, among other abstract concepts, to primary school students but was met with much criticism. The math syllabus in European schools followed this trend and currently includes the subject at different levels in all grades. Venn diagrams are widely employed to explain basic set-theoretic relationships to primary school students (even though John Venn originally devised them as part of a procedure to assess the validity of inferences in term logic). Set theory is used to introduce students to logical operators (NOT, AND, OR), and semantic or rule description (technically intensional definition) of sets (e.g.",
+      "char_count": 905,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "settheory_84fc6d63_c0037",
+      "article_id": "settheory_84fc6d63",
+      "section": "== Mathematical education ==",
+      "heading_path": "== Mathematical education ==",
+      "start_char": 28942,
+      "end_char": 29609,
+      "content": "\"months starting with the letter A\"), which may be useful when learning computer programming, since Boolean logic is used in various programming languages. Likewise, sets and other collection-like objects, such as multisets and lists, are common datatypes in computer science and programming. In addition to that, certain sets are commonly used in mathematical teaching, such as the sets N {\\displaystyle \\mathbb {N} } of natural numbers, Z {\\displaystyle \\mathbb {Z} } of integers, R {\\displaystyle \\mathbb {R} } of real numbers, etc.). These are commonly used when defining a mathematical function as a relation from one set (the domain) to another set (the range).",
+      "char_count": 667,
+      "token_estimate": 166,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What are some examples of mathematical structures that can be defined as sets satisfying certain axiomatic properties?",
+        "answer": "Examples of mathematical structures that can be defined as sets with specific properties include graphs, manifolds, rings, vector spaces, and relational algebras.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0020"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Explain Russell's paradox and the specific set definition that leads to the contradiction.",
+        "answer": "Russell's paradox is a contradiction found in Frege's axioms, specifically his Basic Law V. The paradox is demonstrated by defining a set, R, as \"the set of all sets that are not members of themselves.\" This definition leads to a logical contradiction: if R is not a member of itself, then by its own definition, it must be a member of itself. Conversely, if R is a member of itself, then it violates the rule for its members and should not be a member of itself.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How is the rank of a pure set defined?",
+        "answer": "The rank of a pure set is defined as the least ordinal number that is strictly greater than the rank of any of its elements.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0015"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "Trace the historical development of set theory, from its early rigorous introduction to its modern foundational role in mathematics.",
+        "answer": "The first rigorous introduction of sets into mathematics is considered to be Bernard Bolzano's 1851 work, \"Paradoxes of the Infinite,\" though it was not influential at the time. The modern study of set theory was initiated in the 1870s by Georg Cantor and Richard Dedekind, establishing what is known as naive set theory. Following the discovery of paradoxes within this early system, axiomatic systems were developed in the early twentieth century. Of these, Zermelo–Fraenkel set theory (with the axiom of choice) emerged as the most studied and is now commonly used as a foundational system for all of mathematics.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0000",
+          "settheory_84fc6d63_c0001",
+          "settheory_84fc6d63_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How did Bernhard Riemann's work influence the development of set theory through the contributions of Richard Dedekind and Georg Cantor?",
+        "answer": "Bernhard Riemann's 1854 lecture on geometry introduced new ideas about topology and the concept of basing mathematics on sets (which he called Mannigfaltigkeit). This work influenced Richard Dedekind, who published Riemann's lecture and began his own work with sets around 1871. Georg Cantor was also influenced by Riemann's work on trigonometric series, which led him to study point-sets. This study culminated in Cantor's foundational 1874 paper where he introduced key set-theoretic concepts like cardinality and the uncountability of real numbers.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0003",
+          "settheory_84fc6d63_c0004",
+          "settheory_84fc6d63_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Trace the evolution of Cantor's set theory from its initial reception to the foundational crisis caused by Russell's paradox.",
+        "answer": "Initially, Georg Cantor's theory of transfinite numbers was considered counter-intuitive and met with resistance from mathematicians like Leopold Kronecker and Henri Poincaré. Despite this controversy, his set theory gained significant traction around the turn of the 20th century. Prominent figures like Gottlob Frege began to use its concepts, with Frege attempting to ground all of mathematics in logic using Cantor's idea of cardinality. However, this application led to a crisis when Bertrand Russell discovered a contradiction, now known as Russell's paradox, in Frege's axioms. The paradox arose from Frege's Basic Law V, which allowed for the creation of 'the set of all sets that are not members of themselves,' leading to a logical contradiction that undermined Frege's work.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0006",
+          "settheory_84fc6d63_c0007",
+          "settheory_84fc6d63_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How did the discovery of paradoxes in early set theory influence its development into the modern foundational system for mathematics?",
+        "answer": "The initial study of set theory, known as naive set theory, was developed in the 1870s. However, the discovery of paradoxes, such as Russell's paradox, prompted the creation of more rigorous axiomatic systems in the early twentieth century. The most well-known of these is Zermelo–Fraenkel set theory, which, often combined with the axiom of choice, is now commonly used as a foundational system for all of mathematics.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0000",
+          "settheory_84fc6d63_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What were the respective contributions of Bernard Bolzano and Bernhard Riemann to the early development of set theory, and how did their influence on the field differ?",
+        "answer": "Bernard Bolzano's 1851 work, \"Paradoxes of the Infinite,\" is considered the first rigorous introduction of sets to mathematics, where he introduced the concept of one-to-one correspondence for infinite sets. However, his work was largely uninfluential at the time. In contrast, Bernhard Riemann's 1854 lecture, \"On the Hypotheses which lie at the Foundations of Geometry,\" introduced new ideas in topology and the concept of basing mathematics on sets (manifolds). Riemann's work served as a key motivation for the development of mathematical set theory and directly influenced later mathematicians like Richard Dedekind and Georg Cantor.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0002",
+          "settheory_84fc6d63_c0003",
+          "settheory_84fc6d63_c0004"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What information is provided about == = Naive set theory ==?",
+        "answer": "The text provides information about == = Naive set theory == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0005",
+          "settheory_84fc6d63_c0006",
+          "settheory_84fc6d63_c0007",
+          "settheory_84fc6d63_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What is the distinction between the membership relation, the subset relation, and the proper subset relation in set theory?",
+        "answer": "The membership relation (o ∈ A) describes when an object 'o' is an element of a set 'A'. The subset relation (A ⊆ B) applies between two sets, where all members of set A are also members of set B, which includes the case where A and B are equal. The proper subset relation (A ⊂ B) is a stricter condition where A is a subset of B, but A is not equal to B. For instance, the number 1 is a member of {1, 2, 3}, but not a subset. Conversely, the set {1} is a proper subset of {1, 2, 3}, but not a member of it.",
+        "related_chunk_ids": [
+          "settheory_84fc6d63_c0010",
+          "settheory_84fc6d63_c0011"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:49.942Z",
+    "content_format": "markdown",
+    "total_chunks": 38,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

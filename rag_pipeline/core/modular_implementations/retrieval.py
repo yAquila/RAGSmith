@@ -535,7 +535,7 @@ class GraphRAG(RetrievalComponent):
         self.neo4j_password = config.get("graph_rag_neo4j_password", "admin123")
         
         # Ollama configuration for embeddings
-        self.ollama_url = config.get("graph_rag_ollama_embedding_url", "http://ollama_gpu-3:11434/api/embeddings")
+        self.ollama_url = config.get("graph_rag_ollama_embedding_url", "http://ollama-gpu-3:11435/api/embeddings")
         self.embedding_model = config.get("graph_rag_embedding_model", "mxbai-embed-large")
         
         # Graph retrieval parameters
@@ -950,7 +950,7 @@ class GraphRAG(RetrievalComponent):
         """Extract relations using Ollama LLM (via OllamaUtil)"""
         from rag_pipeline.util.api.ollama_client import OllamaUtil
 
-        ollama_model = self.config.get("graph_rag_ollama_model", "gemma3:4b")
+        ollama_model = self.config.get("graph_rag_ollama_model", "gemma3:12b")
         
         prompt = f"""
 You are an expert relation extraction system.
@@ -1215,6 +1215,630 @@ Text:
         except Exception as e:
             logger.error(f"Failed to delete relations for document {doc_id}: {e}")
             return False
+    
+    def __del__(self):
+        """Close Neo4j driver connection"""
+        if self.driver:
+            self.driver.close()
+
+
+class HyperGraphRAG(RetrievalComponent):
+    """HyperGraph-based RAG retrieval using Neo4j hypergraph with multi-entity relationships"""
+    
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        
+        # Neo4j configuration
+        self.neo4j_uri = config.get("hypergraph_neo4j_uri", "bolt://neo4j:7687")
+        self.neo4j_user = config.get("hypergraph_neo4j_user", "neo4j")
+        self.neo4j_password = config.get("hypergraph_neo4j_password", "admin123")
+        
+        # Ollama embedding configuration
+        self.embedding_model = config.get("hypergraph_embedding_model", "mxbai-embed-large")
+        self.embedding_dimension = config.get("hypergraph_embedding_dimension", 1024)
+        
+        # HyperGraph retrieval parameters
+        self.retrieval_method = config.get("hypergraph_retrieval_method", "basic")  # "basic" or "expansion"
+        self.similarity_threshold = config.get("hypergraph_similarity_threshold", 0.7)
+        self.max_depth = config.get("hypergraph_max_depth", 2)
+        self.min_hyperedge_entities = config.get("hypergraph_min_entities", 3)
+        
+        # Processing parameters
+        self.chunk_size = config.get("hypergraph_chunk_size", 2000)
+        
+        # Initialize components
+        self.driver = None
+        self._setup_neo4j_connection()
+        self._initialize_vector_index()
+    
+    def _setup_neo4j_connection(self):
+        """Setup Neo4j database connection"""
+        try:
+            self.driver = GraphDatabase.driver(
+                self.neo4j_uri, 
+                auth=(self.neo4j_user, self.neo4j_password)
+            )
+            # Test connection
+            with self.driver.session() as session:
+                session.run("RETURN 1")
+            logger.info("Neo4j connection for HyperGraphRAG established successfully")
+        except Exception as e:
+            logger.error(f"Failed to connect to Neo4j for HyperGraphRAG: {e}")
+            raise
+    
+    def _embed_text(self, text: str) -> List[float]:
+        """Generate embeddings using OllamaEmbeddings (langchain_community)"""
+        try:
+            from langchain_community.embeddings import OllamaEmbeddings
+            import os
+
+            # Get the Ollama API URL from environment variable or config
+            ollama_api_url = os.getenv("OLLAMA_API_URL", "http://ollama-gpu-3:11435/api")
+            # Remove '/api' suffix for OllamaEmbeddings base_url
+            base_url = ollama_api_url.replace("/api", "")
+
+            embedding_model = getattr(self, "embedding_model", "mxbai-embed-large")
+            embedding = OllamaEmbeddings(
+                model=embedding_model,
+                base_url=base_url
+            )
+            result = embedding.embed_query(text)
+            if not result or not isinstance(result, list):
+                raise ValueError("No embedding returned")
+            return result
+        except Exception as e:
+            logger.error(f"Failed to generate embedding with OllamaEmbeddings: {e}")
+            # Return zero vector as fallback
+            return [0.0] * self.embedding_dimension
+    
+    def _initialize_vector_index(self):
+        """Initialize vector index for hyperedge embeddings"""
+        try:
+            with self.driver.session() as session:
+                # Create indexes for better performance
+                session.run("CREATE INDEX hyperedge_type_idx IF NOT EXISTS FOR (he:HyperEdge) ON (he.type)")
+                session.run("CREATE INDEX entity_name_idx IF NOT EXISTS FOR (e:HyperEntity) ON (e.name)")
+                session.run("CREATE INDEX hyperedge_doc_idx IF NOT EXISTS FOR (he:HyperEdge) ON (he.source_document)")
+                
+                logger.info("HyperGraphRAG indexes created successfully")
+        except Exception as e:
+            logger.warning(f"Could not initialize indexes: {e}")
+    
+    def _extract_hyperedges_with_llm(self, text: str) -> List[Dict[str, Any]]:
+        """Extract hyperedge relations using LLM (via OllamaUtil)"""
+        from rag_pipeline.util.api.ollama_client import OllamaUtil
+
+        ollama_model = self.config.get("hypergraph_ollama_model", "gemma3:12b")
+        
+        prompt = f"""
+You are an advanced hypergraph relation extraction system.
+
+Your task is to extract all meaningful hyperedges from the text below. A hyperedge represents a relationship, or group that connects {self.min_hyperedge_entities} to 10 entities in a single, coherent context.
+
+Guidelines:
+- Each hyperedge must involve between {self.min_hyperedge_entities} and 10 named entities.
+- Focus on group-based relationships involving multiple entities.
+- Use only information explicitly stated in the text (no inference beyond sentence level).
+
+Output format:
+Return only a valid JSON array. No explanations, no markdown/code formatting, no additional text.
+
+Each JSON object must have exactly these fields:
+- "entities": [ "Entity1", "Entity2", ... ],
+- "hyperedge_type": "short_relation_type",
+- "description": "brief description of the hyperedge",
+- "source_sentence": "original sentence from the text"
+
+Examples:
+- "entities": ["Alice", "Bob", "Charlie"],
+- "hyperedge_type": "research_team",
+- "description": "Researchers collaborating on AI project",
+- "source_sentence": "Alice, Bob, and Charlie collaborated on an AI project at MIT."
+
+- "entities": ["John", "Mary", "David"],
+- "hyperedge_type": "event_attendance",
+- "description": "Participants in Conference 2024",
+- "source_sentence": "John, Mary, and David attended the Conference 2024 in Berlin."
+
+Text:
+\"\"\"{text}\"\"\"
+"""
+
+        try:
+            ollama_result = OllamaUtil.get_ollama_response(ollama_model, prompt)
+            if ollama_result is None:
+                logger.error("OllamaUtil.get_ollama_response returned None")
+                return []
+            text_out = ollama_result.get("response", "")
+            # Parse JSON response
+            import json
+            import re
+
+            cleaned = re.sub(r"```[a-zA-Z]*", "", text_out).strip()
+            cleaned = cleaned.strip("` \n")
+            
+            # Clean up potential JSON issues
+            # Remove control characters first
+            cleaned = re.sub(r'[\x00-\x1f\x7f-\x9f]', '', cleaned)
+            
+            # Remove invisible characters
+            cleaned = re.sub(r'⁠', '', cleaned)
+            
+            # Properly escape backslashes in LaTeX notation for JSON
+            # This preserves the LaTeX content while making it JSON-safe
+            cleaned = re.sub(r'\\\\', r'\\\\\\\\', cleaned)  # Double escape existing double backslashes
+            cleaned = re.sub(r'\\(?!["\\/bfnrt])', r'\\\\', cleaned)  # Escape single backslashes
+            
+            logger.debug(f"Cleaned text: {cleaned}")
+
+            # Try direct JSON parsing first
+            try:
+                parsed_data = json.loads(cleaned)
+                if isinstance(parsed_data, list):
+                    logger.debug("Successfully parsed as direct JSON array")
+                    parsed_hyperedges = parsed_data
+                else:
+                    logger.error("Parsed JSON is not a list")
+                    return []
+            except Exception as e:
+                logger.error(f"Failed to parse as direct JSON: {e}")
+                # Try with more aggressive cleaning
+                try:
+                    # Remove all non-printable characters and try again
+                    cleaned_aggressive = re.sub(r'[^\x20-\x7e]', '', cleaned)
+                    logger.info(f"Trying with aggressive cleaning: {cleaned_aggressive[:200]}...")
+                    parsed_data = json.loads(cleaned_aggressive)
+                    if isinstance(parsed_data, list):
+                        logger.info("Successfully parsed with aggressive cleaning")
+                        parsed_hyperedges = parsed_data
+                    else:
+                        logger.error("Parsed JSON is still not a list after aggressive cleaning")
+                        return []
+                except Exception as e2:
+                    logger.error(f"Failed to parse even with aggressive cleaning: {e2}")
+                    return []
+
+            # Validate and filter hyperedges
+            validated_hyperedges = []
+            for i, hyperedge in enumerate(parsed_hyperedges):
+                logger.debug(f"Validating hyperedge {i}: {hyperedge}")
+                if isinstance(hyperedge, dict) and self._validate_hyperedge(hyperedge):
+                    validated_hyperedges.append(hyperedge)
+                    logger.debug(f"Hyperedge {i} validated successfully")
+                else:
+                    logger.debug(f"Hyperedge {i} failed validation")
+
+            logger.debug(f"Parsed {len(parsed_hyperedges)} hyperedges, validated {len(validated_hyperedges)}")
+            return validated_hyperedges
+            
+        except Exception as e:
+            logger.error(f"LLM hyperedge extraction failed: {e}")
+            return []
+    
+    def _validate_hyperedge(self, hyperedge: Dict[str, Any]) -> bool:
+        """Validate extracted hyperedge"""
+        required_keys = ["entities", "hyperedge_type", "description", "source_sentence"]
+        if not all(key in hyperedge for key in required_keys):
+            logger.info(f"Missing required keys. Found: {list(hyperedge.keys())}, Required: {required_keys}")
+            return False
+        
+        entities = hyperedge["entities"]
+        if not isinstance(entities, list):
+            logger.info(f"Entities is not a list: {type(entities)}")
+            return False
+            
+        if len(entities) < self.min_hyperedge_entities:
+            logger.info(f"Not enough entities: {len(entities)} < {self.min_hyperedge_entities}")
+            return False
+            
+        logger.info(f"Hyperedge validation passed: {len(entities)} entities")
+        return True
+    
+    def _chunk_text(self, text: str) -> List[str]:
+        """Split text into chunks"""
+        chunks = []
+        start = 0
+        while start < len(text):
+            end = min(start + self.chunk_size, len(text))
+            chunks.append(text[start:end])
+            start = end
+        return chunks
+    
+    def _store_hyperedge(self, session, hyperedge_data: Dict[str, Any], source_doc: str):
+        """Store hyperedge and its entities in Neo4j"""
+        try:
+            # Create hyperedge node
+            embedding = self._embed_text(hyperedge_data["description"])
+            
+            session.run("""
+                MERGE (he:HyperEdge {
+                    type: $type,
+                    description: $description,
+                    source_document: $source_document
+                })
+                SET he.entity_count = $entity_count,
+                    he.source_sentence = $source_sentence,
+                    he.embedding = $embedding,
+                    he.created_at = datetime()
+                """,
+                type=hyperedge_data["hyperedge_type"],
+                description=hyperedge_data["description"],
+                source_document=source_doc,
+                entity_count=len(hyperedge_data["entities"]),
+                source_sentence=hyperedge_data["source_sentence"],
+                embedding=embedding
+            )
+            
+            # Connect entities to hyperedge
+            for entity_name in hyperedge_data["entities"]:
+                session.run("""
+                    MERGE (e:HyperEntity {name: $entity_name})
+                    WITH e
+                    MATCH (he:HyperEdge {type: $type, description: $description, source_document: $source_document})
+                    MERGE (e)-[:MEMBER_OF]->(he)
+                    """,
+                    entity_name=entity_name,
+                    type=hyperedge_data["hyperedge_type"],
+                    description=hyperedge_data["description"],
+                    source_document=source_doc
+                )
+                
+        except Exception as e:
+            logger.error(f"Failed to store hyperedge: {e}")
+    
+    def _retrieve_basic_hypergraph(self, query_embedding: List[float], top_k: int) -> List[Dict[str, Any]]:
+        """Basic hypergraph retrieval using vector similarity"""
+        cypher_query = """
+        MATCH (he:HyperEdge)
+        WHERE he.embedding IS NOT NULL
+        WITH he, 
+             reduce(acc = 0.0, i IN range(0, size(he.embedding)-1) | 
+                    acc + he.embedding[i] * $query_embedding[i]) / 
+             (sqrt(reduce(acc = 0.0, i IN range(0, size(he.embedding)-1) | 
+                   acc + he.embedding[i] * he.embedding[i])) * 
+              sqrt(reduce(acc = 0.0, i IN range(0, size($query_embedding)-1) | 
+                   acc + $query_embedding[i] * $query_embedding[i]))) AS similarity
+        WHERE similarity >= $similarity_threshold
+        
+        MATCH (e:HyperEntity)-[:MEMBER_OF]->(he)
+        RETURN DISTINCT 
+            he.type AS hyperedge_type,
+            he.description AS hyperedge_description,
+            collect(e.name) AS entities,
+            he.source_sentence AS source_sentence,
+            he.source_document AS source_document,
+            similarity
+        ORDER BY similarity DESC
+        LIMIT $top_k
+        """
+        
+        with self.driver.session() as session:
+            try:
+                result = session.run(
+                    cypher_query,
+                    query_embedding=query_embedding,
+                    similarity_threshold=self.similarity_threshold,
+                    top_k=top_k
+                )
+                
+                hyperedges = []
+                for record in result:
+                    hyperedges.append({
+                        'hyperedge_type': record['hyperedge_type'],
+                        'description': record['hyperedge_description'],
+                        'entities': record['entities'],
+                        'source_sentence': record['source_sentence'],
+                        'source_document': record['source_document'],
+                        'similarity': record['similarity']
+                    })
+                
+                return hyperedges
+                
+            except Exception as e:
+                logger.error(f"Basic hypergraph retrieval failed: {e}")
+                return []
+    
+    def _retrieve_expansion_hypergraph(self, query_embedding: List[float], top_k: int) -> List[Dict[str, Any]]:
+        """Enhanced hypergraph retrieval with expansion"""
+        cypher_query = """
+        // Step 1: Find similar hyperedges
+        MATCH (he:HyperEdge)
+        WHERE he.embedding IS NOT NULL
+        WITH he, 
+             reduce(acc = 0.0, i IN range(0, size(he.embedding)-1) | 
+                    acc + he.embedding[i] * $query_embedding[i]) / 
+             (sqrt(reduce(acc = 0.0, i IN range(0, size(he.embedding)-1) | 
+                   acc + he.embedding[i] * he.embedding[i])) * 
+              sqrt(reduce(acc = 0.0, i IN range(0, size($query_embedding)-1) | 
+                   acc + $query_embedding[i] * $query_embedding[i]))) AS similarity
+        WHERE similarity >= $similarity_threshold
+        ORDER BY similarity DESC
+        LIMIT 5
+        
+        // Step 2: Find entities in these hyperedges
+        MATCH (e:HyperEntity)-[:MEMBER_OF]->(he)
+        WITH e, he, similarity
+        
+        // Step 3: Find other hyperedges these entities belong to
+        MATCH (e)-[:MEMBER_OF]->(other_he:HyperEdge)
+        WHERE other_he <> he
+        
+        MATCH (other_e:HyperEntity)-[:MEMBER_OF]->(other_he)
+        
+        RETURN DISTINCT
+            he.type AS original_type,
+            he.description AS original_description,
+            other_he.type AS connected_type,
+            other_he.description AS connected_description,
+            collect(other_e.name) AS connected_entities,
+            similarity,
+            1 AS distance
+        ORDER BY similarity DESC, distance ASC
+        LIMIT $top_k
+        """
+        
+        with self.driver.session() as session:
+            try:
+                result = session.run(
+                    cypher_query,
+                    query_embedding=query_embedding,
+                    similarity_threshold=self.similarity_threshold,
+                    top_k=top_k
+                )
+                
+                expansions = []
+                for record in result:
+                    expansions.append({
+                        'original_type': record['original_type'],
+                        'original_description': record['original_description'],
+                        'connected_type': record['connected_type'],
+                        'connected_description': record['connected_description'],
+                        'connected_entities': record['connected_entities'],
+                        'similarity': record['similarity'],
+                        'distance': record['distance']
+                    })
+                
+                return expansions
+                
+            except Exception as e:
+                logger.error(f"Expansion hypergraph retrieval failed: {e}")
+                return []
+    
+    def _hyperedges_to_documents(self, hyperedges: List[Dict[str, Any]], query_text: str) -> List[Document]:
+        """Convert hyperedges to Document objects"""
+        documents = []
+        
+        for i, hyperedge in enumerate(hyperedges):
+            if 'entities' in hyperedge:
+                # Basic retrieval format
+                entities_str = ", ".join(hyperedge['entities'])
+                content = f"Hyperedge [{hyperedge['hyperedge_type']}]: {entities_str} - {hyperedge['description']}"
+                
+                if hyperedge.get('source_sentence'):
+                    content += f"\nContext: {hyperedge['source_sentence']}"
+                
+                metadata = {
+                    'hyperedge_type': hyperedge['hyperedge_type'],
+                    'entities': hyperedge['entities'],
+                    'description': hyperedge['description'],
+                    'source_sentence': hyperedge.get('source_sentence', ''),
+                    'source_document': hyperedge.get('source_document', ''),
+                    'original_doc_id': hyperedge.get('source_document', ''),
+                    'similarity_score': hyperedge.get('similarity', 0.0),
+                    'retrieval_method': 'basic',
+                    'is_hypergraph_relation': True,
+                    'query_text': query_text,
+                    'retrieved_at': time.time()
+                }
+                
+                score = hyperedge.get('similarity', 0.0)
+                
+            else:
+                # Expansion retrieval format
+                content = f"Original: [{hyperedge['original_type']}] {hyperedge['original_description']}\n"
+                content += f"Connected: [{hyperedge['connected_type']}] {hyperedge['connected_description']}"
+                
+                entities_str = ", ".join(hyperedge.get('connected_entities', []))
+                if entities_str:
+                    content += f"\nEntities: {entities_str}"
+                
+                metadata = {
+                    'hyperedge_type': 'expansion',
+                    'original_type': hyperedge['original_type'],
+                    'connected_type': hyperedge['connected_type'],
+                    'original_description': hyperedge['original_description'],
+                    'connected_description': hyperedge['connected_description'],
+                    'connected_entities': hyperedge.get('connected_entities', []),
+                    'similarity_score': hyperedge.get('similarity', 0.0),
+                    'distance': hyperedge.get('distance', 0),
+                    'retrieval_method': 'expansion',
+                    'is_hypergraph_expansion': True,
+                    'query_text': query_text,
+                    'original_doc_id': hyperedge.get('source_document', ''),
+                    'retrieved_at': time.time()
+                }
+                
+                # Convert distance to similarity score
+                distance = hyperedge.get('distance', 1)
+                score = 1.0 / (1.0 + distance)
+            
+            doc = Document(
+                doc_id=f"hypergraph_{i}_{metadata['original_doc_id']}",
+                content=content,
+                score=score,
+                metadata=metadata
+            )
+            documents.append(doc)
+        
+        return documents
+    
+    async def retrieve(self, query: Query, k: Optional[int] = None) -> RetrievalResult:
+        """Retrieve documents using hypergraph-based search"""
+        k = k or self.config.get("top_k", 10)
+        
+        try:
+            query_text = query.processed_text
+            query_embedding = self._embed_text(query_text)
+            
+            if not query_embedding or all(x == 0.0 for x in query_embedding):
+                logger.warning("Failed to generate valid query embedding")
+                return RetrievalResult(
+                    documents=[],
+                    embedding_token_count=0.0,
+                    llm_input_token_count=0.0,
+                    llm_output_token_count=0.0
+                )
+            
+            # Retrieve hyperedges based on method
+            if self.retrieval_method == "basic":
+                hyperedges = self._retrieve_basic_hypergraph(query_embedding, k)
+            elif self.retrieval_method == "expansion":
+                hyperedges = self._retrieve_expansion_hypergraph(query_embedding, k)
+            else:
+                raise ValueError(f"Unknown retrieval method: {self.retrieval_method}")
+            
+            # Convert to documents
+            documents = self._hyperedges_to_documents(hyperedges, query_text)
+            
+            # Limit to top k
+            if len(documents) > k:
+                documents = sorted(documents, key=lambda x: x.score, reverse=True)[:k]
+            
+            embedding_token_count = float(len(query_text.split()))
+            
+            logger.info(f"Retrieved {len(documents)} documents using HyperGraphRAG {self.retrieval_method} method")
+            
+            return RetrievalResult(
+                documents=documents,
+                embedding_token_count=embedding_token_count,
+                llm_input_token_count=0.0,
+                llm_output_token_count=0.0
+            )
+            
+        except Exception as e:
+            logger.error(f"HyperGraphRAG retrieval failed: {e}")
+            return RetrievalResult(
+                documents=[],
+                embedding_token_count=0.0,
+                llm_input_token_count=0.0,
+                llm_output_token_count=0.0
+            )
+    
+    async def index_documents(self, documents: List[Document]) -> bool:
+        """Index documents by extracting hyperedge relations"""
+        try:
+            logger.info(f"Starting to index {len(documents)} documents in hypergraph")
+            
+            with self.driver.session() as session:
+                for doc in documents:
+                    doc_id = doc.doc_id
+                    source_doc = doc.metadata.get('source', doc_id) if doc.metadata else doc_id
+                    
+                    logger.debug(f"Processing document: {doc_id}")
+                    
+                    # Check if already processed
+                    if self._is_document_processed(session, source_doc):
+                        logger.debug(f"Document {source_doc} already processed, skipping")
+                        continue
+                    
+                    # Process chunks
+                    chunks = self._chunk_text(doc.content)
+                    total_hyperedges = 0
+                    
+                    for chunk_idx, chunk in enumerate(chunks):
+                        try:
+                            hyperedges = self._extract_hyperedges_with_llm(chunk)
+                            logger.info(f"Extracted {len(hyperedges)} hyperedges from chunk {chunk_idx}")
+                            
+                            for hyperedge in hyperedges:
+                                self._store_hyperedge(session, hyperedge, source_doc)
+                                total_hyperedges += 1
+                                
+                        except Exception as e:
+                            logger.error(f"Error processing chunk {chunk_idx}: {e}")
+                            continue
+                    
+                    logger.info(f"Stored {total_hyperedges} hyperedges from document {doc_id}")
+            
+            logger.info(f"Successfully indexed {len(documents)} documents in hypergraph")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Failed to index documents: {e}")
+            return False
+    
+    def _is_document_processed(self, session, source_doc: str) -> bool:
+        """Check if document has been processed"""
+        try:
+            result = session.run(
+                "MATCH (he:HyperEdge {source_document: $source_doc}) RETURN COUNT(he) AS count",
+                source_doc=source_doc
+            )
+            return result.single()["count"] > 0
+        except Exception:
+            return False
+    
+    def get_hypergraph_stats(self) -> Dict[str, Any]:
+        """Get hypergraph statistics"""
+        try:
+            with self.driver.session() as session:
+                # Count hyperedges
+                result = session.run("MATCH (he:HyperEdge) RETURN COUNT(he) AS count")
+                hyperedge_count = result.single()["count"]
+                
+                # Count entities
+                result = session.run("MATCH (e:HyperEntity) RETURN COUNT(e) AS count")
+                entity_count = result.single()["count"]
+                
+                # Average entities per hyperedge
+                result = session.run("MATCH (he:HyperEdge) RETURN AVG(he.entity_count) AS avg")
+                avg_entities = result.single()["avg"] or 0
+                
+                # Count unique documents
+                result = session.run("MATCH (he:HyperEdge) RETURN COUNT(DISTINCT he.source_document) AS count")
+                doc_count = result.single()["count"]
+                
+                return {
+                    'hyperedge_count': hyperedge_count,
+                    'entity_count': entity_count,
+                    'avg_entities_per_hyperedge': avg_entities,
+                    'unique_documents': doc_count,
+                    'retrieval_method': self.retrieval_method,
+                    'similarity_threshold': self.similarity_threshold,
+                    'max_depth': self.max_depth,
+                    'min_hyperedge_entities': self.min_hyperedge_entities
+                }
+        except Exception as e:
+            logger.error(f"Failed to get hypergraph stats: {e}")
+            return {}
+    
+    def get_sample_hyperedges(self, limit: int = 20) -> List[Dict[str, Any]]:
+        """Get sample hyperedges"""
+        try:
+            with self.driver.session() as session:
+                result = session.run("""
+                    MATCH (e:HyperEntity)-[:MEMBER_OF]->(he:HyperEdge)
+                    RETURN he.type AS type, 
+                           he.description AS description,
+                           collect(e.name) AS entities,
+                           he.entity_count AS entity_count
+                    ORDER BY he.entity_count DESC
+                    LIMIT $limit
+                    """, limit=limit)
+                
+                hyperedges = []
+                for record in result:
+                    hyperedges.append({
+                        'type': record['type'],
+                        'description': record['description'],
+                        'entities': record['entities'],
+                        'entity_count': record['entity_count']
+                    })
+                
+                return hyperedges
+        except Exception as e:
+            logger.error(f"Failed to get sample hyperedges: {e}")
+            return []
     
     def __del__(self):
         """Close Neo4j driver connection"""

@@ -1,0 +1,595 @@
+{
+  "article": {
+    "id": "commoditymarket_1d7c5f12",
+    "title": "Commodity market",
+    "url": "https://en.wikipedia.org/wiki/Commodity_market",
+    "lang": "en",
+    "created_at": "2025-07-30T14:07:36.519978",
+    "content": "---\nid: commoditymarket_1d7c5f12\nurl: https://en.wikipedia.org/wiki/Commodity_market\ntitle: Commodity market\nlang: en\ncreated_at: '2025-07-30T14:01:41.102139'\nchecksum: 67ea257a2566d6a8112f78b495419502b917e6d423f54dc881bf527acefe6563\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4347\n  char_count: 28253\n  num_chunks: 37\n  original_chunks: 48\n  filtered_out: 11\n  num_sections: 0\n---\nA commodity market is a market that trades in the primary economic sector rather than manufactured products. The primary sector includes agricultural products, energy products, and metals. Soft commodities may be perishable and harvested, while hard commodities are usually mined, such as gold and oil. Futures contracts are the oldest way of investing in commodities. Commodity markets can include physical trading and derivatives trading using spot prices, forwards, futures, and options on futures. Farmers have used a simple form of derivative trading in the commodities market for centuries for price risk management. A financial derivative is a financial instrument whose value is derived from a commodity termed an underlier. Derivatives are either exchange-traded or over-the-counter (OTC). An increasing number of derivatives are traded via clearing houses some with central counterparty clearing, which provide clearing and settlement services on a futures exchange, as well as off-exchange in the OTC market. Derivatives such as futures contracts, Swaps (1970s–), and Exchange-traded Commodities (ETC) (2003–) have become the primary trading instruments in commodity markets. Futures are traded on regulated commodities exchanges. Over-the-counter (OTC) contracts are \"privately negotiated bilateral contracts entered into between the contracting parties directly\". Exchange-traded funds (ETFs) began to feature commodities in 2003. Gold ETFs are based on \"electronic gold\" that does not entail the ownership of physical bullion, with its added costs of insurance and storage in repositories such as the London bullion market. According to the World Gold Council, ETFs allow investors to be exposed to the gold market without the risk of price volatility associated with gold as a physical commodity. == History == Commodity-based money and commodity markets in a crude early form are believed to have originated in Sumer between 4500 BC and 4000 BC. Sumerians first used clay tokens sealed in a clay vessel, then clay writing tablets to represent the amount—for example, the number of goats, to be delivered. These promises of time and date of delivery resemble futures contract. Early civilizations variously used pigs, rare seashells, or other items as commodity money. Since that time traders have sought ways to simplify and standardize trade contracts. Gold and silver markets evolved in classical civilizations. At first, the precious metals were valued for their beauty and intrinsic worth and were associated with royalty. In time, they were used for trading and were exchanged for other goods and commodities, or for payments of labor. Gold, measured out, then became money. Gold's scarcity, its unique density and the way it could be easily melted, shaped, and measured made it a natural trading asset. Beginning in the late 10th century, commodity markets grew as a mechanism for allocating goods, labor, land and capital across Europe. Between the late 11th and the late 13th century, English urbanization, regional specialization, expanded and improved infrastructure, the increased use of coinage and the proliferation of markets and fairs were evidence of commercialization. The spread of markets is illustrated by the 1466 installation of reliable scales in the villages of Sloten and Osdorp so villagers no longer had to travel to Haarlem or Amsterdam to weigh their locally produced cheese and butter. The Amsterdam Stock Exchange, often cited as the first stock exchange, originated as a market for the exchange of commodities. Early trading on the Amsterdam Stock Exchange often involved the use of very sophisticated contracts, including short sales, forward contracts, and options. \"Trading took place at the Amsterdam Bourse, an open aired venue, which was created as a commodity exchange in 1530 and rebuilt in 1608. Commodity exchanges themselves were a relatively recent invention, existing in only a handful of cities.\" In 1864, in the United States, wheat, corn, cattle, and pigs were widely traded using standard instruments on the Chicago Board of Trade (CBOT), the world's oldest futures and options exchange. Other food commodities were added to the Commodity Exchange Act and traded through CBOT in the 1930s and 1940s, expanding the list from grains to include rice, mill feeds, butter, eggs, Irish potatoes and soybeans. Successful commodity markets require broad consensus on product variations to make each commodity acceptable for trading, such as the purity of gold in bullion. Classical civilizations built complex global markets trading gold or silver for spices, cloth, wood and weapons, most of which had standards of quality and timeliness. Through the 19th century \"the exchanges became effective spokesmen for, and innovators of, improvements in transportation, warehousing, and financing, which paved the way to expanded interstate and international trade.\" Reputation and clearing became central concerns, and states that could handle them most effectively developed powerful financial centers. == Commodity price index == In 1934, the U.S. Bureau of Labor Statistics began the computation of a daily Commodity price index that became available to the public in 1940. By 1952, the Bureau of Labor Statistics issued a Spot Market Price Index that measured the price movements of \"22 sensitive basic commodities whose markets are presumed to be among the first to be influenced by changes in economic conditions. As such, it serves as one early indication of impending changes in business activity.\" == Commodity index fund == A commodity index fund is a fund whose assets are invested in financial instruments based on or linked to a commodity index. In just about every case the index is in fact a Commodity Futures Index. The first such index was the Dow Jones Commodity Index, which began in 1933. The first practically investable commodity futures index was the Goldman Sachs Commodity Index, created in 1991, and known as the \"GSCI\". The next was the Dow Jones AIG Commodity Index. It differed from the GSCI primarily in the weights allocated to each commodity. The DJ AIG had mechanisms to periodically limit the weight of any one commodity and to remove commodities whose weights became too small. After AIG's financial problems in 2008 the Index rights were sold to UBS and it is now known as the DJUBS index. Other commodity indices include the Reuters / CRB index (which is the old CRB Index as re-structured in 2005) and the Rogers Index. == Cash commodity == Cash commodities or \"actuals\" refer to the physical goods—e.g., wheat, corn, soybeans, crude oil, gold, silver—that someone is buying/selling/trading as distinguished from derivatives. == Electronic commodities trading == In traditional stock market exchanges such as the New York Stock Exchange (NYSE), most trading activity took place in the trading pits in face-to-face interactions between brokers and dealers in open outcry trading. In 1992 the Financial Information eXchange (FIX) protocol was introduced, allowing international real-time exchange of information regarding market transactions. The U.S. Securities and Exchange Commission ordered U.S. stock markets to convert from the fractional system to a decimal system by April 2001. Metrification, conversion from the imperial system of measurement to the metrical, increased throughout the 20th century. Eventually FIX-compliant interfaces were adopted globally by commodity exchanges using the FIX Protocol. In 2001 the Chicago Board of Trade and the Chicago Mercantile Exchange (later merged into the CME group, the world's largest futures exchange company) launched their FIX-compliant interface. By 2011, the alternative trading system (ATS) of electronic trading featured computers buying and selling without human dealer intermediation. High-frequency trading (HFT) algorithmic trading, had almost phased out \"dinosaur floor-traders\". === Complexity and interconnectedness of global market === The robust growth of emerging market economies (EMEs, such as Brazil, Russia, India, and China), beginning in the 1990s, \"propelled commodity markets into a supercycle\". The size and diversity of commodity markets expanded internationally, and pension funds and sovereign wealth funds started allocating more capital to commodities, in order to diversify into an asset class with less exposure to currency depreciation. In 2012, as emerging-market economies slowed down, commodity prices peaked and started to decline. From 2005 through 2013, energy and metals' real prices remained well above their long-term averages. In 2012, real food prices were their highest since 1982. The price of gold bullion fell dramatically on 12 April 2013 and analysts frantically sought explanations. Rumors spread that the European Central Bank (ECB) would force Cyprus to sell its gold reserves in response to its financial crisis. Major banks such as Goldman Sachs began immediately to short gold bullion. Investors scrambled to liquidate their exchange-traded funds (ETFs) and margin call selling accelerated. George Gero, precious metals commodities expert at the Royal Bank of Canada (RBC) Wealth Management section reported that he had not seen selling of gold bullion as panicked as this in his forty years in commodity markets. The earliest commodity exchange-traded fund (ETFs), such as SPDR Gold Shares NYSE Arca: GLD and iShares Silver Trust NYSE Arca: SLV, actually owned the physical commodities. Similar to these are NYSE Arca: PALL (palladium) and NYSE Arca: PPLT (platinum). However, most Exchange Traded Commodities (ETCs) implement a futures trading strategy. At the time Russian Prime Minister Dmitry Medvedev warned that Russia could sink into recession. He argued that \"We live in a dynamic, fast-developing world. It is so global and so complex that we sometimes cannot keep up with the changes\". Analysts have claimed that Russia's economy is overly dependent on commodities. === Contracts in the commodity market === A Spot contract is an agreement where delivery and payment either takes place immediately, or with a short lag. Physical trading normally involves a visual inspection and is carried out in physical markets such as a farmers market. Derivatives markets, on the other hand, require the existence of agreed standards so that trades can be made without visual inspection. === Standardization === US soybean futures do not qualify as \"standard grade\" if they are \"GMO or a mixture of GMO and Non-GMO No. 2 yellow soybeans of Indiana, Ohio and Michigan origin produced in the U.S.A. (Non-screened, stored in silo)\". They are of \"deliverable grade\" if they are \"GMO or a mixture of GMO and Non-GMO No. 2 yellow soybeans of Iowa, Illinois and Wisconsin origin produced in the U.S.A. (Non-screened, stored in silo)\". Note the distinction between states, and the need to clearly mention their status as GMO (genetically modified organism) which makes them unacceptable to most organic food buyers. Similar specifications apply for cotton, orange juice, cocoa, sugar, wheat, corn, barley, pork bellies, milk, feed stuffs, fruits, vegetables, other grains, other beans, hay, other livestock, meats, poultry, eggs, or any other commodity which is so traded. Standardization has also occurred technologically, as the use of the FIX Protocol by commodities exchanges has allowed trade messages to be sent, received and processed in the same format as stocks or equities. This process began in 2001 when the Chicago Mercantile Exchange launched a FIX-compliant interface that was adopted by commodity exchanges around the world. == Derivatives == Derivatives evolved from simple commodity future contracts into a diverse group of financial instruments that apply to every kind of asset, including mortgages, insurance and many more. Futures contracts, Swaps (1970s–), Exchange-traded Commodities (ETC) (2003–), forward contracts, etc. are examples. They can be traded through formal exchanges or through Over-the-counter (OTC). Commodity market derivatives unlike credit default derivatives, for example, are secured by the physical assets or commodities. === Forward contracts === A forward contract is an agreement between two parties to exchange at a fixed future date a given quantity of a commodity for a specific price defined when the contract is finalized. The fixed price is also called forward price. Such forward contracts began as a way of reducing pricing risk in food and agricultural product markets. By agreeing in advance on a price for a future delivery, farmers were able protect their output against a possible fall of market prices and in contrast buyers were able to protect themselves against a possible rise of market prices. Forward contracts, for example, were used for rice in seventeenth century Japan. === Futures contract === Futures contracts are standardized forward contracts that are transacted through an exchange. In futures contracts the buyer and the seller stipulate product, grade, quantity and location and leaving price as the only variable. Agricultural futures contracts are the oldest, in use in the United States for more than 170 years. Modern futures agreements, began in Chicago in the 1840s, with the appearance of grain elevators. Chicago, centrally located, emerged as the hub between Midwestern farmers and east coast consumer population centers. === Call options === In a call option counterparties enter into a financial contract option where the buyer purchases the right but not the obligation to buy an agreed quantity of a particular commodity or financial instrument (the underlying) from the seller of the option at a certain time (the expiration date) for a certain price (the strike price). The seller (or \"writer\") is obligated to sell the commodity or financial instrument should the buyer so decide. The buyer pays a fee (called a premium) for this right. === Swaps === A swap is a derivative in which counterparties exchange the cash flows of one party's financial instrument for those of the other party's financial instrument. They were introduced in the 1970s. === Exchange-traded commodities (ETCs) === Exchange-traded commodity is a term used for commodity ETFs (which are funds) or commodity exchange-traded notes (which are notes). These track the performance of an underlying commodity index including total return indices based on a single commodity. They are similar to ETFs and traded and settled exactly like stock funds. ETCs have market maker support with guaranteed liquidity, enabling investors to easily invest in commodities. They were introduced in 2003. At first, only professional institutional investors had access, but online exchanges opened some ETC markets to almost anyone. ETCs were introduced partly in response to the tight supply of commodities in 2000, combined with record low inventories and increasing demand from emerging markets such as China and India. Prior to the introduction of ETCs, by the 1990s ETFs pioneered by Barclays Global Investors (BGI) revolutionized the mutual funds industry. By the end of December 2009 BGI assets hit an all-time high of $1 trillion. Gold was the first commodity to be securitised through an ETF in the early 1990s, but it was not available for trade until 2003. The idea of a Gold ETF was first officially conceptualised by Benchmark Asset Management Company Private Ltd in India, when they filed a proposal with the Securities and Exchange Board of India in May 2002. The first gold exchange-traded fund was Gold Bullion Securities launched on the ASX in 2003, and the first silver exchange-traded fund was iShares Silver Trust launched on the NYSE in 2006. As of November 2010 a commodity ETF, namely SPDR Gold Shares, was the second-largest ETF by market capitalization. Generally, commodity ETFs are index funds tracking non-security indices. Because they do not invest in securities, commodity ETFs are not regulated as investment companies under the Investment Company Act of 1940 in the United States, although their public offering is subject to SEC review and they need an SEC no-action letter under the Securities Exchange Act of 1934. They may, however, be subject to regulation by the Commodity Futures Trading Commission. The earliest commodity ETFs, such as SPDR Gold Shares NYSE Arca: GLD and iShares Silver Trust NYSE Arca: SLV, actually owned the physical commodity (e.g., gold and silver bars). Similar to these are NYSE Arca: PALL (palladium) and NYSE Arca: PPLT (platinum). However, most ETCs implement a futures trading strategy, which may produce quite different results from owning the commodity. Commodity ETFs trade provide exposure to an increasing range of commodities and commodity indices, including energy, metals, softs and agriculture. Many commodity funds, such as oil roll so-called front-month futures contracts from month to month. This provides exposure to the commodity, but subjects the investor to risks involved in different prices along the term structure, such as a high cost to roll. ETCs in China and India gained in importance due to those countries' emergence as commodities consumers and producers. China accounted for more than 60% of exchange-traded commodities in 2009, up from 40% the previous year. The global volume of ETCs increased by a 20% in 2010, and 50% since 2008, to around 2.5 billion million contracts.{{}} === Over-the-counter (OTC) commodities derivatives === Over-the-counter (OTC) commodities derivatives trading originally involved two parties, without an exchange. Exchange trading offers greater transparency and regulatory protections. In an OTC trade, the price is not generally made public. OTC commodities derivatives are higher risk but may also lead to higher profits. Between 2007 and 2010, global physical exports of commodities fell by 2%, while the outstanding value of OTC commodities derivatives declined by two-thirds as investors reduced risk following a five-fold increase in the previous three years. Money under management more than doubled between 2008 and 2010 to nearly $380 billion. Inflows into the sector totaled over $60 billion in 2010, the second-highest year on record, down from $72 billion the previous year. The bulk of funds went into precious metals and energy products. The growth in prices of many commodities in 2010 contributed to the increase in the value of commodities funds under management. == Commodities exchange == A commodities exchange is an exchange where various commodities and derivatives are traded. Most commodity markets across the world trade in agricultural products and other raw materials (like wheat, barley, sugar, maize, cotton, cocoa, coffee, milk products, pork bellies, oil, metals, etc.) and contracts based on them. These contracts can include spot prices, forwards, futures and options on futures. Other sophisticated products may include interest rates, environmental instruments, swaps, or freight contracts. == Traded commodity classes == Source: International Trade Centre === Energy === Energy commodities include crude oil particularly West Texas Intermediate (WTI) crude oil and Brent crude oil, natural gas, heating oil, ethanol and purified terephthalic acid. Hedging is a common practice for these commodities. ==== Crude oil and natural gas ==== For many years, West Texas Intermediate (WTI) crude oil, a light, sweet crude oil, was the world's most-traded commodity. WTI is a grade used as a benchmark in oil pricing. It is the underlying commodity of Chicago Mercantile Exchange's oil futures contracts. WTI is often referenced in news reports on oil prices, alongside Brent Crude. WTI is lighter and sweeter than Brent and considerably lighter and sweeter than Dubai or Oman. From April through October 2012, Brent futures contracts exceeded those for WTI, the longest streak since at least 1995. Crude oil can be light or heavy. Oil was the first form of energy to be widely traded. Some commodity market speculation is directly related to the stability of certain states, e.g., Iraq, Bahrain, Iran, Venezuela and many others. Most commodities markets are not so tied to the politics of volatile regions. Oil and gasoline are traded in units of 1,000 barrels (42,000 US gallons). WTI crude oil is traded through NYMEX under trading symbol CL and through Intercontinental Exchange (ICE) under trading symbol WBS. Brent crude oil is traded in through Intercontinental Exchange under trading symbol BRN and on the CME under trading symbol BZ. Gulf Coast Gasoline is traded through NYMEX with the trading symbol of LR. Gasoline (reformulated gasoline blendstock for oxygen blending or RBOB) is traded through NYMEX via trading symbol RB. Propane is traded through NYMEX, a subsidiary of Intercontinental Exchange since early 2013, via trading symbol PN. Natural gas is traded through NYMEX in units of 10,000 million BTU with the trading symbol of NG. Heating oil is traded through NYMEX under trading symbol HO. ==== Others ==== Purified terephthalic acid (PTA) is traded through ZCE in units of 5 tons with the trading symbol of TA. Ethanol is traded at CBOT in units of 29,000 U.S. gal under trading symbols AC (Open Auction) and ZE (Electronic). === Metals === ==== Precious metals ==== Precious metals currently traded on the commodity market include gold, platinum, palladium and silver which are sold by the troy ounce. One of the main exchanges for these precious metals is COMEX. According to the World Gold Council, investments in gold are the primary driver of industry growth. Gold prices are highly volatile, driven by large flows of speculative money. ==== Industrial metals ==== Industrial metals are sold by the metric ton through the London Metal Exchange and New York Mercantile Exchange. The London Metal Exchange trades include copper, aluminium, lead, tin, aluminium alloy, nickel, cobalt and molybdenum. In 2007, steel began trading on the London Metal Exchange. Iron ore has been the latest addition to industrial metal derivatives. Deutsche Bank first began offering iron ore swaps in 2008, other banks quickly followed. Since then the size of the market has more than doubled each year between 2008 and 2012. === Agriculture === Agricultural commodities include grains, food and fiber as well as livestock and meat, various regulatory bodies define agricultural products. In 1900, corn acreage was double that of wheat in the United States. But from the 1930s through the 1970s soybean acreage surpassed corn. Early in the 1970s grain and soybean prices, which had been relatively stable, \"soared to levels that were unimaginable at the time\". There were a number of factors affecting prices including the \"surge in crude oil prices caused by the Arab Oil Embargo in October 1973 (U.S. inflation reached 11% in 1975)\". On 21 July 2010, United States Congress passed the Dodd–Frank Wall Street Reform and Consumer Protection Act with changes to the definition of agricultural commodity. The operational definition used by Dodd-Frank includes \"[a]ll other commodities that are, or once were, or are derived from, living organisms, including plant, animal and aquatic life, which are generally fungible, within their respective classes, and are used primarily for human food, shelter, animal feed, or natural fiber\". Three other categories were explained and listed. In February 2013, Cornell Law School included lumber, soybeans, oilseeds, livestock (live cattle and hogs), dairy products. Agricultural commodities can include lumber (timber and forests), grains excluding stored grain (wheat, oats, barley, rye, grain sorghum, cotton, flax, forage, tame hay, native grass), vegetables (potatoes, tomatoes, sweet corn, dry beans, dry peas, freezing and canning peas), fruit (citrus such as oranges, apples, grapes) corn, tobacco, rice, peanuts, sugar beets, sugar cane, sunflowers, raisins, nursery crops, nuts, soybean complex, aquacultural fish farm species such as finfish, mollusk, crustacean, aquatic invertebrate, amphibian, reptile, or plant life cultivated in aquatic plant farms. === Diamonds === As of 2012, diamond was not traded as a commodity. Institutional investors were repelled by campaign against \"blood diamonds\", the monopoly structure of the diamond market and the lack of uniform standards for diamond pricing. In 2012 the SEC reviewed a proposal to create the \"first diamond-backed exchange-traded fund\" that would trade online in units of one-carat diamonds with a storage vault and delivery point in Antwerp, home of the Antwerp Diamond Bourse. The exchange fund was backed by a company based in New York City called IndexIQ. IndexIQ had already introduced 14 exchange-traded funds since 2008. According to Citigroup analysts, the annual production of polished diamonds is about $18 billion. Like gold, diamonds are easily authenticated and durable. Diamond prices have been more stable than the metals, as the global diamond monopoly De Beers once held almost 90% (by 2013 reduced to 40%) of the new diamond market. === Other commodity markets === Rubber trades on the Singapore Commodity Exchange in units of 1 kg priced in U.S. cents. Palm oil is traded on the Malaysian Ringgit (RM), Bursa Malaysia in units of 1 kg priced in U.S. cents. Wool is traded on the AUD in units of 1 kg. Polypropylene and Linear Low Density Polyethylene (LL) did trade on the London Metal Exchange in units of 1,000 kg priced in USD but was dropped in 2011. == Impact on inflation == Fossil fuels and other commodities have been major drivers of inflationary periods, including the 2021-2022 inflation spike exacerbated by the Russian Invasion of Ukraine. Gernot Wagner argues that commodites are undesirable energy sources because of inflationary periods that come with commodity prices. == Regulatory bodies and policies == === United States === In the United States, the principal regulator of commodity and futures markets is the Commodity Futures Trading Commission (CFTC). The National Futures Association (NFA) was formed in 1976 and is the futures industry's self-regulatory organization. The NFA's first regulatory operations began in 1982 and fall under the Commodity Exchange Act of the Commodity Futures Trading Commission Act. Dodd–Frank was enacted in response to the 2008 financial crisis. It called for \"strong measures to limit speculation in agricultural commodities\" calling upon the CFTC to further limit positions and to regulate over-the-counter trades. === European Union === Markets in Financial Instruments Directive (MiFID) is the cornerstone of the European Commission's Financial Services Action Plan that regulate operations of the EU financial service markets. It was reviewed in 2012 by the European Parliament (EP) and the Economic and Financial Affairs Council (ECOFIN). The European Parliament adopted a revised version of Mifid II on 26 October 2012 which include \"provisions for position limits on commodity derivatives\", aimed at \"preventing market abuse\" and supporting \"orderly pricing and settlement conditions\". The European Securities and Markets Authority (Esma), based in Paris and formed in 2011, is an \"EU-wide financial markets watchdog\". Esma sets position limits on commodity derivatives as described in Mifid II. The EP voted in favor of stronger regulation of commodity derivative markets in September 2012 to \"end abusive speculation in commodity markets\" that were \"driving global food prices increases and price volatility\". In July 2012, \"food prices globally soared by 10 percent\" (World Bank 2012). Senior British MEP Arlene McCarthy called for \"putting a brake on excessive food speculation and speculating giants profiting from hunger\" ending immoral practices that \"only serve the interests of profiteers\". In March 2012, EP Member Markus Ferber suggested amendments to the European Commission's proposals, intended to strengthen restrictions on high-frequency trading and commodity price manipulation. == See also == Commodity risk Irrevocable fee protection agreement List of commodity booms Microexchanges == Notes == == References == == Further reading == == External links == Media related to Commodity markets at Wikimedia Commons Open Historical Commodity Price Data"
+  },
+  "chunks": [
+    {
+      "id": "commoditymarket_1d7c5f12_c0000",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 799,
+      "content": "A commodity market is a market that trades in the primary economic sector rather than manufactured products. The primary sector includes agricultural products, energy products, and metals. Soft commodities may be perishable and harvested, while hard commodities are usually mined, such as gold and oil. Futures contracts are the oldest way of investing in commodities. Commodity markets can include physical trading and derivatives trading using spot prices, forwards, futures, and options on futures. Farmers have used a simple form of derivative trading in the commodities market for centuries for price risk management. A financial derivative is a financial instrument whose value is derived from a commodity termed an underlier. Derivatives are either exchange-traded or over-the-counter (OTC).",
+      "char_count": 798,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0001",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 799,
+      "end_char": 1637,
+      "content": "An increasing number of derivatives are traded via clearing houses some with central counterparty clearing, which provide clearing and settlement services on a futures exchange, as well as off-exchange in the OTC market. Derivatives such as futures contracts, Swaps (1970s–), and Exchange-traded Commodities (ETC) (2003–) have become the primary trading instruments in commodity markets. Futures are traded on regulated commodities exchanges. Over-the-counter (OTC) contracts are \"privately negotiated bilateral contracts entered into between the contracting parties directly\". Exchange-traded funds (ETFs) began to feature commodities in 2003. Gold ETFs are based on \"electronic gold\" that does not entail the ownership of physical bullion, with its added costs of insurance and storage in repositories such as the London bullion market.",
+      "char_count": 838,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0002",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1825,
+      "end_char": 2709,
+      "content": "== History == Commodity-based money and commodity markets in a crude early form are believed to have originated in Sumer between 4500 BC and 4000 BC. Sumerians first used clay tokens sealed in a clay vessel, then clay writing tablets to represent the amount—for example, the number of goats, to be delivered. These promises of time and date of delivery resemble futures contract. Early civilizations variously used pigs, rare seashells, or other items as commodity money. Since that time traders have sought ways to simplify and standardize trade contracts. Gold and silver markets evolved in classical civilizations. At first, the precious metals were valued for their beauty and intrinsic worth and were associated with royalty. In time, they were used for trading and were exchanged for other goods and commodities, or for payments of labor. Gold, measured out, then became money.",
+      "char_count": 883,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0003",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2709,
+      "end_char": 3571,
+      "content": "Gold's scarcity, its unique density and the way it could be easily melted, shaped, and measured made it a natural trading asset. Beginning in the late 10th century, commodity markets grew as a mechanism for allocating goods, labor, land and capital across Europe. Between the late 11th and the late 13th century, English urbanization, regional specialization, expanded and improved infrastructure, the increased use of coinage and the proliferation of markets and fairs were evidence of commercialization. The spread of markets is illustrated by the 1466 installation of reliable scales in the villages of Sloten and Osdorp so villagers no longer had to travel to Haarlem or Amsterdam to weigh their locally produced cheese and butter. The Amsterdam Stock Exchange, often cited as the first stock exchange, originated as a market for the exchange of commodities.",
+      "char_count": 862,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0004",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3572,
+      "end_char": 4541,
+      "content": "Early trading on the Amsterdam Stock Exchange often involved the use of very sophisticated contracts, including short sales, forward contracts, and options. \"Trading took place at the Amsterdam Bourse, an open aired venue, which was created as a commodity exchange in 1530 and rebuilt in 1608. Commodity exchanges themselves were a relatively recent invention, existing in only a handful of cities.\" In 1864, in the United States, wheat, corn, cattle, and pigs were widely traded using standard instruments on the Chicago Board of Trade (CBOT), the world's oldest futures and options exchange. Other food commodities were added to the Commodity Exchange Act and traded through CBOT in the 1930s and 1940s, expanding the list from grains to include rice, mill feeds, butter, eggs, Irish potatoes and soybeans. Successful commodity markets require broad consensus on product variations to make each commodity acceptable for trading, such as the purity of gold in bullion.",
+      "char_count": 969,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0005",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 4542,
+      "end_char": 5067,
+      "content": "Classical civilizations built complex global markets trading gold or silver for spices, cloth, wood and weapons, most of which had standards of quality and timeliness. Through the 19th century \"the exchanges became effective spokesmen for, and innovators of, improvements in transportation, warehousing, and financing, which paved the way to expanded interstate and international trade.\" Reputation and clearing became central concerns, and states that could handle them most effectively developed powerful financial centers.",
+      "char_count": 525,
+      "token_estimate": 131,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0006",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== Commodity price index ==",
+      "heading_path": "== Commodity price index ==",
+      "start_char": 5082,
+      "end_char": 5558,
+      "content": "== Commodity price index == In 1934, the U.S. Bureau of Labor Statistics began the computation of a daily Commodity price index that became available to the public in 1940. By 1952, the Bureau of Labor Statistics issued a Spot Market Price Index that measured the price movements of \"22 sensitive basic commodities whose markets are presumed to be among the first to be influenced by changes in economic conditions. As such, it serves as one early indication of impending changes in business activity.\"",
+      "char_count": 502,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0007",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== Commodity index fund ==",
+      "heading_path": "== Commodity index fund ==",
+      "start_char": 5584,
+      "end_char": 6509,
+      "content": "== Commodity index fund == A commodity index fund is a fund whose assets are invested in financial instruments based on or linked to a commodity index. In just about every case the index is in fact a Commodity Futures Index. The first such index was the Dow Jones Commodity Index, which began in 1933. The first practically investable commodity futures index was the Goldman Sachs Commodity Index, created in 1991, and known as the \"GSCI\". The next was the Dow Jones AIG Commodity Index. It differed from the GSCI primarily in the weights allocated to each commodity. The DJ AIG had mechanisms to periodically limit the weight of any one commodity and to remove commodities whose weights became too small. After AIG's financial problems in 2008 the Index rights were sold to UBS and it is now known as the DJUBS index. Other commodity indices include the Reuters / CRB index (which is the old CRB Index as re-structured in 2005) and the Rogers Index.",
+      "char_count": 950,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0008",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== Electronic commodities trading ==",
+      "heading_path": "== Electronic commodities trading ==",
+      "start_char": 6751,
+      "end_char": 7537,
+      "content": "== Electronic commodities trading == In traditional stock market exchanges such as the New York Stock Exchange (NYSE), most trading activity took place in the trading pits in face-to-face interactions between brokers and dealers in open outcry trading. In 1992 the Financial Information eXchange (FIX) protocol was introduced, allowing international real-time exchange of information regarding market transactions. The U.S. Securities and Exchange Commission ordered U.S. stock markets to convert from the fractional system to a decimal system by April 2001. Metrification, conversion from the imperial system of measurement to the metrical, increased throughout the 20th century. Eventually FIX-compliant interfaces were adopted globally by commodity exchanges using the FIX Protocol.",
+      "char_count": 785,
+      "token_estimate": 196,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0009",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== Electronic commodities trading ==",
+      "heading_path": "== Electronic commodities trading ==",
+      "start_char": 7537,
+      "end_char": 7968,
+      "content": "In 2001 the Chicago Board of Trade and the Chicago Mercantile Exchange (later merged into the CME group, the world's largest futures exchange company) launched their FIX-compliant interface. By 2011, the alternative trading system (ATS) of electronic trading featured computers buying and selling without human dealer intermediation. High-frequency trading (HFT) algorithmic trading, had almost phased out \"dinosaur floor-traders\".",
+      "char_count": 431,
+      "token_estimate": 107,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0010",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Complexity and interconnectedness of global market ==",
+      "heading_path": "== = Complexity and interconnectedness of global market ==",
+      "start_char": 7991,
+      "end_char": 8835,
+      "content": "== = Complexity and interconnectedness of global market === The robust growth of emerging market economies (EMEs, such as Brazil, Russia, India, and China), beginning in the 1990s, \"propelled commodity markets into a supercycle\". The size and diversity of commodity markets expanded internationally, and pension funds and sovereign wealth funds started allocating more capital to commodities, in order to diversify into an asset class with less exposure to currency depreciation. In 2012, as emerging-market economies slowed down, commodity prices peaked and started to decline. From 2005 through 2013, energy and metals' real prices remained well above their long-term averages. In 2012, real food prices were their highest since 1982. The price of gold bullion fell dramatically on 12 April 2013 and analysts frantically sought explanations.",
+      "char_count": 843,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0011",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Complexity and interconnectedness of global market ==",
+      "heading_path": "== = Complexity and interconnectedness of global market ==",
+      "start_char": 8835,
+      "end_char": 9809,
+      "content": "Rumors spread that the European Central Bank (ECB) would force Cyprus to sell its gold reserves in response to its financial crisis. Major banks such as Goldman Sachs began immediately to short gold bullion. Investors scrambled to liquidate their exchange-traded funds (ETFs) and margin call selling accelerated. George Gero, precious metals commodities expert at the Royal Bank of Canada (RBC) Wealth Management section reported that he had not seen selling of gold bullion as panicked as this in his forty years in commodity markets. The earliest commodity exchange-traded fund (ETFs), such as SPDR Gold Shares NYSE Arca: GLD and iShares Silver Trust NYSE Arca: SLV, actually owned the physical commodities. Similar to these are NYSE Arca: PALL (palladium) and NYSE Arca: PPLT (platinum). However, most Exchange Traded Commodities (ETCs) implement a futures trading strategy. At the time Russian Prime Minister Dmitry Medvedev warned that Russia could sink into recession.",
+      "char_count": 974,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0012",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Complexity and interconnectedness of global market ==",
+      "heading_path": "== = Complexity and interconnectedness of global market ==",
+      "start_char": 9810,
+      "end_char": 10033,
+      "content": "He argued that \"We live in a dynamic, fast-developing world. It is so global and so complex that we sometimes cannot keep up with the changes\". Analysts have claimed that Russia's economy is overly dependent on commodities.",
+      "char_count": 223,
+      "token_estimate": 55,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0013",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Contracts in the commodity market ==",
+      "heading_path": "== = Contracts in the commodity market ==",
+      "start_char": 10017,
+      "end_char": 10387,
+      "content": "== = Contracts in the commodity market === A Spot contract is an agreement where delivery and payment either takes place immediately, or with a short lag. Physical trading normally involves a visual inspection and is carried out in physical markets such as a farmers market. Derivatives markets, on the other hand, require the existence of agreed standards so that trades can be made without visual inspection.",
+      "char_count": 410,
+      "token_estimate": 102,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0014",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Standardization ==",
+      "heading_path": "== = Standardization ==",
+      "start_char": 10410,
+      "end_char": 11288,
+      "content": "== = Standardization === US soybean futures do not qualify as \"standard grade\" if they are \"GMO or a mixture of GMO and Non-GMO No. 2 yellow soybeans of Indiana, Ohio and Michigan origin produced in the U.S.A. (Non-screened, stored in silo)\". They are of \"deliverable grade\" if they are \"GMO or a mixture of GMO and Non-GMO No. 2 yellow soybeans of Iowa, Illinois and Wisconsin origin produced in the U.S.A. (Non-screened, stored in silo)\". Note the distinction between states, and the need to clearly mention their status as GMO (genetically modified organism) which makes them unacceptable to most organic food buyers. Similar specifications apply for cotton, orange juice, cocoa, sugar, wheat, corn, barley, pork bellies, milk, feed stuffs, fruits, vegetables, other grains, other beans, hay, other livestock, meats, poultry, eggs, or any other commodity which is so traded.",
+      "char_count": 877,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0015",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Standardization ==",
+      "heading_path": "== = Standardization ==",
+      "start_char": 11288,
+      "end_char": 11655,
+      "content": "Standardization has also occurred technologically, as the use of the FIX Protocol by commodities exchanges has allowed trade messages to be sent, received and processed in the same format as stocks or equities. This process began in 2001 when the Chicago Mercantile Exchange launched a FIX-compliant interface that was adopted by commodity exchanges around the world.",
+      "char_count": 367,
+      "token_estimate": 91,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0016",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== Derivatives ==",
+      "heading_path": "== Derivatives ==",
+      "start_char": 11650,
+      "end_char": 12160,
+      "content": "== Derivatives == Derivatives evolved from simple commodity future contracts into a diverse group of financial instruments that apply to every kind of asset, including mortgages, insurance and many more. Futures contracts, Swaps (1970s–), Exchange-traded Commodities (ETC) (2003–), forward contracts, etc. are examples. They can be traded through formal exchanges or through Over-the-counter (OTC). Commodity market derivatives unlike credit default derivatives, for example, are secured by the physical assets or commodities.",
+      "char_count": 526,
+      "token_estimate": 131,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0017",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Forward contracts ==",
+      "heading_path": "== = Forward contracts ==",
+      "start_char": 12185,
+      "end_char": 12836,
+      "content": "== = Forward contracts === A forward contract is an agreement between two parties to exchange at a fixed future date a given quantity of a commodity for a specific price defined when the contract is finalized. The fixed price is also called forward price. Such forward contracts began as a way of reducing pricing risk in food and agricultural product markets. By agreeing in advance on a price for a future delivery, farmers were able protect their output against a possible fall of market prices and in contrast buyers were able to protect themselves against a possible rise of market prices. Forward contracts, for example, were used for rice in seventeenth century Japan.",
+      "char_count": 675,
+      "token_estimate": 168,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0018",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Futures contract ==",
+      "heading_path": "== = Futures contract ==",
+      "start_char": 12860,
+      "end_char": 13406,
+      "content": "== = Futures contract === Futures contracts are standardized forward contracts that are transacted through an exchange. In futures contracts the buyer and the seller stipulate product, grade, quantity and location and leaving price as the only variable. Agricultural futures contracts are the oldest, in use in the United States for more than 170 years. Modern futures agreements, began in Chicago in the 1840s, with the appearance of grain elevators. Chicago, centrally located, emerged as the hub between Midwestern farmers and east coast consumer population centers.",
+      "char_count": 569,
+      "token_estimate": 142,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0019",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Call options ==",
+      "heading_path": "== = Call options ==",
+      "start_char": 13426,
+      "end_char": 13929,
+      "content": "== = Call options === In a call option counterparties enter into a financial contract option where the buyer purchases the right but not the obligation to buy an agreed quantity of a particular commodity or financial instrument (the underlying) from the seller of the option at a certain time (the expiration date) for a certain price (the strike price). The seller (or \"writer\") is obligated to sell the commodity or financial instrument should the buyer so decide. The buyer pays a fee (called a premium) for this right.",
+      "char_count": 522,
+      "token_estimate": 130,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0020",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Swaps ==",
+      "heading_path": "== = Swaps ==",
+      "start_char": 13942,
+      "end_char": 14139,
+      "content": "== = Swaps === A swap is a derivative in which counterparties exchange the cash flows of one party's financial instrument for those of the other party's financial instrument. They were introduced in the 1970s.",
+      "char_count": 209,
+      "token_estimate": 52,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0021",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Exchange-traded commodities (ETCs) ==",
+      "heading_path": "== = Exchange-traded commodities (ETCs) ==",
+      "start_char": 14181,
+      "end_char": 15009,
+      "content": "== = Exchange-traded commodities (ETCs) === Exchange-traded commodity is a term used for commodity ETFs (which are funds) or commodity exchange-traded notes (which are notes). These track the performance of an underlying commodity index including total return indices based on a single commodity. They are similar to ETFs and traded and settled exactly like stock funds. ETCs have market maker support with guaranteed liquidity, enabling investors to easily invest in commodities. They were introduced in 2003. At first, only professional institutional investors had access, but online exchanges opened some ETC markets to almost anyone. ETCs were introduced partly in response to the tight supply of commodities in 2000, combined with record low inventories and increasing demand from emerging markets such as China and India.",
+      "char_count": 827,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0022",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Exchange-traded commodities (ETCs) ==",
+      "heading_path": "== = Exchange-traded commodities (ETCs) ==",
+      "start_char": 15009,
+      "end_char": 15938,
+      "content": "Prior to the introduction of ETCs, by the 1990s ETFs pioneered by Barclays Global Investors (BGI) revolutionized the mutual funds industry. By the end of December 2009 BGI assets hit an all-time high of $1 trillion. Gold was the first commodity to be securitised through an ETF in the early 1990s, but it was not available for trade until 2003. The idea of a Gold ETF was first officially conceptualised by Benchmark Asset Management Company Private Ltd in India, when they filed a proposal with the Securities and Exchange Board of India in May 2002. The first gold exchange-traded fund was Gold Bullion Securities launched on the ASX in 2003, and the first silver exchange-traded fund was iShares Silver Trust launched on the NYSE in 2006. As of November 2010 a commodity ETF, namely SPDR Gold Shares, was the second-largest ETF by market capitalization. Generally, commodity ETFs are index funds tracking non-security indices.",
+      "char_count": 929,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0023",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Exchange-traded commodities (ETCs) ==",
+      "heading_path": "== = Exchange-traded commodities (ETCs) ==",
+      "start_char": 15939,
+      "end_char": 16859,
+      "content": "Because they do not invest in securities, commodity ETFs are not regulated as investment companies under the Investment Company Act of 1940 in the United States, although their public offering is subject to SEC review and they need an SEC no-action letter under the Securities Exchange Act of 1934. They may, however, be subject to regulation by the Commodity Futures Trading Commission. The earliest commodity ETFs, such as SPDR Gold Shares NYSE Arca: GLD and iShares Silver Trust NYSE Arca: SLV, actually owned the physical commodity (e.g., gold and silver bars). Similar to these are NYSE Arca: PALL (palladium) and NYSE Arca: PPLT (platinum). However, most ETCs implement a futures trading strategy, which may produce quite different results from owning the commodity. Commodity ETFs trade provide exposure to an increasing range of commodities and commodity indices, including energy, metals, softs and agriculture.",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0024",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Exchange-traded commodities (ETCs) ==",
+      "heading_path": "== = Exchange-traded commodities (ETCs) ==",
+      "start_char": 16860,
+      "end_char": 17462,
+      "content": "Many commodity funds, such as oil roll so-called front-month futures contracts from month to month. This provides exposure to the commodity, but subjects the investor to risks involved in different prices along the term structure, such as a high cost to roll. ETCs in China and India gained in importance due to those countries' emergence as commodities consumers and producers. China accounted for more than 60% of exchange-traded commodities in 2009, up from 40% the previous year. The global volume of ETCs increased by a 20% in 2010, and 50% since 2008, to around 2.5 billion million contracts.{{}}",
+      "char_count": 602,
+      "token_estimate": 150,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0025",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Over-the-counter (OTC) commodities derivatives ==",
+      "heading_path": "== = Over-the-counter (OTC) commodities derivatives ==",
+      "start_char": 17475,
+      "end_char": 18379,
+      "content": "== = Over-the-counter (OTC) commodities derivatives === Over-the-counter (OTC) commodities derivatives trading originally involved two parties, without an exchange. Exchange trading offers greater transparency and regulatory protections. In an OTC trade, the price is not generally made public. OTC commodities derivatives are higher risk but may also lead to higher profits. Between 2007 and 2010, global physical exports of commodities fell by 2%, while the outstanding value of OTC commodities derivatives declined by two-thirds as investors reduced risk following a five-fold increase in the previous three years. Money under management more than doubled between 2008 and 2010 to nearly $380 billion. Inflows into the sector totaled over $60 billion in 2010, the second-highest year on record, down from $72 billion the previous year. The bulk of funds went into precious metals and energy products.",
+      "char_count": 903,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0026",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== Commodities exchange ==",
+      "heading_path": "== Commodities exchange ==",
+      "start_char": 18480,
+      "end_char": 18999,
+      "content": "== Commodities exchange == A commodities exchange is an exchange where various commodities and derivatives are traded. Most commodity markets across the world trade in agricultural products and other raw materials (like wheat, barley, sugar, maize, cotton, cocoa, coffee, milk products, pork bellies, oil, metals, etc.) and contracts based on them. These contracts can include spot prices, forwards, futures and options on futures. Other sophisticated products may include interest rates, environmental instruments, swaps, or freight contracts.",
+      "char_count": 544,
+      "token_estimate": 136,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0027",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Energy ==",
+      "heading_path": "== = Energy ==",
+      "start_char": 19079,
+      "end_char": 19310,
+      "content": "== = Energy === Energy commodities include crude oil particularly West Texas Intermediate (WTI) crude oil and Brent crude oil, natural gas, heating oil, ethanol and purified terephthalic acid. Hedging is a common practice for these commodities.",
+      "char_count": 244,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0028",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Agriculture ==",
+      "heading_path": "== = Agriculture ==",
+      "start_char": 19345,
+      "end_char": 20123,
+      "content": "== = Agriculture === Agricultural commodities include grains, food and fiber as well as livestock and meat, various regulatory bodies define agricultural products. In 1900, corn acreage was double that of wheat in the United States. But from the 1930s through the 1970s soybean acreage surpassed corn. Early in the 1970s grain and soybean prices, which had been relatively stable, \"soared to levels that were unimaginable at the time\". There were a number of factors affecting prices including the \"surge in crude oil prices caused by the Arab Oil Embargo in October 1973 (U.S. inflation reached 11% in 1975)\". On 21 July 2010, United States Congress passed the Dodd–Frank Wall Street Reform and Consumer Protection Act with changes to the definition of agricultural commodity.",
+      "char_count": 777,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0029",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Agriculture ==",
+      "heading_path": "== = Agriculture ==",
+      "start_char": 20123,
+      "end_char": 20624,
+      "content": "The operational definition used by Dodd-Frank includes \"[a]ll other commodities that are, or once were, or are derived from, living organisms, including plant, animal and aquatic life, which are generally fungible, within their respective classes, and are used primarily for human food, shelter, animal feed, or natural fiber\". Three other categories were explained and listed. In February 2013, Cornell Law School included lumber, soybeans, oilseeds, livestock (live cattle and hogs), dairy products.",
+      "char_count": 501,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0030",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Agriculture ==",
+      "heading_path": "== = Agriculture ==",
+      "start_char": 20625,
+      "end_char": 21223,
+      "content": "Agricultural commodities can include lumber (timber and forests), grains excluding stored grain (wheat, oats, barley, rye, grain sorghum, cotton, flax, forage, tame hay, native grass), vegetables (potatoes, tomatoes, sweet corn, dry beans, dry peas, freezing and canning peas), fruit (citrus such as oranges, apples, grapes) corn, tobacco, rice, peanuts, sugar beets, sugar cane, sunflowers, raisins, nursery crops, nuts, soybean complex, aquacultural fish farm species such as finfish, mollusk, crustacean, aquatic invertebrate, amphibian, reptile, or plant life cultivated in aquatic plant farms.",
+      "char_count": 598,
+      "token_estimate": 149,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0031",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Diamonds ==",
+      "heading_path": "== = Diamonds ==",
+      "start_char": 21221,
+      "end_char": 22159,
+      "content": "== = Diamonds === As of 2012, diamond was not traded as a commodity. Institutional investors were repelled by campaign against \"blood diamonds\", the monopoly structure of the diamond market and the lack of uniform standards for diamond pricing. In 2012 the SEC reviewed a proposal to create the \"first diamond-backed exchange-traded fund\" that would trade online in units of one-carat diamonds with a storage vault and delivery point in Antwerp, home of the Antwerp Diamond Bourse. The exchange fund was backed by a company based in New York City called IndexIQ. IndexIQ had already introduced 14 exchange-traded funds since 2008. According to Citigroup analysts, the annual production of polished diamonds is about $18 billion. Like gold, diamonds are easily authenticated and durable. Diamond prices have been more stable than the metals, as the global diamond monopoly De Beers once held almost 90% (by 2013 reduced to 40%) of the new diamond market.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0032",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = Other commodity markets ==",
+      "heading_path": "== = Other commodity markets ==",
+      "start_char": 22190,
+      "end_char": 22583,
+      "content": "== = Other commodity markets === Rubber trades on the Singapore Commodity Exchange in units of 1 kg priced in U.S. cents. Palm oil is traded on the Malaysian Ringgit (RM), Bursa Malaysia in units of 1 kg priced in U.S. cents. Wool is traded on the AUD in units of 1 kg. Polypropylene and Linear Low Density Polyethylene (LL) did trade on the London Metal Exchange in units of 1,000 kg priced in USD but was dropped in 2011.",
+      "char_count": 423,
+      "token_estimate": 105,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0033",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== Impact on inflation ==",
+      "heading_path": "== Impact on inflation ==",
+      "start_char": 22608,
+      "end_char": 22914,
+      "content": "== Impact on inflation == Fossil fuels and other commodities have been major drivers of inflationary periods, including the 2021-2022 inflation spike exacerbated by the Russian Invasion of Ukraine. Gernot Wagner argues that commodites are undesirable energy sources because of inflationary periods that come with commodity prices.",
+      "char_count": 330,
+      "token_estimate": 82,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0034",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 22972,
+      "end_char": 23602,
+      "content": "== = United States === In the United States, the principal regulator of commodity and futures markets is the Commodity Futures Trading Commission (CFTC). The National Futures Association (NFA) was formed in 1976 and is the futures industry's self-regulatory organization. The NFA's first regulatory operations began in 1982 and fall under the Commodity Exchange Act of the Commodity Futures Trading Commission Act. Dodd–Frank was enacted in response to the 2008 financial crisis. It called for \"strong measures to limit speculation in agricultural commodities\" calling upon the CFTC to further limit positions and to regulate over-the-counter trades.",
+      "char_count": 650,
+      "token_estimate": 162,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0035",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = European Union ==",
+      "heading_path": "== = European Union ==",
+      "start_char": 23624,
+      "end_char": 24412,
+      "content": "== = European Union === Markets in Financial Instruments Directive (MiFID) is the cornerstone of the European Commission's Financial Services Action Plan that regulate operations of the EU financial service markets. It was reviewed in 2012 by the European Parliament (EP) and the Economic and Financial Affairs Council (ECOFIN). The European Parliament adopted a revised version of Mifid II on 26 October 2012 which include \"provisions for position limits on commodity derivatives\", aimed at \"preventing market abuse\" and supporting \"orderly pricing and settlement conditions\". The European Securities and Markets Authority (Esma), based in Paris and formed in 2011, is an \"EU-wide financial markets watchdog\". Esma sets position limits on commodity derivatives as described in Mifid II.",
+      "char_count": 787,
+      "token_estimate": 196,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commoditymarket_1d7c5f12_c0036",
+      "article_id": "commoditymarket_1d7c5f12",
+      "section": "== = European Union ==",
+      "heading_path": "== = European Union ==",
+      "start_char": 24412,
+      "end_char": 25111,
+      "content": "The EP voted in favor of stronger regulation of commodity derivative markets in September 2012 to \"end abusive speculation in commodity markets\" that were \"driving global food prices increases and price volatility\". In July 2012, \"food prices globally soared by 10 percent\" (World Bank 2012). Senior British MEP Arlene McCarthy called for \"putting a brake on excessive food speculation and speculating giants profiting from hunger\" ending immoral practices that \"only serve the interests of profiteers\". In March 2012, EP Member Markus Ferber suggested amendments to the European Commission's proposals, intended to strengthen restrictions on high-frequency trading and commodity price manipulation.",
+      "char_count": 699,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What rumor about the European Central Bank (ECB) and Cyprus led major banks like Goldman Sachs to start shorting gold bullion?",
+        "answer": "The rumor that the European Central Bank (ECB) would force Cyprus to sell its gold reserves in response to its financial crisis triggered major banks like Goldman Sachs to begin shorting gold bullion.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0011"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is considered the world's oldest futures and options exchange?",
+        "answer": "The Chicago Board of Trade (CBOT), established in 1864, is the world's oldest futures and options exchange.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0004"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What factors discouraged institutional investors from trading diamonds as a commodity as of 2012?",
+        "answer": "As of 2012, institutional investors were repelled from trading diamonds as a commodity due to the campaign against \"blood diamonds\", the monopoly structure of the diamond market, and the lack of uniform standards for diamond pricing.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0031"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Trace the evolution of futures contracts from their earliest forms to modern trading instruments.",
+        "answer": "The earliest forms of futures contracts are believed to have originated in Sumer between 4500 BC and 4000 BC, where clay writing tablets represented promises for the future delivery of goods. These are considered the oldest way of investing in commodities and have been used by farmers for centuries for price risk management. In the modern era, futures have become primary trading instruments that are traded on regulated commodities exchanges, with an increasing number being processed via clearing houses that provide clearing and settlement services.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0000",
+          "commoditymarket_1d7c5f12_c0001",
+          "commoditymarket_1d7c5f12_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What common principles were essential for the success of commodity markets, from classical civilizations to more modern exchanges?",
+        "answer": "A key principle for successful commodity markets across different eras was the establishment of standards for quality, measurement, and reputation. Classical civilizations traded goods that had defined standards of quality. Early European markets relied on the measurable properties of assets like gold and later installed reliable scales for weighing goods. More modern exchanges require a broad consensus on product variations to make a commodity tradable, and by the 19th century, reputation and clearing became central concerns for developing powerful financial centers.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0003",
+          "commoditymarket_1d7c5f12_c0004",
+          "commoditymarket_1d7c5f12_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is the relationship between a commodity price index and a commodity index fund, and what do their respective origins in the 1930s suggest?",
+        "answer": "A commodity price index, like the one the U.S. Bureau of Labor Statistics began computing in 1934, measures the price movements of basic commodities. A commodity index fund is an investment vehicle whose assets are linked to a commodity index. The first such index, the Dow Jones Commodity Index, was created in 1933, showing that the concepts of both tracking commodity prices as a group and creating financial products based on them emerged around the same time in the early 1930s.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0006",
+          "commoditymarket_1d7c5f12_c0007"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How have the primary instruments for trading in commodity markets evolved from the oldest method to more modern ones?",
+        "answer": "The oldest method of investing in commodities is through futures contracts. While futures contracts remain a primary trading instrument, they have been joined by other derivatives such as Swaps, which emerged in the 1970s, and Exchange-traded Commodities (ETCs), which were introduced in 2003. These three instruments are now the primary tools for trading in commodity markets.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0000",
+          "commoditymarket_1d7c5f12_c0001"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Trace the historical development of commodity exchanges from their early forms in ancient civilizations to the more structured exchanges in Europe and the United States.",
+        "answer": "Commodity markets are believed to have originated in Sumer between 4500 and 4000 BC, where clay tokens and tablets were used to represent promises for future delivery, resembling futures contracts. Later, classical civilizations developed markets for gold and silver. In Europe, markets grew significantly from the 10th century, leading to the creation of the Amsterdam Bourse as a commodity exchange in 1530, which later became the first stock exchange. In the United States, the Chicago Board of Trade (CBOT) was established in 1864 as the world's oldest futures and options exchange, initially trading agricultural products like wheat, corn, and cattle.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0002",
+          "commoditymarket_1d7c5f12_c0003",
+          "commoditymarket_1d7c5f12_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How did the introduction of the FIX protocol in 1992 lead to the eventual phasing out of traditional floor traders?",
+        "answer": "The Financial Information eXchange (FIX) protocol, introduced in 1992, enabled the international real-time exchange of market information. This technology was adopted by major exchanges like the Chicago Board of Trade and Chicago Mercantile Exchange, which launched FIX-compliant interfaces in 2001. This shift facilitated the rise of electronic and high-frequency algorithmic trading, where computers conducted transactions without human dealers, ultimately leading to the phasing out of traditional face-to-face floor traders.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0008",
+          "commoditymarket_1d7c5f12_c0009"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How did Russia's economic situation in the early 2010s reflect the broader trends and complexity of the global commodity market?",
+        "answer": "The global commodity market entered a downturn around 2012 as emerging market economies, including Russia, began to slow, causing commodity prices to fall from their peak. This highlighted Russia's economic vulnerability, which analysts claimed was overly dependent on commodities. In the context of the panicked selling of gold in April 2013, Russian Prime Minister Dmitry Medvedev warned that the country could face a recession, illustrating how interconnected a nation's commodity-dependent economy is with the dynamics of the complex global market.",
+        "related_chunk_ids": [
+          "commoditymarket_1d7c5f12_c0010",
+          "commoditymarket_1d7c5f12_c0011",
+          "commoditymarket_1d7c5f12_c0012"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:25.437Z",
+    "content_format": "markdown",
+    "total_chunks": 37,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

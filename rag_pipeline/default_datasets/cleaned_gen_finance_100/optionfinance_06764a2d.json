@@ -1,0 +1,542 @@
+{
+  "article": {
+    "id": "optionfinance_06764a2d",
+    "title": "Option (finance)",
+    "url": "https://en.wikipedia.org/wiki/Option_(finance)",
+    "lang": "en",
+    "created_at": "2025-07-30T14:07:23.827692",
+    "content": "---\nid: optionfinance_06764a2d\nurl: https://en.wikipedia.org/wiki/Option_(finance)\ntitle: Option (finance)\nlang: en\ncreated_at: '2025-07-30T14:01:21.611652'\nchecksum: a93fb9289822088acf3532b48064166bea29afff4193ad21df1b1e0f97b2f232\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 6150\n  char_count: 37805\n  num_chunks: 33\n  original_chunks: 46\n  filtered_out: 13\n  num_sections: 0\n---\nIn finance, an option is a contract which conveys to its owner, the holder, the right, but not the obligation, to buy or sell a specific quantity of an underlying asset or instrument at a specified strike price on or before a specified date, depending on the style of the option. Options are typically acquired by purchase, as a form of compensation, or as part of a complex financial transaction. Thus, they are also a form of asset (or contingent liability) and have a valuation that may depend on a complex relationship between underlying asset price, time until expiration, market volatility, the risk-free rate of interest, and the strike price of the option. Options may be traded between private parties in over-the-counter (OTC) transactions, or they may be exchange-traded in live, public markets in the form of standardized contracts. == Definition and application == An option is a contract that allows the holder the right to buy or sell an underlying asset or financial instrument at a specified strike price on or before a specified date, depending on the form of the option. Selling or exercising an option before expiry typically requires a buyer to pick the contract up at the agreed upon price. The strike price may be set by reference to the spot price (market price) of the underlying security or commodity on the day an option is issued, or it may be fixed at a discount or at a premium. The issuer has the corresponding obligation to fulfill the transaction (to sell or buy) if the holder \"exercises\" the option. An option that conveys to the holder the right to buy at a specified price is referred to as a call, while one that conveys the right to sell at a specified price is known as a put. The issuer may grant an option to a buyer as part of another transaction (such as a share issue or as part of an employee incentive scheme), or the buyer may pay a premium to the issuer for the option. A call option would normally be exercised only when the strike price is below the market value of the underlying asset, while a put option would normally be exercised only when the strike price is above the market value. When an option is exercised, the cost to the option holder is the strike price of the asset acquired plus the premium, if any, paid to the issuer. If the option's expiration date passes without the option being exercised, the option expires, and the holder forfeits the premium paid to the issuer. In any case, the premium is income to the issuer, and normally a capital loss to the option holder. An option holder may on-sell the option to a third party in a secondary market, in either an over-the-counter transaction or on an options exchange, depending on the option. The market price of an American-style option normally closely follows that of the underlying stock being the difference between the market price of the stock and the strike price of the option. The actual market price of the option may vary depending on a number of factors, such as a significant option holder needing to sell the option due to the expiration date approaching and not having the financial resources to exercise the option, or a buyer in the market trying to amass a large option holding. The ownership of an option does not generally entitle the holder to any rights associated with the underlying asset, such as voting rights or any income from the underlying asset, such as a dividend. == History == === Historical uses of options === Contracts similar to options have been used since ancient times. The first reputed option buyer was the ancient Greek mathematician and philosopher Thales of Miletus. On a certain occasion, it was predicted that the season's olive harvest would be larger than usual, and during the off-season, he acquired the right to use a number of olive presses the following spring. When spring came and the olive harvest was larger than expected, he exercised his options and then rented the presses out at a much higher price than he paid for his 'option'. The 1688 book Confusion of Confusions describes the trading of \"opsies\" on the Amsterdam stock exchange (now Euronext), explaining that \"there will be only limited risks to you, while the gain may surpass all your imaginings and hopes.\" In London, puts and \"refusals\" (calls) first became well-known trading instruments in the 1690s during the reign of William and Mary. Privileges were options sold over the counter in nineteenth-century America, with both puts and calls on shares offered by specialized dealers. Their exercise price was fixed at a rounded-off market price on the day or week that the option was bought, and the expiry date was generally three months after purchase. They were not traded in secondary markets. In the real estate market, call options have long been used to assemble large parcels of land from separate owners; e.g., a developer pays for the right to buy several adjacent plots, but is not obligated to buy these plots and might not unless they can buy all the plots in the entire parcel. Additionally, purchase of real property, like houses, requires a buyer paying the seller into an escrow account an earnest payment, which offers the buyer the right to buy the property at the set terms, including the purchase price. In the motion picture industry, film or theatrical producers often buy an option giving the right – but not the obligation – to dramatize a specific book or script. Lines of credit give the potential borrower the right – but not the obligation – to borrow within a specified time period. Many choices, or embedded options, have traditionally been included in bond contracts. For example, many bonds are convertible into common stock at the buyer's option, or may be called (bought back) at specified prices at the issuer's option. Mortgage borrowers have long had the option to repay the loan early, which corresponds to a callable bond option. === Modern stock options === Options contracts have been known for decades. The Chicago Board Options Exchange was established in 1973, which set up a regime using standardized forms and terms and trade through a guaranteed clearing house. Trading activity and academic interest have increased since then. Today, many options are created in a standardized form and traded through clearing houses on regulated options exchanges. In contrast, other over-the-counter options are written as bilateral, customized contracts between a single buyer and seller, one or both of which may be a dealer or market-maker. Options are part of a larger class of financial instruments known as derivative products, or simply, derivatives. == Contract specifications == A financial option is a contract between two counterparties with the terms of the option specified in a term sheet. Option contracts may be quite complicated; however, at minimum, they usually contain the following specifications: whether the option holder has the right to buy (a call option) or the right to sell (a put option) the quantity and class of the underlying asset(s) (e.g., 100 shares of XYZ Co. B stock) the strike price, also known as the exercise price, which is the price at which the underlying transaction will occur upon exercise the expiration date, or expiry, which is the last date the option can be exercised the settlement terms, for instance, whether the writer must deliver the actual asset on exercise, or may simply tender the equivalent cash amount the terms by which the option is quoted in the market to convert the quoted price into the actual premium – the total amount paid by the holder to the writer == Option trading == === Forms of trading === ==== Exchange-traded options ==== Exchange-traded options (also called \"listed options\") are a class of exchange-traded derivatives. Exchange-traded options have standardized contracts and are settled through a clearing house with fulfillment guaranteed by the Options Clearing Corporation (OCC). Since the contracts are standardized, accurate pricing models are often available. Exchange-traded options include: Stock options Bond options and other interest rate options Stock market index options or, simply, index options Options on futures contracts and Callable bull/bear contract ==== Over-the-counter options ==== Over-the-counter options (OTC options, also called \"dealer options\") are traded between two private parties and are not listed on an exchange. The terms of an OTC option are unrestricted and may be individually tailored to meet any business need. In general, the option writer is a well-capitalized institution (to prevent credit risk). Option types commonly traded over the counter include: Interest rate options Currency cross rate options, and Options on swaps or swaptions. By avoiding an exchange, users of OTC options can narrowly tailor the terms of the option contract to suit individual business requirements. In addition, OTC option transactions generally do not need to be advertised to the market and face little or no regulatory requirements. However, OTC counterparties must establish credit lines with each other and conform to each other's clearing and settlement procedures. With few exceptions, there are no secondary markets for employee stock options. These must either be exercised by the original grantee or allowed to expire. === Exchange trading === The most common way to trade options is via standardized options contracts listed by various futures and options exchanges. Listings and prices are tracked and can be looked up by ticker symbol. By publishing continuous, live markets for option prices, an exchange enables independent parties to engage in price discovery and execute transactions. As an intermediary to both sides of the transaction, the benefits the exchange provides to the transaction include: Fulfillment of the contract is backed by the credit of the exchange, which typically has the highest rating (AAA), Counterparties remain anonymous, Enforcement of market regulation to ensure fairness and transparency, and Maintenance of orderly markets, especially during fast trading conditions. === Basic trades (American style) === These trades are described from the point of view of a speculator. If they are combined with other positions, they can also be used in hedging. An option contract in US markets usually represents 100 shares of the underlying security. ==== Long call ==== A trader who expects a stock's price to increase can buy a call option to purchase the stock at a fixed price (strike price) at a later date, rather than purchase the stock outright. The cash outlay on the option is the premium. The trader would have no obligation to buy the stock, but only has the right to do so on or before the expiration date. The risk of loss would be limited to the premium paid, unlike the possible loss had the stock been bought outright. The holder of an American-style call option can sell the option holding at any time until the expiration date and would consider doing so when the stock's spot price is above the exercise price, especially if the holder expects the price of the option to drop. By selling the option early in that situation, the trader can realise an immediate profit. Alternatively, the trader can exercise the option – for example, if there is no secondary market for the options – and then sell the stock, realising a profit. A trader would make a profit if the spot price of the shares rises by more than the premium. For example, if the exercise price is 100 and the premium paid is 10, then if the spot price of 100 rises to only 110, the transaction is break-even; an increase in the stock price above 110 produces a profit. If the stock price at expiration is lower than the exercise price, the holder of the option at that time will let the call contract expire and lose only the premium (or the price paid on transfer). ==== Long put ==== A trader who expects a stock's price to decrease can buy a put option to sell the stock at a fixed price (strike price) at a later date. The trader is not obligated to sell the stock, but has the right to do so on or before the expiration date. If the stock price at expiration is below the exercise price by more than the premium paid, the trader makes a profit. If the stock price at expiration is above the exercise price, the trader lets the put contract expire and loses only the premium paid. In the transaction, the premium also plays a role as it enhances the break-even point. For example, if the exercise price is 100 and the premium paid is 10, then a spot price between 90 and 100 is not profitable. The trader makes a profit only if the spot price is below 90. The trader exercising a put option on a stock does not need to own the underlying asset, because most stocks can be shorted. ==== Short call ==== A trader who expects a stock's price to decrease can sell the stock short or instead sell, or \"write\", a call. The trader selling a call has an obligation to sell the stock to the call buyer at a fixed price (\"strike price\"). If the seller does not own the stock when the option is exercised, they are obligated to purchase the stock in the market at the prevailing market price. If the stock price decreases, the seller of the call (call writer) makes a profit in the amount of the premium. If the stock price increases over the strike price by more than the amount of the premium, the seller loses money, with the potential loss being unlimited. ==== Short put ==== A trader who expects a stock's price to increase can buy the stock or instead sell, or \"write\", a put. The trader selling a put has an obligation to buy the stock from the put buyer at a fixed price (\"strike price\"). If the stock price at expiration is above the strike price, the seller of the put (put writer) makes a profit in the amount of the premium. If the stock price at expiration is below the strike price by more than the amount of the premium, the trader loses money, with the potential loss being up to the strike price minus the premium. A benchmark index for the performance of a cash-secured short put option position is the CBOE S&P 500 PutWrite Index (ticker PUT). === Options strategies === Combining any of the four basic kinds of option trades (possibly with different exercise prices and maturities) and the two basic kinds of stock trades (long and short) allows a variety of options strategies. Simple strategies usually combine only a few trades, while more complicated strategies can combine several. Strategies are often used to engineer a particular risk profile to movements in the underlying security. For example, buying a butterfly spread (long one X1 call, short two X2 calls, and long one X3 call) allows a trader to profit if the stock price on the expiration date is near the middle exercise price, X2, and does not expose the trader to a large loss. A condor is a strategy similar to a butterfly spread, but with different strikes for the short options – offering a larger likelihood of profit but with a lower net credit compared to the butterfly spread. Selling a straddle (selling both a put and a call at the same exercise price) would give a trader a greater profit than a butterfly if the final stock price is near the exercise price, but might result in a large loss. Similar to the straddle is the strangle which is also constructed by a call and a put, but whose strikes are different, reducing the net debit of the trade, but also reducing the risk of loss in the trade. One well-known strategy is the covered call, in which a trader buys a stock (or holds a previously purchased stock position), and sells a call. (This can be contrasted with a naked call. See also naked put.) If the stock price rises above the exercise price, the call will be exercised and the trader will get a fixed profit. If the stock price falls, the call will not be exercised, and any loss incurred to the trader will be partially offset by the premium received from selling the call. Overall, the payoffs match the payoffs from selling a put. This relationship is known as put–call parity and offers insights for financial theory. A benchmark index for the performance of a buy-write strategy is the CBOE S&P 500 BuyWrite Index (ticker symbol BXM). Another very common strategy is the protective put, in which a trader buys a stock (or holds a previously-purchased long stock position), and buys a put. This strategy acts as an insurance when investing long on the underlying stock, hedging the investor's potential losses, but also shrinking an otherwise larger profit, if just purchasing the stock without the put. The maximum profit of a protective put is theoretically unlimited as the strategy involves being long on the underlying stock. The maximum loss is limited to the purchase price of the underlying stock less the strike price of the put option and the premium paid. A protective put is also known as a married put. == Types == Options can be classified in a few ways. === According to the option rights === Call options give the holder the right – but not the obligation – to buy something at a specific price for a specific time period. Put options give the holder the right – but not the obligation – to sell something at a specific price for a specific time period. === According to the delivery type === Physical delivery option requires actual delivery of the goods or stocks to take place. Cash-settled option is settled in resulting cash payment. === According to the underlying assets === Equity option Bond option Future option Index option Commodity option Currency option Swap option === Other option types === Another important class of options, particularly in the U.S., are employee stock options, which a company awards to their employees as a form of incentive compensation. Other types of options exist in many financial contracts. For example real estate options are often used to assemble large parcels of land, and prepayment options are usually included in mortgage loans. However, many of the valuation and risk management principles apply across all financial options. === Option styles === Options are classified into a number of styles, the most common of which are: American option – an option that may be exercised on any trading day on or before expiration. European option – an option that may only be exercised on expiry. These are often described as vanilla options. Other styles include: Bermudan option – an option that may be exercised only on specified dates on or before expiration. Asian option – an option whose payoff is determined by the average underlying price over some preset time period. Barrier option – any option with the general characteristic that the underlying security's price must pass a certain level or \"barrier\" before it can be exercised. Binary option – An all-or-nothing option that pays the full amount if the underlying security meets the defined condition on expiration, otherwise, it expires. Exotic option – any of a broad category of options that may include complex financial structures. == Valuation == Because the values of option contracts depend on a number of different variables in addition to the value of the underlying asset, they are complex to value. There are many pricing models in use, although all essentially incorporate the concepts of rational pricing (i.e. risk neutrality), moneyness, option time value, and put–call parity. The valuation itself combines a model of the behavior (\"process\") of the underlying price with a mathematical method which returns the premium as a function of the assumed behavior. The models range from the (prototypical) Black–Scholes model for equities, to the Heath–Jarrow–Morton framework for interest rates, to the Heston model where volatility itself is considered stochastic. See Asset pricing for a listing of the various models here. === Basic decomposition === In its most basic terms, the value of an option is commonly decomposed into two parts: The first part is the intrinsic value, which is defined as the difference between the market value of the underlying, and the strike price of the given option The second part is the time value, which depends on a set of other factors which, through a multi-variable, non-linear interrelationship, reflect the discounted expected value of that difference at expiration. === Valuation models === As above, the value of the option is estimated using a variety of quantitative techniques, all based on the principle of risk-neutral pricing and using stochastic calculus in their solution. The most basic model is the Black–Scholes model. More sophisticated models are used to model the volatility smile. These models are implemented using a variety of numerical techniques. In general, standard option valuation models depend on the following factors: The current market price of the underlying security The strike price of the option, particularly in relation to the current market price of the underlying (in the money vs. out of the money) The cost of holding a position in the underlying security, including interest and dividends The time to expiration together with any restrictions on when exercise may occur an estimate of the future volatility of the underlying security's price over the life of the option More advanced models can require additional factors, such as an estimate of how volatility changes over time and for various underlying price levels, or the dynamics of stochastic interest rates. The following are some principal valuation techniques used in practice to evaluate option contracts. ==== Black–Scholes ==== Following early work by Louis Bachelier and later work by Robert C. Merton, Fischer Black and Myron Scholes made a major breakthrough by deriving a differential equation that must be satisfied by the price of any derivative dependent on a non-dividend-paying stock. By employing the technique of constructing a risk-neutral portfolio that replicates the returns of holding an option, Black and Scholes produced a closed-form solution for a European option's theoretical price. At the same time, the model generates hedge parameters necessary for effective risk management of option holdings. While the ideas behind the Black–Scholes model were ground-breaking and eventually led to Scholes and Merton receiving the Swedish Central Bank's associated Prize for Achievement in Economics (a.k.a., the Nobel Prize in Economics), the application of the model in actual options trading is clumsy because of the assumptions of continuous trading, constant volatility, and a constant interest rate. Nevertheless, the Black–Scholes model is still one of the most important methods and foundations for the existing financial market in which the result is within the reasonable range. ==== Stochastic volatility models ==== Since the market crash of 1987, it has been observed that market implied volatility for options of lower strike prices is typically higher than for higher strike prices, suggesting that volatility varies both for time and for the price level of the underlying security – a so-called volatility smile; and with a time dimension, a volatility surface. The main approach here is to treat volatility as stochastic, with the resultant stochastic volatility models and the Heston model as a prototype; see #Risk-neutral_measure for a discussion of the logic. Other models include the CEV and SABR volatility models. One principal advantage of the Heston model, however, is that it can be solved in closed form, while other stochastic volatility models require complex numerical methods. An alternate, though related, approach is to apply a local volatility model, where volatility is treated as a deterministic function of both the current asset level S t {\\displaystyle S_{t}} and of time t {\\displaystyle t} . As such, a local volatility model is a generalisation of the Black–Scholes model, where the volatility is a constant. The concept was developed when Bruno Dupire and Emanuel Derman and Iraj Kani noted that there is a unique diffusion process consistent with the risk neutral densities derived from the market prices of European options. See #Development for discussion. ==== Short-rate models ==== For the valuation of bond options, swaptions (i.e. options on swaps), and interest rate cap and floors (effectively options on the interest rate) various short-rate models have been developed (applicable, in fact, to interest rate derivatives generally). The best known of these are Black-Derman-Toy and Hull–White. These models describe the future evolution of interest rates by describing the future evolution of the short rate. The other major framework for interest rate modelling is the Heath–Jarrow–Morton framework (HJM). The distinction is that HJM gives an analytical description of the entire yield curve, rather than just the short rate. (The HJM framework incorporates the Brace–Gatarek–Musiela model and market models. And some of the short rate models can be straightforwardly expressed in the HJM framework.) For some purposes, e.g., valuation of mortgage-backed securities, this can be a big simplification; regardless, the framework is often preferred for models of higher dimension. Note that for the simpler options here, i.e. those mentioned initially, the Black model can instead be employed, with certain assumptions. === Model implementation === Once a valuation model has been chosen, there are a number of different techniques used to implement the models. ==== Analytic techniques ==== In some cases, one can take the mathematical model and using analytical methods, develop closed form solutions such as the Black–Scholes model and the Black model. The resulting solutions are readily computable, as are their \"Greeks\". Although the Roll–Geske–Whaley model applies to an American call with one dividend, for other cases of American options, closed form solutions are not available; approximations here include Barone-Adesi and Whaley, Bjerksund and Stensland and others. ==== Binomial tree pricing model ==== Closely following the derivation of Black and Scholes, John Cox, Stephen Ross and Mark Rubinstein developed the original version of the binomial options pricing model. It models the dynamics of the option's theoretical value for discrete time intervals over the option's life. The model starts with a binomial tree of discrete future possible underlying stock prices. By constructing a riskless portfolio of an option and stock (as in the Black–Scholes model) a simple formula can be used to find the option price at each node in the tree. This value can approximate the theoretical value produced by Black–Scholes, to the desired degree of precision. However, the binomial model is considered more accurate than Black–Scholes because it is more flexible; e.g., discrete future dividend payments can be modeled correctly at the proper forward time steps, and American options can be modeled as well as European ones. Binomial models are widely used by professional option traders. The trinomial tree is a similar model, allowing for an up, down or stable path; although considered more accurate, particularly when fewer time-steps are modelled, it is less commonly used as its implementation is more complex. For a more general discussion, as well as for application to commodities, interest rates and hybrid instruments, see Lattice model (finance). ==== Monte Carlo models ==== For many classes of options, traditional valuation techniques are intractable because of the complexity of the instrument. In these cases, a Monte Carlo approach may often be useful. Rather than attempt to solve the differential equations of motion that describe the option's value in relation to the underlying security's price, a Monte Carlo model uses simulation to generate random price paths of the underlying asset, each of which results in a payoff for the option. The average of these payoffs can be discounted to yield an expectation value for the option. Note though, that despite its flexibility, using simulation for American styled options is somewhat more complex than for lattice based models. ==== Finite difference models ==== The equations used to model the option are often expressed as partial differential equations (see for example Black–Scholes equation). Once expressed in this form, a finite difference model can be derived, and the valuation obtained. A number of implementations of finite difference methods exist for option valuation, including: explicit finite difference, implicit finite difference and the Crank–Nicolson method. A trinomial tree option pricing model can be shown to be a simplified application of the explicit finite difference method. Although the finite difference approach is mathematically sophisticated, it is particularly useful where changes are assumed over time in model inputs – for example dividend yield, risk-free rate, or volatility, or some combination of these – that are not tractable in closed form. ==== Other models ==== Other numerical implementations which have been used to value options include finite element methods. == Risks == As with all securities, trading options entails the risk of the option's value changing over time. However, unlike traditional securities, the return from holding an option varies non-linearly with the value of the underlying and other factors. Therefore, the risks associated with holding options are more complicated to understand and predict. === Standard hedge parameters === In general, the change in the value of an option can be derived from Itô's lemma as: d C = Δ d S + Γ d S 2 2 + κ d σ + θ d t {\\displaystyle dC=\\Delta dS+\\Gamma {\\frac {dS^{2}}{2}}+\\kappa d\\sigma +\\theta dt\\,} where the Greeks Δ {\\displaystyle \\Delta } , Γ {\\displaystyle \\Gamma } , κ {\\displaystyle \\kappa } and θ {\\displaystyle \\theta } are the standard hedge parameters calculated from an option valuation model, such as Black–Scholes, and d S {\\displaystyle dS} , d σ {\\displaystyle d\\sigma } and d t {\\displaystyle dt} are unit changes in the underlying's price, the underlying's volatility and time, respectively. Thus, at any point in time, one can estimate the risk inherent in holding an option by calculating its hedge parameters and then estimating the expected change in the model inputs, d S {\\displaystyle dS} , d σ {\\displaystyle d\\sigma } and d t {\\displaystyle dt} , provided the changes in these values are small. This technique can be used effectively to understand and manage the risks associated with standard options. For instance, by offsetting a holding in an option with the quantity − Δ {\\displaystyle -\\Delta } of shares in the underlying, a trader can form a delta neutral portfolio that is hedged from loss for small changes in the underlying's price. The corresponding price sensitivity formula for this portfolio Π {\\displaystyle \\Pi } is: d Π = Δ d S + Γ d S 2 2 + κ d σ + θ d t − Δ d S = Γ d S 2 2 + κ d σ + θ d t {\\displaystyle d\\Pi =\\Delta dS+\\Gamma {\\frac {dS^{2}}{2}}+\\kappa d\\sigma +\\theta dt-\\Delta dS=\\Gamma {\\frac {dS^{2}}{2}}+\\kappa d\\sigma +\\theta dt\\,} === Pin risk === A special situation called pin risk can arise when the underlying closes at or very close to the option's strike value on the last day the option is traded prior to expiration. The option writer (seller) may not know with certainty whether or not the option will actually be exercised or be allowed to expire. Therefore, the option writer may end up with a large, unwanted residual position in the underlying when the markets open on the next trading day after expiration, regardless of his or her best efforts to avoid such a residual. === Counterparty risk === A further, often ignored, risk in derivatives such as options is counterparty risk. In an option contract this risk is that the seller will not sell or buy the underlying asset as agreed. The risk can be minimized by using a financially strong intermediary able to make good on the trade, but in a major panic or crash the number of defaults can overwhelm even the strongest intermediaries. === Options approval levels === To limit risk, brokers use access control systems to restrict traders from executing certain options strategies that would not be suitable for them. Brokers generally offer about four or five approval levels, with the lowest level offering the lowest risk and the highest level offering the highest risk. The actual numbers of levels, and the specific options strategies permitted at each level, vary between brokers. Brokers may also have their own specific vetting criteria, but they are usually based on factors such as the trader's annual salary and net worth, trading experience, and investment goals (capital preservation, income, growth, or speculation). For example, a trader with a low salary and net worth, little trading experience, and only concerned about preserving capital generally would not be permitted to execute high-risk strategies like naked calls and naked puts. Traders can update their information when requesting permission to upgrade to a higher approval level. == Options exchanges == === Chicago Board Options Exchange (CBOE) === The Chicago Board Options Exchange (CBOE) is an options exchange located in Chicago, Illinois. Founded in 1973, the CBOE is the first options exchange in the United States. The CBOE offers options trading on various underlying securities including market indexes, exchange-traded funds (ETFs), stocks, and volatility indexes. Its flagship product is options on the S&P 500 Index (SPX), one of the most actively traded options globally. In addition to its floor-based open outcry trading, the CBOE also operates an all-electronic trading platform. The CBOE is regulated by the U.S. Securities and Exchange Commission (SEC). === NASDAQ OMX PHLX === Founded in 1790, The NASDAQ OMX PHLX, also known as the Philadelphia Stock Exchange is an options and futures exchange located in Philadelphia, Pennsylvania. It is the oldest stock exchange in the United States. The NASDAQ OMX PHLX allows trading of options on equities, indexes, ETFs, and foreign currencies. It is one of the few exchanges designated for trading currency options in the U.S. In 2008, NASDAQ acquired the Philadelphia Stock Exchange and renamed it NASDAQ OMX PHLX. It operates as a subsidiary of NASDAQ, Inc. === International Securities Exchange (ISE) === International Securities Exchange (ISE) is an electronic options exchange located in New York City. Launched in 2000, ISE was the first all-electronic U.S. options exchange. ISE provides options trading on U.S. equities, indexes, and ETFs. Its trading platform provides a maximum price improvement auction to allow market makers to compete for orders. ISE is regulated by the SEC and is owned by Nasdaq, Inc. === Eurex Exchange === Eurex Exchange is a derivatives exchange located in Frankfurt, Germany. It offers trading in futures and options on interest rates, equities, indexes, and fixed-income products. Formed in 1998 from the merger of Deutsche Terminbörse (DTB) and Swiss Options and Financial Futures Exchange (SOFFEX), Eurex Exchange operates electronic and open outcry trading platforms. Eurex Exchange is owned by Eurex Frankfurt AG. === Tokyo Stock Exchange (TSE) === Founded in 1878, the Tokyo Stock Exchange (TSE) is a stock exchange located in Tokyo, Japan. In addition to equities, the TSE also provides trading in stock index futures and options. Trading is conducted electronically as well as through auction bidding by securities companies. The TSE is regulated by the Financial Services Agency of Japan. It is owned by the Japan Exchange Group. == See also == == References == == Further reading == Fischer Black and Myron S. Scholes. \"The Pricing of Options and Corporate Liabilities\", Journal of Political Economy, 81 (3), 637–654 (1973). Feldman, Barry and Dhuv Roy. \"Passive Options-Based Investment Strategies: The Case of the CBOE S&P 500 BuyWrite Index\". The Journal of Investing, (Summer 2005). Kleinert, Hagen, Path Integrals in Quantum Mechanics, Statistics, Polymer Physics, and Financial Markets, 4th edition, World Scientific (Singapore, 2004); Paperback ISBN 981-238-107-4 (also available online: PDF-files) Hill, Joanne, Venkatesh Balasubramanian, Krag (Buzz) Gregory, and Ingrid Tierens. \"Finding Alpha via Covered Index Writing\". Financial Analysts Journal. (Sept.-Oct. 2006). pp. 29–46. Millman, Gregory J. (2008), \"Futures and Options Markets\", in David R. Henderson (ed.), Concise Encyclopedia of Economics (2nd ed.), Indianapolis: Library of Economics and Liberty, ISBN 978-0-86597-665-8, OCLC 237794267 Natenberg, Sheldon (2015). Option Volatility and Pricing: Advanced Trading Strategies and Techniques (Second ed.). New York. ISBN 978-0-07-181877-3.{{cite book}}: CS1 maint: location missing publisher (link) Moran, Matthew. \"Risk-adjusted Performance for Derivatives-based Indexes – Tools to Help Stabilize Returns\". The Journal of Indexes. (Fourth Quarter, 2002) pp. 34–40. Reilly, Frank and Keith C. Brown, Investment Analysis and Portfolio Management, 7th edition, Thompson Southwestern, 2003, pp. 994–5. Schneeweis, Thomas, and Richard Spurgin. \"The Benefits of Index Option-Based Strategies for Institutional Portfolios\" The Journal of Alternative Investments, (Spring 2001), pp. 44–52. Whaley, Robert. \"Risk and Return of the CBOE BuyWrite Monthly Index\" The Journal of Derivatives, (Winter 2002), pp. 35–42. Bloss, Michael; Ernst, Dietmar; Häcker Joachim (2008): Derivatives – An authoritative guide to derivatives for financial intermediaries and investors Oldenbourg Verlag München ISBN 978-3-486-58632-9 Espen Gaarder Haug & Nassim Nicholas Taleb (2008): \"Why We Have Never Used the Black–Scholes–Merton Option Pricing Formula\""
+  },
+  "chunks": [
+    {
+      "id": "optionfinance_06764a2d_c0000",
+      "article_id": "optionfinance_06764a2d",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 845,
+      "content": "In finance, an option is a contract which conveys to its owner, the holder, the right, but not the obligation, to buy or sell a specific quantity of an underlying asset or instrument at a specified strike price on or before a specified date, depending on the style of the option. Options are typically acquired by purchase, as a form of compensation, or as part of a complex financial transaction. Thus, they are also a form of asset (or contingent liability) and have a valuation that may depend on a complex relationship between underlying asset price, time until expiration, market volatility, the risk-free rate of interest, and the strike price of the option. Options may be traded between private parties in over-the-counter (OTC) transactions, or they may be exchange-traded in live, public markets in the form of standardized contracts.",
+      "char_count": 844,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0001",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== Definition and application ==",
+      "heading_path": "== Definition and application ==",
+      "start_char": 877,
+      "end_char": 1749,
+      "content": "== Definition and application == An option is a contract that allows the holder the right to buy or sell an underlying asset or financial instrument at a specified strike price on or before a specified date, depending on the form of the option. Selling or exercising an option before expiry typically requires a buyer to pick the contract up at the agreed upon price. The strike price may be set by reference to the spot price (market price) of the underlying security or commodity on the day an option is issued, or it may be fixed at a discount or at a premium. The issuer has the corresponding obligation to fulfill the transaction (to sell or buy) if the holder \"exercises\" the option. An option that conveys to the holder the right to buy at a specified price is referred to as a call, while one that conveys the right to sell at a specified price is known as a put.",
+      "char_count": 871,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0002",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== Definition and application ==",
+      "heading_path": "== Definition and application ==",
+      "start_char": 1749,
+      "end_char": 2743,
+      "content": "The issuer may grant an option to a buyer as part of another transaction (such as a share issue or as part of an employee incentive scheme), or the buyer may pay a premium to the issuer for the option. A call option would normally be exercised only when the strike price is below the market value of the underlying asset, while a put option would normally be exercised only when the strike price is above the market value. When an option is exercised, the cost to the option holder is the strike price of the asset acquired plus the premium, if any, paid to the issuer. If the option's expiration date passes without the option being exercised, the option expires, and the holder forfeits the premium paid to the issuer. In any case, the premium is income to the issuer, and normally a capital loss to the option holder. An option holder may on-sell the option to a third party in a secondary market, in either an over-the-counter transaction or on an options exchange, depending on the option.",
+      "char_count": 994,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0003",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== Definition and application ==",
+      "heading_path": "== Definition and application ==",
+      "start_char": 2744,
+      "end_char": 3448,
+      "content": "The market price of an American-style option normally closely follows that of the underlying stock being the difference between the market price of the stock and the strike price of the option. The actual market price of the option may vary depending on a number of factors, such as a significant option holder needing to sell the option due to the expiration date approaching and not having the financial resources to exercise the option, or a buyer in the market trying to amass a large option holding. The ownership of an option does not generally entitle the holder to any rights associated with the underlying asset, such as voting rights or any income from the underlying asset, such as a dividend.",
+      "char_count": 704,
+      "token_estimate": 176,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0004",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Historical uses of options ==",
+      "heading_path": "== = Historical uses of options ==",
+      "start_char": 3465,
+      "end_char": 4419,
+      "content": "== = Historical uses of options === Contracts similar to options have been used since ancient times. The first reputed option buyer was the ancient Greek mathematician and philosopher Thales of Miletus. On a certain occasion, it was predicted that the season's olive harvest would be larger than usual, and during the off-season, he acquired the right to use a number of olive presses the following spring. When spring came and the olive harvest was larger than expected, he exercised his options and then rented the presses out at a much higher price than he paid for his 'option'. The 1688 book Confusion of Confusions describes the trading of \"opsies\" on the Amsterdam stock exchange (now Euronext), explaining that \"there will be only limited risks to you, while the gain may surpass all your imaginings and hopes.\" In London, puts and \"refusals\" (calls) first became well-known trading instruments in the 1690s during the reign of William and Mary.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0005",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Historical uses of options ==",
+      "heading_path": "== = Historical uses of options ==",
+      "start_char": 4419,
+      "end_char": 5303,
+      "content": "Privileges were options sold over the counter in nineteenth-century America, with both puts and calls on shares offered by specialized dealers. Their exercise price was fixed at a rounded-off market price on the day or week that the option was bought, and the expiry date was generally three months after purchase. They were not traded in secondary markets. In the real estate market, call options have long been used to assemble large parcels of land from separate owners; e.g., a developer pays for the right to buy several adjacent plots, but is not obligated to buy these plots and might not unless they can buy all the plots in the entire parcel. Additionally, purchase of real property, like houses, requires a buyer paying the seller into an escrow account an earnest payment, which offers the buyer the right to buy the property at the set terms, including the purchase price.",
+      "char_count": 884,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0006",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Historical uses of options ==",
+      "heading_path": "== = Historical uses of options ==",
+      "start_char": 5304,
+      "end_char": 5948,
+      "content": "In the motion picture industry, film or theatrical producers often buy an option giving the right – but not the obligation – to dramatize a specific book or script. Lines of credit give the potential borrower the right – but not the obligation – to borrow within a specified time period. Many choices, or embedded options, have traditionally been included in bond contracts. For example, many bonds are convertible into common stock at the buyer's option, or may be called (bought back) at specified prices at the issuer's option. Mortgage borrowers have long had the option to repay the loan early, which corresponds to a callable bond option.",
+      "char_count": 644,
+      "token_estimate": 161,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0007",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Modern stock options ==",
+      "heading_path": "== = Modern stock options ==",
+      "start_char": 5943,
+      "end_char": 6638,
+      "content": "== = Modern stock options === Options contracts have been known for decades. The Chicago Board Options Exchange was established in 1973, which set up a regime using standardized forms and terms and trade through a guaranteed clearing house. Trading activity and academic interest have increased since then. Today, many options are created in a standardized form and traded through clearing houses on regulated options exchanges. In contrast, other over-the-counter options are written as bilateral, customized contracts between a single buyer and seller, one or both of which may be a dealer or market-maker. Options are part of a larger class of financial instruments known as derivative products, or simply, derivatives.",
+      "char_count": 722,
+      "token_estimate": 180,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0008",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== Contract specifications ==",
+      "heading_path": "== Contract specifications ==",
+      "start_char": 6667,
+      "end_char": 7605,
+      "content": "== Contract specifications == A financial option is a contract between two counterparties with the terms of the option specified in a term sheet. Option contracts may be quite complicated; however, at minimum, they usually contain the following specifications: whether the option holder has the right to buy (a call option) or the right to sell (a put option) the quantity and class of the underlying asset(s) (e.g., 100 shares of XYZ Co. B stock) the strike price, also known as the exercise price, which is the price at which the underlying transaction will occur upon exercise the expiration date, or expiry, which is the last date the option can be exercised the settlement terms, for instance, whether the writer must deliver the actual asset on exercise, or may simply tender the equivalent cash amount the terms by which the option is quoted in the market to convert the quoted price into the actual premium – the total amount paid by the holder to the writer",
+      "char_count": 966,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0009",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Exchange trading ==",
+      "heading_path": "== = Exchange trading ==",
+      "start_char": 7676,
+      "end_char": 8439,
+      "content": "== = Exchange trading === The most common way to trade options is via standardized options contracts listed by various futures and options exchanges. Listings and prices are tracked and can be looked up by ticker symbol. By publishing continuous, live markets for option prices, an exchange enables independent parties to engage in price discovery and execute transactions. As an intermediary to both sides of the transaction, the benefits the exchange provides to the transaction include: Fulfillment of the contract is backed by the credit of the exchange, which typically has the highest rating (AAA), Counterparties remain anonymous, Enforcement of market regulation to ensure fairness and transparency, and Maintenance of orderly markets, especially during fast trading conditions.",
+      "char_count": 786,
+      "token_estimate": 196,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0010",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Basic trades (American style) ==",
+      "heading_path": "== = Basic trades (American style) ==",
+      "start_char": 8476,
+      "end_char": 8713,
+      "content": "== = Basic trades (American style) === These trades are described from the point of view of a speculator. If they are combined with other positions, they can also be used in hedging. An option contract in US markets usually represents 100 shares of the underlying security.",
+      "char_count": 273,
+      "token_estimate": 68,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0011",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Options strategies ==",
+      "heading_path": "== = Options strategies ==",
+      "start_char": 8739,
+      "end_char": 9650,
+      "content": "== = Options strategies === Combining any of the four basic kinds of option trades (possibly with different exercise prices and maturities) and the two basic kinds of stock trades (long and short) allows a variety of options strategies. Simple strategies usually combine only a few trades, while more complicated strategies can combine several. Strategies are often used to engineer a particular risk profile to movements in the underlying security. For example, buying a butterfly spread (long one X1 call, short two X2 calls, and long one X3 call) allows a trader to profit if the stock price on the expiration date is near the middle exercise price, X2, and does not expose the trader to a large loss. A condor is a strategy similar to a butterfly spread, but with different strikes for the short options – offering a larger likelihood of profit but with a lower net credit compared to the butterfly spread.",
+      "char_count": 910,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0012",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Options strategies ==",
+      "heading_path": "== = Options strategies ==",
+      "start_char": 9650,
+      "end_char": 10625,
+      "content": "Selling a straddle (selling both a put and a call at the same exercise price) would give a trader a greater profit than a butterfly if the final stock price is near the exercise price, but might result in a large loss. Similar to the straddle is the strangle which is also constructed by a call and a put, but whose strikes are different, reducing the net debit of the trade, but also reducing the risk of loss in the trade. One well-known strategy is the covered call, in which a trader buys a stock (or holds a previously purchased stock position), and sells a call. (This can be contrasted with a naked call. See also naked put.) If the stock price rises above the exercise price, the call will be exercised and the trader will get a fixed profit. If the stock price falls, the call will not be exercised, and any loss incurred to the trader will be partially offset by the premium received from selling the call. Overall, the payoffs match the payoffs from selling a put.",
+      "char_count": 975,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0013",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Options strategies ==",
+      "heading_path": "== = Options strategies ==",
+      "start_char": 10626,
+      "end_char": 11511,
+      "content": "This relationship is known as put–call parity and offers insights for financial theory. A benchmark index for the performance of a buy-write strategy is the CBOE S&P 500 BuyWrite Index (ticker symbol BXM). Another very common strategy is the protective put, in which a trader buys a stock (or holds a previously-purchased long stock position), and buys a put. This strategy acts as an insurance when investing long on the underlying stock, hedging the investor's potential losses, but also shrinking an otherwise larger profit, if just purchasing the stock without the put. The maximum profit of a protective put is theoretically unlimited as the strategy involves being long on the underlying stock. The maximum loss is limited to the purchase price of the underlying stock less the strike price of the put option and the premium paid. A protective put is also known as a married put.",
+      "char_count": 885,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0014",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = According to the option rights ==",
+      "heading_path": "== = According to the option rights ==",
+      "start_char": 11577,
+      "end_char": 11841,
+      "content": "== = According to the option rights === Call options give the holder the right – but not the obligation – to buy something at a specific price for a specific time period. Put options give the holder the right – but not the obligation – to sell something at a specific price for a specific time period.",
+      "char_count": 301,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0015",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = According to the delivery type ==",
+      "heading_path": "== = According to the delivery type ==",
+      "start_char": 11879,
+      "end_char": 12027,
+      "content": "== = According to the delivery type === Physical delivery option requires actual delivery of the goods or stocks to take place. Cash-settled option is settled in resulting cash payment.",
+      "char_count": 185,
+      "token_estimate": 46,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0016",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Other option types ==",
+      "heading_path": "== = Other option types ==",
+      "start_char": 12195,
+      "end_char": 12667,
+      "content": "== = Other option types === Another important class of options, particularly in the U.S., are employee stock options, which a company awards to their employees as a form of incentive compensation. Other types of options exist in many financial contracts. For example real estate options are often used to assemble large parcels of land, and prepayment options are usually included in mortgage loans. However, many of the valuation and risk management principles apply across all financial options.",
+      "char_count": 497,
+      "token_estimate": 124,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0017",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Option styles ==",
+      "heading_path": "== = Option styles ==",
+      "start_char": 12688,
+      "end_char": 13631,
+      "content": "== = Option styles === Options are classified into a number of styles, the most common of which are: American option – an option that may be exercised on any trading day on or before expiration. European option – an option that may only be exercised on expiry. These are often described as vanilla options. Other styles include: Bermudan option – an option that may be exercised only on specified dates on or before expiration. Asian option – an option whose payoff is determined by the average underlying price over some preset time period. Barrier option – any option with the general characteristic that the underlying security's price must pass a certain level or \"barrier\" before it can be exercised. Binary option – An all-or-nothing option that pays the full amount if the underlying security meets the defined condition on expiration, otherwise, it expires. Exotic option – any of a broad category of options that may include complex financial structures.",
+      "char_count": 963,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0018",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== Valuation ==",
+      "heading_path": "== Valuation ==",
+      "start_char": 13646,
+      "end_char": 14432,
+      "content": "== Valuation == Because the values of option contracts depend on a number of different variables in addition to the value of the underlying asset, they are complex to value. There are many pricing models in use, although all essentially incorporate the concepts of rational pricing (i.e. risk neutrality), moneyness, option time value, and put–call parity. The valuation itself combines a model of the behavior (\"process\") of the underlying price with a mathematical method which returns the premium as a function of the assumed behavior. The models range from the (prototypical) Black–Scholes model for equities, to the Heath–Jarrow–Morton framework for interest rates, to the Heston model where volatility itself is considered stochastic. See Asset pricing for a listing of the various models here.",
+      "char_count": 800,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0019",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Basic decomposition ==",
+      "heading_path": "== = Basic decomposition ==",
+      "start_char": 14459,
+      "end_char": 14917,
+      "content": "== = Basic decomposition === In its most basic terms, the value of an option is commonly decomposed into two parts: The first part is the intrinsic value, which is defined as the difference between the market value of the underlying, and the strike price of the given option The second part is the time value, which depends on a set of other factors which, through a multi-variable, non-linear interrelationship, reflect the discounted expected value of that difference at expiration.",
+      "char_count": 484,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0020",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Valuation models ==",
+      "heading_path": "== = Valuation models ==",
+      "start_char": 14941,
+      "end_char": 15594,
+      "content": "== = Valuation models === As above, the value of the option is estimated using a variety of quantitative techniques, all based on the principle of risk-neutral pricing and using stochastic calculus in their solution. The most basic model is the Black–Scholes model. More sophisticated models are used to model the volatility smile. These models are implemented using a variety of numerical techniques. In general, standard option valuation models depend on the following factors: The current market price of the underlying security The strike price of the option, particularly in relation to the current market price of the underlying (in the money vs.",
+      "char_count": 652,
+      "token_estimate": 163,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0021",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Valuation models ==",
+      "heading_path": "== = Valuation models ==",
+      "start_char": 15594,
+      "end_char": 16181,
+      "content": "out of the money) The cost of holding a position in the underlying security, including interest and dividends The time to expiration together with any restrictions on when exercise may occur an estimate of the future volatility of the underlying security's price over the life of the option More advanced models can require additional factors, such as an estimate of how volatility changes over time and for various underlying price levels, or the dynamics of stochastic interest rates. The following are some principal valuation techniques used in practice to evaluate option contracts.",
+      "char_count": 587,
+      "token_estimate": 146,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0022",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== Risks ==",
+      "heading_path": "== Risks ==",
+      "start_char": 16312,
+      "end_char": 16659,
+      "content": "== Risks == As with all securities, trading options entails the risk of the option's value changing over time. However, unlike traditional securities, the return from holding an option varies non-linearly with the value of the underlying and other factors. Therefore, the risks associated with holding options are more complicated to understand and predict.",
+      "char_count": 357,
+      "token_estimate": 89,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0023",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Standard hedge parameters ==",
+      "heading_path": "== = Standard hedge parameters ==",
+      "start_char": 16692,
+      "end_char": 17346,
+      "content": "== = Standard hedge parameters === In general, the change in the value of an option can be derived from Itô's lemma as: d C = Δ d S + Γ d S 2 2 + κ d σ + θ d t {\\displaystyle dC=\\Delta dS+\\Gamma {\\frac {dS^{2}}{2}}+\\kappa d\\sigma +\\theta dt\\,} where the Greeks Δ {\\displaystyle \\Delta } , Γ {\\displaystyle \\Gamma } , κ {\\displaystyle \\kappa } and θ {\\displaystyle \\theta } are the standard hedge parameters calculated from an option valuation model, such as Black–Scholes, and d S {\\displaystyle dS} , d σ {\\displaystyle d\\sigma } and d t {\\displaystyle dt} are unit changes in the underlying's price, the underlying's volatility and time, respectively.",
+      "char_count": 653,
+      "token_estimate": 163,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0024",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Standard hedge parameters ==",
+      "heading_path": "== = Standard hedge parameters ==",
+      "start_char": 17346,
+      "end_char": 18322,
+      "content": "Thus, at any point in time, one can estimate the risk inherent in holding an option by calculating its hedge parameters and then estimating the expected change in the model inputs, d S {\\displaystyle dS} , d σ {\\displaystyle d\\sigma } and d t {\\displaystyle dt} , provided the changes in these values are small. This technique can be used effectively to understand and manage the risks associated with standard options. For instance, by offsetting a holding in an option with the quantity − Δ {\\displaystyle -\\Delta } of shares in the underlying, a trader can form a delta neutral portfolio that is hedged from loss for small changes in the underlying's price. The corresponding price sensitivity formula for this portfolio Π {\\displaystyle \\Pi } is: d Π = Δ d S + Γ d S 2 2 + κ d σ + θ d t − Δ d S = Γ d S 2 2 + κ d σ + θ d t {\\displaystyle d\\Pi =\\Delta dS+\\Gamma {\\frac {dS^{2}}{2}}+\\kappa d\\sigma +\\theta dt-\\Delta dS=\\Gamma {\\frac {dS^{2}}{2}}+\\kappa d\\sigma +\\theta dt\\,}",
+      "char_count": 976,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0025",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Pin risk ==",
+      "heading_path": "== = Pin risk ==",
+      "start_char": 18306,
+      "end_char": 18845,
+      "content": "== = Pin risk === A special situation called pin risk can arise when the underlying closes at or very close to the option's strike value on the last day the option is traded prior to expiration. The option writer (seller) may not know with certainty whether or not the option will actually be exercised or be allowed to expire. Therefore, the option writer may end up with a large, unwanted residual position in the underlying when the markets open on the next trading day after expiration, regardless of his or her best efforts to avoid such a residual.",
+      "char_count": 554,
+      "token_estimate": 138,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0026",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Counterparty risk ==",
+      "heading_path": "== = Counterparty risk ==",
+      "start_char": 18870,
+      "end_char": 19263,
+      "content": "== = Counterparty risk === A further, often ignored, risk in derivatives such as options is counterparty risk. In an option contract this risk is that the seller will not sell or buy the underlying asset as agreed. The risk can be minimized by using a financially strong intermediary able to make good on the trade, but in a major panic or crash the number of defaults can overwhelm even the strongest intermediaries.",
+      "char_count": 417,
+      "token_estimate": 104,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0027",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Options approval levels ==",
+      "heading_path": "== = Options approval levels ==",
+      "start_char": 19294,
+      "end_char": 20213,
+      "content": "== = Options approval levels === To limit risk, brokers use access control systems to restrict traders from executing certain options strategies that would not be suitable for them. Brokers generally offer about four or five approval levels, with the lowest level offering the lowest risk and the highest level offering the highest risk. The actual numbers of levels, and the specific options strategies permitted at each level, vary between brokers. Brokers may also have their own specific vetting criteria, but they are usually based on factors such as the trader's annual salary and net worth, trading experience, and investment goals (capital preservation, income, growth, or speculation). For example, a trader with a low salary and net worth, little trading experience, and only concerned about preserving capital generally would not be permitted to execute high-risk strategies like naked calls and naked puts.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0028",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Chicago Board Options Exchange (CBOE) ==",
+      "heading_path": "== = Chicago Board Options Exchange (CBOE) ==",
+      "start_char": 20354,
+      "end_char": 20979,
+      "content": "== = Chicago Board Options Exchange (CBOE) === The Chicago Board Options Exchange (CBOE) is an options exchange located in Chicago, Illinois. Founded in 1973, the CBOE is the first options exchange in the United States. The CBOE offers options trading on various underlying securities including market indexes, exchange-traded funds (ETFs), stocks, and volatility indexes. Its flagship product is options on the S&P 500 Index (SPX), one of the most actively traded options globally. In addition to its floor-based open outcry trading, the CBOE also operates an all-electronic trading platform. The CBOE is regulated by the U.S. Securities and Exchange Commission (SEC).",
+      "char_count": 669,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0029",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = NASDAQ OMX PHLX ==",
+      "heading_path": "== = NASDAQ OMX PHLX ==",
+      "start_char": 21002,
+      "end_char": 21530,
+      "content": "== = NASDAQ OMX PHLX === Founded in 1790, The NASDAQ OMX PHLX, also known as the Philadelphia Stock Exchange is an options and futures exchange located in Philadelphia, Pennsylvania. It is the oldest stock exchange in the United States. The NASDAQ OMX PHLX allows trading of options on equities, indexes, ETFs, and foreign currencies. It is one of the few exchanges designated for trading currency options in the U.S. In 2008, NASDAQ acquired the Philadelphia Stock Exchange and renamed it NASDAQ OMX PHLX. It operates as a subsidiary of NASDAQ, Inc.",
+      "char_count": 550,
+      "token_estimate": 137,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0030",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = International Securities Exchange (ISE) ==",
+      "heading_path": "== = International Securities Exchange (ISE) ==",
+      "start_char": 21577,
+      "end_char": 21988,
+      "content": "== = International Securities Exchange (ISE) === International Securities Exchange (ISE) is an electronic options exchange located in New York City. Launched in 2000, ISE was the first all-electronic U.S. options exchange. ISE provides options trading on U.S. equities, indexes, and ETFs. Its trading platform provides a maximum price improvement auction to allow market makers to compete for orders. ISE is regulated by the SEC and is owned by Nasdaq, Inc.",
+      "char_count": 457,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0031",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Eurex Exchange ==",
+      "heading_path": "== = Eurex Exchange ==",
+      "start_char": 22010,
+      "end_char": 22427,
+      "content": "== = Eurex Exchange === Eurex Exchange is a derivatives exchange located in Frankfurt, Germany. It offers trading in futures and options on interest rates, equities, indexes, and fixed-income products. Formed in 1998 from the merger of Deutsche Terminbörse (DTB) and Swiss Options and Financial Futures Exchange (SOFFEX), Eurex Exchange operates electronic and open outcry trading platforms. Eurex Exchange is owned by Eurex Frankfurt AG.",
+      "char_count": 438,
+      "token_estimate": 109,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "optionfinance_06764a2d_c0032",
+      "article_id": "optionfinance_06764a2d",
+      "section": "== = Tokyo Stock Exchange (TSE) ==",
+      "heading_path": "== = Tokyo Stock Exchange (TSE) ==",
+      "start_char": 22461,
+      "end_char": 22848,
+      "content": "== = Tokyo Stock Exchange (TSE) === Founded in 1878, the Tokyo Stock Exchange (TSE) is a stock exchange located in Tokyo, Japan. In addition to equities, the TSE also provides trading in stock index futures and options. Trading is conducted electronically as well as through auction bidding by securities companies. The TSE is regulated by the Financial Services Agency of Japan. It is owned by the Japan Exchange Group.",
+      "char_count": 420,
+      "token_estimate": 105,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Under what condition would a put option typically be exercised?",
+        "answer": "A put option would normally be exercised only when the strike price is above the market value of the underlying asset.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0002"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "How can a trader create a delta neutral portfolio to hedge against minor price fluctuations in the underlying asset?",
+        "answer": "A trader can form a delta neutral portfolio by offsetting a holding in an option with a quantity of -Δ shares in the underlying asset. This strategy is designed to protect the portfolio from losses caused by small changes in the underlying's price.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0024"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What is a covered call strategy and what are its potential outcomes?",
+        "answer": "A covered call is a strategy where a trader buys a stock (or holds a previously purchased one) and sells a call option. If the stock price rises above the exercise price, the call is exercised, resulting in a fixed profit for the trader. If the stock price falls, the call is not exercised, and the premium received from selling the call partially offsets the trader's loss on the stock.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0012"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Explain the relationship between a call option, a put option, and the conditions under which each would typically be exercised.",
+        "answer": "A call option gives the holder the right to buy an underlying asset at a specified price, while a put option gives the holder the right to sell it. A call option is normally exercised only when the strike price is below the market value of the asset. Conversely, a put option is normally exercised only when the strike price is above the market value of the asset.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0001",
+          "optionfinance_06764a2d_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Drawing from historical and modern examples, what are the fundamental characteristics and applications of options?",
+        "answer": "Options, or similar contracts, have been used since ancient times, as exemplified by Thales of Miletus securing the right to use olive presses. In 19th-century America, options called \"privileges\" were sold on shares with fixed exercise prices and expiry dates. A modern application is in real estate, where developers use call options to gain the right, but not the obligation, to purchase land parcels. A key characteristic is that owning an option does not grant the holder rights associated with the underlying asset, such as voting rights or dividends. The market price of an option is generally tied to the difference between the market price of the underlying asset and the option's strike price.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0003",
+          "optionfinance_06764a2d_c0004",
+          "optionfinance_06764a2d_c0005"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How do modern, standardized financial options differ from the traditional embedded options found in instruments like bonds?",
+        "answer": "While both types of options grant the right but not the obligation to perform an action, they differ in structure and formalization. Traditional options, such as those in convertible or callable bonds, are \"embedded\" within another financial instrument. In contrast, modern financial options, particularly since the establishment of the Chicago Board Options Exchange in 1973, are often standalone, standardized contracts traded on regulated exchanges. These modern options have highly specific, formal contract specifications, including a defined strike price, expiration date, and settlement terms.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0006",
+          "optionfinance_06764a2d_c0007",
+          "optionfinance_06764a2d_c0008"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain the difference between a call and a put option, including the conditions related to strike price and market value under which each would typically be exercised.",
+        "answer": "A call option conveys the right to buy an asset at a specified strike price and is normally exercised only when the strike price is below the market value of the underlying asset. In contrast, a put option conveys the right to sell an asset at a specified price and is normally exercised only when the strike price is above the market value.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0001",
+          "optionfinance_06764a2d_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What are some historical and modern examples of option-like contracts being used in various industries, outside of formal stock trading?",
+        "answer": "Historically, options were used by figures like Thales of Miletus, who acquired the right to use olive presses for a future harvest. In the 19th century, they were used in real estate, where developers would pay for the right to buy adjacent plots of land without being obligated to do so, and earnest payments gave home buyers the right to purchase a property at set terms. In modern times, the motion picture industry uses options to secure the rights to dramatize books or scripts. Financial instruments like lines of credit give a borrower the right to borrow, and bonds or mortgages often contain embedded options, such as the right to convert a bond to stock or to repay a loan early.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0004",
+          "optionfinance_06764a2d_c0005",
+          "optionfinance_06764a2d_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Describe two different options strategies that involve holding a long position in the underlying stock, and explain their different objectives.",
+        "answer": "Two strategies involving a long stock position are the covered call and the protective put. A covered call involves holding a stock and selling a call option; its objective is to generate income from the option premium, which can offset some losses if the stock price falls, but it also caps the potential profit. A protective put involves holding a stock and buying a put option; its objective is to act as insurance, hedging against potential losses by setting a maximum loss limit, while still allowing for theoretically unlimited profit potential.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0012",
+          "optionfinance_06764a2d_c0013"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What factors do standard option valuation models, such as the Black-Scholes model, generally depend on for their calculations?",
+        "answer": "Standard option valuation models generally depend on the following factors: the current market price of the underlying security, the strike price of the option, the cost of holding a position in the underlying security (including interest and dividends), the time to expiration, and an estimate of the future volatility of the underlying security's price over the life of the option.",
+        "related_chunk_ids": [
+          "optionfinance_06764a2d_c0020",
+          "optionfinance_06764a2d_c0021"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:26.264Z",
+    "content_format": "markdown",
+    "total_chunks": 33,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

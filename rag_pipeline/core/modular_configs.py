@@ -170,6 +170,22 @@ class RetrievalConfig(BaseModel):
     graph_rag_embedding_model: str = "mxbai-embed-large"
     graph_rag_ollama_model: str = "gemma3:12b"
 
+    # HyperGraph settings
+    hypergraph_retrieval_method: str = "basic"  # Options: "basic", "expansion"
+    hypergraph_similarity_threshold: float = 0.7
+    hypergraph_max_depth: int = 2
+    hypergraph_vector_index_name: str = "hypergraph_entity_embeddings"
+    hypergraph_embedding_dimension: int = 1024 #TODO make this dynamic
+    hypergraph_neo4j_uri: str = "bolt://neo4j:7687"
+    hypergraph_neo4j_user: str = "neo4j"
+    hypergraph_neo4j_password: str = "admin123"
+    hypergraph_ollama_embedding_url: str = "http://ollama-gpu-3:11435/api/embeddings"
+    hypergraph_ollama_model: str = "gemma3:12b"
+    hypergraph_embedding_model: str = "mxbai-embed-large"
+    hypergraph_min_entities: int = 2
+
+
+
 class PassageRerankConfig(BaseModel):
     """Configuration for passage reranking techniques"""
     name: str = ""

@@ -1,0 +1,424 @@
+{
+  "article": {
+    "id": "antiviraldrug_44f7812b",
+    "title": "Antiviral drug",
+    "url": "https://en.wikipedia.org/wiki/Antiviral_drug",
+    "lang": "en",
+    "created_at": "2025-07-31T07:12:33.158091",
+    "content": "---\nid: antiviraldrug_44f7812b\nurl: https://en.wikipedia.org/wiki/Antiviral_drug\ntitle: Antiviral drug\nlang: en\ncreated_at: '2025-07-31T07:05:17.537271'\nchecksum: 640bd0f608f5d0ca048124827e13d913a135b1fa850c27860e2da3ba1a05daf7\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4180\n  char_count: 27791\n  num_chunks: 24\n  original_chunks: 28\n  filtered_out: 4\n  num_sections: 0\n---\nAntiviral drugs are a class of medication used for treating viral infections. Most antivirals target specific viruses, while a broad-spectrum antiviral is effective against a wide range of viruses. Antiviral drugs are a class of antimicrobials, a larger group which also includes antibiotic (also termed antibacterial), antifungal and antiparasitic drugs, or antiviral drugs based on monoclonal antibodies. Most antivirals are considered relatively harmless to the host, and therefore can be used to treat infections. They should be distinguished from virucides, which are not medication but deactivate or destroy virus particles, either inside or outside the body. Natural virucides are produced by some plants such as eucalyptus and Australian tea trees. == Medical uses == Most of the antiviral drugs now available are designed to help deal with HIV, herpes viruses, the hepatitis B and C viruses, and influenza A and B viruses. Viruses use the host's cells to replicate and this makes it difficult to find targets for the drug that would interfere with the virus without also harming the host organism's cells. Moreover, the major difficulty in developing vaccines and antiviral drugs is due to viral variation. The emergence of antivirals is the product of a greatly expanded knowledge of the genetic and molecular function of organisms, allowing biomedical researchers to understand the structure and function of viruses, major advances in the techniques for finding new drugs, and the pressure placed on the medical profession to deal with the human immunodeficiency virus (HIV), the cause of acquired immunodeficiency syndrome (AIDS). The first experimental antivirals were developed in the 1960s, mostly to deal with herpes viruses, and were found using traditional trial-and-error drug discovery methods. Researchers grew cultures of cells and infected them with the target virus. They then introduced into the cultures chemicals which they thought might inhibit viral activity and observed whether the level of virus in the cultures rose or fell. Chemicals that seemed to have an effect were selected for closer study. This was a very time-consuming, hit-or-miss procedure, and in the absence of a good knowledge of how the target virus worked, it was not efficient in discovering effective antivirals which had few side effects. Only in the 1980s, when the full genetic sequences of viruses began to be unraveled, did researchers begin to learn how viruses worked in detail, and exactly what chemicals were needed to thwart their reproductive cycle. == Antiviral drug design == === Antiviral targeting === The general idea behind modern antiviral drug design is to identify viral proteins, or parts of proteins, that can be disabled. These \"targets\" should generally be as unlike any proteins or parts of proteins in humans as possible, to reduce the likelihood of side effects and toxicity. The targets should also be common across many strains of a virus, or even among different species of virus in the same family, so a single drug will have broad effectiveness. For example, a researcher might target a critical enzyme synthesized by the virus, but not by the patient, that is common across strains, and see what can be done to interfere with its operation. Once targets are identified, candidate drugs can be selected, either from drugs already known to have appropriate effects or by actually designing the candidate at the molecular level with a computer-aided design program. The target proteins can be manufactured in the lab for testing with candidate treatments by inserting the gene that synthesizes the target protein into bacteria or other kinds of cells. The cells are then cultured for mass production of the protein, which can then be exposed to various treatment candidates and evaluated with \"rapid screening\" technologies. === Approaches by virus life cycle stage === Viruses consist of a genome and sometimes a few enzymes stored in a capsule made of protein (called a capsid), and sometimes covered with a lipid layer (sometimes called an 'envelope'). Viruses cannot reproduce on their own and instead propagate by subjugating a host cell to produce copies of themselves, thus producing the next generation. Researchers working on such \"rational drug design\" strategies for developing antivirals have tried to attack viruses at every stage of their life cycles. Some species of mushrooms have been found to contain multiple antiviral chemicals with similar synergistic effects. Compounds isolated from fruiting bodies and filtrates of various mushrooms have broad-spectrum antiviral activities, but successful production and availability of such compounds as frontline antiviral is a long way away. Viral life cycles vary in their precise details depending on the type of virus, but they all share a general pattern: Attachment to a host cell. Release of viral genes and possibly enzymes into the host cell. Replication of viral components using host-cell machinery. Assembly of viral components into complete viral particles. Release of viral particles to infect new host cells. ==== Before cell entry ==== One antiviral strategy is to interfere with the ability of a virus to infiltrate a target cell. The virus must go through a sequence of steps to do this, beginning with binding to a specific \"receptor\" molecule on the surface of the host cell and ending with the virus \"uncoating\" inside the cell and releasing its contents. Viruses that have a lipid envelope must also fuse their envelope with the target cell, or with a vesicle that transports them into the cell before they can uncoat. This stage of viral replication can be inhibited in two ways: Using agents which mimic the virus-associated protein (VAP) and bind to the cellular receptors. This may include VAP anti-idiotypic antibodies, natural ligands of the receptor, and anti-receptor antibodies. Using agents which mimic the cellular receptor and bind to the VAP. This includes anti-VAP antibodies, receptor anti-idiotypic antibodies, extraneous receptor and synthetic receptor mimics. This strategy of designing drugs can be very expensive, and since the process of generating anti-idiotypic antibodies is partly trial and error, it can be a relatively slow process until an adequate molecule is produced. ===== Entry inhibitor ===== A very early stage of viral infection is viral entry, when the virus attaches to and enters the host cell. A number of \"entry-inhibiting\" or \"entry-blocking\" drugs are being developed to fight HIV. HIV most heavily targets a specific type of lymphocyte known as \"helper T cells\", and identifies these target cells through T-cell surface receptors designated \"CD4\" and \"CCR5\". Attempts to interfere with the binding of HIV with the CD4 receptor have failed to stop HIV from infecting helper T cells, but research continues on trying to interfere with the binding of HIV to the CCR5 receptor in hopes that it will be more effective. HIV infects a cell through fusion with the cell membrane, which requires two different cellular molecular participants, CD4 and a chemokine receptor (differing depending on the cell type). Approaches to blocking this virus/cell fusion have shown some promise in preventing entry of the virus into a cell. At least one of these entry inhibitors—a biomimetic peptide called Enfuvirtide, or the brand name Fuzeon—has received FDA approval and has been in use for some time. Potentially, one of the benefits from the use of an effective entry-blocking or entry-inhibiting agent is that it potentially may not only prevent the spread of the virus within an infected individual but also the spread from an infected to an uninfected individual. One possible advantage of the therapeutic approach of blocking viral entry (as opposed to the currently dominant approach of viral enzyme inhibition) is that it may prove more difficult for the virus to develop resistance to this therapy than for the virus to mutate or evolve its enzymatic protocols. ===== Uncoating inhibitors ===== Inhibitors of uncoating have also been investigated. Amantadine and rimantadine have been introduced to combat influenza. These agents act on penetration and uncoating. Pleconaril works against rhinoviruses, which cause the common cold, by blocking a pocket on the surface of the virus that controls the uncoating process. This pocket is similar in most strains of rhinoviruses and enteroviruses, which can cause diarrhea, meningitis, conjunctivitis, and encephalitis. Some scientists are making the case that a vaccine against rhinoviruses, the predominant cause of the common cold, is achievable. Vaccines that combine dozens of varieties of rhinovirus at once are effective in stimulating antiviral antibodies in mice and monkeys, researchers reported in Nature Communications in 2016. Rhinoviruses are the most common cause of the common cold; other viruses such as respiratory syncytial virus, parainfluenza virus and adenoviruses can cause them too. Rhinoviruses also exacerbate asthma attacks. Although rhinoviruses come in many varieties, they do not drift to the same degree that influenza viruses do. A mixture of 50 inactivated rhinovirus types should be able to stimulate neutralizing antibodies against all of them to some degree. ==== During viral synthesis ==== A second approach is to target the processes that synthesize virus components after a virus invades a cell. ===== Reverse transcription ===== One way of doing this is to develop nucleotide or nucleoside analogues that look like the building blocks of RNA or DNA, but deactivate the enzymes that synthesize the RNA or DNA once the analogue is incorporated. This approach is more commonly associated with the inhibition of reverse transcriptase (RNA to DNA) than with \"normal\" transcriptase (DNA to RNA). The first successful antiviral, aciclovir, is a nucleoside analogue, and is effective against herpesvirus infections. The first antiviral drug to be approved for treating HIV, zidovudine (AZT), is also a nucleoside analogue. An improved knowledge of the action of reverse transcriptase has led to better nucleoside analogues to treat HIV infections. One of these drugs, lamivudine, has been approved to treat hepatitis B, which uses reverse transcriptase as part of its replication process. Researchers have gone further and developed inhibitors that do not look like nucleosides, but can still block reverse transcriptase. Another target being considered for HIV antivirals include RNase H—which is a component of reverse transcriptase that splits the synthesized DNA from the original viral RNA. ===== Integrase ===== Another target is integrase, which integrate the synthesized DNA into the host cell genome. Examples of integrase inhibitors include raltegravir, elvitegravir, and dolutegravir. ===== Transcription ===== Once a virus genome becomes operational in a host cell, it then generates messenger RNA (mRNA) molecules that direct the synthesis of viral proteins. Production of mRNA is initiated by proteins known as transcription factors. Several antivirals are now being designed to block attachment of transcription factors to viral DNA. ===== Translation/antisense ===== Genomics has not only helped find targets for many antivirals, it has provided the basis for an entirely new type of drug, based on \"antisense\" molecules. These are segments of DNA or RNA that are designed as complementary molecule to critical sections of viral genomes, and the binding of these antisense segments to these target sections blocks the operation of those genomes. A phosphorothioate antisense drug named fomivirsen has been introduced, used to treat opportunistic eye infections in AIDS patients caused by cytomegalovirus, and other antisense antivirals are in development. An antisense structural type that has proven especially valuable in research is morpholino antisense. Morpholino oligos have been used to experimentally suppress many viral types: caliciviruses flaviviruses (including West Nile virus) dengue HCV coronaviruses ===== Translation/ribozymes ===== Yet another antiviral technique inspired by genomics is a set of drugs based on ribozymes, which are enzymes that will cut apart viral RNA or DNA at selected sites. In their natural course, ribozymes are used as part of the viral manufacturing sequence, but these synthetic ribozymes are designed to cut RNA and DNA at sites that will disable them. A ribozyme antiviral to deal with hepatitis C has been suggested, and ribozyme antivirals are being developed to deal with HIV. An interesting variation of this idea is the use of genetically modified cells that can produce custom-tailored ribozymes. This is part of a broader effort to create genetically modified cells that can be injected into a host to attack pathogens by generating specialized proteins that block viral replication at various phases of the viral life cycle. ===== Protein processing and targeting ===== Interference with post translational modifications or with targeting of viral proteins in the cell is also possible. ==== Protease inhibitors ==== Some viruses include an enzyme known as a protease that cuts viral protein chains apart so they can be assembled into their final configuration. HIV includes a protease, and so considerable research has been performed to find \"protease inhibitors\" to attack HIV at that phase of its life cycle. Protease inhibitors became available in the 1990s and have proven effective, though they can have unusual side effects, for example causing fat to build up in unusual places. Improved protease inhibitors are now in development. Protease inhibitors have also been seen in nature. A protease inhibitor was isolated from the shiitake mushroom (Lentinus edodes). The presence of this may explain the Shiitake mushrooms' noted antiviral activity in vitro. ===== Long dsRNA helix targeting ===== Most viruses produce long dsRNA helices during transcription and replication. In contrast, uninfected mammalian cells generally produce dsRNA helices of fewer than 24 base pairs during transcription. DRACO (double-stranded RNA activated caspase oligomerizer) is a group of experimental antiviral drugs initially developed at the Massachusetts Institute of Technology. In cell culture, DRACO was reported to have broad-spectrum efficacy against many infectious viruses, including dengue flavivirus, Amapari and Tacaribe arenavirus, Guama bunyavirus, H1N1 influenza and rhinovirus, and was additionally found effective against influenza in vivo in weanling mice. It was reported to induce rapid apoptosis selectively in virus-infected mammalian cells, while leaving uninfected cells unharmed. DRACO effects cell death via one of the last steps in the apoptosis pathway in which complexes containing intracellular apoptosis signalling molecules simultaneously bind multiple procaspases. The procaspases transactivate via cleavage, activate additional caspases in the cascade, and cleave a variety of cellular proteins, thereby killing the cell. ==== Assembly ==== Rifampicin acts at the assembly phase. ==== Release phase ==== The final stage in the life cycle of a virus is the release of completed viruses from the host cell, and this step has also been targeted by antiviral drug developers. Two drugs named zanamivir (Relenza) and oseltamivir (Tamiflu) that have been recently introduced to treat influenza prevent the release of viral particles by blocking a molecule named neuraminidase that is found on the surface of flu viruses, and also seems to be constant across a wide range of flu strains. === Immune system stimulation === Rather than attacking viruses directly, a second category of tactics for fighting viruses involves encouraging the body's immune system to attack them. Some antivirals of this sort do not focus on a specific pathogen, instead stimulating the immune system to attack a range of pathogens. One of the best-known of this class of drugs are interferons, which inhibit viral synthesis in infected cells. One form of human interferon named \"interferon alpha\" is well-established as part of the standard treatment for hepatitis B and C, and other interferons are also being investigated as treatments for various diseases. A more specific approach is to synthesize antibodies, protein molecules that can bind to a pathogen and mark it for attack by other elements of the immune system. Once researchers identify a particular target on the pathogen, they can synthesize quantities of identical \"monoclonal\" antibodies to link up that target. A monoclonal drug is now being sold to help fight respiratory syncytial virus in babies, and antibodies purified from infected individuals are also used as a treatment for hepatitis B. == Antiviral drug resistance == Antiviral resistance can be defined by a decreased susceptibility to a drug caused by changes in viral genotypes. In cases of antiviral resistance, drugs have either diminished or no effectiveness against their target virus. The issue inevitably remains a major obstacle to antiviral therapy as it has developed to almost all specific and effective antimicrobials, including antiviral agents. The Centers for Disease Control and Prevention (CDC) inclusively recommends anyone six months and older to get a yearly vaccination to protect them from influenza A viruses (H1N1) and (H3N2) and up to two influenza B viruses (depending on the vaccination). Comprehensive protection starts by ensuring vaccinations are current and complete. However, vaccines are preventative and are not generally used once a patient has been infected with a virus. Additionally, the availability of these vaccines can be limited based on financial or locational reasons which can prevent the effectiveness of herd immunity, making effective antivirals a necessity. The three FDA-approved neuraminidase antiviral flu drugs available in the United States, recommended by the CDC, include: oseltamivir (Tamiflu), zanamivir (Relenza), and peramivir (Rapivab). Influenza antiviral resistance often results from changes occurring in neuraminidase and hemagglutinin proteins on the viral surface. Currently, neuraminidase inhibitors (NAIs) are the most frequently prescribed antivirals because they are effective against both influenza A and B. However, antiviral resistance is known to develop if mutations to the neuraminidase proteins prevent NAI binding. This was seen in the H257Y mutation, which was responsible for oseltamivir resistance to H1N1 strains in 2009. The inability of NA inhibitors to bind to the virus allowed this strain of virus with the resistance mutation to spread due to natural selection. Furthermore, a study published in 2009 in Nature Biotechnology emphasized the urgent need for augmentation of oseltamivir stockpiles with additional antiviral drugs including zanamivir. This finding was based on a performance evaluation of these drugs supposing the 2009 H1N1 'Swine Flu' neuraminidase (NA) were to acquire the oseltamivir-resistance (His274Tyr) mutation, which is currently widespread in seasonal H1N1 strains. === Origin of antiviral resistance === The genetic makeup of viruses is constantly changing, which can cause a virus to become resistant to currently available treatments. Viruses can become resistant through spontaneous or intermittent mechanisms throughout the course of an antiviral treatment. Immunocompromised patients, more often than immunocompetent patients, hospitalized with pneumonia are at the highest risk of developing oseltamivir resistance during treatment. Subsequent to exposure to someone else with the flu, those who received oseltamivir for \"post-exposure prophylaxis\" are also at higher risk of resistance. The mechanisms for antiviral resistance development depend on the type of virus in question. RNA viruses such as hepatitis C and influenza A have high error rates during genome replication because RNA polymerases lack proofreading activity. RNA viruses also have small genome sizes that are typically less than 30 kb, which allow them to sustain a high frequency of mutations. DNA viruses, such as HPV and herpesvirus, hijack host cell replication machinery, which gives them proofreading capabilities during replication. DNA viruses are therefore less error prone, are generally less diverse, and are more slowly evolving than RNA viruses. In both cases, the likelihood of mutations is exacerbated by the speed with which viruses reproduce, which provides more opportunities for mutations to occur in successive replications. Billions of viruses are produced every day during the course of an infection, with each replication giving another chance for mutations that encode for resistance to occur. Multiple strains of one virus can be present in the body at one time, and some of these strains may contain mutations that cause antiviral resistance. This effect, called the quasispecies model, results in immense variation in any given sample of virus, and gives the opportunity for natural selection to favor viral strains with the highest fitness every time the virus is spread to a new host. Recombination, the joining of two different viral variants, and reassortment, the swapping of viral gene segments among viruses in the same cell, also play a role in resistance, especially in influenza. Antiviral resistance has been reported in antivirals for herpes, HIV, hepatitis B and C, and influenza, but antiviral resistance is a possibility for all viruses. Mechanisms of antiviral resistance vary between virus types. === Detection of antiviral resistance === National and international surveillance is performed by the CDC to determine effectiveness of the current FDA-approved antiviral flu drugs. Public health officials use this information to make current recommendations about the use of flu antiviral medications. WHO further recommends in-depth epidemiological investigations to control potential transmission of the resistant virus and prevent future progression. As novel treatments and detection techniques to antiviral resistance are enhanced so can the establishment of strategies to combat the inevitable emergence of antiviral resistance. === Treatment options for antiviral resistant pathogens === If a virus is not fully wiped out during a regimen of antivirals, treatment creates a bottleneck in the viral population that selects for resistance, and there is a chance that a resistant strain may repopulate the host. Viral treatment mechanisms must therefore account for the selection of resistant viruses. The most commonly used method for treating resistant viruses is combination therapy, which uses multiple antivirals in one treatment regimen. This is thought to decrease the likelihood that one mutation could cause antiviral resistance, as the antivirals in the cocktail target different stages of the viral life cycle. This is frequently used in retroviruses like HIV, but a number of studies have demonstrated its effectiveness against influenza A, as well. Viruses can also be screened for resistance to drugs before treatment is started. This minimizes exposure to unnecessary antivirals and ensures that an effective medication is being used. This may improve patient outcomes and could help detect new resistance mutations during routine scanning for known mutants. However, this has not been consistently implemented in treatment facilities at this time. == Direct-acting antivirals == The term Direct-acting antivirals (DAA) has long been associated with the combination of antiviral drugs used to treat hepatitis C infections. These are the more effective than older treatments such as ribavirin (partially indirectly acting) and interferon (indirect acting). The DAA drugs against hepatitis C are taken orally, as tablets, for 8 to 12 weeks. The treatment depends on the type or types (genotypes) of hepatitis C virus that are causing the infection. Both during and at the end of treatment, blood tests are used to monitor the effectiveness of the treatment and subsequent cure. The DAA combination drugs used include: Harvoni (sofosbuvir and ledipasvir) Epclusa (sofosbuvir and velpatasvir) Vosevi (sofosbuvir, velpatasvir, and voxilaprevir) Zepatier (elbasvir and grazoprevir) Mavyret (glecaprevir and pibrentasvir) The United States Food and Drug Administration approved DAAs on the basis of a surrogate endpoint called sustained virological response (SVR). SVR is achieved in a patient when hepatitis C virus RNA remains undetectable 12–24 weeks after treatment ends. Whether through DAAs or older interferon-based regimens, SVR is associated with improved health outcomes and significantly decreased mortality. For those who already have advanced liver disease (including hepatocellular carcinoma), however, the benefits of achieving SVR may be less pronounced, though still substantial. Despite its historical roots in hepatitis C research, the term \"direct-acting antivirals\" is becoming more broadly used to also include other anti-viral drugs with a direct viral target such as aciclovir (against herpes simplex virus), letermovir (against cytomegalovirus), or AZT (against human immunodeficiency virus). In this context it serves to distinguish these drugs from those with an indirect mechanism of action such as immune modulators like interferon alfa. This difference is of particular relevance for potential drug resistance mutation development. == Public policy == === Use and distribution === Guidelines regarding viral diagnoses and treatments change frequently and limit quality care. Even when physicians diagnose older patients with influenza, use of antiviral treatment can be low. Provider knowledge of antiviral therapies can improve patient care, especially in geriatric medicine. Furthermore, in local health departments (LHDs) with access to antivirals, guidelines may be unclear, causing delays in treatment. With time-sensitive therapies, delays could lead to lack of treatment. Overall, national guidelines, regarding infection control and management, standardize care and improve healthcare worker and patient safety. Guidelines, such as those provided by the Centers for Disease Control and Prevention (CDC) during the 2009 flu pandemic caused by the H1N1 virus, recommend, among other things, antiviral treatment regimens, clinical assessment algorithms for coordination of care, and antiviral chemoprophylaxis guidelines for exposed persons. Roles of pharmacists and pharmacies have also expanded to meet the needs of public during public health emergencies. === Stockpiling === Public Health Emergency Preparedness initiatives are managed by the CDC via the Office of Public Health Preparedness and Response. Funds aim to support communities in preparing for public health emergencies, including pandemic influenza. Also managed by the CDC, the Strategic National Stockpile (SNS) consists of bulk quantities of medicines and supplies for use during such emergencies. Antiviral stockpiles prepare for shortages of antiviral medications in cases of public health emergencies. During the H1N1 pandemic in 2009–2010, guidelines for SNS use by local health departments was unclear, revealing gaps in antiviral planning. For example, local health departments that received antivirals from the SNS did not have transparent guidance on the use of the treatments. The gap made it difficult to create plans and policies for their use and future availabilities, causing delays in treatment. == See also == Antiretroviral drug (especially HAART for HIV) CRISPR-Cas13 Discovery and development of CCR5 receptor antagonists (for HIV) Monoclonal antibody List of antiviral drugs Antiprion drugs and Astemizole Discovery and development of NS5A inhibitors COVID-19 drug repurposing research == References =="
+  },
+  "chunks": [
+    {
+      "id": "antiviraldrug_44f7812b_c0000",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 757,
+      "content": "Antiviral drugs are a class of medication used for treating viral infections. Most antivirals target specific viruses, while a broad-spectrum antiviral is effective against a wide range of viruses. Antiviral drugs are a class of antimicrobials, a larger group which also includes antibiotic (also termed antibacterial), antifungal and antiparasitic drugs, or antiviral drugs based on monoclonal antibodies. Most antivirals are considered relatively harmless to the host, and therefore can be used to treat infections. They should be distinguished from virucides, which are not medication but deactivate or destroy virus particles, either inside or outside the body. Natural virucides are produced by some plants such as eucalyptus and Australian tea trees.",
+      "char_count": 756,
+      "token_estimate": 189,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0001",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 775,
+      "end_char": 1661,
+      "content": "== Medical uses == Most of the antiviral drugs now available are designed to help deal with HIV, herpes viruses, the hepatitis B and C viruses, and influenza A and B viruses. Viruses use the host's cells to replicate and this makes it difficult to find targets for the drug that would interfere with the virus without also harming the host organism's cells. Moreover, the major difficulty in developing vaccines and antiviral drugs is due to viral variation. The emergence of antivirals is the product of a greatly expanded knowledge of the genetic and molecular function of organisms, allowing biomedical researchers to understand the structure and function of viruses, major advances in the techniques for finding new drugs, and the pressure placed on the medical profession to deal with the human immunodeficiency virus (HIV), the cause of acquired immunodeficiency syndrome (AIDS).",
+      "char_count": 885,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0002",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 1661,
+      "end_char": 2579,
+      "content": "The first experimental antivirals were developed in the 1960s, mostly to deal with herpes viruses, and were found using traditional trial-and-error drug discovery methods. Researchers grew cultures of cells and infected them with the target virus. They then introduced into the cultures chemicals which they thought might inhibit viral activity and observed whether the level of virus in the cultures rose or fell. Chemicals that seemed to have an effect were selected for closer study. This was a very time-consuming, hit-or-miss procedure, and in the absence of a good knowledge of how the target virus worked, it was not efficient in discovering effective antivirals which had few side effects. Only in the 1980s, when the full genetic sequences of viruses began to be unraveled, did researchers begin to learn how viruses worked in detail, and exactly what chemicals were needed to thwart their reproductive cycle.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0003",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Antiviral targeting ==",
+      "heading_path": "== = Antiviral targeting ==",
+      "start_char": 2617,
+      "end_char": 3525,
+      "content": "== = Antiviral targeting === The general idea behind modern antiviral drug design is to identify viral proteins, or parts of proteins, that can be disabled. These \"targets\" should generally be as unlike any proteins or parts of proteins in humans as possible, to reduce the likelihood of side effects and toxicity. The targets should also be common across many strains of a virus, or even among different species of virus in the same family, so a single drug will have broad effectiveness. For example, a researcher might target a critical enzyme synthesized by the virus, but not by the patient, that is common across strains, and see what can be done to interfere with its operation. Once targets are identified, candidate drugs can be selected, either from drugs already known to have appropriate effects or by actually designing the candidate at the molecular level with a computer-aided design program.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0004",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Antiviral targeting ==",
+      "heading_path": "== = Antiviral targeting ==",
+      "start_char": 3525,
+      "end_char": 3883,
+      "content": "The target proteins can be manufactured in the lab for testing with candidate treatments by inserting the gene that synthesizes the target protein into bacteria or other kinds of cells. The cells are then cultured for mass production of the protein, which can then be exposed to various treatment candidates and evaluated with \"rapid screening\" technologies.",
+      "char_count": 358,
+      "token_estimate": 89,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0005",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Approaches by virus life cycle stage ==",
+      "heading_path": "== = Approaches by virus life cycle stage ==",
+      "start_char": 3901,
+      "end_char": 4780,
+      "content": "== = Approaches by virus life cycle stage === Viruses consist of a genome and sometimes a few enzymes stored in a capsule made of protein (called a capsid), and sometimes covered with a lipid layer (sometimes called an 'envelope'). Viruses cannot reproduce on their own and instead propagate by subjugating a host cell to produce copies of themselves, thus producing the next generation. Researchers working on such \"rational drug design\" strategies for developing antivirals have tried to attack viruses at every stage of their life cycles. Some species of mushrooms have been found to contain multiple antiviral chemicals with similar synergistic effects. Compounds isolated from fruiting bodies and filtrates of various mushrooms have broad-spectrum antiviral activities, but successful production and availability of such compounds as frontline antiviral is a long way away.",
+      "char_count": 878,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0006",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Approaches by virus life cycle stage ==",
+      "heading_path": "== = Approaches by virus life cycle stage ==",
+      "start_char": 4780,
+      "end_char": 5160,
+      "content": "Viral life cycles vary in their precise details depending on the type of virus, but they all share a general pattern: Attachment to a host cell. Release of viral genes and possibly enzymes into the host cell. Replication of viral components using host-cell machinery. Assembly of viral components into complete viral particles. Release of viral particles to infect new host cells.",
+      "char_count": 380,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0007",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Immune system stimulation ==",
+      "heading_path": "== = Immune system stimulation ==",
+      "start_char": 5150,
+      "end_char": 5964,
+      "content": "== = Immune system stimulation === Rather than attacking viruses directly, a second category of tactics for fighting viruses involves encouraging the body's immune system to attack them. Some antivirals of this sort do not focus on a specific pathogen, instead stimulating the immune system to attack a range of pathogens. One of the best-known of this class of drugs are interferons, which inhibit viral synthesis in infected cells. One form of human interferon named \"interferon alpha\" is well-established as part of the standard treatment for hepatitis B and C, and other interferons are also being investigated as treatments for various diseases. A more specific approach is to synthesize antibodies, protein molecules that can bind to a pathogen and mark it for attack by other elements of the immune system.",
+      "char_count": 813,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0008",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Immune system stimulation ==",
+      "heading_path": "== = Immune system stimulation ==",
+      "start_char": 5964,
+      "end_char": 6303,
+      "content": "Once researchers identify a particular target on the pathogen, they can synthesize quantities of identical \"monoclonal\" antibodies to link up that target. A monoclonal drug is now being sold to help fight respiratory syncytial virus in babies, and antibodies purified from infected individuals are also used as a treatment for hepatitis B.",
+      "char_count": 339,
+      "token_estimate": 84,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0009",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== Antiviral drug resistance ==",
+      "heading_path": "== Antiviral drug resistance ==",
+      "start_char": 6302,
+      "end_char": 7176,
+      "content": "== Antiviral drug resistance == Antiviral resistance can be defined by a decreased susceptibility to a drug caused by changes in viral genotypes. In cases of antiviral resistance, drugs have either diminished or no effectiveness against their target virus. The issue inevitably remains a major obstacle to antiviral therapy as it has developed to almost all specific and effective antimicrobials, including antiviral agents. The Centers for Disease Control and Prevention (CDC) inclusively recommends anyone six months and older to get a yearly vaccination to protect them from influenza A viruses (H1N1) and (H3N2) and up to two influenza B viruses (depending on the vaccination). Comprehensive protection starts by ensuring vaccinations are current and complete. However, vaccines are preventative and are not generally used once a patient has been infected with a virus.",
+      "char_count": 873,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0010",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== Antiviral drug resistance ==",
+      "heading_path": "== Antiviral drug resistance ==",
+      "start_char": 7176,
+      "end_char": 8073,
+      "content": "Additionally, the availability of these vaccines can be limited based on financial or locational reasons which can prevent the effectiveness of herd immunity, making effective antivirals a necessity. The three FDA-approved neuraminidase antiviral flu drugs available in the United States, recommended by the CDC, include: oseltamivir (Tamiflu), zanamivir (Relenza), and peramivir (Rapivab). Influenza antiviral resistance often results from changes occurring in neuraminidase and hemagglutinin proteins on the viral surface. Currently, neuraminidase inhibitors (NAIs) are the most frequently prescribed antivirals because they are effective against both influenza A and B. However, antiviral resistance is known to develop if mutations to the neuraminidase proteins prevent NAI binding. This was seen in the H257Y mutation, which was responsible for oseltamivir resistance to H1N1 strains in 2009.",
+      "char_count": 897,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0011",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== Antiviral drug resistance ==",
+      "heading_path": "== Antiviral drug resistance ==",
+      "start_char": 8074,
+      "end_char": 8647,
+      "content": "The inability of NA inhibitors to bind to the virus allowed this strain of virus with the resistance mutation to spread due to natural selection. Furthermore, a study published in 2009 in Nature Biotechnology emphasized the urgent need for augmentation of oseltamivir stockpiles with additional antiviral drugs including zanamivir. This finding was based on a performance evaluation of these drugs supposing the 2009 H1N1 'Swine Flu' neuraminidase (NA) were to acquire the oseltamivir-resistance (His274Tyr) mutation, which is currently widespread in seasonal H1N1 strains.",
+      "char_count": 573,
+      "token_estimate": 143,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0012",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Origin of antiviral resistance ==",
+      "heading_path": "== = Origin of antiviral resistance ==",
+      "start_char": 8655,
+      "end_char": 9526,
+      "content": "== = Origin of antiviral resistance === The genetic makeup of viruses is constantly changing, which can cause a virus to become resistant to currently available treatments. Viruses can become resistant through spontaneous or intermittent mechanisms throughout the course of an antiviral treatment. Immunocompromised patients, more often than immunocompetent patients, hospitalized with pneumonia are at the highest risk of developing oseltamivir resistance during treatment. Subsequent to exposure to someone else with the flu, those who received oseltamivir for \"post-exposure prophylaxis\" are also at higher risk of resistance. The mechanisms for antiviral resistance development depend on the type of virus in question. RNA viruses such as hepatitis C and influenza A have high error rates during genome replication because RNA polymerases lack proofreading activity.",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0013",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Origin of antiviral resistance ==",
+      "heading_path": "== = Origin of antiviral resistance ==",
+      "start_char": 9526,
+      "end_char": 10435,
+      "content": "RNA viruses also have small genome sizes that are typically less than 30 kb, which allow them to sustain a high frequency of mutations. DNA viruses, such as HPV and herpesvirus, hijack host cell replication machinery, which gives them proofreading capabilities during replication. DNA viruses are therefore less error prone, are generally less diverse, and are more slowly evolving than RNA viruses. In both cases, the likelihood of mutations is exacerbated by the speed with which viruses reproduce, which provides more opportunities for mutations to occur in successive replications. Billions of viruses are produced every day during the course of an infection, with each replication giving another chance for mutations that encode for resistance to occur. Multiple strains of one virus can be present in the body at one time, and some of these strains may contain mutations that cause antiviral resistance.",
+      "char_count": 909,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0014",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Origin of antiviral resistance ==",
+      "heading_path": "== = Origin of antiviral resistance ==",
+      "start_char": 10436,
+      "end_char": 11107,
+      "content": "This effect, called the quasispecies model, results in immense variation in any given sample of virus, and gives the opportunity for natural selection to favor viral strains with the highest fitness every time the virus is spread to a new host. Recombination, the joining of two different viral variants, and reassortment, the swapping of viral gene segments among viruses in the same cell, also play a role in resistance, especially in influenza. Antiviral resistance has been reported in antivirals for herpes, HIV, hepatitis B and C, and influenza, but antiviral resistance is a possibility for all viruses. Mechanisms of antiviral resistance vary between virus types.",
+      "char_count": 671,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0015",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Detection of antiviral resistance ==",
+      "heading_path": "== = Detection of antiviral resistance ==",
+      "start_char": 11111,
+      "end_char": 11707,
+      "content": "== = Detection of antiviral resistance === National and international surveillance is performed by the CDC to determine effectiveness of the current FDA-approved antiviral flu drugs. Public health officials use this information to make current recommendations about the use of flu antiviral medications. WHO further recommends in-depth epidemiological investigations to control potential transmission of the resistant virus and prevent future progression. As novel treatments and detection techniques to antiviral resistance are enhanced so can the establishment of strategies to combat the inevitable emergence of antiviral resistance.",
+      "char_count": 636,
+      "token_estimate": 159,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0016",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Treatment options for antiviral resistant pathogens ==",
+      "heading_path": "== = Treatment options for antiviral resistant pathogens ==",
+      "start_char": 11766,
+      "end_char": 12680,
+      "content": "== = Treatment options for antiviral resistant pathogens === If a virus is not fully wiped out during a regimen of antivirals, treatment creates a bottleneck in the viral population that selects for resistance, and there is a chance that a resistant strain may repopulate the host. Viral treatment mechanisms must therefore account for the selection of resistant viruses. The most commonly used method for treating resistant viruses is combination therapy, which uses multiple antivirals in one treatment regimen. This is thought to decrease the likelihood that one mutation could cause antiviral resistance, as the antivirals in the cocktail target different stages of the viral life cycle. This is frequently used in retroviruses like HIV, but a number of studies have demonstrated its effectiveness against influenza A, as well. Viruses can also be screened for resistance to drugs before treatment is started.",
+      "char_count": 913,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0017",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Treatment options for antiviral resistant pathogens ==",
+      "heading_path": "== = Treatment options for antiviral resistant pathogens ==",
+      "start_char": 12680,
+      "end_char": 12999,
+      "content": "This minimizes exposure to unnecessary antivirals and ensures that an effective medication is being used. This may improve patient outcomes and could help detect new resistance mutations during routine scanning for known mutants. However, this has not been consistently implemented in treatment facilities at this time.",
+      "char_count": 319,
+      "token_estimate": 79,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0018",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== Direct-acting antivirals ==",
+      "heading_path": "== Direct-acting antivirals ==",
+      "start_char": 12971,
+      "end_char": 13598,
+      "content": "== Direct-acting antivirals == The term Direct-acting antivirals (DAA) has long been associated with the combination of antiviral drugs used to treat hepatitis C infections. These are the more effective than older treatments such as ribavirin (partially indirectly acting) and interferon (indirect acting). The DAA drugs against hepatitis C are taken orally, as tablets, for 8 to 12 weeks. The treatment depends on the type or types (genotypes) of hepatitis C virus that are causing the infection. Both during and at the end of treatment, blood tests are used to monitor the effectiveness of the treatment and subsequent cure.",
+      "char_count": 626,
+      "token_estimate": 156,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0019",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== Direct-acting antivirals ==",
+      "heading_path": "== Direct-acting antivirals ==",
+      "start_char": 13598,
+      "end_char": 14411,
+      "content": "The DAA combination drugs used include: Harvoni (sofosbuvir and ledipasvir) Epclusa (sofosbuvir and velpatasvir) Vosevi (sofosbuvir, velpatasvir, and voxilaprevir) Zepatier (elbasvir and grazoprevir) Mavyret (glecaprevir and pibrentasvir) The United States Food and Drug Administration approved DAAs on the basis of a surrogate endpoint called sustained virological response (SVR). SVR is achieved in a patient when hepatitis C virus RNA remains undetectable 12–24 weeks after treatment ends. Whether through DAAs or older interferon-based regimens, SVR is associated with improved health outcomes and significantly decreased mortality. For those who already have advanced liver disease (including hepatocellular carcinoma), however, the benefits of achieving SVR may be less pronounced, though still substantial.",
+      "char_count": 813,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0020",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== Direct-acting antivirals ==",
+      "heading_path": "== Direct-acting antivirals ==",
+      "start_char": 14412,
+      "end_char": 14976,
+      "content": "Despite its historical roots in hepatitis C research, the term \"direct-acting antivirals\" is becoming more broadly used to also include other anti-viral drugs with a direct viral target such as aciclovir (against herpes simplex virus), letermovir (against cytomegalovirus), or AZT (against human immunodeficiency virus). In this context it serves to distinguish these drugs from those with an indirect mechanism of action such as immune modulators like interferon alfa. This difference is of particular relevance for potential drug resistance mutation development.",
+      "char_count": 564,
+      "token_estimate": 141,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0021",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Use and distribution ==",
+      "heading_path": "== = Use and distribution ==",
+      "start_char": 14995,
+      "end_char": 15664,
+      "content": "== = Use and distribution === Guidelines regarding viral diagnoses and treatments change frequently and limit quality care. Even when physicians diagnose older patients with influenza, use of antiviral treatment can be low. Provider knowledge of antiviral therapies can improve patient care, especially in geriatric medicine. Furthermore, in local health departments (LHDs) with access to antivirals, guidelines may be unclear, causing delays in treatment. With time-sensitive therapies, delays could lead to lack of treatment. Overall, national guidelines, regarding infection control and management, standardize care and improve healthcare worker and patient safety.",
+      "char_count": 668,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0022",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Use and distribution ==",
+      "heading_path": "== = Use and distribution ==",
+      "start_char": 15664,
+      "end_char": 16107,
+      "content": "Guidelines, such as those provided by the Centers for Disease Control and Prevention (CDC) during the 2009 flu pandemic caused by the H1N1 virus, recommend, among other things, antiviral treatment regimens, clinical assessment algorithms for coordination of care, and antiviral chemoprophylaxis guidelines for exposed persons. Roles of pharmacists and pharmacies have also expanded to meet the needs of public during public health emergencies.",
+      "char_count": 443,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antiviraldrug_44f7812b_c0023",
+      "article_id": "antiviraldrug_44f7812b",
+      "section": "== = Stockpiling ==",
+      "heading_path": "== = Stockpiling ==",
+      "start_char": 16099,
+      "end_char": 17003,
+      "content": "== = Stockpiling === Public Health Emergency Preparedness initiatives are managed by the CDC via the Office of Public Health Preparedness and Response. Funds aim to support communities in preparing for public health emergencies, including pandemic influenza. Also managed by the CDC, the Strategic National Stockpile (SNS) consists of bulk quantities of medicines and supplies for use during such emergencies. Antiviral stockpiles prepare for shortages of antiviral medications in cases of public health emergencies. During the H1N1 pandemic in 2009–2010, guidelines for SNS use by local health departments was unclear, revealing gaps in antiviral planning. For example, local health departments that received antivirals from the SNS did not have transparent guidance on the use of the treatments. The gap made it difficult to create plans and policies for their use and future availabilities, causing delays in treatment.",
+      "char_count": 922,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What information is provided about == = Stockpiling ==?",
+        "answer": "The text provides information about == = Stockpiling == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0023"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What breakthrough in the 1980s allowed researchers to better understand how to thwart the reproductive cycle of viruses?",
+        "answer": "In the 1980s, the ability to unravel the full genetic sequences of viruses allowed researchers to learn in detail how viruses worked and what specific chemicals were needed to thwart their reproductive cycle.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0002"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the most commonly used method for treating viruses that have developed resistance to antiviral drugs?",
+        "answer": "The most commonly used method for treating resistant viruses is combination therapy, which utilizes multiple antivirals in a single treatment regimen.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0016"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0000",
+          "antiviraldrug_44f7812b_c0001",
+          "antiviraldrug_44f7812b_c0002"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Outline the modern process for developing antiviral drugs, from the initial strategy to the testing of potential treatments.",
+        "answer": "The modern process for developing antivirals, known as \"rational drug design,\" aims to attack viruses at various stages of their life cycle. The primary strategy is to identify critical viral proteins, like enzymes, that can be disabled. These \"targets\" are selected to be unlike human proteins to reduce side effects and common across viral strains for broad effectiveness. Once a target is identified, its gene is inserted into bacteria or other cells to mass-produce the protein in a lab. This manufactured protein is then used in \"rapid screening\" technologies to test and evaluate candidate drugs.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0003",
+          "antiviraldrug_44f7812b_c0004",
+          "antiviraldrug_44f7812b_c0005"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What information is provided about == = Approaches by virus life cycle stage ==?",
+        "answer": "The text provides information about == = Approaches by virus life cycle stage == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0006",
+          "antiviraldrug_44f7812b_c0007"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How did the approach to discovering antiviral drugs evolve from the 1960s to the modern era, and what scientific breakthrough drove this change?",
+        "answer": "In the 1960s, antiviral discovery relied on a time-consuming, trial-and-error method where chemicals were tested on virus-infected cell cultures without a deep understanding of viral mechanisms. The major shift occurred in the 1980s with the unraveling of the full genetic sequences of viruses. This breakthrough provided a greatly expanded knowledge of viral structure and function, allowing researchers to move away from the inefficient 'hit-or-miss' procedure and begin designing drugs that could precisely target and thwart a virus's reproductive cycle.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0001",
+          "antiviraldrug_44f7812b_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What information is provided about == = Antiviral targeting ==?",
+        "answer": "The text provides information about == = Antiviral targeting == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0003",
+          "antiviraldrug_44f7812b_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What is the \"rational drug design\" strategy for developing antivirals, and what are the general stages of the viral life cycle that researchers target?",
+        "answer": "The \"rational drug design\" strategy for developing antivirals involves attacking viruses at every stage of their life cycles. The general pattern of a viral life cycle consists of five stages: attachment to a host cell, release of viral genes and enzymes into the host cell, replication of viral components using the host's machinery, assembly of these components into complete viral particles, and the release of these new particles to infect other host cells.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0005",
+          "antiviraldrug_44f7812b_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the two different strategies described for stimulating the immune system to fight viruses, and what are some examples of treatments for each strategy?",
+        "answer": "One strategy is to non-specifically stimulate the immune system to attack a range of pathogens, with interferons like interferon alpha (used for hepatitis B and C) being a key example. A more specific strategy is to use synthesized antibodies that bind to a particular pathogen; examples include monoclonal antibodies for respiratory syncytial virus in babies and purified antibodies for hepatitis B.",
+        "related_chunk_ids": [
+          "antiviraldrug_44f7812b_c0007",
+          "antiviraldrug_44f7812b_c0008"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T08:34:18.566Z",
+    "content_format": "markdown",
+    "total_chunks": 24,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -119,9 +119,13 @@ class RAGEvaluator:
             return {'recall_at_k': 0.0, 'map_score': 0.0, 'ndcg_at_k': 0.0, 'mrr': 0.0}
         
         try:
-            retrieved_doc_ids = [doc['doc_id'] for doc in retrieval_result.retrieved_docs]
+            if retrieval_result.retrieved_docs[0]["doc_id"].startswith("graph_rel") or retrieval_result.retrieved_docs[0]["doc_id"].startswith("hypergraph"):
+                retrieved_doc_ids = list(set([doc['metadata']['original_doc_id'] for doc in retrieval_result.retrieved_docs]))
+            else:
+                retrieved_doc_ids = [doc['doc_id'] for doc in retrieval_result.retrieved_docs]
             relevant_doc_ids = test_case.relevant_doc_ids
-            
+            logger.info(f"Retrieved doc ids: {retrieved_doc_ids}")
+            logger.info(f"Relevant doc ids: {relevant_doc_ids}")
             # Convert to strings for comparison
             retrieved_doc_ids = [str(doc_id) for doc_id in retrieved_doc_ids if doc_id is not None]
             relevant_doc_ids_str = [str(doc_id) for doc_id in relevant_doc_ids]

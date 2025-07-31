@@ -1,0 +1,661 @@
+{
+  "article": {
+    "id": "radiology_cb8ac3b5",
+    "title": "Radiology",
+    "url": "https://en.wikipedia.org/wiki/Radiology",
+    "lang": "en",
+    "created_at": "2025-07-31T07:12:18.303357",
+    "content": "---\nid: radiology_cb8ac3b5\nurl: https://en.wikipedia.org/wiki/Radiology\ntitle: Radiology\nlang: en\ncreated_at: '2025-07-31T07:04:47.657976'\nchecksum: 0468a64ea6108a858717a066b77450d09a3ce73478370fd9efda438cb7e0c9e0\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4924\n  char_count: 33584\n  num_chunks: 42\n  original_chunks: 51\n  filtered_out: 9\n  num_sections: 0\n---\nRadiology ( RAY-dee-AHL-ə-jee) is the medical specialty that uses medical imaging to diagnose diseases and guide treatment within the bodies of humans and other animals. It began with radiography (which is why its name has a root referring to radiation), but today it includes all imaging modalities. This includes technologies that use no ionizing electromagnetic radiation, such as ultrasonography and magnetic resonance imaging (MRI), as well as others that do use radiation, such as computed tomography (CT), fluoroscopy, and nuclear medicine including positron emission tomography (PET). Interventional radiology is the performance of usually minimally invasive medical procedures with the guidance of imaging technologies such as those mentioned above. The modern practice of radiology involves a team of several different healthcare professionals. A radiologist, who is a medical doctor with specialized post-graduate training, interprets medical images, communicates these findings to other physicians through reports or verbal communication, and uses imaging to perform minimally invasive medical procedures The nurse is involved in the care of patients before and after imaging or procedures, including administration of medications, monitoring of vital signs and monitoring of sedated patients. The radiographer, also known as a \"radiologic technologist\" in some countries such as the United States and Canada, is a specially trained healthcare professional that uses sophisticated technology and positioning techniques to produce medical images for the radiologist to interpret. Depending on the individual's training and country of practice, the radiographer may specialize in one of the above-mentioned imaging modalities or have expanded roles in image reporting. == Diagnostic imaging modalities == === Projection (plain) radiography === Radiographs (originally called roentgenographs, named after the discoverer of X-rays, Wilhelm Conrad Röntgen) are produced by transmitting X-rays through a patient. The X-rays are projected through the body onto a detector; an image is formed based on which rays pass through (and are detected) versus those that are absorbed or scattered in the patient (and thus are not detected). Röntgen discovered X-rays on November 8, 1895, and received the first Nobel Prize in Physics in 1901 for this discovery. In film-screen radiography, an X-ray tube generates a beam of X-rays, which is aimed at the patient. The X-rays that pass through the patient are filtered through a device called a grid or X-ray filter, to reduce scatter, and strike an undeveloped film, which is held tightly to a screen of light-emitting phosphors in a light-tight cassette. The film is then developed chemically and an image appears on the film. Film-screen radiography is being replaced by phosphor plate radiography but more recently by digital radiography (DR) and the EOS imaging. In the two latest systems, the X-rays strike sensors that converts the signals generated into digital information, which is transmitted and converted into an image displayed on a computer screen. In digital radiography the sensors shape a plate, but in the EOS system, which is a slot-scanning system, a linear sensor vertically scans the patient. Plain radiography was one of the earliest imaging modalities used in clinical medicine and remained the most widely used for several decades. Due to its broad availability, speed, and relatively low cost, it continues to be a common first-line tool in radiologic evaluation. Despite advances in CT, MRI, and other imaging techniques, there are many conditions in which traditional radiographs remain helpful in diagnosis. These include arthritis, pneumonia, bone tumors, fractures, congenital skeletal anomalies, and certain types of kidney stones. Mammography and DXA are two applications of low energy projectional radiography, used for the evaluation of breast cancer and osteoporosis, respectively. === Fluoroscopy === Fluoroscopy and angiography are special applications of X-ray imaging, in which a fluorescent screen and image intensifier tube is connected to a closed-circuit television system. This allows real-time imaging of structures in motion or augmented with a radiocontrast agent. Radiocontrast agents are usually administered by swallowing or injecting into the body of the patient to delineate anatomy and functioning of the blood vessels, the genitourinary system, or the gastrointestinal tract (GI tract). Two radiocontrast agents are presently in common use. Barium sulfate (BaSO4) is given orally or rectally for evaluation of the GI tract. Iodine, in multiple proprietary forms, is given by oral, rectal, vaginal, intra-arterial or intravenous routes. These radiocontrast agents strongly absorb or scatter X-rays, and in conjunction with the real-time imaging, allow demonstration of dynamic processes, such as peristalsis in the digestive tract or blood flow in arteries and veins. Iodine contrast may also be concentrated in abnormal areas more or less than in normal tissues and make abnormalities (tumors, cysts, inflammation) more conspicuous. Additionally, in specific circumstances, air can be used as a contrast agent for the gastrointestinal system and carbon dioxide can be used as a contrast agent in the venous system; in these cases, the contrast agent attenuates the X-ray radiation less than the surrounding tissues. === Computed tomography === CT imaging uses X-rays in conjunction with computing algorithms to image the body. In CT, an X-ray tube opposite an X-ray detector (or detectors) in a ring-shaped apparatus rotate around a patient, producing a computer-generated cross-sectional image (tomogram). CT is acquired in the axial plane, with coronal and sagittal images produced by computer reconstruction. Radiocontrast agents are often used with CT for enhanced delineation of anatomy. Although radiographs provide higher spatial resolution, CT can detect more subtle variations in attenuation of X-rays (higher contrast resolution). CT exposes the patient to significantly more ionizing radiation than a radiograph. Spiral multidetector CT uses 16, 64, 254 or more detectors during continuous motion of the patient through the radiation beam to obtain fine detail images in a short exam time. With rapid administration of intravenous contrast during the CT scan, these fine detail images can be reconstructed into three-dimensional (3D) images of carotid, cerebral, coronary or other arteries. The introduction of computed tomography in the early 1970s revolutionized diagnostic radiology by providing front-line clinicians with detailed images of anatomic structures in three dimensions. CT scanning has become the test of choice in diagnosing some urgent and emergent conditions, such as cerebral hemorrhage, pulmonary embolism (clots in the arteries of the lungs), aortic dissection (tearing of the aortic wall), appendicitis, diverticulitis, and obstructing kidney stones. Before the development of CT imaging, risky and painful exploratory surgery was often the only way to obtain a definitive diagnosis of the cause of severe abdominal pain which could not be otherwise ascertained from external observation. Continuing improvements in CT technology, including faster scanning times and improved resolution, have dramatically increased the accuracy and usefulness of CT scanning, which may partially account for increased use in medical diagnosis. === Ultrasound === Medical ultrasonography uses ultrasound (high-frequency sound waves) to visualize soft tissue structures in the body in real time. No ionizing radiation is involved, but the quality of the images obtained using ultrasound is highly dependent on the skill of the person (ultrasonographer) performing the exam and the patient's body size. Examinations of larger, overweight patients may have a decrease in image quality as their subcutaneous fat absorbs more of the sound waves. This results in fewer sound waves penetrating to organs and reflecting back to the transducer, resulting in loss of information and a poorer quality image. Ultrasound is also limited by its inability to image through air pockets (lungs, bowel loops) or bone. Its use in medical imaging has developed mostly within the last 30 years. The first ultrasound images were static and two-dimensional (2D), but with modern ultrasonography, 3D reconstructions can be observed in real time, effectively becoming \"4D\". Because ultrasound imaging techniques do not employ ionizing radiation to generate images (unlike radiography, and CT scans), they are generally considered safer and are therefore more common in obstetrical imaging. The progression of pregnancies can be thoroughly evaluated with less concern about damage from the techniques employed, allowing early detection and diagnosis of many fetal anomalies. Growth can be assessed over time, important in patients with chronic disease or pregnancy-induced disease, and in multiple pregnancies (twins, triplets, etc.). Color-flow Doppler ultrasound measures the severity of peripheral vascular disease and is used by cardiologists for dynamic evaluation of the heart, heart valves and major vessels. Stenosis, for example, of the carotid arteries may be a warning sign for an impending stroke. A clot, embedded deep in one of the inner veins of the legs, can be found via ultrasound before it dislodges and travels to the lungs, resulting in a potentially fatal pulmonary embolism. Ultrasound is useful as a guide to performing biopsies to minimize damage to surrounding tissues and in drainages such as thoracentesis. Small, portable ultrasound devices now replace peritoneal lavage in trauma wards by non-invasively assessing for the presence of internal bleeding and any internal organ damage. Extensive internal bleeding or injury to the major organs may require surgery and repair. === Magnetic resonance imaging === MRI uses strong magnetic fields to align atomic nuclei (usually hydrogen protons) within body tissues, then uses a radio signal to disturb the axis of rotation of these nuclei and observes the radio frequency signal generated as the nuclei return to their baseline states. The radio signals are collected by small antennae, called coils, placed near the area of interest. An advantage of MRI is its ability to produce images in axial, coronal, sagittal and multiple oblique planes with equal ease. MRI scans give the best soft tissue contrast of all the imaging modalities. With advances in scanning speed and spatial resolution, and improvements in computer 3D algorithms and hardware, MRI has become an important tool in musculoskeletal radiology and neuroradiology. One disadvantage is the patient has to hold still for long periods of time in a noisy, cramped space while the imaging is performed. Claustrophobia (fear of closed spaces) severe enough to terminate the MRI exam is reported in up to 5% of patients. Recent improvements in magnet design including stronger magnetic fields (3 teslas), shortening exam times, wider, shorter magnet bores and more open magnet designs, have brought some relief for claustrophobic patients. However, for magnets with equivalent field strengths, there is often a trade-off between image quality and open design. MRI has great benefit in imaging the brain, spine, and musculoskeletal system. The use of MRI is currently contraindicated for patients with pacemakers, cochlear implants, some indwelling medication pumps, certain types of cerebral aneurysm clips, metal fragments in the eyes, some metallic hardware due to the powerful magnetic fields, and strong fluctuating radio signals to which the body is exposed. Areas of potential advancement include functional imaging, cardiovascular MRI, and MRI-guided therapy. === Nuclear medicine === Nuclear medicine imaging involves the administration into the patient of radiopharmaceuticals consisting of substances with affinity for certain body tissues labeled with radioactive tracer. The most commonly used tracers are technetium-99m, iodine-123, iodine-131, gallium-67, indium-111, thallium-201 and fludeoxyglucose (18F) (18F-FDG). The heart, lungs, thyroid, liver, brain, gallbladder, and bones are commonly evaluated for particular conditions using these techniques. While anatomical detail is limited in these studies, nuclear medicine is useful in displaying physiological function. The excretory function of the kidneys, iodine-concentrating ability of the thyroid, blood flow to heart muscle, etc. can be measured. The principal imaging devices are the gamma camera and the PET Scanner, which detect the radiation emitted by the tracer in the body and display it as an image. With computer processing, the information can be displayed as axial, coronal and sagittal images (single-photon emission computed tomography - SPECT or Positron-emission tomography - PET). In the most modern devices, nuclear medicine images can be fused with a CT scan taken quasisimultaneously, so the physiological information can be overlaid or coregistered with the anatomical structures to improve diagnostic accuracy. Positron emission tomography (PET) scanning deals with positrons instead of gamma rays detected by gamma cameras. The positrons annihilate to produce two opposite traveling gamma rays to be detected coincidentally, thus improving resolution. In PET scanning, a radioactive, biologically active substance, most often 18F-FDG, is injected into a patient and the radiation emitted by the patient is detected to produce multiplanar images of the body. Metabolically more active tissues, such as cancer, concentrate the active substance more than normal tissues. PET images can be combined (or \"fused\") with anatomic (CT) imaging, to more accurately localize PET findings and thereby improve diagnostic accuracy. The fusion technology has gone further to combine PET and MRI similar to PET and CT. PET/MRI fusion, largely practiced in academic and research settings, could potentially play a crucial role in fine detail of brain imaging, breast cancer screening, and small joint imaging of the foot. The technology recently blossomed after passing the technical hurdle of altered positron movement in strong magnetic field thus affecting the resolution of PET images and attenuation correction. == Interventional radiology == Interventional radiology (IR or sometimes VIR for vascular and interventional radiology) is a subspecialty of radiology in which minimally invasive procedures are performed using image guidance. Some of these procedures are done for purely diagnostic purposes (e.g., angiogram), while others are done for treatment purposes (e.g., angioplasty). The basic concept behind interventional radiology is to diagnose or treat pathologies, with the most minimally invasive technique possible. Minimally invasive procedures are currently performed more than ever before. These procedures are often performed with the patient fully awake, with little or no sedation required. Interventional radiologists and interventional radiographers diagnose and treat several disorders, including peripheral vascular disease, renal artery stenosis, inferior vena cava filter placement, gastrostomy tube placements, biliary stents and hepatic interventions. Radiographic images, fluoroscopy, and ultrasound modalities are used for guidance, and the primary instruments used during the procedure are specialized needles and catheters. The images provide maps that allow the clinician to guide these instruments through the body to the areas containing disease. By minimizing the physical trauma to the patient, peripheral interventions can reduce infection rates and recovery times, as well as hospital stays. To be a trained interventionalist in the United States, an individual completes a five-year residency in radiology and a one- or two-year fellowship in IR. == Analysis of images == === Plain, or general, radiography === The basic technique is optical density evaluation (i.e. histogram analysis). It is then described that a region has a different optical density, e.g. a cancer metastasis to bone can cause radiolucency. The development of this is the digital radiological subtraction. It consists in overlapping two radiographs of the same examined region and subtracting the optical densities Comparison of changes in dental and bone radiographic densities in the presence of different soft-tissue simulators using pixel intensity and digital subtraction analyses. The resultant image only contains the time-dependent differences between the two examined radiographs. The advantage of this technique is the precise determination of the dynamics of density changes and the place of their occurrence. However, beforehand the geometrical adjustment and general alignment of optical density should be done Noise in subtraction images made from pairs of intraoral radiographs: a comparison between four methods of geometric alignment. Another possibility of radiographic image analysis is to study second order features, e.g. digital texture analysis Basic research Textural entropy as a potential feature for quantitative assessment of jaw bone healing process Comparative Analysis of Three Bone Substitute Materials Based on Co-Occurrence Matrix or fractal dimension Using fractal dimension to evaluate alveolar bone defects treated with various bone substitute materials. On this basis, it is possible to assess the places where bio-materials are implanted into the bone for the purpose of guided bone regeneration. They take an intact bone image sample (region of interest, ROI, reference site) and a sample of the implantation site (second ROI, test site) can be assessed numerically/objectively to what extent the implantation site imitates a healthy bone and how advanced is the process of bone regeneration Fast-Versus Slow-Resorbable Calcium Phosphate Bone Substitute Materials—Texture Analysis after 12 Months of Observation New Oral Surgery Materials for Bone Reconstruction—A Comparison of Five Bone Substitute Materials for Dentoalveolar Augmentation. It is also possible to check whether the bone healing process is influenced by some systemic factors Influence of General Mineral Condition on Collagen-Guided Alveolar Crest Augmentation. === Teleradiology === Teleradiology is the transmission of radiographic images from one location to another for interpretation by an appropriately trained professional, usually a radiologist or reporting radiographer. It is most often used to allow rapid interpretation of emergency room, ICU and other emergent examinations after hours of usual operation, at night and on weekends. In these cases, the images can be sent across time zones (e.g. to Spain, Australia, India) with the receiving Clinician working her normal daylight hours. However, at present, large private teleradiology companies in the U.S. currently provide most after-hours coverage employing night-working radiologists in the U.S. Teleradiology can also be used to obtain consultation with an expert or subspecialist about a complicated or puzzling case. In the U.S., many hospitals outsource their radiology departments to radiologists in India due to the lowered cost and availability of high speed internet access. Teleradiology requires a sending station, a high-speed internet connection, and a high-quality receiving station. At the transmission station, plain radiographs are passed through a digitizing machine before transmission, while CT, MRI, ultrasound and nuclear medicine scans can be sent directly, as they are already digital data. The computer at the receiving end will need to have a high-quality display screen that has been tested and cleared for clinical purposes. Reports are then transmitted to the requesting clinician. The major advantage of teleradiology is the ability to use different time zones to provide real-time emergency radiology services around-the-clock. The disadvantages include higher costs, limited contact between the referrer and the reporting Clinician, and the inability to cover for procedures requiring an onsite reporting Clinician. Laws and regulations concerning the use of teleradiology vary among the states, with some requiring a license to practice medicine in the state sending the radiologic exam. In the U.S., some states require the teleradiology report to be preliminary with the official report issued by a hospital staff radiologist. Lastly, a benefit of teleradiology is that it might be automated with modern machine learning techniques. == Patient interaction == Some radiologists, like teleradiologists, have no interaction with patients. Other radiologists, like interventional radiologists, primarily interact with patients and spend less time analyzing images. Diagnostic radiologists tend to spend the majority of their time analyzing images and a minority of their time interacting with patients. Compared to the healthcare provider who sends the patient to have images interpreted by a diagnostic radiologist, the radiologist usually does not know as much about the patient's clinical status or have as much influence on what action should be taken based on the images. Thus, the diagnostic radiologist reports image findings directly to that healthcare provider and often provides recommendations, who then takes the appropriate next steps for recommendations about medical management. Because radiologists undergo training regarding risks associated with different types of imaging tests and image-guided procedures, radiologists are the healthcare providers who generally educate patients about those risks to enable informed consent, not the healthcare provider requesting the test or procedure. == Professional training == === United States === Radiology is a field in medicine that has expanded rapidly after 2000 due to advances in computer technology, which is closely linked to modern imaging techniques. Applying for residency positions in radiology has become highly competitive. Applicants are often near the top of their medical school classes, with high USMLE (board) examination scores. Diagnostic radiologists must complete prerequisite undergraduate education, four years of medical school to earn a medical degree (D.O. or M.D.), one year of internship, and four years of residency training. After residency, most radiologists pursue one or two years of additional specialty fellowship training. The American Board of Radiology (ABR) administers professional certification in Diagnostic Radiology, Radiation Oncology and Medical Physics as well as subspecialty certification in neuroradiology, nuclear radiology, pediatric radiology and vascular and interventional radiology. \"Board Certification\" in diagnostic radiology requires successful completion of two examinations. The Core Exam is given after 36 months of residency. Although previously taken in Chicago or Tucson, Arizona, beginning in February 2021, the computer test transitioned permanently to a remote format. It encompasses 18 categories. A passing score is 350 or above. A fail on one to five categories was previously a Conditioned exam, however beginning in June 2021, the conditioned category will no longer exist and the test will be graded as a whole. The Certification Exam, can be taken 15 months after completion of the Radiology residency. This computer-based examination consists of five modules and graded pass-fail. It is given twice a year in Chicago and Tucson. Recertification examinations are taken every 10 years, with additional required continuing medical education as outlined in the Maintenance of Certification document. Certification may also be obtained from the American Osteopathic Board of Radiology (AOBR) and the American Board of Physician Specialties. Following completion of residency training, radiologists may either begin practicing as a general diagnostic radiologist or enter into subspecialty training programs known as fellowships. Examples of subspeciality training in radiology include abdominal imaging, thoracic imaging, cross-sectional/ultrasound, MRI, musculoskeletal imaging, interventional radiology, neuroradiology, interventional neuroradiology, paediatric radiology, nuclear medicine, emergency radiology, breast imaging and women's imaging. Fellowship training programs in radiology are usually one or two years in length. Some medical schools in the US have started to incorporate a basic radiology introduction into their core MD training. New York Medical College, the Wayne State University School of Medicine, Weill Cornell Medicine, the Uniformed Services University, and the University of South Carolina School of Medicine offer an introduction to radiology during their respective MD programs. Campbell University School of Osteopathic Medicine also integrates imaging material into their curriculum early in the first year. Radiographic exams are usually performed by radiographers. Qualifications for radiographers vary by country, but many radiographers now are required to hold a degree. Veterinary radiologists are veterinarians who specialize in the use of X-rays, ultrasound, MRI and nuclear medicine for diagnostic imaging or treatment of disease in animals. They are certified in either diagnostic radiology or radiation oncology by the American College of Veterinary Radiology. === United Kingdom === Radiology is an extremely competitive speciality in the UK, attracting applicants from a broad range of backgrounds. Applicants are welcomed directly from the Foundation Programme, as well as those who have completed higher training. Recruitment and selection into training post in clinical radiology posts in England, Scotland and Wales is done by an annual nationally coordinated process lasting from November to March. In this process, all applicants are required to pass a Specialty Recruitment Assessment (SRA) test. Those with a test score above a certain threshold are offered a single interview at the London and the South East Recruitment Office. At a later stage, applicants declare what programs they prefer, but may in some cases be placed in a neighbouring region. The training programme lasts for a total of five years. During this time, doctors rotate into different subspecialities, such as paediatrics, musculoskeletal or neuroradiology, and breast imaging. During the first year of training, radiology trainees are expected to pass the first part of the Fellowship of the Royal College of Radiologists (FRCR) exam. This comprises a medical physics and anatomy examination. Following completion of their part 1 exam, they are then required to pass six written exams (part 2A), which cover all the subspecialities. Successful completion of these allows them to complete the FRCR by completing part 2B, which includes rapid reporting, and a long case discussion. After achieving a certificate of completion of training (CCT), many fellowship posts exist in specialities such as neurointervention and vascular intervention, which would allow the doctor to work as an Interventional radiologist. In some cases, the CCT date can be deferred by a year to include these fellowship programmes. UK radiology registrars are represented by the Society of Radiologists in Training (SRT), which was founded in 1993 under the auspices of the Royal College of Radiologists. The society is a nonprofit organisation, run by radiology registrars specifically to promote radiology training and education in the UK. Annual meetings are held by which trainees across the country are encouraged to attend. Currently, a shortage of radiologists in the UK has created opportunities in all specialities, and with the increased reliance on imaging, demand is expected to increase in the future. Radiographers, and less frequently Nurses, are often trained to undertake many of these opportunities in order to help meet demand. Radiographers often may control a \"list\" of a particular set of procedures after being approved locally and signed off by a consultant radiologist. Similarly, radiographers may simply operate a list for a radiologist or other physician on their behalf. Most often if a radiographer operates a list autonomously then they are acting as the operator and practitioner under the Ionising Radiation (Medical Exposures) Regulations 2000. Radiographers are represented by a variety of bodies; most often this is the Society and College of Radiographers. Collaboration with nurses is also common, where a list may be jointly organised between the nurse and radiographer. === Germany === After obtaining medical licensure, German radiologists complete a five-year residency, culminating with a board examination (known as Facharztprüfung). === Italy === Italian radiologists complete a four-year residency program, after completing the six-year MD program. === The Netherlands === Dutch radiologists complete a five-year residency program, after completing the six-year MD program. === India === In India, one must obtain a bachelor's degree which requires 4.5 years of training, along with 1 year internship, followed by NEET PG examination which is one of the hardest examinations in India. Previous rank data shows only top rankers take radiology which means if the score is less, one might get accepted into other branches, but not radiology. The radiology program is a post graduate 3-year program (MD/DNB Radiology) or a 2-year diploma (DMRD). === Singapore === Radiologists in Singapore complete a five-year undergraduate MD program, followed by a one-year internship, and then a five-year residency program. Some radiologists may elect to complete a one or two-year fellowship for further sub-specialization in fields such as interventional radiology. Slovenia After finishing a six-year study of medicine and passing the emergency medicine internship, MDs can apply for radiology residency. Radiology is a five-year post-graduate program that involves all fields of radiology with a final board exam. France To become a radiologist, after having validated the common core of medical studies, one must obtain a DES (Specialized Studies Diploma) in radiology and medical imaging (specialized studies in 5 years), or a DES in advanced interventional radiology (specialized studies in 6 years). At the end of their DES, once validated, the future doctor will have to defend their \"practice thesis\" in order to validate their DE (State Diploma) as a doctor of medicine (common to all doctors of medicine therefore) and to be able to practice in France. === Specialty training for interventional radiology === Training for interventional radiology occurs in the residency portion of medical education, and has gone through developments. In 2000, the Society of Interventional Radiology (SIR) created a program named \"Clinical Pathway in IR\", which modified the \"Holman Pathway\" that was already accepted by the American Board of Radiology to including training in IR; this was accepted by ABR but was not widely adopted. In 2005 SIR proposed and ABR accepted another pathway called \"DIRECT (Diagnostic and Interventional Radiology Enhanced Clinical Training) Pathway\" to help trainees coming from other specialities learn IR; this too was not widely adopted. In 2006 SIR proposed a pathway resulting in certification in IR as a speciality; this was eventually accepted by the ABR in 2007 and was presented to the American Board of Medical Specialities (ABMS) in 2009, which rejected it because it did not include enough diagnostic radiology (DR) training. The proposal was reworked, at the same time that overall DR training was being revamped, and a new proposal that would lead to a dual DR/IR specialization was presented to the ABMS and was accepted in 2012 and eventually was implemented in 2014. By 2016 the field had determined that the old IR fellowships would be terminated by 2020. A handful of programs have offered interventional radiology fellowships that focus on training in the treatment of children. In Europe the field followed its own pathway; for example in Germany the parallel interventional society began to break free of the DR society in 2008. In the UK, interventional radiology was approved as a sub-specialty of clinical radiology in 2010. While many countries have an interventional radiology society, there is also the European-wide Cardiovascular and Interventional Radiological Society of Europe, whose aim is to support teaching, science, research and clinical practice in the field by hosting meetings, educational workshops and promoting patient safety initiatives. Furthermore, the Society provides an examination, the European Board of Interventional Radiology (EBIR), which is a highly valuable qualification in interventional radiology based on the European Curriculum and Syllabus for IR. == See also == Digital mammography: use of a computer to produce images of the breast Global radiology: improving access to radiology resources in poor and developing countries Medical radiography: the use of ionizing electromagnetic radiation, such as X-rays, in medicine Radiation protection: the science of preventing people and the environment from suffering harmful effects from ionizing radiation Radiologists Without Borders Radiosensitivity: measure of the susceptibility of organic tissues to the harmful effects of radiation X-ray image intensifier: equipment that uses x-rays to produce an image feed displayed on a TV screen International Day of Radiology: an awareness day for medical imaging Electrogram == References == == External links =="
+  },
+  "chunks": [
+    {
+      "id": "radiology_cb8ac3b5_c0000",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 855,
+      "content": "Radiology ( RAY-dee-AHL-ə-jee) is the medical specialty that uses medical imaging to diagnose diseases and guide treatment within the bodies of humans and other animals. It began with radiography (which is why its name has a root referring to radiation), but today it includes all imaging modalities. This includes technologies that use no ionizing electromagnetic radiation, such as ultrasonography and magnetic resonance imaging (MRI), as well as others that do use radiation, such as computed tomography (CT), fluoroscopy, and nuclear medicine including positron emission tomography (PET). Interventional radiology is the performance of usually minimally invasive medical procedures with the guidance of imaging technologies such as those mentioned above. The modern practice of radiology involves a team of several different healthcare professionals.",
+      "char_count": 854,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0001",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 855,
+      "end_char": 1778,
+      "content": "A radiologist, who is a medical doctor with specialized post-graduate training, interprets medical images, communicates these findings to other physicians through reports or verbal communication, and uses imaging to perform minimally invasive medical procedures The nurse is involved in the care of patients before and after imaging or procedures, including administration of medications, monitoring of vital signs and monitoring of sedated patients. The radiographer, also known as a \"radiologic technologist\" in some countries such as the United States and Canada, is a specially trained healthcare professional that uses sophisticated technology and positioning techniques to produce medical images for the radiologist to interpret. Depending on the individual's training and country of practice, the radiographer may specialize in one of the above-mentioned imaging modalities or have expanded roles in image reporting.",
+      "char_count": 923,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0002",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Projection (plain) radiography ==",
+      "heading_path": "== = Projection (plain) radiography ==",
+      "start_char": 1853,
+      "end_char": 2812,
+      "content": "== = Projection (plain) radiography === Radiographs (originally called roentgenographs, named after the discoverer of X-rays, Wilhelm Conrad Röntgen) are produced by transmitting X-rays through a patient. The X-rays are projected through the body onto a detector; an image is formed based on which rays pass through (and are detected) versus those that are absorbed or scattered in the patient (and thus are not detected). Röntgen discovered X-rays on November 8, 1895, and received the first Nobel Prize in Physics in 1901 for this discovery. In film-screen radiography, an X-ray tube generates a beam of X-rays, which is aimed at the patient. The X-rays that pass through the patient are filtered through a device called a grid or X-ray filter, to reduce scatter, and strike an undeveloped film, which is held tightly to a screen of light-emitting phosphors in a light-tight cassette. The film is then developed chemically and an image appears on the film.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0003",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Projection (plain) radiography ==",
+      "heading_path": "== = Projection (plain) radiography ==",
+      "start_char": 2812,
+      "end_char": 3720,
+      "content": "Film-screen radiography is being replaced by phosphor plate radiography but more recently by digital radiography (DR) and the EOS imaging. In the two latest systems, the X-rays strike sensors that converts the signals generated into digital information, which is transmitted and converted into an image displayed on a computer screen. In digital radiography the sensors shape a plate, but in the EOS system, which is a slot-scanning system, a linear sensor vertically scans the patient. Plain radiography was one of the earliest imaging modalities used in clinical medicine and remained the most widely used for several decades. Due to its broad availability, speed, and relatively low cost, it continues to be a common first-line tool in radiologic evaluation. Despite advances in CT, MRI, and other imaging techniques, there are many conditions in which traditional radiographs remain helpful in diagnosis.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0004",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Projection (plain) radiography ==",
+      "heading_path": "== = Projection (plain) radiography ==",
+      "start_char": 3721,
+      "end_char": 4001,
+      "content": "These include arthritis, pneumonia, bone tumors, fractures, congenital skeletal anomalies, and certain types of kidney stones. Mammography and DXA are two applications of low energy projectional radiography, used for the evaluation of breast cancer and osteoporosis, respectively.",
+      "char_count": 280,
+      "token_estimate": 70,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0005",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Fluoroscopy ==",
+      "heading_path": "== = Fluoroscopy ==",
+      "start_char": 3983,
+      "end_char": 4757,
+      "content": "== = Fluoroscopy === Fluoroscopy and angiography are special applications of X-ray imaging, in which a fluorescent screen and image intensifier tube is connected to a closed-circuit television system. This allows real-time imaging of structures in motion or augmented with a radiocontrast agent. Radiocontrast agents are usually administered by swallowing or injecting into the body of the patient to delineate anatomy and functioning of the blood vessels, the genitourinary system, or the gastrointestinal tract (GI tract). Two radiocontrast agents are presently in common use. Barium sulfate (BaSO4) is given orally or rectally for evaluation of the GI tract. Iodine, in multiple proprietary forms, is given by oral, rectal, vaginal, intra-arterial or intravenous routes.",
+      "char_count": 773,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0006",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Fluoroscopy ==",
+      "heading_path": "== = Fluoroscopy ==",
+      "start_char": 4757,
+      "end_char": 5436,
+      "content": "These radiocontrast agents strongly absorb or scatter X-rays, and in conjunction with the real-time imaging, allow demonstration of dynamic processes, such as peristalsis in the digestive tract or blood flow in arteries and veins. Iodine contrast may also be concentrated in abnormal areas more or less than in normal tissues and make abnormalities (tumors, cysts, inflammation) more conspicuous. Additionally, in specific circumstances, air can be used as a contrast agent for the gastrointestinal system and carbon dioxide can be used as a contrast agent in the venous system; in these cases, the contrast agent attenuates the X-ray radiation less than the surrounding tissues.",
+      "char_count": 679,
+      "token_estimate": 169,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0007",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Computed tomography ==",
+      "heading_path": "== = Computed tomography ==",
+      "start_char": 5445,
+      "end_char": 6331,
+      "content": "== = Computed tomography === CT imaging uses X-rays in conjunction with computing algorithms to image the body. In CT, an X-ray tube opposite an X-ray detector (or detectors) in a ring-shaped apparatus rotate around a patient, producing a computer-generated cross-sectional image (tomogram). CT is acquired in the axial plane, with coronal and sagittal images produced by computer reconstruction. Radiocontrast agents are often used with CT for enhanced delineation of anatomy. Although radiographs provide higher spatial resolution, CT can detect more subtle variations in attenuation of X-rays (higher contrast resolution). CT exposes the patient to significantly more ionizing radiation than a radiograph. Spiral multidetector CT uses 16, 64, 254 or more detectors during continuous motion of the patient through the radiation beam to obtain fine detail images in a short exam time.",
+      "char_count": 885,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0008",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Computed tomography ==",
+      "heading_path": "== = Computed tomography ==",
+      "start_char": 6331,
+      "end_char": 7252,
+      "content": "With rapid administration of intravenous contrast during the CT scan, these fine detail images can be reconstructed into three-dimensional (3D) images of carotid, cerebral, coronary or other arteries. The introduction of computed tomography in the early 1970s revolutionized diagnostic radiology by providing front-line clinicians with detailed images of anatomic structures in three dimensions. CT scanning has become the test of choice in diagnosing some urgent and emergent conditions, such as cerebral hemorrhage, pulmonary embolism (clots in the arteries of the lungs), aortic dissection (tearing of the aortic wall), appendicitis, diverticulitis, and obstructing kidney stones. Before the development of CT imaging, risky and painful exploratory surgery was often the only way to obtain a definitive diagnosis of the cause of severe abdominal pain which could not be otherwise ascertained from external observation.",
+      "char_count": 921,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0009",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Computed tomography ==",
+      "heading_path": "== = Computed tomography ==",
+      "start_char": 7253,
+      "end_char": 7491,
+      "content": "Continuing improvements in CT technology, including faster scanning times and improved resolution, have dramatically increased the accuracy and usefulness of CT scanning, which may partially account for increased use in medical diagnosis.",
+      "char_count": 238,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0010",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Ultrasound ==",
+      "heading_path": "== = Ultrasound ==",
+      "start_char": 7483,
+      "end_char": 8313,
+      "content": "== = Ultrasound === Medical ultrasonography uses ultrasound (high-frequency sound waves) to visualize soft tissue structures in the body in real time. No ionizing radiation is involved, but the quality of the images obtained using ultrasound is highly dependent on the skill of the person (ultrasonographer) performing the exam and the patient's body size. Examinations of larger, overweight patients may have a decrease in image quality as their subcutaneous fat absorbs more of the sound waves. This results in fewer sound waves penetrating to organs and reflecting back to the transducer, resulting in loss of information and a poorer quality image. Ultrasound is also limited by its inability to image through air pockets (lungs, bowel loops) or bone. Its use in medical imaging has developed mostly within the last 30 years.",
+      "char_count": 829,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0011",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Ultrasound ==",
+      "heading_path": "== = Ultrasound ==",
+      "start_char": 8313,
+      "end_char": 9228,
+      "content": "The first ultrasound images were static and two-dimensional (2D), but with modern ultrasonography, 3D reconstructions can be observed in real time, effectively becoming \"4D\". Because ultrasound imaging techniques do not employ ionizing radiation to generate images (unlike radiography, and CT scans), they are generally considered safer and are therefore more common in obstetrical imaging. The progression of pregnancies can be thoroughly evaluated with less concern about damage from the techniques employed, allowing early detection and diagnosis of many fetal anomalies. Growth can be assessed over time, important in patients with chronic disease or pregnancy-induced disease, and in multiple pregnancies (twins, triplets, etc.). Color-flow Doppler ultrasound measures the severity of peripheral vascular disease and is used by cardiologists for dynamic evaluation of the heart, heart valves and major vessels.",
+      "char_count": 915,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0012",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Ultrasound ==",
+      "heading_path": "== = Ultrasound ==",
+      "start_char": 9229,
+      "end_char": 9915,
+      "content": "Stenosis, for example, of the carotid arteries may be a warning sign for an impending stroke. A clot, embedded deep in one of the inner veins of the legs, can be found via ultrasound before it dislodges and travels to the lungs, resulting in a potentially fatal pulmonary embolism. Ultrasound is useful as a guide to performing biopsies to minimize damage to surrounding tissues and in drainages such as thoracentesis. Small, portable ultrasound devices now replace peritoneal lavage in trauma wards by non-invasively assessing for the presence of internal bleeding and any internal organ damage. Extensive internal bleeding or injury to the major organs may require surgery and repair.",
+      "char_count": 686,
+      "token_estimate": 171,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0013",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Magnetic resonance imaging ==",
+      "heading_path": "== = Magnetic resonance imaging ==",
+      "start_char": 9932,
+      "end_char": 10870,
+      "content": "== = Magnetic resonance imaging === MRI uses strong magnetic fields to align atomic nuclei (usually hydrogen protons) within body tissues, then uses a radio signal to disturb the axis of rotation of these nuclei and observes the radio frequency signal generated as the nuclei return to their baseline states. The radio signals are collected by small antennae, called coils, placed near the area of interest. An advantage of MRI is its ability to produce images in axial, coronal, sagittal and multiple oblique planes with equal ease. MRI scans give the best soft tissue contrast of all the imaging modalities. With advances in scanning speed and spatial resolution, and improvements in computer 3D algorithms and hardware, MRI has become an important tool in musculoskeletal radiology and neuroradiology. One disadvantage is the patient has to hold still for long periods of time in a noisy, cramped space while the imaging is performed.",
+      "char_count": 937,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0014",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Magnetic resonance imaging ==",
+      "heading_path": "== = Magnetic resonance imaging ==",
+      "start_char": 10870,
+      "end_char": 11831,
+      "content": "Claustrophobia (fear of closed spaces) severe enough to terminate the MRI exam is reported in up to 5% of patients. Recent improvements in magnet design including stronger magnetic fields (3 teslas), shortening exam times, wider, shorter magnet bores and more open magnet designs, have brought some relief for claustrophobic patients. However, for magnets with equivalent field strengths, there is often a trade-off between image quality and open design. MRI has great benefit in imaging the brain, spine, and musculoskeletal system. The use of MRI is currently contraindicated for patients with pacemakers, cochlear implants, some indwelling medication pumps, certain types of cerebral aneurysm clips, metal fragments in the eyes, some metallic hardware due to the powerful magnetic fields, and strong fluctuating radio signals to which the body is exposed. Areas of potential advancement include functional imaging, cardiovascular MRI, and MRI-guided therapy.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0015",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Nuclear medicine ==",
+      "heading_path": "== = Nuclear medicine ==",
+      "start_char": 11822,
+      "end_char": 12738,
+      "content": "== = Nuclear medicine === Nuclear medicine imaging involves the administration into the patient of radiopharmaceuticals consisting of substances with affinity for certain body tissues labeled with radioactive tracer. The most commonly used tracers are technetium-99m, iodine-123, iodine-131, gallium-67, indium-111, thallium-201 and fludeoxyglucose (18F) (18F-FDG). The heart, lungs, thyroid, liver, brain, gallbladder, and bones are commonly evaluated for particular conditions using these techniques. While anatomical detail is limited in these studies, nuclear medicine is useful in displaying physiological function. The excretory function of the kidneys, iodine-concentrating ability of the thyroid, blood flow to heart muscle, etc. can be measured. The principal imaging devices are the gamma camera and the PET Scanner, which detect the radiation emitted by the tracer in the body and display it as an image.",
+      "char_count": 915,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0016",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Nuclear medicine ==",
+      "heading_path": "== = Nuclear medicine ==",
+      "start_char": 12738,
+      "end_char": 13719,
+      "content": "With computer processing, the information can be displayed as axial, coronal and sagittal images (single-photon emission computed tomography - SPECT or Positron-emission tomography - PET). In the most modern devices, nuclear medicine images can be fused with a CT scan taken quasisimultaneously, so the physiological information can be overlaid or coregistered with the anatomical structures to improve diagnostic accuracy. Positron emission tomography (PET) scanning deals with positrons instead of gamma rays detected by gamma cameras. The positrons annihilate to produce two opposite traveling gamma rays to be detected coincidentally, thus improving resolution. In PET scanning, a radioactive, biologically active substance, most often 18F-FDG, is injected into a patient and the radiation emitted by the patient is detected to produce multiplanar images of the body. Metabolically more active tissues, such as cancer, concentrate the active substance more than normal tissues.",
+      "char_count": 981,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0017",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Nuclear medicine ==",
+      "heading_path": "== = Nuclear medicine ==",
+      "start_char": 13720,
+      "end_char": 14351,
+      "content": "PET images can be combined (or \"fused\") with anatomic (CT) imaging, to more accurately localize PET findings and thereby improve diagnostic accuracy. The fusion technology has gone further to combine PET and MRI similar to PET and CT. PET/MRI fusion, largely practiced in academic and research settings, could potentially play a crucial role in fine detail of brain imaging, breast cancer screening, and small joint imaging of the foot. The technology recently blossomed after passing the technical hurdle of altered positron movement in strong magnetic field thus affecting the resolution of PET images and attenuation correction.",
+      "char_count": 631,
+      "token_estimate": 157,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0018",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== Interventional radiology ==",
+      "heading_path": "== Interventional radiology ==",
+      "start_char": 14358,
+      "end_char": 15324,
+      "content": "== Interventional radiology == Interventional radiology (IR or sometimes VIR for vascular and interventional radiology) is a subspecialty of radiology in which minimally invasive procedures are performed using image guidance. Some of these procedures are done for purely diagnostic purposes (e.g., angiogram), while others are done for treatment purposes (e.g., angioplasty). The basic concept behind interventional radiology is to diagnose or treat pathologies, with the most minimally invasive technique possible. Minimally invasive procedures are currently performed more than ever before. These procedures are often performed with the patient fully awake, with little or no sedation required. Interventional radiologists and interventional radiographers diagnose and treat several disorders, including peripheral vascular disease, renal artery stenosis, inferior vena cava filter placement, gastrostomy tube placements, biliary stents and hepatic interventions.",
+      "char_count": 965,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0019",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== Interventional radiology ==",
+      "heading_path": "== Interventional radiology ==",
+      "start_char": 15324,
+      "end_char": 15930,
+      "content": "Radiographic images, fluoroscopy, and ultrasound modalities are used for guidance, and the primary instruments used during the procedure are specialized needles and catheters. The images provide maps that allow the clinician to guide these instruments through the body to the areas containing disease. By minimizing the physical trauma to the patient, peripheral interventions can reduce infection rates and recovery times, as well as hospital stays. To be a trained interventionalist in the United States, an individual completes a five-year residency in radiology and a one- or two-year fellowship in IR.",
+      "char_count": 606,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0020",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Plain, or general, radiography ==",
+      "heading_path": "== = Plain, or general, radiography ==",
+      "start_char": 15964,
+      "end_char": 16786,
+      "content": "== = Plain, or general, radiography === The basic technique is optical density evaluation (i.e. histogram analysis). It is then described that a region has a different optical density, e.g. a cancer metastasis to bone can cause radiolucency. The development of this is the digital radiological subtraction. It consists in overlapping two radiographs of the same examined region and subtracting the optical densities Comparison of changes in dental and bone radiographic densities in the presence of different soft-tissue simulators using pixel intensity and digital subtraction analyses. The resultant image only contains the time-dependent differences between the two examined radiographs. The advantage of this technique is the precise determination of the dynamics of density changes and the place of their occurrence.",
+      "char_count": 821,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0021",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Plain, or general, radiography ==",
+      "heading_path": "== = Plain, or general, radiography ==",
+      "start_char": 16786,
+      "end_char": 17600,
+      "content": "However, beforehand the geometrical adjustment and general alignment of optical density should be done Noise in subtraction images made from pairs of intraoral radiographs: a comparison between four methods of geometric alignment. Another possibility of radiographic image analysis is to study second order features, e.g. digital texture analysis Basic research Textural entropy as a potential feature for quantitative assessment of jaw bone healing process Comparative Analysis of Three Bone Substitute Materials Based on Co-Occurrence Matrix or fractal dimension Using fractal dimension to evaluate alveolar bone defects treated with various bone substitute materials. On this basis, it is possible to assess the places where bio-materials are implanted into the bone for the purpose of guided bone regeneration.",
+      "char_count": 814,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0022",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Plain, or general, radiography ==",
+      "heading_path": "== = Plain, or general, radiography ==",
+      "start_char": 17601,
+      "end_char": 18334,
+      "content": "They take an intact bone image sample (region of interest, ROI, reference site) and a sample of the implantation site (second ROI, test site) can be assessed numerically/objectively to what extent the implantation site imitates a healthy bone and how advanced is the process of bone regeneration Fast-Versus Slow-Resorbable Calcium Phosphate Bone Substitute Materials—Texture Analysis after 12 Months of Observation New Oral Surgery Materials for Bone Reconstruction—A Comparison of Five Bone Substitute Materials for Dentoalveolar Augmentation. It is also possible to check whether the bone healing process is influenced by some systemic factors Influence of General Mineral Condition on Collagen-Guided Alveolar Crest Augmentation.",
+      "char_count": 733,
+      "token_estimate": 183,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0023",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Teleradiology ==",
+      "heading_path": "== = Teleradiology ==",
+      "start_char": 18318,
+      "end_char": 19145,
+      "content": "== = Teleradiology === Teleradiology is the transmission of radiographic images from one location to another for interpretation by an appropriately trained professional, usually a radiologist or reporting radiographer. It is most often used to allow rapid interpretation of emergency room, ICU and other emergent examinations after hours of usual operation, at night and on weekends. In these cases, the images can be sent across time zones (e.g. to Spain, Australia, India) with the receiving Clinician working her normal daylight hours. However, at present, large private teleradiology companies in the U.S. currently provide most after-hours coverage employing night-working radiologists in the U.S. Teleradiology can also be used to obtain consultation with an expert or subspecialist about a complicated or puzzling case.",
+      "char_count": 826,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0024",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Teleradiology ==",
+      "heading_path": "== = Teleradiology ==",
+      "start_char": 19145,
+      "end_char": 19982,
+      "content": "In the U.S., many hospitals outsource their radiology departments to radiologists in India due to the lowered cost and availability of high speed internet access. Teleradiology requires a sending station, a high-speed internet connection, and a high-quality receiving station. At the transmission station, plain radiographs are passed through a digitizing machine before transmission, while CT, MRI, ultrasound and nuclear medicine scans can be sent directly, as they are already digital data. The computer at the receiving end will need to have a high-quality display screen that has been tested and cleared for clinical purposes. Reports are then transmitted to the requesting clinician. The major advantage of teleradiology is the ability to use different time zones to provide real-time emergency radiology services around-the-clock.",
+      "char_count": 837,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0025",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Teleradiology ==",
+      "heading_path": "== = Teleradiology ==",
+      "start_char": 19983,
+      "end_char": 20591,
+      "content": "The disadvantages include higher costs, limited contact between the referrer and the reporting Clinician, and the inability to cover for procedures requiring an onsite reporting Clinician. Laws and regulations concerning the use of teleradiology vary among the states, with some requiring a license to practice medicine in the state sending the radiologic exam. In the U.S., some states require the teleradiology report to be preliminary with the official report issued by a hospital staff radiologist. Lastly, a benefit of teleradiology is that it might be automated with modern machine learning techniques.",
+      "char_count": 608,
+      "token_estimate": 152,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0026",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== Patient interaction ==",
+      "heading_path": "== Patient interaction ==",
+      "start_char": 20596,
+      "end_char": 21453,
+      "content": "== Patient interaction == Some radiologists, like teleradiologists, have no interaction with patients. Other radiologists, like interventional radiologists, primarily interact with patients and spend less time analyzing images. Diagnostic radiologists tend to spend the majority of their time analyzing images and a minority of their time interacting with patients. Compared to the healthcare provider who sends the patient to have images interpreted by a diagnostic radiologist, the radiologist usually does not know as much about the patient's clinical status or have as much influence on what action should be taken based on the images. Thus, the diagnostic radiologist reports image findings directly to that healthcare provider and often provides recommendations, who then takes the appropriate next steps for recommendations about medical management.",
+      "char_count": 856,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0027",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== Patient interaction ==",
+      "heading_path": "== Patient interaction ==",
+      "start_char": 21453,
+      "end_char": 21765,
+      "content": "Because radiologists undergo training regarding risks associated with different types of imaging tests and image-guided procedures, radiologists are the healthcare providers who generally educate patients about those risks to enable informed consent, not the healthcare provider requesting the test or procedure.",
+      "char_count": 312,
+      "token_estimate": 78,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0028",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 21790,
+      "end_char": 22757,
+      "content": "== = United States === Radiology is a field in medicine that has expanded rapidly after 2000 due to advances in computer technology, which is closely linked to modern imaging techniques. Applying for residency positions in radiology has become highly competitive. Applicants are often near the top of their medical school classes, with high USMLE (board) examination scores. Diagnostic radiologists must complete prerequisite undergraduate education, four years of medical school to earn a medical degree (D.O. or M.D.), one year of internship, and four years of residency training. After residency, most radiologists pursue one or two years of additional specialty fellowship training. The American Board of Radiology (ABR) administers professional certification in Diagnostic Radiology, Radiation Oncology and Medical Physics as well as subspecialty certification in neuroradiology, nuclear radiology, pediatric radiology and vascular and interventional radiology.",
+      "char_count": 966,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0029",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 22757,
+      "end_char": 23690,
+      "content": "\"Board Certification\" in diagnostic radiology requires successful completion of two examinations. The Core Exam is given after 36 months of residency. Although previously taken in Chicago or Tucson, Arizona, beginning in February 2021, the computer test transitioned permanently to a remote format. It encompasses 18 categories. A passing score is 350 or above. A fail on one to five categories was previously a Conditioned exam, however beginning in June 2021, the conditioned category will no longer exist and the test will be graded as a whole. The Certification Exam, can be taken 15 months after completion of the Radiology residency. This computer-based examination consists of five modules and graded pass-fail. It is given twice a year in Chicago and Tucson. Recertification examinations are taken every 10 years, with additional required continuing medical education as outlined in the Maintenance of Certification document.",
+      "char_count": 933,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0030",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 23691,
+      "end_char": 24540,
+      "content": "Certification may also be obtained from the American Osteopathic Board of Radiology (AOBR) and the American Board of Physician Specialties. Following completion of residency training, radiologists may either begin practicing as a general diagnostic radiologist or enter into subspecialty training programs known as fellowships. Examples of subspeciality training in radiology include abdominal imaging, thoracic imaging, cross-sectional/ultrasound, MRI, musculoskeletal imaging, interventional radiology, neuroradiology, interventional neuroradiology, paediatric radiology, nuclear medicine, emergency radiology, breast imaging and women's imaging. Fellowship training programs in radiology are usually one or two years in length. Some medical schools in the US have started to incorporate a basic radiology introduction into their core MD training.",
+      "char_count": 849,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0031",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 24541,
+      "end_char": 25394,
+      "content": "New York Medical College, the Wayne State University School of Medicine, Weill Cornell Medicine, the Uniformed Services University, and the University of South Carolina School of Medicine offer an introduction to radiology during their respective MD programs. Campbell University School of Osteopathic Medicine also integrates imaging material into their curriculum early in the first year. Radiographic exams are usually performed by radiographers. Qualifications for radiographers vary by country, but many radiographers now are required to hold a degree. Veterinary radiologists are veterinarians who specialize in the use of X-rays, ultrasound, MRI and nuclear medicine for diagnostic imaging or treatment of disease in animals. They are certified in either diagnostic radiology or radiation oncology by the American College of Veterinary Radiology.",
+      "char_count": 853,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0032",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = United Kingdom ==",
+      "heading_path": "== = United Kingdom ==",
+      "start_char": 25396,
+      "end_char": 26254,
+      "content": "== = United Kingdom === Radiology is an extremely competitive speciality in the UK, attracting applicants from a broad range of backgrounds. Applicants are welcomed directly from the Foundation Programme, as well as those who have completed higher training. Recruitment and selection into training post in clinical radiology posts in England, Scotland and Wales is done by an annual nationally coordinated process lasting from November to March. In this process, all applicants are required to pass a Specialty Recruitment Assessment (SRA) test. Those with a test score above a certain threshold are offered a single interview at the London and the South East Recruitment Office. At a later stage, applicants declare what programs they prefer, but may in some cases be placed in a neighbouring region. The training programme lasts for a total of five years.",
+      "char_count": 857,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0033",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = United Kingdom ==",
+      "heading_path": "== = United Kingdom ==",
+      "start_char": 26254,
+      "end_char": 27222,
+      "content": "During this time, doctors rotate into different subspecialities, such as paediatrics, musculoskeletal or neuroradiology, and breast imaging. During the first year of training, radiology trainees are expected to pass the first part of the Fellowship of the Royal College of Radiologists (FRCR) exam. This comprises a medical physics and anatomy examination. Following completion of their part 1 exam, they are then required to pass six written exams (part 2A), which cover all the subspecialities. Successful completion of these allows them to complete the FRCR by completing part 2B, which includes rapid reporting, and a long case discussion. After achieving a certificate of completion of training (CCT), many fellowship posts exist in specialities such as neurointervention and vascular intervention, which would allow the doctor to work as an Interventional radiologist. In some cases, the CCT date can be deferred by a year to include these fellowship programmes.",
+      "char_count": 968,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0034",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = United Kingdom ==",
+      "heading_path": "== = United Kingdom ==",
+      "start_char": 27223,
+      "end_char": 28190,
+      "content": "UK radiology registrars are represented by the Society of Radiologists in Training (SRT), which was founded in 1993 under the auspices of the Royal College of Radiologists. The society is a nonprofit organisation, run by radiology registrars specifically to promote radiology training and education in the UK. Annual meetings are held by which trainees across the country are encouraged to attend. Currently, a shortage of radiologists in the UK has created opportunities in all specialities, and with the increased reliance on imaging, demand is expected to increase in the future. Radiographers, and less frequently Nurses, are often trained to undertake many of these opportunities in order to help meet demand. Radiographers often may control a \"list\" of a particular set of procedures after being approved locally and signed off by a consultant radiologist. Similarly, radiographers may simply operate a list for a radiologist or other physician on their behalf.",
+      "char_count": 967,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0035",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = United Kingdom ==",
+      "heading_path": "== = United Kingdom ==",
+      "start_char": 28191,
+      "end_char": 28600,
+      "content": "Most often if a radiographer operates a list autonomously then they are acting as the operator and practitioner under the Ionising Radiation (Medical Exposures) Regulations 2000. Radiographers are represented by a variety of bodies; most often this is the Society and College of Radiographers. Collaboration with nurses is also common, where a list may be jointly organised between the nurse and radiographer.",
+      "char_count": 409,
+      "token_estimate": 102,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0036",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 29005,
+      "end_char": 29461,
+      "content": "== = India === In India, one must obtain a bachelor's degree which requires 4.5 years of training, along with 1 year internship, followed by NEET PG examination which is one of the hardest examinations in India. Previous rank data shows only top rankers take radiology which means if the score is less, one might get accepted into other branches, but not radiology. The radiology program is a post graduate 3-year program (MD/DNB Radiology) or a 2-year diploma (DMRD).",
+      "char_count": 468,
+      "token_estimate": 117,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0037",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Singapore ==",
+      "heading_path": "== = Singapore ==",
+      "start_char": 29478,
+      "end_char": 30329,
+      "content": "== = Singapore === Radiologists in Singapore complete a five-year undergraduate MD program, followed by a one-year internship, and then a five-year residency program. Some radiologists may elect to complete a one or two-year fellowship for further sub-specialization in fields such as interventional radiology. Slovenia After finishing a six-year study of medicine and passing the emergency medicine internship, MDs can apply for radiology residency. Radiology is a five-year post-graduate program that involves all fields of radiology with a final board exam. France To become a radiologist, after having validated the common core of medical studies, one must obtain a DES (Specialized Studies Diploma) in radiology and medical imaging (specialized studies in 5 years), or a DES in advanced interventional radiology (specialized studies in 6 years).",
+      "char_count": 850,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0038",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Singapore ==",
+      "heading_path": "== = Singapore ==",
+      "start_char": 30329,
+      "end_char": 30585,
+      "content": "At the end of their DES, once validated, the future doctor will have to defend their \"practice thesis\" in order to validate their DE (State Diploma) as a doctor of medicine (common to all doctors of medicine therefore) and to be able to practice in France.",
+      "char_count": 256,
+      "token_estimate": 64,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0039",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Specialty training for interventional radiology ==",
+      "heading_path": "== = Specialty training for interventional radiology ==",
+      "start_char": 30624,
+      "end_char": 31330,
+      "content": "== = Specialty training for interventional radiology === Training for interventional radiology occurs in the residency portion of medical education, and has gone through developments. In 2000, the Society of Interventional Radiology (SIR) created a program named \"Clinical Pathway in IR\", which modified the \"Holman Pathway\" that was already accepted by the American Board of Radiology to including training in IR; this was accepted by ABR but was not widely adopted. In 2005 SIR proposed and ABR accepted another pathway called \"DIRECT (Diagnostic and Interventional Radiology Enhanced Clinical Training) Pathway\" to help trainees coming from other specialities learn IR; this too was not widely adopted.",
+      "char_count": 705,
+      "token_estimate": 176,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0040",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Specialty training for interventional radiology ==",
+      "heading_path": "== = Specialty training for interventional radiology ==",
+      "start_char": 31330,
+      "end_char": 32239,
+      "content": "In 2006 SIR proposed a pathway resulting in certification in IR as a speciality; this was eventually accepted by the ABR in 2007 and was presented to the American Board of Medical Specialities (ABMS) in 2009, which rejected it because it did not include enough diagnostic radiology (DR) training. The proposal was reworked, at the same time that overall DR training was being revamped, and a new proposal that would lead to a dual DR/IR specialization was presented to the ABMS and was accepted in 2012 and eventually was implemented in 2014. By 2016 the field had determined that the old IR fellowships would be terminated by 2020. A handful of programs have offered interventional radiology fellowships that focus on training in the treatment of children. In Europe the field followed its own pathway; for example in Germany the parallel interventional society began to break free of the DR society in 2008.",
+      "char_count": 909,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiology_cb8ac3b5_c0041",
+      "article_id": "radiology_cb8ac3b5",
+      "section": "== = Specialty training for interventional radiology ==",
+      "heading_path": "== = Specialty training for interventional radiology ==",
+      "start_char": 32240,
+      "end_char": 32899,
+      "content": "In the UK, interventional radiology was approved as a sub-specialty of clinical radiology in 2010. While many countries have an interventional radiology society, there is also the European-wide Cardiovascular and Interventional Radiological Society of Europe, whose aim is to support teaching, science, research and clinical practice in the field by hosting meetings, educational workshops and promoting patient safety initiatives. Furthermore, the Society provides an examination, the European Board of Interventional Radiology (EBIR), which is a highly valuable qualification in interventional radiology based on the European Curriculum and Syllabus for IR.",
+      "char_count": 659,
+      "token_estimate": 164,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Why do cancerous tissues concentrate the active substance used in PET scans more than normal tissues?",
+        "answer": "Cancerous tissues are metabolically more active than normal tissues, which causes them to concentrate the radioactive, biologically active substance more.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0016"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "What two subjects are included in the first part of the Fellowship of the Royal College of Radiologists (FRCR) exam in the United Kingdom?",
+        "answer": "The first part of the Fellowship of the Royal College of Radiologists (FRCR) exam comprises a medical physics and an anatomy examination.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0033"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What is the educational and training path required to become a diagnostic radiologist in the United States?",
+        "answer": "To become a diagnostic radiologist in the United States, an individual must complete prerequisite undergraduate education, four years of medical school to obtain a medical degree (D.O. or M.D.), a one-year internship, and four years of residency training. Following residency, many radiologists also undertake one or two years of additional specialty fellowship training.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0028"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Describe the collaborative process of a projection radiography procedure, including the roles of the different healthcare professionals involved.",
+        "answer": "The process begins with a radiographer, a specially trained healthcare professional, who uses an X-ray tube and positioning techniques to transmit X-rays through a patient. The rays that pass through are captured on a detector, such as a film in a cassette, which is then developed to create an image. A nurse is involved in patient care before and after the procedure. Finally, a radiologist, a medical doctor with specialized training, interprets the produced radiograph and communicates the findings to other physicians. This collaborative effort is central to the modern practice of radiology.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0000",
+          "radiology_cb8ac3b5_c0001",
+          "radiology_cb8ac3b5_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do plain radiography and fluoroscopy differ in their imaging process and typical applications?",
+        "answer": "Plain radiography creates static images and is a common first-line tool for diagnosing conditions like arthritis, pneumonia, and bone fractures. In modern digital systems, X-rays strike sensors to create a single image. In contrast, fluoroscopy is a specialized application of X-ray imaging that uses a fluorescent screen and image intensifier to produce real-time, moving images. It is used to observe structures in motion, often with the aid of radiocontrast agents like barium or iodine to evaluate systems such as the gastrointestinal tract or blood vessels.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0003",
+          "radiology_cb8ac3b5_c0004",
+          "radiology_cb8ac3b5_c0005"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What information is provided about == = Fluoroscopy ==?",
+        "answer": "The text provides information about == = Fluoroscopy == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0006",
+          "radiology_cb8ac3b5_c0007",
+          "radiology_cb8ac3b5_c0008"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What are the distinct roles of the key healthcare professionals who form the team involved in the practice of radiology?",
+        "answer": "The practice of radiology involves a team of healthcare professionals with specific roles. A radiologist, a medical doctor with specialized training, is responsible for interpreting medical images, communicating findings to other physicians, and performing minimally invasive procedures using imaging guidance. The radiographer, also known as a radiologic technologist, is a trained professional who uses technology and positioning techniques to produce the medical images for the radiologist to interpret. A nurse is also involved, caring for patients before and after imaging or procedures by administering medications, and monitoring vital signs and sedated patients.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0000",
+          "radiology_cb8ac3b5_c0001"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "Describe the evolution of projection radiography from its original film-based method to modern digital systems, and list some key clinical conditions for which it is still used.",
+        "answer": "Projection radiography originally used a film-screen method where X-rays passed through a patient to strike an undeveloped film, which was then chemically developed to produce an image. This technique is being replaced by modern digital systems, such as digital radiography (DR) and EOS imaging, where X-rays strike sensors that convert signals into digital information for display on a computer screen. Despite technological advances, radiography remains a common first-line tool for diagnosing conditions like arthritis, pneumonia, bone tumors, fractures, congenital skeletal anomalies, and certain kidney stones. Specialized low-energy applications include mammography for breast cancer and DXA for osteoporosis.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0002",
+          "radiology_cb8ac3b5_c0003",
+          "radiology_cb8ac3b5_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How do radiocontrast agents like barium sulfate and iodine function to enhance real-time imaging in fluoroscopy?",
+        "answer": "Radiocontrast agents such as barium sulfate and iodine, which are administered into the body, function by strongly absorbing or scattering X-rays. This property, when used in conjunction with the real-time imaging capabilities of fluoroscopy, allows for the clear demonstration of dynamic processes like peristalsis in the digestive tract or blood flow in vessels. Iodine contrast can also make abnormalities like tumors more conspicuous by concentrating in those areas differently than in normal tissue.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0005",
+          "radiology_cb8ac3b5_c0006"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How has Computed Tomography (CT) technology evolved and what has been its impact on diagnostic medicine?",
+        "answer": "Introduced in the early 1970s, Computed Tomography (CT) revolutionized diagnostic radiology by providing clinicians with detailed 3D images of anatomic structures, becoming the test of choice for urgent conditions like cerebral hemorrhage and pulmonary embolism and reducing the need for exploratory surgery. The technology, which uses a rotating X-ray tube and detector with computer algorithms, has seen continuous improvements. Advancements like spiral multidetector CT and the use of intravenous contrast enable the creation of fine-detail 3D images of arteries. These ongoing improvements, including faster scanning times and better resolution, have dramatically increased the accuracy and usefulness of CT, leading to its increased use in medical diagnosis.",
+        "related_chunk_ids": [
+          "radiology_cb8ac3b5_c0007",
+          "radiology_cb8ac3b5_c0008",
+          "radiology_cb8ac3b5_c0009"
+        ],
+        "category": "LONG_ANSWER"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T08:34:20.023Z",
+    "content_format": "markdown",
+    "total_chunks": 42,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

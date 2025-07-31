@@ -1,0 +1,290 @@
+{
+  "article": {
+    "id": "complexanalysis_93a2a470",
+    "title": "Complex analysis",
+    "url": "https://en.wikipedia.org/wiki/Complex_analysis",
+    "lang": "en",
+    "created_at": "2025-07-31T06:30:54.051229",
+    "content": "---\nid: complexanalysis_93a2a470\nurl: https://en.wikipedia.org/wiki/Complex_analysis\ntitle: Complex analysis\nlang: en\ncreated_at: '2025-07-31T06:26:04.476851'\nchecksum: 863a2ae3502897e62b96e5a30d6d3cc713c2b31d1ab59d99dceaaf86ed2d5943\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2320\n  char_count: 14578\n  num_chunks: 15\n  original_chunks: 23\n  filtered_out: 8\n  num_sections: 0\n---\nComplex analysis, traditionally known as the theory of functions of a complex variable, is the branch of mathematical analysis that investigates functions of complex numbers. It is helpful in many branches of mathematics, including algebraic geometry, number theory, analytic combinatorics, and applied mathematics, as well as in physics, including the branches of hydrodynamics, thermodynamics, quantum mechanics, and twistor theory. By extension, use of complex analysis also has applications in engineering fields such as nuclear, aerospace, mechanical and electrical engineering. As a differentiable function of a complex variable is equal to the sum function given by its Taylor series (that is, it is analytic), complex analysis is particularly concerned with analytic functions of a complex variable, that is, holomorphic functions. The concept can be extended to functions of several complex variables. Complex analysis is contrasted with real analysis, which deals with the study of real numbers and functions of a real variable. == History == Complex analysis is one of the classical branches in mathematics, with roots in the 18th century and just prior. Important mathematicians associated with complex numbers include Euler, Gauss, Riemann, Cauchy, Weierstrass, and many more in the 20th century. Complex analysis, in particular the theory of conformal mappings, has many physical applications and is also used throughout analytic number theory. In modern times, it has become very popular through a new boost from complex dynamics and the pictures of fractals produced by iterating holomorphic functions. Another important application of complex analysis is in string theory which examines conformal invariants in quantum field theory. == Complex functions == A complex function is a function from complex numbers to complex numbers. In other words, it is a function that has a (not necessarily proper) subset of the complex numbers as a domain and the complex numbers as a codomain. Complex functions are generally assumed to have a domain that contains a nonempty open subset of the complex plane. For any complex function, the values z {\\displaystyle z} from the domain and their images f ( z ) {\\displaystyle f(z)} in the range may be separated into real and imaginary parts: z = x + i y and f ( z ) = f ( x + i y ) = u ( x , y ) + i v ( x , y ) , {\\displaystyle z=x+iy\\quad {\\text{ and }}\\quad f(z)=f(x+iy)=u(x,y)+iv(x,y),} where x , y , u ( x , y ) , v ( x , y ) {\\displaystyle x,y,u(x,y),v(x,y)} are all real-valued. In other words, a complex function f : C → C {\\displaystyle f:\\mathbb {C} \\to \\mathbb {C} } may be decomposed into u : R 2 → R {\\displaystyle u:\\mathbb {R} ^{2}\\to \\mathbb {R} \\quad } and v : R 2 → R , {\\displaystyle \\quad v:\\mathbb {R} ^{2}\\to \\mathbb {R} ,} i.e., into two real-valued functions ( u {\\displaystyle u} , v {\\displaystyle v} ) of two real variables ( x {\\displaystyle x} , y {\\displaystyle y} ). Similarly, any complex-valued function f on an arbitrary set X (is isomorphic to, and therefore, in that sense, it) can be considered as an ordered pair of two real-valued functions: (Re f, Im f) or, alternatively, as a vector-valued function from X into R 2 . {\\displaystyle \\mathbb {R} ^{2}.} Some properties of complex-valued functions (such as continuity) are nothing more than the corresponding properties of vector valued functions of two real variables. Other concepts of complex analysis, such as differentiability, are direct generalizations of the similar concepts for real functions, but may have very different properties. In particular, every differentiable complex function is analytic (see next section), and two differentiable functions that are equal in a neighborhood of a point are equal on the intersection of their domain (if the domains are connected). The latter property is the basis of the principle of analytic continuation which allows extending every real analytic function in a unique way for getting a complex analytic function whose domain is the whole complex plane with a finite number of curve arcs removed. Many basic and special complex functions are defined in this way, including the complex exponential function, complex logarithm functions, and trigonometric functions. == Holomorphic functions == Complex functions that are differentiable at every point of an open subset Ω {\\displaystyle \\Omega } of the complex plane are said to be holomorphic on Ω {\\displaystyle \\Omega } . In the context of complex analysis, the derivative of f {\\displaystyle f} at z 0 {\\displaystyle z_{0}} is defined to be f ′ ( z 0 ) = lim z → z 0 f ( z ) − f ( z 0 ) z − z 0 . {\\displaystyle f'(z_{0})=\\lim _{z\\to z_{0}}{\\frac {f(z)-f(z_{0})}{z-z_{0}}}.} Superficially, this definition is formally analogous to that of the derivative of a real function. However, complex derivatives and differentiable functions behave in significantly different ways compared to their real counterparts. In particular, for this limit to exist, the value of the difference quotient must approach the same complex number, regardless of the manner in which we approach z 0 {\\displaystyle z_{0}} in the complex plane. Consequently, complex differentiability has much stronger implications than real differentiability. For instance, holomorphic functions are infinitely differentiable, whereas the existence of the nth derivative need not imply the existence of the (n + 1)th derivative for real functions. Furthermore, all holomorphic functions satisfy the stronger condition of analyticity, meaning that the function is, at every point in its domain, locally given by a convergent power series. In essence, this means that functions holomorphic on Ω {\\displaystyle \\Omega } can be approximated arbitrarily well by polynomials in some neighborhood of every point in Ω {\\displaystyle \\Omega } . This stands in sharp contrast to differentiable real functions; there are infinitely differentiable real functions that are nowhere analytic; see Non-analytic smooth function § A smooth function which is nowhere real analytic. Most elementary functions, including the exponential function, the trigonometric functions, and all polynomial functions, extended appropriately to complex arguments as functions C → C {\\displaystyle \\mathbb {C} \\to \\mathbb {C} } , are holomorphic over the entire complex plane, making them entire functions, while rational functions p / q {\\displaystyle p/q} , where p and q are polynomials, are holomorphic on domains that exclude points where q is zero. Such functions that are holomorphic everywhere except a set of isolated points are known as meromorphic functions. On the other hand, the functions z ↦ ℜ ( z ) {\\displaystyle z\\mapsto \\Re (z)} , z ↦ | z | {\\displaystyle z\\mapsto |z|} , and z ↦ z ¯ {\\displaystyle z\\mapsto {\\bar {z}}} are not holomorphic anywhere on the complex plane, as can be shown by their failure to satisfy the Cauchy–Riemann conditions (see below). An important property of holomorphic functions is the relationship between the partial derivatives of their real and imaginary components, known as the Cauchy–Riemann conditions. If f : C → C {\\displaystyle f:\\mathbb {C} \\to \\mathbb {C} } , defined by f ( z ) = f ( x + i y ) = u ( x , y ) + i v ( x , y ) {\\displaystyle f(z)=f(x+iy)=u(x,y)+iv(x,y)} , where x , y , u ( x , y ) , v ( x , y ) ∈ R {\\displaystyle x,y,u(x,y),v(x,y)\\in \\mathbb {R} } , is holomorphic on a region Ω {\\displaystyle \\Omega } , then for all z 0 ∈ Ω {\\displaystyle z_{0}\\in \\Omega } , ∂ f ∂ z ¯ ( z 0 ) = 0 , where ∂ ∂ z ¯ := 1 2 ( ∂ ∂ x + i ∂ ∂ y ) . {\\displaystyle {\\frac {\\partial f}{\\partial {\\bar {z}}}}(z_{0})=0,\\ {\\text{where }}{\\frac {\\partial }{\\partial {\\bar {z}}}}\\mathrel {:=} {\\frac {1}{2}}\\left({\\frac {\\partial }{\\partial x}}+i{\\frac {\\partial }{\\partial y}}\\right).} In terms of the real and imaginary parts of the function, u and v, this is equivalent to the pair of equations u x = v y {\\displaystyle u_{x}=v_{y}} and u y = − v x {\\displaystyle u_{y}=-v_{x}} , where the subscripts indicate partial differentiation. However, the Cauchy–Riemann conditions do not characterize holomorphic functions, without additional continuity conditions (see Looman–Menchoff theorem). Holomorphic functions exhibit some remarkable features. For instance, Picard's theorem asserts that the range of an entire function can take only three possible forms: C {\\displaystyle \\mathbb {C} } , C ∖ { z 0 } {\\displaystyle \\mathbb {C} \\setminus \\{z_{0}\\}} , or { z 0 } {\\displaystyle \\{z_{0}\\}} for some z 0 ∈ C {\\displaystyle z_{0}\\in \\mathbb {C} } . In other words, if two distinct complex numbers z {\\displaystyle z} and w {\\displaystyle w} are not in the range of an entire function f {\\displaystyle f} , then f {\\displaystyle f} is a constant function. Moreover, a holomorphic function on a connected open set is determined by its restriction to any nonempty open subset. == Conformal map == == Major results == One of the central tools in complex analysis is the line integral. The line integral around a closed path of a function that is holomorphic everywhere inside the area bounded by the closed path is always zero, as is stated by the Cauchy integral theorem. The values of such a holomorphic function inside a disk can be computed by a path integral on the disk's boundary (as shown in Cauchy's integral formula). Path integrals in the complex plane are often used to determine complicated real integrals, and here the theory of residues among others is applicable (see methods of contour integration). A \"pole\" (or isolated singularity) of a function is a point where the function's value becomes unbounded, or \"blows up\". If a function has such a pole, then one can compute the function's residue there, which can be used to compute path integrals involving the function; this is the content of the powerful residue theorem. The remarkable behavior of holomorphic functions near essential singularities is described by Picard's theorem. Functions that have only poles but no essential singularities are called meromorphic. Laurent series are the complex-valued equivalent to Taylor series, but can be used to study the behavior of functions near singularities through infinite sums of more well understood functions, such as polynomials. A bounded function that is holomorphic in the entire complex plane must be constant; this is Liouville's theorem. It can be used to provide a natural and short proof for the fundamental theorem of algebra which states that the field of complex numbers is algebraically closed. If a function is holomorphic throughout a connected domain then its values are fully determined by its values on any smaller subdomain. The function on the larger domain is said to be analytically continued from its values on the smaller domain. This allows the extension of the definition of functions, such as the Riemann zeta function, which are initially defined in terms of infinite sums that converge only on limited domains to almost the entire complex plane. Sometimes, as in the case of the natural logarithm, it is impossible to analytically continue a holomorphic function to a non-simply connected domain in the complex plane but it is possible to extend it to a holomorphic function on a closely related surface known as a Riemann surface. All this refers to complex analysis in one variable. There is also a very rich theory of complex analysis in more than one complex dimension in which the analytic properties such as power series expansion carry over whereas most of the geometric properties of holomorphic functions in one complex dimension (such as conformality) do not carry over. The Riemann mapping theorem about the conformal relationship of certain domains in the complex plane, which may be the most important result in the one-dimensional theory, fails dramatically in higher dimensions. A major application of certain complex spaces is in quantum mechanics as wave functions. == See also == Complex geometry Hypercomplex analysis Vector calculus List of complex analysis topics Monodromy theorem Riemann–Roch theorem Runge's theorem == References == == Sources == Ablowitz, M. J. & A. S. Fokas, Complex Variables: Introduction and Applications (Cambridge, 2003). Ahlfors, L., Complex Analysis (McGraw-Hill, 1953). Cartan, H., Théorie élémentaire des fonctions analytiques d'une ou plusieurs variables complexes. (Hermann, 1961). English translation, Elementary Theory of Analytic Functions of One or Several Complex Variables. (Addison-Wesley, 1963). Carathéodory, C., Funktionentheorie. (Birkhäuser, 1950). English translation, Theory of Functions of a Complex Variable (Chelsea, 1954). [2 volumes.] Carrier, G. F., M. Krook, & C. E. Pearson, Functions of a Complex Variable: Theory and Technique. (McGraw-Hill, 1966). Conway, J. B., Functions of One Complex Variable. (Springer, 1973). Fisher, S., Complex Variables. (Wadsworth & Brooks/Cole, 1990). Forsyth, A., Theory of Functions of a Complex Variable (Cambridge, 1893). Freitag, E. & R. Busam, Funktionentheorie. (Springer, 1995). English translation, Complex Analysis. (Springer, 2005). Goursat, E., Cours d'analyse mathématique, tome 2. (Gauthier-Villars, 1905). English translation, A course of mathematical analysis, vol. 2, part 1: Functions of a complex variable. (Ginn, 1916). Henrici, P., Applied and Computational Complex Analysis (Wiley). [Three volumes: 1974, 1977, 1986.] Kreyszig, E., Advanced Engineering Mathematics. (Wiley, 1962). Lavrentyev, M. & B. Shabat, Методы теории функций комплексного переменного. (Methods of the Theory of Functions of a Complex Variable). (1951, in Russian). Markushevich, A. I., Theory of Functions of a Complex Variable, (Prentice-Hall, 1965). [Three volumes.] Marsden & Hoffman, Basic Complex Analysis. (Freeman, 1973). Needham, T., Visual Complex Analysis. (Oxford, 1997). http://usf.usfca.edu/vca/ Remmert, R., Theory of Complex Functions. (Springer, 1990). Rudin, W., Real and Complex Analysis. (McGraw-Hill, 1966). Shaw, W. T., Complex Analysis with Mathematica (Cambridge, 2006). Stein, E. & R. Shakarchi, Complex Analysis. (Princeton, 2003). Sveshnikov, A. G. & A. N. Tikhonov, Теория функций комплексной переменной. (Nauka, 1967). English translation, The Theory Of Functions Of A Complex Variable (MIR, 1978). Titchmarsh, E. C., The Theory of Functions. (Oxford, 1932). Wegert, E., Visual Complex Functions. (Birkhäuser, 2012). Whittaker, E. T. & G. N. Watson, A Course of Modern Analysis. (Cambridge, 1902). 3rd ed. (1920) == External links == Wolfram Research's MathWorld Complex Analysis Page"
+  },
+  "chunks": [
+    {
+      "id": "complexanalysis_93a2a470_c0000",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 911,
+      "content": "Complex analysis, traditionally known as the theory of functions of a complex variable, is the branch of mathematical analysis that investigates functions of complex numbers. It is helpful in many branches of mathematics, including algebraic geometry, number theory, analytic combinatorics, and applied mathematics, as well as in physics, including the branches of hydrodynamics, thermodynamics, quantum mechanics, and twistor theory. By extension, use of complex analysis also has applications in engineering fields such as nuclear, aerospace, mechanical and electrical engineering. As a differentiable function of a complex variable is equal to the sum function given by its Taylor series (that is, it is analytic), complex analysis is particularly concerned with analytic functions of a complex variable, that is, holomorphic functions. The concept can be extended to functions of several complex variables.",
+      "char_count": 910,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0001",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1052,
+      "end_char": 1750,
+      "content": "== History == Complex analysis is one of the classical branches in mathematics, with roots in the 18th century and just prior. Important mathematicians associated with complex numbers include Euler, Gauss, Riemann, Cauchy, Weierstrass, and many more in the 20th century. Complex analysis, in particular the theory of conformal mappings, has many physical applications and is also used throughout analytic number theory. In modern times, it has become very popular through a new boost from complex dynamics and the pictures of fractals produced by iterating holomorphic functions. Another important application of complex analysis is in string theory which examines conformal invariants in quantum field theory.",
+      "char_count": 710,
+      "token_estimate": 177,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0002",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Complex functions ==",
+      "heading_path": "== Complex functions ==",
+      "start_char": 1773,
+      "end_char": 2561,
+      "content": "== Complex functions == A complex function is a function from complex numbers to complex numbers. In other words, it is a function that has a (not necessarily proper) subset of the complex numbers as a domain and the complex numbers as a codomain. Complex functions are generally assumed to have a domain that contains a nonempty open subset of the complex plane. For any complex function, the values z {\\displaystyle z} from the domain and their images f ( z ) {\\displaystyle f(z)} in the range may be separated into real and imaginary parts: z = x + i y and f ( z ) = f ( x + i y ) = u ( x , y ) + i v ( x , y ) , {\\displaystyle z=x+iy\\quad {\\text{ and }}\\quad f(z)=f(x+iy)=u(x,y)+iv(x,y),} where x , y , u ( x , y ) , v ( x , y ) {\\displaystyle x,y,u(x,y),v(x,y)} are all real-valued.",
+      "char_count": 787,
+      "token_estimate": 196,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0003",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Complex functions ==",
+      "heading_path": "== Complex functions ==",
+      "start_char": 2561,
+      "end_char": 3433,
+      "content": "In other words, a complex function f : C → C {\\displaystyle f:\\mathbb {C} \\to \\mathbb {C} } may be decomposed into u : R 2 → R {\\displaystyle u:\\mathbb {R} ^{2}\\to \\mathbb {R} \\quad } and v : R 2 → R , {\\displaystyle \\quad v:\\mathbb {R} ^{2}\\to \\mathbb {R} ,} i.e., into two real-valued functions ( u {\\displaystyle u} , v {\\displaystyle v} ) of two real variables ( x {\\displaystyle x} , y {\\displaystyle y} ). Similarly, any complex-valued function f on an arbitrary set X (is isomorphic to, and therefore, in that sense, it) can be considered as an ordered pair of two real-valued functions: (Re f, Im f) or, alternatively, as a vector-valued function from X into R 2 . {\\displaystyle \\mathbb {R} ^{2}.} Some properties of complex-valued functions (such as continuity) are nothing more than the corresponding properties of vector valued functions of two real variables.",
+      "char_count": 872,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0004",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Complex functions ==",
+      "heading_path": "== Complex functions ==",
+      "start_char": 3434,
+      "end_char": 4282,
+      "content": "Other concepts of complex analysis, such as differentiability, are direct generalizations of the similar concepts for real functions, but may have very different properties. In particular, every differentiable complex function is analytic (see next section), and two differentiable functions that are equal in a neighborhood of a point are equal on the intersection of their domain (if the domains are connected). The latter property is the basis of the principle of analytic continuation which allows extending every real analytic function in a unique way for getting a complex analytic function whose domain is the whole complex plane with a finite number of curve arcs removed. Many basic and special complex functions are defined in this way, including the complex exponential function, complex logarithm functions, and trigonometric functions.",
+      "char_count": 848,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0005",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Holomorphic functions ==",
+      "heading_path": "== Holomorphic functions ==",
+      "start_char": 4287,
+      "end_char": 5192,
+      "content": "== Holomorphic functions == Complex functions that are differentiable at every point of an open subset Ω {\\displaystyle \\Omega } of the complex plane are said to be holomorphic on Ω {\\displaystyle \\Omega } . In the context of complex analysis, the derivative of f {\\displaystyle f} at z 0 {\\displaystyle z_{0}} is defined to be f ′ ( z 0 ) = lim z → z 0 f ( z ) − f ( z 0 ) z − z 0 . {\\displaystyle f'(z_{0})=\\lim _{z\\to z_{0}}{\\frac {f(z)-f(z_{0})}{z-z_{0}}}.} Superficially, this definition is formally analogous to that of the derivative of a real function. However, complex derivatives and differentiable functions behave in significantly different ways compared to their real counterparts. In particular, for this limit to exist, the value of the difference quotient must approach the same complex number, regardless of the manner in which we approach z 0 {\\displaystyle z_{0}} in the complex plane.",
+      "char_count": 904,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0006",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Holomorphic functions ==",
+      "heading_path": "== Holomorphic functions ==",
+      "start_char": 5192,
+      "end_char": 6094,
+      "content": "Consequently, complex differentiability has much stronger implications than real differentiability. For instance, holomorphic functions are infinitely differentiable, whereas the existence of the nth derivative need not imply the existence of the (n + 1)th derivative for real functions. Furthermore, all holomorphic functions satisfy the stronger condition of analyticity, meaning that the function is, at every point in its domain, locally given by a convergent power series. In essence, this means that functions holomorphic on Ω {\\displaystyle \\Omega } can be approximated arbitrarily well by polynomials in some neighborhood of every point in Ω {\\displaystyle \\Omega } . This stands in sharp contrast to differentiable real functions; there are infinitely differentiable real functions that are nowhere analytic; see Non-analytic smooth function § A smooth function which is nowhere real analytic.",
+      "char_count": 902,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0007",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Holomorphic functions ==",
+      "heading_path": "== Holomorphic functions ==",
+      "start_char": 6095,
+      "end_char": 6973,
+      "content": "Most elementary functions, including the exponential function, the trigonometric functions, and all polynomial functions, extended appropriately to complex arguments as functions C → C {\\displaystyle \\mathbb {C} \\to \\mathbb {C} } , are holomorphic over the entire complex plane, making them entire functions, while rational functions p / q {\\displaystyle p/q} , where p and q are polynomials, are holomorphic on domains that exclude points where q is zero. Such functions that are holomorphic everywhere except a set of isolated points are known as meromorphic functions. On the other hand, the functions z ↦ ℜ ( z ) {\\displaystyle z\\mapsto \\Re (z)} , z ↦ | z | {\\displaystyle z\\mapsto |z|} , and z ↦ z ¯ {\\displaystyle z\\mapsto {\\bar {z}}} are not holomorphic anywhere on the complex plane, as can be shown by their failure to satisfy the Cauchy–Riemann conditions (see below).",
+      "char_count": 878,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0008",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Holomorphic functions ==",
+      "heading_path": "== Holomorphic functions ==",
+      "start_char": 6974,
+      "end_char": 7599,
+      "content": "An important property of holomorphic functions is the relationship between the partial derivatives of their real and imaginary components, known as the Cauchy–Riemann conditions. If f : C → C {\\displaystyle f:\\mathbb {C} \\to \\mathbb {C} } , defined by f ( z ) = f ( x + i y ) = u ( x , y ) + i v ( x , y ) {\\displaystyle f(z)=f(x+iy)=u(x,y)+iv(x,y)} , where x , y , u ( x , y ) , v ( x , y ) ∈ R {\\displaystyle x,y,u(x,y),v(x,y)\\in \\mathbb {R} } , is holomorphic on a region Ω {\\displaystyle \\Omega } , then for all z 0 ∈ Ω {\\displaystyle z_{0}\\in \\Omega } , ∂ f ∂ z ¯ ( z 0 ) = 0 , where ∂ ∂ z ¯ := 1 2 ( ∂ ∂ x + i ∂ ∂ y ) .",
+      "char_count": 625,
+      "token_estimate": 156,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0009",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Holomorphic functions ==",
+      "heading_path": "== Holomorphic functions ==",
+      "start_char": 7600,
+      "end_char": 8592,
+      "content": "{\\displaystyle {\\frac {\\partial f}{\\partial {\\bar {z}}}}(z_{0})=0,\\ {\\text{where }}{\\frac {\\partial }{\\partial {\\bar {z}}}}\\mathrel {:=} {\\frac {1}{2}}\\left({\\frac {\\partial }{\\partial x}}+i{\\frac {\\partial }{\\partial y}}\\right).} In terms of the real and imaginary parts of the function, u and v, this is equivalent to the pair of equations u x = v y {\\displaystyle u_{x}=v_{y}} and u y = − v x {\\displaystyle u_{y}=-v_{x}} , where the subscripts indicate partial differentiation. However, the Cauchy–Riemann conditions do not characterize holomorphic functions, without additional continuity conditions (see Looman–Menchoff theorem). Holomorphic functions exhibit some remarkable features. For instance, Picard's theorem asserts that the range of an entire function can take only three possible forms: C {\\displaystyle \\mathbb {C} } , C ∖ { z 0 } {\\displaystyle \\mathbb {C} \\setminus \\{z_{0}\\}} , or { z 0 } {\\displaystyle \\{z_{0}\\}} for some z 0 ∈ C {\\displaystyle z_{0}\\in \\mathbb {C} } .",
+      "char_count": 992,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0010",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Holomorphic functions ==",
+      "heading_path": "== Holomorphic functions ==",
+      "start_char": 8593,
+      "end_char": 8917,
+      "content": "In other words, if two distinct complex numbers z {\\displaystyle z} and w {\\displaystyle w} are not in the range of an entire function f {\\displaystyle f} , then f {\\displaystyle f} is a constant function. Moreover, a holomorphic function on a connected open set is determined by its restriction to any nonempty open subset.",
+      "char_count": 324,
+      "token_estimate": 81,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0011",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Major results ==",
+      "heading_path": "== Major results ==",
+      "start_char": 8930,
+      "end_char": 9873,
+      "content": "== Major results == One of the central tools in complex analysis is the line integral. The line integral around a closed path of a function that is holomorphic everywhere inside the area bounded by the closed path is always zero, as is stated by the Cauchy integral theorem. The values of such a holomorphic function inside a disk can be computed by a path integral on the disk's boundary (as shown in Cauchy's integral formula). Path integrals in the complex plane are often used to determine complicated real integrals, and here the theory of residues among others is applicable (see methods of contour integration). A \"pole\" (or isolated singularity) of a function is a point where the function's value becomes unbounded, or \"blows up\". If a function has such a pole, then one can compute the function's residue there, which can be used to compute path integrals involving the function; this is the content of the powerful residue theorem.",
+      "char_count": 942,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0012",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Major results ==",
+      "heading_path": "== Major results ==",
+      "start_char": 9873,
+      "end_char": 10808,
+      "content": "The remarkable behavior of holomorphic functions near essential singularities is described by Picard's theorem. Functions that have only poles but no essential singularities are called meromorphic. Laurent series are the complex-valued equivalent to Taylor series, but can be used to study the behavior of functions near singularities through infinite sums of more well understood functions, such as polynomials. A bounded function that is holomorphic in the entire complex plane must be constant; this is Liouville's theorem. It can be used to provide a natural and short proof for the fundamental theorem of algebra which states that the field of complex numbers is algebraically closed. If a function is holomorphic throughout a connected domain then its values are fully determined by its values on any smaller subdomain. The function on the larger domain is said to be analytically continued from its values on the smaller domain.",
+      "char_count": 935,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0013",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Major results ==",
+      "heading_path": "== Major results ==",
+      "start_char": 10809,
+      "end_char": 11664,
+      "content": "This allows the extension of the definition of functions, such as the Riemann zeta function, which are initially defined in terms of infinite sums that converge only on limited domains to almost the entire complex plane. Sometimes, as in the case of the natural logarithm, it is impossible to analytically continue a holomorphic function to a non-simply connected domain in the complex plane but it is possible to extend it to a holomorphic function on a closely related surface known as a Riemann surface. All this refers to complex analysis in one variable. There is also a very rich theory of complex analysis in more than one complex dimension in which the analytic properties such as power series expansion carry over whereas most of the geometric properties of holomorphic functions in one complex dimension (such as conformality) do not carry over.",
+      "char_count": 855,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "complexanalysis_93a2a470_c0014",
+      "article_id": "complexanalysis_93a2a470",
+      "section": "== Major results ==",
+      "heading_path": "== Major results ==",
+      "start_char": 11665,
+      "end_char": 11966,
+      "content": "The Riemann mapping theorem about the conformal relationship of certain domains in the complex plane, which may be the most important result in the one-dimensional theory, fails dramatically in higher dimensions. A major application of certain complex spaces is in quantum mechanics as wave functions.",
+      "char_count": 301,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 8,
+    "items": [
+      {
+        "question": "According to Picard's theorem, what are the three possible forms for the range of an entire function?",
+        "answer": "Picard's theorem asserts that the range of an entire function can only take one of three possible forms: the entire complex plane (C), the complex plane excluding a single point (C \\ {z₀}), or a single point ({z₀}).",
+        "related_chunk_ids": [
+          "complexanalysis_93a2a470_c0009"
+        ],
+        "category": "FACTUAL"
+      },
+      {
+        "question": "What information is provided about == Major results ==?",
+        "answer": "The text provides information about == Major results == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "complexanalysis_93a2a470_c0011"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "complexanalysis_93a2a470_c0000"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What is a complex function, and how are specific types of these functions used in a modern application of complex analysis?",
+        "answer": "A complex function is a function that maps complex numbers to complex numbers, where both the domain and codomain values can be separated into real and imaginary parts. Complex analysis is particularly concerned with a type of complex function called a holomorphic function. A modern application of the field involves iterating these holomorphic functions to produce pictures of fractals.",
+        "related_chunk_ids": [
+          "complexanalysis_93a2a470_c0000",
+          "complexanalysis_93a2a470_c0001",
+          "complexanalysis_93a2a470_c0002"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "How do complex functions compare to real functions regarding their basic structure and the concept of differentiability?",
+        "answer": "A complex function can be decomposed into a pair of two real-valued functions, and some of its properties, like continuity, are analogous to those of vector-valued functions of two real variables. However, the concept of differentiability in complex analysis has very different properties from its real counterpart. Although the formal definition of a derivative is similar, for a complex function to be differentiable, the limit must be the same regardless of the direction of approach in the complex plane. This stricter condition means that every differentiable complex function is also analytic, a property not shared by all differentiable real functions.",
+        "related_chunk_ids": [
+          "complexanalysis_93a2a470_c0003",
+          "complexanalysis_93a2a470_c0004",
+          "complexanalysis_93a2a470_c0005"
+        ],
+        "category": "INTERPRETATION"
+      },
+      {
+        "question": "Explain how a complex function can be represented using real-valued functions, and contrast how the properties of continuity and differentiability for complex functions relate to their real-valued counterparts.",
+        "answer": "A complex function f(z) can be decomposed into real and imaginary parts, expressed as f(x+iy) = u(x,y) + iv(x,y). This means a complex function can be viewed as an ordered pair of two real-valued functions, (u, v), of two real variables, (x, y). Some properties, like continuity, are direct translations from their real-valued counterparts, being equivalent to the properties of vector-valued functions of two real variables. In contrast, other concepts like differentiability, while being generalizations, have very different properties in complex analysis; for instance, every differentiable complex function is also analytic, which is not the case for real functions.",
+        "related_chunk_ids": [
+          "complexanalysis_93a2a470_c0002",
+          "complexanalysis_93a2a470_c0003",
+          "complexanalysis_93a2a470_c0004"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "What defines a holomorphic function, and what are two major implications of this property that distinguish it from real differentiability?",
+        "answer": "A holomorphic function is a complex function that is differentiable at every point of an open subset of the complex plane. This property has much stronger implications than real differentiability. Firstly, holomorphic functions are infinitely differentiable, whereas the existence of an nth derivative for a real function does not guarantee the existence of the (n+1)th. Secondly, all holomorphic functions are analytic, meaning they are locally given by a convergent power series, which is a property not shared by all infinitely differentiable real functions.",
+        "related_chunk_ids": [
+          "complexanalysis_93a2a470_c0005",
+          "complexanalysis_93a2a470_c0006"
+        ],
+        "category": "LONG_ANSWER"
+      },
+      {
+        "question": "How does the theory of complex analysis in one dimension differ from that in multiple dimensions regarding geometric properties, and what is a major example of this difference?",
+        "answer": "While analytic properties like power series expansion carry over from one to multiple complex dimensions, most geometric properties of holomorphic functions, such as conformality, do not. A major example of this is the Riemann mapping theorem, a significant result about the conformal relationship of domains in one-dimensional theory, which fails dramatically in higher dimensions.",
+        "related_chunk_ids": [
+          "complexanalysis_93a2a470_c0013",
+          "complexanalysis_93a2a470_c0014"
+        ],
+        "category": "INTERPRETATION"
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:45.833Z",
+    "content_format": "markdown",
+    "total_chunks": 15,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

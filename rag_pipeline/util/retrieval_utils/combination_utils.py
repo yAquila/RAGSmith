@@ -14,7 +14,6 @@ class ScoreCombiner:
         results_list: List[List[Dict[str, Any]]], 
         weights: Union[List[float], None] = None,
         method_names: Union[List[str], None] = None,
-        excessive_k: int = 60
     ) -> List[Dict[str, Any]]:
         """
         Combine multiple result lists using convex combination of scores.
@@ -25,7 +24,6 @@ class ScoreCombiner:
             weights: List of weights for each method. If None, equal weights are used.
                     Must sum to 1.0 if provided.
             method_names: Optional names for each method (for metadata tracking)
-            excessive_k: Excessive k for hybrid search
         Returns:
             Combined results sorted by combined score
         """
@@ -125,7 +123,6 @@ class RankFusionCombiner:
     @staticmethod
     def reciprocal_rank_fusion(
         results_list: List[List[Dict[str, Any]]], 
-        excessive_k: int = 60,
         method_names: Union[List[str], None] = None
     ) -> List[Dict[str, Any]]:
         """
@@ -134,7 +131,6 @@ class RankFusionCombiner:
         Args:
             results_list: List of result lists, each containing dicts with keys 
                          ['doc_id', 'content', 'score', 'metadata']
-            excessive_k: Excessive k for hybrid search
             method_names: Optional names for each method (for metadata tracking)
             
         Returns:
@@ -181,7 +177,7 @@ class RankFusionCombiner:
                 
                 # Add contribution from each method that found this document
                 for method_name, rank in doc_info['method_ranks'].items():
-                    contribution = 1.0 / (excessive_k + rank)
+                    contribution = 1.0 / (60 + rank)
                     rrf_score += contribution
                     method_contributions[method_name] = {
                         'rank': rank,
@@ -204,7 +200,6 @@ class RankFusionCombiner:
                 # Add RRF metadata
                 result['metadata']['combination_info'] = {
                     'method': 'reciprocal_rank_fusion',
-                    'excessive_k': excessive_k,
                     'method_contributions': doc_info['method_contributions'],
                     'methods_found_in': list(doc_info['method_ranks'].keys()),
                     'final_score': doc_info['rrf_score']
@@ -225,7 +220,6 @@ class RankFusionCombiner:
     @staticmethod
     def borda_count_fusion(
         results_list: List[List[Dict[str, Any]]], 
-        excessive_k: int = 60,
         method_names: Union[List[str], None] = None
     ) -> List[Dict[str, Any]]:
         """
@@ -234,7 +228,6 @@ class RankFusionCombiner:
         Args:
             results_list: List of result lists
             method_names: Optional names for each method
-            excessive_k: Excessive k for hybrid search
         Returns:
             Combined results sorted by Borda count score
         """
@@ -332,14 +325,13 @@ class HybridUtils:
         method_names: List[str],
         weights: Union[List[float], None] = None,
         normalization_method: str = "minmax",
-        excessive_k: int = 60
     ) -> List[Dict[str, Any]]:
         """Combine results using convex combination"""
         try:
             # Normalize scores before combination if requested
             results_list = HybridUtils.normalize_results_list(results_list, normalization_method)
             
-            return ScoreCombiner.convex_combination(results_list, weights, method_names, excessive_k)
+            return ScoreCombiner.convex_combination(results_list, weights, method_names)
             
         except Exception as e:
             logger.error(f"Convex combination failed: {e}")
@@ -349,11 +341,10 @@ class HybridUtils:
     def combine_with_rrf(
         results_list: List[List[Dict[str, Any]]], 
         method_names: List[str],
-        excessive_k: int = 60
     ) -> List[Dict[str, Any]]:
         """Combine results using Reciprocal Rank Fusion"""
         try:
-            return RankFusionCombiner.reciprocal_rank_fusion(results_list, excessive_k, method_names)
+            return RankFusionCombiner.reciprocal_rank_fusion(results_list, method_names)
             
         except Exception as e:
             logger.error(f"RRF combination failed: {e}")
@@ -363,11 +354,10 @@ class HybridUtils:
     def combine_with_borda_count(
         results_list: List[List[Dict[str, Any]]], 
         method_names: List[str],
-        excessive_k: int = 60
     ) -> List[Dict[str, Any]]:
         """Combine results using Borda Count"""
         try:
-            return RankFusionCombiner.borda_count_fusion(results_list, excessive_k, method_names)
+            return RankFusionCombiner.borda_count_fusion(results_list, method_names)
             
         except Exception as e:
             logger.error(f"Borda count combination failed: {e}")
