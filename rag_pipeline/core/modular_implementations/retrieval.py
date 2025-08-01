@@ -3,6 +3,7 @@ import logging, requests, json
 from typing import List, Dict, Any, Optional, TypedDict
 from abc import ABC, abstractmethod
 from neo4j import GraphDatabase
+import pandas as pd
 
 from rag_pipeline.core.modular_framework import (
     RetrievalComponent, Document, Query
@@ -22,34 +23,52 @@ class SimpleVectorRAG(RetrievalComponent):
     def __init__(self, config: Dict[str, Any]):
         super().__init__(config)
         self.vectorstore = None
-        self._setup_vectorstore()
     
-    def _setup_vectorstore(self):
+    def _setup_vectorstore(self, documents: Optional[List[Document]] = None):
         """Setup the vector store"""
-        try:
-            from rag_pipeline.util.vectorstore.qdrant_store import QdrantVectorStore
-            from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_folder
-            import os
-            
-            # Use embedding model from config
-            embedding_model = self.config.get("embedding_model", "mxbai-embed-large")
-            
-            # Use dataset path from config or default
-            dataset_path = self.config.get("dataset_path")
-            if not dataset_path:
-                dataset_path = os.path.join(
-                    "rag_pipeline",
-                    "default_datasets",
-                    "cleaned_gen_programming_5"
-                )
-            
-            # Generate hash from the folder
-            dataset_hash = generate_dataset_hash_from_folder(dataset_path)
-            self.vectorstore = QdrantVectorStore(embedding_model, dataset_hash)
-            
-        except Exception as e:
-            logger.error(f"Failed to setup vectorstore: {e}")
-            raise
+
+        from rag_pipeline.util.vectorstore.qdrant_store import QdrantVectorStore
+        
+        # Use embedding model from config
+        embedding_model = self.config.get("embedding_model", "mxbai-embed-large")
+
+        if documents is not None:
+            try:
+                docs_data = []
+                for doc in documents:
+                    docs_data.append({
+                        'text': doc.content,
+                        'doc_id': doc.doc_id,
+                        'metadata': doc.metadata or {}
+                    })
+                
+                docs_df = pd.DataFrame(docs_data)
+                dataset_hash = QdrantVectorStore._generate_dataset_hash(docs_df)
+                self.vectorstore = QdrantVectorStore(embedding_model, dataset_hash)
+            except Exception as e:
+                logger.error(f"Failed to setup vectorstore from documents: {e}")
+                raise
+        else:
+            try:
+                from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_folder
+                import os
+
+                # Use dataset path from config or default
+                dataset_path = self.config.get("dataset_path")
+                if not dataset_path:
+                    dataset_path = os.path.join(
+                        "rag_pipeline",
+                        "default_datasets",
+                        "cleaned_gen_programming_5"
+                    )
+                
+                # Generate hash from the folder
+                dataset_hash = generate_dataset_hash_from_folder(dataset_path)
+                self.vectorstore = QdrantVectorStore(embedding_model, dataset_hash)
+                
+            except Exception as e:
+                logger.error(f"Failed to setup vectorstore: {e}")
+                raise
     
     async def retrieve(self, query: Query, k: Optional[int] = None) -> RetrievalResult:
         """Retrieve documents using vector similarity search"""
@@ -97,6 +116,8 @@ class SimpleVectorRAG(RetrievalComponent):
         """Index documents in the vector store"""
         try:
             import pandas as pd
+            if self.vectorstore is None:
+                self._setup_vectorstore(documents)
             
             # Convert to pandas DataFrame for existing indexing logic
             docs_data = []

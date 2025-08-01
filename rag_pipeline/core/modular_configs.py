@@ -36,10 +36,13 @@ class PreEmbeddingConfig(BaseModel):
     child_chunk_size: int = 512
     
     # HyPE (Hypothetical Passage Embeddings) settings
-    use_hypothetical_passages: bool = False
-    generate_synthetic_queries: bool = False
-    synthetic_queries_per_doc: int = 3
-
+    num_hype_questions: int = 3
+    hype_prompt: str = """
+    Analyze the input text and generate {num_hype_questions} essential questions that, when answered, capture the main points of the text. Each question should be one line, without numbering or prefixes.
+    Input Text: {document}
+    {num_hype_questions} Essential Questions:
+    """
+    hype_model: str = "gemma3:4b"
 
 class QueryExpansionConfig(BaseModel):
     """Configuration for query expansion/refinement techniques"""
@@ -381,6 +384,7 @@ class ModularRAGConfig(BaseModel):
     
     # Dataset settings
     dataset_path: Optional[str] = None
+    qdrant_collection_hash: Optional[str] = None
     max_test_cases: Optional[int] = None
     eval_batch_size: int = 10
     

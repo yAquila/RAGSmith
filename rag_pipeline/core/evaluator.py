@@ -113,19 +113,30 @@ class RAGEvaluator:
                 error=str(e)
             )
     
+    def remove_duplicates(self, retrieved_doc_ids: List[str]) -> List[str]:
+        """Remove duplicates from retrieved doc ids while preserving order"""
+        seen = set()
+        result = []
+        for doc_id in retrieved_doc_ids:
+            if doc_id not in seen:
+                seen.add(doc_id)
+                result.append(doc_id)
+        return result
+
     def _evaluate_retrieval(self, test_case: RAGTestCase, retrieval_result: RetrievalResult) -> Dict[str, float]:
         """Evaluate retrieval performance"""
         if retrieval_result.error or not retrieval_result.retrieved_docs:
             return {'recall_at_k': 0.0, 'map_score': 0.0, 'ndcg_at_k': 0.0, 'mrr': 0.0}
         
         try:
-            if retrieval_result.retrieved_docs[0]["doc_id"].startswith("graph_rel") or retrieval_result.retrieved_docs[0]["doc_id"].startswith("hypergraph"):
-                retrieved_doc_ids = list(set([doc['metadata']['original_doc_id'] for doc in retrieval_result.retrieved_docs]))
+            if retrieval_result.retrieved_docs[0]["doc_id"].startswith("graph_rel") or retrieval_result.retrieved_docs[0]["doc_id"].startswith("hypergraph") or retrieval_result.retrieved_docs[0].get("metadata", {}).get("hype_doc_id", None):
+                retrieved_doc_ids = self.remove_duplicates([doc['metadata']['original_doc_id'] for doc in retrieval_result.retrieved_docs])
             else:
                 retrieved_doc_ids = [doc['doc_id'] for doc in retrieval_result.retrieved_docs]
             relevant_doc_ids = test_case.relevant_doc_ids
             logger.info(f"Retrieved doc ids: {retrieved_doc_ids}")
             logger.info(f"Relevant doc ids: {relevant_doc_ids}")
+            # logger.info(f"Retrieval result: {retrieval_result.retrieved_docs}")
             # Convert to strings for comparison
             retrieved_doc_ids = [str(doc_id) for doc_id in retrieved_doc_ids if doc_id is not None]
             relevant_doc_ids_str = [str(doc_id) for doc_id in relevant_doc_ids]
