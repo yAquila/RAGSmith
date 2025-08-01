@@ -112,7 +112,7 @@ class TreeSummarize(PassageCompressComponent):
         )
         return result
 
-class LLMSummarize(PassageCompressComponent):
+class LLMSummarizeEachChunk(PassageCompressComponent):
     """Compress passages using LLM"""
     def __init__(self, config: Dict[str, Any]):
         super().__init__(config)
@@ -178,3 +178,38 @@ You are an efficient Document Compressor. Your task is to read the document prov
             llm_output_token_count=total_eval_count
         )
         return result
+
+class LLMLinguaCompress(PassageCompressComponent):
+    """Compress passages using LLMLingua"""
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        self.llm_lingua = None
+        self._setup_client()
+
+    def _setup_client(self):
+        """Setup the appropriate LLM client"""
+        from llmlingua import PromptCompressor
+        self.llm_lingua = PromptCompressor(model_name=self.config.get("llm_lingua_model", "microsoft/llmlingua-2-xlm-roberta-large-meetingbank"), use_llmlingua2=True)
+
+    
+    async def compress_passages(self, documents: List[Document], query: Query) -> PassageCompressResult:
+        """Compress passages using LLMLingua"""
+
+        contents = [doc.content for doc in documents]
+        result = self.llm_lingua.compress_prompt(context=contents, question=query.processed_text, rate=self.config.get("llm_lingua_compression_rate", 0.33))
+        logger.info(f"LLMLinguaCompress compression rate: {result['rate']}")
+        compressed_docs = []
+        for i, compressed_prompt in enumerate(result['compressed_prompt_list']):
+            compressed_docs.append(Document(
+                doc_id=documents[i].doc_id,
+                content=compressed_prompt,
+                score=documents[i].score,
+                metadata=documents[i].metadata
+            ))
+        llm_input_token_count = result['origin_tokens']
+        llm_output_token_count = result['compressed_tokens']
+        return PassageCompressResult(
+            documents=compressed_docs,
+            embedding_token_count=0.0,
+            llm_input_token_count=llm_input_token_count,
+            llm_output_token_count=llm_output_token_count)

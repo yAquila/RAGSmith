@@ -4,7 +4,7 @@ from rag_pipeline.core.modular_implementations.retrieval import SimpleVectorRAG,
 from rag_pipeline.core.modular_implementations.passage_augment import NonePassageAugment, PrevNextAugmenter, RelevantSegmentExtractor, PassageAugmentResult
 from rag_pipeline.core.modular_implementations.passage_rerank import NonePassageRerank, CrossEncoderRerank, LLMRerank, CELLM_ParallelRerank, PassageRerankResult
 from rag_pipeline.core.modular_implementations.passage_filter import SimpleThresholdFilter, SimilarityThresholdFilter, PassageFilterResult
-from rag_pipeline.core.modular_implementations.passage_compress import NonePassageCompress, TreeSummarize, LLMSummarize, PassageCompressResult
+from rag_pipeline.core.modular_implementations.passage_compress import NonePassageCompress, TreeSummarize, LLMSummarizeEachChunk, LLMLinguaCompress, PassageCompressResult
 from rag_pipeline.core.modular_implementations.prompt_maker import SimpleListingPromptMaker, LongContextReorder, PromptMakerResult
 from rag_pipeline.core.modular_implementations.generator import LLMGenerator, MultiLLMGenerator, GeneratorResult
 from rag_pipeline.core.modular_implementations.post_generation import NonePostGeneration, ReflectionRevising, PostGenerationResult
@@ -19,7 +19,7 @@ COMPONENT_REGISTRY = {
         "simple_multi_query": SimpleMultiQuery,
         "decomposition": Decomposition,
         "rag_fusion": RAGFusion,
-        "hyde": HyDE,
+        "hyde": HyDE,   
         "step_back_prompting": StepBackPrompting,
     },
     "retrieval": {
@@ -47,7 +47,8 @@ COMPONENT_REGISTRY = {
     "passage_compress": {
         "none": NonePassageCompress,
         "tree_summarize": TreeSummarize,
-        "llm_summarize": LLMSummarize,
+        "llm_summarize": LLMSummarizeEachChunk,
+        "llm_lingua": LLMLinguaCompress,
     },
     "prompt_maker": {
         "simple_listing": SimpleListingPromptMaker,
