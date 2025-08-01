@@ -279,6 +279,10 @@ class PassageCompressConfig(BaseModel):
     llm_summarize_max_tokens: int = 500
     llm_summarize_temperature: float = 0.1
     
+    # LLMLingua settings
+    llm_lingua_model: str = "microsoft/llmlingua-2-xlm-roberta-large-meetingbank"
+    llm_lingua_compression_rate: float = 0.33
+
 
 class PromptMakerConfig(BaseModel):
     """Configuration for prompt construction techniques"""

@@ -201,6 +201,13 @@ async def run_rag_evaluation():
             #     tree_summarize_model="gemma3:4b",
             #     max_fan_in=3
             # )
+            PassageCompressConfig(
+                name="llm_lingua",
+                enabled=True,
+                technique="llm_lingua",
+                llm_lingua_model="microsoft/llmlingua-2-xlm-roberta-large-meetingbank",
+                llm_lingua_compression_rate=0.33
+            )   
         ],
 
         # Prompt maker: one config
@@ -360,7 +367,7 @@ async def run_rag_evaluation():
 
         # Dataset/global settings
         dataset_path=None,
-        max_test_cases=3,
+        max_test_cases=20,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,
