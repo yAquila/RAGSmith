@@ -162,12 +162,14 @@ class QdrantVectorStore:
             logger.error(f"Error creating collection: {e}")
             raise
     
-    def _generate_doc_hash(self, text: str, doc_id: str) -> str:
+    @staticmethod
+    def _generate_doc_hash(text: str, doc_id: str) -> str:
         """Generate a unique hash for a document"""
         content = f"{doc_id}:{text}"
         return hashlib.md5(content.encode()).hexdigest()
     
-    def _generate_dataset_hash(self, docs_df: pd.DataFrame) -> str:
+    @staticmethod
+    def _generate_dataset_hash(docs_df: pd.DataFrame) -> str:
         """Generate a hash for the entire dataset to detect changes"""
         # Create a hash based on the content of all documents
         content_hashes = []
@@ -191,7 +193,7 @@ class QdrantVectorStore:
                 doc_id = str(idx)
                 logger.warning(f"No doc_id or chunk_id found for doc {idx}")
                 logger.info(f"Metadata: {metadata}")
-            content_hashes.append(self._generate_doc_hash(text, doc_id))
+            content_hashes.append(QdrantVectorStore._generate_doc_hash(text, doc_id))
         
         # Sort and combine all hashes to create dataset hash
         content_hashes.sort()
@@ -233,7 +235,7 @@ class QdrantVectorStore:
                 }
             
             # Check if we have stored the dataset hash in metadata
-            dataset_hash = self._generate_dataset_hash(docs_df)
+            dataset_hash = QdrantVectorStore._generate_dataset_hash(docs_df)
             # Try to get metadata point
             try:
                 metadata_point = self.client.retrieve(
@@ -462,7 +464,7 @@ class QdrantVectorStore:
                 docs_to_index = docs_df
             
             # Generate dataset hash for tracking
-            dataset_hash = self._generate_dataset_hash(docs_df)
+            dataset_hash = QdrantVectorStore._generate_dataset_hash(docs_df)
             points = []
             
             # Add/update dataset metadata point (only if not resuming or if this is the first time)
