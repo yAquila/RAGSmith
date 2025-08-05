@@ -34,7 +34,8 @@ async def run_rag_evaluation():
     
     # Example ModularRAGConfig with multiple generator configs
     config = ModularRAGConfig(
-        pipeline_name="multi-generator-test",
+        run_name="refinement - compression - gemma3:4b",
+        save_eval_cases=False,
         enable_logging=True,
         log_level="INFO",
         enable_timing=True,
@@ -210,7 +211,7 @@ async def run_rag_evaluation():
             #     provider="ollama",
             #     tree_summarize_model="gemma3:4b",
             #     max_fan_in=3
-            # )
+            # ),
             # PassageCompressConfig(
             #     name="llm_lingua",
             #     enabled=True,
@@ -284,21 +285,15 @@ async def run_rag_evaluation():
                 provider="ollama",
                 refinement_strategy="clarification",
                 refinement_model="gemma3:4b",
-                combination_method="convex_combination",
-                normalization_method="dbsf",
-                excessive_k=60,
             ),
-            QueryExpansionConfig(
-                name="simple_query_refinement_rephrasing",
-                enabled=True,
-                technique="simple_query_refinement",
-                provider="ollama",
-                refinement_strategy="rephrasing",
-                refinement_model="gemma3:4b",
-                combination_method="convex_combination",
-                normalization_method="dbsf",
-                excessive_k=60,
-            ),
+            # QueryExpansionConfig(
+            #     name="simple_query_refinement_rephrasing",
+            #     enabled=True,
+            #     technique="simple_query_refinement",
+            #     provider="ollama",
+            #     refinement_strategy="rephrasing",
+            #     refinement_model="gemma3:4b",
+            # ),
             QueryExpansionConfig(
                 name="no_expansion",
                 enabled=True,
@@ -413,7 +408,8 @@ async def run_rag_evaluation():
         # Dataset/global settings
         dataset_path=None,
         qdrant_collection_hash=None,
-        max_test_cases=1,
+        max_test_cases=3,
+        test_case_offset=0,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,

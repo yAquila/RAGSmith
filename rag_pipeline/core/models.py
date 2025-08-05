@@ -69,6 +69,7 @@ class GenerationResult(BaseModel):
     generated_answer: str
     llm_model: str
     embedding_model: str  # Which embedding model provided the context
+    combo_name: str
     # Canonical per-component timing fields
     pre_embedding_time: float = 0.0
     query_expansion_time: float = 0.0

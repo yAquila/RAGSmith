@@ -502,7 +502,7 @@ class ModularRAGPipeline:
 
         # Load dataset and test cases
         dataset = RAGDataset(global_config.dataset_path)
-        test_cases = dataset.get_test_cases(global_config.max_test_cases)
+        test_cases = dataset.get_test_cases(global_config.max_test_cases, global_config.test_case_offset)
         documents = dataset.get_documents()
         validation_result = dataset.validate_dataset()
         if not validation_result["valid"]:
@@ -560,6 +560,7 @@ class ModularRAGPipeline:
                             query=test_case.query,
                             context=exec_result.prompt,
                             generated_answer=exec_result.generated_answer,
+                            combo_name=combo_name,
                             llm_model=getattr(combo["generator"], 'model', 'unknown'),
                             embedding_model=getattr(combo["retrieval"], 'embedding_model', 'unknown'),
                             query_expansion_time=getattr(exec_result, 'query_expansion_time', 0.0),
@@ -598,6 +599,7 @@ class ModularRAGPipeline:
                                 query=test_case.query,
                                 context="",
                                 generated_answer="",
+                                combo_name=combo_name,
                                 llm_model=getattr(combo["generator"], 'model', 'unknown'),
                                 embedding_model=getattr(combo["retrieval"], 'embedding_model', 'unknown'),
                                 generation_time=0.0
