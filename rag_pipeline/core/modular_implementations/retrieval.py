@@ -8,6 +8,7 @@ import pandas as pd
 from rag_pipeline.core.modular_framework import (
     RetrievalComponent, Document, Query
 )
+from rag_pipeline.util.retrieval_utils.combination_utils import HybridUtils
 
 logger = logging.getLogger(__name__)
 
@@ -82,16 +83,7 @@ class SimpleVectorRAG(RetrievalComponent):
             results = self.vectorstore.similarity_search(query_text, k)
             
             # Convert to Document objects
-            documents = []
-            for result in results:
-                doc = Document(
-                    doc_id=result.get("doc_id", ""),
-                    content=result.get("page_content", ""),
-                    score=result.get("score", 0.0),
-                    metadata=result.get("metadata", {})
-                )
-                documents.append(doc)
-            
+            documents = HybridUtils.convert_to_documents(results)
             # Embedding token count: sum of tokens in all retrieved documents
             embedding_token_count = len(query_text.split())
             result = RetrievalResult(
@@ -214,15 +206,7 @@ class KeywordSearchBM25(RetrievalComponent):
             results = self.index_manager.search(query_text, k)
             
             # Convert to Document objects
-            documents = []
-            for result in results:
-                doc = Document(
-                    doc_id=result.get("doc_id", ""),
-                    content=result.get("content", ""),
-                    score=result.get("score", 0.0),
-                    metadata=result.get("metadata", {})
-                )
-                documents.append(doc)
+            documents = HybridUtils.convert_to_documents(results)
             
             # Calculate token count for the query (simple split for consistency)
             
@@ -254,8 +238,6 @@ class KeywordSearchBM25(RetrievalComponent):
     def get_index_stats(self) -> Dict[str, Any]:
         """Get statistics about the BM25 index"""
         return self.index_manager.get_stats()
-
-from rag_pipeline.util.retrieval_utils.combination_utils import ScoreCombiner, RankFusionCombiner, HybridUtils
 
 class HybridSearch(RetrievalComponent):
     """
@@ -293,33 +275,25 @@ class HybridSearch(RetrievalComponent):
 
             # Perform vector search
             vector_result = await self.vector_retriever.retrieve(query, excessive_k)
-            vector_results = []
-            for doc in vector_result.get('documents', []):
-                vector_results.append({
-                    'doc_id': doc.doc_id,
-                    'content': doc.content,
-                    'score': doc.score,
-                    'metadata': doc.metadata
-                })
+            vector_results = HybridUtils.convert_documents_to_results(vector_result.get('documents', []))
             
             # Perform keyword search
             keyword_result = await self.keyword_retriever.retrieve(query, excessive_k)
-            keyword_results = []
-            for doc in keyword_result.get('documents', []):
-                keyword_results.append({
-                    'doc_id': doc.doc_id,
-                    'content': doc.content,
-                    'score': doc.score,
-                    'metadata': doc.metadata
-                })
+            keyword_results = HybridUtils.convert_documents_to_results(keyword_result.get('documents', []))
             
             # Combine results based on the configured method
             if self.combination_method == "convex_combination":
-                combined_results = self._combine_with_convex_combination(vector_results, keyword_results)
+                combined_results = self._combine_with_convex_combination([vector_results, keyword_results])
             elif self.combination_method == "reciprocal_rank_fusion":
-                combined_results = self._combine_with_rrf(vector_results, keyword_results)
+                combined_results = self._combine_with_rrf([vector_results, keyword_results])
             elif self.combination_method == "borda_count":
-                combined_results = self._combine_with_borda_count(vector_results, keyword_results)
+                combined_results = self._combine_with_borda_count([vector_results, keyword_results])
+            elif self.combination_method == "simply":
+                combined_results = HybridUtils.combine_simply(
+                    results_list=[vector_results, keyword_results],
+                    method_names=["vector","keyword"],
+                    normalization_method=self.config.get("normalization_method", "minmax")
+                )
             else:
                 raise ValueError(f"Invalid combination method: {self.combination_method}")
             
@@ -327,15 +301,7 @@ class HybridSearch(RetrievalComponent):
             top_results = HybridUtils.filter_top_k(combined_results, k)
             
             # Convert back to Document objects
-            documents = []
-            for result in top_results:
-                doc = Document(
-                    doc_id=result['doc_id'],
-                    content=result['content'],
-                    score=result['score'],
-                    metadata=result['metadata']
-                )
-                documents.append(doc)
+            documents = HybridUtils.convert_to_documents(top_results)
             
             # Calculate token counts (sum from both retrievers)
             total_embedding_tokens = (
@@ -369,17 +335,15 @@ class HybridSearch(RetrievalComponent):
     
     def _combine_with_convex_combination(
         self, 
-        vector_results: List[Dict[str, Any]], 
-        keyword_results: List[Dict[str, Any]]
+        results_list: List[List[Dict[str, Any]]]
     ) -> List[Dict[str, Any]]:
         """Combine results using convex combination"""
         try:
             return HybridUtils.combine_with_convex_combination(
-                results_list=[vector_results, keyword_results],
+                results_list=results_list,
                 method_names=["vector","keyword"],
-                weights=[self.config.get("alpha", 0.5),1-self.config.get("alpha", 0.5)],
+                weights=[1/len(self.retrieval_methods)] * len(self.retrieval_methods) if self.config.get("weights", None) is None else self.config.get("weights"), 
                 normalization_method=self.config.get("normalization_method", "minmax"),
-                excessive_k=self.config.get("excessive_k", 60)
                 )
         except Exception as e:
             logger.error(f"Convex combination failed: {e}")
@@ -387,15 +351,13 @@ class HybridSearch(RetrievalComponent):
     
     def _combine_with_rrf(
         self, 
-        vector_results: List[Dict[str, Any]], 
-        keyword_results: List[Dict[str, Any]]
+        results_list: List[List[Dict[str, Any]]]
     ) -> List[Dict[str, Any]]:
         """Combine results using Reciprocal Rank Fusion"""
         try:
             return HybridUtils.combine_with_rrf(
-                results_list=[vector_results, keyword_results],
+                results_list=results_list,
                 method_names=["vector","keyword"],
-                excessive_k=self.config.get("excessive_k", 60)
             )
             
         except Exception as e:
@@ -404,15 +366,13 @@ class HybridSearch(RetrievalComponent):
     
     def _combine_with_borda_count(
         self, 
-        vector_results: List[Dict[str, Any]], 
-        keyword_results: List[Dict[str, Any]]
+        results_list: List[List[Dict[str, Any]]]
     ) -> List[Dict[str, Any]]:
         """Combine results using Borda count"""
         try:
             return HybridUtils.combine_with_borda_count(
-                results_list=[vector_results, keyword_results],
+                results_list=results_list,
                 method_names=["vector","keyword"],
-                excessive_k=self.config.get("excessive_k", 60)
             )
         except Exception as e:
             logger.error(f"Borda count combination failed: {e}")
@@ -1865,3 +1825,113 @@ Text:
         """Close Neo4j driver connection"""
         if self.driver:
             self.driver.close()
+
+
+class CompleteHybrid(RetrievalComponent):
+
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        self.retrieval_methods = config.get("retrieval_methods", ["vector", "keyword"])
+        self.combination_method = config.get("combination_method", "simply")
+        self.normalization_method = config.get("normalization_method", "minmax")
+        self.retrievers = []
+        self._setup_retrievers()
+
+    def _setup_retrievers(self):
+        """Setup retrievers"""
+        self.retrievers = []
+        for retrieval_method in self.retrieval_methods:
+            if retrieval_method == "vector":
+                self.retrievers.append(SimpleVectorRAG(self.config))
+            elif retrieval_method == "keyword":
+                self.retrievers.append(KeywordSearchBM25(self.config))
+            elif retrieval_method == "graph":
+                self.retrievers.append(GraphRAG(self.config))
+            elif retrieval_method == "hypergraph":
+                self.retrievers.append(HyperGraphRAG(self.config))
+
+    async def retrieve(self, query: Query, k: Optional[int] = None) -> RetrievalResult:
+        """Retrieve documents using complete hybrid retrieval"""
+        k = k or self.config.get("top_k", 10)
+        results_with_tokens = []
+        results = []
+        for retriever in self.retrievers:
+            r = await retriever.retrieve(query, k)
+            results_with_tokens.append(r)
+            results.append(HybridUtils.convert_documents_to_results(r.get("documents",[])))
+        # Combine results based on the configured method
+        if self.combination_method == "convex_combination":
+            combined_results = self._combine_with_convex_combination(results)
+        elif self.combination_method == "reciprocal_rank_fusion":
+            combined_results = self._combine_with_rrf(results)
+        elif self.combination_method == "borda_count":
+            combined_results = self._combine_with_borda_count(results)
+        elif self.combination_method == "simply":
+            combined_results = HybridUtils.combine_simply(
+                results_list=results,
+                method_names=self.retrieval_methods,
+                normalization_method=self.normalization_method
+            )
+        else:
+            raise ValueError(f"Invalid combination method: {self.combination_method}")
+        final_results = HybridUtils.convert_to_documents(combined_results)
+        logger.debug(f"Final results: {final_results}")
+        return RetrievalResult(
+            documents=final_results,
+            embedding_token_count=sum(result.get("embedding_token_count") for result in results_with_tokens),
+            llm_input_token_count=sum(result.get("llm_input_token_count") for result in results_with_tokens),
+            llm_output_token_count=sum(result.get("llm_output_token_count") for result in results_with_tokens)
+        )
+    
+    async def index_documents(self, documents: List[Document]) -> bool:
+        """Index documents using complete hybrid retrieval"""
+        success = True
+        for retriever in self.retrievers:
+            success = success and await retriever.index_documents(documents)
+        return success
+    
+
+    def _combine_with_convex_combination(
+        self, 
+        results_list: List[List[Dict[str, Any]]]
+    ) -> List[Dict[str, Any]]:
+        """Combine results using convex combination"""
+        try:
+            return HybridUtils.combine_with_convex_combination(
+                results_list=results_list,
+                method_names=self.retrieval_methods,
+                weights=[1/len(self.retrieval_methods)] * len(self.retrieval_methods) if self.config.get("weights", None) is None else self.config.get("weights"), 
+                normalization_method=self.config.get("normalization_method", "minmax"),
+                )
+        except Exception as e:
+            logger.error(f"Convex combination failed: {e}")
+            return []
+    
+    def _combine_with_rrf(
+        self, 
+        results_list: List[List[Dict[str, Any]]]
+    ) -> List[Dict[str, Any]]:
+        """Combine results using Reciprocal Rank Fusion"""
+        try:
+            return HybridUtils.combine_with_rrf(
+                results_list=results_list,
+                method_names=self.retrieval_methods,
+            )
+            
+        except Exception as e:
+            logger.error(f"RRF combination failed: {e}")
+            return []
+    
+    def _combine_with_borda_count(
+        self, 
+        results_list: List[List[Dict[str, Any]]]
+    ) -> List[Dict[str, Any]]:
+        """Combine results using Borda count"""
+        try:
+            return HybridUtils.combine_with_borda_count(
+                results_list=results_list,
+                method_names=self.retrieval_methods,
+            )
+        except Exception as e:
+            logger.error(f"Borda count combination failed: {e}")
+            return []

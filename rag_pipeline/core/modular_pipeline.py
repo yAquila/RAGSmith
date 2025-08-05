@@ -184,7 +184,7 @@ class ModularRAGPipeline:
                 step_start = time.time()
                 if documents:
                     await self.components["retrieval"].index_documents(documents)
-                if "query_expansion" not in self.components or self.config_dict["query_expansion"].technique == "none":
+                if "query_expansion" not in self.components or self.config_dict["query_expansion"].technique == "none" or processed_query.expanded_queries is None or len(processed_query.expanded_queries) <= 1:
                     retrieval_result: RetrievalComponentResult = await self.components["retrieval"].retrieve(
                         processed_query, 
                         k=self.config_dict["retrieval"].top_k
@@ -196,7 +196,7 @@ class ModularRAGPipeline:
                 else:
                     from rag_pipeline.util.retrieval_utils.combination_utils import HybridUtils
                     results_list = []
-                    for expanded_query in processed_query.expanded_queries:
+                    for expanded_query in processed_query.expanded_queries + [processed_query]:
                         retrieval_result: RetrievalComponentResult = await self.components["retrieval"].retrieve(
                             expanded_query, 
                             k=self.config_dict["query_expansion"].excessive_k

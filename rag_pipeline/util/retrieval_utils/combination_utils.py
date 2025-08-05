@@ -305,7 +305,7 @@ class HybridUtils:
         for result in results:
             documents.append(Document(
                 doc_id=result['doc_id'],
-                content=result['content'],
+                content=result['content'] if 'content' in result else result['page_content'] if 'page_content' in result else "",
                 score=result['score'],
                 metadata=result['metadata']
             ))
@@ -319,6 +319,15 @@ class HybridUtils:
             results.append(document.to_dict())
         return results
     
+    @staticmethod
+    def combine_simply(results_list: List[List[Dict[str, Any]]], method_names: List[str], normalization_method: str = "minmax") -> List[Dict[str, Any]]:
+        """Combine results simply by concatenating them"""
+        results_list = HybridUtils.normalize_results_list(results_list, normalization_method)
+        combined_results = []
+        for result in results_list:
+            combined_results.extend(result)
+        return combined_results
+
     @staticmethod
     def combine_with_convex_combination(
         results_list: List[List[Dict[str, Any]]], 

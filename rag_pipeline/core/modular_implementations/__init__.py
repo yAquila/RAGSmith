@@ -1,6 +1,6 @@
 from rag_pipeline.core.modular_implementations.pre_embedding import NonePreEmbedding, ContextualChunkHeaders, PreEmbeddingResult, HyPE
-from rag_pipeline.core.modular_implementations.query_expansion import NoneQueryExpansion, SimpleMultiQuery, Decomposition, RAGFusion, HyDE, StepBackPrompting, QueryExpansionResult
-from rag_pipeline.core.modular_implementations.retrieval import SimpleVectorRAG, KeywordSearchBM25, HybridSearch, GraphRAG, HyperGraphRAG, RetrievalResult
+from rag_pipeline.core.modular_implementations.query_expansion import NoneQueryExpansion, SimpleMultiQuery, Decomposition, RAGFusion, HyDE, StepBackPrompting, QueryExpansionResult, SimpleQueryRefinement
+from rag_pipeline.core.modular_implementations.retrieval import SimpleVectorRAG, KeywordSearchBM25, HybridSearch, GraphRAG, HyperGraphRAG, CompleteHybrid, RetrievalResult
 from rag_pipeline.core.modular_implementations.passage_augment import NonePassageAugment, PrevNextAugmenter, RelevantSegmentExtractor, PassageAugmentResult
 from rag_pipeline.core.modular_implementations.passage_rerank import NonePassageRerank, CrossEncoderRerank, LLMRerank, CELLM_ParallelRerank, PassageRerankResult
 from rag_pipeline.core.modular_implementations.passage_filter import SimpleThresholdFilter, SimilarityThresholdFilter, PassageFilterResult
@@ -22,6 +22,7 @@ COMPONENT_REGISTRY = {
         "rag_fusion": RAGFusion,
         "hyde": HyDE,   
         "step_back_prompting": StepBackPrompting,
+        "simple_query_refinement": SimpleQueryRefinement,
     },
     "retrieval": {
         "simple_vector_rag": SimpleVectorRAG,
@@ -29,6 +30,7 @@ COMPONENT_REGISTRY = {
         "hybrid_search": HybridSearch,
         "graph_rag": GraphRAG,
         "hypergraph_rag": HyperGraphRAG,
+        "complete_hybrid": CompleteHybrid,
     },
     "passage_rerank": {
         "none": NonePassageRerank,

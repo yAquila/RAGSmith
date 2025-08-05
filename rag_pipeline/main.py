@@ -76,8 +76,18 @@ async def run_rag_evaluation():
             #     top_k=10,
             #     combination_method="convex_combination",
             #     excessive_k=60,
-            #     alpha=0.7,
+            #     weights=[0.7, 0.3],
             #     normalization_method="minmax"
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_vector_keyword_graph",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="simply",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["vector", "keyword", "graph", "hypergraph"]
             # ),
             # RetrievalConfig(
             #     name="hybrid_search_dbsf",
@@ -267,11 +277,33 @@ async def run_rag_evaluation():
         ],
 
         query_expansion=[
-            # QueryExpansionConfig(
-            #     name="no_expansion",
-            #     enabled=True,
-            #     technique="none",
-            # ),
+            QueryExpansionConfig(
+                name="simple_query_refinement_clarification",
+                enabled=True,
+                technique="simple_query_refinement",
+                provider="ollama",
+                refinement_strategy="clarification",
+                refinement_model="gemma3:4b",
+                combination_method="convex_combination",
+                normalization_method="dbsf",
+                excessive_k=60,
+            ),
+            QueryExpansionConfig(
+                name="simple_query_refinement_rephrasing",
+                enabled=True,
+                technique="simple_query_refinement",
+                provider="ollama",
+                refinement_strategy="rephrasing",
+                refinement_model="gemma3:4b",
+                combination_method="convex_combination",
+                normalization_method="dbsf",
+                excessive_k=60,
+            ),
+            QueryExpansionConfig(
+                name="no_expansion",
+                enabled=True,
+                technique="none",
+            ),
             # QueryExpansionConfig(
             #     name="simple_multi_query_cc",
             #     enabled=True,
@@ -330,18 +362,18 @@ async def run_rag_evaluation():
 
         # Other categories as empty lists
         pre_embedding=[
-            PreEmbeddingConfig(
-                name="no_pre_embedding",
-                enabled=True,
-                technique="none",
-            ),
-            PreEmbeddingConfig(
-                name="hype",
-                enabled=True,
-                technique="hype",
-                num_hype_questions=3,
-                hype_model="gemma3:4b",
-            )
+            # PreEmbeddingConfig(
+            #     name="no_pre_embedding",
+            #     enabled=True,
+            #     technique="none",
+            # ),
+            # PreEmbeddingConfig(
+            #     name="hype",
+            #     enabled=True,
+            #     technique="hype",
+            #     num_hype_questions=3,
+            #     hype_model="gemma3:4b",
+            # )
         ],
         
 
@@ -381,7 +413,7 @@ async def run_rag_evaluation():
         # Dataset/global settings
         dataset_path=None,
         qdrant_collection_hash=None,
-        max_test_cases=3,
+        max_test_cases=1,
         eval_batch_size=1,
         parallel_execution=True,
         max_workers=4,

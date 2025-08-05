@@ -147,6 +147,12 @@ class SimpleMultiQuery(QueryExpansionComponent):
                 metadata={}
             ))
         logger.debug(f"Expanded queries: {expanded_queries}")
+        expanded_queries.append(Query(
+            original_text=query,
+            processed_text=query,
+            expanded_queries=None,
+            metadata={}
+        ))
         result = QueryExpansionResult(
             query=Query(
                 original_text=query,
@@ -160,7 +166,6 @@ class SimpleMultiQuery(QueryExpansionComponent):
         )
         return result
 
-
 class Decomposition(SimpleMultiQuery):
     """Decompose a query into multiple, more specific queries"""
     
@@ -172,7 +177,6 @@ class Decomposition(SimpleMultiQuery):
         """Decompose a query into multiple, more specific queries"""
         return await super().expand_query(query)
             
-
 class RAGFusion(SimpleMultiQuery):
     """Combine multiple queries into a single query"""
 
@@ -299,3 +303,128 @@ class StepBackPrompting(SimpleMultiQuery):
     async def expand_query(self, query: str) -> QueryExpansionResult:
         """Step back prompting"""
         return await super().expand_query(query)
+
+
+class SimpleQueryRefinement(QueryExpansionComponent):
+    """Simple Query Refinement/Rewriting with LLM - improves single query"""
+    
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        self.client = None
+        self._setup_client()
+    
+    def _setup_client(self):    
+        """Setup the appropriate LLM client"""
+        provider = self.config.get("provider", "ollama")
+        
+        try:
+            if provider.lower() == "ollama":
+                from rag_pipeline.util.api.ollama_client import OllamaUtil
+                self.client = OllamaUtil
+            elif provider.lower() == "gemini":
+                from rag_pipeline.util.api.gemini_client import GeminiUtil
+                self.client = GeminiUtil
+            else:
+                raise ValueError(f"Unsupported provider: {provider}")
+                
+        except Exception as e:
+            logger.error(f"Failed to setup {provider} client: {e}")
+            raise
+
+    async def expand_query(self, query: str) -> QueryExpansionResult:
+        """Refine/rewrite the query using LLM"""
+        
+        # Get configuration parameters
+        prompt_template = self.config.get("refinement_prompt", "")
+        strategy = self.config.get("refinement_strategy", "clarification")
+        model = self.config.get("refinement_model", "gemma3:4b")
+        temperature = self.config.get("refinement_temperature", 0.1)
+        max_tokens = self.config.get("refinement_max_tokens", 100)
+        
+        # Format prompt based on strategy - use config prompts
+        if strategy == "clarification":
+            prompt = prompt_template.format(query=query)
+        elif strategy == "rephrasing":
+            prompt = self.config.get("refinement_rephrasing_prompt", "").format(query=query)
+        elif strategy == "keyword_extraction":
+            prompt = self.config.get("refinement_keyword_extraction_prompt", "").format(query=query)
+        else:
+            # Default to clarification
+            prompt = prompt_template.format(query=query)
+        
+        try:
+            # Generate refined query using the correct method
+            if self.config.get("provider", "ollama").lower() == "ollama":
+                response = self.client.get_ollama_response(model, prompt)
+                if response and isinstance(response, dict):
+                    refined_query = response.get("response", "").strip()
+                else:
+                    logger.warning("Invalid response from Ollama, using original query")
+                    refined_query = query
+            elif self.config.get("provider", "ollama").lower() == "gemini":
+                response = self.client.get_gemini_response(model, prompt)
+                if response and isinstance(response, dict):
+                    refined_query = response.get("response", "").strip()
+                else:
+                    logger.warning("Invalid response from Gemini, using original query")
+                    refined_query = query
+            else:
+                logger.warning("Unknown provider, using original query")
+                refined_query = query
+            
+            # If response is empty or too short, use original query
+            if not refined_query or len(refined_query) < 3:
+                logger.warning(f"Refined query too short, using original: {refined_query}")
+                refined_query = query
+            
+            # Calculate token counts from response
+            llm_input_token_count = 0.0
+            llm_output_token_count = 0.0
+            
+            if self.config.get("provider", "ollama").lower() == "ollama" and response and isinstance(response, dict):
+                llm_input_token_count = float(response.get("prompt_tokens", len(prompt.split())))
+                llm_output_token_count = float(response.get("eval_count", len(refined_query.split())))
+            elif self.config.get("provider", "ollama").lower() == "gemini" and response and isinstance(response, dict):
+                llm_input_token_count = float(response.get("prompt_tokens", len(prompt.split())))
+                llm_output_token_count = float(response.get("eval_count", len(refined_query.split())))
+            else:
+                # Fallback to rough estimation
+                llm_input_token_count = float(len(prompt.split()))
+                llm_output_token_count = float(len(refined_query.split()))
+            
+            result = QueryExpansionResult(
+                query=Query(
+                    original_text=query,
+                    processed_text=refined_query,  # Use refined query as processed
+                    expanded_queries=[refined_query],
+                    metadata={
+                        "technique": "simple_query_refinement",
+                        "strategy": strategy,
+                        "original_query": query,
+                        "refined_query": refined_query
+                    }
+                ),
+                embedding_token_count=0.0,  # Will be calculated during retrieval
+                llm_input_token_count=llm_input_token_count,
+                llm_output_token_count=llm_output_token_count
+            )
+            return result
+            
+        except Exception as e:
+            logger.error(f"Error in simple query refinement: {e}")
+            # Fallback to original query
+            return QueryExpansionResult(
+                query=Query(
+                    original_text=query,
+                    processed_text=query,
+                    expanded_queries=[query],
+                    metadata={
+                        "technique": "simple_query_refinement", 
+                        "error": str(e),
+                        "strategy": strategy
+                    }
+                ),
+                embedding_token_count=0.0,
+                llm_input_token_count=0.0,
+                llm_output_token_count=0.0
+            )
