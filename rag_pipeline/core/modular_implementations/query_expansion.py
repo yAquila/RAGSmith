@@ -4,6 +4,7 @@ from typing import List, Dict, Any, TypedDict
 from rag_pipeline.core.modular_framework import (
     QueryExpansionComponent, Query
 )
+from rag_pipeline.core.modular_implementations.retrieval import GraphRAG
 
 logger = logging.getLogger(__name__)
 
@@ -58,62 +59,6 @@ class SimpleMultiQuery(QueryExpansionComponent):
         except Exception as e:
             logger.error(f"Failed to setup {provider} client: {e}")
             raise
-
-    def _parse_documents_from_response(self, response_text: str) -> List[str]:
-        """
-        Parse documents from response text that follows the format:
-        **Document 1:**
-        [content]
-        **Document 2:**
-        [content]
-        ...
-        """
-        documents = []
-        lines = response_text.strip().split('\n')
-        current_document = []
-        in_document = False
-        
-        for line in lines:
-            line = line.strip()
-            if not line:
-                continue
-                
-            # Check if this line starts a new document - handle markdown formatting
-            if (line.lower().startswith('**document ') and ':**' in line) or \
-               (line.lower().startswith('document ') and ':' in line) or \
-               (line.lower().startswith('doc ') and ':' in line) or \
-               (line[0].isdigit() and '.' in line and ':' in line):
-                # Save previous document if we have one
-                if current_document and in_document:
-                    documents.append('\n'.join(current_document).strip())
-                    current_document = []
-                in_document = True
-                # Skip the document header line
-                continue
-            
-            # If we're in a document, add the line
-            if in_document:
-                current_document.append(line)
-        
-        # Don't forget the last document
-        if current_document and in_document:
-            documents.append('\n'.join(current_document).strip())
-        
-        # If no documents were found with the structured format, try to split by common separators
-        if not documents and response_text.strip():
-            # Try to split by double newlines or other common separators
-            parts = response_text.split('\n\n')
-            if len(parts) > 1:
-                for part in parts:
-                    part = part.strip()
-                    if part and not part.lower().startswith('document'):
-                        documents.append(part)
-            
-            # If still no documents, treat the entire response as one document
-            if not documents:
-                documents.append(response_text.strip())
-        
-        return documents
 
     async def expand_query(self, query: str) -> QueryExpansionResult:
         """Compress documents using LLM"""
@@ -428,3 +373,44 @@ class SimpleQueryRefinement(QueryExpansionComponent):
                 llm_input_token_count=0.0,
                 llm_output_token_count=0.0
             )
+
+class GraphAsQueryExpansion(QueryExpansionComponent):
+    """Graph as query expansion"""
+
+    def __init__(self, config: Dict[str, Any]):
+        super().__init__(config)
+        self.graph_rag = GraphRAG(config)
+
+    async def expand_query(self, query: str) -> QueryExpansionResult:
+        """Graph as query expansion"""
+
+        query_obj = Query(
+            original_text=query,
+            processed_text=query,
+            expanded_queries=None,
+            metadata={}
+        )
+        expanded_queries = []
+        expanded_queries.append(query_obj)
+
+        r = await self.graph_rag.retrieve(query_obj, self.config.get("num_expanded_queries", 3))
+        documents = r.get("documents", [])
+        embedding_token_count = r.get("embedding_token_count", 0.0)
+        
+        for doc in documents:
+            expanded_queries.append(Query(
+                original_text=doc.content,
+                processed_text=doc.content,
+                expanded_queries=None,
+                metadata={
+                    "technique": "graph_as_query_expansion"
+                }
+            ))
+            logger.info(f"Query: {query_obj.original_text} - Expanded query: {doc.content}")
+        query_obj.expanded_queries = expanded_queries
+        return QueryExpansionResult(
+            query=query_obj,
+            embedding_token_count=embedding_token_count,
+            llm_input_token_count=0.0,
+            llm_output_token_count=0.0
+        )

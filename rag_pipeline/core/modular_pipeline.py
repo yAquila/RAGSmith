@@ -196,7 +196,7 @@ class ModularRAGPipeline:
                 else:
                     from rag_pipeline.util.retrieval_utils.combination_utils import HybridUtils
                     results_list = []
-                    for expanded_query in processed_query.expanded_queries + [processed_query]:
+                    for expanded_query in processed_query.expanded_queries:
                         retrieval_result: RetrievalComponentResult = await self.components["retrieval"].retrieve(
                             expanded_query, 
                             k=self.config_dict["query_expansion"].excessive_k
