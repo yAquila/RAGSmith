@@ -18,22 +18,13 @@ class PreEmbeddingConfig(BaseModel):
     enabled: bool = True
     technique: str = "none"  # Options: "none", "contextual_chunk_headers", "different_chunking", "parent_document", "hype"
     
-    # Common settings
-    chunk_size: int = 512
-    chunk_overlap: int = 50
-    
     # Contextual Chunk Headers settings
     add_headers: bool = False
     header_template: str = "Document Section: {title}\nContext: {context}\n\n"
     
-    # Different Chunking Strategies settings
-    chunking_strategy: str = "fixed"  # Options: "fixed", "semantic", "sentence", "paragraph"
-    min_chunk_size: int = 100
-    max_chunk_size: int = 1000
-    
     # Parent Document Retriever settings
-    parent_chunk_size: int = 2048
-    child_chunk_size: int = 512
+    pdr_chunk_size: int = 100
+    pdr_chunk_overlap: int = 20
     
     # HyPE (Hypothetical Passage Embeddings) settings
     num_hype_questions: int = 3

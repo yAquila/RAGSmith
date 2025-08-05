@@ -1,4 +1,4 @@
-from rag_pipeline.core.modular_implementations.pre_embedding import NonePreEmbedding, ContextualChunkHeaders, PreEmbeddingResult, HyPE
+from rag_pipeline.core.modular_implementations.pre_embedding import NonePreEmbedding, ContextualChunkHeaders, PreEmbeddingResult, HyPE, ParentDocumentRetriever
 from rag_pipeline.core.modular_implementations.query_expansion import NoneQueryExpansion, SimpleMultiQuery, Decomposition, RAGFusion, HyDE, StepBackPrompting, QueryExpansionResult, SimpleQueryRefinement, GraphAsQueryExpansion
 from rag_pipeline.core.modular_implementations.retrieval import SimpleVectorRAG, KeywordSearchBM25, HybridSearch, GraphRAG, HyperGraphRAG, CompleteHybrid, RetrievalResult
 from rag_pipeline.core.modular_implementations.passage_augment import NonePassageAugment, PrevNextAugmenter, RelevantSegmentExtractor, PassageAugmentResult
@@ -14,6 +14,7 @@ COMPONENT_REGISTRY = {
         "none": NonePreEmbedding,
         "contextual_chunk_headers": ContextualChunkHeaders,
         "hype": HyPE,
+        "parent_document_retriever": ParentDocumentRetriever,
     },
     "query_expansion": {
         "none": NoneQueryExpansion,
