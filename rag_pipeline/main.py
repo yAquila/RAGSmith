@@ -278,14 +278,14 @@ async def run_rag_evaluation():
         ],
 
         query_expansion=[
-            QueryExpansionConfig(
-                name="simple_query_refinement_clarification",
-                enabled=True,
-                technique="simple_query_refinement",
-                provider="ollama",
-                refinement_strategy="clarification",
-                refinement_model="gemma3:4b",
-            ),
+            # QueryExpansionConfig(
+            #     name="simple_query_refinement_clarification",
+            #     enabled=True,
+            #     technique="simple_query_refinement",
+            #     provider="ollama",
+            #     refinement_strategy="clarification",
+            #     refinement_model="gemma3:4b",
+            # ),
             # QueryExpansionConfig(
             #     name="simple_query_refinement_rephrasing",
             #     enabled=True,
@@ -294,11 +294,11 @@ async def run_rag_evaluation():
             #     refinement_strategy="rephrasing",
             #     refinement_model="gemma3:4b",
             # ),
-            QueryExpansionConfig(
-                name="no_expansion",
-                enabled=True,
-                technique="none",
-            ),
+            # QueryExpansionConfig(
+            #     name="no_expansion",
+            #     enabled=True,
+            #     technique="none",
+            # ),
             # QueryExpansionConfig(
             #     name="simple_multi_query_cc",
             #     enabled=True,
@@ -350,6 +350,16 @@ async def run_rag_evaluation():
             #     model="gemma3:4b",
             #     combination_method="convex_combination",
             #     normalization_method="minmax",
+            #     excessive_k=60,
+            # ),
+            # QueryExpansionConfig(
+            #     name="graph_as_query_expansion",
+            #     enabled=True,
+            #     technique="graph_as_query_expansion",
+            #     provider="ollama",
+            #     num_expanded_queries=3,
+            #     combination_method="convex_combination",
+            #     normalization_method="dbsf",
             #     excessive_k=60,
             # ),
         ],
