@@ -130,6 +130,69 @@ New Queries:
     1. 
 """
 
+    # Simple Query Refinement/Rewriting settings -> Clarification
+    refinement_prompt: str = """
+You are an expert at improving search queries. Your task is to rewrite the given query to make it more search-friendly and clear.
+
+### Guidelines:
+- Keep the original intent
+- Make it more specific if needed
+- Use clear, searchable terms
+- Maintain the same meaning
+- Output ONLY the improved query, nothing else
+
+### Original Query:
+{query}
+
+### Improved Query:
+"""
+    refinement_rephrasing_prompt: str = """ 
+You are an expert at rephrasing queries to make them clearer and more search-friendly.
+
+### Task:
+Rephrase the following query in a clearer, more specific way while maintaining the original intent.
+
+### Guidelines:
+- Keep the same meaning and intent
+- Make it more specific and clear
+- Use proper grammar and structure
+- Output ONLY the rephrased query, nothing else
+
+### Original Query:
+{query}
+
+### Rephrased Query:
+"""
+    refinement_keyword_extraction_prompt: str = """
+You are an expert at extracting key search terms from queries.
+
+### Task:
+Extract the most important keywords and phrases from the given query that would be useful for search.
+
+### Guidelines:
+- Focus on the main concepts and entities
+- Include synonyms if relevant
+- Keep terms in a searchable format
+- Output ONLY the key terms separated by spaces, nothing else
+
+### Original Query:
+{query}
+
+### Key Terms:
+"""
+    refinement_strategy: str = "clarification"  # Options: "clarification", "rephrasing", "keyword_extraction"
+    refinement_model: str = "gemma3:4b"
+    refinement_temperature: float = 0.1
+    refinement_max_tokens: int = 1000
+
+
+
+
+
+
+	
+
+
 
 
 
@@ -155,9 +218,10 @@ class RetrievalConfig(BaseModel):
     use_advanced_tokenization: bool = False
     
     # Hybrid Search settings
-    combination_method: str = "convex_combination"  # Options: "convex_combination", "reciprocal_rank_fusion"
+    combination_method: str = "convex_combination"  # Options: "convex_combination", "reciprocal_rank_fusion", "borda_count"
     excessive_k: int = 60 # Excessive k for hybrid search
-    alpha: float = 0.7  # Vector weight (0.0 = keyword only, 1.0 = vector only) # Only used for convex combination
+    weights: List[float] = None
+    retrieval_methods: List[str] = None
     normalization_method: str = "minmax"  # Options: "minmax", "zscore" # Only used for convex combination
 
     # Graph RAG settings

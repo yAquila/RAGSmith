@@ -129,10 +129,19 @@ class RAGEvaluator:
             return {'recall_at_k': 0.0, 'map_score': 0.0, 'ndcg_at_k': 0.0, 'mrr': 0.0}
         
         try:
-            if retrieval_result.retrieved_docs[0]["doc_id"].startswith("graph_rel") or retrieval_result.retrieved_docs[0]["doc_id"].startswith("hypergraph") or retrieval_result.retrieved_docs[0].get("metadata", {}).get("hype_doc_id", None):
-                retrieved_doc_ids = self.remove_duplicates([doc['metadata']['original_doc_id'] for doc in retrieval_result.retrieved_docs])
-            else:
-                retrieved_doc_ids = [doc['doc_id'] for doc in retrieval_result.retrieved_docs]
+            #if retrieval_result.retrieved_docs[0]["doc_id"].startswith("graph_rel") or retrieval_result.retrieved_docs[0]["doc_id"].startswith("hypergraph") or retrieval_result.retrieved_docs[0].get("metadata", {}).get("hype_doc_id", None):
+            #     retrieved_doc_ids = self.remove_duplicates([doc['metadata']['original_doc_id'] for doc in retrieval_result.retrieved_docs])
+            # else:
+            #     retrieved_doc_ids = self.remove_duplicates([doc['doc_id'] for doc in retrieval_result.retrieved_docs])
+            # for rd in retrieval_result.retrieved_docs:
+            #     logger.info(f"Retrieval doc: {rd}")
+            retrieved_doc_ids = []
+            for doc in retrieval_result.retrieved_docs:
+                if doc.get('metadata', {}).get('original_doc_id', None):
+                    retrieved_doc_ids.append(doc['metadata'].get('original_doc_id', None))
+                else: 
+                    retrieved_doc_ids.append(doc['doc_id'])
+            retrieved_doc_ids = self.remove_duplicates(retrieved_doc_ids)
             relevant_doc_ids = test_case.relevant_doc_ids
             logger.info(f"Retrieved doc ids: {retrieved_doc_ids}")
             logger.info(f"Relevant doc ids: {relevant_doc_ids}")
