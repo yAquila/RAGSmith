@@ -177,7 +177,7 @@ class ModularRAGPipeline:
             else:
                 processed_query = Query(original_text=query, processed_text=query)
                 timing_info["query_expansion_time"] = 0.0
-            logger.info(f"Processed query: {processed_query}")
+            logger.debug(f"Processed query: {processed_query}")
             # Step 3: Retrieval
             retrieved_documents = []
             if "retrieval" in self.components:
@@ -235,9 +235,9 @@ class ModularRAGPipeline:
             else:
                 timing_info["retrieval_time"] = 0.0
             if retrieved_documents and (retrieved_documents[0].metadata.get("hype_doc_id", None) or retrieved_documents[0].metadata.get("pdr_doc_id", None)):
-                logger.info(f"Retrieved documents before conversion: {retrieved_documents[0]}")
+                logger.debug(f"Retrieved documents before conversion: {retrieved_documents[0]}")
                 retrieved_documents = self.hyped_or_pdr_docs_to_docs(retrieved_documents)
-                logger.info(f"Retrieved documents after conversion: {retrieved_documents[0]}")
+                logger.debug(f"Retrieved documents after conversion: {retrieved_documents[0]}")
             # Step 4: Passage reranking (can have multiple rerankers)
             if "passage_rerank" in self.components and retrieved_documents:
                 step_start = time.time()
