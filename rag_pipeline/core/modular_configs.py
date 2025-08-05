@@ -436,7 +436,7 @@ class ModularRAGConfig(BaseModel):
     post_generation: List[PostGenerationConfig] = Field(default_factory=list)
     
     # Global settings
-    pipeline_name: str = "advanced_rag_pipeline"
+    run_name: str = "advanced_rag_pipeline"
     enable_logging: bool = True
     log_level: str = "INFO"
     enable_timing: bool = True
@@ -445,11 +445,13 @@ class ModularRAGConfig(BaseModel):
     enable_evaluation: bool = True
     evaluation_metrics: List[str] = ["recall", "precision", "f1", "semantic_similarity", "llm_score"]
     llm_eval_model: str = "gemma3:4b"
+    save_eval_cases: bool = False
     
     # Dataset settings
     dataset_path: Optional[str] = None
     qdrant_collection_hash: Optional[str] = None
     max_test_cases: Optional[int] = None
+    test_case_offset: Optional[int] = 0
     eval_batch_size: int = 10
     
     # Performance settings

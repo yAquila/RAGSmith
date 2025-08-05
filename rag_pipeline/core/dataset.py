@@ -167,13 +167,13 @@ class RAGDataset:
             logger.error(f"Failed to load documents from {folder_path}: {e}")
             return []
     
-    def get_test_cases(self, max_cases: Optional[int] = None) -> List[RAGTestCase]:
+    def get_test_cases(self, max_cases: Optional[int] = None, case_offset: Optional[int] = 0) -> List[RAGTestCase]:
         """Get test cases, optionally limited by max_cases"""
         if not self.test_cases:
             self.load_test_cases()
         
         if max_cases and max_cases > 0:
-            return self.test_cases[:max_cases]
+            return self.test_cases[case_offset:case_offset+max_cases]
         return self.test_cases
     
     def get_documents(self) -> List[RAGDocument]:

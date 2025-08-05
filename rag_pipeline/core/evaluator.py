@@ -2,6 +2,7 @@ import logging
 import json
 import time
 from typing import List, Dict, Any, Optional
+import os
 
 from .models import (
     RAGTestCase, RetrievalResult, GenerationResult, 
@@ -51,7 +52,7 @@ class RAGEvaluator:
             
             # Evaluate generation with timing
             generation_eval_start = time.time()
-            generation_metrics = self._evaluate_generation(test_case, generation_result)
+            generation_metrics = self._evaluate_generation(generation_result.generated_answer, test_case.ground_truth_answer, generation_result.combo_name)
             generation_eval_time = time.time() - generation_eval_start
             
             # Calculate component scores
@@ -178,24 +179,95 @@ class RAGEvaluator:
             logger.error(f"Retrieval evaluation failed: {e}")
             return {'recall_at_k': 0.0, 'map_score': 0.0, 'ndcg_at_k': 0.0, 'mrr': 0.0}
     
-    def _evaluate_generation(self, test_case: RAGTestCase, generation_result: GenerationResult) -> Dict[str, float]:
+    def _save_generation_eval_sample(self, generated_answer: str, ground_truth_answer: str, combo_name: str, semantic_score: float):
+        """Save the generated answer and ground truth to a JSON array file for inspection"""
+        save_path = "generation_eval_samples.json"
+        # Prepare the new pair
+        # Use hash of ground_truth_answer and combo_name to form an id for new_pair
+        import hashlib
+        hash_input = (ground_truth_answer + "|" + combo_name).encode("utf-8")
+        pair_id = hashlib.md5(hash_input).hexdigest()
+        new_pair = {
+            "id": pair_id,
+            "generated_answer": generated_answer,
+            "ground_truth_answer": ground_truth_answer,
+            "combo_name": combo_name,
+            "semantic_score": semantic_score
+        }
+        # Determine run_name and model
+        run_name = getattr(self.global_config, "run_name", None)
+        model = getattr(self.global_config, "llm_eval_model", None) or getattr(self.config_dict.get("generator", None), "model", "unknown_model")
+        try:
+            # Load existing data if present
+            if os.path.exists(save_path):
+                with open(save_path, "r+", encoding="utf-8") as f:
+                    try:
+                        data = json.load(f)
+                        if not isinstance(data, list):
+                            data = []
+                    except Exception:
+                        data = []
+                    # Find if a run with this run_name exists
+                    found = False
+                    for entry in data:
+                        if (
+                            entry.get("run_name") == run_name
+                            and isinstance(entry.get("gen_gt_pairs"), list)
+                        ):
+                            # Check if id already present in this run
+                            if any(pair.get("id") == pair_id for pair in entry["gen_gt_pairs"]):
+                                found = True  # run exists, but do not add duplicate
+                                break
+                            else:
+                                entry["gen_gt_pairs"].append(new_pair)
+                                found = True
+                                break
+                    if not found:
+                        data.append({
+                            "run_name": run_name,
+                            "model": model,
+                            "gen_gt_pairs": [new_pair]
+                        })
+                    f.seek(0)
+                    json.dump(data, f, ensure_ascii=False, indent=2)
+                    f.truncate()
+            else:
+                with open(save_path, "w", encoding="utf-8") as f:
+                    json.dump([{
+                        "run_name": run_name,
+                        "model": model,
+                        "gen_gt_pairs": [new_pair]
+                    }], f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            logger.error(f"Failed to save generation/ground truth sample: {e}")
+
+    def _evaluate_generation(self, generated_answer: str, ground_truth_answer: str, combo_name: str) -> Dict[str, float]:
         """Evaluate generation performance"""
-        if generation_result.error or not generation_result.generated_answer:
+        if not generated_answer:
             return {'llm_score': 0.0, 'semantic_similarity': 0.0}
         
         try:
-            # LLM-based evaluation
-            llm_score = self._llm_evaluate(
-                generation_result.generated_answer, 
-                test_case.ground_truth_answer
-            )
-            
             # Semantic similarity evaluation
             semantic_score = self.semantic_evaluator.get_similarity_score(
-                generation_result.generated_answer,
-                test_case.ground_truth_answer
+                generated_answer,
+                ground_truth_answer
             )
-            
+
+            if self.global_config.save_eval_cases:
+                self._save_generation_eval_sample(
+                    generated_answer=generated_answer,
+                    ground_truth_answer=ground_truth_answer,
+                    combo_name=combo_name,
+                    semantic_score=semantic_score
+                )
+                llm_score = -1.0
+            else:
+                # LLM-based evaluation
+                llm_score = self._llm_evaluate(
+                    generated_answer, 
+                    ground_truth_answer
+                )
+                
             return {
                 'llm_score': llm_score,
                 'semantic_similarity': semantic_score
@@ -258,7 +330,17 @@ Return format: {{"score": 0.85}}"""
     def _calculate_generation_score(self, generation_metrics: Dict[str, float]) -> float:
         """Calculate average generation score"""
         weights = self.global_config.generation_weights
-        return sum(weights[k] * generation_metrics[k] for k in weights)
+        # Filter out metrics with value < 0.0
+        valid_keys = [k for k in weights if generation_metrics[k] >= 0.0]
+        if not valid_keys:
+            return 0.0
+        total_weight = sum(weights[k] for k in valid_keys)
+        if total_weight == 0:
+            return 0.0
+        normalized_weights = {k: weights[k] / total_weight for k in valid_keys}
+        score =  sum(normalized_weights[k] * generation_metrics[k] for k in valid_keys)
+        logger.debug(f"Generation score: {score}")
+        return score
     
     def _calculate_overall_score(self, retrieval_metrics: Dict[str, float], generation_metrics: Dict[str, float]) -> float:
         """Calculate weighted overall score"""
