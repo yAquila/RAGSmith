@@ -26,9 +26,6 @@ class NonePreEmbedding(PreEmbeddingComponent):
         )
         return result
 
-
-
-
 class ContextualChunkHeaders(PreEmbeddingComponent):
     """Add contextual headers to document chunks"""
     
@@ -43,7 +40,6 @@ class ContextualChunkHeaders(PreEmbeddingComponent):
         )
         return result
     
-
 class HyPE(PreEmbeddingComponent):
     """Use HyPE to embed documents"""
 
@@ -111,5 +107,38 @@ class HyPE(PreEmbeddingComponent):
             embedding_token_count=0.0,
             llm_input_token_count=total_prompt_tokens,
             llm_output_token_count=total_eval_count
+        )
+        return result
+
+class ParentDocumentRetriever(PreEmbeddingComponent):
+
+    async def process_documents(self, documents: List[Document]) -> PreEmbeddingResult:
+        """Retrieve parent documents"""
+
+        documents_to_embed = []
+        for doc in documents:
+            from langchain.text_splitter import RecursiveCharacterTextSplitter
+            split_docs = RecursiveCharacterTextSplitter(
+                chunk_size=self.config.get("pdr_chunk_size", 100),
+                chunk_overlap=self.config.get("pdr_chunk_overlap", 20),
+            ).split_text(doc.content)
+            for i, split_doc in enumerate(split_docs):
+                documents_to_embed.append(Document(
+                    doc_id=f"{doc.doc_id}___{i}",
+                    content=split_doc,
+                    metadata={
+                        **doc.metadata,
+                        "original_content": doc.content,
+                        "original_doc_id": doc.doc_id,
+                        "pdr_doc_id": f"{doc.doc_id}___{i}",
+                        "technique": "parent_document_retriever"
+                    }
+                ))
+
+        result = PreEmbeddingResult(
+            documents=documents_to_embed,
+            embedding_token_count=0.0,
+            llm_input_token_count=0.0,
+            llm_output_token_count=0.0
         )
         return result

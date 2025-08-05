@@ -367,18 +367,25 @@ async def run_rag_evaluation():
 
         # Other categories as empty lists
         pre_embedding=[
-            # PreEmbeddingConfig(
-            #     name="no_pre_embedding",
-            #     enabled=True,
-            #     technique="none",
-            # ),
+            PreEmbeddingConfig(
+                name="no_pre_embedding",
+                enabled=True,
+                technique="none",
+            ),
             # PreEmbeddingConfig(
             #     name="hype",
             #     enabled=True,
             #     technique="hype",
             #     num_hype_questions=3,
             #     hype_model="gemma3:4b",
-            # )
+            # ),
+            PreEmbeddingConfig(
+                name="parent_document_retriever",
+                enabled=True,
+                technique="parent_document_retriever",
+                pdr_chunk_size=100,
+                pdr_chunk_overlap=20,
+            )
         ],
         
 

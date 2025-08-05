@@ -234,8 +234,10 @@ class ModularRAGPipeline:
                 logger.debug(f"Retrieval completed in {timing_info['retrieval_time']:.3f}s, found {len(retrieved_documents)} documents")
             else:
                 timing_info["retrieval_time"] = 0.0
-            if retrieved_documents and retrieved_documents[0].metadata.get("hype_doc_id", None):
-                retrieved_documents = self.hyped_docs_to_docs(retrieved_documents)
+            if retrieved_documents and (retrieved_documents[0].metadata.get("hype_doc_id", None) or retrieved_documents[0].metadata.get("pdr_doc_id", None)):
+                logger.info(f"Retrieved documents before conversion: {retrieved_documents[0]}")
+                retrieved_documents = self.hyped_or_pdr_docs_to_docs(retrieved_documents)
+                logger.info(f"Retrieved documents after conversion: {retrieved_documents[0]}")
             # Step 4: Passage reranking (can have multiple rerankers)
             if "passage_rerank" in self.components and retrieved_documents:
                 step_start = time.time()
@@ -466,16 +468,15 @@ class ModularRAGPipeline:
             }
         }
 
-    def hyped_docs_to_docs(self, hyped_documents: List[Document]) -> List[Document]:
-        """Convert hyped documents to documents"""
+    def hyped_or_pdr_docs_to_docs(self, old_documents: List[Document]) -> List[Document]:
+        """Convert hyped or pdr documents to documents"""
         new_docs = []
         seen = set()
-        for hd in hyped_documents:
-            if hd.metadata["original_doc_id"] not in seen:
-                seen.add(hd.metadata["original_doc_id"])
-                new_docs.append(Document(doc_id=hd.metadata["original_doc_id"], content=hd.metadata["original_content"], metadata=hd.metadata, score=hd.score))
+        for old_doc in old_documents:
+            if old_doc.metadata["original_doc_id"] not in seen:
+                seen.add(old_doc.metadata["original_doc_id"])
+                new_docs.append(Document(doc_id=old_doc.metadata["original_doc_id"], content=old_doc.metadata["original_content"], metadata=old_doc.metadata, score=old_doc.score))
         return new_docs
-
 
     @staticmethod
     def build_combo_name(config_dict: dict) -> str:
