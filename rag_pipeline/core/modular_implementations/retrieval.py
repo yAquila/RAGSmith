@@ -15,8 +15,7 @@ logger = logging.getLogger(__name__)
 class RetrievalResult(TypedDict):
     documents: List[Document]
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class SimpleVectorRAG(RetrievalComponent):
     """✅ CURRENTLY IMPLEMENTED - Simple vector-based retrieval with semantic scoring"""
@@ -89,8 +88,7 @@ class SimpleVectorRAG(RetrievalComponent):
             result = RetrievalResult(
                 documents=documents,
                 embedding_token_count=float(embedding_token_count),
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             return result
             
@@ -99,8 +97,7 @@ class SimpleVectorRAG(RetrievalComponent):
             result = RetrievalResult(
                 documents=[],
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             return result
     
@@ -213,8 +210,7 @@ class KeywordSearchBM25(RetrievalComponent):
             result = RetrievalResult(
                 documents=documents,
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             return result
             
@@ -223,8 +219,7 @@ class KeywordSearchBM25(RetrievalComponent):
             return RetrievalResult(
                 documents=[],
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
     
     async def index_documents(self, documents: List[Document]) -> bool:
@@ -313,8 +308,7 @@ class HybridSearch(RetrievalComponent):
             result = RetrievalResult(
                 documents=documents,
                 embedding_token_count=total_embedding_tokens,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             
             # Log combination statistics if debug mode is enabled
@@ -329,8 +323,7 @@ class HybridSearch(RetrievalComponent):
             return RetrievalResult(
                 documents=[],
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
     
     def _combine_with_convex_combination(
@@ -790,8 +783,7 @@ class GraphRAG(RetrievalComponent):
                 return {
                     'documents': [],
                     'embedding_token_count': 0.0,
-                    'llm_input_token_count': 0.0,
-                    'llm_output_token_count': 0.0
+                    'llm_token_count': {}
                 }
             
             # Retrieve relations based on method
@@ -807,8 +799,7 @@ class GraphRAG(RetrievalComponent):
                 return {
                     'documents': [],
                     'embedding_token_count': float(len(query_text.split())),
-                    'llm_input_token_count': 0.0,
-                    'llm_output_token_count': 0.0
+                    'llm_token_count': {}
                 }
             
             # Convert relations to documents
@@ -822,8 +813,7 @@ class GraphRAG(RetrievalComponent):
             return {
                 'documents': documents,
                 'embedding_token_count': embedding_token_count,
-                'llm_input_token_count': 0.0,
-                'llm_output_token_count': 0.0
+                'llm_token_count': {}
             }
             
         except Exception as e:
@@ -831,8 +821,7 @@ class GraphRAG(RetrievalComponent):
             return {
                 'documents': [],
                 'embedding_token_count': 0.0,
-                'llm_input_token_count': 0.0,
-                'llm_output_token_count': 0.0
+                'llm_token_count': {}
             }
     
     async def index_documents(self, documents: List[Document]) -> bool:
@@ -1666,8 +1655,7 @@ Text:
                 return RetrievalResult(
                     documents=[],
                     embedding_token_count=0.0,
-                    llm_input_token_count=0.0,
-                    llm_output_token_count=0.0
+                    llm_token_count={}
                 )
             
             # Retrieve hyperedges based on method
@@ -1692,8 +1680,7 @@ Text:
             return RetrievalResult(
                 documents=documents,
                 embedding_token_count=embedding_token_count,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             
         except Exception as e:
@@ -1701,8 +1688,7 @@ Text:
             return RetrievalResult(
                 documents=[],
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
     
     async def index_documents(self, documents: List[Document]) -> bool:
@@ -1879,8 +1865,7 @@ class CompleteHybrid(RetrievalComponent):
         return RetrievalResult(
             documents=final_results,
             embedding_token_count=sum(result.get("embedding_token_count") for result in results_with_tokens),
-            llm_input_token_count=sum(result.get("llm_input_token_count") for result in results_with_tokens),
-            llm_output_token_count=sum(result.get("llm_output_token_count") for result in results_with_tokens)
+            llm_token_count={model_name: sum(result.get("llm_token_count", {}).values()) for model_name in self.retrieval_methods}
         )
     
     async def index_documents(self, documents: List[Document]) -> bool:

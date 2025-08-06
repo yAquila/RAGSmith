@@ -10,8 +10,7 @@ logger = logging.getLogger(__name__)
 class PostGenerationResult(TypedDict):
     text: str
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class NonePostGeneration(PostGenerationComponent):
     """No post-generation processing - return answer unchanged"""
@@ -21,8 +20,7 @@ class NonePostGeneration(PostGenerationComponent):
         result = PostGenerationResult(
             text=generated_answer,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result
 
@@ -138,10 +136,12 @@ class ReflectionRevising(PostGenerationComponent):
                 # Answer passed evaluation, no need for further improvement
                 break
         
+        llm_token_count = {}
+        model = self.config.get("reflection_revising_model", "gemma3:4b")
+        llm_token_count[model] = {"in": total_prompt_tokens, "out": total_eval_count}
         result = PostGenerationResult(
             text=current_answer,
             embedding_token_count=0.0,
-            llm_input_token_count=total_prompt_tokens,
-            llm_output_token_count=total_eval_count
+            llm_token_count=llm_token_count
         )
         return result

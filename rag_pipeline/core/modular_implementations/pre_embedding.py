@@ -11,8 +11,7 @@ logger = logging.getLogger(__name__)
 class PreEmbeddingResult(TypedDict):
     documents: List[Document]
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class NonePreEmbedding(PreEmbeddingComponent):
     """No pre-embedding processing - pass documents through unchanged"""
@@ -22,8 +21,7 @@ class NonePreEmbedding(PreEmbeddingComponent):
         result = PreEmbeddingResult(
             documents=documents,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result
 
@@ -275,8 +273,7 @@ class HyPE(PreEmbeddingComponent):
         result = PreEmbeddingResult(
             documents=documents_to_embed,
             embedding_token_count=0.0,
-            llm_input_token_count=total_prompt_tokens,
-            llm_output_token_count=total_eval_count
+            llm_token_count={}
         )
         return result
 
@@ -308,7 +305,6 @@ class ParentDocumentRetriever(PreEmbeddingComponent):
         result = PreEmbeddingResult(
             documents=documents_to_embed,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result

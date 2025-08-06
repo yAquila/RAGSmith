@@ -12,8 +12,7 @@ logger = logging.getLogger(__name__)
 class QueryExpansionResult(TypedDict):
     query: Query
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class NoneQueryExpansion(QueryExpansionComponent):
     """No query expansion - return original query"""
@@ -28,8 +27,7 @@ class NoneQueryExpansion(QueryExpansionComponent):
                 metadata={}
             ),
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result
 
@@ -63,15 +61,16 @@ class SimpleMultiQuery(QueryExpansionComponent):
     async def expand_query(self, query: str) -> QueryExpansionResult:
         """Compress documents using LLM"""
         expanded_queries = []
-        total_prompt_tokens = 0
-        total_eval_count = 0
+        llm_token_count = {}
         num_expanded_queries = self.config.get("num_expanded_queries", 3)
+        model = self.config.get("model", "gemma3:4b")
         
         prompt = self.config.get("prompt", "")
-        response = self.client.get_ollama_response(self.config.get("model", "gemma3:4b"), prompt.format(query=query, num_expanded_queries=num_expanded_queries))
+        response = self.client.get_ollama_response(model, prompt.format(query=query, num_expanded_queries=num_expanded_queries))
         if isinstance(response, dict):
-            total_prompt_tokens += float(response.get('prompt_tokens', len(prompt.split())))
-            total_eval_count += float(response.get('eval_count', 0))
+            prompt_tokens = float(response.get('prompt_tokens', len(prompt.split())))
+            output_tokens = float(response.get('eval_count', 0))
+            llm_token_count[model] = {"in": prompt_tokens, "out": output_tokens}
             for exp_query in response.get('response', '').split('\n'):
                 if exp_query.strip() != '':
                     if exp_query and exp_query[0].isdigit():
@@ -106,8 +105,7 @@ class SimpleMultiQuery(QueryExpansionComponent):
                 metadata={"technique": self.config.get("technique", "simple_multi_query")}
             ),
             embedding_token_count=0.0,
-            llm_input_token_count=total_prompt_tokens,
-            llm_output_token_count=total_eval_count
+            llm_token_count=llm_token_count
         )
         return result
 
@@ -183,12 +181,14 @@ class HyDE(SimpleMultiQuery):
     async def expand_query(self, query: str) -> QueryExpansionResult:
         """Generate documents using HyDE (Hypothetical Document Embeddings)"""
         expanded_queries = []
+        llm_token_count = {}
+        model = self.config.get("model", "gemma3:4b")
         total_prompt_tokens = 0
         total_eval_count = 0
         num_expanded_queries = self.config.get("num_expanded_queries", 3)
         
         prompt = self.config.get("prompt", "")
-        response = self.client.get_ollama_response(self.config.get("model", "gemma3:4b"), prompt.format(query=query, num_expanded_queries=num_expanded_queries))
+        response = self.client.get_ollama_response(model, prompt.format(query=query, num_expanded_queries=num_expanded_queries))
         
         if isinstance(response, dict):
             total_prompt_tokens += float(response.get('prompt_tokens', len(prompt.split())))
@@ -224,6 +224,7 @@ class HyDE(SimpleMultiQuery):
                         metadata={}
                     ))
         
+        llm_token_count[model] = {"in": total_prompt_tokens, "out": total_eval_count}
         logger.debug(f"Expanded queries: {expanded_queries}")
         result = QueryExpansionResult(
             query=Query(
@@ -233,8 +234,7 @@ class HyDE(SimpleMultiQuery):
                 metadata={"technique": self.config.get("technique", "hyde")}
             ),
             embedding_token_count=0.0,
-            llm_input_token_count=total_prompt_tokens,
-            llm_output_token_count=total_eval_count
+            llm_token_count=llm_token_count
         )
         return result
 
@@ -323,19 +323,21 @@ class SimpleQueryRefinement(QueryExpansionComponent):
                 refined_query = query
             
             # Calculate token counts from response
-            llm_input_token_count = 0.0
-            llm_output_token_count = 0.0
+            llm_token_count = {}
             
             if self.config.get("provider", "ollama").lower() == "ollama" and response and isinstance(response, dict):
-                llm_input_token_count = float(response.get("prompt_tokens", len(prompt.split())))
-                llm_output_token_count = float(response.get("eval_count", len(refined_query.split())))
+                prompt_tokens = float(response.get("prompt_tokens", len(prompt.split())))
+                output_tokens = float(response.get("eval_count", len(refined_query.split())))
+                llm_token_count[model] = {"in": prompt_tokens, "out": output_tokens}
             elif self.config.get("provider", "ollama").lower() == "gemini" and response and isinstance(response, dict):
-                llm_input_token_count = float(response.get("prompt_tokens", len(prompt.split())))
-                llm_output_token_count = float(response.get("eval_count", len(refined_query.split())))
+                prompt_tokens = float(response.get("prompt_tokens", len(prompt.split())))
+                output_tokens = float(response.get("eval_count", len(refined_query.split())))
+                llm_token_count[model] = {"in": prompt_tokens, "out": output_tokens}
             else:
                 # Fallback to rough estimation
-                llm_input_token_count = float(len(prompt.split()))
-                llm_output_token_count = float(len(refined_query.split()))
+                prompt_tokens = float(len(prompt.split()))
+                output_tokens = float(len(refined_query.split()))
+                llm_token_count[model] = {"in": prompt_tokens, "out": output_tokens}
             
             result = QueryExpansionResult(
                 query=Query(
@@ -350,8 +352,7 @@ class SimpleQueryRefinement(QueryExpansionComponent):
                     }
                 ),
                 embedding_token_count=0.0,  # Will be calculated during retrieval
-                llm_input_token_count=llm_input_token_count,
-                llm_output_token_count=llm_output_token_count
+                llm_token_count=llm_token_count
             )
             return result
             
@@ -370,8 +371,7 @@ class SimpleQueryRefinement(QueryExpansionComponent):
                     }
                 ),
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
 
 class GraphAsQueryExpansion(QueryExpansionComponent):
@@ -411,6 +411,5 @@ class GraphAsQueryExpansion(QueryExpansionComponent):
         return QueryExpansionResult(
             query=query_obj,
             embedding_token_count=embedding_token_count,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )

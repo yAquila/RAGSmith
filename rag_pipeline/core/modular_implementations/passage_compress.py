@@ -10,8 +10,7 @@ logger = logging.getLogger(__name__)
 class PassageCompressResult(TypedDict):
     documents: List[Document]
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class NonePassageCompress(PassageCompressComponent):
     """No passage compression - pass documents through unchanged"""
@@ -21,8 +20,7 @@ class NonePassageCompress(PassageCompressComponent):
         result = PassageCompressResult(
             documents=documents,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result
 
@@ -72,8 +70,10 @@ class TreeSummarize(PassageCompressComponent):
         current_level = text_chunks
         current_metadatas = doc_metadatas
 
-        llm_input_token_count = 0.0
-        llm_output_token_count = 0.0
+        llm_token_count = {}
+        model = self.config.get("llm_summarize_model", "gemma3:4b")
+        total_prompt_tokens = 0.0
+        total_eval_count = 0.0
 
         # Helper to estimate token count (very rough)
         def estimate_tokens(text):
@@ -87,8 +87,8 @@ class TreeSummarize(PassageCompressComponent):
                 group_metadata = current_metadatas[i:i+self.config.get("max_fan_in", 3)]
                 combined = "\n\n".join(group)
                 summary, prompt_tokens, eval_count = self.summarize_chunk(combined)
-                llm_input_token_count += prompt_tokens if prompt_tokens > 0 else estimate_tokens(combined)
-                llm_output_token_count += eval_count if eval_count > 0 else estimate_tokens(summary)
+                total_prompt_tokens += prompt_tokens if prompt_tokens > 0 else estimate_tokens(combined)
+                total_eval_count += eval_count if eval_count > 0 else estimate_tokens(summary)
                 next_level.append(summary)
                 next_metadatas.append(group_metadata[0] if group_metadata else {})
             current_level = next_level
@@ -104,11 +104,11 @@ class TreeSummarize(PassageCompressComponent):
             metadata=summarized_metadata
         )
 
+        llm_token_count[model] = {"in": total_prompt_tokens, "out": total_eval_count}
         result = PassageCompressResult(
             documents=[summarized_doc],
             embedding_token_count=estimate_tokens(summarized_content),
-            llm_input_token_count=llm_input_token_count,
-            llm_output_token_count=llm_output_token_count
+            llm_token_count=llm_token_count
         )
         return result
 
@@ -140,8 +140,11 @@ class LLMSummarizeEachChunk(PassageCompressComponent):
     async def compress_passages(self, documents: List[Document], query: Query) -> PassageCompressResult:
         """Compress documents using LLM"""
         compressed_documents = []
+        llm_token_count = {}
+        model = self.config.get("llm_summarize_model", "gemma3:4b")
         total_prompt_tokens = 0
         total_eval_count = 0
+        
         for doc in documents:
             default_prompt = """
 You are an efficient Document Compressor. Your task is to read the document provided below and extract its key information.
@@ -158,7 +161,7 @@ You are an efficient Document Compressor. Your task is to read the document prov
 ### Compressed Summary
             """
             prompt = self.config.get("prompt", default_prompt)
-            response = self.client.get_ollama_response(self.config.get("llm_summarize_model", "gemma3:4b"), prompt.format(document=doc.content))
+            response = self.client.get_ollama_response(model, prompt.format(document=doc.content))
             if isinstance(response, dict):
                 total_prompt_tokens += float(response.get('prompt_tokens', len(prompt.split())))
                 total_eval_count += float(response.get('eval_count', 0))
@@ -171,11 +174,11 @@ You are an efficient Document Compressor. Your task is to read the document prov
             else:
                 compressed_documents.append(doc)
 
+        llm_token_count[model] = {"in": total_prompt_tokens, "out": total_eval_count}
         result = PassageCompressResult(
             documents=compressed_documents,
             embedding_token_count=0.0,
-            llm_input_token_count=total_prompt_tokens,
-            llm_output_token_count=total_eval_count
+            llm_token_count=llm_token_count
         )
         return result
 
@@ -208,8 +211,11 @@ class LLMLinguaCompress(PassageCompressComponent):
             ))
         llm_input_token_count = result['origin_tokens']
         llm_output_token_count = result['compressed_tokens']
+        llm_token_count = {}
+        model = self.config.get("llm_lingua_model", "microsoft/llmlingua-2-xlm-roberta-large-meetingbank")
+        llm_token_count[model] = {"in": llm_input_token_count, "out": llm_output_token_count}
         return PassageCompressResult(
             documents=compressed_docs,
             embedding_token_count=0.0,
-            llm_input_token_count=llm_input_token_count,
-            llm_output_token_count=llm_output_token_count)
+            llm_token_count=llm_token_count
+        )

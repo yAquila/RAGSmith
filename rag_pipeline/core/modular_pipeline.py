@@ -128,20 +128,17 @@ class ModularRAGPipeline:
         logger.info(f"Initialized {len(self.components)} component categories")
     
     @staticmethod
-    def _parse_component_result(result: dict, component_name: str, embedding_token_counts: dict, llm_input_token_counts: dict, llm_output_token_counts: dict, main_output_key: str, extra_keys: list = None):
+    def _parse_component_result(result: dict, component_name: str, embedding_token_counts: dict, llm_token_counts: dict, main_output_key: str, extra_keys: list = None):
         """
         Helper to parse a component result dict, update token count dicts, and return main output (and extras if needed).
         """
         main_output = result.get(main_output_key)
         emb_count = result.get('embedding_token_count', 0.0)
-        llm_in_count = result.get('llm_input_token_count', 0.0)
-        llm_out_count = result.get('llm_output_token_count', 0.0)
+        llm_token_count = result.get('llm_token_count', {})
         if emb_count > 0.0:
             embedding_token_counts[component_name] = emb_count
-        if llm_in_count > 0.0:
-            llm_input_token_counts[component_name] = llm_in_count
-        if llm_out_count > 0.0:
-            llm_output_token_counts[component_name] = llm_out_count
+        if llm_token_count:
+            llm_token_counts[component_name] = llm_token_count
         extras = {}
         if extra_keys:
             for k in extra_keys:
@@ -162,14 +159,13 @@ class ModularRAGPipeline:
         start_time = time.time()
         try:
             embedding_token_counts = token_counts.get("embedding_token_counts", {})
-            llm_input_token_counts = token_counts.get("llm_input_token_counts", {})
-            llm_output_token_counts = token_counts.get("llm_output_token_counts", {})
+            llm_token_counts = token_counts.get("llm_token_counts", {})
             # Step 2: Query expansion/refinement
             if "query_expansion" in self.components:
                 step_start = time.time()
                 query_expansion_result: QueryExpansionResult = await self.components["query_expansion"].expand_query(query)
                 processed_query = self._parse_component_result(
-                    query_expansion_result, "query_expansion", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                    query_expansion_result, "query_expansion", embedding_token_counts, llm_token_counts,
                     main_output_key='query'
                 )
                 timing_info["query_expansion_time"] = time.time() - step_start
@@ -190,7 +186,7 @@ class ModularRAGPipeline:
                         k=self.config_dict["retrieval"].top_k
                     )
                     retrieved_documents = self._parse_component_result(
-                        retrieval_result, "retrieval", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                        retrieval_result, "retrieval", embedding_token_counts, llm_token_counts,
                         main_output_key='documents'
                     )
                 else:
@@ -202,7 +198,7 @@ class ModularRAGPipeline:
                             k=self.config_dict["query_expansion"].excessive_k
                         )
                         parsed_result = self._parse_component_result(
-                            retrieval_result, "retrieval", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                            retrieval_result, "retrieval", embedding_token_counts, llm_token_counts,
                             main_output_key='documents'
                         )
                         results_list.append(HybridUtils.convert_documents_to_results(parsed_result))
@@ -243,7 +239,7 @@ class ModularRAGPipeline:
                 step_start = time.time()
                 passage_rerank_result: PassageRerankResult = await self.components["passage_rerank"].rerank_passages(retrieved_documents, processed_query)
                 retrieved_documents = self._parse_component_result(
-                    passage_rerank_result, "passage_rerank", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                    passage_rerank_result, "passage_rerank", embedding_token_counts, llm_token_counts,
                     main_output_key='documents'
                 )
                 timing_info["passage_rerank_time"] = time.time() - step_start
@@ -256,7 +252,7 @@ class ModularRAGPipeline:
                 step_start = time.time()
                 passage_filter_result: PassageFilterResult = await self.components["passage_filter"].filter_passages(retrieved_documents, processed_query)
                 retrieved_documents = self._parse_component_result(
-                    passage_filter_result, "passage_filter", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                    passage_filter_result, "passage_filter", embedding_token_counts, llm_token_counts,
                     main_output_key='documents'
                 )
                 timing_info["passage_filter_time"] = time.time() - step_start
@@ -273,7 +269,7 @@ class ModularRAGPipeline:
                     final_documents, processed_query
                 )
                 final_documents = self._parse_component_result(
-                    passage_augment_result, "passage_augment", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                    passage_augment_result, "passage_augment", embedding_token_counts, llm_token_counts,
                     main_output_key='documents'
                 )
                 timing_info["passage_augment_time"] = time.time() - step_start
@@ -289,7 +285,7 @@ class ModularRAGPipeline:
                     final_documents, processed_query
                 )
                 final_documents = self._parse_component_result(
-                    passage_compress_result, "passage_compress", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                    passage_compress_result, "passage_compress", embedding_token_counts, llm_token_counts,
                     main_output_key='documents'
                 )
                 timing_info["passage_compress_time"] = time.time() - step_start
@@ -303,7 +299,7 @@ class ModularRAGPipeline:
                 step_start = time.time()
                 prompt_maker_result: PromptMakerResult = await self.components["prompt_maker"].make_prompt(processed_query, final_documents)
                 prompt = self._parse_component_result(
-                    prompt_maker_result, "prompt_maker", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                    prompt_maker_result, "prompt_maker", embedding_token_counts, llm_token_counts,
                     main_output_key='text'
                 )
                 timing_info["prompt_maker_time"] = time.time() - step_start
@@ -320,10 +316,10 @@ class ModularRAGPipeline:
                 if prompt:
                     gen_result: GeneratorResult = await self.components["generator"].generate(prompt, processed_query)
                     if isinstance(gen_result, dict):
-                        generated_answer = self._parse_component_result(
-                            gen_result, "generation", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
-                            main_output_key='text'
-                        )
+                                            generated_answer = self._parse_component_result(
+                        gen_result, "generation", embedding_token_counts, llm_token_counts,
+                        main_output_key='text'
+                    )
                     else:
                         generated_answer = gen_result if isinstance(gen_result, str) else ""
                 else:
@@ -342,7 +338,7 @@ class ModularRAGPipeline:
                     generated_answer, processed_query, context
                 )
                 final_answer = self._parse_component_result(
-                    post_generation_result, "post_generation", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                    post_generation_result, "post_generation", embedding_token_counts, llm_token_counts,
                     main_output_key='text'
                 )
                 timing_info["post_generation_time"] = time.time() - step_start
@@ -365,8 +361,7 @@ class ModularRAGPipeline:
                 total_time=total_time,
                 **timing_info,
                 embedding_token_counts=embedding_token_counts,
-                llm_input_token_counts=llm_input_token_counts,
-                llm_output_token_counts=llm_output_token_counts
+                llm_token_counts=llm_token_counts
             )
             
             logger.info(f"Pipeline execution completed in {total_time:.3f}s")
@@ -396,8 +391,7 @@ class ModularRAGPipeline:
             data_to_save = {
                 "documents": [doc.to_dict() for doc in documents],
                 "embedding_token_counts": getattr(args, "embedding_token_counts", {}),
-                "llm_input_token_counts": getattr(args, "llm_input_token_counts", {}),
-                "llm_output_token_counts": getattr(args, "llm_output_token_counts", {}),
+                "llm_token_counts": getattr(args, "llm_token_counts", {}),
                 "timing_info": getattr(args, "timing_info", {}),
             }
             with open(os.path.join(path, "documents.json"), "w", encoding="utf-8") as f:
@@ -409,12 +403,12 @@ class ModularRAGPipeline:
 
         return True
 
-    async def load_documents(self, path: str) -> Tuple[List[Document], Dict[str, Any], Dict[str, Any], Dict[str, Any], Dict[str, Any]]:
+    async def load_documents(self, path: str) -> Tuple[List[Document], Dict[str, Any], Dict[str, Any], Dict[str, Any]]:
         """Load documents from json files"""
         try:
             with open(os.path.join(path, "documents.json"), "r") as f:
                 data = json.load(f)
-                return [Document(**doc) for doc in data["documents"]], data["embedding_token_counts"], data["llm_input_token_counts"], data["llm_output_token_counts"], data["timing_info"]
+                return [Document(**doc) for doc in data["documents"]], data["embedding_token_counts"], data["llm_token_counts"], data["timing_info"]
         except Exception as e:
             logger.error(f"Failed to load documents: {e}")
             return []
@@ -424,27 +418,25 @@ class ModularRAGPipeline:
         """Perform pre-embedding"""
         # Step 1: Pre-embedding
         embedding_token_counts = {}
-        llm_input_token_counts = {}
-        llm_output_token_counts = {}
+                                llm_token_counts = {}
         timing_info = {}
         if documents and "pre_embedding" in self.components and self.config_dict["pre_embedding"].technique != "none":
             save_path = os.path.join("rag_pipeline", "pre_embedding_data", f"pre_embedding-{self.config_dict['pre_embedding'].technique}")
             if os.path.exists(save_path):
-                documents, embedding_token_counts, llm_input_token_counts, llm_output_token_counts, timing_info = await self.load_documents(save_path)
+                documents, embedding_token_counts, llm_token_counts, timing_info = await self.load_documents(save_path)
                 return {
                     "documents": documents,
                     "timing_info": timing_info,
                     "token_counts": {
                         "embedding_token_counts": embedding_token_counts,
-                        "llm_input_token_counts": llm_input_token_counts,
-                        "llm_output_token_counts": llm_output_token_counts
+                        "llm_token_counts": llm_token_counts
                     }
                 }
 
             step_start = time.time()
             pre_embedding_result: PreEmbeddingResult = await self.components["pre_embedding"].process_documents(documents)
             documents = ModularRAGPipeline._parse_component_result(
-                pre_embedding_result, "pre_embedding", embedding_token_counts, llm_input_token_counts, llm_output_token_counts,
+                pre_embedding_result, "pre_embedding", embedding_token_counts, llm_token_counts,
                 main_output_key='documents'
             )
             timing_info["pre_embedding_time"] = time.time() - step_start
@@ -452,8 +444,7 @@ class ModularRAGPipeline:
 
             await self.save_documents(documents, {
                 "embedding_token_counts": embedding_token_counts,
-                "llm_input_token_counts": llm_input_token_counts,
-                "llm_output_token_counts": llm_output_token_counts,
+                "llm_token_counts": llm_token_counts,
                 "timing_info": timing_info
             }, save_path)
         else:
@@ -463,8 +454,7 @@ class ModularRAGPipeline:
             "timing_info": timing_info,
             "token_counts": {
                 "embedding_token_counts": embedding_token_counts,
-                "llm_input_token_counts": llm_input_token_counts,
-                "llm_output_token_counts": llm_output_token_counts
+                "llm_token_counts": llm_token_counts
             }
         }
 
@@ -553,8 +543,7 @@ class ModularRAGPipeline:
                             generation_time=getattr(exec_result, 'generation_time', 0.0),
                             post_generation_time=getattr(exec_result, 'post_generation_time', 0.0),
                             embedding_token_counts=getattr(exec_result, 'embedding_token_counts', {}),
-                            llm_input_token_counts=getattr(exec_result, 'llm_input_token_counts', {}),
-                            llm_output_token_counts=getattr(exec_result, 'llm_output_token_counts', {}),
+                            llm_token_counts=getattr(exec_result, 'llm_token_counts', {}),
                             error=None
                         )
                         generation_result = GenerationResult(
@@ -574,8 +563,7 @@ class ModularRAGPipeline:
                             generation_time=getattr(exec_result, 'generation_time', 0.0),
                             post_generation_time=getattr(exec_result, 'post_generation_time', 0.0),
                             embedding_token_counts=getattr(exec_result, 'embedding_token_counts', {}),
-                            llm_input_token_counts=getattr(exec_result, 'llm_input_token_counts', {}),
-                            llm_output_token_counts=getattr(exec_result, 'llm_output_token_counts', {}),
+                            llm_token_counts=getattr(exec_result, 'llm_token_counts', {}),
                             error=None
                         )
                         eval_result = await evaluator.evaluate_single_case(

@@ -1,6 +1,6 @@
 
 import logging
-from typing import List, TypedDict
+from typing import List, TypedDict, Dict
 
 from rag_pipeline.core.modular_framework import (
     PassageRerankComponent, Document, Query
@@ -11,8 +11,7 @@ logger = logging.getLogger(__name__)
 class PassageRerankResult(TypedDict):
     documents: List[Document]
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class NonePassageRerank(PassageRerankComponent):
     """No reranking - pass documents through unchanged"""
@@ -22,8 +21,7 @@ class NonePassageRerank(PassageRerankComponent):
         result = PassageRerankResult(
             documents=documents,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result
 
@@ -68,8 +66,7 @@ class CrossEncoderRerank(PassageRerankComponent):
                 metadata=doc_data.get("metadata", {})
                 ) for doc_data in reranked_docs],
                 embedding_token_count=float(embedding_token_count),
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             return result
             
@@ -78,8 +75,7 @@ class CrossEncoderRerank(PassageRerankComponent):
             result = PassageRerankResult(
                 documents=documents,
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             return result
 
@@ -127,8 +123,7 @@ class LLMRerank(PassageRerankComponent):
                 metadata=doc_data.get("metadata", {})
                 ) for doc_data in reranked_docs],
                 embedding_token_count=0.0,
-                llm_input_token_count=llm_input_token_count,
-                llm_output_token_count=llm_output_token_count
+                llm_token_count={model_name: {"in": llm_input_token_count, "out": llm_output_token_count}}
             )
             return result
             
@@ -137,8 +132,7 @@ class LLMRerank(PassageRerankComponent):
             result = PassageRerankResult(
                 documents=documents,
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             return result
 
@@ -198,8 +192,7 @@ class CELLM_ParallelRerank(PassageRerankComponent):
                 metadata=doc_data.get("metadata", {})
                 ) for doc_data in reranked_docs],
                 embedding_token_count=ce_embedding_token_count,
-                llm_input_token_count=llm_input_token_count,
-                llm_output_token_count=llm_output_token_count
+                llm_token_count={llm_model: {"in": llm_input_token_count, "out": llm_output_token_count}}
             )
             return result
 
@@ -208,7 +201,6 @@ class CELLM_ParallelRerank(PassageRerankComponent):
             result = PassageRerankResult(
                 documents=documents,
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
             return result

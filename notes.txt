@@ -1,8 +1,7 @@
-- Evaluator ı şöyle yapabiliriz belki: Her adımdan ya da bazı adımlardan sonra evaluation yapıp o adımın bir önceki adıma göre başarıyı ne kadar arttırdığına bakılabilir
+- Evaluator ı şöyle yapabiliriz belki: Her adımdan ya da bazı adımlardan sonra evaluation yapıp o adımın bir önceki adıma göre başarıyı ne kadar arttırdığına bakılabilir (Sadece retrieval için mantıklı gibi)
 - İleride hızı ve kaynak kullanım verimini/gpu load verimini artırmak için aynı modeli kullanacak olan işlemleri art arda yapıp sonra diğer modele geçilebilir, bunlar farklı configlerde olsa bile kaydedilerek böyle bir şey yapılabilir
 - sonuçları grafikleştirmek lazım
 - dataset üretirken json isimlendirmesi direkt article_id ile olsun ben şuanki datasette değiştirdim ama ilerisi için böyle yapalım
-- hashingle ilgili bir sıkıntı var
 - en son token sayıları vs kontrol edilmeli, bazı tokenlar sayılmıyor olabilir iyice bakılmalı
 - teknikler implement edildikten sonra (hyperparameter optimization aşırı uzun süreceği için) bu tekniklerin kullanıldığı makalelerden hyperparametre ve prompt'ları alıp onları kullanarak test edelim
 - promptlar ayrı bir dosyada tutulsun ordan çekilsin

@@ -1,6 +1,6 @@
 
 import logging
-from typing import List, TypedDict
+from typing import List, TypedDict, Dict
 
 from rag_pipeline.core.modular_framework import (
     PromptMakerComponent, Document, Query
@@ -11,8 +11,7 @@ logger = logging.getLogger(__name__)
 class PromptMakerResult(TypedDict):
     text: str
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class SimpleListingPromptMaker(PromptMakerComponent):
     """✅ CURRENTLY IMPLEMENTED - Simple listing of documents in prompt"""
@@ -44,8 +43,7 @@ class SimpleListingPromptMaker(PromptMakerComponent):
         result = PromptMakerResult(
             text=prompt,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result
 
@@ -81,8 +79,7 @@ class LongContextReorder(PromptMakerComponent): # Top n passages are reinforced 
         result = PromptMakerResult(
             text=prompt,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result
 

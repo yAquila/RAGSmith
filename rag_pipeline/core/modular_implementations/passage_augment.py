@@ -15,8 +15,7 @@ logger = logging.getLogger(__name__)
 class PassageAugmentResult(TypedDict):
     documents: List[Document]
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class NonePassageAugment(PassageAugmentComponent):
     """No passage augmentation - pass documents through unchanged"""
@@ -26,8 +25,7 @@ class NonePassageAugment(PassageAugmentComponent):
         result = PassageAugmentResult(
             documents=documents,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0
+            llm_token_count={}
         )
         return result
 
@@ -92,8 +90,7 @@ class PrevNextAugmenter(PassageAugmentComponent):
             return PassageAugmentResult(
                 documents=documents,
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
         else:
             doc_id_list = [doc.doc_id for doc in documents]
@@ -120,8 +117,7 @@ class PrevNextAugmenter(PassageAugmentComponent):
             return PassageAugmentResult(
                 documents=merged_documents,
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
 
 
@@ -298,5 +294,5 @@ class RelevantSegmentExtractor(PassageAugmentComponent):
         return PassageAugmentResult(
             documents=new_documents,
             embedding_token_count=0.0,
-            llm_input_token_count=0.0,
-            llm_output_token_count=0.0)
+            llm_token_count={}
+        )

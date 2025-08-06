@@ -50,25 +50,25 @@ async def run_rag_evaluation():
                 embedding_model="mxbai-embed-large",
                 similarity_metric="cosine"
             ),
-            # RetrievalConfig(
-            #     name="nomic-cosine",
-            #     enabled=True,
-            #     technique="simple_vector_rag",
-            #     top_k=10,
-            #     embedding_model="nomic-embed-text",
-            #     similarity_metric="cosine"
-            # ),
-            # RetrievalConfig(
-            #     name="bm25",
-            #     enabled=True,
-            #     technique="keyword_search_bm25",
-            #     top_k=10,
-            #     bm25_k1=1.2,
-            #     bm25_b=0.75,
-            #     remove_stopwords=True,
-            #     apply_stemming=False,
-            #     use_advanced_tokenization=False
-            # ),
+            RetrievalConfig(
+                name="nomic-cosine",
+                enabled=True,
+                technique="simple_vector_rag",
+                top_k=10,
+                embedding_model="nomic-embed-text",
+                similarity_metric="cosine"
+            ),
+            RetrievalConfig(
+                name="bm25",
+                enabled=True,
+                technique="keyword_search_bm25",
+                top_k=10,
+                bm25_k1=1.2,
+                bm25_b=0.75,
+                remove_stopwords=True,
+                apply_stemming=False,
+                use_advanced_tokenization=False
+            ),
             # RetrievalConfig(
             #     name="hybrid_search_cc",
             #     enabled=True,
@@ -80,16 +80,103 @@ async def run_rag_evaluation():
             #     weights=[0.7, 0.3],
             #     normalization_method="minmax"
             # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_vector_keyword_graph",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="simply",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["vector", "keyword", "graph", "hypergraph"]
-            # ),
+            RetrievalConfig(
+                name="graph_rag",
+                enabled=True,
+                technique="graph_rag",
+                top_k=10,
+                embedding_model="mxbai-embed-large",
+                similarity_metric="cosine"
+            ),
+            RetrievalConfig(
+                name="hypergraph_rag",
+                enabled=True,
+                technique="hypergraph_rag",
+                top_k=10,
+                embedding_model="mxbai-embed-large",
+                similarity_metric="cosine"
+            ),
+            RetrievalConfig(
+                name="complete_hybrid_simply_vector_keyword",
+                enabled=True,
+                technique="complete_hybrid",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                combination_method="simply",
+                normalization_method="dbsf",
+                retrieval_methods=["vector", "keyword"]
+            ),
+            RetrievalConfig(
+                name="complete_hybrid_cc_vector_keyword",
+                enabled=True,
+                technique="complete_hybrid",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                weights=[0.7, 0.3],
+                combination_method="convex_combination",
+                normalization_method="dbsf",
+                retrieval_methods=["vector", "keyword"]
+            ),
+            RetrievalConfig(
+                name="complete_hybrid_vector_graph",
+                enabled=True,
+                technique="complete_hybrid",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                combination_method="simply",
+                normalization_method="dbsf",
+                retrieval_methods=["vector", "graph"]
+            ),
+            RetrievalConfig(
+                name="complete_hybrid_graph_hypergraph",
+                enabled=True,
+                technique="complete_hybrid",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                combination_method="simply",
+                normalization_method="dbsf",
+                retrieval_methods=["graph", "hypergraph"]
+            ),
+            RetrievalConfig(
+                name="complete_hybrid_vector_graph_hypergraph",
+                enabled=True,
+                technique="complete_hybrid",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                combination_method="simply",
+                normalization_method="dbsf",
+                retrieval_methods=["vector", "graph", "hypergraph"]
+            ),
+            RetrievalConfig(
+                name="complete_hybrid_vector_keyword_graph",
+                enabled=True,
+                technique="complete_hybrid",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                combination_method="simply",
+                normalization_method="dbsf",
+                retrieval_methods=["vector", "keyword", "graph"]
+            ),
+            RetrievalConfig(
+                name="complete_hybrid_vector_keyword_hypergraph",
+                enabled=True,
+                technique="complete_hybrid",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                combination_method="simply",
+                normalization_method="dbsf",
+                retrieval_methods=["vector", "keyword", "hypergraph"]
+            ),
+            RetrievalConfig(
+                name="complete_hybrid_vector_keyword_graph_hypergraph",
+                enabled=True,
+                technique="complete_hybrid",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                combination_method="simply",
+                normalization_method="dbsf",
+                retrieval_methods=["vector", "keyword", "graph", "hypergraph"]
+            ),
             # RetrievalConfig(
             #     name="hybrid_search_dbsf",
             #     enabled=True,
@@ -119,68 +206,53 @@ async def run_rag_evaluation():
             #     combination_method="borda_count",
             #     excessive_k=60
             # )
-            # RetrievalConfig(
-            #     name="graph_rag",
-            #     enabled=True,
-            #     technique="graph_rag",
-            #     top_k=10,
-            #     embedding_model="mxbai-embed-large",
-            #     similarity_metric="cosine"
-            # ),
-            # RetrievalConfig(
-            #     name="hypergraph_rag",
-            #     enabled=True,
-            #     technique="hypergraph_rag",
-            #     top_k=10,
-            #     embedding_model="mxbai-embed-large",
-            #     similarity_metric="cosine"
-            # )
+            
         ],
         # Passage rerank: (optional, can add more configs)
         passage_rerank=[
-            # PassageRerankConfig(
-            #     name="ce_rerank_bge",
-            #     enabled=True,
-            #     technique="cross_encoder",
-            #     cross_encoder_top_k=5,
-            #     cross_encoder_model="BAAI/bge-reranker-v2-m3",
-            # ), 
-            # PassageRerankConfig(
-            #     name="llm_rerank_gemma",
-            #     enabled=True,
-            #     technique="llm_rerank",
-            #     llm_rerank_top_k=5,
-            #     llm_rerank_model="gemma3:4b",
-            # ),
-            # PassageRerankConfig(
-            #     name="cellm_parallel_rerank",
-            #     enabled=True,
-            #     technique="cellm_parallel_rerank",
-            #     ce_model="BAAI/bge-reranker-v2-m3",
-            #     llm_model="gemma3:4b",
-            #     top_k=5,
-            #     parallel_ensemble_method="weighted",
-            #     ce_weight=0.7,
-            #     llm_weight=0.3,
-            #     ce_force_cpu=False,
-            #     llm_max_tokens=2048,
-            #     llm_temperature=0.1,
-            # ),
-            # PassageRerankConfig(
-            #     name="no_rerank",
-            #     enabled=True,
-            #     technique="none",
-            # )
+            PassageRerankConfig(
+                name="ce_rerank_bge",
+                enabled=True,
+                technique="cross_encoder",
+                cross_encoder_top_k=5,
+                cross_encoder_model="BAAI/bge-reranker-v2-m3",
+            ), 
+            PassageRerankConfig(
+                name="llm_rerank_gemma",
+                enabled=True,
+                technique="llm_rerank",
+                llm_rerank_top_k=5,
+                llm_rerank_model="gemma3:4b",
+            ),
+            PassageRerankConfig(
+                name="cellm_parallel_rerank",
+                enabled=True,
+                technique="cellm_parallel_rerank",
+                ce_model="BAAI/bge-reranker-v2-m3",
+                llm_model="gemma3:4b",
+                top_k=5,
+                parallel_ensemble_method="weighted",
+                ce_weight=0.7,
+                llm_weight=0.3,
+                ce_force_cpu=False,
+                llm_max_tokens=2048,
+                llm_temperature=0.1,
+            ),
+            PassageRerankConfig(
+                name="no_rerank",
+                enabled=True,
+                technique="none",
+            )
         ],
 
         # Passage filter: one config
         passage_filter=[
-            # PassageFilterConfig(
-            #     name="simple_threshold",
-            #     enabled=True,
-            #     technique="simple_threshold",
-            #     top_k=10,
-            # ),
+            PassageFilterConfig(
+                name="simple_threshold",
+                enabled=True,
+                technique="simple_threshold",
+                top_k=10,
+            ),
             PassageFilterConfig(
                 name="similarity_threshold",
                 enabled=True,
@@ -228,12 +300,12 @@ async def run_rag_evaluation():
                 enabled=True,
                 technique="simple_listing"
             ),
-            # PromptMakerConfig(
-            #     name="long_context_reorder_1",
-            #     enabled=True,
-            #     technique="long_context_reorder",
-            #     reinforce_top_n_passages=1
-            # ),
+            PromptMakerConfig(
+                name="long_context_reorder_1",
+                enabled=True,
+                technique="long_context_reorder",
+                reinforce_top_n_passages=1
+            ),
             # PromptMakerConfig(
             #     name="long_context_reorder_2",
             #     enabled=True,
@@ -250,15 +322,15 @@ async def run_rag_evaluation():
 
         # Generator: two configs
         generator=[
-            # GeneratorConfig(
-            #     name="llama3.2:1b-t0.3",
-            #     enabled=True,
-            #     technique="llm",
-            #     model="llama3.2:1b",
-            #     temperature=0.3,
-            #     provider="ollama",
-            #     max_tokens=500
-            # ),
+            GeneratorConfig(
+                name="llama3.2:1b-t0.3",
+                enabled=True,
+                technique="llm",
+                model="llama3.2:1b",
+                temperature=0.3,
+                provider="ollama",
+                max_tokens=500
+            ),
             GeneratorConfig(
                 name="gemma3:4b-t0.1",
                 enabled=True,
@@ -436,7 +508,7 @@ async def run_rag_evaluation():
         # Dataset/global settings
         dataset_path=None,
         qdrant_collection_hash=None,
-        max_test_cases=3,
+        max_test_cases=42,
         test_case_offset=0,
         eval_batch_size=1,
         parallel_execution=True,
@@ -540,16 +612,23 @@ def generate_markdown_report(results) -> str:
     markdown += "## 🔢 TOKEN COUNT BREAKDOWN (AVERAGE PER COMPONENT):\n\n"
     for combo, metrics in aggregated_metrics.items():
         markdown += f"**{combo}:**\n"
-        for key, pretty in [
-            ("embedding_token_counts", "Embedding Tokens"),
-            ("llm_input_token_counts", "LLM Input Tokens"),
-            ("llm_output_token_counts", "LLM Output Tokens")
-        ]:
-            token_counts = metrics.get(key, {})
-            if token_counts:
-                markdown += f"  - {pretty}:\n"
-                for comp, val in token_counts.items():
-                    markdown += f"    - {comp}: {val:.1f}\n"
+        # Handle embedding token counts
+        embedding_counts = metrics.get("embedding_token_counts", {})
+        if embedding_counts:
+            markdown += f"  - Embedding Tokens:\n"
+            for comp, val in embedding_counts.items():
+                markdown += f"    - {comp}: {val:.1f}\n"
+        
+        # Handle LLM token counts
+        llm_counts = metrics.get("llm_token_counts", {})
+        if llm_counts:
+            markdown += f"  - LLM Tokens:\n"
+            for comp, model_counts in llm_counts.items():
+                markdown += f"    - {comp}:\n"
+                for model, counts in model_counts.items():
+                    in_tokens = counts.get('in', 0.0)
+                    out_tokens = counts.get('out', 0.0)
+                    markdown += f"      - {model}: {in_tokens:.1f} in, {out_tokens:.1f} out\n"
     markdown += "\n"
     
     # Timing breakdown
@@ -684,14 +763,19 @@ def _format_detailed_metrics(aggregated_metrics) -> str:
         if total_pred_time > 0:
             lines.append(f"  Total Prediction Time: {total_pred_time:.3f}s")
         # Token counts per component
-        for key, pretty in [
-            ("embedding_token_counts", "Embedding Tokens"),
-            ("llm_input_token_counts", "LLM Input Tokens"),
-            ("llm_output_token_counts", "LLM Output Tokens")
-        ]:
-            token_counts = metrics.get(key, {})
-            if token_counts:
-                lines.append(f"  {pretty}:{sum(token_counts.values()):.1f}")
+        embedding_counts = metrics.get("embedding_token_counts", {})
+        if embedding_counts:
+            lines.append(f"  Embedding Tokens: {sum(embedding_counts.values()):.1f}")
+        
+        llm_counts = metrics.get("llm_token_counts", {})
+        if llm_counts:
+            total_llm_in = 0
+            total_llm_out = 0
+            for comp, model_counts in llm_counts.items():
+                for model, counts in model_counts.items():
+                    total_llm_in += counts.get('in', 0.0)
+                    total_llm_out += counts.get('out', 0.0)
+            lines.append(f"  LLM Tokens: {total_llm_in:.1f} in, {total_llm_out:.1f} out")
         # Evaluation timing
         retr_eval_time = metrics.get('retrieval_evaluation_time', 0.0)
         gen_eval_time = metrics.get('generation_evaluation_time', 0.0)
