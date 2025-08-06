@@ -367,10 +367,21 @@ async def run_rag_evaluation():
 
         # Other categories as empty lists
         pre_embedding=[
-            PreEmbeddingConfig(
-                name="no_pre_embedding",
+            # PreEmbeddingConfig(
+            #     name="no_pre_embedding",
+            #     enabled=True,
+            #     technique="none",
+            # ),
+            PreEmbeddingConfig( 
+                name="contextual_chunk_headers",
                 enabled=True,
-                technique="none",
+                technique="contextual_chunk_headers",
+                add_headers=True,
+                header_generation_strategy="semantic",
+                header_generation_model="gemma3:4b",
+                header_provider="ollama",
+                header_template="Document Section: {title}\nContext: {context}\n\n",
+                header_max_length=50,
             ),
             # PreEmbeddingConfig(
             #     name="hype",
@@ -379,13 +390,13 @@ async def run_rag_evaluation():
             #     num_hype_questions=3,
             #     hype_model="gemma3:4b",
             # ),
-            PreEmbeddingConfig(
-                name="parent_document_retriever",
-                enabled=True,
-                technique="parent_document_retriever",
-                pdr_chunk_size=100,
-                pdr_chunk_overlap=20,
-            )
+            # PreEmbeddingConfig(
+            #     name="parent_document_retriever",
+            #     enabled=True,
+            #     technique="parent_document_retriever",
+            #     pdr_chunk_size=100,
+            #     pdr_chunk_overlap=20,
+            # )
         ],
         
 
