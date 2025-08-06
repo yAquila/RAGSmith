@@ -21,6 +21,38 @@ class PreEmbeddingConfig(BaseModel):
     # Contextual Chunk Headers settings
     add_headers: bool = False
     header_template: str = "Document Section: {title}\nContext: {context}\n\n"
+    header_generation_strategy: str = "semantic"  # Options: "semantic", "query_aware", "structural"
+    header_generation_model: str = "gemma3:4b"
+    header_provider: str = "ollama"  # Options: "ollama", "gemini"
+    header_max_length: int = 50
+    header_min_relevance_score: float = 0.7
+    enable_header_deduplication: bool = True
+    header_diversity_threshold: float = 0.8
+    
+    # Header generation prompts
+    header_semantic_prompt: str = """Generate a concise header (3-5 words) that captures the main topic of this document section. 
+The header should be descriptive and help with information retrieval.
+
+Document content:
+{content}
+
+Header:"""
+    
+    header_query_aware_prompt: str = """Generate a header that would help answer questions about this content. 
+The header should be relevant for search and retrieval purposes.
+
+Document content:
+{content}
+
+Header:"""
+    
+    header_structural_prompt: str = """Extract or generate a section title for this content. 
+If the content has a clear title or heading, use it. Otherwise, generate a descriptive title.
+
+Document content:
+{content}
+
+Title:"""
     
     # Parent Document Retriever settings
     pdr_chunk_size: int = 100
