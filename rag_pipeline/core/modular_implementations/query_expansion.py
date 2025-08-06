@@ -280,7 +280,7 @@ class SimpleQueryRefinement(QueryExpansionComponent):
         """Refine/rewrite the query using LLM"""
         
         # Get configuration parameters
-        prompt_template = self.config.get("refinement_prompt", "")
+        prompt_template = self.config.get("refinement_clarification_prompt", "")
         strategy = self.config.get("refinement_strategy", "clarification")
         model = self.config.get("refinement_model", "gemma3:4b")
         temperature = self.config.get("refinement_temperature", 0.1)

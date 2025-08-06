@@ -46,12 +46,7 @@ class TreeSummarize(PassageCompressComponent):
     
 
     def summarize_chunk(self, text: str) -> Tuple[str, int, int]:
-        prompt = (
-            "Write a summary of the following. Try to use only the information provided. Try to include as many key details as possible.\n"
-            "{context_str}\n"
-            'SUMMARY:\n'
-        )
-
+        prompt = self.config.get("tree_summarize_prompt", "")
         response = self.client.get_ollama_response(self.config.get("tree_summarize_model", "gemma3:4b"), prompt.format(context_str=text))
         if isinstance(response, dict):
             return response.get('response', '').strip(), response.get('prompt_tokens', 0), response.get('eval_count', 0)
@@ -146,21 +141,7 @@ class LLMSummarizeEachChunk(PassageCompressComponent):
         total_eval_count = 0
         
         for doc in documents:
-            default_prompt = """
-You are an efficient Document Compressor. Your task is to read the document provided below and extract its key information.
-
-### Instructions
-1.  Identify and list the main facts, figures, names, and core concepts from the text.
-2.  Present these points as a concise, factual list.
-3.  Do not add any information, opinions, or interpretations not present in the original text.
-4.  The output should be a dense, information-rich summary.
-
-### Document to Compress
-{document}
-
-### Compressed Summary
-            """
-            prompt = self.config.get("prompt", default_prompt)
+            prompt = self.config.get("llm_summarize_prompt", "")
             response = self.client.get_ollama_response(model, prompt.format(document=doc.content))
             if isinstance(response, dict):
                 total_prompt_tokens += float(response.get('prompt_tokens', len(prompt.split())))
