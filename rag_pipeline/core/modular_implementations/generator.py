@@ -11,8 +11,7 @@ logger = logging.getLogger(__name__)
 class GeneratorResult(TypedDict):
     text: str
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 
 class LLMGenerator(GeneratorComponent):
@@ -51,16 +50,14 @@ class LLMGenerator(GeneratorComponent):
                     result = GeneratorResult(
                         text=response.get('response', ''),
                         embedding_token_count=0.0,
-                        llm_input_token_count=float(response.get('prompt_tokens', len(prompt.split()))),
-                        llm_output_token_count=float(response.get('eval_count', 0))
+                        llm_token_count={model: {"in": float(response.get('prompt_tokens', len(prompt.split()))), "out": float(response.get('eval_count', 0))}}
                     )
                     return result
                 else:
                     result = GeneratorResult(
                         text=str(response),
                         embedding_token_count=0.0,
-                        llm_input_token_count=float(len(prompt.split())),
-                        llm_output_token_count=float(len(str(response).split()))
+                        llm_token_count={model: {"in": float(len(prompt.split())), "out": float(len(str(response).split()))}}
                     )
                     return result
             else:  # gemini
@@ -69,16 +66,14 @@ class LLMGenerator(GeneratorComponent):
                     result = GeneratorResult(
                         text=response.get('response', ''),
                         embedding_token_count=0.0,
-                        llm_input_token_count=float(len(prompt.split())),
-                        llm_output_token_count=float(len(response.get('response', '').split()))
+                        llm_token_count={model: {"in": float(len(prompt.split())), "out": float(len(response.get('response', '').split()))}}
                     )
                     return result
                 else:
                     result = GeneratorResult(
                         text=str(response),
                         embedding_token_count=0.0,
-                        llm_input_token_count=float(len(prompt.split())),
-                        llm_output_token_count=float(len(str(response).split()))
+                        llm_token_count={model: {"in": float(len(prompt.split())), "out": float(len(str(response).split()))}}
                     )
                     return result
         except Exception as e:
@@ -86,8 +81,7 @@ class LLMGenerator(GeneratorComponent):
             result = GeneratorResult(
                 text="",
                 embedding_token_count=0.0,
-                llm_input_token_count=float(len(prompt.split())),
-                llm_output_token_count=0.0
+                llm_token_count={self.config.get("model", "gpt-3.5-turbo"): {"in": float(len(prompt.split())), "out": 0.0}}
             )
             return result
 
@@ -125,11 +119,13 @@ class MultiLLMGenerator(GeneratorComponent):
         """
         models = self.config.get("models", ["llama3.2:1b", "gemma3:4b"])
         results = []
+        llm_token_count = {}
         for model in models:
             try:
                 client = self.clients.get(model)
                 if client is None:
                     logger.error(f"No client found for model: {model}")
+                    llm_token_count[model] = {"in": float(len(prompt.split())), "out": 0.0}
                     results.append(("", 0.0, float(len(prompt.split())), 0.0, model))
                     continue
 
@@ -139,8 +135,10 @@ class MultiLLMGenerator(GeneratorComponent):
                         generated_text = response.get('response', '')
                         prompt_tokens = float(len(prompt.split()))
                         eval_count = float(len(generated_text.split()))
+                        llm_token_count[model] = {"in": prompt_tokens, "out": eval_count}
                         results.append((generated_text, 0.0, prompt_tokens, eval_count, model))
                     else:
+                        llm_token_count[model] = {"in": float(len(prompt.split())), "out": 0.0}
                         results.append((str(response), 0.0, float(len(prompt.split())), 0.0, model))
                 else:  # ollama
                     response = client.get_ollama_response(model, prompt)
@@ -148,11 +146,14 @@ class MultiLLMGenerator(GeneratorComponent):
                         generated_text = response.get('response', '')
                         prompt_tokens = float(response.get('prompt_tokens', len(prompt.split())))
                         eval_count = float(response.get('eval_count', len(generated_text.split())))
+                        llm_token_count[model] = {"in": prompt_tokens, "out": eval_count}
                         results.append((generated_text, 0.0, prompt_tokens, eval_count, model))
                     else:
+                        llm_token_count[model] = {"in": float(len(prompt.split())), "out": 0.0}
                         results.append((str(response), 0.0, float(len(prompt.split())), 0.0, model))
             except Exception as e:
                 logger.error(f"Generation failed for model {model}: {e}")
+                llm_token_count[model] = {"in": float(len(prompt.split())), "out": 0.0}
                 results.append(("", 0.0, float(len(prompt.split())), 0.0, model))
 
 
@@ -200,24 +201,25 @@ You are a response synthesizer. Your task is to create one high-quality final an
             ensemble_llm_response = ensemble_llm_client.get_ollama_response(self.config.get("ensemble_llm_model", "gemma3:4b"), ensemble_prompt)
         logger.debug(f"Ensemble LLM prompt: {ensemble_prompt}")
         logger.debug(f"Ensemble LLM response: {ensemble_llm_response}")
+        ensemble_model = self.config.get("ensemble_llm_model", "gemma3:4b")
         if isinstance(ensemble_llm_response, dict):
             ensemble_llm_generated_text = ensemble_llm_response.get('response', '')
             ensemble_llm_prompt_tokens = float(ensemble_llm_response.get('prompt_tokens', len(ensemble_prompt.split())))
             ensemble_llm_eval_count = float(ensemble_llm_response.get('eval_count', len(ensemble_llm_generated_text.split())))
             logger.info(f"Ensemble LLM prompt tokens: {ensemble_llm_prompt_tokens}")
             logger.info(f"Ensemble LLM eval count: {ensemble_llm_eval_count}")
+            llm_token_count[ensemble_model] = {"in": ensemble_llm_prompt_tokens, "out": ensemble_llm_eval_count}
             result = GeneratorResult(
                 text=ensemble_llm_generated_text,
                 embedding_token_count=0.0,
-                llm_input_token_count=total_prompt_tokens + ensemble_llm_prompt_tokens,
-                llm_output_token_count=total_eval_count + ensemble_llm_eval_count
+                llm_token_count=llm_token_count
             )
             return result
         else:
+            llm_token_count[ensemble_model] = {"in": len(ensemble_prompt.split()), "out": len(str(ensemble_llm_response).split())}
             result = GeneratorResult(
                 text=str(ensemble_llm_response),
                 embedding_token_count=0.0,
-                llm_input_token_count=total_prompt_tokens + len(ensemble_prompt.split()),
-                llm_output_token_count=total_eval_count + len(str(ensemble_llm_response).split())
+                llm_token_count=llm_token_count
             )
             return result

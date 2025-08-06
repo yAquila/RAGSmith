@@ -362,7 +362,7 @@ Return format: {{"score": 0.85}}"""
         ]
         # Canonical token count keys
         token_keys = [
-            'embedding_token_counts', 'llm_input_token_counts', 'llm_output_token_counts'
+            'embedding_token_counts', 'llm_token_counts'
         ]
         if results and all(hasattr(r, 'combo_name') for r in results):
             combo_names = set(getattr(r, 'combo_name', None) for r in results)
@@ -377,7 +377,7 @@ Return format: {{"score": 0.85}}"""
                         'total_prediction_time': 0.0,
                         'retrieval_evaluation_time': 0.0, 'generation_evaluation_time': 0.0, 'total_eval_time': 0.0,
                         'success_rate': 0.0, 'test_count': len(results),
-                        'embedding_token_counts': {}, 'llm_input_token_counts': {}, 'llm_output_token_counts': {}
+                        'embedding_token_counts': {}, 'llm_token_counts': {}
                     }
 
                 avg_metrics = {
@@ -407,24 +407,63 @@ Return format: {{"score": 0.85}}"""
                 avg_metrics['test_count'] = len(results)
                 # Aggregate token counts per component
                 for token_key in token_keys:
-                    # Collect all component keys
-                    all_keys = set()
-                    for r in successful_results:
-                        d = getattr(r.retrieval_result, token_key, {})
-                        all_keys.update(d.keys())
-                        d2 = getattr(r.generation_result, token_key, {})
-                        all_keys.update(d2.keys())
-                    avg_token_counts = {}
-                    for comp in all_keys:
-                        vals = []
+                    if token_key == 'embedding_token_counts':
+                        # Handle embedding token counts (simple dict)
+                        all_keys = set()
                         for r in successful_results:
-                            v1 = getattr(r.retrieval_result, token_key, {}).get(comp, 0.0)
-                            v2 = getattr(r.generation_result, token_key, {}).get(comp, 0.0)
-                            if v1 > 0.0:
-                                vals.append(v1)
-                            if v2 > 0.0:
-                                vals.append(v2)
-                        avg_token_counts[comp] = sum(vals) / len(vals) if vals else 0.0
-                    avg_metrics[token_key] = avg_token_counts
+                            d = getattr(r.retrieval_result, token_key, {})
+                            all_keys.update(d.keys())
+                            d2 = getattr(r.generation_result, token_key, {})
+                            all_keys.update(d2.keys())
+                        avg_token_counts = {}
+                        for comp in all_keys:
+                            vals = []
+                            for r in successful_results:
+                                v1 = getattr(r.retrieval_result, token_key, {}).get(comp, 0.0)
+                                v2 = getattr(r.generation_result, token_key, {}).get(comp, 0.0)
+                                if v1 > 0.0:
+                                    vals.append(v1)
+                                if v2 > 0.0:
+                                    vals.append(v2)
+                            avg_token_counts[comp] = sum(vals) / len(vals) if vals else 0.0
+                        avg_metrics[token_key] = avg_token_counts
+                    elif token_key == 'llm_token_counts':
+                        # Handle LLM token counts (nested dict structure)
+                        all_components = set()
+                        all_models = set()
+                        for r in successful_results:
+                            d1 = getattr(r.retrieval_result, token_key, {})
+                            d2 = getattr(r.generation_result, token_key, {})
+                            all_components.update(d1.keys())
+                            all_components.update(d2.keys())
+                            for comp in d1:
+                                all_models.update(d1[comp].keys())
+                            for comp in d2:
+                                all_models.update(d2[comp].keys())
+                        
+                        avg_llm_token_counts = {}
+                        for comp in all_components:
+                            avg_llm_token_counts[comp] = {}
+                            for model in all_models:
+                                in_vals = []
+                                out_vals = []
+                                for r in successful_results:
+                                    d1 = getattr(r.retrieval_result, token_key, {}).get(comp, {})
+                                    d2 = getattr(r.generation_result, token_key, {}).get(comp, {})
+                                    model_data1 = d1.get(model, {})
+                                    model_data2 = d2.get(model, {})
+                                    if model_data1.get('in', 0.0) > 0.0:
+                                        in_vals.append(model_data1['in'])
+                                    if model_data1.get('out', 0.0) > 0.0:
+                                        out_vals.append(model_data1['out'])
+                                    if model_data2.get('in', 0.0) > 0.0:
+                                        in_vals.append(model_data2['in'])
+                                    if model_data2.get('out', 0.0) > 0.0:
+                                        out_vals.append(model_data2['out'])
+                                avg_llm_token_counts[comp][model] = {
+                                    'in': sum(in_vals) / len(in_vals) if in_vals else 0.0,
+                                    'out': sum(out_vals) / len(out_vals) if out_vals else 0.0
+                                }
+                        avg_metrics[token_key] = avg_llm_token_counts
                 return avg_metrics
         return {}

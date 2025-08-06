@@ -375,13 +375,10 @@ class RAGExecutionResult:
     timing_info: Optional[Dict[str, float]] = None
     # Token counts
     embedding_token_counts: Dict[str, float] = None
-    llm_input_token_counts: Dict[str, float] = None
-    llm_output_token_counts: Dict[str, float] = None
+    llm_token_counts: Dict[str, Dict[str, Dict[str, float]]] = None  # {"component": {"model_name": {"in": float, "out": float}}}
     
     def __post_init__(self):
         if self.embedding_token_counts is None:
             self.embedding_token_counts = {}
-        if self.llm_input_token_counts is None:
-            self.llm_input_token_counts = {}
-        if self.llm_output_token_counts is None:
-            self.llm_output_token_counts = {} 
+        if self.llm_token_counts is None:
+            self.llm_token_counts = {} 

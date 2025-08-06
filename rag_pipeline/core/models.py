@@ -58,8 +58,7 @@ class RetrievalResult(BaseModel):
     post_generation_time: float = 0.0
     # Token counts
     embedding_token_counts: Dict[str, float] = {}
-    llm_input_token_counts: Dict[str, float] = {}
-    llm_output_token_counts: Dict[str, float] = {}
+    llm_token_counts: Dict[str, Dict[str, Dict[str, float]]] = {}  # {"component": {"model_name": {"in": float, "out": float}}}
     error: Optional[str] = None
 
 class GenerationResult(BaseModel):
@@ -83,8 +82,7 @@ class GenerationResult(BaseModel):
     post_generation_time: float = 0.0
     # Token counts
     embedding_token_counts: Dict[str, float] = {}
-    llm_input_token_counts: Dict[str, float] = {}
-    llm_output_token_counts: Dict[str, float] = {}
+    llm_token_counts: Dict[str, Dict[str, Dict[str, float]]] = {}  # {"component": {"model_name": {"in": float, "out": float}}}
     error: Optional[str] = None
 
 class RAGMetrics(BaseModel):
@@ -133,8 +131,7 @@ class RAGEvaluationResult(BaseModel):
     post_generation_time: float = 0.0
     # Token counts
     embedding_token_counts: Dict[str, float] = {}
-    llm_input_token_counts: Dict[str, float] = {}
-    llm_output_token_counts: Dict[str, float] = {}
+    llm_token_counts: Dict[str, Dict[str, Dict[str, float]]] = {}  # {"component": {"model_name": {"in": float, "out": float}}}
     error: Optional[str] = None
 
 class RAGBenchmarkResult(BaseModel):

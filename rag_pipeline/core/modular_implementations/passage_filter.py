@@ -1,6 +1,6 @@
 
 import logging
-from typing import List, TypedDict
+from typing import List, TypedDict, Dict
 
 from rag_pipeline.core.modular_framework import (
     PassageFilterComponent, Document, Query
@@ -11,8 +11,7 @@ logger = logging.getLogger(__name__)
 class PassageFilterResult(TypedDict):
     documents: List[Document]
     embedding_token_count: float
-    llm_input_token_count: float
-    llm_output_token_count: float
+    llm_token_count: Dict[str, Dict[str, float]]  # {"model_name": {"in": float, "out": float}}
 
 class SimpleThresholdFilter(PassageFilterComponent):
     """✅ CURRENTLY IMPLEMENTED - Simple top-k threshold filtering"""
@@ -26,8 +25,7 @@ class SimpleThresholdFilter(PassageFilterComponent):
         result = PassageFilterResult(
             documents=sorted_docs[:top_k],
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,  
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
         return result
 
@@ -54,7 +52,6 @@ class SimilarityThresholdFilter(PassageFilterComponent):
         result = PassageFilterResult(
             documents=filtered[:max_passages],
                 embedding_token_count=0.0,
-                llm_input_token_count=0.0,
-                llm_output_token_count=0.0
+                llm_token_count={}
             )
         return result
