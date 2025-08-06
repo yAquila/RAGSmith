@@ -34,7 +34,7 @@ async def run_rag_evaluation():
     
     # Example ModularRAGConfig with multiple generator configs
     config = ModularRAGConfig(
-        run_name="refinement - compression - gemma3:4b",
+        run_name="pre-embed - gemma3:4b",
         save_eval_cases=False,
         enable_logging=True,
         log_level="INFO",
@@ -50,25 +50,25 @@ async def run_rag_evaluation():
                 embedding_model="mxbai-embed-large",
                 similarity_metric="cosine"
             ),
-            RetrievalConfig(
-                name="nomic-cosine",
-                enabled=True,
-                technique="simple_vector_rag",
-                top_k=10,
-                embedding_model="nomic-embed-text",
-                similarity_metric="cosine"
-            ),
-            RetrievalConfig(
-                name="bm25",
-                enabled=True,
-                technique="keyword_search_bm25",
-                top_k=10,
-                bm25_k1=1.2,
-                bm25_b=0.75,
-                remove_stopwords=True,
-                apply_stemming=False,
-                use_advanced_tokenization=False
-            ),
+            # RetrievalConfig(
+            #     name="nomic-cosine",
+            #     enabled=True,
+            #     technique="simple_vector_rag",
+            #     top_k=10,
+            #     embedding_model="nomic-embed-text",
+            #     similarity_metric="cosine"
+            # ),
+            # RetrievalConfig(
+            #     name="bm25",
+            #     enabled=True,
+            #     technique="keyword_search_bm25",
+            #     top_k=10,
+            #     bm25_k1=1.2,
+            #     bm25_b=0.75,
+            #     remove_stopwords=True,
+            #     apply_stemming=False,
+            #     use_advanced_tokenization=False
+            # ),
             # RetrievalConfig(
             #     name="hybrid_search_cc",
             #     enabled=True,
@@ -80,103 +80,103 @@ async def run_rag_evaluation():
             #     weights=[0.7, 0.3],
             #     normalization_method="minmax"
             # ),
-            RetrievalConfig(
-                name="graph_rag",
-                enabled=True,
-                technique="graph_rag",
-                top_k=10,
-                embedding_model="mxbai-embed-large",
-                similarity_metric="cosine"
-            ),
-            RetrievalConfig(
-                name="hypergraph_rag",
-                enabled=True,
-                technique="hypergraph_rag",
-                top_k=10,
-                embedding_model="mxbai-embed-large",
-                similarity_metric="cosine"
-            ),
-            RetrievalConfig(
-                name="complete_hybrid_simply_vector_keyword",
-                enabled=True,
-                technique="complete_hybrid",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                combination_method="simply",
-                normalization_method="dbsf",
-                retrieval_methods=["vector", "keyword"]
-            ),
-            RetrievalConfig(
-                name="complete_hybrid_cc_vector_keyword",
-                enabled=True,
-                technique="complete_hybrid",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                weights=[0.7, 0.3],
-                combination_method="convex_combination",
-                normalization_method="dbsf",
-                retrieval_methods=["vector", "keyword"]
-            ),
-            RetrievalConfig(
-                name="complete_hybrid_vector_graph",
-                enabled=True,
-                technique="complete_hybrid",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                combination_method="simply",
-                normalization_method="dbsf",
-                retrieval_methods=["vector", "graph"]
-            ),
-            RetrievalConfig(
-                name="complete_hybrid_graph_hypergraph",
-                enabled=True,
-                technique="complete_hybrid",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                combination_method="simply",
-                normalization_method="dbsf",
-                retrieval_methods=["graph", "hypergraph"]
-            ),
-            RetrievalConfig(
-                name="complete_hybrid_vector_graph_hypergraph",
-                enabled=True,
-                technique="complete_hybrid",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                combination_method="simply",
-                normalization_method="dbsf",
-                retrieval_methods=["vector", "graph", "hypergraph"]
-            ),
-            RetrievalConfig(
-                name="complete_hybrid_vector_keyword_graph",
-                enabled=True,
-                technique="complete_hybrid",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                combination_method="simply",
-                normalization_method="dbsf",
-                retrieval_methods=["vector", "keyword", "graph"]
-            ),
-            RetrievalConfig(
-                name="complete_hybrid_vector_keyword_hypergraph",
-                enabled=True,
-                technique="complete_hybrid",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                combination_method="simply",
-                normalization_method="dbsf",
-                retrieval_methods=["vector", "keyword", "hypergraph"]
-            ),
-            RetrievalConfig(
-                name="complete_hybrid_vector_keyword_graph_hypergraph",
-                enabled=True,
-                technique="complete_hybrid",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                combination_method="simply",
-                normalization_method="dbsf",
-                retrieval_methods=["vector", "keyword", "graph", "hypergraph"]
-            ),
+            # RetrievalConfig(
+            #     name="graph_rag",
+            #     enabled=True,
+            #     technique="graph_rag",
+            #     top_k=10,
+            #     embedding_model="mxbai-embed-large",
+            #     similarity_metric="cosine"
+            # ),
+            # RetrievalConfig(
+            #     name="hypergraph_rag",
+            #     enabled=True,
+            #     technique="hypergraph_rag",
+            #     top_k=10,
+            #     embedding_model="mxbai-embed-large",
+            #     similarity_metric="cosine"
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_simply_vector_keyword",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="simply",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["vector", "keyword"]
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_cc_vector_keyword",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     weights=[0.7, 0.3],
+            #     combination_method="convex_combination",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["vector", "keyword"]
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_vector_graph",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="simply",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["vector", "graph"]
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_graph_hypergraph",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="simply",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["graph", "hypergraph"]
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_vector_graph_hypergraph",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="simply",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["vector", "graph", "hypergraph"]
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_vector_keyword_graph",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="simply",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["vector", "keyword", "graph"]
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_vector_keyword_hypergraph",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="simply",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["vector", "keyword", "hypergraph"]
+            # ),
+            # RetrievalConfig(
+            #     name="complete_hybrid_vector_keyword_graph_hypergraph",
+            #     enabled=True,
+            #     technique="complete_hybrid",
+            #     embedding_model="mxbai-embed-large",
+            #     top_k=10,
+            #     combination_method="simply",
+            #     normalization_method="dbsf",
+            #     retrieval_methods=["vector", "keyword", "graph", "hypergraph"]
+            # ),
             # RetrievalConfig(
             #     name="hybrid_search_dbsf",
             #     enabled=True,
@@ -210,39 +210,39 @@ async def run_rag_evaluation():
         ],
         # Passage rerank: (optional, can add more configs)
         passage_rerank=[
-            PassageRerankConfig(
-                name="ce_rerank_bge",
-                enabled=True,
-                technique="cross_encoder",
-                cross_encoder_top_k=5,
-                cross_encoder_model="BAAI/bge-reranker-v2-m3",
-            ), 
-            PassageRerankConfig(
-                name="llm_rerank_gemma",
-                enabled=True,
-                technique="llm_rerank",
-                llm_rerank_top_k=5,
-                llm_rerank_model="gemma3:4b",
-            ),
-            PassageRerankConfig(
-                name="cellm_parallel_rerank",
-                enabled=True,
-                technique="cellm_parallel_rerank",
-                ce_model="BAAI/bge-reranker-v2-m3",
-                llm_model="gemma3:4b",
-                top_k=5,
-                parallel_ensemble_method="weighted",
-                ce_weight=0.7,
-                llm_weight=0.3,
-                ce_force_cpu=False,
-                llm_max_tokens=2048,
-                llm_temperature=0.1,
-            ),
-            PassageRerankConfig(
-                name="no_rerank",
-                enabled=True,
-                technique="none",
-            )
+            # PassageRerankConfig(
+            #     name="ce_rerank_bge",
+            #     enabled=True,
+            #     technique="cross_encoder",
+            #     cross_encoder_top_k=5,
+            #     cross_encoder_model="BAAI/bge-reranker-v2-m3",
+            # ), 
+            # PassageRerankConfig(
+            #     name="llm_rerank_gemma",
+            #     enabled=True,
+            #     technique="llm_rerank",
+            #     llm_rerank_top_k=5,
+            #     llm_rerank_model="gemma3:4b",
+            # ),
+            # PassageRerankConfig(
+            #     name="cellm_parallel_rerank",
+            #     enabled=True,
+            #     technique="cellm_parallel_rerank",
+            #     ce_model="BAAI/bge-reranker-v2-m3",
+            #     llm_model="gemma3:4b",
+            #     top_k=5,
+            #     parallel_ensemble_method="weighted",
+            #     ce_weight=0.7,
+            #     llm_weight=0.3,
+            #     ce_force_cpu=False,
+            #     llm_max_tokens=2048,
+            #     llm_temperature=0.1,
+            # ),
+            # PassageRerankConfig(
+            #     name="no_rerank",
+            #     enabled=True,
+            #     technique="none",
+            # )
         ],
 
         # Passage filter: one config
@@ -253,13 +253,13 @@ async def run_rag_evaluation():
                 technique="simple_threshold",
                 top_k=10,
             ),
-            PassageFilterConfig(
-                name="similarity_threshold",
-                enabled=True,
-                technique="similarity_threshold",
-                top_k=10,
-                similarity_threshold=0.6,
-            )
+            # PassageFilterConfig(
+            #     name="similarity_threshold",
+            #     enabled=True,
+            #     technique="similarity_threshold",
+            #     top_k=10,
+            #     similarity_threshold=0.6,
+            # )
         ],
         passage_compress=[
             # PassageCompressConfig(
@@ -276,14 +276,14 @@ async def run_rag_evaluation():
             #     enabled=True,
             #     technique="none",
             # ),
-            # PassageCompressConfig(
-            #     name="tree_summarize",
-            #     enabled=True,
-            #     technique="tree_summarize",
-            #     provider="ollama",
-            #     tree_summarize_model="gemma3:4b",
-            #     max_fan_in=3
-            # ),
+            PassageCompressConfig(
+                name="tree_summarize",
+                enabled=True,
+                technique="tree_summarize",
+                provider="ollama",
+                tree_summarize_model="gemma3:4b",
+                max_fan_in=3
+            ),
             # PassageCompressConfig(
             #     name="llm_lingua",
             #     enabled=True,
@@ -300,12 +300,12 @@ async def run_rag_evaluation():
                 enabled=True,
                 technique="simple_listing"
             ),
-            PromptMakerConfig(
-                name="long_context_reorder_1",
-                enabled=True,
-                technique="long_context_reorder",
-                reinforce_top_n_passages=1
-            ),
+            # PromptMakerConfig(
+            #     name="long_context_reorder_1",
+            #     enabled=True,
+            #     technique="long_context_reorder",
+            #     reinforce_top_n_passages=1
+            # ),
             # PromptMakerConfig(
             #     name="long_context_reorder_2",
             #     enabled=True,
@@ -439,11 +439,11 @@ async def run_rag_evaluation():
 
         # Other categories as empty lists
         pre_embedding=[
-            # PreEmbeddingConfig(
-            #     name="no_pre_embedding",
-            #     enabled=True,
-            #     technique="none",
-            # ),
+            PreEmbeddingConfig(
+                name="no_pre_embedding",
+                enabled=True,
+                technique="none",
+            ),
             PreEmbeddingConfig( 
                 name="contextual_chunk_headers",
                 enabled=True,
@@ -452,7 +452,6 @@ async def run_rag_evaluation():
                 header_generation_strategy="semantic",
                 header_generation_model="gemma3:4b",
                 header_provider="ollama",
-                header_template="Document Section: {title}\nContext: {context}\n\n",
                 header_max_length=50,
             ),
             # PreEmbeddingConfig(
@@ -508,7 +507,7 @@ async def run_rag_evaluation():
         # Dataset/global settings
         dataset_path=None,
         qdrant_collection_hash=None,
-        max_test_cases=42,
+        max_test_cases=3,
         test_case_offset=0,
         eval_batch_size=1,
         parallel_execution=True,

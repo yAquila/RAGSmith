@@ -418,7 +418,7 @@ class ModularRAGPipeline:
         """Perform pre-embedding"""
         # Step 1: Pre-embedding
         embedding_token_counts = {}
-                                llm_token_counts = {}
+        llm_token_counts = {}
         timing_info = {}
         if documents and "pre_embedding" in self.components and self.config_dict["pre_embedding"].technique != "none":
             save_path = os.path.join("rag_pipeline", "pre_embedding_data", f"pre_embedding-{self.config_dict['pre_embedding'].technique}")

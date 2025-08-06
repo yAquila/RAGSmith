@@ -209,11 +209,9 @@ class LLMLinguaCompress(PassageCompressComponent):
                 score=documents[i].score,
                 metadata=documents[i].metadata
             ))
-        llm_input_token_count = result['origin_tokens']
-        llm_output_token_count = result['compressed_tokens']
         llm_token_count = {}
         model = self.config.get("llm_lingua_model", "microsoft/llmlingua-2-xlm-roberta-large-meetingbank")
-        llm_token_count[model] = {"in": llm_input_token_count, "out": llm_output_token_count}
+        llm_token_count[model] = {"in": result['origin_tokens'], "out": result['compressed_tokens']}
         return PassageCompressResult(
             documents=compressed_docs,
             embedding_token_count=0.0,

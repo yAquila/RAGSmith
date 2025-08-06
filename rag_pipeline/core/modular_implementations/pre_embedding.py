@@ -199,11 +199,13 @@ class ContextualChunkHeaders(PreEmbeddingComponent):
         logger.info(f"ContextualChunkHeaders: Successfully processed {len(documents_with_headers)} documents with headers")
         logger.info(f"ContextualChunkHeaders: Token counts - Input: {total_prompt_tokens}, Output: {total_output_tokens}")
         
+        llm_token_count = {}
+        model = self.config.get("header_generation_model", "gemma3:4b")
+        llm_token_count[model] = {"in": total_prompt_tokens, "out": total_output_tokens}
         result = PreEmbeddingResult(
             documents=documents_with_headers,
             embedding_token_count=0.0,  # Headers don't affect embedding tokens
-            llm_input_token_count=total_prompt_tokens,
-            llm_output_token_count=total_output_tokens
+            llm_token_count=llm_token_count
         )
         logger.info(f"ContextualChunkHeaders: Returning result with {len(result['documents'])} documents")
         return result
@@ -269,11 +271,14 @@ class HyPE(PreEmbeddingComponent):
                     content=hype_question,
                     metadata=new_metadata
                 ))
+        llm_token_count = {}
+        model = self.config.get("hype_model", "gemma3:4b")
+        llm_token_count[model] = {"in": total_prompt_tokens, "out": total_eval_count}
         logger.info(f"Documents to embed[:2]: {documents_to_embed[:2]}")
         result = PreEmbeddingResult(
             documents=documents_to_embed,
             embedding_token_count=0.0,
-            llm_token_count={}
+            llm_token_count=llm_token_count
         )
         return result
 
