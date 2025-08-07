@@ -8,7 +8,7 @@ Each category has its own configuration class to manage technique-specific setti
 from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any, List, Union
 from dataclasses import dataclass
-from rag_pipeline.util.prompts import PRE_EMBEDDING_PROMPTS, QUERY_EXPANSION_PROMPTS, PASSAGE_RERANKING_PROMPTS, PASSAGE_COMPRESS_PROMPTS, GENERATOR_PROMPTS
+from rag_pipeline.util.misc.prompts import PRE_EMBEDDING_PROMPTS, QUERY_EXPANSION_PROMPTS, PASSAGE_RERANKING_PROMPTS, PASSAGE_COMPRESS_PROMPTS, GENERATOR_PROMPTS
 
 # ==================== CATEGORY CONFIGURATIONS ====================
 

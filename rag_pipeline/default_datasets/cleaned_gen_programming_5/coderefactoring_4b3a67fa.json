@@ -252,7 +252,10 @@
         "related_chunk_ids": [
           "coderefactoring_4b3a67fa_c0014"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0014"
+        ]
       },
       {
         "question": "What are the potential benefits and risks of performing code refactoring?",
@@ -260,7 +263,10 @@
         "related_chunk_ids": [
           "coderefactoring_4b3a67fa_c0001"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0001"
+        ]
       },
       {
         "question": "What is the purpose of the componentization technique in programming?",
@@ -268,7 +274,10 @@
         "related_chunk_ids": [
           "coderefactoring_4b3a67fa_c0010"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0010"
+        ]
       },
       {
         "question": "What is the relationship between code smells, technical debt, and the goals of refactoring?",
@@ -278,7 +287,12 @@
           "coderefactoring_4b3a67fa_c0001",
           "coderefactoring_4b3a67fa_c0002"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0002",
+          "coderefactoring_4b3a67fa_c0000",
+          "coderefactoring_4b3a67fa_c0001"
+        ]
       },
       {
         "question": "Explain how refactoring can result in conflicting outcomes for a software system's maintainability, and how the challenge of team turnover relates to different refactoring timings.",
@@ -288,7 +302,12 @@
           "coderefactoring_4b3a67fa_c0004",
           "coderefactoring_4b3a67fa_c0005"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0005",
+          "coderefactoring_4b3a67fa_c0004",
+          "coderefactoring_4b3a67fa_c0003"
+        ]
       },
       {
         "question": "Describe the overall process of code refactoring, from the initial understanding required to the specific techniques used in the iterative cycle.",
@@ -298,7 +317,12 @@
           "coderefactoring_4b3a67fa_c0007",
           "coderefactoring_4b3a67fa_c0008"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0007",
+          "coderefactoring_4b3a67fa_c0008",
+          "coderefactoring_4b3a67fa_c0006"
+        ]
       },
       {
         "question": "What are the potential positive and negative outcomes of code refactoring?",
@@ -307,7 +331,11 @@
           "coderefactoring_4b3a67fa_c0000",
           "coderefactoring_4b3a67fa_c0001"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0000",
+          "coderefactoring_4b3a67fa_c0001"
+        ]
       },
       {
         "question": "What makes it challenging to gain the necessary understanding for refactoring, and what specific system elements are critical for this understanding?",
@@ -316,7 +344,11 @@
           "coderefactoring_4b3a67fa_c0005",
           "coderefactoring_4b3a67fa_c0006"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0005",
+          "coderefactoring_4b3a67fa_c0006"
+        ]
       },
       {
         "question": "What are the different categories of automated code transformations mentioned, and what are some specific techniques for each?",
@@ -325,7 +357,11 @@
           "coderefactoring_4b3a67fa_c0010",
           "coderefactoring_4b3a67fa_c0011"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0010",
+          "coderefactoring_4b3a67fa_c0011"
+        ]
       },
       {
         "question": "What are the two different approaches to hardware refactoring mentioned, and what are their respective goals?",
@@ -334,7 +370,11 @@
           "coderefactoring_4b3a67fa_c0012",
           "coderefactoring_4b3a67fa_c0013"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "coderefactoring_4b3a67fa_c0012",
+          "coderefactoring_4b3a67fa_c0013"
+        ]
       }
     ]
   },

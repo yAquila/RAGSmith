@@ -330,7 +330,10 @@
         "related_chunk_ids": [
           "aspectorientedprogra_06182dea_c0001"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "aspectorientedprogra_06182dea_c0001"
+        ]
       },
       {
         "question": "Explain what a cross-cutting concern is and how a specific implementation like AspectJ helps manage it according to the principles of Aspect-Oriented Programming (AOP).",
@@ -340,7 +343,12 @@
           "aspectorientedprogra_06182dea_c0001",
           "aspectorientedprogra_06182dea_c0002"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "aspectorientedprogra_06182dea_c0001",
+          "aspectorientedprogra_06182dea_c0000",
+          "aspectorientedprogra_06182dea_c0002"
+        ]
       }
     ]
   },

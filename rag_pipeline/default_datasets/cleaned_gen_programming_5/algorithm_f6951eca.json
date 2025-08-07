@@ -408,7 +408,10 @@
         "related_chunk_ids": [
           "algorithm_f6951eca_c0023"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0023"
+        ]
       },
       {
         "question": "What is the fundamental difference between Monte Carlo and Las Vegas algorithms regarding their output and performance?",
@@ -416,7 +419,10 @@
         "related_chunk_ids": [
           "algorithm_f6951eca_c0024"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0024"
+        ]
       },
       {
         "question": "How do deterministic and non-deterministic algorithms differ in their problem-solving approach?",
@@ -424,7 +430,10 @@
         "related_chunk_ids": [
           "algorithm_f6951eca_c0020"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0020"
+        ]
       },
       {
         "question": "What are the four examples of greedy algorithms listed for solving the minimal spanning tree optimization problem?",
@@ -432,7 +441,10 @@
         "related_chunk_ids": [
           "algorithm_f6951eca_c0027"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0027"
+        ]
       },
       {
         "question": "What are the three accepted levels of Turing machine description, and what does each level entail?",
@@ -440,7 +452,10 @@
         "related_chunk_ids": [
           "algorithm_f6951eca_c0009"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0009"
+        ]
       },
       {
         "question": "What is typically used for the analysis of algorithms because it provides a simple and general representation?",
@@ -448,7 +463,10 @@
         "related_chunk_ids": [
           "algorithm_f6951eca_c0013"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0013"
+        ]
       },
       {
         "question": "Provide a summary of what an algorithm is and the etymological origin of the term.",
@@ -458,7 +476,12 @@
           "algorithm_f6951eca_c0001",
           "algorithm_f6951eca_c0002"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0000",
+          "algorithm_f6951eca_c0002",
+          "algorithm_f6951eca_c0001"
+        ]
       },
       {
         "question": "What is the historical relationship between the existence of algorithms as a concept and the origin of the word 'algorithm'?",
@@ -468,7 +491,12 @@
           "algorithm_f6951eca_c0004",
           "algorithm_f6951eca_c0005"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0003",
+          "algorithm_f6951eca_c0005",
+          "algorithm_f6951eca_c0004"
+        ]
       },
       {
         "question": "Describe the process of an algorithm from its definition to its final output.",
@@ -477,7 +505,11 @@
           "algorithm_f6951eca_c0000",
           "algorithm_f6951eca_c0001"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0001",
+          "algorithm_f6951eca_c0000"
+        ]
       },
       {
         "question": "Trace the evolution of the word 'algorithm' from its Latinized origin to its modern English form, noting key linguistic influences.",
@@ -486,7 +518,11 @@
           "algorithm_f6951eca_c0002",
           "algorithm_f6951eca_c0003"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "algorithm_f6951eca_c0003",
+          "algorithm_f6951eca_c0002"
+        ]
       }
     ]
   },

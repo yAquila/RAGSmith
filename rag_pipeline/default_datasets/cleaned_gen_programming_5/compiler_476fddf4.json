@@ -473,7 +473,10 @@
         "related_chunk_ids": [
           "compiler_476fddf4_c0033"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0033"
+        ]
       },
       {
         "question": "By what year was the design of the C language essentially complete, and what major software component was subsequently rewritten in it?",
@@ -481,7 +484,10 @@
         "related_chunk_ids": [
           "compiler_476fddf4_c0012"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0012"
+        ]
       },
       {
         "question": "What is the term for a compiler whose output is designed to run on the same type of computer and operating system that the compiler itself runs on?",
@@ -489,7 +495,10 @@
         "related_chunk_ids": [
           "compiler_476fddf4_c0030"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0030"
+        ]
       },
       {
         "question": "What are some examples of middle-end optimizations performed by a compiler?",
@@ -497,7 +506,10 @@
         "related_chunk_ids": [
           "compiler_476fddf4_c0024"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0024"
+        ]
       },
       {
         "question": "What are the common operations, often called phases, that a compiler is likely to perform?",
@@ -505,7 +517,10 @@
         "related_chunk_ids": [
           "compiler_476fddf4_c0001"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0001"
+        ]
       },
       {
         "question": "What language is cited as an example where the specification requires implementations to include a compilation facility?",
@@ -513,7 +528,10 @@
         "related_chunk_ids": [
           "compiler_476fddf4_c0028"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0028"
+        ]
       },
       {
         "question": "Explain the fundamental difference in how compilers and interpreters make source code runnable, including the general steps a compiler takes and the resulting performance implications of each approach.",
@@ -523,7 +541,12 @@
           "compiler_476fddf4_c0001",
           "compiler_476fddf4_c0002"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0002",
+          "compiler_476fddf4_c0001",
+          "compiler_476fddf4_c0000"
+        ]
       },
       {
         "question": "Summarize the evolution of programming languages from early binary forms to formally defined high-level languages, and explain the relationship between these languages and their implementation via compilers or interpreters.",
@@ -533,7 +556,12 @@
           "compiler_476fddf4_c0004",
           "compiler_476fddf4_c0005"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0005",
+          "compiler_476fddf4_c0004",
+          "compiler_476fddf4_c0003"
+        ]
       },
       {
         "question": "Provide a comprehensive overview of a compiler, including its primary function, different types, and the operational phases it typically performs.",
@@ -542,7 +570,11 @@
           "compiler_476fddf4_c0000",
           "compiler_476fddf4_c0001"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0001",
+          "compiler_476fddf4_c0000"
+        ]
       },
       {
         "question": "While low-level languages are typically compiled for performance, how does a language like Common Lisp demonstrate flexibility in its execution methods to achieve similar results?",
@@ -551,7 +583,11 @@
           "compiler_476fddf4_c0002",
           "compiler_476fddf4_c0003"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "compiler_476fddf4_c0002",
+          "compiler_476fddf4_c0003"
+        ]
       }
     ]
   },

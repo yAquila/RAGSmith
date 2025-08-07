@@ -148,7 +148,10 @@
         "related_chunk_ids": [
           "datastructure_06e53c54_c0001"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0001"
+        ]
       },
       {
         "question": "What principle do the operations of a stack follow?",
@@ -156,7 +159,10 @@
         "related_chunk_ids": [
           "datastructure_06e53c54_c0006"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0006"
+        ]
       },
       {
         "question": "What is the fundamental difference in how linked data structures and array/record structures handle memory addresses?",
@@ -164,7 +170,10 @@
         "related_chunk_ids": [
           "datastructure_06e53c54_c0002"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0002"
+        ]
       },
       {
         "question": "What are some examples of modern language standard libraries that implement common data structures?",
@@ -172,7 +181,10 @@
         "related_chunk_ids": [
           "datastructure_06e53c54_c0008"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0008"
+        ]
       },
       {
         "question": "According to the text, what is the primary purpose for which a data structure is chosen in computer science?",
@@ -180,7 +192,10 @@
         "related_chunk_ids": [
           "datastructure_06e53c54_c0000"
         ],
-        "category": "FACTUAL"
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0000"
+        ]
       },
       {
         "question": "What is the motivation behind the theoretical concept of an abstract data type?",
@@ -188,7 +203,10 @@
         "related_chunk_ids": [
           "datastructure_06e53c54_c0003"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0003"
+        ]
       },
       {
         "question": "Explain how the fundamental implementation of data structures, involving pointers and memory addresses, supports their role in creating efficient algorithms.",
@@ -198,7 +216,12 @@
           "datastructure_06e53c54_c0001",
           "datastructure_06e53c54_c0002"
         ],
-        "category": "LONG_ANSWER"
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0002",
+          "datastructure_06e53c54_c0001",
+          "datastructure_06e53c54_c0000"
+        ]
       },
       {
         "question": "How do the descriptions of arrays and linked lists exemplify the concept of an abstract data type, which is defined by its operations and their costs?",
@@ -208,7 +231,12 @@
           "datastructure_06e53c54_c0004",
           "datastructure_06e53c54_c0005"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0003",
+          "datastructure_06e53c54_c0004",
+          "datastructure_06e53c54_c0005"
+        ]
       },
       {
         "question": "How is the fundamental implementation of a data structure, based on pointers and memory addresses, related to the method used to analyze its efficiency?",
@@ -217,7 +245,11 @@
           "datastructure_06e53c54_c0002",
           "datastructure_06e53c54_c0003"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0003",
+          "datastructure_06e53c54_c0002"
+        ]
       },
       {
         "question": "Based on the text, give examples of how fundamental data structures like arrays, linked lists, and trees serve as the basis for other, more specialized data structures.",
@@ -228,7 +260,13 @@
           "datastructure_06e53c54_c0006",
           "datastructure_06e53c54_c0007"
         ],
-        "category": "INTERPRETATION"
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0004",
+          "datastructure_06e53c54_c0006",
+          "datastructure_06e53c54_c0007",
+          "datastructure_06e53c54_c0005"
+        ]
       }
     ]
   },
