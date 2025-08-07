@@ -13,19 +13,19 @@ This refactored version provides:
 import asyncio
 import logging
 import time
-from typing import List, Optional
+from typing import List, Optional, Dict
 
 from rag_pipeline.core import ModularRAGPipeline, ModularRAGConfig
 from rag_pipeline.configs.basic_modular_config import get_basic_config   
+from rag_pipeline.util.misc.config_map import CONFIG_MAP
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
-def parse_config(config_list: List[str] = None):
+def parse_config(config_dict: Dict[str, str] = None):
     """
     Parse the config file and return a ModularRAGConfig object
     """
@@ -35,492 +35,23 @@ def parse_config(config_list: List[str] = None):
         enable_logging=True,
         log_level="INFO",
         enable_timing=True,
-    )
-    return config
 
-async def run_rag_evaluation():
-    """Run RAG evaluation with multiple model combinations"""
-    
-    # Configuration for Modular RAG evaluation
-    from rag_pipeline.core.modular_configs import ModularRAGConfig, PreEmbeddingConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig, QueryExpansionConfig, PassageAugmentConfig, PostGenerationConfig
-    from rag_pipeline.core.modular_pipeline import ModularRAGPipeline
-    
-    # Example ModularRAGConfig with multiple generator configs
-    config = ModularRAGConfig(
-        run_name="retrieval - gemma3:4b",
-        save_eval_cases=False,
-        enable_logging=True,
-        log_level="INFO",
-        enable_timing=True,
+        pre_embedding=[CONFIG_MAP["pre-embedding"][config_dict["pre-embedding"]]],
+        query_expansion=[CONFIG_MAP["query-expansion"][config_dict["query-expansion"]]],
+        retrieval=[CONFIG_MAP["retrieval"][config_dict["retrieval"]]],
+        passage_rerank=[CONFIG_MAP["passage-rerank"][config_dict["passage-rerank"]]],
+        passage_filter=[CONFIG_MAP["passage-filter"][config_dict["passage-filter"]]],
+        passage_augment=[CONFIG_MAP["passage-augment"][config_dict["passage-augment"]]],
+        passage_compress=[CONFIG_MAP["passage-compress"][config_dict["passage-compress"]]],
+        prompt_maker=[CONFIG_MAP["prompt-maker"][config_dict["prompt-maker"]]],
+        generator=[CONFIG_MAP["generator"][config_dict["generator"]]],
+        post_generation=[CONFIG_MAP["post-generation"][config_dict["post-generation"]]],
 
-        # Retrieval: one config
-        retrieval=[
-            RetrievalConfig(
-                name="vector_mxbai",
-                enabled=True,
-                technique="simple_vector_rag",
-                top_k=10,
-                embedding_model="mxbai-embed-large",
-                similarity_metric="cosine"
-            ),
-            RetrievalConfig(
-                name="vector_nomic",
-                enabled=True,
-                technique="simple_vector_rag",
-                top_k=10,
-                embedding_model="nomic-embed-text",
-                similarity_metric="cosine"
-            ),
-            RetrievalConfig(
-                name="keyword_bm25",
-                enabled=True,
-                technique="keyword_search_bm25",
-                top_k=10,
-                bm25_k1=1.2,
-                bm25_b=0.75,
-                remove_stopwords=True,
-                apply_stemming=False,
-                use_advanced_tokenization=False
-            ),
-            RetrievalConfig(
-                name="hybrid_search_cc",
-                enabled=True,
-                technique="hybrid_search",
-                embedding_model="mxbai-embed-large",
-                top_k=10,
-                combination_method="convex_combination",
-                excessive_k=60,
-                weights=[0.7, 0.3],
-                normalization_method="dbsf"
-            ),
-            # RetrievalConfig(
-            #     name="graph_rag",
-            #     enabled=True,
-            #     technique="graph_rag",
-            #     top_k=10,
-            #     embedding_model="mxbai-embed-large",
-            #     similarity_metric="cosine"
-            # ),
-            # RetrievalConfig(
-            #     name="hypergraph_rag",
-            #     enabled=True,
-            #     technique="hypergraph_rag",
-            #     top_k=10,
-            #     embedding_model="mxbai-embed-large",
-            #     similarity_metric="cosine"
-            # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_simply_vector_keyword",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="simply",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["vector", "keyword"]
-            # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_cc_vector_keyword",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     weights=[0.7, 0.3],
-            #     combination_method="convex_combination",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["vector", "keyword"]
-            # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_vector_graph",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="simply",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["vector", "graph"]
-            # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_graph_hypergraph",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="simply",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["graph", "hypergraph"]
-            # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_vector_graph_hypergraph",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="simply",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["vector", "graph", "hypergraph"]
-            # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_vector_keyword_graph",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="simply",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["vector", "keyword", "graph"]
-            # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_vector_keyword_hypergraph",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="simply",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["vector", "keyword", "hypergraph"]
-            # ),
-            # RetrievalConfig(
-            #     name="complete_hybrid_vector_keyword_graph_hypergraph",
-            #     enabled=True,
-            #     technique="complete_hybrid",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="simply",
-            #     normalization_method="dbsf",
-            #     retrieval_methods=["vector", "keyword", "graph", "hypergraph"]
-            # ),
-            # RetrievalConfig(
-            #     name="hybrid_search_dbsf",
-            #     enabled=True,
-            #     technique="hybrid_search",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="convex_combination",
-            #     excessive_k=60,
-            #     alpha=0.7,
-            #     normalization_method="dbsf"
-            # ),
-            # RetrievalConfig(
-            #     name="hybrid_search_rrf",
-            #     enabled=True,
-            #     technique="hybrid_search",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="reciprocal_rank_fusion",
-            #     excessive_k=60
-            # ),
-            # RetrievalConfig(
-            #     name="hybrid_search_borda",
-            #     enabled=True,
-            #     technique="hybrid_search",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="borda_count",
-            #     excessive_k=60
-            # )
-            
-        ],
-        # Passage rerank: (optional, can add more configs)
-        passage_rerank=[
-            # PassageRerankConfig(
-            #     name="ce_rerank_bge",
-            #     enabled=True,
-            #     technique="cross_encoder",
-            #     cross_encoder_top_k=5,
-            #     cross_encoder_model="BAAI/bge-reranker-v2-m3",
-            # ), 
-            # PassageRerankConfig(
-            #     name="llm_rerank_gemma",
-            #     enabled=True,
-            #     technique="llm_rerank",
-            #     llm_rerank_top_k=5,
-            #     llm_rerank_model="gemma3:4b",
-            # ),
-            # PassageRerankConfig(
-            #     name="cellm_parallel_rerank",
-            #     enabled=True,
-            #     technique="cellm_parallel_rerank",
-            #     ce_model="BAAI/bge-reranker-v2-m3",
-            #     llm_model="gemma3:4b",
-            #     top_k=5,
-            #     parallel_ensemble_method="weighted",
-            #     ce_weight=0.7,
-            #     llm_weight=0.3,
-            #     ce_force_cpu=False,
-            #     llm_max_tokens=2048,
-            #     llm_temperature=0.1,
-            # ),
-            # PassageRerankConfig(
-            #     name="no_rerank",
-            #     enabled=True,
-            #     technique="none",
-            # )
-        ],
-
-        # Passage filter: one config
-        passage_filter=[
-            PassageFilterConfig(
-                name="simple_threshold",
-                enabled=True,
-                technique="simple_threshold",
-                top_k=10,
-            ),
-            # PassageFilterConfig(
-            #     name="similarity_threshold",
-            #     enabled=True,
-            #     technique="similarity_threshold",
-            #     top_k=10,
-            #     similarity_threshold=0.6,
-            # )
-        ],
-        passage_compress=[
-            # PassageCompressConfig(
-            #     name="llm_summarize",
-            #     enabled=True,
-            #     technique="llm_summarize",
-            #     provider="ollama",
-            #     llm_summarize_model="gemma3:4b",
-            #     llm_summarize_max_tokens=500,
-            #     llm_summarize_temperature=0.1,
-            # ),
-            # PassageCompressConfig(
-            #     name="no_compress",
-            #     enabled=True,
-            #     technique="none",
-            # ),
-            # PassageCompressConfig(
-            #     name="tree_summarize",
-            #     enabled=True,
-            #     technique="tree_summarize",
-            #     provider="ollama",
-            #     tree_summarize_model="gemma3:4b",
-            #     max_fan_in=3
-            # ),
-            # PassageCompressConfig(
-            #     name="llm_lingua",
-            #     enabled=True,
-            #     technique="llm_lingua",
-            #     llm_lingua_model="microsoft/llmlingua-2-xlm-roberta-large-meetingbank",
-            #     llm_lingua_compression_rate=0.33
-            # )   
-        ],
-
-        # Prompt maker: one config
-        prompt_maker=[
-            PromptMakerConfig(
-                name="simple_listing",
-                enabled=True,
-                technique="simple_listing"
-            ),
-            # PromptMakerConfig(
-            #     name="long_context_reorder_1",
-            #     enabled=True,
-            #     technique="long_context_reorder",
-            #     reinforce_top_n_passages=1
-            # ),
-            # PromptMakerConfig(
-            #     name="long_context_reorder_2",
-            #     enabled=True,
-            #     technique="long_context_reorder",
-            #     reinforce_top_n_passages=2
-            # ),
-            # PromptMakerConfig(
-            #     name="long_context_reorder_3",
-            #     enabled=True,
-            #     technique="long_context_reorder",
-            #     reinforce_top_n_passages=3
-            # ),
-        ],
-
-        # Generator: two configs
-        generator=[
-            # GeneratorConfig(
-            #     name="llama3.2:1b-t0.3",
-            #     enabled=True,
-            #     technique="llm",
-            #     model="llama3.2:1b",
-            #     temperature=0.3,
-            #     provider="ollama",
-            #     max_tokens=500
-            # ),
-            GeneratorConfig(
-                name="gemma3:4b-t0.1",
-                enabled=True,
-                technique="llm",
-                model="gemma3:4b",
-                temperature=0.1,
-                provider="ollama",
-                max_tokens=500
-            ),
-            # GeneratorConfig(
-            #     name="multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemini-2.0-flash",
-            #     enabled=True,
-            #     technique="multi_llm",
-            #     models=["llama3.2:1b", "gemma3:4b"],
-            #     ensemble_llm_model="gemini-2.0-flash",
-            # )
-        ],
-
-        query_expansion=[
-            # QueryExpansionConfig(
-            #     name="simple_query_refinement_clarification",
-            #     enabled=True,
-            #     technique="simple_query_refinement",
-            #     provider="ollama",
-            #     refinement_strategy="clarification",
-            #     refinement_model="gemma3:4b",
-            # ),
-            # QueryExpansionConfig(
-            #     name="simple_query_refinement_rephrasing",
-            #     enabled=True,
-            #     technique="simple_query_refinement",
-            #     provider="ollama",
-            #     refinement_strategy="rephrasing",
-            #     refinement_model="gemma3:4b",
-            # ),
-            # QueryExpansionConfig(
-            #     name="no_expansion",
-            #     enabled=True,
-            #     technique="none",
-            # ),
-            # QueryExpansionConfig(
-            #     name="simple_multi_query_cc",
-            #     enabled=True,
-            #     technique="simple_multi_query",
-            #     num_expanded_queries=3,
-            #     combination_method="convex_combination",
-            #     normalization_method="minmax",
-            #     excessive_k=60
-            # ),
-            # QueryExpansionConfig(
-            #     name="rag_fusion",
-            #     enabled=True,
-            #     technique="rag_fusion",
-            #     num_expanded_queries=3,
-            #     combination_method="reciprocal_rank_fusion",
-            #     excessive_k=60,
-            # ),
-            # QueryExpansionConfig(
-            #     name="decomposition_cc",
-            #     enabled=True,
-            #     technique="decomposition",
-            #     num_expanded_queries=3,
-            #     combination_method="convex_combination",
-            #     normalization_method="minmax",
-            #     excessive_k=60,
-            # ),
-            # QueryExpansionConfig(
-            #     name="hyde_cc",
-            #     enabled=True,
-            #     technique="hyde",
-            #     num_expanded_queries=3,
-            #     combination_method="convex_combination",
-            #     normalization_method="minmax",
-            #     excessive_k=60,
-            # ),
-            # QueryExpansionConfig(
-            #     name="simple_multi_query_borda",
-            #     enabled=True,
-            #     technique="simple_multi_query",
-            #     num_expanded_queries=3,
-            #     combination_method="borda_count",
-            #     excessive_k=60,
-            # ),
-            # QueryExpansionConfig(
-            #     name="step_back_prompting",
-            #     enabled=True,
-            #     technique="step_back_prompting",
-            #     num_expanded_queries=3,
-            #     model="gemma3:4b",
-            #     combination_method="convex_combination",
-            #     normalization_method="minmax",
-            #     excessive_k=60,
-            # ),
-            # QueryExpansionConfig(
-            #     name="graph_as_query_expansion",
-            #     enabled=True,
-            #     technique="graph_as_query_expansion",
-            #     provider="ollama",
-            #     num_expanded_queries=3,
-            #     combination_method="convex_combination",
-            #     normalization_method="dbsf",
-            #     excessive_k=60,
-            # ),
-        ],
-
-
-        # Other categories as empty lists
-        pre_embedding=[
-            # PreEmbeddingConfig(
-            #     name="no_pre_embedding",
-            #     enabled=True,
-            #     technique="none",
-            # ),
-            # PreEmbeddingConfig( 
-            #     name="contextual_chunk_headers",
-            #     enabled=True,
-            #     technique="contextual_chunk_headers",
-            #     add_headers=True,
-            #     header_generation_strategy="semantic",
-            #     header_generation_model="gemma3:4b",
-            #     header_provider="ollama",
-            #     header_max_length=50,
-            # ),
-            # PreEmbeddingConfig(
-            #     name="hype",
-            #     enabled=True,
-            #     technique="hype",
-            #     num_hype_questions=3,
-            #     hype_model="gemma3:4b",
-            # ),
-            # PreEmbeddingConfig(
-            #     name="parent_document_retriever",
-            #     enabled=True,
-            #     technique="parent_document_retriever",
-            #     pdr_chunk_size=100,
-            #     pdr_chunk_overlap=20,
-            # )
-        ],
-        
-
-        passage_augment=[
-            # PassageAugmentConfig(
-            #     name="no_augment",
-            #     enabled=True,
-            #     technique="none",
-            # ),
-            # PassageAugmentConfig(
-            #     name="prev_next_augmenter",
-            #     enabled=True,
-            #     technique="prev_next_augmenter",
-            #     n=1
-            # )
-            # PassageAugmentConfig(
-            #     name="relevant_segment_extractor",
-            #     enabled=True,
-            #     technique="relevant_segment_extractor",
-            #     max_chunk_number_in_segment=5,
-            #     irrelevant_chunk_penalty=0.18,
-            #     decay_rate=30,
-            #     overall_max_chunk_number=10
-            # )
-        ],
-        post_generation=[
-            # PostGenerationConfig(
-            #     name="reflection_revising",
-            #     enabled=True,
-            #     technique="reflection_revising",
-            #     provider="ollama",
-            #     reflection_revising_model="gemma3:4b",
-            #     max_revisions=2
-            # )
-        ],
 
         # Dataset/global settings
         dataset_path=None,
         qdrant_collection_hash=None,
-        max_test_cases=42,
+        max_test_cases=3,
         test_case_offset=0,
         eval_batch_size=1,
         parallel_execution=True,
@@ -544,6 +75,30 @@ async def run_rag_evaluation():
             'generation': 0.7
         }
     )
+    return config
+
+async def run_rag_evaluation():
+    """Run RAG evaluation with multiple model combinations"""
+    
+    # Configuration for Modular RAG evaluation
+    from rag_pipeline.core.modular_configs import ModularRAGConfig, PreEmbeddingConfig, RetrievalConfig, GeneratorConfig, PassageRerankConfig, PassageFilterConfig, PassageCompressConfig, PromptMakerConfig, QueryExpansionConfig, PassageAugmentConfig, PostGenerationConfig
+    from rag_pipeline.core.modular_pipeline import ModularRAGPipeline
+    
+    config_dict = {
+        "pre-embedding": "pre-embedding_none",
+        "query-expansion": "query-expansion_none",
+        "retrieval": "retrieval-vector_mxbai",
+        "passage-rerank": "passage-rerank_none",
+        "passage-filter": "passage-filter_simple_threshold",
+        "passage-augment": "passage-augment_none",
+        "passage-compress": "passage-compress_none",
+        "prompt-maker": "prompt-maker_simple_listing",
+        "generator": "generator_gemma3:4b",
+        "post-generation": "post-generation_none",
+    }
+
+    # Example ModularRAGConfig with multiple generator configs
+    config = parse_config(config_dict)
     
     try:
         logger.info("Starting Modular RAG evaluation...")
@@ -561,6 +116,7 @@ async def run_rag_evaluation():
 
     except Exception as e:
         logger.error(f"Evaluation failed: {e}")
+        print(e.traceback)
         import traceback
         logger.error(traceback.format_exc())
         raise
