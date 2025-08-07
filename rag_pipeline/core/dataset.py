@@ -56,7 +56,7 @@ class RAGDataset:
                     for idx, question_data in enumerate(questions):
                         try:
                             # Extract relevant chunk IDs (previously true_qrel_list)
-                            related_chunk_ids = question_data.get("related_chunk_ids", [])
+                            related_chunk_ids = question_data.get("reranked_relative_chunk_ids")#"related_chunk_ids", [])
                             if isinstance(related_chunk_ids, str):
                                 related_chunk_ids = [related_chunk_ids]
                             

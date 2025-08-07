@@ -25,6 +25,19 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+def parse_config(config_list: List[str] = None):
+    """
+    Parse the config file and return a ModularRAGConfig object
+    """
+    config = ModularRAGConfig(
+        run_name="retrieval - gemma3:4b",
+        save_eval_cases=False,
+        enable_logging=True,
+        log_level="INFO",
+        enable_timing=True,
+    )
+    return config
+
 async def run_rag_evaluation():
     """Run RAG evaluation with multiple model combinations"""
     
@@ -34,7 +47,7 @@ async def run_rag_evaluation():
     
     # Example ModularRAGConfig with multiple generator configs
     config = ModularRAGConfig(
-        run_name="pre-embed - gemma3:4b",
+        run_name="retrieval - gemma3:4b",
         save_eval_cases=False,
         enable_logging=True,
         log_level="INFO",
@@ -43,43 +56,43 @@ async def run_rag_evaluation():
         # Retrieval: one config
         retrieval=[
             RetrievalConfig(
-                name="mxbai-cosine",
+                name="vector_mxbai",
                 enabled=True,
                 technique="simple_vector_rag",
                 top_k=10,
                 embedding_model="mxbai-embed-large",
                 similarity_metric="cosine"
             ),
-            # RetrievalConfig(
-            #     name="nomic-cosine",
-            #     enabled=True,
-            #     technique="simple_vector_rag",
-            #     top_k=10,
-            #     embedding_model="nomic-embed-text",
-            #     similarity_metric="cosine"
-            # ),
-            # RetrievalConfig(
-            #     name="bm25",
-            #     enabled=True,
-            #     technique="keyword_search_bm25",
-            #     top_k=10,
-            #     bm25_k1=1.2,
-            #     bm25_b=0.75,
-            #     remove_stopwords=True,
-            #     apply_stemming=False,
-            #     use_advanced_tokenization=False
-            # ),
-            # RetrievalConfig(
-            #     name="hybrid_search_cc",
-            #     enabled=True,
-            #     technique="hybrid_search",
-            #     embedding_model="mxbai-embed-large",
-            #     top_k=10,
-            #     combination_method="convex_combination",
-            #     excessive_k=60,
-            #     weights=[0.7, 0.3],
-            #     normalization_method="minmax"
-            # ),
+            RetrievalConfig(
+                name="vector_nomic",
+                enabled=True,
+                technique="simple_vector_rag",
+                top_k=10,
+                embedding_model="nomic-embed-text",
+                similarity_metric="cosine"
+            ),
+            RetrievalConfig(
+                name="keyword_bm25",
+                enabled=True,
+                technique="keyword_search_bm25",
+                top_k=10,
+                bm25_k1=1.2,
+                bm25_b=0.75,
+                remove_stopwords=True,
+                apply_stemming=False,
+                use_advanced_tokenization=False
+            ),
+            RetrievalConfig(
+                name="hybrid_search_cc",
+                enabled=True,
+                technique="hybrid_search",
+                embedding_model="mxbai-embed-large",
+                top_k=10,
+                combination_method="convex_combination",
+                excessive_k=60,
+                weights=[0.7, 0.3],
+                normalization_method="dbsf"
+            ),
             # RetrievalConfig(
             #     name="graph_rag",
             #     enabled=True,
@@ -276,14 +289,14 @@ async def run_rag_evaluation():
             #     enabled=True,
             #     technique="none",
             # ),
-            PassageCompressConfig(
-                name="tree_summarize",
-                enabled=True,
-                technique="tree_summarize",
-                provider="ollama",
-                tree_summarize_model="gemma3:4b",
-                max_fan_in=3
-            ),
+            # PassageCompressConfig(
+            #     name="tree_summarize",
+            #     enabled=True,
+            #     technique="tree_summarize",
+            #     provider="ollama",
+            #     tree_summarize_model="gemma3:4b",
+            #     max_fan_in=3
+            # ),
             # PassageCompressConfig(
             #     name="llm_lingua",
             #     enabled=True,
@@ -322,15 +335,15 @@ async def run_rag_evaluation():
 
         # Generator: two configs
         generator=[
-            GeneratorConfig(
-                name="llama3.2:1b-t0.3",
-                enabled=True,
-                technique="llm",
-                model="llama3.2:1b",
-                temperature=0.3,
-                provider="ollama",
-                max_tokens=500
-            ),
+            # GeneratorConfig(
+            #     name="llama3.2:1b-t0.3",
+            #     enabled=True,
+            #     technique="llm",
+            #     model="llama3.2:1b",
+            #     temperature=0.3,
+            #     provider="ollama",
+            #     max_tokens=500
+            # ),
             GeneratorConfig(
                 name="gemma3:4b-t0.1",
                 enabled=True,
@@ -439,21 +452,21 @@ async def run_rag_evaluation():
 
         # Other categories as empty lists
         pre_embedding=[
-            PreEmbeddingConfig(
-                name="no_pre_embedding",
-                enabled=True,
-                technique="none",
-            ),
-            PreEmbeddingConfig( 
-                name="contextual_chunk_headers",
-                enabled=True,
-                technique="contextual_chunk_headers",
-                add_headers=True,
-                header_generation_strategy="semantic",
-                header_generation_model="gemma3:4b",
-                header_provider="ollama",
-                header_max_length=50,
-            ),
+            # PreEmbeddingConfig(
+            #     name="no_pre_embedding",
+            #     enabled=True,
+            #     technique="none",
+            # ),
+            # PreEmbeddingConfig( 
+            #     name="contextual_chunk_headers",
+            #     enabled=True,
+            #     technique="contextual_chunk_headers",
+            #     add_headers=True,
+            #     header_generation_strategy="semantic",
+            #     header_generation_model="gemma3:4b",
+            #     header_provider="ollama",
+            #     header_max_length=50,
+            # ),
             # PreEmbeddingConfig(
             #     name="hype",
             #     enabled=True,
@@ -507,7 +520,7 @@ async def run_rag_evaluation():
         # Dataset/global settings
         dataset_path=None,
         qdrant_collection_hash=None,
-        max_test_cases=3,
+        max_test_cases=42,
         test_case_offset=0,
         eval_batch_size=1,
         parallel_execution=True,
@@ -517,10 +530,10 @@ async def run_rag_evaluation():
 
         # Evaluation settings
         retrieval_weights={
-            'recall_at_k': 1,
-            'map_score': 0,
-            'ndcg_at_k': 0,
-            'mrr': 0
+            'recall_at_k': 0.25,
+            'map_score': 0.25,
+            'ndcg_at_k': 0.25,
+            'mrr': 0.25
         },
         generation_weights={
             'llm_score': 0.5,
@@ -712,7 +725,7 @@ def _format_detailed_metrics(aggregated_metrics) -> str:
         map_score = metrics.get('map_score', 0.0)
         ndcg = metrics.get('ndcg_at_k', 0.0)
         mrr = metrics.get('mrr', 0.0)
-        lines.append(f"  Retrieval: R@{eval_k}={recall:.3f}")#, mAP={map_score:.3f}, nDCG@{eval_k}={ndcg:.3f}, MRR={mrr:.3f}")
+        lines.append(f"  Retrieval: R@{eval_k}={recall:.3f}, mAP={map_score:.3f}, nDCG@{eval_k}={ndcg:.3f}, MRR={mrr:.3f}")
         
         # Generation metrics
         llm_score = metrics.get('llm_score', 0.0)
