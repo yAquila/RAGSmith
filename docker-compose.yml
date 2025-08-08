@@ -83,6 +83,20 @@ services:
     # Uncomment to test GPU and cache setup:
     # command: ["python", "test_docker_setup.py"]
 
+  genetic_search_rag:
+    build:
+      context: ./genetic_search_for_rag_pipeline
+      dockerfile: Dockerfile
+    container_name: genetic_search_rag
+    networks: ['rag_pipeline_network']
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    depends_on:
+      - rag_pipeline
+    environment:
+      - RAG_PIPELINE_URL=http://rag_pipeline:8009
+
   qdrant2:
     image: qdrant/qdrant
     container_name: qdrant2
