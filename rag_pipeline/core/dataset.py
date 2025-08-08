@@ -348,7 +348,7 @@ class RAGDataset:
                     return chunk
             
             logger.warning(f"Chunk {chunk_id} not found in {json_file_path}")
-            return None
+            return {}
             
         except FileNotFoundError:
             logger.error(f"Article file not found: {json_file_path}")

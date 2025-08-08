@@ -13,7 +13,11 @@ This refactored version provides:
 import asyncio
 import logging
 import time
-from typing import List, Optional, Dict
+from typing import List, Optional, Dict, Any
+
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import uvicorn
 
 from rag_pipeline.core import ModularRAGPipeline, ModularRAGConfig
 from rag_pipeline.configs.basic_modular_config import get_basic_config   
@@ -24,6 +28,70 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+# FastAPI app
+app = FastAPI(title="RAG Evaluation API", version="1.0.0")
+
+
+class EvaluationRequest(BaseModel):
+    evaluation_request: Dict[str, Any]
+
+@app.post("/api/evaluate")
+async def evaluate_endpoint(request: EvaluationRequest) -> Dict[str, Any]:
+    """
+    Accept GA evaluation_request with pipeline_config, run ModularRAG evaluation,
+    and return {"evaluation": {"final_score": <0..1>}}.
+    """
+    payload = request.evaluation_request or {}
+    pipeline_config = payload.get("pipeline_config", {})
+
+    if not isinstance(pipeline_config, dict) or not pipeline_config:
+        raise HTTPException(status_code=400, detail="evaluation_request.pipeline_config is required")
+
+    logger.info("Received evaluation request with pipeline_config: %s", pipeline_config)
+
+    config = parse_config(pipeline_config)
+
+    try:
+        logger.info("Starting Modular RAG evaluation for genetic algorithm...")
+        start_time = time.time()
+
+        # Run evaluation (uses all config combinations)
+        results = await ModularRAGPipeline.run_evaluation({}, config)
+
+        # Print results (can be improved for modular combos)
+        # logger.info(f"Results: {results}")
+        await save_markdown_results(results)
+        
+        # Extract overall score safely
+        if hasattr(results, 'aggregated_metrics') and results.aggregated_metrics:
+            if isinstance(results.aggregated_metrics, dict):
+                if "overall_score" in results.aggregated_metrics:
+                    final_score = float(results.aggregated_metrics["overall_score"])
+                else:
+                    # Get first combination's overall score
+                    first_combo_metrics = next(iter(results.aggregated_metrics.values()))
+                    final_score = float(first_combo_metrics.get("overall_score", 0.0))
+            else:
+                final_score = 0.0
+        else:
+            final_score = 0.0
+            
+        logger.info(f"Evaluation completed in {time.time() - start_time:.2f}s")
+        
+        
+        # Clamp to [0, 1] range
+        final_score = max(0.0, min(1.0, final_score))
+        
+        logger.info(f"Final score: {final_score}")
+        
+        return {"evaluation": {"final_score": final_score}}
+
+    except Exception as e:
+        logger.error(f"Evaluation failed: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=f"RAG evaluation failed: {e}")
 
 def parse_config(config_dict: Dict[str, str] = None):
     """
@@ -426,52 +494,64 @@ def main():
     if len(sys.argv) > 1:
         arg = sys.argv[1]
         
-        if arg == "--super-quick":
-            # Super quick test mode (30 seconds)
-            try:
-                results = run_super_quick_test()
-                print(f"\n⚡ Super quick test completed successfully!")
-                print(f"Best combination: {results.best_overall_combo}")
-                print(f"Pipeline is working correctly!")
-            except Exception as e:
-                print(f"❌ Super quick test failed: {e}")
-                return 1
+        # if arg == "--server":
+            # Start FastAPI server for genetic algorithm evaluation
+        logger.info("Starting RAG Evaluation API server...")
+        uvicorn.run(
+            "rag_pipeline.main:app",
+            host="0.0.0.0",
+            port=8060,
+            reload=False,
+            log_level="info"
+        )
+            # return 0
+            
+        # elif arg == "--super-quick":
+        #     # Super quick test mode (30 seconds)
+        #     try:
+        #         results = run_super_quick_test()
+        #         print(f"\n⚡ Super quick test completed successfully!")
+        #         print(f"Best combination: {results.best_overall_combo}")
+        #         print(f"Pipeline is working correctly!")
+        #     except Exception as e:
+        #         print(f"❌ Super quick test failed: {e}")
+        #         return 1
                 
-        elif arg == "--quick":
-            # Quick test mode (1-2 minutes)
-            try:
-                results = run_quick_test()
-                print(f"\n✅ Quick test completed successfully!")
-                print(f"Best combination: {results.best_overall_combo}")
-            except Exception as e:
-                print(f"❌ Quick test failed: {e}")
-                return 1
-        elif arg == "--basic-modular":
-            # Basic modular test mode (1-2 minutes)
-            try:
-                results = asyncio.run(demo_basic_framework())
-                print(f"\n✅ Basic modular test completed successfully!")
-                print(f"Best combination: {results.best_overall_combo}")
-            except Exception as e:
-                print(f"❌ Basic modular test failed: {e}")
-                return 1
-        elif arg == "--full":
-            # Full evaluation mode (10+ minutes)
-            try:
-                results = asyncio.run(run_rag_evaluation())
-                print(f"\n🎉 Full evaluation completed successfully!")
-                print(f"Best overall combination: {results.best_overall_combo}")
-            except Exception as e:
-                print(f"❌ Evaluation failed: {e}")
-                return 1
-        else:
-            try:
-                results = asyncio.run(demo_basic_framework())
-                print(f"\n✅ Basic modular test completed successfully!")
-                print(f"Best combination: {results.best_overall_combo}")
-            except Exception as e:
-                print(f"❌ Basic modular test failed: {e}")
-                return 1
+        # elif arg == "--quick":
+        #     # Quick test mode (1-2 minutes)
+        #     try:
+        #         results = run_quick_test()
+        #         print(f"\n✅ Quick test completed successfully!")
+        #         print(f"Best combination: {results.best_overall_combo}")
+        #     except Exception as e:
+        #         print(f"❌ Quick test failed: {e}")
+        #         return 1
+        # elif arg == "--basic-modular":
+        #     # Basic modular test mode (1-2 minutes)
+        #     try:
+        #         results = asyncio.run(demo_basic_framework())
+        #         print(f"\n✅ Basic modular test completed successfully!")
+        #         print(f"Best combination: {results.best_overall_combo}")
+        #     except Exception as e:
+        #         print(f"❌ Basic modular test failed: {e}")
+        #         return 1
+        # elif arg == "--full":
+        #     # Full evaluation mode (10+ minutes)
+        #     try:
+        #         results = asyncio.run(run_rag_evaluation())
+        #         print(f"\n🎉 Full evaluation completed successfully!")
+        #         print(f"Best overall combination: {results.best_overall_combo}")
+        #     except Exception as e:
+        #         print(f"❌ Evaluation failed: {e}")
+        #         return 1
+        # else:
+        #     try:
+        #         results = asyncio.run(demo_basic_framework())
+        #         print(f"\n✅ Basic modular test completed successfully!")
+        #         print(f"Best combination: {results.best_overall_combo}")
+        #     except Exception as e:
+        #         print(f"❌ Basic modular test failed: {e}")
+        #         return 1
     time.sleep(1000000)
     return 0
 

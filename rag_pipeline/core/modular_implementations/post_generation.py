@@ -113,7 +113,7 @@ class ReflectionRevising(PostGenerationComponent):
             reflection, prompt_tokens, eval_count = self._get_reflection_response(
                 query.processed_text, current_answer
             )
-            logger.info(f"Reflection: {reflection}")
+            logger.debug(f"Reflection: {reflection}")
             total_prompt_tokens += prompt_tokens if prompt_tokens > 0 else 0
             total_eval_count += eval_count if eval_count > 0 else 0
             
@@ -125,7 +125,7 @@ class ReflectionRevising(PostGenerationComponent):
                     improved_answer, imp_prompt_tokens, imp_eval_count = self._get_improved_answer(
                         query.processed_text, current_answer, reflection
                     )
-                    logger.info(f"Improved Answer: {improved_answer}")
+                    logger.debug(f"Improved Answer: {improved_answer}")
                     total_prompt_tokens += imp_prompt_tokens if imp_prompt_tokens > 0 else 0
                     total_eval_count += imp_eval_count if imp_eval_count > 0 else 0
                     current_answer = improved_answer

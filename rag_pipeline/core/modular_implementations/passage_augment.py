@@ -102,7 +102,9 @@ class PrevNextAugmenter(PassageAugmentComponent):
                 chunk_ids = chunk.split("--")
                 merged_content = ""
                 for cid in chunk_ids:
-                    chunk_content = RAGDataset.get_chunk_by_id(cid).get("content","sdasd")
+                    chunk_content = RAGDataset.get_chunk_by_id(cid).get("content","")
+                    if chunk_content is "":
+                        continue
                     merged_content += chunk_content + "\n"
                 merged_documents.append(Document(
                     doc_id=chunk,
