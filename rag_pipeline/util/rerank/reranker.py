@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 class RerankerUtil:
     """Utility class for reranking documents using cross-encoder models"""
     
-    def __init__(self, model_name: str = 'BAAI/bge-reranker-v2-m3', max_length: int = 512, cache_dir: Optional[str] = None, force_cpu: bool = False):
+    def __init__(self, model_name: str = 'BAAI/bge-reranker-v2-m3', max_length: int = 2048, cache_dir: Optional[str] = None, force_cpu: bool = False):
         """
         Initialize the reranker
         

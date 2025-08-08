@@ -69,6 +69,8 @@ services:
     depends_on:
       - qdrant2
       - ollama-gpu-3
+    ports:
+      - 8060:8060
     environment:
       - QDRANT_URL=http://qdrant2:6333
       - OLLAMA_API_URL=http://ollama-gpu-3:11434/api

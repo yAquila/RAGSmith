@@ -1864,8 +1864,8 @@ class CompleteHybrid(RetrievalComponent):
         logger.debug(f"Final results: {final_results}")
         return RetrievalResult(
             documents=final_results,
-            embedding_token_count=sum(result.get("embedding_token_count") for result in results_with_tokens),
-            llm_token_count={model_name: sum(result.get("llm_token_count", {}).values()) for model_name in self.retrieval_methods}
+            embedding_token_count=sum(result.get("embedding_token_count", 0) for result in results_with_tokens),
+            llm_token_count={model_name: {"total": sum(sum(result.get("llm_token_count", {}).values()) if result.get("llm_token_count") else 0 for result in results_with_tokens)} for model_name in self.retrieval_methods}
         )
     
     async def index_documents(self, documents: List[Document]) -> bool:

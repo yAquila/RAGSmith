@@ -28,7 +28,7 @@ class RAGPipelineEvaluator:
     
     def __init__(self, 
                  api_endpoint: str = "http://example.com/api/evaluate",
-                 timeout: int = 300,
+                 timeout: int = 15000,
                  max_retries: int = 3):
         """
         Initialize the RAG pipeline evaluator.
@@ -44,84 +44,85 @@ class RAGPipelineEvaluator:
         
         # Component category mappings
         self.component_categories = {
-            0: "text_preprocessor",      # Text preprocessing methods
-            1: "embedding_model",        # Embedding model selection
-            2: "vector_database",        # Vector storage system
-            3: "retrieval_strategy",     # Retrieval method
-            4: "reranking_method",       # Result reranking
-            5: "llm_model",             # Language model
-            6: "prompt_template",        # Prompt design
-            7: "context_window_mgmt",    # Context management
-            8: "output_processor",       # Output processing
-            9: "evaluation_metrics"      # Evaluation approach
+            0: "pre-embedding",
+            1: "query-expansion",       
+            2: "retrieval",        
+            3: "passage-rerank",    
+            4: "passage-filter",      
+            5: "passage-augment",             
+            6: "passage-compress",        
+            7: "prompt-maker",   
+            8: "generator",     
+            9: "post-generation"      
         }
         
         # Component selections mapping (customize based on your actual components)
         self.component_options = {
-            "text_preprocessor": [
-                "basic_cleaning",
-                "advanced_nlp",
-                "domain_specific"
+            "pre-embedding": [
+                "pre-embedding_none",
+                # "pre-embedding_contextual_chunk_headers",
+                # "pre-embedding_hype",
+                "pre-embedding_parent_document_retriever"
             ],
-            "embedding_model": [
-                "sentence_transformers_base",
-                "openai_text_embedding_ada_002", 
-                "sentence_transformers_large",
-                "custom_domain_embedding",
-                "multilingual_embedding"
+            "query-expansion": [
+                "query-expansion_none",
+                "query-expansion_simple_multi_query_cc_dbsf", 
+                # "query-expansion_simple_multi_query_borda",
+                # "query-expansion_rag_fusion",
+                "query-expansion_decomposition_cc",
+                # "query-expansion_hyde_cc",
+                # "query-expansion_step_back_prompting_cc",
+                # "query-expansion_graph_as_qe_cc",
+                "query-expansion_refinement_clarification",
+                "query-expansion_refinement_rephrasing"
             ],
-            "vector_database": [
-                "faiss_flat",
-                "faiss_ivf",
-                "pinecone",
-                "weaviate"
+            "retrieval": [
+                "retrieval-vector_mxbai",
+                # "retrieval-vector_nomic",
+                "retrieval-keyword_bm25",
+                "retrieval-hybrid_vector_keyword_cc",
+                # "retrieval-hybrid_vector_graph_simply",
+                # "retrieval-hybrid_graph_hypergraph_simply",
+                # "retrieval-hybrid_vector_graph_hypergraph_simply",
+                # "retrieval-hybrid_vector_keyword_graph_simply",
+                # "retrieval-hybrid_vector_keyword_hypergraph_simply",
+                # "retrieval-hybrid_vector_keyword_graph_hypergraph_simply"
             ],
-            "retrieval_strategy": [
-                "similarity_search",
-                "mmr_search",
-                "hybrid_search", 
-                "semantic_search",
-                "keyword_plus_semantic",
-                "contextual_retrieval"
+            "passage-rerank": [
+                "passage-rerank_none",
+                "passage-rerank_ce_rerank_bge",
+                "passage-rerank_llm_rerank_gemma", 
+                "passage-rerank_cellm_parallel_rerank"
             ],
-            "reranking_method": [
-                "no_reranking",
-                "cross_encoder_rerank"
+            "passage-filter": [
+                "passage-filter_simple_threshold",
+                "passage-filter_similarity_threshold"
             ],
-            "llm_model": [
-                "gpt_3_5_turbo",
-                "gpt_4",
-                "claude_3_sonnet",
-                "llama_2_70b",
-                "custom_fine_tuned",
-                "mixtral_8x7b",
-                "gemini_pro"
+            "passage-augment": [
+                "passage-augment_none",
+                "passage-augment_prev_next_augmenter",
+                # "passage-augment_relevant_segment_extractor"
             ],
-            "prompt_template": [
-                "basic_qa",
-                "chain_of_thought",
-                "few_shot_examples"
+            "passage-compress": [
+                "passage-compress_none",
+                # "passage-compress_llm_summarize",
+                # "passage-compress_tree_summarize",
+                "passage-compress_llm_lingua"
             ],
-            "context_window_mgmt": [
-                "truncate_beginning",
-                "truncate_end", 
-                "sliding_window",
-                "summarize_context",
-                "hierarchical_context"
+            "prompt-maker": [
+                "prompt-maker_simple_listing",
+                "prompt-maker_long_context_reorder_1", 
+                "prompt-maker_long_context_reorder_2"
             ],
-            "output_processor": [
-                "raw_output",
-                "structured_extraction",
-                "post_processing_cleanup",
-                "confidence_scoring"
+            "generator": [
+                "generator_llama3.2:1b",
+                "generator_gemma3:4b",
+                # "generator_gemma3:12b",
+                # "generator_multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemma3:12b"
             ],
-            "evaluation_metrics": [
-                "relevance_only",
-                "relevance_plus_accuracy",
-                "comprehensive_metrics",
-                "domain_specific_metrics",
-                "user_satisfaction_proxy",
-                "automated_fact_checking"
+            "post-generation": [
+                "post-generation_none",
+                "post-generation_reflection_revising"
             ]
         }
     
@@ -167,22 +168,10 @@ class RAGPipelineEvaluator:
         Returns:
             Request payload dictionary
         """
-        # Prepare the request payload TODO
-        # Customize this structure based on your actual API requirements
+
         request_payload = {
             "evaluation_request": {
                 "pipeline_config": configuration,
-                "evaluation_settings": {
-                    "test_dataset": "default",  # Could be parameterized
-                    "metrics": ["relevance", "accuracy", "latency", "cost"],
-                    "sample_size": 100,  # Number of test queries to evaluate
-                    "timeout_per_query": 30
-                },
-                "metadata": {
-                    "experiment_id": f"ga_evaluation_{int(time.time())}",
-                    "timestamp": time.time(),
-                    "evaluator": "genetic_algorithm"
-                }
             }
         }
         
@@ -245,49 +234,22 @@ class RAGPipelineEvaluator:
             response_data: Response from the evaluation API
             
         Returns:
-            Extracted score as float (0-100 range)
+            Extracted score as float (0-1 range)
         """
         try:
-            # Example response structure - customize based on your actual API
-            # {
-            #   "evaluation_result": {
-            #     "overall_score": 85.4,
-            #     "detailed_metrics": {
-            #       "relevance": 0.89,
-            #       "accuracy": 0.82,
-            #       "latency": 450,
-            #       "cost_per_query": 0.005
-            #     },
-            #     "status": "completed"
-            #   }
-            # }
-            
-            # Extract the main score - adjust path based on your API response structure
-            if "evaluation_result" in response_data:
-                result = response_data["evaluation_result"]
+            if "evaluation" in response_data:
+                # Extract from nested evaluation object
+                evaluation = response_data["evaluation"]
                 
-                # Primary score extraction
-                if "overall_score" in result:
-                    score = float(result["overall_score"])
-                elif "final_score" in result:
-                    score = float(result["final_score"])
-                elif "composite_score" in result:
-                    score = float(result["composite_score"])
+                if "final_score" in evaluation:
+                    score = float(evaluation["final_score"])
                 else:
-                    # Fallback: compute composite score from individual metrics
-                    metrics = result.get("detailed_metrics", {})
-                    relevance = metrics.get("relevance", 0.0) * 100
-                    accuracy = metrics.get("accuracy", 0.0) * 100
-                    
-                    # Simple weighted average (customize weights as needed)
-                    score = (relevance * 0.6 + accuracy * 0.4)
-                
+                    score = 0.0
+                    print(f"WARNING : No final score found in response: {response_data}")
             else:
                 # Alternative response structure
                 score = float(response_data.get("score", response_data.get("final_score", 0.0)))
             
-            # Ensure score is in 0-100 range
-            score = max(0.0, min(100.0, score))
             
             logger.info(f"Extracted score: {score}")
             return score

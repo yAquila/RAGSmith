@@ -508,11 +508,14 @@ class ModularRAGPipeline:
             logger.debug(f"  - {combo}")
 
         all_results = []
+        logger.info(f"Technique combos: {technique_combos}")
         for combo in technique_combos:
             combo_name = ModularRAGPipeline.build_combo_name(combo)
             pipeline = ModularRAGPipeline.from_config_combo(combo, global_config)
             batch_size = global_config.eval_batch_size
+            logger.info(f"SELAMCANIMBENAMCANIM")
             evaluator = RAGEvaluator(combo, global_config)
+            logger.info(f"SELAMCANIMBENAMCANIM")
 
             pre_embedding_result = await pipeline.perform_pre_embedding(documents)
             documents = pre_embedding_result["documents"]
