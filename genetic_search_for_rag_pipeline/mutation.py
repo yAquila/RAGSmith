@@ -441,6 +441,6 @@ class CompositeMutation(MutationMethod):
     
     def __str__(self) -> str:
         """String representation of composite mutation."""
-        methods_str = ", ".join(f"{method}({prob:.2f})" 
+        methods_str = ", ".join(f"{method}({prob:.4f})" 
                                for method, prob in self.mutation_methods)
         return f"CompositeMutation([{methods_str}])" 

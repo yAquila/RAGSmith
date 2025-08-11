@@ -266,7 +266,7 @@ def test_all_selection_methods():
             'converged': result['converged']
         }
         
-        print(f"Best fitness: {result['best_fitness']:.2f}")
+        print(f"Best fitness: {result['best_fitness']:.4f}")
         print(f"Generations: {result['generations_completed']}")
         print(f"Converged: {result['converged']}")
         print(f"Time: {result['total_time']:.3f}s")
@@ -275,7 +275,7 @@ def test_all_selection_methods():
     print(f"\n📊 Selection Methods Comparison:")
     print("-" * 60)
     for method, stats in results.items():
-        print(f"{method:15}: Fitness={stats['best_fitness']:6.2f}, "
+        print(f"{method:15}: Fitness={stats['best_fitness']:6.4f}, "
               f"Gens={stats['generations']:3d}, Time={stats['total_time']:5.3f}s")
     
     return results
@@ -322,7 +322,7 @@ def test_all_crossover_methods():
             'total_time': result['total_time']
         }
         
-        print(f"Best fitness: {result['best_fitness']:.2f}")
+        print(f"Best fitness: {result['best_fitness']:.4f}")
         diversity = result.get('final_diversity', 'N/A')
         if diversity != 'N/A':
             print(f"Final diversity: {diversity:.3f}")
@@ -339,7 +339,7 @@ def test_all_crossover_methods():
             diversity_str = f"{diversity:.3f}"
         else:
             diversity_str = 'N/A'
-        print(f"{method:12}: Fitness={stats['best_fitness']:6.2f}, "
+        print(f"{method:12}: Fitness={stats['best_fitness']:6.4f}, "
               f"Diversity={diversity_str}, Time={stats['total_time']:5.3f}s")
     
     return results
@@ -397,7 +397,7 @@ def test_all_mutation_methods():
             'total_time': result['total_time']
         }
         
-        print(f"Best fitness: {result['best_fitness']:.2f}")
+        print(f"Best fitness: {result['best_fitness']:.4f}")
         print(f"Mutations in test: {mutations_made}")
         print(f"Exploration ratio: {results[name]['exploration_quality']:.3f}")
         print(f"Time: {result['total_time']:.3f}s")
@@ -409,7 +409,7 @@ def test_all_mutation_methods():
     print(f"\n📊 Mutation Methods Comparison:")
     print("-" * 70)
     for method, stats in results.items():
-        print(f"{method:12}: Fitness={stats['best_fitness']:6.2f}, "
+        print(f"{method:12}: Fitness={stats['best_fitness']:6.4f}, "
               f"Mutations={stats['mutations_per_individual']:2d}, "
               f"Exploration={stats['exploration_quality']:.3f}, "
               f"Time={stats['total_time']:5.3f}s")
@@ -462,15 +462,15 @@ def test_individual_and_population_operations():
     avg_fitness = population.get_average_fitness()
     diversity = population.get_diversity_score()
     
-    print(f"Best fitness: {best.fitness:.2f}")
-    print(f"Worst fitness: {worst.fitness:.2f}")
-    print(f"Average fitness: {avg_fitness:.2f}")
+    print(f"Best fitness: {best.fitness:.4f}")
+    print(f"Worst fitness: {worst.fitness:.4f}")
+    print(f"Average fitness: {avg_fitness:.4f}")
     print(f"Population diversity: {diversity:.3f}")
     
     # Test sorting
     population.sort_by_fitness()
     sorted_fitnesses = [ind.fitness for ind in population.individuals[:5]]
-    print(f"Top 5 fitnesses: {[f'{f:.2f}' for f in sorted_fitnesses]}")
+    print(f"Top 5 fitnesses: {[f'{f:.4f}' for f in sorted_fitnesses]}")
     
     return {
         'individual_tests': {'crossover': True, 'mutation': True},
@@ -557,7 +557,7 @@ def test_config_variations():
             'converged': result['converged']
         }
         
-        print(f"Best fitness: {result['best_fitness']:.2f}")
+        print(f"Best fitness: {result['best_fitness']:.4f}")
         print(f"Generations: {result['generations_completed']}")
         print(f"Total evaluations: {stats['total_evaluations']}")
         print(f"Exploration ratio: {stats['exploration_ratio']:.3f}")
@@ -570,7 +570,7 @@ def test_config_variations():
     print(f"\n📊 Configuration Comparison:")
     print("-" * 80)
     for name, stats in results.items():
-        print(f"{name:12}: Fitness={stats['best_fitness']:6.2f}, "
+        print(f"{name:12}: Fitness={stats['best_fitness']:6.4f}, "
               f"Evals={stats['total_evaluations']:4d}, "
               f"Exploration={stats['exploration_ratio']:.3f}, "
               f"Time={stats['total_time']:5.3f}s")
@@ -633,8 +633,8 @@ def test_scaling_performance():
             'efficiency': result['best_fitness'] / (result['total_time'] + 0.001)  # Fitness per second
         }
         
-        print(f"Best fitness: {result['best_fitness']:.2f}")
-        print(f"Search coverage: {results[scale['name']]['coverage']:.2f}%")
+        print(f"Best fitness: {result['best_fitness']:.4f}")
+        print(f"Search coverage: {results[scale['name']]['coverage']:.4f}%")
         print(f"Evals/sec: {results[scale['name']]['evaluations_per_second']:.1f}")
         print(f"Efficiency: {results[scale['name']]['efficiency']:.1f} fitness/sec")
     
@@ -720,7 +720,7 @@ def test_api_integration():
                 'best_combination': result['best_combination']
             }
             
-            print(f"✅ Success! Best fitness: {result['best_fitness']:.2f}")
+            print(f"✅ Success! Best fitness: {result['best_fitness']:.4f}")
             print(f"Time: {end_time - start_time:.3f}s")
             print(f"Best combination: {result['best_combination']}")
         
@@ -764,7 +764,7 @@ def test_api_integration():
                 'mutation_rate': config.mutation_rate
             }
             
-            print(f"✅ {name}: Fitness={result['best_fitness']:.2f}, "
+            print(f"✅ {name}: Fitness={result['best_fitness']:.4f}, "
                   f"Pop={config.population_size}, "
                   f"Cross={config.crossover_rate}, "
                   f"Mut={config.mutation_rate}")
@@ -797,7 +797,7 @@ def test_edge_cases_and_robustness():
         ga = GeneticAlgorithm(config, evaluator.evaluate)
         result = ga.run()
         edge_cases.append(("Minimal Size", True, result['best_fitness']))
-        print(f"✅ Minimal size: {result['best_fitness']:.2f}")
+        print(f"✅ Minimal size: {result['best_fitness']:.4f}")
     except Exception as e:
         edge_cases.append(("Minimal Size", False, str(e)))
         print(f"❌ Minimal size failed: {e}")
@@ -815,7 +815,7 @@ def test_edge_cases_and_robustness():
         ga = GeneticAlgorithm(config, evaluator.evaluate)
         result = ga.run()
         edge_cases.append(("Single Category", True, result['best_fitness']))
-        print(f"✅ Single category: {result['best_fitness']:.2f}")
+        print(f"✅ Single category: {result['best_fitness']:.4f}")
     except Exception as e:
         edge_cases.append(("Single Category", False, str(e)))
         print(f"❌ Single category failed: {e}")
@@ -834,7 +834,7 @@ def test_edge_cases_and_robustness():
         ga = GeneticAlgorithm(config, evaluator.evaluate)
         result = ga.run()
         edge_cases.append(("High Mutation", True, result['best_fitness']))
-        print(f"✅ High mutation: {result['best_fitness']:.2f}")
+        print(f"✅ High mutation: {result['best_fitness']:.4f}")
     except Exception as e:
         edge_cases.append(("High Mutation", False, str(e)))
         print(f"❌ High mutation failed: {e}")
@@ -854,7 +854,7 @@ def test_edge_cases_and_robustness():
         ga = GeneticAlgorithm(config, evaluator.evaluate)
         result = ga.run()
         edge_cases.append(("Zero Crossover", True, result['best_fitness']))
-        print(f"✅ Zero crossover: {result['best_fitness']:.2f}")
+        print(f"✅ Zero crossover: {result['best_fitness']:.4f}")
     except Exception as e:
         edge_cases.append(("Zero Crossover", False, str(e)))
         print(f"❌ Zero crossover failed: {e}")
@@ -872,7 +872,7 @@ def test_edge_cases_and_robustness():
         ga = GeneticAlgorithm(config, evaluator.evaluate)
         result = ga.run()
         edge_cases.append(("Large Categories", True, result['best_fitness']))
-        print(f"✅ Large categories: {result['best_fitness']:.2f}")
+        print(f"✅ Large categories: {result['best_fitness']:.4f}")
     except Exception as e:
         edge_cases.append(("Large Categories", False, str(e)))
         print(f"❌ Large categories failed: {e}")
@@ -882,7 +882,7 @@ def test_edge_cases_and_robustness():
     print("-" * 50)
     for test_name, success, result in edge_cases:
         status = "✅ PASS" if success else "❌ FAIL"
-        result_str = f"{result:.2f}" if success else f"Error: {result}"
+        result_str = f"{result:.4f}" if success else f"Error: {result}"
         print(f"{test_name:15}: {status} - {result_str}")
     
     return edge_cases
@@ -917,7 +917,7 @@ def run_comprehensive_tests():
         print("\n" + "=" * 80)
         print("🎉 COMPREHENSIVE TEST SUITE COMPLETED!")
         print("=" * 80)
-        print(f"Total test time: {total_time:.2f} seconds")
+        print(f"Total test time: {total_time:.4f} seconds")
         
         # Count successful tests
         total_tests = 0

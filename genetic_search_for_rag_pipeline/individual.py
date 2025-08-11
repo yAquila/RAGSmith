@@ -123,7 +123,7 @@ class Individual:
     
     def __str__(self) -> str:
         """String representation of the individual."""
-        fitness_str = f"{self.fitness:.2f}" if self.fitness is not None else "N/A"
+        fitness_str = f"{self.fitness:.4f}" if self.fitness is not None else "N/A"
         return f"Individual(genes={self.genes}, fitness={fitness_str})"
     
     def __repr__(self) -> str:

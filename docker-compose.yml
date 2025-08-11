@@ -94,10 +94,13 @@ services:
     restart: unless-stopped
     volumes:
       - .:/app
+      - ./genetic_algorithm_results:/app/results  # Save GA results and cache to local directory
     depends_on:
       - rag_pipeline
     environment:
-      - RAG_PIPELINE_URL=http://rag_pipeline:8009
+      - RAG_PIPELINE_URL=http://rag_pipeline:8060
+      - GA_RESULTS_DIR=/app/results  # Directory for saving optimization results
+      - CACHE_FILE_PATH=/app/results/rag_evaluation_cache.json  # Persistent cache file path
 
   qdrant2:
     image: qdrant/qdrant

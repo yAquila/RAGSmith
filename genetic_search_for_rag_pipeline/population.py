@@ -212,8 +212,8 @@ class Population:
         """String representation of the population."""
         stats = self.get_statistics()
         return (f"Population(size={stats['size']}, "
-                f"best_fitness={stats['best_fitness']:.2f if stats['best_fitness'] else 'N/A'}, "
-                f"avg_fitness={stats['average_fitness']:.2f if stats['average_fitness'] else 'N/A'})")
+                f"best_fitness={stats['best_fitness']:.4f if stats['best_fitness'] else 'N/A'}, "
+                f"avg_fitness={stats['average_fitness']:.4f if stats['average_fitness'] else 'N/A'})")
     
     def __repr__(self) -> str:
         """Detailed string representation of the population."""

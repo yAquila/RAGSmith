@@ -80,15 +80,18 @@ class GeneticAlgorithm:
         if self.config.verbose:
             print(f"Initializing population of {self.config.population_size} individuals...")
         
-        # Evaluate all individuals in the population
-        self.population.evaluate_all(self.evaluate_func)
-        
-        # Set initial best individual
-        self.best_ever_individual = self.population.get_best_individual()
+        # Evaluate all individuals in the population and track global best
+        for individual in self.population.individuals:
+            individual.evaluate(self.evaluate_func)
+            
+            # Track the best individual from initial population
+            if individual.fitness is not None and (self.best_ever_individual is None or 
+                                                 individual.fitness > self.best_ever_individual.fitness):
+                self.best_ever_individual = individual.copy()
         
         if self.config.verbose:
             best_fitness = self.best_ever_individual.fitness if self.best_ever_individual else 0
-            print(f"Initial population created. Best fitness: {best_fitness:.2f}")
+            print(f"Initial population created. Best fitness: {best_fitness:.4f}")
     
     def select_parents(self, num_parents: int) -> List[Individual]:
         """
@@ -174,9 +177,16 @@ class GeneticAlgorithm:
         # Ensure we have the right number of offspring
         offspring = offspring[:offspring_count]
         
-        # Evaluate offspring
+        # Evaluate offspring and track best individual from ALL evaluations
         for individual in offspring:
             individual.evaluate(self.evaluate_func)
+            
+            # Check if this individual is the best ever seen
+            if individual.fitness is not None and (self.best_ever_individual is None or 
+                                                 individual.fitness > self.best_ever_individual.fitness):
+                self.best_ever_individual = individual.copy()
+                self.generations_without_improvement = 0
+                print(f"!!!NEW GLOBAL BEST!!! {self.best_ever_individual}")
         
         # Apply elitism
         if self.config.elitism_count > 0:
@@ -188,14 +198,19 @@ class GeneticAlgorithm:
         self.population = Population(self.config.population_size, self.config.category_sizes)
         self.population.individuals = new_individuals[:self.config.population_size]
         
-        # Update best individual
+        # Update best individual from current population (for logging)
         current_best = self.population.get_best_individual()
-        if current_best and (self.best_ever_individual is None or 
+        print("!!!current_best_in_population!!!", current_best)
+        
+        # Also check if anyone in the current population is better (shouldn't happen, but safety check)
+        if current_best and current_best.fitness is not None and (self.best_ever_individual is None or 
                            current_best.fitness > self.best_ever_individual.fitness):
             self.best_ever_individual = current_best.copy()
             self.generations_without_improvement = 0
         else:
             self.generations_without_improvement += 1
+        
+        print("!!!best_ever_individual!!!", self.best_ever_individual)
         
         # Record statistics
         if self.config.track_statistics and self.current_generation % self.config.statistics_interval == 0:
@@ -291,7 +306,7 @@ class GeneticAlgorithm:
                 best_fitness = self.best_ever_individual.fitness if self.best_ever_individual else 0
                 diversity = self.population.get_diversity_score()
                 print(f"Generation {self.current_generation:3d}: "
-                      f"Best fitness = {best_fitness:6.2f}, "
+                      f"Best fitness = {best_fitness:6.4f}, "
                       f"Diversity = {diversity:.3f}, "
                       f"No improvement = {self.generations_without_improvement}")
         
@@ -351,7 +366,7 @@ class GeneticAlgorithm:
         print("GENETIC ALGORITHM COMPLETED")
         print("-" * 50)
         print(f"Best combination found: {results['best_combination']}")
-        print(f"Best fitness: {results['best_fitness']:.2f}")
+        print(f"Best fitness: {results['best_fitness']:.4f}")
         print(f"Generations completed: {results['generations_completed']}")
         print(f"Total execution time: {results['total_time']:.2f} seconds")
         
@@ -364,7 +379,7 @@ class GeneticAlgorithm:
         
         final_stats = results['final_population_stats']
         print(f"Final population diversity: {final_stats['diversity_score']:.3f}")
-        print(f"Final average fitness: {final_stats['average_fitness']:.2f}")
+        print(f"Final average fitness: {final_stats['average_fitness']:.4f}")
     
     def get_best_solution(self) -> Tuple[List[int], float]:
         """
