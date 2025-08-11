@@ -152,7 +152,7 @@ def print_results(results: Dict[str, Any], component_options: Dict[str, List[str
     
     print("\n🎉 Optimization Complete!")
     print("=" * 50)
-    print(f"🏆 Best Fitness: {results['best_fitness']:.2f}")
+    print(f"🏆 Best Fitness: {results['best_fitness']:.4f}")
     print(f"⏱️  Total Time: {results['total_time']:.2f} seconds")
     print(f"🔄 Generations: {results['generations_completed']}")
     print(f"📈 Converged: {results['converged']}")
@@ -167,7 +167,7 @@ def print_results(results: Dict[str, Any], component_options: Dict[str, List[str
     print(f"\n📊 Final Statistics:")
     final_stats = results.get('final_population_stats', {})
     print(f"   • Population Diversity: {final_stats.get('diversity_score', 'N/A'):.3f}")
-    print(f"   • Average Fitness: {final_stats.get('average_fitness', 'N/A'):.2f}")
+    print(f"   • Average Fitness: {final_stats.get('average_fitness', 'N/A'):.4f}")
     print(f"   • Total Evaluations: {results['generations_completed'] * results['config']['population_size']:,}")
 
 

@@ -29,7 +29,10 @@ class RAGPipelineEvaluator:
     def __init__(self, 
                  api_endpoint: str = "http://example.com/api/evaluate",
                  timeout: int = 15000,
-                 max_retries: int = 3):
+                 max_retries: int = 3,
+                 enable_cache: bool = True,
+                 cache_file_path: str = "/app/results/rag_evaluation_cache.json",
+                 auto_save_cache: bool = True):
         """
         Initialize the RAG pipeline evaluator.
         
@@ -37,10 +40,26 @@ class RAGPipelineEvaluator:
             api_endpoint: URL of the external RAG evaluation API
             timeout: Request timeout in seconds
             max_retries: Maximum number of retry attempts
+            enable_cache: Whether to enable evaluation caching
+            cache_file_path: Path to persistent cache file
+            auto_save_cache: Whether to automatically save cache after each evaluation
         """
         self.api_endpoint = api_endpoint
         self.timeout = timeout
         self.max_retries = max_retries
+        self.enable_cache = enable_cache
+        self.cache_file_path = cache_file_path
+        self.auto_save_cache = auto_save_cache
+        
+        # Evaluation cache and statistics
+        self.evaluation_cache: Dict[tuple, float] = {}
+        self.cache_hits = 0
+        self.total_evaluations = 0
+        self.api_calls = 0
+        
+        # Load existing cache if available
+        if self.enable_cache:
+            self._load_cache_on_startup()
         
         # Component category mappings
         self.component_categories = {
@@ -125,6 +144,88 @@ class RAGPipelineEvaluator:
                 "post-generation_reflection_revising"
             ]
         }
+    
+    def _ensure_cache_directory(self) -> None:
+        """Ensure the cache directory exists."""
+        try:
+            import os
+            cache_dir = os.path.dirname(self.cache_file_path)
+            if cache_dir and not os.path.exists(cache_dir):
+                os.makedirs(cache_dir, exist_ok=True)
+                logger.info(f"Created cache directory: {cache_dir}")
+        except Exception as e:
+            logger.warning(f"Could not create cache directory: {e}")
+    
+    def _load_cache_on_startup(self) -> None:
+        """Load existing cache from file on startup."""
+        import os
+        if not self.cache_file_path or not os.path.exists(self.cache_file_path):
+            logger.info("No existing cache file found, starting with empty cache")
+            return
+        
+        try:
+            with open(self.cache_file_path, 'r') as f:
+                cache_data = json.load(f)
+            
+            # Load the cache entries
+            loaded_cache = {}
+            for key_str, value in cache_data.get("cache", {}).items():
+                try:
+                    # Safely convert string representation back to tuple
+                    key = tuple(json.loads(key_str))
+                    loaded_cache[key] = float(value)
+                except (json.JSONDecodeError, ValueError, TypeError) as e:
+                    logger.warning(f"Skipping invalid cache entry {key_str}: {e}")
+                    continue
+            
+            # Load statistics if available
+            stats = cache_data.get("statistics", {})
+            self.evaluation_cache = loaded_cache
+            self.cache_hits = stats.get("cache_hits", 0)
+            self.total_evaluations = stats.get("total_evaluations", 0)
+            self.api_calls = stats.get("api_calls", 0)
+            
+            logger.info(f"✅ Loaded cache from {self.cache_file_path}: "
+                       f"{len(loaded_cache)} entries, "
+                       f"{self.total_evaluations} total evaluations, "
+                       f"{self.cache_hits} cache hits")
+            
+        except Exception as e:
+            logger.error(f"Failed to load cache from {self.cache_file_path}: {e}")
+            logger.info("Starting with empty cache")
+    
+    def _auto_save_cache(self) -> None:
+        """Automatically save cache to file if auto_save_cache is enabled."""
+        if not self.auto_save_cache or not self.enable_cache:
+            return
+        
+        try:
+            import os
+            self._ensure_cache_directory()
+            
+            # Prepare cache data
+            cache_data = {
+                "cache": {json.dumps(list(k)): v for k, v in self.evaluation_cache.items()},
+                "statistics": self.get_cache_statistics(),
+                "metadata": {
+                    "last_updated": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "cache_file_version": "1.0"
+                }
+            }
+            
+            # Write to temporary file first, then rename (atomic operation)
+            temp_file = self.cache_file_path + ".tmp"
+            with open(temp_file, 'w') as f:
+                json.dump(cache_data, f, indent=2)
+            
+            # Atomic rename
+            os.rename(temp_file, self.cache_file_path)
+            
+            logger.debug(f"Cache auto-saved to {self.cache_file_path} "
+                        f"({len(self.evaluation_cache)} entries)")
+            
+        except Exception as e:
+            logger.warning(f"Failed to auto-save cache: {e}")
     
     def candidate_to_configuration(self, candidate: List[int]) -> Dict[str, str]:
         """
@@ -267,6 +368,7 @@ class RAGPipelineEvaluator:
         
         This function takes a candidate solution (list of component selections)
         and returns a fitness score by calling the external RAG evaluation API.
+        Implements caching to avoid redundant API calls.
         
         Args:
             candidate: List of integers representing selected components
@@ -275,8 +377,23 @@ class RAGPipelineEvaluator:
         Returns:
             Fitness score as float (0-100 range)
         """
+        
+        candidate_key = tuple(candidate)
+        
+        # Check cache first (if enabled)
+        if self.enable_cache and candidate_key in self.evaluation_cache:
+            self.cache_hits += 1
+            cached_score = self.evaluation_cache[candidate_key]
+            hit_rate = (self.cache_hits / self.total_evaluations) * 100
+            logger.info(f"Cache HIT for candidate {candidate}: {cached_score:.4f} "
+                       f"(hit rate: {hit_rate:.1f}%, {self.cache_hits}/{self.total_evaluations})")
+            return cached_score
+        else:
+            self.total_evaluations += 1
+
+        # Cache miss - evaluate via API
         try:
-            logger.info(f"Evaluating candidate: {candidate}")
+            logger.info(f"Cache MISS - Evaluating candidate: {candidate}")
             
             # Step 1: Convert candidate to structured configuration
             configuration = self.candidate_to_configuration(candidate)
@@ -286,10 +403,20 @@ class RAGPipelineEvaluator:
             request_payload = self.prepare_evaluation_request(configuration)
             
             # Step 3: Send request to external API
+            self.api_calls += 1
             response_data = self.send_evaluation_request(request_payload)
             
             # Step 4: Extract score from response
             score = self.extract_score_from_response(response_data)
+            
+            # Step 5: Cache the result (if enabled)
+            if self.enable_cache:
+                self.evaluation_cache[candidate_key] = score
+                logger.info(f"Cached result for candidate {candidate}: {score:.4f} "
+                           f"(cache size: {len(self.evaluation_cache)})")
+                
+                # Auto-save cache after new evaluation
+                self._auto_save_cache()
             
             logger.info(f"Final score for candidate {candidate}: {score}")
             return score
@@ -300,6 +427,141 @@ class RAGPipelineEvaluator:
             # Return a low score for failed evaluations
             # In production, you might want to retry or handle this differently
             return 0.0
+    
+    def get_cache_statistics(self) -> Dict[str, Any]:
+        """
+        Get detailed cache performance statistics.
+        
+        Returns:
+            Dictionary containing cache statistics
+        """
+        if self.total_evaluations == 0:
+            hit_rate = 0.0
+            efficiency = 0.0
+        else:
+            hit_rate = (self.cache_hits / self.total_evaluations) * 100
+            efficiency = ((self.total_evaluations - self.api_calls) / self.total_evaluations) * 100
+        
+        return {
+            "total_evaluations": self.total_evaluations,
+            "cache_hits": self.cache_hits,
+            "cache_misses": self.total_evaluations - self.cache_hits,
+            "api_calls": self.api_calls,
+            "cache_size": len(self.evaluation_cache),
+            "hit_rate_percent": hit_rate,
+            "efficiency_percent": efficiency,
+            "cache_enabled": self.enable_cache
+        }
+    
+    def clear_cache(self) -> None:
+        """Clear the evaluation cache and reset statistics."""
+        self.evaluation_cache.clear()
+        self.cache_hits = 0
+        self.total_evaluations = 0
+        self.api_calls = 0
+        logger.info("Evaluation cache cleared")
+    
+    def get_cache_size(self) -> int:
+        """Get the current number of cached evaluations."""
+        return len(self.evaluation_cache)
+    
+    def get_best_from_cache(self) -> tuple:
+        """
+        Get the best individual and score from cache.
+        
+        Returns:
+            Tuple of (candidate_genes, fitness_score) for the best cached individual,
+            or (None, 0.0) if cache is empty
+        """
+        if not self.evaluation_cache:
+            return None, 0.0
+        
+        # Find the candidate with the highest score
+        best_candidate_key = max(self.evaluation_cache.keys(), 
+                               key=lambda k: self.evaluation_cache[k])
+        best_score = self.evaluation_cache[best_candidate_key]
+        best_candidate = list(best_candidate_key)
+        
+        logger.info(f"🏆 Best from cache: {best_candidate} with score {best_score:.4f}")
+        return best_candidate, best_score
+    
+    def save_cache_to_file(self, filepath: str) -> None:
+        """
+        Save the current cache to a JSON file.
+        
+        Args:
+            filepath: Path to save the cache file
+        """
+        try:
+            import os
+            # Ensure directory exists
+            cache_dir = os.path.dirname(filepath)
+            if cache_dir and not os.path.exists(cache_dir):
+                os.makedirs(cache_dir, exist_ok=True)
+            
+            cache_data = {
+                "cache": {json.dumps(list(k)): v for k, v in self.evaluation_cache.items()},
+                "statistics": self.get_cache_statistics(),
+                "metadata": {
+                    "last_updated": time.strftime("%Y-%m-%d %H:%M:%S"),
+                    "cache_file_version": "1.0"
+                }
+            }
+            
+            # Atomic write using temporary file
+            temp_file = filepath + ".tmp"
+            with open(temp_file, 'w') as f:
+                json.dump(cache_data, f, indent=2)
+            
+            os.rename(temp_file, filepath)
+            logger.info(f"💾 Cache saved to {filepath} ({len(self.evaluation_cache)} entries)")
+            
+        except Exception as e:
+            logger.error(f"Failed to save cache to {filepath}: {e}")
+    
+    def load_cache_from_file(self, filepath: str) -> None:
+        """
+        Load cache from a JSON file.
+        
+        Args:
+            filepath: Path to the cache file
+        """
+        import os
+        if not os.path.exists(filepath):
+            logger.info(f"Cache file {filepath} does not exist")
+            return
+            
+        try:
+            with open(filepath, 'r') as f:
+                cache_data = json.load(f)
+            
+            # Convert string keys back to tuples
+            loaded_cache = {}
+            for key_str, value in cache_data.get("cache", {}).items():
+                try:
+                    # Safely convert JSON string back to tuple
+                    key = tuple(json.loads(key_str))
+                    loaded_cache[key] = float(value)
+                except (json.JSONDecodeError, ValueError, TypeError) as e:
+                    logger.warning(f"Skipping invalid cache entry {key_str}: {e}")
+                    continue
+            
+            # Load statistics if available
+            stats = cache_data.get("statistics", {})
+            old_size = len(self.evaluation_cache)
+            self.evaluation_cache.update(loaded_cache)
+            
+            # Update statistics (merge with existing)
+            self.cache_hits = max(self.cache_hits, stats.get("cache_hits", 0))
+            self.total_evaluations = max(self.total_evaluations, stats.get("total_evaluations", 0))
+            self.api_calls = max(self.api_calls, stats.get("api_calls", 0))
+            
+            logger.info(f"📂 Cache loaded from {filepath}: "
+                       f"{len(loaded_cache)} entries loaded, "
+                       f"{len(self.evaluation_cache)} total entries in cache")
+            
+        except Exception as e:
+            logger.error(f"Failed to load cache from {filepath}: {e}")
 
 
 # Factory function for easy integration with genetic algorithm

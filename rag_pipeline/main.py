@@ -139,8 +139,8 @@ def parse_config(config_dict: Dict[str, str] = None):
             'semantic_similarity': 0.5
         },
         overall_weights={
-            'retrieval': 0.3,
-            'generation': 0.7
+            'retrieval': 0.5,
+            'generation': 0.5
         }
     )
     return config

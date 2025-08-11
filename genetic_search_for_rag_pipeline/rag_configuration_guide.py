@@ -231,7 +231,7 @@ def direct_genetic_algorithm_example():
     # Step 5: Analyze results
     print("\n🎉 Direct GA Results:")
     print("=" * 40)
-    print(f"🏆 Best Fitness: {results['best_fitness']:.2f}")
+    print(f"🏆 Best Fitness: {results['best_fitness']:.4f}")
     print(f"⏱️  Total Time: {results['total_time']:.2f} seconds")
     print(f"🔄 Generations: {results['generations_completed']}")
     print(f"📈 Converged: {results['converged']}")
@@ -283,7 +283,7 @@ def simplified_pipeline_example():
     # Step 3: Analyze results
     print("\n🎉 Pipeline Results:")
     print("=" * 40)
-    print(f"🏆 Best Performance: {results['best_fitness']:.2f}")
+    print(f"🏆 Best Performance: {results['best_fitness']:.4f}")
     print(f"⏱️  Total Time: {results['total_time']:.2f} seconds")
     print(f"🔄 Generations: {results['generations_completed']}")
     print(f"📈 Converged: {results['converged']}")
@@ -373,7 +373,7 @@ def demonstrate_advanced_configurations():
         
         results = ga.run()
         
-        print(f"   🏆 Best: {results['best_fitness']:.2f}")
+        print(f"   🏆 Best: {results['best_fitness']:.4f}")
         print(f"   ⏱️  Time: {results['total_time']:.1f}s")
         print(f"   🔄 Gens: {results['generations_completed']}")
 
