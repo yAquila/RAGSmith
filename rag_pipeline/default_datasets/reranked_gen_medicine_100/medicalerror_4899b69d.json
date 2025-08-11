@@ -1,0 +1,766 @@
+{
+  "article": {
+    "id": "medicalerror_4899b69d",
+    "title": "Medical error",
+    "url": "https://en.wikipedia.org/wiki/Medical_error",
+    "lang": "en",
+    "created_at": "2025-07-31T07:12:05.963243",
+    "content": "---\nid: medicalerror_4899b69d\nurl: https://en.wikipedia.org/wiki/Medical_error\ntitle: Medical error\nlang: en\ncreated_at: '2025-07-31T07:05:37.265090'\nchecksum: d3b764a53627161b9ad1f497b4f5248158f7957388601e77b401721da16b1dd1\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 6147\n  char_count: 40445\n  num_chunks: 47\n  original_chunks: 53\n  filtered_out: 6\n  num_sections: 0\n---\nA medical error is a preventable adverse effect of care (\"iatrogenesis\"), whether or not it is evident or harmful to the patient. This might include an inaccurate or incomplete diagnosis or treatment of a disease, injury, syndrome, behavior, infection, or other ailments. The incidence of medical errors varies depending on the setting. The World Health Organization has named adverse outcomes due to patient care that is unsafe as the 14th causes of disability and death in the world, with an estimated 1/300 people may be harmed by healthcare practices around the world. == Definitions == A medical error occurs when a health-care provider chooses an inappropriate method of care or improperly executes an appropriate method of care. Medical errors are often described as human errors in healthcare. There are many types of medical error, from minor to major, and causality understanding and assessing if the likelihood that the specific event or factor was responsible for the negative outcome, is often poorly determined. There are many taxonomies for classifying medical errors. === Definitions of diagnostic error === Defining diagnostic error is important for measuring its frequency, identifying its causes, and implementing strategies to reduce harm and these steps that are essential for improving patient safety. The complexity of diagnosis as both a process and an outcome has led to multiple, overlapping definitions and there is no single definition of diagnostic error. One challenge is reflected in part the dual nature of the word diagnosis, which is both a noun (the name of the assigned disease; diagnosis is a label) and a verb (the act of arriving at a diagnosis; diagnosis is a process). At the present time, there are at least 4 definitions of diagnostic error in active use: Diagnostic error has been defined as a diagnosis that is wrong, egregiously delayed, or missed altogether. This is a \"label\" definition, and can only be applied in retrospect, using some gold standard (for example, autopsy findings or a definitive laboratory test) to confirm the correct diagnosis. Many diagnostic errors fit several of these criteria; the categories overlap. Diagnostic error has also be defined using process-related definitions: Schiff et al. defined diagnostic error as any breakdown in the diagnostic process, including both errors of omission and errors of commission. Similarly, Singh et al. defined diagnostic error as a \"missed opportunity\" in the diagnostic process, based on retrospective review. In its landmark report, Improving Diagnosis in Health Care, The National Academy of Medicine proposed a new, hybrid definition that includes both label- and process-related aspects: \"A diagnostic error is failure to establish an accurate and timely explanation of the patient's health problem(s) or to communicate that explanation to the patient.\" This is the only definition that specifically includes the patient in the definition wording. === Definition of prescription error === A prescription or medication error, as defined by the National Coordinating Council for Medication Error Reporting and Prevention, is an event that is preventable that leads to or has led to unsuitable use of medication or has led to harm to the person during the period of time that the medicine is controlled by a clinician, the person, or the consumer. Some adverse drug events can also be related to medication errors. == Impact == One extrapolation suggests that 180,000 people die each year partly as a result of iatrogenic injury. The World Health Organization registered 14 million new cases and 8.2 million cancer-related deaths in 2012. It estimated that the number of cases could increase by 70% through 2032. As the number of cancer patients receiving treatment increases, hospitals around the world are seeking ways to improve patient safety, to emphasize traceability and raise efficiency in their cancer treatment processes. Children are often more vulnerable to a negative outcome when a medication error occurs as they have age-related differences in how their bodies absorb, metabolize, and excrete pharmaceutical agents. === UK === In the UK, an estimated 850,000 medical errors occur each year, costing over £2 billion (estimated in the year 2000). The accuracy of this estimate is not clear. Criticism has included the statistical handling of measurement errors in the report, and significant subjectivity in determining which deaths were \"avoidable\" or due to medical error, and an erroneous assumption that 100% of patients would have survived if optimal care had been provided. A 2006 study found that medication errors are among the most common medical mistakes, harming at least 1.5 million people every year. According to the study, 400,000 preventable drug-related injuries occur each year in hospitals, 800,000 in long-term care settings, and roughly 530,000 among Medicare recipients in outpatient clinics. The report stated that these are likely to be conservative estimates. In 2000 alone, the extra medical costs incurred by preventable drug-related injuries approximated $887 million—and the study looked only at injuries sustained by Medicare recipients, a subset of clinic visitors. None of these figures take into account lost wages and productivity or other costs. === US === According to a 2002 Agency for Healthcare Research and Quality report, about 7,000 people were estimated to die each year from medication errors – about 16 percent more deaths than the number attributable to work-related injuries (6,000 deaths). One in five Americans (22%) report that they or a family member have experienced a medical error of some kind. A 2000 Institute of Medicine report estimated that medical errors result in between 44,000 and 98,000 preventable deaths and 1,000,000 excess injuries each year in U.S. hospitals. A 2001 study in the Journal of the American Medical Association of seven Department of Veterans Affairs medical centers estimated that for roughly every 10,000 patients admitted to the select hospitals, one patient died who would have lived for three months or more in good cognitive health had \"optimal\" care been provided. A 2001 study estimated that 1% of hospital admissions result in an adverse event due to negligence. Identification or errors may be a challenge in these studies, and mistakes may be more common than reported as these studies identify only mistakes that led to measurable adverse events occurring soon after the errors. Independent review of doctors' treatment plans suggests that decision-making could be improved in 14% of admissions; many of the benefits would have delayed manifestations. Even this number may be an underestimate. One study suggests that adults in the United States receive only 55% of recommended care. At the same time, a second study found that 30% of care in the United States may be unnecessary. For example, if a doctor fails to order a mammogram that is past due, this mistake will not show up in the first type of study. In addition, because no adverse event occurred during the short follow-up of the study, the mistake also would not show up in the second type of study because only the principal treatment plans were critiqued. However, the mistake would be recorded in the third type of study. If a doctor recommends an unnecessary treatment or test, it may not show in any of these types of studies. Cause of death on United States death certificates, statistically compiled by the Centers for Disease Control and Prevention (CDC), are coded in the International Classification of Disease (ICD), which does not include codes for human and system factors. == Causes == The research literature showed that medical errors are caused by errors of commission and errors of omission. Errors of omission are made when providers did not take action when they should have, while errors of commission occur when decisions and action are delayed. A special form of an error of commission occurs when health care professionals commit to unnecessary treatment in the case of Medical child abuse (Munchausen syndrome by proxy). Commission and omission errors have also been attributed with communication failures. A study with data from 67 826 patients found that poor communication was the only identifiable cause of 1 in 10 patient safety incidents, and that poor communication contributes to 25% of patient safety incidents. Medical errors can be associated with inexperienced physicians and nurses, new procedures, extremes of age, and complex or urgent care. Poor communication (whether in one's own language or, as may be the case for medical tourists, another language), improper documentation, illegible handwriting, spelling errors, inadequate nurse-to-patient ratios, and similarly named medications are also known to contribute to the problem. Misdiagnosis may be associated with individual characteristics of the patient or due to the patient multimorbidity. Patient actions or inactions may also contribute significantly to medical errors. === Healthcare complexity === Complicated technologies, powerful drugs, intensive care, rare and multiple diseases, and prolonged hospital stay can contribute to medical errors. In turn, medical errors from carelessness or improper use of medical devices often lead to severe injuries or death. Since 2015, 60 injuries and 23 deaths have been caused by misplaced feeding tubes while using the Cortrak2 EAS system. The FDA recalled Avanos Medical's Cortrak system in 2022 due to its severity and the high toll associated with the medical error. Complexity makes diagnosis especially challenging. There are less than 200 symptoms listed in Wikipedia, but there are probably more than 10,000 known diseases. The World Health Organization's system for the International Classification of Disease, 9th Edition from 1979 listed over 14,000 diagnosis codes. Textbooks of medicine often describe the most typical presentations of a disease, but in many conditions patients may have variable presentations instead of the classical signs and symptoms. To add complexity, the signs and symptoms of a given condition change over time; in the early stages the signs and symptoms may be absent or minimal, and then these evolve as the condition progresses. Diagnosis is often challenging in infants and children who can't clearly communicate their symptoms, and in the elderly, where signs and symptoms may be muted or absent. There are more than 7000 rare diseases alone, and in aggregate these are not uncommon: Roughly 1 in 17 patients will be diagnosed with a rare disease over their lifetime. Physicians may have only learned a handful of these during their education and training. === System and process design === In 2000, The Institute of Medicine released \"To Err is Human,\" which asserted that the problem in medical errors is not bad people in health care—it is that good people are working in bad systems that need to be made safer. Poor communication and unclear lines of authority of physicians, nurses, and other care providers are also contributing factors. Disconnected reporting systems within a hospital can result in fragmented systems in which numerous hand-offs of patients results in lack of coordination and errors. Other factors include the impression that action is being taken by other groups within the institution, reliance on automated systems to prevent error., and inadequate systems to share information about errors, which hampers analysis of contributory causes and improvement strategies. Cost-cutting measures by hospitals in response to reimbursement cutbacks can compromise patient safety. In emergencies, patient care may be rendered in areas poorly suited for safe monitoring. The American Institute of Architects has identified concerns for the safe design and construction of health care facilities. Infrastructure failure is also a concern. According to the WHO, 50% of medical equipment in developing countries is only partly usable due to lack of skilled operators or parts. As a result, diagnostic procedures or treatments cannot be performed, leading to substandard treatment. The Joint Commission's Annual Report on Quality and Safety 2007 found that inadequate communication between healthcare providers, or between providers and the patient and family members, was the root cause of over half the serious adverse events in accredited hospitals. Other leading causes included inadequate assessment of the patient's condition, and poor leadership or training. === Competency, education, and training === Variations in healthcare provider training & experience and failure to acknowledge the prevalence and seriousness of medical errors also increase the risk. The so-called July effect occurs when new residents arrive at teaching hospitals, causing an increase in medication errors according to a study of data from 1979 to 2006. === Human factors and ergonomics === Cognitive errors commonly encountered in medicine were initially identified by psychologists Amos Tversky and Daniel Kahneman in the early 1970s. Jerome Groopman, author of How Doctors Think, says these are \"cognitive pitfalls\", biases which cloud our logic. For example, a practitioner may overvalue the first data encountered, skewing their thinking. Another example may be where the practitioner recalls a recent or dramatic case that quickly comes to mind, coloring the practitioner's judgement. Another pitfall is where stereotypes may prejudice thinking. Pat Croskerry describes clinical reasoning as an interplay between intuitive, subconscious thought (System 1) and deliberate, conscious rational consideration (System 2). In this framework, many cognitive errors reflect over-reliance on System 1 processing, although cognitive errors may also sometimes involve System 2. Sleep deprivation has also been cited as a contributing factor in medical errors. One study found that being awake for over 24 hours caused medical interns to double or triple the number of preventable medical errors, including those that resulted in injury or death. The risk of car crash after these shifts increased by 168%, and the risk of near miss by 460%. Interns admitted falling asleep during lectures, during rounds, and even during surgeries. Night shifts are associated with worse surgeon performance during laparoscopic surgeries. Practitioner risk factors include fatigue, depression, and burnout. Factors related to the clinical setting include diverse patients, unfamiliar settings, time pressures, and increased patient-to-nurse staffing ratio increases. Drug names that look alike or sound alike are also a problem. Errors in interpreting medical images are often perceptual instead of \"fact-based\"; these errors are often caused by failures of attention or vision. For example, visual illusions can cause radiologists to misperceive images. A number of Information Technology (IT) systems have been developed to detect and prevent medication errors, the most common type of medical errors. These systems screen data such as ICD-9 codes, pharmacy and laboratory data. Rules are used to look for changes in medication orders, and abnormal laboratory results that may be indicative of medication errors and/or adverse drug events. == Examples == Errors can include misdiagnosis or delayed diagnosis, administration of the wrong drug to the wrong patient or in the wrong way, giving multiple drugs that interact negatively, surgery on an incorrect site, failure to remove all surgical instruments, failure to take the correct blood type into account, or incorrect record-keeping. A 10th type of error is ones which are not watched for by researchers, such as RNs failing to program an IV pump to give a full dose of IV antibiotics or other medication. === Errors in diagnosis === The projected cost of medical errors to the U.S. economy is approximately $20 billion, 87% of which are direct increases in medical costs of providing services to patient affected by medical errors. Medical errors can increase average hospital costs by as much as $4,769 per patient. One common type of medical error stems from x-rays and medical imaging: failing to see or notice signs of disease on an image. The retrospective \"miss\" rate among abnormal imaging studies is reported to be as high as 30% (the real-life error rate is much lower, around 4-5%, because not all images are abnormal), and up to 20% of missed findings result in long-term adverse effects. A large study reported several cases where patients were wrongly told that they were HIV-negative when the physicians erroneously ordered and interpreted HTLV (a closely related virus) testing rather than HIV testing. In the same study, >90% of HTLV tests were ordered erroneously. A 2008 literature review in The American Journal of Medicine estimated that between 10 and 15% of physician diagnoses are erroneous. Misdiagnosis of lower extremity cellulitis is estimated to occur in 30% of patients, leading to unnecessary hospitalizations in 85% and unnecessary antibiotic use in 92%. Collectively, these errors lead to between 50,000 and 130,000 unnecessary hospitalizations and between $195 and $515 million in avoidable health care spending annually in the United States. === Misdiagnosis of psychological disorders === Female sexual desire sometimes used to be diagnosed as female hysteria. Sensitivities to foods and food allergies risk being misdiagnosed as the eating disorder orthorexia. Studies have found that bipolar disorder has often been misdiagnosed as major depression. Its early diagnosis necessitates that clinicians pay attention to the features of the patient's depression and also look for present or prior hypomanic or manic symptomatology. The misdiagnosis of schizophrenia is also a common problem. There may be long delays of patients getting a correct diagnosis of this disorder. Delayed sleep phase disorder is often confused with: psychophysiological insomnia; depression; psychiatric disorders such as schizophrenia, ADHD or ADD; other sleep disorders; or school refusal. Practitioners of sleep medicine point out the dismally low rate of accurate diagnosis of the disorder, and have often asked for better physician education on sleep disorders. Cluster headaches are often misdiagnosed, mismanaged, or undiagnosed for many years; they may be confused with migraine, \"cluster-like\" headache (or mimics), CH subtypes, other TACs (trigeminal autonomic cephalalgias), or other types of primary or secondary headache syndrome. Cluster-like head pain may be diagnosed as secondary headache rather than cluster headache. Under-recognition of CH by health care professionals is reflected in consistent findings in Europe and the United States that the average time to diagnosis is around seven years. Asperger syndrome and autism tend to get undiagnosed or delayed recognition and delayed diagnosis or misdiagnosed. Delayed or mistaken diagnosis can be traumatic for individuals and families; for example, misdiagnosis can lead to medications that worsen behavior. Field trials of the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) included \"test-retest reliability\" which involved different clinicians doing independent evaluations of the same patient—a new approach to the study of diagnostic reliability. === Outpatient vs. inpatient === Misdiagnosis is the leading cause of medical error in outpatient facilities. Since the National Institute of Medicine's 1999 report, \"To Err is Human,\" found up to 98,000 hospital patients die from preventable medical errors in the U.S. each year, government and private sector efforts have focused on inpatient safety. === Medical prescriptions === While in 2000 the Committee on Quality of Health Care in America affirmed medical mistakes are an \"unavoidable outcome of learning to practice medicine\", at 2019 the commonly accepted link between prescribing skills and clinical clerkships was not yet demonstrated by the available data and in the U.S. legibility of handwritten prescriptions has been indirectly responsible for at least 7,000 deaths annually. Prescription errors concern ambiguous abbreviations, the right spelling of the full name of drugs: improper use of the nomenclature, of decimal points, unit or rate expressions; legibility and proper instructions; miscalculations of the posology (quantity, route and frequency of administration, duration of the treatment, dosage form and dosage strength); lack of information about patients (e.g. allergy, declining renal function) or reported in the medical document. There were an estimated 66 million clinically significant medication errors in the British NHS in 2018. The resulting adverse drug reactions are estimated to cause around 700 deaths a year in England and to contribute to around 22,000 deaths a year. The British researchers did not find any evidence that error rates were lower in other countries, and the global cost was estimated at $42 billion per year. Medication errors in hospital include omissions, delayed dosing and incorrect medication administrations. Medication errors are not always readily identified, but can be reported using case note reviews or incident reporting systems. There are pharmacist-led interventions that can reduce the incident of medication error. Electronic prescribing has been shown to reduce prescribing errors by up to 30%. == Mitigation (after an error) == Mistakes can have a strongly negative emotional impact on the doctors who commit them. === Recognizing that mistakes are not isolated events === Some physicians recognize that adverse outcomes from errors usually do not happen because of an isolated error and actually reflect system problems. This concept is often referred to as the Swiss Cheese Model. This is the concept that there are layers of protection for clinicians and patients to prevent mistakes from occurring. Therefore, even if a doctor or nurse makes a small error (e.g. incorrect dose of drug written on a drug chart by doctor), this is picked up before it actually affects patient care (e.g. pharmacist checks the drug chart and rectifies the error). Such mechanisms include: Practical alterations (e.g.-medications that cannot be given through IV, are fitted with tubing which means they cannot be linked to an IV even if a clinician makes a mistake and tries to), systematic safety processes (e.g. all patients must have a Waterlow score assessment and falls assessment completed on admission), and training programmes/continuing professional development courses are measures that may be put in place. There may be several breakdowns in processes to allow one adverse outcome. In addition, errors are more common when other demands compete for a physician's attention. However, placing too much blame on the system may not be constructive. === Placing the practice of medicine in perspective === Essayists imply that the potential to make mistakes is part of what makes being a physician rewarding and without this potential the rewards of medical practice would be diminished. Laurence states that \"Everybody dies, you and all of your patients. All relationships end. Would you want it any other way? [...] Don't take it personally\". Seder states \"[...] if I left medicine, I would mourn its loss as I've mourned the passage of my poetry. On a daily basis, it is both a privilege and a joy to have the trust of patients and their families and the camaraderie of peers. There is no challenge to make your blood race like that of a difficult case, no mind game as rigorous as the challenging differential diagnosis, and though the stakes are high, so are the rewards.\" === Disclosing mistakes === Forgiveness, which is part of many cultural traditions, may be important in coping with medical mistakes. Among other healing processes, it can be accomplished through the use of communicative disclosure guidelines. ==== To oneself ==== Inability to forgive oneself may create a cycle of distress and increased likelihood of a future error. However, Wu et al. suggest \"...those who coped by accepting responsibility were more likely to make constructive changes in practice, but [also] to experience more emotional distress.\" It may be helpful to consider the much larger number of patients who are not exposed to mistakes and are helped by medical care. ==== To patients ==== Gallagher et al. state that patients want \"information about what happened, why the error happened, how the error's consequences will be mitigated, and how recurrences will be prevented.\" Interviews with patients and families reported in a 2003 book by Rosemary Gibson and Janardan Prasad Singh, put forward that those who have been harmed by medical errors face a \"wall of silence\" and \"want an acknowledgement\" of the harm. With honesty, \"healing can begin not just for the patients and their families but also the doctors, nurses and others involved.\" In a line of experimental investigations, Annegret Hannawa et al. developed evidence-based disclosure guidelines under the scientific \"Medical Error Disclosure Competence (MEDC)\" framework. A review of studies examining patients' views on investigations of medical harm found commonalities in their expectations of the process. For example, many wanted reviews to be transparent, trustworthy, and person-centred to meet their needs. People wanted to be meaningfully involved in the process and to be treated with respect and empathy. Justice-seekers wanted an honest account of what happened, the circumstances leading up to it, and measures to ensure it does not happen again. Processes that, for example, involved people independent of the organisation responsible for harm gave investigations credibility. A 2005 study by Wendy Levinson of the University of Toronto showed surgeons discussing medical errors used the word \"error\" or \"mistake\" in only 57 percent of disclosure conversations and offered a verbal apology only 47 percent of the time. Patient disclosure is important in the medical error process. The current standard of practice at many hospitals is to disclose errors to patients when they occur. In the past, it was a common fear that disclosure to the patient would incite a malpractice lawsuit. Many physicians would not explain that an error had taken place, causing a lack of trust toward the healthcare community. In 2007, 34 states passed legislation that precludes any information from a physician's apology for a medical error from being used in malpractice court (even a full admission of fault). This encourages physicians to acknowledge and explain mistakes to patients, keeping an open line of communication. The American Medical Association's Council on Ethical and Judicial Affairs states in its ethics code: \"Situations occasionally occur in which a patient suffers significant medical complications that may have resulted from the physician's mistake or judgment. In these situations, the physician is ethically required to inform the patient of all facts necessary to ensure understanding of what has occurred. Concern regarding legal liability which might result following truthful disclosure should not affect the physician's honesty with a patient.\" From the American College of Physicians Ethics Manual: \"In addition, physicians should disclose to patients information about procedural or judgment errors made in the course of care if such information is material to the patient's well-being. Errors do not necessarily constitute improper, negligent, or unethical behavior, but failure to disclose them may.\" However, \"there appears to be a gap between physicians' attitudes and practices regarding error disclosure. Willingness to disclose errors was associated with higher training level and a variety of patient-centered attitudes, and it was not lessened by previous exposure to malpractice litigation\". Hospital administrators may share these concerns. Consequently, in the United States, many states have enacted laws excluding expressions of sympathy after accidents as proof of liability. Disclosure may actually reduce malpractice payments. Reluctance to disclose medical errors to patients may also stem from psychological reasons. In his book, Medical Errors and Medical Narcissism, John Banja defines \"medical narcissism\" as the need of health professionals to preserve their self-esteem leading to the compromise of error disclosure to patients. ==== To non-physicians ==== In a study of physicians who reported having made a mistake, it was offered that disclosing to non-physician sources of support may reduce stress more than disclosing to physician colleagues. This may be due to the finding that of the physicians in the same study, when presented with a hypothetical scenario of a mistake made by another colleague, only 32% of them would have unconditionally offered support. It is possible that greater benefit occurs when spouses are physicians. ==== To other physicians ==== Discussing mistakes with other physicians is beneficial. However, medical providers may be less forgiving of one another. The reason is not clear, but one essayist has admonished, \"Don't Take Too Much Joy in the Mistakes of Other Doctors.\" ==== To the physician's institution ==== Disclosure of errors, especially \"near misses\", may be able to reduce subsequent errors in institutions that are capable of reviewing near misses. However, doctors report that institutions may not be supportive of the doctor. ==== Use of rationalization to cover up medical errors ==== Based on anecdotal and survey evidence, Banja states that rationalization (making excuses) is very common among the medical profession to cover up medical errors. ==== By potential for harm to the patient ==== In a survey of more than 10,000 physicians in the United States, when asked the question, \"Are there times when it's acceptable to cover up or avoid revealing a mistake if that mistake would not cause harm to the patient?\", 19% answered yes, 60% answered no and 21% answered it depends. On the question, \"Are there times when it is acceptable to cover up or avoid revealing a mistake if that mistake would potentially or likely harm the patient?\", 2% answered yes, 95% answered no and 3% answered it depends. === Legal procedure === Standards and regulations for medical malpractice vary by country and jurisdiction within countries. Medical professionals may obtain professional liability insurances to offset the risk and costs of lawsuits based on medical malpractice. == Prevention == Medical care is frequently compared adversely to aviation; while many of the factors that lead to errors in both fields are similar, aviation's error management protocols are regarded as much more effective. Safety measures include informed consent, the availability of a second practitioner's opinion, voluntary reporting of errors, root cause analysis, reminders to improve patient medication adherence, hospital accreditation, and systems to ensure review by experienced or specialist practitioners. A template has been developed for the design (both structure and operation) of hospital medication safety programmes, particularly for acute tertiary settings, which emphasizes safety culture, infrastructure, data (error detection and analysis), communication and training. Particularly to prevent the medication errors in the perspective of the intrathecal administration of local anaesthetics, there is a proposal to change the presentation and packaging of the appliances and agents used for this purpose. One spinal needle with a syringe prefilled with the local anaesthetic agents may be marketed in a single blister pack, which will be peeled open and presented before the anaesthesiologist conducting the procedure. Physician well-being has also been recommended as an indicator of healthcare quality given its association with patient safety outcomes. A meta-analysis involving 21517 participants found that physicians with depressive symptoms had a 95% higher risk of reporting medical errors and that the association between physician depressive symptoms and medical errors is bidirectional === Reporting requirements === In the United States, adverse medical event reporting systems were mandated in just over half (27) of the states as of 2014, a figure unchanged since 2007. In U.S. hospitals error reporting is a condition of payment by Medicare. An investigation by the Office of Inspector General, Department of Health and Human Services released January 6, 2012 found that most errors are not reported and even in the case of errors that are reported and investigated changes are seldom made which would prevent them in the future. The investigation revealed that there was often lack of knowledge regarding which events were reportable and recommended that lists of reportable events be developed. === Cause-specific preventive measures === Traditionally, errors are attributed to mistakes made by individuals, who then may be penalized. A common approach to respond to and prevent specific errors is requiring additional checks at particular points in the system, whose findings and detail of execution must be recorded. As an example, an error of free flow IV administration of heparin is approached by teaching staff how to use the IV systems and to use special care in setting the IV pump. While overall errors become less likely, the checks add to workload and may in themselves be a cause of additional errors. In some hospitals, a regular morbidity and mortality conference meeting is scheduled to discuss complications or deaths and learn from or improve the overall processes. A newer model for improvement in medical care takes its origin from the work of W. Edwards Deming in a model of Total Quality Management. In this model, there is an attempt to identify the underlying system defect that allowed the error to occur. As an example, in such a system the error of free flow IV administration of heparin is dealt with by not using IV heparin and substituting subcutaneous administration of heparin, obviating the entire problem. However, such an approach presupposes available research showing that subcutaneous heparin is as effective as IV. Thus, most systems use a combination of approaches to the problem. === Anaesthesiology === The field of medicine that has taken the lead in systems approaches to safety is anaesthesiology. Steps such as standardization of IV medications to 1 ml doses, national and international color-coding standards, and development of improved airway support devices has the field a model of systems improvement in care. === Medications === Reducing errors in prescribing, dispensing, compounding/formulating, labelling, and handling medications is a priority and has been the subject of systematic reviews and studies. Examples of areas to reduce medication errors and improve safety include: Training professionals or using databases to compare new and previous prescribed medications to prevent mistakes, also known as \"medication reconciliation\", prescribing through an electronic medical record system and/or using decision support systems that has automatic checks in place, with computerized alerts or other novel technologies, the use of machine-readable barcodes, healthcare professional and patient training or supplementary educational programs, adding in an extra step for double checking prescriptions (both at the level of the healthcare professional and at the administrator level), using standardized protocols in the workplace that include a check-list, physical markings or writing on syringes to indicate correct doses, programmes that include the person being able to administer the medications themselves, ensuring that the workplace or environment is well-lit, monitoring and adjusting healthcare professional working hours, and the use of an interdisciplinary team. There is weak evidence indicating that a number of these suggested interventions may be helpful in reducing errors or improving patient safety, however, in general, evidence supporting the best or most effective intervention for reducing errors not strong. Evidence supporting improvements aimed at reducing medical errors in medications for pediatric hospitalized patients is also very weak. === Historically === As far back as the 1930s, pharmacists worked with physicians to select, from many options, the safest and most effective drugs available for use in hospitals. The process is known as the Formulary System and the list of drugs is known as the Formulary. In the 1960s, hospitals implemented unit dose packaging and unit dose drug distribution systems to reduce the risk of wrong drug and wrong dose errors in hospitalized patients; centralized sterile admixture services were shown to decrease the risks of contaminated and infected intravenous medications; and pharmacists provided drug information and clinical decision support directly to physicians to improve the safe and effective use of medications. Pharmacists are recognized experts in medication safety and have made many contributions that reduce error and improve patient care over the last 50 years. More recently, governments have attempted to address issues like patient-pharmacist communication and consumer knowledge through measures like the Australian Government's Quality Use of Medicines policy. == Misconceptions == Some common misconceptions about medical error include: Medical error is the \"third leading cause of death\" in the United States. This canard stems from an erroneous 2016 study which, according to David Gorski, \"has taken on a life of its own\" and fuelled \"a myth promulgated by both quacks and academics\". \"Bad apples\" or incompetent health care providers are a common cause. (Although human error is commonly an initiating event, the faulty care delivery process invariably permits or compounds the harm and so is the focus of improvement.) High-risk procedures or medical specialties are responsible for most avoidable adverse events. (Although some mistakes, such as in surgery, are harder to conceal, errors occur in all levels of care. Even though complex procedures entail more risk, adverse outcomes are not usually due to error, but to the severity of the condition being treated.) However, United States Pharmacopeia has reported that medication errors during the course of a surgical procedure are three times more likely to cause harm to a patient than those occurring in other types of hospital care. If a patient experiences an adverse event during the process of care, an error has occurred. (Most medical care entails some level of risk, and there can be complications or side effects, even unforeseen ones, from the underlying condition or from the treatment itself.) == See also == == References == == Further reading == Gawande, Atul (2002). Complications: A Surgeon's Notes on an Imperfect Science. New York: Metropolitan Books. ISBN 978-0-8050-6319-6. Wachter, Robert; Shojania, Kaveh (2004). Internal Bleeding: The Truth Behind America's Terrifying Epidemic of Medical Mistakes. New York: Rugged Land. ISBN 978-1-59071-016-6. Banja, John (2005). Medical Errors and Medical Narcissism. Boston: Jones and Bartlett. ISBN 978-0-7637-8361-7. Porter, Michael E.; Olmsted Teisberg, Elizabeth (2006). Redefining Health Care: Creating Value-Based Competition on Results. Boston: Harvard Business School Press. ISBN 978-1-59139-778-6. Gibson, Rosemary; Prasad Singh, Janardan (2003). Wall of Silence: The Untold Story of the Medical Mistakes That Kill and Injure Millions of Americans. Washington D.C.: Regnery. ISBN 978-0-89526-112-0. Alldred D.P.; Standage C.; Zermansky A.G.; Jesson B.; Savage I.; Franklin B.D.; Barber N.; Raynor D.K. (2008). \"Development and validation of criteria to identify medication-monitoring errors in care home residents\". International Journal of Pharmacy Practice. 16 (5): 317–323. doi:10.1211/ijpp.16.5.0007. S2CID 71701489. Committee on Identifying and Preventing Medication Errors; Board on Health Care Services (2007). Preventing medication errors. National Academies Press. ISBN 978-0-309-10147-9. Tewari, A.; Palm, B.; Hines, T.; Royer, T.; Alexander, E. (2014). \"VEINROM: A possible solution for erroneous intravenous drug administration\". Journal of Anaesthesiology Clinical Pharmacology. 30 (2): 263–266. doi:10.4103/0970-9185.130055. PMC 4009652. PMID 24803770."
+  },
+  "chunks": [
+    {
+      "id": "medicalerror_4899b69d_c0000",
+      "article_id": "medicalerror_4899b69d",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 573,
+      "content": "A medical error is a preventable adverse effect of care (\"iatrogenesis\"), whether or not it is evident or harmful to the patient. This might include an inaccurate or incomplete diagnosis or treatment of a disease, injury, syndrome, behavior, infection, or other ailments. The incidence of medical errors varies depending on the setting. The World Health Organization has named adverse outcomes due to patient care that is unsafe as the 14th causes of disability and death in the world, with an estimated 1/300 people may be harmed by healthcare practices around the world.",
+      "char_count": 572,
+      "token_estimate": 143,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0001",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Definitions ==",
+      "heading_path": "== Definitions ==",
+      "start_char": 590,
+      "end_char": 1084,
+      "content": "== Definitions == A medical error occurs when a health-care provider chooses an inappropriate method of care or improperly executes an appropriate method of care. Medical errors are often described as human errors in healthcare. There are many types of medical error, from minor to major, and causality understanding and assessing if the likelihood that the specific event or factor was responsible for the negative outcome, is often poorly determined. There are many taxonomies for classifying medical errors.",
+      "char_count": 510,
+      "token_estimate": 127,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0002",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Definitions of diagnostic error ==",
+      "heading_path": "== = Definitions of diagnostic error ==",
+      "start_char": 1123,
+      "end_char": 1946,
+      "content": "== = Definitions of diagnostic error === Defining diagnostic error is important for measuring its frequency, identifying its causes, and implementing strategies to reduce harm and these steps that are essential for improving patient safety. The complexity of diagnosis as both a process and an outcome has led to multiple, overlapping definitions and there is no single definition of diagnostic error. One challenge is reflected in part the dual nature of the word diagnosis, which is both a noun (the name of the assigned disease; diagnosis is a label) and a verb (the act of arriving at a diagnosis; diagnosis is a process). At the present time, there are at least 4 definitions of diagnostic error in active use: Diagnostic error has been defined as a diagnosis that is wrong, egregiously delayed, or missed altogether.",
+      "char_count": 822,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0003",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Definitions of diagnostic error ==",
+      "heading_path": "== = Definitions of diagnostic error ==",
+      "start_char": 1946,
+      "end_char": 2563,
+      "content": "This is a \"label\" definition, and can only be applied in retrospect, using some gold standard (for example, autopsy findings or a definitive laboratory test) to confirm the correct diagnosis. Many diagnostic errors fit several of these criteria; the categories overlap. Diagnostic error has also be defined using process-related definitions: Schiff et al. defined diagnostic error as any breakdown in the diagnostic process, including both errors of omission and errors of commission. Similarly, Singh et al. defined diagnostic error as a \"missed opportunity\" in the diagnostic process, based on retrospective review.",
+      "char_count": 617,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0004",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Definitions of diagnostic error ==",
+      "heading_path": "== = Definitions of diagnostic error ==",
+      "start_char": 2564,
+      "end_char": 3005,
+      "content": "In its landmark report, Improving Diagnosis in Health Care, The National Academy of Medicine proposed a new, hybrid definition that includes both label- and process-related aspects: \"A diagnostic error is failure to establish an accurate and timely explanation of the patient's health problem(s) or to communicate that explanation to the patient.\" This is the only definition that specifically includes the patient in the definition wording.",
+      "char_count": 441,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0005",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Definition of prescription error ==",
+      "heading_path": "== = Definition of prescription error ==",
+      "start_char": 3007,
+      "end_char": 3432,
+      "content": "== = Definition of prescription error === A prescription or medication error, as defined by the National Coordinating Council for Medication Error Reporting and Prevention, is an event that is preventable that leads to or has led to unsuitable use of medication or has led to harm to the person during the period of time that the medicine is controlled by a clinician, the person, or the consumer. Some adverse drug events can also be related to medication errors.",
+      "char_count": 464,
+      "token_estimate": 116,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0006",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Impact ==",
+      "heading_path": "== Impact ==",
+      "start_char": 3444,
+      "end_char": 4149,
+      "content": "== Impact == One extrapolation suggests that 180,000 people die each year partly as a result of iatrogenic injury. The World Health Organization registered 14 million new cases and 8.2 million cancer-related deaths in 2012. It estimated that the number of cases could increase by 70% through 2032. As the number of cancer patients receiving treatment increases, hospitals around the world are seeking ways to improve patient safety, to emphasize traceability and raise efficiency in their cancer treatment processes. Children are often more vulnerable to a negative outcome when a medication error occurs as they have age-related differences in how their bodies absorb, metabolize, and excrete pharmaceutical agents.",
+      "char_count": 716,
+      "token_estimate": 179,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0007",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = UK ==",
+      "heading_path": "== = UK ==",
+      "start_char": 4159,
+      "end_char": 5027,
+      "content": "== = UK === In the UK, an estimated 850,000 medical errors occur each year, costing over £2 billion (estimated in the year 2000). The accuracy of this estimate is not clear. Criticism has included the statistical handling of measurement errors in the report, and significant subjectivity in determining which deaths were \"avoidable\" or due to medical error, and an erroneous assumption that 100% of patients would have survived if optimal care had been provided. A 2006 study found that medication errors are among the most common medical mistakes, harming at least 1.5 million people every year. According to the study, 400,000 preventable drug-related injuries occur each year in hospitals, 800,000 in long-term care settings, and roughly 530,000 among Medicare recipients in outpatient clinics. The report stated that these are likely to be conservative estimates.",
+      "char_count": 867,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0008",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = UK ==",
+      "heading_path": "== = UK ==",
+      "start_char": 5027,
+      "end_char": 5322,
+      "content": "In 2000 alone, the extra medical costs incurred by preventable drug-related injuries approximated $887 million—and the study looked only at injuries sustained by Medicare recipients, a subset of clinic visitors. None of these figures take into account lost wages and productivity or other costs.",
+      "char_count": 295,
+      "token_estimate": 73,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0009",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = US ==",
+      "heading_path": "== = US ==",
+      "start_char": 5323,
+      "end_char": 6297,
+      "content": "== = US === According to a 2002 Agency for Healthcare Research and Quality report, about 7,000 people were estimated to die each year from medication errors – about 16 percent more deaths than the number attributable to work-related injuries (6,000 deaths). One in five Americans (22%) report that they or a family member have experienced a medical error of some kind. A 2000 Institute of Medicine report estimated that medical errors result in between 44,000 and 98,000 preventable deaths and 1,000,000 excess injuries each year in U.S. hospitals. A 2001 study in the Journal of the American Medical Association of seven Department of Veterans Affairs medical centers estimated that for roughly every 10,000 patients admitted to the select hospitals, one patient died who would have lived for three months or more in good cognitive health had \"optimal\" care been provided. A 2001 study estimated that 1% of hospital admissions result in an adverse event due to negligence.",
+      "char_count": 973,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0010",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = US ==",
+      "heading_path": "== = US ==",
+      "start_char": 6297,
+      "end_char": 7255,
+      "content": "Identification or errors may be a challenge in these studies, and mistakes may be more common than reported as these studies identify only mistakes that led to measurable adverse events occurring soon after the errors. Independent review of doctors' treatment plans suggests that decision-making could be improved in 14% of admissions; many of the benefits would have delayed manifestations. Even this number may be an underestimate. One study suggests that adults in the United States receive only 55% of recommended care. At the same time, a second study found that 30% of care in the United States may be unnecessary. For example, if a doctor fails to order a mammogram that is past due, this mistake will not show up in the first type of study. In addition, because no adverse event occurred during the short follow-up of the study, the mistake also would not show up in the second type of study because only the principal treatment plans were critiqued.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0011",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = US ==",
+      "heading_path": "== = US ==",
+      "start_char": 7256,
+      "end_char": 7684,
+      "content": "However, the mistake would be recorded in the third type of study. If a doctor recommends an unnecessary treatment or test, it may not show in any of these types of studies. Cause of death on United States death certificates, statistically compiled by the Centers for Disease Control and Prevention (CDC), are coded in the International Classification of Disease (ICD), which does not include codes for human and system factors.",
+      "char_count": 428,
+      "token_estimate": 107,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0012",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Causes ==",
+      "heading_path": "== Causes ==",
+      "start_char": 7687,
+      "end_char": 8582,
+      "content": "== Causes == The research literature showed that medical errors are caused by errors of commission and errors of omission. Errors of omission are made when providers did not take action when they should have, while errors of commission occur when decisions and action are delayed. A special form of an error of commission occurs when health care professionals commit to unnecessary treatment in the case of Medical child abuse (Munchausen syndrome by proxy). Commission and omission errors have also been attributed with communication failures. A study with data from 67 826 patients found that poor communication was the only identifiable cause of 1 in 10 patient safety incidents, and that poor communication contributes to 25% of patient safety incidents. Medical errors can be associated with inexperienced physicians and nurses, new procedures, extremes of age, and complex or urgent care.",
+      "char_count": 894,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0013",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Causes ==",
+      "heading_path": "== Causes ==",
+      "start_char": 8582,
+      "end_char": 9070,
+      "content": "Poor communication (whether in one's own language or, as may be the case for medical tourists, another language), improper documentation, illegible handwriting, spelling errors, inadequate nurse-to-patient ratios, and similarly named medications are also known to contribute to the problem. Misdiagnosis may be associated with individual characteristics of the patient or due to the patient multimorbidity. Patient actions or inactions may also contribute significantly to medical errors.",
+      "char_count": 488,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0014",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Healthcare complexity ==",
+      "heading_path": "== = Healthcare complexity ==",
+      "start_char": 9088,
+      "end_char": 9940,
+      "content": "== = Healthcare complexity === Complicated technologies, powerful drugs, intensive care, rare and multiple diseases, and prolonged hospital stay can contribute to medical errors. In turn, medical errors from carelessness or improper use of medical devices often lead to severe injuries or death. Since 2015, 60 injuries and 23 deaths have been caused by misplaced feeding tubes while using the Cortrak2 EAS system. The FDA recalled Avanos Medical's Cortrak system in 2022 due to its severity and the high toll associated with the medical error. Complexity makes diagnosis especially challenging. There are less than 200 symptoms listed in Wikipedia, but there are probably more than 10,000 known diseases. The World Health Organization's system for the International Classification of Disease, 9th Edition from 1979 listed over 14,000 diagnosis codes.",
+      "char_count": 851,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0015",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Healthcare complexity ==",
+      "heading_path": "== = Healthcare complexity ==",
+      "start_char": 9940,
+      "end_char": 10761,
+      "content": "Textbooks of medicine often describe the most typical presentations of a disease, but in many conditions patients may have variable presentations instead of the classical signs and symptoms. To add complexity, the signs and symptoms of a given condition change over time; in the early stages the signs and symptoms may be absent or minimal, and then these evolve as the condition progresses. Diagnosis is often challenging in infants and children who can't clearly communicate their symptoms, and in the elderly, where signs and symptoms may be muted or absent. There are more than 7000 rare diseases alone, and in aggregate these are not uncommon: Roughly 1 in 17 patients will be diagnosed with a rare disease over their lifetime. Physicians may have only learned a handful of these during their education and training.",
+      "char_count": 821,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0016",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = System and process design ==",
+      "heading_path": "== = System and process design ==",
+      "start_char": 10766,
+      "end_char": 11709,
+      "content": "== = System and process design === In 2000, The Institute of Medicine released \"To Err is Human,\" which asserted that the problem in medical errors is not bad people in health care—it is that good people are working in bad systems that need to be made safer. Poor communication and unclear lines of authority of physicians, nurses, and other care providers are also contributing factors. Disconnected reporting systems within a hospital can result in fragmented systems in which numerous hand-offs of patients results in lack of coordination and errors. Other factors include the impression that action is being taken by other groups within the institution, reliance on automated systems to prevent error., and inadequate systems to share information about errors, which hampers analysis of contributory causes and improvement strategies. Cost-cutting measures by hospitals in response to reimbursement cutbacks can compromise patient safety.",
+      "char_count": 942,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0017",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = System and process design ==",
+      "heading_path": "== = System and process design ==",
+      "start_char": 11709,
+      "end_char": 12588,
+      "content": "In emergencies, patient care may be rendered in areas poorly suited for safe monitoring. The American Institute of Architects has identified concerns for the safe design and construction of health care facilities. Infrastructure failure is also a concern. According to the WHO, 50% of medical equipment in developing countries is only partly usable due to lack of skilled operators or parts. As a result, diagnostic procedures or treatments cannot be performed, leading to substandard treatment. The Joint Commission's Annual Report on Quality and Safety 2007 found that inadequate communication between healthcare providers, or between providers and the patient and family members, was the root cause of over half the serious adverse events in accredited hospitals. Other leading causes included inadequate assessment of the patient's condition, and poor leadership or training.",
+      "char_count": 879,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0018",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Competency, education, and training ==",
+      "heading_path": "== = Competency, education, and training ==",
+      "start_char": 12599,
+      "end_char": 12928,
+      "content": "== = Competency, education, and training === Variations in healthcare provider training & experience and failure to acknowledge the prevalence and seriousness of medical errors also increase the risk. The so-called July effect occurs when new residents arrive at teaching hospitals, causing an increase in medication errors according to a study of data from 1979 to 2006.",
+      "char_count": 371,
+      "token_estimate": 92,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0019",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Human factors and ergonomics ==",
+      "heading_path": "== = Human factors and ergonomics ==",
+      "start_char": 12964,
+      "end_char": 13884,
+      "content": "== = Human factors and ergonomics === Cognitive errors commonly encountered in medicine were initially identified by psychologists Amos Tversky and Daniel Kahneman in the early 1970s. Jerome Groopman, author of How Doctors Think, says these are \"cognitive pitfalls\", biases which cloud our logic. For example, a practitioner may overvalue the first data encountered, skewing their thinking. Another example may be where the practitioner recalls a recent or dramatic case that quickly comes to mind, coloring the practitioner's judgement. Another pitfall is where stereotypes may prejudice thinking. Pat Croskerry describes clinical reasoning as an interplay between intuitive, subconscious thought (System 1) and deliberate, conscious rational consideration (System 2). In this framework, many cognitive errors reflect over-reliance on System 1 processing, although cognitive errors may also sometimes involve System 2.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0020",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Human factors and ergonomics ==",
+      "heading_path": "== = Human factors and ergonomics ==",
+      "start_char": 13884,
+      "end_char": 14867,
+      "content": "Sleep deprivation has also been cited as a contributing factor in medical errors. One study found that being awake for over 24 hours caused medical interns to double or triple the number of preventable medical errors, including those that resulted in injury or death. The risk of car crash after these shifts increased by 168%, and the risk of near miss by 460%. Interns admitted falling asleep during lectures, during rounds, and even during surgeries. Night shifts are associated with worse surgeon performance during laparoscopic surgeries. Practitioner risk factors include fatigue, depression, and burnout. Factors related to the clinical setting include diverse patients, unfamiliar settings, time pressures, and increased patient-to-nurse staffing ratio increases. Drug names that look alike or sound alike are also a problem. Errors in interpreting medical images are often perceptual instead of \"fact-based\"; these errors are often caused by failures of attention or vision.",
+      "char_count": 983,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0021",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Human factors and ergonomics ==",
+      "heading_path": "== = Human factors and ergonomics ==",
+      "start_char": 14868,
+      "end_char": 15330,
+      "content": "For example, visual illusions can cause radiologists to misperceive images. A number of Information Technology (IT) systems have been developed to detect and prevent medication errors, the most common type of medical errors. These systems screen data such as ICD-9 codes, pharmacy and laboratory data. Rules are used to look for changes in medication orders, and abnormal laboratory results that may be indicative of medication errors and/or adverse drug events.",
+      "char_count": 462,
+      "token_estimate": 115,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0022",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 15309,
+      "end_char": 15815,
+      "content": "== Examples == Errors can include misdiagnosis or delayed diagnosis, administration of the wrong drug to the wrong patient or in the wrong way, giving multiple drugs that interact negatively, surgery on an incorrect site, failure to remove all surgical instruments, failure to take the correct blood type into account, or incorrect record-keeping. A 10th type of error is ones which are not watched for by researchers, such as RNs failing to program an IV pump to give a full dose of IV antibiotics or other medication.",
+      "char_count": 519,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0023",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Errors in diagnosis ==",
+      "heading_path": "== = Errors in diagnosis ==",
+      "start_char": 15842,
+      "end_char": 16756,
+      "content": "== = Errors in diagnosis === The projected cost of medical errors to the U.S. economy is approximately $20 billion, 87% of which are direct increases in medical costs of providing services to patient affected by medical errors. Medical errors can increase average hospital costs by as much as $4,769 per patient. One common type of medical error stems from x-rays and medical imaging: failing to see or notice signs of disease on an image. The retrospective \"miss\" rate among abnormal imaging studies is reported to be as high as 30% (the real-life error rate is much lower, around 4-5%, because not all images are abnormal), and up to 20% of missed findings result in long-term adverse effects. A large study reported several cases where patients were wrongly told that they were HIV-negative when the physicians erroneously ordered and interpreted HTLV (a closely related virus) testing rather than HIV testing.",
+      "char_count": 913,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0024",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Errors in diagnosis ==",
+      "heading_path": "== = Errors in diagnosis ==",
+      "start_char": 16756,
+      "end_char": 17313,
+      "content": "In the same study, >90% of HTLV tests were ordered erroneously. A 2008 literature review in The American Journal of Medicine estimated that between 10 and 15% of physician diagnoses are erroneous. Misdiagnosis of lower extremity cellulitis is estimated to occur in 30% of patients, leading to unnecessary hospitalizations in 85% and unnecessary antibiotic use in 92%. Collectively, these errors lead to between 50,000 and 130,000 unnecessary hospitalizations and between $195 and $515 million in avoidable health care spending annually in the United States.",
+      "char_count": 557,
+      "token_estimate": 139,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0025",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Misdiagnosis of psychological disorders ==",
+      "heading_path": "== = Misdiagnosis of psychological disorders ==",
+      "start_char": 17334,
+      "end_char": 18161,
+      "content": "== = Misdiagnosis of psychological disorders === Female sexual desire sometimes used to be diagnosed as female hysteria. Sensitivities to foods and food allergies risk being misdiagnosed as the eating disorder orthorexia. Studies have found that bipolar disorder has often been misdiagnosed as major depression. Its early diagnosis necessitates that clinicians pay attention to the features of the patient's depression and also look for present or prior hypomanic or manic symptomatology. The misdiagnosis of schizophrenia is also a common problem. There may be long delays of patients getting a correct diagnosis of this disorder. Delayed sleep phase disorder is often confused with: psychophysiological insomnia; depression; psychiatric disorders such as schizophrenia, ADHD or ADD; other sleep disorders; or school refusal.",
+      "char_count": 826,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0026",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Misdiagnosis of psychological disorders ==",
+      "heading_path": "== = Misdiagnosis of psychological disorders ==",
+      "start_char": 18161,
+      "end_char": 19147,
+      "content": "Practitioners of sleep medicine point out the dismally low rate of accurate diagnosis of the disorder, and have often asked for better physician education on sleep disorders. Cluster headaches are often misdiagnosed, mismanaged, or undiagnosed for many years; they may be confused with migraine, \"cluster-like\" headache (or mimics), CH subtypes, other TACs (trigeminal autonomic cephalalgias), or other types of primary or secondary headache syndrome. Cluster-like head pain may be diagnosed as secondary headache rather than cluster headache. Under-recognition of CH by health care professionals is reflected in consistent findings in Europe and the United States that the average time to diagnosis is around seven years. Asperger syndrome and autism tend to get undiagnosed or delayed recognition and delayed diagnosis or misdiagnosed. Delayed or mistaken diagnosis can be traumatic for individuals and families; for example, misdiagnosis can lead to medications that worsen behavior.",
+      "char_count": 986,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0027",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Misdiagnosis of psychological disorders ==",
+      "heading_path": "== = Misdiagnosis of psychological disorders ==",
+      "start_char": 19148,
+      "end_char": 19420,
+      "content": "Field trials of the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) included \"test-retest reliability\" which involved different clinicians doing independent evaluations of the same patient—a new approach to the study of diagnostic reliability.",
+      "char_count": 272,
+      "token_estimate": 68,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0028",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Outpatient vs. inpatient ==",
+      "heading_path": "== = Outpatient vs. inpatient ==",
+      "start_char": 19406,
+      "end_char": 19728,
+      "content": "== = Outpatient vs. inpatient === Misdiagnosis is the leading cause of medical error in outpatient facilities. Since the National Institute of Medicine's 1999 report, \"To Err is Human,\" found up to 98,000 hospital patients die from preventable medical errors in the U.S. each year, government and private sector efforts have focused on inpatient safety.",
+      "char_count": 353,
+      "token_estimate": 88,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0029",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Medical prescriptions ==",
+      "heading_path": "== = Medical prescriptions ==",
+      "start_char": 19757,
+      "end_char": 20669,
+      "content": "== = Medical prescriptions === While in 2000 the Committee on Quality of Health Care in America affirmed medical mistakes are an \"unavoidable outcome of learning to practice medicine\", at 2019 the commonly accepted link between prescribing skills and clinical clerkships was not yet demonstrated by the available data and in the U.S. legibility of handwritten prescriptions has been indirectly responsible for at least 7,000 deaths annually. Prescription errors concern ambiguous abbreviations, the right spelling of the full name of drugs: improper use of the nomenclature, of decimal points, unit or rate expressions; legibility and proper instructions; miscalculations of the posology (quantity, route and frequency of administration, duration of the treatment, dosage form and dosage strength); lack of information about patients (e.g. allergy, declining renal function) or reported in the medical document.",
+      "char_count": 911,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0030",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Medical prescriptions ==",
+      "heading_path": "== = Medical prescriptions ==",
+      "start_char": 20669,
+      "end_char": 21479,
+      "content": "There were an estimated 66 million clinically significant medication errors in the British NHS in 2018. The resulting adverse drug reactions are estimated to cause around 700 deaths a year in England and to contribute to around 22,000 deaths a year. The British researchers did not find any evidence that error rates were lower in other countries, and the global cost was estimated at $42 billion per year. Medication errors in hospital include omissions, delayed dosing and incorrect medication administrations. Medication errors are not always readily identified, but can be reported using case note reviews or incident reporting systems. There are pharmacist-led interventions that can reduce the incident of medication error. Electronic prescribing has been shown to reduce prescribing errors by up to 30%.",
+      "char_count": 810,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0031",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Recognizing that mistakes are not isolated events ==",
+      "heading_path": "== = Recognizing that mistakes are not isolated events ==",
+      "start_char": 21629,
+      "end_char": 22512,
+      "content": "== = Recognizing that mistakes are not isolated events === Some physicians recognize that adverse outcomes from errors usually do not happen because of an isolated error and actually reflect system problems. This concept is often referred to as the Swiss Cheese Model. This is the concept that there are layers of protection for clinicians and patients to prevent mistakes from occurring. Therefore, even if a doctor or nurse makes a small error (e.g. incorrect dose of drug written on a drug chart by doctor), this is picked up before it actually affects patient care (e.g. pharmacist checks the drug chart and rectifies the error). Such mechanisms include: Practical alterations (e.g.-medications that cannot be given through IV, are fitted with tubing which means they cannot be linked to an IV even if a clinician makes a mistake and tries to), systematic safety processes (e.g.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0032",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Recognizing that mistakes are not isolated events ==",
+      "heading_path": "== = Recognizing that mistakes are not isolated events ==",
+      "start_char": 22512,
+      "end_char": 22953,
+      "content": "all patients must have a Waterlow score assessment and falls assessment completed on admission), and training programmes/continuing professional development courses are measures that may be put in place. There may be several breakdowns in processes to allow one adverse outcome. In addition, errors are more common when other demands compete for a physician's attention. However, placing too much blame on the system may not be constructive.",
+      "char_count": 441,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0033",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Placing the practice of medicine in perspective ==",
+      "heading_path": "== = Placing the practice of medicine in perspective ==",
+      "start_char": 22952,
+      "end_char": 23726,
+      "content": "== = Placing the practice of medicine in perspective === Essayists imply that the potential to make mistakes is part of what makes being a physician rewarding and without this potential the rewards of medical practice would be diminished. Laurence states that \"Everybody dies, you and all of your patients. All relationships end. Would you want it any other way? [...] Don't take it personally\". Seder states \"[...] if I left medicine, I would mourn its loss as I've mourned the passage of my poetry. On a daily basis, it is both a privilege and a joy to have the trust of patients and their families and the camaraderie of peers. There is no challenge to make your blood race like that of a difficult case, no mind game as rigorous as the challenging differential diagnosis, and though the stakes are high, so are the rewards.\"",
+      "char_count": 828,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0034",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Disclosing mistakes ==",
+      "heading_path": "== = Disclosing mistakes ==",
+      "start_char": 23753,
+      "end_char": 23971,
+      "content": "== = Disclosing mistakes === Forgiveness, which is part of many cultural traditions, may be important in coping with medical mistakes. Among other healing processes, it can be accomplished through the use of communicative disclosure guidelines.",
+      "char_count": 244,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0035",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Legal procedure ==",
+      "heading_path": "== = Legal procedure ==",
+      "start_char": 23994,
+      "end_char": 24235,
+      "content": "== = Legal procedure === Standards and regulations for medical malpractice vary by country and jurisdiction within countries. Medical professionals may obtain professional liability insurances to offset the risk and costs of lawsuits based on medical malpractice.",
+      "char_count": 263,
+      "token_estimate": 65,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0036",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Prevention ==",
+      "heading_path": "== Prevention ==",
+      "start_char": 24251,
+      "end_char": 25045,
+      "content": "== Prevention == Medical care is frequently compared adversely to aviation; while many of the factors that lead to errors in both fields are similar, aviation's error management protocols are regarded as much more effective. Safety measures include informed consent, the availability of a second practitioner's opinion, voluntary reporting of errors, root cause analysis, reminders to improve patient medication adherence, hospital accreditation, and systems to ensure review by experienced or specialist practitioners. A template has been developed for the design (both structure and operation) of hospital medication safety programmes, particularly for acute tertiary settings, which emphasizes safety culture, infrastructure, data (error detection and analysis), communication and training.",
+      "char_count": 793,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0037",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Prevention ==",
+      "heading_path": "== Prevention ==",
+      "start_char": 25045,
+      "end_char": 25871,
+      "content": "Particularly to prevent the medication errors in the perspective of the intrathecal administration of local anaesthetics, there is a proposal to change the presentation and packaging of the appliances and agents used for this purpose. One spinal needle with a syringe prefilled with the local anaesthetic agents may be marketed in a single blister pack, which will be peeled open and presented before the anaesthesiologist conducting the procedure. Physician well-being has also been recommended as an indicator of healthcare quality given its association with patient safety outcomes. A meta-analysis involving 21517 participants found that physicians with depressive symptoms had a 95% higher risk of reporting medical errors and that the association between physician depressive symptoms and medical errors is bidirectional",
+      "char_count": 826,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0038",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Reporting requirements ==",
+      "heading_path": "== = Reporting requirements ==",
+      "start_char": 25886,
+      "end_char": 26572,
+      "content": "== = Reporting requirements === In the United States, adverse medical event reporting systems were mandated in just over half (27) of the states as of 2014, a figure unchanged since 2007. In U.S. hospitals error reporting is a condition of payment by Medicare. An investigation by the Office of Inspector General, Department of Health and Human Services released January 6, 2012 found that most errors are not reported and even in the case of errors that are reported and investigated changes are seldom made which would prevent them in the future. The investigation revealed that there was often lack of knowledge regarding which events were reportable and recommended that lists of reportable events be developed.",
+      "char_count": 715,
+      "token_estimate": 178,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0039",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Cause-specific preventive measures ==",
+      "heading_path": "== = Cause-specific preventive measures ==",
+      "start_char": 26614,
+      "end_char": 27541,
+      "content": "== = Cause-specific preventive measures === Traditionally, errors are attributed to mistakes made by individuals, who then may be penalized. A common approach to respond to and prevent specific errors is requiring additional checks at particular points in the system, whose findings and detail of execution must be recorded. As an example, an error of free flow IV administration of heparin is approached by teaching staff how to use the IV systems and to use special care in setting the IV pump. While overall errors become less likely, the checks add to workload and may in themselves be a cause of additional errors. In some hospitals, a regular morbidity and mortality conference meeting is scheduled to discuss complications or deaths and learn from or improve the overall processes. A newer model for improvement in medical care takes its origin from the work of W. Edwards Deming in a model of Total Quality Management.",
+      "char_count": 926,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0040",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Cause-specific preventive measures ==",
+      "heading_path": "== = Cause-specific preventive measures ==",
+      "start_char": 27541,
+      "end_char": 28039,
+      "content": "In this model, there is an attempt to identify the underlying system defect that allowed the error to occur. As an example, in such a system the error of free flow IV administration of heparin is dealt with by not using IV heparin and substituting subcutaneous administration of heparin, obviating the entire problem. However, such an approach presupposes available research showing that subcutaneous heparin is as effective as IV. Thus, most systems use a combination of approaches to the problem.",
+      "char_count": 498,
+      "token_estimate": 124,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0041",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Anaesthesiology ==",
+      "heading_path": "== = Anaesthesiology ==",
+      "start_char": 28021,
+      "end_char": 28340,
+      "content": "== = Anaesthesiology === The field of medicine that has taken the lead in systems approaches to safety is anaesthesiology. Steps such as standardization of IV medications to 1 ml doses, national and international color-coding standards, and development of improved airway support devices has the field a model of systems improvement in care.",
+      "char_count": 341,
+      "token_estimate": 85,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0042",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Medications ==",
+      "heading_path": "== = Medications ==",
+      "start_char": 28359,
+      "end_char": 29310,
+      "content": "== = Medications === Reducing errors in prescribing, dispensing, compounding/formulating, labelling, and handling medications is a priority and has been the subject of systematic reviews and studies. Examples of areas to reduce medication errors and improve safety include: Training professionals or using databases to compare new and previous prescribed medications to prevent mistakes, also known as \"medication reconciliation\", prescribing through an electronic medical record system and/or using decision support systems that has automatic checks in place, with computerized alerts or other novel technologies, the use of machine-readable barcodes, healthcare professional and patient training or supplementary educational programs, adding in an extra step for double checking prescriptions (both at the level of the healthcare professional and at the administrator level), using standardized protocols in the workplace that include a check-list,",
+      "char_count": 950,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0043",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Medications ==",
+      "heading_path": "== = Medications ==",
+      "start_char": 29310,
+      "end_char": 30020,
+      "content": "physical markings or writing on syringes to indicate correct doses, programmes that include the person being able to administer the medications themselves, ensuring that the workplace or environment is well-lit, monitoring and adjusting healthcare professional working hours, and the use of an interdisciplinary team. There is weak evidence indicating that a number of these suggested interventions may be helpful in reducing errors or improving patient safety, however, in general, evidence supporting the best or most effective intervention for reducing errors not strong. Evidence supporting improvements aimed at reducing medical errors in medications for pediatric hospitalized patients is also very weak.",
+      "char_count": 710,
+      "token_estimate": 177,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0044",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== = Historically ==",
+      "heading_path": "== = Historically ==",
+      "start_char": 30022,
+      "end_char": 30905,
+      "content": "== = Historically === As far back as the 1930s, pharmacists worked with physicians to select, from many options, the safest and most effective drugs available for use in hospitals. The process is known as the Formulary System and the list of drugs is known as the Formulary. In the 1960s, hospitals implemented unit dose packaging and unit dose drug distribution systems to reduce the risk of wrong drug and wrong dose errors in hospitalized patients; centralized sterile admixture services were shown to decrease the risks of contaminated and infected intravenous medications; and pharmacists provided drug information and clinical decision support directly to physicians to improve the safe and effective use of medications. Pharmacists are recognized experts in medication safety and have made many contributions that reduce error and improve patient care over the last 50 years.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0045",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Misconceptions ==",
+      "heading_path": "== Misconceptions ==",
+      "start_char": 31109,
+      "end_char": 31872,
+      "content": "== Misconceptions == Some common misconceptions about medical error include: Medical error is the \"third leading cause of death\" in the United States. This canard stems from an erroneous 2016 study which, according to David Gorski, \"has taken on a life of its own\" and fuelled \"a myth promulgated by both quacks and academics\". \"Bad apples\" or incompetent health care providers are a common cause. (Although human error is commonly an initiating event, the faulty care delivery process invariably permits or compounds the harm and so is the focus of improvement.) High-risk procedures or medical specialties are responsible for most avoidable adverse events. (Although some mistakes, such as in surgery, are harder to conceal, errors occur in all levels of care.",
+      "char_count": 762,
+      "token_estimate": 190,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalerror_4899b69d_c0046",
+      "article_id": "medicalerror_4899b69d",
+      "section": "== Misconceptions ==",
+      "heading_path": "== Misconceptions ==",
+      "start_char": 31872,
+      "end_char": 32514,
+      "content": "Even though complex procedures entail more risk, adverse outcomes are not usually due to error, but to the severity of the condition being treated.) However, United States Pharmacopeia has reported that medication errors during the course of a surgical procedure are three times more likely to cause harm to a patient than those occurring in other types of hospital care. If a patient experiences an adverse event during the process of care, an error has occurred. (Most medical care entails some level of risk, and there can be complications or side effects, even unforeseen ones, from the underlying condition or from the treatment itself.)",
+      "char_count": 642,
+      "token_estimate": 160,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is the average time to diagnosis for cluster headaches in Europe and the United States?",
+        "answer": "The average time to diagnosis for cluster headaches (CH) in Europe and the United States is around seven years, a fact that reflects under-recognition of the condition by health care professionals.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0026"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0026"
+        ]
+      },
+      {
+        "question": "According to one study on sleep deprivation in medical interns, by what percentage did the risk of a car crash increase after being awake for over 24 hours?",
+        "answer": "The risk of a car crash for medical interns after being awake for over 24 hours increased by 168%.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0020"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0020"
+        ]
+      },
+      {
+        "question": "According to the 2000 Institute of Medicine report, what was the estimated range of preventable deaths occurring in U.S. hospitals each year due to medical errors?",
+        "answer": "A 2000 Institute of Medicine report estimated that medical errors in U.S. hospitals result in between 44,000 and 98,000 preventable deaths each year.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0009"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0009"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0000",
+          "medicalerror_4899b69d_c0001",
+          "medicalerror_4899b69d_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0000",
+          "medicalerror_4899b69d_c0001",
+          "medicalerror_4899b69d_c0002"
+        ]
+      },
+      {
+        "question": "How does the National Academy of Medicine's definition of diagnostic error build upon or differ from previous 'label' and 'process-related' definitions?",
+        "answer": "The National Academy of Medicine's definition is a hybrid that combines aspects of both earlier types. While 'label' definitions are retrospective and 'process-related' definitions focus on breakdowns in the diagnostic process (like those from Schiff et al. or Singh et al.), the National Academy of Medicine's definition is the \"failure to establish an accurate and timely explanation of the patient's health problem(s) or to communicate that explanation to the patient.\" A key difference is that it is the only definition to explicitly include communicating the diagnosis to the patient.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0003",
+          "medicalerror_4899b69d_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0004",
+          "medicalerror_4899b69d_c0003"
+        ]
+      },
+      {
+        "question": "What information is provided about == = Definition of prescription error ==?",
+        "answer": "The text provides information about == = Definition of prescription error == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0005",
+          "medicalerror_4899b69d_c0006",
+          "medicalerror_4899b69d_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0005",
+          "medicalerror_4899b69d_c0007",
+          "medicalerror_4899b69d_c0006"
+        ]
+      },
+      {
+        "question": "How does the National Academy of Medicine's definition of diagnostic error differ from purely \"label\" or \"process-related\" definitions?",
+        "answer": "The National Academy of Medicine's definition is a hybrid that incorporates elements from both label- and process-related definitions. Unlike a pure \"label\" definition, which focuses on the outcome (a wrong, delayed, or missed diagnosis), or a pure \"process-related\" definition, which focuses on breakdowns in the diagnostic process, the NAM definition includes both. It addresses the outcome by requiring an \"accurate...explanation\" (a label aspect) and the process by requiring a \"timely explanation\" and communication to the patient. It is also the only definition that explicitly includes the patient.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0002",
+          "medicalerror_4899b69d_c0003",
+          "medicalerror_4899b69d_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0004",
+          "medicalerror_4899b69d_c0003",
+          "medicalerror_4899b69d_c0002"
+        ]
+      },
+      {
+        "question": "What was the estimated cost of preventable drug-related injuries for Medicare recipients in 2000, and how did it compare to the total estimated cost of all medical errors in the UK for that same year?",
+        "answer": "In 2000, the extra medical costs incurred by preventable drug-related injuries for Medicare recipients were approximately $887 million. This figure was a component of the total estimated cost of all medical errors in the UK, which was over £2 billion for the same year.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0007",
+          "medicalerror_4899b69d_c0008"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0008",
+          "medicalerror_4899b69d_c0007"
+        ]
+      },
+      {
+        "question": "Why might the official statistics on deaths from medical errors, such as the 44,000 to 98,000 preventable deaths estimated by the Institute of Medicine, be an underestimate?",
+        "answer": "The statistics on deaths from medical errors may be an underestimate due to several challenges in identifying and reporting them. Studies often only identify mistakes that lead to immediate, measurable adverse events, potentially missing errors whose negative effects have delayed manifestations. Furthermore, official cause of death statistics compiled by the Centers for Disease Control and Prevention (CDC) are coded using the International Classification of Disease (ICD), which lacks specific codes for human and system factors, the underlying causes of medical errors.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0009",
+          "medicalerror_4899b69d_c0010",
+          "medicalerror_4899b69d_c0011"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0009",
+          "medicalerror_4899b69d_c0010",
+          "medicalerror_4899b69d_c0011"
+        ]
+      },
+      {
+        "question": "What role does poor communication play as a cause of medical errors, and what are some specific examples of it?",
+        "answer": "Poor communication is a significant cause of medical errors, identified as the sole cause in 1 of 10 patient safety incidents and a contributing factor in 25% of them. It can lead to both errors of commission and omission. Specific examples of poor communication include language barriers, improper documentation, illegible handwriting, and spelling errors.",
+        "related_chunk_ids": [
+          "medicalerror_4899b69d_c0012",
+          "medicalerror_4899b69d_c0013"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "medicalerror_4899b69d_c0012",
+          "medicalerror_4899b69d_c0013"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T08:34:15.708Z",
+    "content_format": "markdown",
+    "total_chunks": 47,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

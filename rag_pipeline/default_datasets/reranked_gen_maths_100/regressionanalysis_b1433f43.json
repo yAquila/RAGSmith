@@ -1,0 +1,601 @@
+{
+  "article": {
+    "id": "regressionanalysis_b1433f43",
+    "title": "Regression analysis",
+    "url": "https://en.wikipedia.org/wiki/Regression_analysis",
+    "lang": "en",
+    "created_at": "2025-07-31T06:35:29.966536",
+    "content": "---\nid: regressionanalysis_b1433f43\nurl: https://en.wikipedia.org/wiki/Regression_analysis\ntitle: Regression analysis\nlang: en\ncreated_at: '2025-07-31T06:27:10.596001'\nchecksum: 3820f68a72c52f48dabea67a8535cc3205cfb46204c977a646bce4c7d7e824d8\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4646\n  char_count: 29124\n  num_chunks: 34\n  original_chunks: 43\n  filtered_out: 9\n  num_sections: 0\n---\nIn statistical modeling, regression analysis is a set of statistical processes for estimating the relationships between a dependent variable (often called the outcome or response variable, or a label in machine learning parlance) and one or more error-free independent variables (often called regressors, predictors, covariates, explanatory variables or features). The most common form of regression analysis is linear regression, in which one finds the line (or a more complex linear combination) that most closely fits the data according to a specific mathematical criterion. For example, the method of ordinary least squares computes the unique line (or hyperplane) that minimizes the sum of squared differences between the true data and that line (or hyperplane). For specific mathematical reasons (see linear regression), this allows the researcher to estimate the conditional expectation (or population average value) of the dependent variable when the independent variables take on a given set of values. Less common forms of regression use slightly different procedures to estimate alternative location parameters (e.g., quantile regression or Necessary Condition Analysis) or estimate the conditional expectation across a broader collection of non-linear models (e.g., nonparametric regression). Regression analysis is primarily used for two conceptually distinct purposes. First, regression analysis is widely used for prediction and forecasting, where its use has substantial overlap with the field of machine learning. Second, in some situations regression analysis can be used to infer causal relationships between the independent and dependent variables. Importantly, regressions by themselves only reveal relationships between a dependent variable and a collection of independent variables in a fixed dataset. To use regressions for prediction or to infer causal relationships, respectively, a researcher must carefully justify why existing relationships have predictive power for a new context or why a relationship between two variables has a causal interpretation. The latter is especially important when researchers hope to estimate causal relationships using observational data. == History == The earliest regression form was seen in Isaac Newton's work in 1700 while studying equinoxes, being credited with introducing \"an embryonic linear aggression analysis\" as \"Not only did he perform the averaging of a set of data, 50 years before Tobias Mayer, but summing the residuals to zero he forced the regression line to pass through the average point. He also distinguished between two inhomogeneous sets of data and might have thought of an optimal solution in terms of bias, though not in terms of effectiveness.\" He previously used an averaging method in his 1671 work on Newton's rings, which was unprecedented at the time. The method of least squares was published by Legendre in 1805, and by Gauss in 1809. Legendre and Gauss both applied the method to the problem of determining, from astronomical observations, the orbits of bodies about the Sun (mostly comets, but also later the then newly discovered minor planets). Gauss published a further development of the theory of least squares in 1821, including a version of the Gauss–Markov theorem. The term \"regression\" was coined by Francis Galton in the 19th century to describe a biological phenomenon. The phenomenon was that the heights of descendants of tall ancestors tend to regress down towards a normal average (a phenomenon also known as regression toward the mean). For Galton, regression had only this biological meaning, but his work was later extended by Udny Yule and Karl Pearson to a more general statistical context. In the work of Yule and Pearson, the joint distribution of the response and explanatory variables is assumed to be Gaussian. This assumption was weakened by R.A. Fisher in his works of 1922 and 1925. Fisher assumed that the conditional distribution of the response variable is Gaussian, but the joint distribution need not be. In this respect, Fisher's assumption is closer to Gauss's formulation of 1821. In the 1950s and 1960s, economists used electromechanical desk calculators to calculate regressions. Before 1970, it sometimes took up to 24 hours to receive the result from one regression. Regression methods continue to be an area of active research. In recent decades, new methods have been developed for robust regression, regression involving correlated responses such as time series and growth curves, regression in which the predictor (independent variable) or response variables are curves, images, graphs, or other complex data objects, regression methods accommodating various types of missing data, nonparametric regression, Bayesian methods for regression, regression in which the predictor variables are measured with error, regression with more predictor variables than observations, and causal inference with regression. Modern regression analysis is typically done with statistical and spreadsheet software packages on computers as well as on handheld scientific and graphing calculators. == Regression model == In practice, researchers first select a model they would like to estimate and then use their chosen method (e.g., ordinary least squares) to estimate the parameters of that model. Regression models involve the following components: The unknown parameters, often denoted as a scalar or vector β {\\displaystyle \\beta } . The independent variables, which are observed in data and are often denoted as a vector X i {\\displaystyle X_{i}} (where i {\\displaystyle i} denotes a row of data). The dependent variable, which are observed in data and often denoted using the scalar Y i {\\displaystyle Y_{i}} . The error terms, which are not directly observed in data and are often denoted using the scalar e i {\\displaystyle e_{i}} . In various fields of application, different terminologies are used in place of dependent and independent variables. Most regression models propose that Y i {\\displaystyle Y_{i}} is a function (regression function) of X i {\\displaystyle X_{i}} and β {\\displaystyle \\beta } , with e i {\\displaystyle e_{i}} representing an additive error term that may stand in for un-modeled determinants of Y i {\\displaystyle Y_{i}} or random statistical noise: Y i = f ( X i , β ) + e i {\\displaystyle Y_{i}=f(X_{i},\\beta )+e_{i}} Note that the independent variables X i {\\displaystyle X_{i}} are assumed to be free of error. This important assumption is often overlooked, although errors-in-variables models can be used when the independent variables are assumed to contain errors. The researchers' goal is to estimate the function f ( X i , β ) {\\displaystyle f(X_{i},\\beta )} that most closely fits the data. To carry out regression analysis, the form of the function f {\\displaystyle f} must be specified. Sometimes the form of this function is based on knowledge about the relationship between Y i {\\displaystyle Y_{i}} and X i {\\displaystyle X_{i}} that does not rely on the data. If no such knowledge is available, a flexible or convenient form for f {\\displaystyle f} is chosen. For example, a simple univariate regression may propose f ( X i , β ) = β 0 + β 1 X i {\\displaystyle f(X_{i},\\beta )=\\beta _{0}+\\beta _{1}X_{i}} , suggesting that the researcher believes Y i = β 0 + β 1 X i + e i {\\displaystyle Y_{i}=\\beta _{0}+\\beta _{1}X_{i}+e_{i}} to be a reasonable approximation for the statistical process generating the data. Once researchers determine their preferred statistical model, different forms of regression analysis provide tools to estimate the parameters β {\\displaystyle \\beta } . For example, least squares (including its most common variant, ordinary least squares) finds the value of β {\\displaystyle \\beta } that minimizes the sum of squared errors ∑ i ( Y i − f ( X i , β ) ) 2 {\\displaystyle \\sum _{i}(Y_{i}-f(X_{i},\\beta ))^{2}} . A given regression method will ultimately provide an estimate of β {\\displaystyle \\beta } , usually denoted β ^ {\\displaystyle {\\hat {\\beta }}} to distinguish the estimate from the true (unknown) parameter value that generated the data. Using this estimate, the researcher can then use the fitted value Y i ^ = f ( X i , β ^ ) {\\displaystyle {\\hat {Y_{i}}}=f(X_{i},{\\hat {\\beta }})} for prediction or to assess the accuracy of the model in explaining the data. Whether the researcher is intrinsically interested in the estimate β ^ {\\displaystyle {\\hat {\\beta }}} or the predicted value Y i ^ {\\displaystyle {\\hat {Y_{i}}}} will depend on context and their goals. As described in ordinary least squares, least squares is widely used because the estimated function f ( X i , β ^ ) {\\displaystyle f(X_{i},{\\hat {\\beta }})} approximates the conditional expectation E ( Y i | X i ) {\\displaystyle E(Y_{i}|X_{i})} . However, alternative variants (e.g., least absolute deviations or quantile regression) are useful when researchers want to model other functions f ( X i , β ) {\\displaystyle f(X_{i},\\beta )} . It is important to note that there must be sufficient data to estimate a regression model. For example, suppose that a researcher has access to N {\\displaystyle N} rows of data with one dependent and two independent variables: ( Y i , X 1 i , X 2 i ) {\\displaystyle (Y_{i},X_{1i},X_{2i})} . Suppose further that the researcher wants to estimate a bivariate linear model via least squares: Y i = β 0 + β 1 X 1 i + β 2 X 2 i + e i {\\displaystyle Y_{i}=\\beta _{0}+\\beta _{1}X_{1i}+\\beta _{2}X_{2i}+e_{i}} . If the researcher only has access to N = 2 {\\displaystyle N=2} data points, then they could find infinitely many combinations ( β ^ 0 , β ^ 1 , β ^ 2 ) {\\displaystyle ({\\hat {\\beta }}_{0},{\\hat {\\beta }}_{1},{\\hat {\\beta }}_{2})} that explain the data equally well: any combination can be chosen that satisfies Y ^ i = β ^ 0 + β ^ 1 X 1 i + β ^ 2 X 2 i {\\displaystyle {\\hat {Y}}_{i}={\\hat {\\beta }}_{0}+{\\hat {\\beta }}_{1}X_{1i}+{\\hat {\\beta }}_{2}X_{2i}} , all of which lead to ∑ i e ^ i 2 = ∑ i ( Y ^ i − ( β ^ 0 + β ^ 1 X 1 i + β ^ 2 X 2 i ) ) 2 = 0 {\\displaystyle \\sum _{i}{\\hat {e}}_{i}^{2}=\\sum _{i}({\\hat {Y}}_{i}-({\\hat {\\beta }}_{0}+{\\hat {\\beta }}_{1}X_{1i}+{\\hat {\\beta }}_{2}X_{2i}))^{2}=0} and are therefore valid solutions that minimize the sum of squared residuals. To understand why there are infinitely many options, note that the system of N = 2 {\\displaystyle N=2} equations is to be solved for 3 unknowns, which makes the system underdetermined. Alternatively, one can visualize infinitely many 3-dimensional planes that go through N = 2 {\\displaystyle N=2} fixed points. More generally, to estimate a least squares model with k {\\displaystyle k} distinct parameters, one must have N ≥ k {\\displaystyle N\\geq k} distinct data points. If N > k {\\displaystyle N>k} , then there does not generally exist a set of parameters that will perfectly fit the data. The quantity N − k {\\displaystyle N-k} appears often in regression analysis, and is referred to as the degrees of freedom in the model. Moreover, to estimate a least squares model, the independent variables ( X 1 i , X 2 i , . . . , X k i ) {\\displaystyle (X_{1i},X_{2i},...,X_{ki})} must be linearly independent: one must not be able to reconstruct any of the independent variables by adding and multiplying the remaining independent variables. As discussed in ordinary least squares, this condition ensures that X T X {\\displaystyle X^{T}X} is an invertible matrix and therefore that a unique solution β ^ {\\displaystyle {\\hat {\\beta }}} exists. == Underlying assumptions == By itself, a regression is simply a calculation using the data. In order to interpret the output of regression as a meaningful statistical quantity that measures real-world relationships, researchers often rely on a number of classical assumptions. These assumptions often include: The sample is representative of the population at large. The independent variables are measured without error. Deviations from the model have an expected value of zero, conditional on covariates: E ( e i | X i ) = 0 {\\displaystyle E(e_{i}|X_{i})=0} The variance of the residuals e i {\\displaystyle e_{i}} is constant across observations (homoscedasticity). The residuals e i {\\displaystyle e_{i}} are uncorrelated with one another. Mathematically, the variance–covariance matrix of the errors is diagonal. A handful of conditions are sufficient for the least-squares estimator to possess desirable properties: in particular, the Gauss–Markov assumptions imply that the parameter estimates will be unbiased, consistent, and efficient in the class of linear unbiased estimators. Practitioners have developed a variety of methods to maintain some or all of these desirable properties in real-world settings, because these classical assumptions are unlikely to hold exactly. For example, modeling errors-in-variables can lead to reasonable estimates independent variables are measured with errors. Heteroscedasticity-consistent standard errors allow the variance of e i {\\displaystyle e_{i}} to change across values of X i {\\displaystyle X_{i}} . Correlated errors that exist within subsets of the data or follow specific patterns can be handled using clustered standard errors, geographic weighted regression, or Newey–West standard errors, among other techniques. When rows of data correspond to locations in space, the choice of how to model e i {\\displaystyle e_{i}} within geographic units can have important consequences. The subfield of econometrics is largely focused on developing techniques that allow researchers to make reasonable real-world conclusions in real-world settings, where classical assumptions do not hold exactly. == Linear regression == In linear regression, the model specification is that the dependent variable, y i {\\displaystyle y_{i}} is a linear combination of the parameters (but need not be linear in the independent variables). For example, in simple linear regression for modeling n {\\displaystyle n} data points there is one independent variable: x i {\\displaystyle x_{i}} , and two parameters, β 0 {\\displaystyle \\beta _{0}} and β 1 {\\displaystyle \\beta _{1}} : straight line: y i = β 0 + β 1 x i + ε i , i = 1 , … , n . {\\displaystyle y_{i}=\\beta _{0}+\\beta _{1}x_{i}+\\varepsilon _{i},\\quad i=1,\\dots ,n.\\!} In multiple linear regression, there are several independent variables or functions of independent variables. Adding a term in x i 2 {\\displaystyle x_{i}^{2}} to the preceding regression gives: parabola: y i = β 0 + β 1 x i + β 2 x i 2 + ε i , i = 1 , … , n . {\\displaystyle y_{i}=\\beta _{0}+\\beta _{1}x_{i}+\\beta _{2}x_{i}^{2}+\\varepsilon _{i},\\ i=1,\\dots ,n.\\!} This is still linear regression; although the expression on the right hand side is quadratic in the independent variable x i {\\displaystyle x_{i}} , it is linear in the parameters β 0 {\\displaystyle \\beta _{0}} , β 1 {\\displaystyle \\beta _{1}} and β 2 . {\\displaystyle \\beta _{2}.} In both cases, ε i {\\displaystyle \\varepsilon _{i}} is an error term and the subscript i {\\displaystyle i} indexes a particular observation. Returning our attention to the straight line case: Given a random sample from the population, we estimate the population parameters and obtain the sample linear regression model: y ^ i = β ^ 0 + β ^ 1 x i . {\\displaystyle {\\widehat {y}}_{i}={\\widehat {\\beta }}_{0}+{\\widehat {\\beta }}_{1}x_{i}.} The residual, e i = y i − y ^ i {\\displaystyle e_{i}=y_{i}-{\\widehat {y}}_{i}} , is the difference between the value of the dependent variable predicted by the model, y ^ i {\\displaystyle {\\widehat {y}}_{i}} , and the true value of the dependent variable, y i {\\displaystyle y_{i}} . One method of estimation is ordinary least squares. This method obtains parameter estimates that minimize the sum of squared residuals, SSR: S S R = ∑ i = 1 n e i 2 {\\displaystyle SSR=\\sum _{i=1}^{n}e_{i}^{2}} Minimization of this function results in a set of normal equations, a set of simultaneous linear equations in the parameters, which are solved to yield the parameter estimators, β ^ 0 , β ^ 1 {\\displaystyle {\\widehat {\\beta }}_{0},{\\widehat {\\beta }}_{1}} . In the case of simple regression, the formulas for the least squares estimates are β ^ 1 = ∑ ( x i − x ¯ ) ( y i − y ¯ ) ∑ ( x i − x ¯ ) 2 {\\displaystyle {\\widehat {\\beta }}_{1}={\\frac {\\sum (x_{i}-{\\bar {x}})(y_{i}-{\\bar {y}})}{\\sum (x_{i}-{\\bar {x}})^{2}}}} β ^ 0 = y ¯ − β ^ 1 x ¯ {\\displaystyle {\\widehat {\\beta }}_{0}={\\bar {y}}-{\\widehat {\\beta }}_{1}{\\bar {x}}} where x ¯ {\\displaystyle {\\bar {x}}} is the mean (average) of the x {\\displaystyle x} values and y ¯ {\\displaystyle {\\bar {y}}} is the mean of the y {\\displaystyle y} values. Under the assumption that the population error term has a constant variance, the estimate of that variance is given by: σ ^ ε 2 = S S R n − 2 {\\displaystyle {\\hat {\\sigma }}_{\\varepsilon }^{2}={\\frac {SSR}{n-2}}} This is called the mean square error (MSE) of the regression. The denominator is the sample size reduced by the number of model parameters estimated from the same data, ( n − p ) {\\displaystyle (n-p)} for p {\\displaystyle p} regressors or ( n − p − 1 ) {\\displaystyle (n-p-1)} if an intercept is used. In this case, p = 1 {\\displaystyle p=1} so the denominator is n − 2 {\\displaystyle n-2} . The standard errors of the parameter estimates are given by σ ^ β 1 = σ ^ ε 1 ∑ ( x i − x ¯ ) 2 {\\displaystyle {\\hat {\\sigma }}_{\\beta _{1}}={\\hat {\\sigma }}_{\\varepsilon }{\\sqrt {\\frac {1}{\\sum (x_{i}-{\\bar {x}})^{2}}}}} σ ^ β 0 = σ ^ ε 1 n + x ¯ 2 ∑ ( x i − x ¯ ) 2 = σ ^ β 1 ∑ x i 2 n . {\\displaystyle {\\hat {\\sigma }}_{\\beta _{0}}={\\hat {\\sigma }}_{\\varepsilon }{\\sqrt {{\\frac {1}{n}}+{\\frac {{\\bar {x}}^{2}}{\\sum (x_{i}-{\\bar {x}})^{2}}}}}={\\hat {\\sigma }}_{\\beta _{1}}{\\sqrt {\\frac {\\sum x_{i}^{2}}{n}}}.} Under the further assumption that the population error term is normally distributed, the researcher can use these estimated standard errors to create confidence intervals and conduct hypothesis tests about the population parameters. === General linear model === In the more general multiple regression model, there are p {\\displaystyle p} independent variables: y i = β 1 x i 1 + β 2 x i 2 + ⋯ + β p x i p + ε i , {\\displaystyle y_{i}=\\beta _{1}x_{i1}+\\beta _{2}x_{i2}+\\cdots +\\beta _{p}x_{ip}+\\varepsilon _{i},\\,} where x i j {\\displaystyle x_{ij}} is the i {\\displaystyle i} -th observation on the j {\\displaystyle j} -th independent variable. If the first independent variable takes the value 1 for all i {\\displaystyle i} , x i 1 = 1 {\\displaystyle x_{i1}=1} , then β 1 {\\displaystyle \\beta _{1}} is called the regression intercept. The least squares parameter estimates are obtained from p {\\displaystyle p} normal equations. The residual can be written as ε i = y i − β ^ 1 x i 1 − ⋯ − β ^ p x i p . {\\displaystyle \\varepsilon _{i}=y_{i}-{\\hat {\\beta }}_{1}x_{i1}-\\cdots -{\\hat {\\beta }}_{p}x_{ip}.} The normal equations are ∑ i = 1 n ∑ k = 1 p x i j x i k β ^ k = ∑ i = 1 n x i j y i , j = 1 , … , p . {\\displaystyle \\sum _{i=1}^{n}\\sum _{k=1}^{p}x_{ij}x_{ik}{\\hat {\\beta }}_{k}=\\sum _{i=1}^{n}x_{ij}y_{i},\\ j=1,\\dots ,p.\\,} In matrix notation, the normal equations are written as ( X ⊤ X ) β ^ = X ⊤ Y , {\\displaystyle \\mathbf {(X^{\\top }X){\\hat {\\boldsymbol {\\beta }}}={}X^{\\top }Y} ,\\,} where the i j {\\displaystyle ij} element of X {\\displaystyle \\mathbf {X} } is x i j {\\displaystyle x_{ij}} , the i {\\displaystyle i} element of the column vector Y {\\displaystyle Y} is y i {\\displaystyle y_{i}} , and the j {\\displaystyle j} element of β ^ {\\displaystyle {\\hat {\\boldsymbol {\\beta }}}} is β ^ j {\\displaystyle {\\hat {\\beta }}_{j}} . Thus X {\\displaystyle \\mathbf {X} } is n × p {\\displaystyle n\\times p} , Y {\\displaystyle Y} is n × 1 {\\displaystyle n\\times 1} , and β ^ {\\displaystyle {\\hat {\\boldsymbol {\\beta }}}} is p × 1 {\\displaystyle p\\times 1} . The solution is β ^ = ( X ⊤ X ) − 1 X ⊤ Y . {\\displaystyle \\mathbf {{\\hat {\\boldsymbol {\\beta }}}=(X^{\\top }X)^{-1}X^{\\top }Y} .\\,} === Diagnostics === Once a regression model has been constructed, it may be important to confirm the goodness of fit of the model and the statistical significance of the estimated parameters. Commonly used checks of goodness of fit include the R-squared, analyses of the pattern of residuals and hypothesis testing. Statistical significance can be checked by an F-test of the overall fit, followed by t-tests of individual parameters. Interpretations of these diagnostic tests rest heavily on the model's assumptions. Although examination of the residuals can be used to invalidate a model, the results of a t-test or F-test are sometimes more difficult to interpret if the model's assumptions are violated. For example, if the error term does not have a normal distribution, in small samples the estimated parameters will not follow normal distributions and complicate inference. With relatively large samples, however, a central limit theorem can be invoked such that hypothesis testing may proceed using asymptotic approximations. === Limited dependent variables === Limited dependent variables, which are response variables that are categorical or constrained to fall only in a certain range, often arise in econometrics. The response variable may be non-continuous (\"limited\" to lie on some subset of the real line). For binary (zero or one) variables, if analysis proceeds with least-squares linear regression, the model is called the linear probability model. Nonlinear models for binary dependent variables include the probit and logit model. The multivariate probit model is a standard method of estimating a joint relationship between several binary dependent variables and some independent variables. For categorical variables with more than two values there is the multinomial logit. For ordinal variables with more than two values, there are the ordered logit and ordered probit models. Censored regression models may be used when the dependent variable is only sometimes observed, and Heckman correction type models may be used when the sample is not randomly selected from the population of interest. An alternative to such procedures is linear regression based on polychoric correlation (or polyserial correlations) between the categorical variables. Such procedures differ in the assumptions made about the distribution of the variables in the population. If the variable is positive with low values and represents the repetition of the occurrence of an event, then count models like the Poisson regression or the negative binomial model may be used. == Nonlinear regression == When the model function is not linear in the parameters, the sum of squares must be minimized by an iterative procedure. This introduces many complications which are summarized in Differences between linear and non-linear least squares. == Prediction (interpolation and extrapolation) == Regression models predict a value of the Y variable given known values of the X variables. Prediction within the range of values in the dataset used for model-fitting is known informally as interpolation. Prediction outside this range of the data is known as extrapolation. Performing extrapolation relies strongly on the regression assumptions. The further the extrapolation goes outside the data, the more room there is for the model to fail due to differences between the assumptions and the sample data or the true values. A prediction interval that represents the uncertainty may accompany the point prediction. Such intervals tend to expand rapidly as the values of the independent variable(s) moved outside the range covered by the observed data. For such reasons and others, some tend to say that it might be unwise to undertake extrapolation. === Model selection === The assumption of a particular form for the relation between Y and X is another source of uncertainty. A properly conducted regression analysis will include an assessment of how well the assumed form is matched by the observed data, but it can only do so within the range of values of the independent variables actually available. This means that any extrapolation is particularly reliant on the assumptions being made about the structural form of the regression relationship. If this knowledge includes the fact that the dependent variable cannot go outside a certain range of values, this can be made use of in selecting the model – even if the observed dataset has no values particularly near such bounds. The implications of this step of choosing an appropriate functional form for the regression can be great when extrapolation is considered. At a minimum, it can ensure that any extrapolation arising from a fitted model is \"realistic\" (or in accord with what is known). == Power and sample size calculations == There are no generally agreed methods for relating the number of observations versus the number of independent variables in the model. One method conjectured by Good and Hardin is N = m n {\\displaystyle N=m^{n}} , where N {\\displaystyle N} is the sample size, n {\\displaystyle n} is the number of independent variables and m {\\displaystyle m} is the number of observations needed to reach the desired precision if the model had only one independent variable. For example, a researcher is building a linear regression model using a dataset that contains 1000 patients ( N {\\displaystyle N} ). If the researcher decides that five observations are needed to precisely define a straight line ( m {\\displaystyle m} ), then the maximum number of independent variables ( n {\\displaystyle n} ) the model can support is 4, because log ⁡ 1000 log ⁡ 5 ≈ 4.29 {\\displaystyle {\\frac {\\log 1000}{\\log 5}}\\approx 4.29} . == Other methods == Although the parameters of a regression model are usually estimated using the method of least squares, other methods which have been used include: Bayesian methods, e.g. Bayesian linear regression Percentage regression, for situations where reducing percentage errors is deemed more appropriate. Least absolute deviations, which is more robust in the presence of outliers, leading to quantile regression Nonparametric regression, requires a large number of observations and is computationally intensive Scenario optimization, leading to interval predictor models == Software == All major statistical software packages perform least squares regression analysis and inference. Simple linear regression and multiple regression using least squares can be done in some spreadsheet applications and on some calculators. While many statistical software packages can perform various types of nonparametric and robust regression, these methods are less standardized. Different software packages implement different methods, and a method with a given name may be implemented differently in different packages. Specialized regression software has been developed for use in fields such as survey analysis and neuroimaging. == See also == == References == == Further reading == William H. Kruskal and Judith M. Tanur, ed. (1978), \"Linear Hypotheses,\" International Encyclopedia of Statistics. Free Press, v. 1, Evan J. Williams, \"I. Regression,\" pp. 523–41. Julian C. Stanley, \"II. Analysis of Variance,\" pp. 541–554. Lindley, D.V. (1987). \"Regression and correlation analysis,\" New Palgrave: A Dictionary of Economics, v. 4, pp. 120–23. Birkes, David and Dodge, Y., Alternative Methods of Regression. ISBN 0-471-56881-3 Chatfield, C. (1993) \"Calculating Interval Forecasts,\" Journal of Business and Economic Statistics, 11. pp. 121–135. Draper, N.R.; Smith, H. (1998). Applied Regression Analysis (3rd ed.). John Wiley. ISBN 978-0-471-17082-2. Fox, J. (1997). Applied Regression Analysis, Linear Models and Related Methods. Sage Hardle, W., Applied Nonparametric Regression (1990), ISBN 0-521-42950-1 Meade, Nigel; Islam, Towhidul (1995). \"Prediction intervals for growth curve forecasts\". Journal of Forecasting. 14 (5): 413–430. doi:10.1002/for.3980140502. A. Sen, M. Srivastava, Regression Analysis — Theory, Methods, and Applications, Springer-Verlag, Berlin, 2011 (4th printing). T. Strutz: Data Fitting and Uncertainty (A practical introduction to weighted least squares and beyond). Vieweg+Teubner, ISBN 978-3-8348-1022-9. Stulp, Freek, and Olivier Sigaud. Many Regression Algorithms, One Unified Model: A Review. Neural Networks, vol. 69, Sept. 2015, pp. 60–79. https://doi.org/10.1016/j.neunet.2015.05.005. Malakooti, B. (2013). Operations and Production Systems with Multiple Objectives. John Wiley & Sons. Chicco, Davide; Warrens, Matthijs J.; Jurman, Giuseppe (2021). \"The coefficient of determination R-squared is more informative than SMAPE, MAE, MAPE, MSE and RMSE in regression analysis evaluation\". PeerJ Computer Science. 7 (e623): e623. doi:10.7717/peerj-cs.623. PMC 8279135. PMID 34307865. == External links == \"Regression analysis\", Encyclopedia of Mathematics, EMS Press, 2001  Earliest Uses: Regression – basic history and references What is multiple regression used for? – Multiple regression Regression of Weakly Correlated Data – how linear regression mistakes can appear when Y-range is much smaller than X-range"
+  },
+  "chunks": [
+    {
+      "id": "regressionanalysis_b1433f43_c0000",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 768,
+      "content": "In statistical modeling, regression analysis is a set of statistical processes for estimating the relationships between a dependent variable (often called the outcome or response variable, or a label in machine learning parlance) and one or more error-free independent variables (often called regressors, predictors, covariates, explanatory variables or features). The most common form of regression analysis is linear regression, in which one finds the line (or a more complex linear combination) that most closely fits the data according to a specific mathematical criterion. For example, the method of ordinary least squares computes the unique line (or hyperplane) that minimizes the sum of squared differences between the true data and that line (or hyperplane).",
+      "char_count": 767,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0001",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 768,
+      "end_char": 1668,
+      "content": "For specific mathematical reasons (see linear regression), this allows the researcher to estimate the conditional expectation (or population average value) of the dependent variable when the independent variables take on a given set of values. Less common forms of regression use slightly different procedures to estimate alternative location parameters (e.g., quantile regression or Necessary Condition Analysis) or estimate the conditional expectation across a broader collection of non-linear models (e.g., nonparametric regression). Regression analysis is primarily used for two conceptually distinct purposes. First, regression analysis is widely used for prediction and forecasting, where its use has substantial overlap with the field of machine learning. Second, in some situations regression analysis can be used to infer causal relationships between the independent and dependent variables.",
+      "char_count": 900,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0002",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1669,
+      "end_char": 2198,
+      "content": "Importantly, regressions by themselves only reveal relationships between a dependent variable and a collection of independent variables in a fixed dataset. To use regressions for prediction or to infer causal relationships, respectively, a researcher must carefully justify why existing relationships have predictive power for a new context or why a relationship between two variables has a causal interpretation. The latter is especially important when researchers hope to estimate causal relationships using observational data.",
+      "char_count": 529,
+      "token_estimate": 132,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0003",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2212,
+      "end_char": 3159,
+      "content": "== History == The earliest regression form was seen in Isaac Newton's work in 1700 while studying equinoxes, being credited with introducing \"an embryonic linear aggression analysis\" as \"Not only did he perform the averaging of a set of data, 50 years before Tobias Mayer, but summing the residuals to zero he forced the regression line to pass through the average point. He also distinguished between two inhomogeneous sets of data and might have thought of an optimal solution in terms of bias, though not in terms of effectiveness.\" He previously used an averaging method in his 1671 work on Newton's rings, which was unprecedented at the time. The method of least squares was published by Legendre in 1805, and by Gauss in 1809. Legendre and Gauss both applied the method to the problem of determining, from astronomical observations, the orbits of bodies about the Sun (mostly comets, but also later the then newly discovered minor planets).",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0004",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3159,
+      "end_char": 4129,
+      "content": "Gauss published a further development of the theory of least squares in 1821, including a version of the Gauss–Markov theorem. The term \"regression\" was coined by Francis Galton in the 19th century to describe a biological phenomenon. The phenomenon was that the heights of descendants of tall ancestors tend to regress down towards a normal average (a phenomenon also known as regression toward the mean). For Galton, regression had only this biological meaning, but his work was later extended by Udny Yule and Karl Pearson to a more general statistical context. In the work of Yule and Pearson, the joint distribution of the response and explanatory variables is assumed to be Gaussian. This assumption was weakened by R.A. Fisher in his works of 1922 and 1925. Fisher assumed that the conditional distribution of the response variable is Gaussian, but the joint distribution need not be. In this respect, Fisher's assumption is closer to Gauss's formulation of 1821.",
+      "char_count": 970,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0005",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 4130,
+      "end_char": 4964,
+      "content": "In the 1950s and 1960s, economists used electromechanical desk calculators to calculate regressions. Before 1970, it sometimes took up to 24 hours to receive the result from one regression. Regression methods continue to be an area of active research. In recent decades, new methods have been developed for robust regression, regression involving correlated responses such as time series and growth curves, regression in which the predictor (independent variable) or response variables are curves, images, graphs, or other complex data objects, regression methods accommodating various types of missing data, nonparametric regression, Bayesian methods for regression, regression in which the predictor variables are measured with error, regression with more predictor variables than observations, and causal inference with regression.",
+      "char_count": 834,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0006",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Regression model ==",
+      "heading_path": "== Regression model ==",
+      "start_char": 5143,
+      "end_char": 6004,
+      "content": "== Regression model == In practice, researchers first select a model they would like to estimate and then use their chosen method (e.g., ordinary least squares) to estimate the parameters of that model. Regression models involve the following components: The unknown parameters, often denoted as a scalar or vector β {\\displaystyle \\beta } . The independent variables, which are observed in data and are often denoted as a vector X i {\\displaystyle X_{i}} (where i {\\displaystyle i} denotes a row of data). The dependent variable, which are observed in data and often denoted using the scalar Y i {\\displaystyle Y_{i}} . The error terms, which are not directly observed in data and are often denoted using the scalar e i {\\displaystyle e_{i}} . In various fields of application, different terminologies are used in place of dependent and independent variables.",
+      "char_count": 860,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0007",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Regression model ==",
+      "heading_path": "== Regression model ==",
+      "start_char": 6004,
+      "end_char": 6881,
+      "content": "Most regression models propose that Y i {\\displaystyle Y_{i}} is a function (regression function) of X i {\\displaystyle X_{i}} and β {\\displaystyle \\beta } , with e i {\\displaystyle e_{i}} representing an additive error term that may stand in for un-modeled determinants of Y i {\\displaystyle Y_{i}} or random statistical noise: Y i = f ( X i , β ) + e i {\\displaystyle Y_{i}=f(X_{i},\\beta )+e_{i}} Note that the independent variables X i {\\displaystyle X_{i}} are assumed to be free of error. This important assumption is often overlooked, although errors-in-variables models can be used when the independent variables are assumed to contain errors. The researchers' goal is to estimate the function f ( X i , β ) {\\displaystyle f(X_{i},\\beta )} that most closely fits the data. To carry out regression analysis, the form of the function f {\\displaystyle f} must be specified.",
+      "char_count": 877,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0008",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Regression model ==",
+      "heading_path": "== Regression model ==",
+      "start_char": 6882,
+      "end_char": 7677,
+      "content": "Sometimes the form of this function is based on knowledge about the relationship between Y i {\\displaystyle Y_{i}} and X i {\\displaystyle X_{i}} that does not rely on the data. If no such knowledge is available, a flexible or convenient form for f {\\displaystyle f} is chosen. For example, a simple univariate regression may propose f ( X i , β ) = β 0 + β 1 X i {\\displaystyle f(X_{i},\\beta )=\\beta _{0}+\\beta _{1}X_{i}} , suggesting that the researcher believes Y i = β 0 + β 1 X i + e i {\\displaystyle Y_{i}=\\beta _{0}+\\beta _{1}X_{i}+e_{i}} to be a reasonable approximation for the statistical process generating the data. Once researchers determine their preferred statistical model, different forms of regression analysis provide tools to estimate the parameters β {\\displaystyle \\beta } .",
+      "char_count": 795,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0009",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Regression model ==",
+      "heading_path": "== Regression model ==",
+      "start_char": 7678,
+      "end_char": 8598,
+      "content": "For example, least squares (including its most common variant, ordinary least squares) finds the value of β {\\displaystyle \\beta } that minimizes the sum of squared errors ∑ i ( Y i − f ( X i , β ) ) 2 {\\displaystyle \\sum _{i}(Y_{i}-f(X_{i},\\beta ))^{2}} . A given regression method will ultimately provide an estimate of β {\\displaystyle \\beta } , usually denoted β ^ {\\displaystyle {\\hat {\\beta }}} to distinguish the estimate from the true (unknown) parameter value that generated the data. Using this estimate, the researcher can then use the fitted value Y i ^ = f ( X i , β ^ ) {\\displaystyle {\\hat {Y_{i}}}=f(X_{i},{\\hat {\\beta }})} for prediction or to assess the accuracy of the model in explaining the data. Whether the researcher is intrinsically interested in the estimate β ^ {\\displaystyle {\\hat {\\beta }}} or the predicted value Y i ^ {\\displaystyle {\\hat {Y_{i}}}} will depend on context and their goals.",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0010",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Regression model ==",
+      "heading_path": "== Regression model ==",
+      "start_char": 8599,
+      "end_char": 9542,
+      "content": "As described in ordinary least squares, least squares is widely used because the estimated function f ( X i , β ^ ) {\\displaystyle f(X_{i},{\\hat {\\beta }})} approximates the conditional expectation E ( Y i | X i ) {\\displaystyle E(Y_{i}|X_{i})} . However, alternative variants (e.g., least absolute deviations or quantile regression) are useful when researchers want to model other functions f ( X i , β ) {\\displaystyle f(X_{i},\\beta )} . It is important to note that there must be sufficient data to estimate a regression model. For example, suppose that a researcher has access to N {\\displaystyle N} rows of data with one dependent and two independent variables: ( Y i , X 1 i , X 2 i ) {\\displaystyle (Y_{i},X_{1i},X_{2i})} . Suppose further that the researcher wants to estimate a bivariate linear model via least squares: Y i = β 0 + β 1 X 1 i + β 2 X 2 i + e i {\\displaystyle Y_{i}=\\beta _{0}+\\beta _{1}X_{1i}+\\beta _{2}X_{2i}+e_{i}} .",
+      "char_count": 943,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0011",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Regression model ==",
+      "heading_path": "== Regression model ==",
+      "start_char": 9543,
+      "end_char": 10508,
+      "content": "If the researcher only has access to N = 2 {\\displaystyle N=2} data points, then they could find infinitely many combinations ( β ^ 0 , β ^ 1 , β ^ 2 ) {\\displaystyle ({\\hat {\\beta }}_{0},{\\hat {\\beta }}_{1},{\\hat {\\beta }}_{2})} that explain the data equally well: any combination can be chosen that satisfies Y ^ i = β ^ 0 + β ^ 1 X 1 i + β ^ 2 X 2 i {\\displaystyle {\\hat {Y}}_{i}={\\hat {\\beta }}_{0}+{\\hat {\\beta }}_{1}X_{1i}+{\\hat {\\beta }}_{2}X_{2i}} , all of which lead to ∑ i e ^ i 2 = ∑ i ( Y ^ i − ( β ^ 0 + β ^ 1 X 1 i + β ^ 2 X 2 i ) ) 2 = 0 {\\displaystyle \\sum _{i}{\\hat {e}}_{i}^{2}=\\sum _{i}({\\hat {Y}}_{i}-({\\hat {\\beta }}_{0}+{\\hat {\\beta }}_{1}X_{1i}+{\\hat {\\beta }}_{2}X_{2i}))^{2}=0} and are therefore valid solutions that minimize the sum of squared residuals. To understand why there are infinitely many options, note that the system of N = 2 {\\displaystyle N=2} equations is to be solved for 3 unknowns, which makes the system underdetermined.",
+      "char_count": 965,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0012",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Regression model ==",
+      "heading_path": "== Regression model ==",
+      "start_char": 10509,
+      "end_char": 11363,
+      "content": "Alternatively, one can visualize infinitely many 3-dimensional planes that go through N = 2 {\\displaystyle N=2} fixed points. More generally, to estimate a least squares model with k {\\displaystyle k} distinct parameters, one must have N ≥ k {\\displaystyle N\\geq k} distinct data points. If N > k {\\displaystyle N>k} , then there does not generally exist a set of parameters that will perfectly fit the data. The quantity N − k {\\displaystyle N-k} appears often in regression analysis, and is referred to as the degrees of freedom in the model. Moreover, to estimate a least squares model, the independent variables ( X 1 i , X 2 i , . . . , X k i ) {\\displaystyle (X_{1i},X_{2i},...,X_{ki})} must be linearly independent: one must not be able to reconstruct any of the independent variables by adding and multiplying the remaining independent variables.",
+      "char_count": 854,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0013",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Regression model ==",
+      "heading_path": "== Regression model ==",
+      "start_char": 11364,
+      "end_char": 11565,
+      "content": "As discussed in ordinary least squares, this condition ensures that X T X {\\displaystyle X^{T}X} is an invertible matrix and therefore that a unique solution β ^ {\\displaystyle {\\hat {\\beta }}} exists.",
+      "char_count": 201,
+      "token_estimate": 50,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0014",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Underlying assumptions ==",
+      "heading_path": "== Underlying assumptions ==",
+      "start_char": 11572,
+      "end_char": 12389,
+      "content": "== Underlying assumptions == By itself, a regression is simply a calculation using the data. In order to interpret the output of regression as a meaningful statistical quantity that measures real-world relationships, researchers often rely on a number of classical assumptions. These assumptions often include: The sample is representative of the population at large. The independent variables are measured without error. Deviations from the model have an expected value of zero, conditional on covariates: E ( e i | X i ) = 0 {\\displaystyle E(e_{i}|X_{i})=0} The variance of the residuals e i {\\displaystyle e_{i}} is constant across observations (homoscedasticity). The residuals e i {\\displaystyle e_{i}} are uncorrelated with one another. Mathematically, the variance–covariance matrix of the errors is diagonal.",
+      "char_count": 816,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0015",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Underlying assumptions ==",
+      "heading_path": "== Underlying assumptions ==",
+      "start_char": 12389,
+      "end_char": 13344,
+      "content": "A handful of conditions are sufficient for the least-squares estimator to possess desirable properties: in particular, the Gauss–Markov assumptions imply that the parameter estimates will be unbiased, consistent, and efficient in the class of linear unbiased estimators. Practitioners have developed a variety of methods to maintain some or all of these desirable properties in real-world settings, because these classical assumptions are unlikely to hold exactly. For example, modeling errors-in-variables can lead to reasonable estimates independent variables are measured with errors. Heteroscedasticity-consistent standard errors allow the variance of e i {\\displaystyle e_{i}} to change across values of X i {\\displaystyle X_{i}} . Correlated errors that exist within subsets of the data or follow specific patterns can be handled using clustered standard errors, geographic weighted regression, or Newey–West standard errors, among other techniques.",
+      "char_count": 955,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0016",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Underlying assumptions ==",
+      "heading_path": "== Underlying assumptions ==",
+      "start_char": 13345,
+      "end_char": 13717,
+      "content": "When rows of data correspond to locations in space, the choice of how to model e i {\\displaystyle e_{i}} within geographic units can have important consequences. The subfield of econometrics is largely focused on developing techniques that allow researchers to make reasonable real-world conclusions in real-world settings, where classical assumptions do not hold exactly.",
+      "char_count": 372,
+      "token_estimate": 93,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0017",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Linear regression ==",
+      "heading_path": "== Linear regression ==",
+      "start_char": 13713,
+      "end_char": 14582,
+      "content": "== Linear regression == In linear regression, the model specification is that the dependent variable, y i {\\displaystyle y_{i}} is a linear combination of the parameters (but need not be linear in the independent variables). For example, in simple linear regression for modeling n {\\displaystyle n} data points there is one independent variable: x i {\\displaystyle x_{i}} , and two parameters, β 0 {\\displaystyle \\beta _{0}} and β 1 {\\displaystyle \\beta _{1}} : straight line: y i = β 0 + β 1 x i + ε i , i = 1 , … , n . {\\displaystyle y_{i}=\\beta _{0}+\\beta _{1}x_{i}+\\varepsilon _{i},\\quad i=1,\\dots ,n.\\!} In multiple linear regression, there are several independent variables or functions of independent variables. Adding a term in x i 2 {\\displaystyle x_{i}^{2}} to the preceding regression gives: parabola: y i = β 0 + β 1 x i + β 2 x i 2 + ε i , i = 1 , … , n .",
+      "char_count": 868,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0018",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Linear regression ==",
+      "heading_path": "== Linear regression ==",
+      "start_char": 14582,
+      "end_char": 15315,
+      "content": "{\\displaystyle y_{i}=\\beta _{0}+\\beta _{1}x_{i}+\\beta _{2}x_{i}^{2}+\\varepsilon _{i},\\ i=1,\\dots ,n.\\!} This is still linear regression; although the expression on the right hand side is quadratic in the independent variable x i {\\displaystyle x_{i}} , it is linear in the parameters β 0 {\\displaystyle \\beta _{0}} , β 1 {\\displaystyle \\beta _{1}} and β 2 . {\\displaystyle \\beta _{2}.} In both cases, ε i {\\displaystyle \\varepsilon _{i}} is an error term and the subscript i {\\displaystyle i} indexes a particular observation. Returning our attention to the straight line case: Given a random sample from the population, we estimate the population parameters and obtain the sample linear regression model: y ^ i = β ^ 0 + β ^ 1 x i .",
+      "char_count": 733,
+      "token_estimate": 183,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0019",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Linear regression ==",
+      "heading_path": "== Linear regression ==",
+      "start_char": 15316,
+      "end_char": 16156,
+      "content": "{\\displaystyle {\\widehat {y}}_{i}={\\widehat {\\beta }}_{0}+{\\widehat {\\beta }}_{1}x_{i}.} The residual, e i = y i − y ^ i {\\displaystyle e_{i}=y_{i}-{\\widehat {y}}_{i}} , is the difference between the value of the dependent variable predicted by the model, y ^ i {\\displaystyle {\\widehat {y}}_{i}} , and the true value of the dependent variable, y i {\\displaystyle y_{i}} . One method of estimation is ordinary least squares. This method obtains parameter estimates that minimize the sum of squared residuals, SSR: S S R = ∑ i = 1 n e i 2 {\\displaystyle SSR=\\sum _{i=1}^{n}e_{i}^{2}} Minimization of this function results in a set of normal equations, a set of simultaneous linear equations in the parameters, which are solved to yield the parameter estimators, β ^ 0 , β ^ 1 {\\displaystyle {\\widehat {\\beta }}_{0},{\\widehat {\\beta }}_{1}} .",
+      "char_count": 840,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0020",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Linear regression ==",
+      "heading_path": "== Linear regression ==",
+      "start_char": 16157,
+      "end_char": 16975,
+      "content": "In the case of simple regression, the formulas for the least squares estimates are β ^ 1 = ∑ ( x i − x ¯ ) ( y i − y ¯ ) ∑ ( x i − x ¯ ) 2 {\\displaystyle {\\widehat {\\beta }}_{1}={\\frac {\\sum (x_{i}-{\\bar {x}})(y_{i}-{\\bar {y}})}{\\sum (x_{i}-{\\bar {x}})^{2}}}} β ^ 0 = y ¯ − β ^ 1 x ¯ {\\displaystyle {\\widehat {\\beta }}_{0}={\\bar {y}}-{\\widehat {\\beta }}_{1}{\\bar {x}}} where x ¯ {\\displaystyle {\\bar {x}}} is the mean (average) of the x {\\displaystyle x} values and y ¯ {\\displaystyle {\\bar {y}}} is the mean of the y {\\displaystyle y} values. Under the assumption that the population error term has a constant variance, the estimate of that variance is given by: σ ^ ε 2 = S S R n − 2 {\\displaystyle {\\hat {\\sigma }}_{\\varepsilon }^{2}={\\frac {SSR}{n-2}}} This is called the mean square error (MSE) of the regression.",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0021",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Linear regression ==",
+      "heading_path": "== Linear regression ==",
+      "start_char": 16976,
+      "end_char": 17595,
+      "content": "The denominator is the sample size reduced by the number of model parameters estimated from the same data, ( n − p ) {\\displaystyle (n-p)} for p {\\displaystyle p} regressors or ( n − p − 1 ) {\\displaystyle (n-p-1)} if an intercept is used. In this case, p = 1 {\\displaystyle p=1} so the denominator is n − 2 {\\displaystyle n-2} . The standard errors of the parameter estimates are given by σ ^ β 1 = σ ^ ε 1 ∑ ( x i − x ¯ ) 2 {\\displaystyle {\\hat {\\sigma }}_{\\beta _{1}}={\\hat {\\sigma }}_{\\varepsilon }{\\sqrt {\\frac {1}{\\sum (x_{i}-{\\bar {x}})^{2}}}}} σ ^ β 0 = σ ^ ε 1 n + x ¯ 2 ∑ ( x i − x ¯ ) 2 = σ ^ β 1 ∑ x i 2 n .",
+      "char_count": 619,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0022",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Linear regression ==",
+      "heading_path": "== Linear regression ==",
+      "start_char": 17596,
+      "end_char": 18050,
+      "content": "{\\displaystyle {\\hat {\\sigma }}_{\\beta _{0}}={\\hat {\\sigma }}_{\\varepsilon }{\\sqrt {{\\frac {1}{n}}+{\\frac {{\\bar {x}}^{2}}{\\sum (x_{i}-{\\bar {x}})^{2}}}}}={\\hat {\\sigma }}_{\\beta _{1}}{\\sqrt {\\frac {\\sum x_{i}^{2}}{n}}}.} Under the further assumption that the population error term is normally distributed, the researcher can use these estimated standard errors to create confidence intervals and conduct hypothesis tests about the population parameters.",
+      "char_count": 454,
+      "token_estimate": 113,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0023",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== = General linear model ==",
+      "heading_path": "== = General linear model ==",
+      "start_char": 18056,
+      "end_char": 18830,
+      "content": "== = General linear model === In the more general multiple regression model, there are p {\\displaystyle p} independent variables: y i = β 1 x i 1 + β 2 x i 2 + ⋯ + β p x i p + ε i , {\\displaystyle y_{i}=\\beta _{1}x_{i1}+\\beta _{2}x_{i2}+\\cdots +\\beta _{p}x_{ip}+\\varepsilon _{i},\\,} where x i j {\\displaystyle x_{ij}} is the i {\\displaystyle i} -th observation on the j {\\displaystyle j} -th independent variable. If the first independent variable takes the value 1 for all i {\\displaystyle i} , x i 1 = 1 {\\displaystyle x_{i1}=1} , then β 1 {\\displaystyle \\beta _{1}} is called the regression intercept. The least squares parameter estimates are obtained from p {\\displaystyle p} normal equations. The residual can be written as ε i = y i − β ^ 1 x i 1 − ⋯ − β ^ p x i p .",
+      "char_count": 773,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0024",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== = General linear model ==",
+      "heading_path": "== = General linear model ==",
+      "start_char": 18830,
+      "end_char": 19669,
+      "content": "{\\displaystyle \\varepsilon _{i}=y_{i}-{\\hat {\\beta }}_{1}x_{i1}-\\cdots -{\\hat {\\beta }}_{p}x_{ip}.} The normal equations are ∑ i = 1 n ∑ k = 1 p x i j x i k β ^ k = ∑ i = 1 n x i j y i , j = 1 , … , p . {\\displaystyle \\sum _{i=1}^{n}\\sum _{k=1}^{p}x_{ij}x_{ik}{\\hat {\\beta }}_{k}=\\sum _{i=1}^{n}x_{ij}y_{i},\\ j=1,\\dots ,p.\\,} In matrix notation, the normal equations are written as ( X ⊤ X ) β ^ = X ⊤ Y , {\\displaystyle \\mathbf {(X^{\\top }X){\\hat {\\boldsymbol {\\beta }}}={}X^{\\top }Y} ,\\,} where the i j {\\displaystyle ij} element of X {\\displaystyle \\mathbf {X} } is x i j {\\displaystyle x_{ij}} , the i {\\displaystyle i} element of the column vector Y {\\displaystyle Y} is y i {\\displaystyle y_{i}} , and the j {\\displaystyle j} element of β ^ {\\displaystyle {\\hat {\\boldsymbol {\\beta }}}} is β ^ j {\\displaystyle {\\hat {\\beta }}_{j}} .",
+      "char_count": 839,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0025",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== = General linear model ==",
+      "heading_path": "== = General linear model ==",
+      "start_char": 19670,
+      "end_char": 20022,
+      "content": "Thus X {\\displaystyle \\mathbf {X} } is n × p {\\displaystyle n\\times p} , Y {\\displaystyle Y} is n × 1 {\\displaystyle n\\times 1} , and β ^ {\\displaystyle {\\hat {\\boldsymbol {\\beta }}}} is p × 1 {\\displaystyle p\\times 1} . The solution is β ^ = ( X ⊤ X ) − 1 X ⊤ Y . {\\displaystyle \\mathbf {{\\hat {\\boldsymbol {\\beta }}}=(X^{\\top }X)^{-1}X^{\\top }Y} .\\,}",
+      "char_count": 352,
+      "token_estimate": 88,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0026",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== = Diagnostics ==",
+      "heading_path": "== = Diagnostics ==",
+      "start_char": 20014,
+      "end_char": 20896,
+      "content": "== = Diagnostics === Once a regression model has been constructed, it may be important to confirm the goodness of fit of the model and the statistical significance of the estimated parameters. Commonly used checks of goodness of fit include the R-squared, analyses of the pattern of residuals and hypothesis testing. Statistical significance can be checked by an F-test of the overall fit, followed by t-tests of individual parameters. Interpretations of these diagnostic tests rest heavily on the model's assumptions. Although examination of the residuals can be used to invalidate a model, the results of a t-test or F-test are sometimes more difficult to interpret if the model's assumptions are violated. For example, if the error term does not have a normal distribution, in small samples the estimated parameters will not follow normal distributions and complicate inference.",
+      "char_count": 881,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0027",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== = Limited dependent variables ==",
+      "heading_path": "== = Limited dependent variables ==",
+      "start_char": 21065,
+      "end_char": 21932,
+      "content": "== = Limited dependent variables === Limited dependent variables, which are response variables that are categorical or constrained to fall only in a certain range, often arise in econometrics. The response variable may be non-continuous (\"limited\" to lie on some subset of the real line). For binary (zero or one) variables, if analysis proceeds with least-squares linear regression, the model is called the linear probability model. Nonlinear models for binary dependent variables include the probit and logit model. The multivariate probit model is a standard method of estimating a joint relationship between several binary dependent variables and some independent variables. For categorical variables with more than two values there is the multinomial logit. For ordinal variables with more than two values, there are the ordered logit and ordered probit models.",
+      "char_count": 866,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0028",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== = Limited dependent variables ==",
+      "heading_path": "== = Limited dependent variables ==",
+      "start_char": 21932,
+      "end_char": 22599,
+      "content": "Censored regression models may be used when the dependent variable is only sometimes observed, and Heckman correction type models may be used when the sample is not randomly selected from the population of interest. An alternative to such procedures is linear regression based on polychoric correlation (or polyserial correlations) between the categorical variables. Such procedures differ in the assumptions made about the distribution of the variables in the population. If the variable is positive with low values and represents the repetition of the occurrence of an event, then count models like the Poisson regression or the negative binomial model may be used.",
+      "char_count": 667,
+      "token_estimate": 166,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0029",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Prediction (interpolation and extrapolation) ==",
+      "heading_path": "== Prediction (interpolation and extrapolation) ==",
+      "start_char": 22879,
+      "end_char": 23732,
+      "content": "== Prediction (interpolation and extrapolation) == Regression models predict a value of the Y variable given known values of the X variables. Prediction within the range of values in the dataset used for model-fitting is known informally as interpolation. Prediction outside this range of the data is known as extrapolation. Performing extrapolation relies strongly on the regression assumptions. The further the extrapolation goes outside the data, the more room there is for the model to fail due to differences between the assumptions and the sample data or the true values. A prediction interval that represents the uncertainty may accompany the point prediction. Such intervals tend to expand rapidly as the values of the independent variable(s) moved outside the range covered by the observed data. For such reasons and others, some tend to say that it might be unwise to undertake extrapolation.",
+      "char_count": 902,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0030",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== = Model selection ==",
+      "heading_path": "== = Model selection ==",
+      "start_char": 23755,
+      "end_char": 24628,
+      "content": "== = Model selection === The assumption of a particular form for the relation between Y and X is another source of uncertainty. A properly conducted regression analysis will include an assessment of how well the assumed form is matched by the observed data, but it can only do so within the range of values of the independent variables actually available. This means that any extrapolation is particularly reliant on the assumptions being made about the structural form of the regression relationship. If this knowledge includes the fact that the dependent variable cannot go outside a certain range of values, this can be made use of in selecting the model – even if the observed dataset has no values particularly near such bounds. The implications of this step of choosing an appropriate functional form for the regression can be great when extrapolation is considered.",
+      "char_count": 872,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0031",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Power and sample size calculations ==",
+      "heading_path": "== Power and sample size calculations ==",
+      "start_char": 24774,
+      "end_char": 25681,
+      "content": "== Power and sample size calculations == There are no generally agreed methods for relating the number of observations versus the number of independent variables in the model. One method conjectured by Good and Hardin is N = m n {\\displaystyle N=m^{n}} , where N {\\displaystyle N} is the sample size, n {\\displaystyle n} is the number of independent variables and m {\\displaystyle m} is the number of observations needed to reach the desired precision if the model had only one independent variable. For example, a researcher is building a linear regression model using a dataset that contains 1000 patients ( N {\\displaystyle N} ). If the researcher decides that five observations are needed to precisely define a straight line ( m {\\displaystyle m} ), then the maximum number of independent variables ( n {\\displaystyle n} ) the model can support is 4, because log ⁡ 1000 log ⁡ 5 ≈ 4.29 {\\displaystyle {\\frac {\\log 1000}{\\log 5}}\\approx 4.29} .",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0032",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Other methods ==",
+      "heading_path": "== Other methods ==",
+      "start_char": 25700,
+      "end_char": 26264,
+      "content": "== Other methods == Although the parameters of a regression model are usually estimated using the method of least squares, other methods which have been used include: Bayesian methods, e.g. Bayesian linear regression Percentage regression, for situations where reducing percentage errors is deemed more appropriate. Least absolute deviations, which is more robust in the presence of outliers, leading to quantile regression Nonparametric regression, requires a large number of observations and is computationally intensive Scenario optimization, leading to interval predictor models",
+      "char_count": 582,
+      "token_estimate": 145,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "regressionanalysis_b1433f43_c0033",
+      "article_id": "regressionanalysis_b1433f43",
+      "section": "== Software ==",
+      "heading_path": "== Software ==",
+      "start_char": 26278,
+      "end_char": 26912,
+      "content": "== Software == All major statistical software packages perform least squares regression analysis and inference. Simple linear regression and multiple regression using least squares can be done in some spreadsheet applications and on some calculators. While many statistical software packages can perform various types of nonparametric and robust regression, these methods are less standardized. Different software packages implement different methods, and a method with a given name may be implemented differently in different packages. Specialized regression software has been developed for use in fields such as survey analysis and neuroimaging.",
+      "char_count": 647,
+      "token_estimate": 161,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Who coined the term \"regression\" in the 19th century?",
+        "answer": "The term \"regression\" was coined by Francis Galton in the 19th century to describe a biological phenomenon.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0004"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0004"
+        ]
+      },
+      {
+        "question": "Why does a regression model with three unknown parameters have infinitely many solutions when only two data points are available?",
+        "answer": "When a regression model with three unknown parameters is applied to only two data points, the system becomes underdetermined. This is because there are only two equations available to solve for three unknowns, leading to infinitely many combinations of parameters that can explain the data equally well and minimize the sum of squared residuals to zero.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0011"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0011"
+        ]
+      },
+      {
+        "question": "What three desirable properties do the Gauss-Markov assumptions imply for parameter estimates?",
+        "answer": "The Gauss-Markov assumptions imply that parameter estimates will be unbiased, consistent, and efficient in the class of linear unbiased estimators.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0015"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0015"
+        ]
+      },
+      {
+        "question": "What are the two primary uses of regression analysis, and what important justification is required before its results can be applied for these uses?",
+        "answer": "Regression analysis is primarily used for two purposes: prediction and forecasting, and to infer causal relationships between independent and dependent variables. However, because regressions by themselves only reveal relationships within a fixed dataset, a researcher must provide careful justification before applying the results. For prediction, one must justify why the existing relationships have predictive power in a new context. For inferring causality, one must justify why a relationship has a causal interpretation, which is especially important when using observational data.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0001",
+          "regressionanalysis_b1433f43_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0001",
+          "regressionanalysis_b1433f43_c0002"
+        ]
+      },
+      {
+        "question": "Trace the key milestones in the development of regression analysis from the 18th century through recent decades.",
+        "answer": "The earliest form of regression analysis appeared in Isaac Newton's work in 1700. In the early 19th century, the method of least squares was published by Legendre (1805) and Gauss (1809) for astronomical applications, with Gauss publishing further developments in 1821. The term \"regression\" was coined by Francis Galton in the 19th century to describe a biological phenomenon, which was later extended to a general statistical context by Udny Yule and Karl Pearson. R.A. Fisher then weakened the underlying statistical assumptions in the 1920s. Computationally, regression evolved from being calculated on slow electromechanical desk calculators in the 1950s and 60s to the present day, where it remains an active area of research with new methods developed for complex scenarios like robust regression, time series, and causal inference.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0003",
+          "regressionanalysis_b1433f43_c0004",
+          "regressionanalysis_b1433f43_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0004",
+          "regressionanalysis_b1433f43_c0003",
+          "regressionanalysis_b1433f43_c0005"
+        ]
+      },
+      {
+        "question": "Summarize the structure of a regression model and the general process a researcher follows to estimate its parameters.",
+        "answer": "A regression model is composed of unknown parameters (β), independent variables (X_i), a dependent variable (Y_i), and error terms (e_i). The relationship is typically expressed as Y_i = f(X_i, β) + e_i, where f is a regression function. The process for a researcher involves first selecting a model and specifying the form of the function 'f', which can be based on prior knowledge or a convenient form. The goal is to estimate the function that best fits the data, which is achieved by using a chosen method (e.g., ordinary least squares) to estimate the unknown parameters (β).",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0006",
+          "regressionanalysis_b1433f43_c0007",
+          "regressionanalysis_b1433f43_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0006",
+          "regressionanalysis_b1433f43_c0008",
+          "regressionanalysis_b1433f43_c0007"
+        ]
+      },
+      {
+        "question": "What is regression analysis, what are its two main uses, and what fundamental limitation must be addressed when applying it?",
+        "answer": "Regression analysis is a statistical process for estimating the relationships between a dependent variable and one or more independent variables. Its two primary uses are for prediction and forecasting, and to infer causal relationships between variables. A fundamental limitation is that regressions by themselves only reveal relationships within a fixed dataset, requiring a researcher to carefully justify why these relationships have predictive power in a new context or can be interpreted as causal.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0000",
+          "regressionanalysis_b1433f43_c0001",
+          "regressionanalysis_b1433f43_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0001",
+          "regressionanalysis_b1433f43_c0000",
+          "regressionanalysis_b1433f43_c0002"
+        ]
+      },
+      {
+        "question": "Trace the historical development of regression analysis from its earliest forms in the 18th century to its status in recent decades.",
+        "answer": "The earliest form of regression analysis appeared in Isaac Newton's work in 1700. The method of least squares was later published by Legendre in 1805 and Gauss in 1809 for astronomical calculations. In the 19th century, Francis Galton coined the term \"regression\" to describe a biological phenomenon, which was later extended to a general statistical context by Udny Yule and Karl Pearson. R.A. Fisher further refined the underlying assumptions in the 1920s. By the 1950s and 1960s, economists used electromechanical calculators for regression, a process that could take up to 24 hours. In recent decades, regression has continued to be an active area of research, with new methods developed for robust regression, complex data objects, and causal inference.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0003",
+          "regressionanalysis_b1433f43_c0004",
+          "regressionanalysis_b1433f43_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0003",
+          "regressionanalysis_b1433f43_c0004",
+          "regressionanalysis_b1433f43_c0005"
+        ]
+      },
+      {
+        "question": "Outline the process of estimating a regression model, from defining its components to using the final estimate.",
+        "answer": "The process begins by defining the model's components: unknown parameters (β), independent variables (Xᵢ), a dependent variable (Yᵢ), and unobserved error terms (eᵢ). Researchers propose a model where Yᵢ is a function of Xᵢ and β, plus an additive error term, expressed as Yᵢ = f(Xᵢ, β) + eᵢ. The specific form of the function f must be chosen, either based on prior knowledge or by selecting a convenient form like a simple linear model. Once the model form is specified, a method such as least squares is used to estimate the parameters. This method finds the value of β that minimizes the sum of squared errors. The result is an estimate of the parameters, denoted as β̂, which can then be used to calculate fitted values (Ŷᵢ = f(Xᵢ, β̂)) for prediction or to assess the model's accuracy.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0006",
+          "regressionanalysis_b1433f43_c0007",
+          "regressionanalysis_b1433f43_c0008",
+          "regressionanalysis_b1433f43_c0009"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0006",
+          "regressionanalysis_b1433f43_c0009",
+          "regressionanalysis_b1433f43_c0007",
+          "regressionanalysis_b1433f43_c0008"
+        ]
+      },
+      {
+        "question": "What are some classical assumptions of regression analysis, and what methods have been developed to address violations of these assumptions in real-world settings?",
+        "answer": "Classical assumptions for regression analysis include that independent variables are measured without error, the variance of residuals is constant across observations (homoscedasticity), and the residuals are uncorrelated with one another. Because these assumptions are unlikely to hold exactly in practice, practitioners have developed various methods. For instance, modeling errors-in-variables can be used when independent variables are measured with errors. To address non-constant variance in residuals, heteroscedasticity-consistent standard errors can be employed. For correlated errors, techniques such as clustered standard errors, geographic weighted regression, or Newey–West standard errors are available.",
+        "related_chunk_ids": [
+          "regressionanalysis_b1433f43_c0014",
+          "regressionanalysis_b1433f43_c0015"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "regressionanalysis_b1433f43_c0014",
+          "regressionanalysis_b1433f43_c0015"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:46.793Z",
+    "content_format": "markdown",
+    "total_chunks": 34,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

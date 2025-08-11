@@ -1,0 +1,617 @@
+{
+  "article": {
+    "id": "mensrea_c152638a",
+    "title": "Mens rea",
+    "url": "https://en.wikipedia.org/wiki/Mens_rea",
+    "lang": "en",
+    "created_at": "2025-07-30T12:39:56.482204",
+    "content": "---\nid: mensrea_c152638a\nurl: https://en.wikipedia.org/wiki/Mens_rea\ntitle: Mens rea\nlang: en\ncreated_at: '2025-07-30T12:36:10.557084'\nchecksum: e1cb784650d41db46f6942aebebf847d50885498dc0bdae53fa2bf4c9ae88abe\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4214\n  char_count: 25807\n  num_chunks: 36\n  original_chunks: 41\n  filtered_out: 5\n  num_sections: 0\n---\nIn criminal law, mens rea (; Law Latin for \"guilty mind\") is the mental state of a defendant who is accused of committing a crime. In common law jurisdictions, most crimes require proof both of mens rea and actus reus (\"guilty act\") before the defendant can be found guilty. == Introduction == The standard common law test of criminal liability is expressed in the Latin phrase actus reus non facit reum nisi mens sit rea, i.e. \"the act is not culpable unless the mind is guilty\". As a general rule, someone who acted without mental fault is not liable in criminal law. Exceptions are known as strict liability crimes. Moreover, when a person intends a harm, but as a result of bad aim or other cause the intent is transferred from an intended victim to an unintended victim, the case is considered to be a matter of transferred intent. The types of mental states that apply to crimes vary depending on whether a jurisdiction follows criminal law under the common law tradition or, within the United States, according to the Model Penal Code. In civil law, it is usually not necessary to prove a subjective mental element to establish liability for breach of contract or tort, for example. But if a tort is intentionally committed or a contract is intentionally breached, such intent may increase the scope of liability and the damages payable to the plaintiff. In some jurisdictions, the terms mens rea and actus reus have been replaced by alternative terminology. == Levels of mens rea within the United States == Under the tradition of common law, judges would often require a \"bad state of mind\" in addition to an action or omission (actus reus) to find a criminal guilty. Over time, culpable mental states (mens rea) became varied among different types of crimes. Such crimes and mental states might include, for example, \"malice\" for murder, \"fraudulence\" for fraud, \"willfulness and corruption\" for perjury, and so on. The crime of manslaughter, further, might not even require a \"bad mind\" but simply a \"negligent\" one. Regardless of how the requirements are categorized, the Supreme Court has explained mens rea requirements for crimes are \"universal\" and essential to \"mature systems of law\", even going so far as to say that this belief undergirds notions of free will and morality. Within the United States, there is no single encompassing criminal law. Criminal laws are passed and enforced by the states‚ or the federal government, but each of these criminal \"codes\" vary and may or may not draw from the same theoretical sources. === State criminal law === The vast majority of criminal prosecutions in the United States are carried out by the several states in accordance with the laws of the state in question. Historically, the states (with the partial exception of civil-law Louisiana) applied common law rules of mens rea similar to those extant in England, but over time American understandings of common law mens rea terms diverged from those of English law and from each other. Concepts like \"general intent\" and \"specific intent\" dominated classifications of mental states in state common law, but by the late 1950s to early 1960s, the common law of mens rea was widely acknowledged to be a slippery, vague, and confused mess. This was one of several factors that led to the development of the Model Penal Code. Nevertheless, states continue to use mental states beyond or besides those listed in the Model Penal Code. Supreme Court Justice Stephen Breyer described the distinction between the two systems in his dissent in Delling v. Idaho: Case One: The defendant, due to insanity, believes that the victim is a wolf. He shoots and kills the victim. Case Two: The defendant, due to insanity, believes that a wolf, a supernatural figure, has ordered him to kill the victim. In Case One, the defendant does not know he has killed a human being, and his insanity negates a mental element necessary to commit the crime. In Case Two, the defendant has intentionally killed a victim whom he knows is a human being; he possesses the necessary mens rea. In both cases the defendant is unable, due to insanity, to appreciate the true quality of his act, and therefore unable to perceive that it is wrong. But … the defendant in Case One could defend the charge by arguing that he lacked the mens rea, whereas the defendant in Case Two would not be able to raise a defense based on his mental illness. === Federal criminal law === Since the federal government of the United States does not have a generalized police power like that of the states, the scope of its criminal statutes is necessarily circumscribed. Ordinary prosecutions are the province of the states, and only crimes connected to the constitutional powers may be pursued by the federal government. Nevertheless, the Supreme Court holds that required mens rea is an essential element of federal criminal offenses. Consequently, Title 18 of the United States Code does not use the aforementioned culpability scheme but relies instead on more traditional definitions of crimes taken from common law. For example, malice aforethought is used as a requirement for committing capital murder, and the Supreme Court has applied mental states such as \"willfully.\" === Model Penal Code === Because the landscape of criminal law varied from state to state, the American Law Institute (which issues \"restatements\" of American legal jurisprudence) declined to issue a restatement of criminal law in favor of a \"model\" code for states to issue new, standardized criminal law. This Model Penal Code (\"MPC\") was completed in 1962, and received praise from legal scholars for its reformulation of criminal law. Although not all states follow the criminal law as constructed within the MPC, over 34 states had adopted part or substantially all of the MPC as law by 1983. The federal government has not adopted the MPC, although it has attempted to do so for many decades. The formulation of mens rea set forth in the Model Penal Code has been highly influential throughout the United States in clarifying the discussion of the different modes of culpability since its publication. The following levels of mens rea are found in the MPC §2.02(2), and are considered by the United States Supreme Court to be the four states of mind that give rise to criminal liability: Negligently: a \"reasonable person\" ought to be aware of a \"substantial and unjustifiable risk\" that is a \"gross deviation\" from a normal standard of care. Recklessly: the actor \"consciously disregards a substantial and unjustifiable risk\" in \"gross deviation\" from a normal standard of care. Knowingly: the actor is \"practically certain\" that his conduct will lead to the result, or is aware to a high probability that his conduct is of a prohibited nature, or is aware to a high probability that the attendant circumstances exist. Purposefully: the actor consciously engages in conduct and \"desires\" the result. The Supreme Court has not found a large difference between purposeful and knowing conduct, not only in theory but also in application. The above mental states also work in a hierarchy, with negligence as the lowest mental state and purposefully as the highest: a finding of purposefully/intentional establishes a state of knowingness, recklessness, and negligence; a finding of knowingness establishes a finding of recklessness and negligence, and a finding of recklessness establishes a state of negligence.(5) The MPC also recognizes culpability not because of a mental state, but for crimes that are legislatively proscribed due to the imposition of \"absolute liability.\" Strict liability crimes will require evidence of such legislative intent, and courts seriously examine such evidence before assuming a crime permits strict liability rather than a mens rea. Strict liability: the actor engaged in conduct and his mental state is irrelevant. This mens rea may only be applied where the forbidden conduct is a mere violation, i.e. a civil infraction. === Differences between common law crimes and MPC crimes === The elements constituting a crime vary between codes that draw on common law principles and those that draw from the Model Penal Code. For example, the mens rea required of murder in federal law under the United States Code is distinct from the mens rea of murder under the Texas Penal Code (which adopted the Model Penal Code in 1974): In the common law approach as under 18 U.S.C. §1111, the definition of murder includes an actus reus (the unlawful killing of a human being) and a common law mens rea: malice aforethought. Modern criminal law approaches the analysis somewhat differently. Using a framework from the American Law Institute's Model Penal Code, homicide is a \"results\" offense in that it forbids any \"purposeful\" or \"knowing\" conduct that causes, and therefore results in, the death of another human being. \"Purposeful\" in this sense means the actor possessed a conscious purpose or objective that the result (i.e. the death of another human being) be achieved. \"Knowing\" means that the actor was aware or practically certain that a death would result, but had no purpose or desire for it to occur. By contrast with traditional common law, the Model Penal Code specifically distinguishes purpose and knowledge to avoid confusion regarding \"intent\" elements. Many states still adhere to older terminology, relying on the terms \"intentional\" to cover both types of mens rea: \"purposeful\" and \"knowing\". === Limits and criticisms of MPC mens rea === Not all states have adopted the MPC, and for states that have, application of the Model Code varies. Despite its attempt to standardize criminal law, this variance has resulted in confusion and criticism. Some scholars have criticized the levels of culpability in the current Model Penal Code as insufficient or needing revision. Scholars' allegations include incoherency from conflicted philosophical commitments, or the federal governments' failure to explicitly adopt the Model Penal Code resulting in departure from common law precedents. Since the publication of the MPC, confusion has also occurred where norms towards crimes have also changed: especially regarding sexual crimes, hate crimes, drug crimes, and digital crimes. But while some scholarship argues that commitment to reforms gave way to \"cynicism and fatigue,\" others argue the original commitment of the MPC to \"imprisonment as a last result\" should be preserved in potential revisions to the Code and criminal law. Rather than dwell on philosophical or normative arguments, some scholars have looked to evidence-based arguments to update the Code. In an empirical study, participants were presented with scenarios and asked to rate how deserving of punishment the scenario was. The results showed that participants' judgments matched up with the hierarchy of mens rea in the MPC, but also found that participants struggled most with \"recklessness\" scenarios. As a result, the study suggests revising the language of the categories. == Modes of culpability outside the United States == The levels of mens rea and the distinction between them vary among jurisdictions. Although common law originated from England, the common law of each jurisdiction with regard to culpability varies as precedents and statutes vary. === England and Wales === Direct intention: the actor has a clear foresight of the consequences of his actions, and desires those consequences to occur. It is his aim or purpose to achieve this consequence. Oblique intention: the result is a virtually certain consequence or a 'virtual certainty' of the defendant's actions, and that the defendant appreciates that such was the case. Knowingly: the actor knows, or should know, that the results of his conduct are reasonably certain to occur. Recklessness: the actor foresees that particular consequences may occur and proceeds with the given conduct, not caring whether those consequences actually occur or not. Criminal negligence: the actor did not actually foresee that the particular consequences would flow from his actions, but a reasonable person, in the same circumstances, would have foreseen those consequences. === Scotland === Intention: the accused willingly committed a criminal act entirely aware of his actions and their consequences. Necessary for murder and for assault. Recklessness: the accused was aware the criminal act could be potentially dangerous but did not give a second thought to its consequences, for example, involuntary culpable homicide. === Canada === The Supreme Court of Canada has found that the Canadian Charter of Rights and Freedoms guarantees a minimum requirement for the mental state of various crimes. For example, the crime of murder must include a mental requirement of at least subjective foresight of death. For crimes where imprisonment is a sanction, there is a requirement of at least a defence of due diligence. === Australia === Mens rea is an element of the offence that the prosecution needs to assert beyond a reasonable doubt for the accused to be found fully liable of the offence, assuming the offence is one that requires an element of mens rea (see, He Kaw Teh v R - case from the Australian High Court regarding importance of establishment of the element of mens rea). Some offences exist whereby an act can be proven but there is lack of the necessary guilt of mind, such can be seen in instances where courts are unable to establish criminal intent due to persistent mental health or cognitive impairment (see, Mental Health and Cognitive Impairment (Forensic Provisions) Act (NSW) s 30). Mens rea can be established both through common law (see R v Morgan) or through statute law. Often in cases where the full guilty mind can not be established, statute law in Australia will provide an alternative sentencing option, such relationship can be seen in the Crimes Act 1900, s33 and 35, where s33(3) states s 35 as an alternate sentence for a finding of Grievous Bodily Harm in the event whereby the Jury is not satified that the accused held the necessary element of specific intent required for criminal liability under s 33. In such instances, s 35 being a charge of recklessness instead of intent, is prescribed. === India === Mens Rea in the Indian Penal Code 1860 sets out the definition of offences, the general conditions of liability, the conditions of exemptions from liability and punishments for the respective offences. Legislatures had not used the common law doctrine of mens rea in defining these crimes. However, they preferred to import it by using different terms indicating the required evil intent or mens rea as an essence of a particular offence. Guilt in respect to almost all offences created under the IPC is fastened either on the ground of intention, knowledge or reason to believe. Almost all the offences under the IPC are qualified by one or other words such as 'wrongful gain or loss', 'dishonesty', 'fraudulently', 'reason to believe', 'criminal knowledge or intention', 'intentional cooperation', 'voluntarily', 'malignantly', 'wantonly', 'maliciously'. All these words indicate the blameworthy mental condition required at the time of commission of the offence, nowhere found in the IPC, its essence is reflected in almost all the provisions of the Indian Penal Code 1860. Every offence created under the IPC virtually imports the idea of criminal intent or mens rea in some form or other. === Islamic law === In Islamic law, intention (niyya) is a criterion for determining whether a criminal act is punishable or pardonable, or whether the penalty for such a crime is predetermined (ḥadd) or discretionary (taʿzīr). The offender cannot be found guilty until their intention in committing the crime has been taken into consideration. == Ignorance of law contrasted with mens rea == The general rule under common law and statutory law is that ignorance of the law or a mistake of law is no defense to criminal prosecution. However, in some cases, courts have held that if knowledge of a law, or if intent to break a law, is a material element of an offense, then a defendant may use good faith ignorance as a defense. In the 1991 US Supreme Court opinion for Cheek v. United States, Byron White wrote: The proliferation of statutes and regulations has sometimes made it difficult for the average citizen to know and comprehend the extent of the duties and obligations imposed by the tax laws. [...] Thus, the Court almost 60 years ago interpreted the statutory term \"willfully\" as used in the federal criminal tax statutes as carving out an exception to the traditional rule. This special treatment of criminal tax offenses is largely due to the complexity of the tax laws. Crimes like tax evasion are specific intent crimes and require intent to violate the law as an element of the offense. In R v. Klundert, for example, the Court of Appeal for Ontario found as follows:  Section 239(1)(d) is part of an Act which is necessarily and notoriously complex. It is subject to ongoing revision. No lay person is expected to know all the complexities of the tax laws. It is accepted that people will act on the advice of professionals and that the advice will often turn on the meanings to be given to provisions in the Act that are open to various interpretations. Furthermore, it is accepted that one may legitimately structure one's affairs so as to minimize tax liability. Considered in this legislative context, I have no difficulty in holding that a mistake or ignorance as to one's liability to pay tax under the Act may negate the fault requirement in the provision, regardless of whether it is a factual mistake, a legal mistake, or a combination of both. A good-faith belief that a law is unjust or unconstitutional is no excuse, but \"reasonable reliance upon an official statement of law, afterward determined to be invalid or erroneous\" does not constitute a criminal act. In the United States, a law must be reasonably clear; it must be worded so that a reasonable layman can comprehend the specific prohibited acts. Otherwise, the law may be unconstitutional pursuant to the vagueness doctrine. == Subjective and objective tests == A hybrid test for the existence of mens rea is as follows: The court will have little difficulty in establishing mens rea if there is actual evidence – for instance, if the accused made an admissible admission. This would satisfy a subjective test. But a significant proportion of those accused of crimes makes no such admission. Hence, some degree of objectivity must be brought to bear as the basis upon which to impute the necessary components. It is always reasonable to assume that people of ordinary intelligence are aware of their physical surroundings and of the ordinary laws of cause and effect (see causation). Thus, when a person plans what to do and what not to do, they will understand the range of likely outcomes from given behaviour on a sliding scale from \"inevitable\" to \"probable\" to \"possible\" to \"improbable\". The more an outcome shades towards the \"inevitable\" end of the scale, the more likely it is that the accused both foresaw and desired it, and, therefore, the safer it is to impute intention. If there is clear subjective evidence that the accused did not have foresight, but a reasonable person would have, the hybrid test may find criminal negligence. In terms of the burden of proof, the requirement is that a jury must have a high degree of certainty before convicting, defined as \"beyond a reasonable doubt\" in the United States and \"sure\" in the United Kingdom. It is this reasoning that justifies the defenses of infancy, and of lack of mental capacity under the M'Naghten Rules, an alternate common law rule (e.g., Durham rule), and one of various statutes defining mental illness as an excuse. Moreover, if there is an irrebuttable presumption of doli incapax – that is, that the accused did not have sufficient understanding of the nature and quality of his actions – then the requisite mens rea is absent no matter what degree of probability might otherwise have been present. For these purposes, therefore, where the relevant statutes are silent and it is for the common law to form the basis of potential liability, the reasonable person must be endowed with the same intellectual and physical qualities as the accused, and the test must be whether an accused with these specific attributes would have had the requisite foresight and desire. In English law, s. 8 Criminal Justice Act 1967 provides a statutory framework within which mens rea is assessed. It states: A court or jury, in determining whether a person has committed an offense, Under s. 8(b), therefore, the jury is allowed a wide latitude in applying a hybrid test to impute intention or foresight (for the purposes of recklessness) on the basis of all the evidence. == Relevance of motive == One of the mental components often raised in issue is that of motive. If the accused admits to having a motive consistent with the elements of foresight and desire, this will add to the level of probability that the actual outcome was intended (it makes the prosecution case more credible). But if there is clear evidence that the accused had a different motive, this may decrease the probability that he or she desired the actual outcome. In such a situation, the motive may become subjective evidence that the accused did not intend, but was reckless or willfully blind. Motive cannot normally be a defense. If, for example, a person breaks into a laboratory used for the testing of pharmaceuticals on animals, the question of guilt is determined by the presence of an actus reus, i.e. entry without consent and damage to property, and a mens rea, i.e. intention to enter and cause the damage. That the person might have had a clearly articulated political motive to protest such testing does not affect liability. If motive has any relevance, this may be addressed in the sentencing part of the trial, when the court considers what punishment, if any, is appropriate. Rarely, a motive may amount to a defence if it is specifically allowed in law, or is protected as a right (for example, if a conviction for crimes committed during a protest would unduly interfere with free speech rights; see DPP v Ziegler). == Recklessness (United States: \"willful blindness\") == In such cases, there is clear subjective evidence that the accused foresaw but did not desire the particular outcome. When the accused failed to stop the given behavior, he took the risk of causing the given loss or damage. There is always some degree of intention subsumed within recklessness. During the course of the conduct, the accused foresees that he may be putting another at risk of injury: A choice must be made at that point in time. By deciding to proceed, the accused actually intends the other to be exposed to the risk of that injury. The greater the probability of that risk maturing into the foreseen injury, the greater the degree of recklessness and, subsequently, sentence rendered. In common law, for example, an unlawful homicide committed recklessly would ordinarily constitute the crime of involuntary manslaughter. One committed with \"extreme\" or \"gross\" recklessness as to human life would constitute murder, sometimes defined as \"depraved heart\" or \"abandoned and malignant heart\" or \"depraved indifference\" murder. == Criminal negligence == Here, the test is both subjective and objective. There is credible subjective evidence that the particular accused neither foresaw nor desired the particular outcome, thus potentially excluding both intention and recklessness. But a reasonable person with the same abilities and skills as the accused would have foreseen and taken precautions to prevent the loss and damage being sustained. Only a small percentage of offences are defined with this mens rea requirement. Most legislatures prefer to base liability on either intention or recklessness and, faced with the need to establish recklessness as the default mens rea for guilt, those practising in most legal systems rely heavily on objective tests to establish the minimum requirement of foresight for recklessness. == Consciousness of guilt == Consciousness of guilt is a type of circumstantial evidence of criminal intent that judges, prosecutors, and juries may consider when weighing the relative guilt or innocence of a defendant. It is admissible evidence, and judges are required to instruct juries on this form of evidence. Deceptive statements, failure to cooperate with authorities, or evasive actions made by a defendant after the commission of a crime or other wrongdoing are seen as evidence of a guilty conscience. These are not the typical behaviors of an innocent person, and a \"defendant's actions are compared unfavorably to what a normal, innocent person would have done, with the implication that the discrepancy indicates guilt\". == See also == Animus nocendi Command responsibility Henry de Bracton Morissette v. United States (1952) Flores-Figueroa v. United States (2009) Voluntas necandi == References == == Further reading == Dubber, Markus D. (2002). Criminal Law: Model Penal Code. Foundation Press. Badar, Mohamed Elewa (2013). The Concept of Mens Rea in International Criminal Law. Hart Publishing. ISBN 9781782250661. Knoops, G.-J. A. (2017). Mens Rea at the International Criminal Court. Brill. ISBN 9789004307889. == External links == Criminal Responsibility and Intent Archived 2011-09-28 at the Wayback Machine Mens Rea: The Need for a Meaningful Intent Requirement in Federal Criminal Law: Hearing before the Over-Criminalization Task Force of 2013 of the Committee on the Judiciary, House of Representatives, One Hundred Thirteenth Congress, First Session, July 19, 2013."
+  },
+  "chunks": [
+    {
+      "id": "mensrea_c152638a_c0000",
+      "article_id": "mensrea_c152638a",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 275,
+      "content": "In criminal law, mens rea (; Law Latin for \"guilty mind\") is the mental state of a defendant who is accused of committing a crime. In common law jurisdictions, most crimes require proof both of mens rea and actus reus (\"guilty act\") before the defendant can be found guilty.",
+      "char_count": 274,
+      "token_estimate": 68,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0001",
+      "article_id": "mensrea_c152638a",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 293,
+      "end_char": 1208,
+      "content": "== Introduction == The standard common law test of criminal liability is expressed in the Latin phrase actus reus non facit reum nisi mens sit rea, i.e. \"the act is not culpable unless the mind is guilty\". As a general rule, someone who acted without mental fault is not liable in criminal law. Exceptions are known as strict liability crimes. Moreover, when a person intends a harm, but as a result of bad aim or other cause the intent is transferred from an intended victim to an unintended victim, the case is considered to be a matter of transferred intent. The types of mental states that apply to crimes vary depending on whether a jurisdiction follows criminal law under the common law tradition or, within the United States, according to the Model Penal Code. In civil law, it is usually not necessary to prove a subjective mental element to establish liability for breach of contract or tort, for example.",
+      "char_count": 914,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0002",
+      "article_id": "mensrea_c152638a",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 1208,
+      "end_char": 1483,
+      "content": "But if a tort is intentionally committed or a contract is intentionally breached, such intent may increase the scope of liability and the damages payable to the plaintiff. In some jurisdictions, the terms mens rea and actus reus have been replaced by alternative terminology.",
+      "char_count": 275,
+      "token_estimate": 68,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0003",
+      "article_id": "mensrea_c152638a",
+      "section": "== Levels of mens rea within the United States ==",
+      "heading_path": "== Levels of mens rea within the United States ==",
+      "start_char": 1515,
+      "end_char": 2415,
+      "content": "== Levels of mens rea within the United States == Under the tradition of common law, judges would often require a \"bad state of mind\" in addition to an action or omission (actus reus) to find a criminal guilty. Over time, culpable mental states (mens rea) became varied among different types of crimes. Such crimes and mental states might include, for example, \"malice\" for murder, \"fraudulence\" for fraud, \"willfulness and corruption\" for perjury, and so on. The crime of manslaughter, further, might not even require a \"bad mind\" but simply a \"negligent\" one. Regardless of how the requirements are categorized, the Supreme Court has explained mens rea requirements for crimes are \"universal\" and essential to \"mature systems of law\", even going so far as to say that this belief undergirds notions of free will and morality. Within the United States, there is no single encompassing criminal law.",
+      "char_count": 899,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0004",
+      "article_id": "mensrea_c152638a",
+      "section": "== Levels of mens rea within the United States ==",
+      "heading_path": "== Levels of mens rea within the United States ==",
+      "start_char": 2415,
+      "end_char": 2593,
+      "content": "Criminal laws are passed and enforced by the states‚ or the federal government, but each of these criminal \"codes\" vary and may or may not draw from the same theoretical sources.",
+      "char_count": 178,
+      "token_estimate": 44,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0005",
+      "article_id": "mensrea_c152638a",
+      "section": "== = State criminal law ==",
+      "heading_path": "== = State criminal law ==",
+      "start_char": 2571,
+      "end_char": 3470,
+      "content": "== = State criminal law === The vast majority of criminal prosecutions in the United States are carried out by the several states in accordance with the laws of the state in question. Historically, the states (with the partial exception of civil-law Louisiana) applied common law rules of mens rea similar to those extant in England, but over time American understandings of common law mens rea terms diverged from those of English law and from each other. Concepts like \"general intent\" and \"specific intent\" dominated classifications of mental states in state common law, but by the late 1950s to early 1960s, the common law of mens rea was widely acknowledged to be a slippery, vague, and confused mess. This was one of several factors that led to the development of the Model Penal Code. Nevertheless, states continue to use mental states beyond or besides those listed in the Model Penal Code.",
+      "char_count": 898,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0006",
+      "article_id": "mensrea_c152638a",
+      "section": "== = State criminal law ==",
+      "heading_path": "== = State criminal law ==",
+      "start_char": 3470,
+      "end_char": 4444,
+      "content": "Supreme Court Justice Stephen Breyer described the distinction between the two systems in his dissent in Delling v. Idaho: Case One: The defendant, due to insanity, believes that the victim is a wolf. He shoots and kills the victim. Case Two: The defendant, due to insanity, believes that a wolf, a supernatural figure, has ordered him to kill the victim. In Case One, the defendant does not know he has killed a human being, and his insanity negates a mental element necessary to commit the crime. In Case Two, the defendant has intentionally killed a victim whom he knows is a human being; he possesses the necessary mens rea. In both cases the defendant is unable, due to insanity, to appreciate the true quality of his act, and therefore unable to perceive that it is wrong. But … the defendant in Case One could defend the charge by arguing that he lacked the mens rea, whereas the defendant in Case Two would not be able to raise a defense based on his mental illness.",
+      "char_count": 974,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0007",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Federal criminal law ==",
+      "heading_path": "== = Federal criminal law ==",
+      "start_char": 4447,
+      "end_char": 5238,
+      "content": "== = Federal criminal law === Since the federal government of the United States does not have a generalized police power like that of the states, the scope of its criminal statutes is necessarily circumscribed. Ordinary prosecutions are the province of the states, and only crimes connected to the constitutional powers may be pursued by the federal government. Nevertheless, the Supreme Court holds that required mens rea is an essential element of federal criminal offenses. Consequently, Title 18 of the United States Code does not use the aforementioned culpability scheme but relies instead on more traditional definitions of crimes taken from common law. For example, malice aforethought is used as a requirement for committing capital murder, and the Supreme Court has applied mental states such as \"willfully.\"",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0008",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Model Penal Code ==",
+      "heading_path": "== = Model Penal Code ==",
+      "start_char": 5262,
+      "end_char": 6171,
+      "content": "== = Model Penal Code === Because the landscape of criminal law varied from state to state, the American Law Institute (which issues \"restatements\" of American legal jurisprudence) declined to issue a restatement of criminal law in favor of a \"model\" code for states to issue new, standardized criminal law. This Model Penal Code (\"MPC\") was completed in 1962, and received praise from legal scholars for its reformulation of criminal law. Although not all states follow the criminal law as constructed within the MPC, over 34 states had adopted part or substantially all of the MPC as law by 1983. The federal government has not adopted the MPC, although it has attempted to do so for many decades. The formulation of mens rea set forth in the Model Penal Code has been highly influential throughout the United States in clarifying the discussion of the different modes of culpability since its publication.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0009",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Model Penal Code ==",
+      "heading_path": "== = Model Penal Code ==",
+      "start_char": 6171,
+      "end_char": 7104,
+      "content": "The following levels of mens rea are found in the MPC §2.02(2), and are considered by the United States Supreme Court to be the four states of mind that give rise to criminal liability: Negligently: a \"reasonable person\" ought to be aware of a \"substantial and unjustifiable risk\" that is a \"gross deviation\" from a normal standard of care. Recklessly: the actor \"consciously disregards a substantial and unjustifiable risk\" in \"gross deviation\" from a normal standard of care. Knowingly: the actor is \"practically certain\" that his conduct will lead to the result, or is aware to a high probability that his conduct is of a prohibited nature, or is aware to a high probability that the attendant circumstances exist. Purposefully: the actor consciously engages in conduct and \"desires\" the result. The Supreme Court has not found a large difference between purposeful and knowing conduct, not only in theory but also in application.",
+      "char_count": 933,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0010",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Model Penal Code ==",
+      "heading_path": "== = Model Penal Code ==",
+      "start_char": 7105,
+      "end_char": 8025,
+      "content": "The above mental states also work in a hierarchy, with negligence as the lowest mental state and purposefully as the highest: a finding of purposefully/intentional establishes a state of knowingness, recklessness, and negligence; a finding of knowingness establishes a finding of recklessness and negligence, and a finding of recklessness establishes a state of negligence.(5) The MPC also recognizes culpability not because of a mental state, but for crimes that are legislatively proscribed due to the imposition of \"absolute liability.\" Strict liability crimes will require evidence of such legislative intent, and courts seriously examine such evidence before assuming a crime permits strict liability rather than a mens rea. Strict liability: the actor engaged in conduct and his mental state is irrelevant. This mens rea may only be applied where the forbidden conduct is a mere violation, i.e. a civil infraction.",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0011",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Differences between common law crimes and MPC crimes ==",
+      "heading_path": "== = Differences between common law crimes and MPC crimes ==",
+      "start_char": 8062,
+      "end_char": 8948,
+      "content": "== = Differences between common law crimes and MPC crimes === The elements constituting a crime vary between codes that draw on common law principles and those that draw from the Model Penal Code. For example, the mens rea required of murder in federal law under the United States Code is distinct from the mens rea of murder under the Texas Penal Code (which adopted the Model Penal Code in 1974): In the common law approach as under 18 U.S.C. §1111, the definition of murder includes an actus reus (the unlawful killing of a human being) and a common law mens rea: malice aforethought. Modern criminal law approaches the analysis somewhat differently. Using a framework from the American Law Institute's Model Penal Code, homicide is a \"results\" offense in that it forbids any \"purposeful\" or \"knowing\" conduct that causes, and therefore results in, the death of another human being.",
+      "char_count": 885,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0012",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Differences between common law crimes and MPC crimes ==",
+      "heading_path": "== = Differences between common law crimes and MPC crimes ==",
+      "start_char": 8948,
+      "end_char": 9541,
+      "content": "\"Purposeful\" in this sense means the actor possessed a conscious purpose or objective that the result (i.e. the death of another human being) be achieved. \"Knowing\" means that the actor was aware or practically certain that a death would result, but had no purpose or desire for it to occur. By contrast with traditional common law, the Model Penal Code specifically distinguishes purpose and knowledge to avoid confusion regarding \"intent\" elements. Many states still adhere to older terminology, relying on the terms \"intentional\" to cover both types of mens rea: \"purposeful\" and \"knowing\".",
+      "char_count": 593,
+      "token_estimate": 148,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0013",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Limits and criticisms of MPC mens rea ==",
+      "heading_path": "== = Limits and criticisms of MPC mens rea ==",
+      "start_char": 9527,
+      "end_char": 10307,
+      "content": "== = Limits and criticisms of MPC mens rea === Not all states have adopted the MPC, and for states that have, application of the Model Code varies. Despite its attempt to standardize criminal law, this variance has resulted in confusion and criticism. Some scholars have criticized the levels of culpability in the current Model Penal Code as insufficient or needing revision. Scholars' allegations include incoherency from conflicted philosophical commitments, or the federal governments' failure to explicitly adopt the Model Penal Code resulting in departure from common law precedents. Since the publication of the MPC, confusion has also occurred where norms towards crimes have also changed: especially regarding sexual crimes, hate crimes, drug crimes, and digital crimes.",
+      "char_count": 779,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0014",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Limits and criticisms of MPC mens rea ==",
+      "heading_path": "== = Limits and criticisms of MPC mens rea ==",
+      "start_char": 10307,
+      "end_char": 11076,
+      "content": "But while some scholarship argues that commitment to reforms gave way to \"cynicism and fatigue,\" others argue the original commitment of the MPC to \"imprisonment as a last result\" should be preserved in potential revisions to the Code and criminal law. Rather than dwell on philosophical or normative arguments, some scholars have looked to evidence-based arguments to update the Code. In an empirical study, participants were presented with scenarios and asked to rate how deserving of punishment the scenario was. The results showed that participants' judgments matched up with the hierarchy of mens rea in the MPC, but also found that participants struggled most with \"recklessness\" scenarios. As a result, the study suggests revising the language of the categories.",
+      "char_count": 769,
+      "token_estimate": 192,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0015",
+      "article_id": "mensrea_c152638a",
+      "section": "== Modes of culpability outside the United States ==",
+      "heading_path": "== Modes of culpability outside the United States ==",
+      "start_char": 11084,
+      "end_char": 11315,
+      "content": "== Modes of culpability outside the United States == The levels of mens rea and the distinction between them vary among jurisdictions. Although common law originated from England, the common law of each jurisdiction with regard to culpability varies as precedents and statutes vary.",
+      "char_count": 282,
+      "token_estimate": 70,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0016",
+      "article_id": "mensrea_c152638a",
+      "section": "== = England and Wales ==",
+      "heading_path": "== = England and Wales ==",
+      "start_char": 11340,
+      "end_char": 12189,
+      "content": "== = England and Wales === Direct intention: the actor has a clear foresight of the consequences of his actions, and desires those consequences to occur. It is his aim or purpose to achieve this consequence. Oblique intention: the result is a virtually certain consequence or a 'virtual certainty' of the defendant's actions, and that the defendant appreciates that such was the case. Knowingly: the actor knows, or should know, that the results of his conduct are reasonably certain to occur. Recklessness: the actor foresees that particular consequences may occur and proceeds with the given conduct, not caring whether those consequences actually occur or not. Criminal negligence: the actor did not actually foresee that the particular consequences would flow from his actions, but a reasonable person, in the same circumstances, would have foreseen those consequences.",
+      "char_count": 873,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0017",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Scotland ==",
+      "heading_path": "== = Scotland ==",
+      "start_char": 12205,
+      "end_char": 12540,
+      "content": "== = Scotland === Intention: the accused willingly committed a criminal act entirely aware of his actions and their consequences. Necessary for murder and for assault. Recklessness: the accused was aware the criminal act could be potentially dangerous but did not give a second thought to its consequences, for example, involuntary culpable homicide.",
+      "char_count": 350,
+      "token_estimate": 87,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0018",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Canada ==",
+      "heading_path": "== = Canada ==",
+      "start_char": 12554,
+      "end_char": 12934,
+      "content": "== = Canada === The Supreme Court of Canada has found that the Canadian Charter of Rights and Freedoms guarantees a minimum requirement for the mental state of various crimes. For example, the crime of murder must include a mental requirement of at least subjective foresight of death. For crimes where imprisonment is a sanction, there is a requirement of at least a defence of due diligence.",
+      "char_count": 393,
+      "token_estimate": 98,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0019",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Australia ==",
+      "heading_path": "== = Australia ==",
+      "start_char": 12951,
+      "end_char": 13734,
+      "content": "== = Australia === Mens rea is an element of the offence that the prosecution needs to assert beyond a reasonable doubt for the accused to be found fully liable of the offence, assuming the offence is one that requires an element of mens rea (see, He Kaw Teh v R - case from the Australian High Court regarding importance of establishment of the element of mens rea). Some offences exist whereby an act can be proven but there is lack of the necessary guilt of mind, such can be seen in instances where courts are unable to establish criminal intent due to persistent mental health or cognitive impairment (see, Mental Health and Cognitive Impairment (Forensic Provisions) Act (NSW) s 30). Mens rea can be established both through common law (see R v Morgan) or through statute law.",
+      "char_count": 782,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0020",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Australia ==",
+      "heading_path": "== = Australia ==",
+      "start_char": 13734,
+      "end_char": 14267,
+      "content": "Often in cases where the full guilty mind can not be established, statute law in Australia will provide an alternative sentencing option, such relationship can be seen in the Crimes Act 1900, s33 and 35, where s33(3) states s 35 as an alternate sentence for a finding of Grievous Bodily Harm in the event whereby the Jury is not satified that the accused held the necessary element of specific intent required for criminal liability under s 33. In such instances, s 35 being a charge of recklessness instead of intent, is prescribed.",
+      "char_count": 533,
+      "token_estimate": 133,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0021",
+      "article_id": "mensrea_c152638a",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 14264,
+      "end_char": 15136,
+      "content": "== = India === Mens Rea in the Indian Penal Code 1860 sets out the definition of offences, the general conditions of liability, the conditions of exemptions from liability and punishments for the respective offences. Legislatures had not used the common law doctrine of mens rea in defining these crimes. However, they preferred to import it by using different terms indicating the required evil intent or mens rea as an essence of a particular offence. Guilt in respect to almost all offences created under the IPC is fastened either on the ground of intention, knowledge or reason to believe. Almost all the offences under the IPC are qualified by one or other words such as 'wrongful gain or loss', 'dishonesty', 'fraudulently', 'reason to believe', 'criminal knowledge or intention', 'intentional cooperation', 'voluntarily', 'malignantly', 'wantonly', 'maliciously'.",
+      "char_count": 871,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0022",
+      "article_id": "mensrea_c152638a",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 15136,
+      "end_char": 15472,
+      "content": "All these words indicate the blameworthy mental condition required at the time of commission of the offence, nowhere found in the IPC, its essence is reflected in almost all the provisions of the Indian Penal Code 1860. Every offence created under the IPC virtually imports the idea of criminal intent or mens rea in some form or other.",
+      "char_count": 336,
+      "token_estimate": 84,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0023",
+      "article_id": "mensrea_c152638a",
+      "section": "== = Islamic law ==",
+      "heading_path": "== = Islamic law ==",
+      "start_char": 15479,
+      "end_char": 15806,
+      "content": "== = Islamic law === In Islamic law, intention (niyya) is a criterion for determining whether a criminal act is punishable or pardonable, or whether the penalty for such a crime is predetermined (ḥadd) or discretionary (taʿzīr). The offender cannot be found guilty until their intention in committing the crime has been taken into consideration.",
+      "char_count": 345,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0024",
+      "article_id": "mensrea_c152638a",
+      "section": "== Ignorance of law contrasted with mens rea ==",
+      "heading_path": "== Ignorance of law contrasted with mens rea ==",
+      "start_char": 15853,
+      "end_char": 16792,
+      "content": "== Ignorance of law contrasted with mens rea == The general rule under common law and statutory law is that ignorance of the law or a mistake of law is no defense to criminal prosecution. However, in some cases, courts have held that if knowledge of a law, or if intent to break a law, is a material element of an offense, then a defendant may use good faith ignorance as a defense. In the 1991 US Supreme Court opinion for Cheek v. United States, Byron White wrote: The proliferation of statutes and regulations has sometimes made it difficult for the average citizen to know and comprehend the extent of the duties and obligations imposed by the tax laws. [...] Thus, the Court almost 60 years ago interpreted the statutory term \"willfully\" as used in the federal criminal tax statutes as carving out an exception to the traditional rule. This special treatment of criminal tax offenses is largely due to the complexity of the tax laws.",
+      "char_count": 938,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0025",
+      "article_id": "mensrea_c152638a",
+      "section": "== Ignorance of law contrasted with mens rea ==",
+      "heading_path": "== Ignorance of law contrasted with mens rea ==",
+      "start_char": 16792,
+      "end_char": 17778,
+      "content": "Crimes like tax evasion are specific intent crimes and require intent to violate the law as an element of the offense. In R v. Klundert, for example, the Court of Appeal for Ontario found as follows:  Section 239(1)(d) is part of an Act which is necessarily and notoriously complex. It is subject to ongoing revision. No lay person is expected to know all the complexities of the tax laws. It is accepted that people will act on the advice of professionals and that the advice will often turn on the meanings to be given to provisions in the Act that are open to various interpretations. Furthermore, it is accepted that one may legitimately structure one's affairs so as to minimize tax liability. Considered in this legislative context, I have no difficulty in holding that a mistake or ignorance as to one's liability to pay tax under the Act may negate the fault requirement in the provision, regardless of whether it is a factual mistake, a legal mistake, or a combination of both.",
+      "char_count": 986,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0026",
+      "article_id": "mensrea_c152638a",
+      "section": "== Ignorance of law contrasted with mens rea ==",
+      "heading_path": "== Ignorance of law contrasted with mens rea ==",
+      "start_char": 17779,
+      "end_char": 18222,
+      "content": "A good-faith belief that a law is unjust or unconstitutional is no excuse, but \"reasonable reliance upon an official statement of law, afterward determined to be invalid or erroneous\" does not constitute a criminal act. In the United States, a law must be reasonably clear; it must be worded so that a reasonable layman can comprehend the specific prohibited acts. Otherwise, the law may be unconstitutional pursuant to the vagueness doctrine.",
+      "char_count": 443,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0027",
+      "article_id": "mensrea_c152638a",
+      "section": "== Subjective and objective tests ==",
+      "heading_path": "== Subjective and objective tests ==",
+      "start_char": 18212,
+      "end_char": 19081,
+      "content": "== Subjective and objective tests == A hybrid test for the existence of mens rea is as follows: The court will have little difficulty in establishing mens rea if there is actual evidence – for instance, if the accused made an admissible admission. This would satisfy a subjective test. But a significant proportion of those accused of crimes makes no such admission. Hence, some degree of objectivity must be brought to bear as the basis upon which to impute the necessary components. It is always reasonable to assume that people of ordinary intelligence are aware of their physical surroundings and of the ordinary laws of cause and effect (see causation). Thus, when a person plans what to do and what not to do, they will understand the range of likely outcomes from given behaviour on a sliding scale from \"inevitable\" to \"probable\" to \"possible\" to \"improbable\".",
+      "char_count": 868,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0028",
+      "article_id": "mensrea_c152638a",
+      "section": "== Subjective and objective tests ==",
+      "heading_path": "== Subjective and objective tests ==",
+      "start_char": 19081,
+      "end_char": 19881,
+      "content": "The more an outcome shades towards the \"inevitable\" end of the scale, the more likely it is that the accused both foresaw and desired it, and, therefore, the safer it is to impute intention. If there is clear subjective evidence that the accused did not have foresight, but a reasonable person would have, the hybrid test may find criminal negligence. In terms of the burden of proof, the requirement is that a jury must have a high degree of certainty before convicting, defined as \"beyond a reasonable doubt\" in the United States and \"sure\" in the United Kingdom. It is this reasoning that justifies the defenses of infancy, and of lack of mental capacity under the M'Naghten Rules, an alternate common law rule (e.g., Durham rule), and one of various statutes defining mental illness as an excuse.",
+      "char_count": 800,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0029",
+      "article_id": "mensrea_c152638a",
+      "section": "== Subjective and objective tests ==",
+      "heading_path": "== Subjective and objective tests ==",
+      "start_char": 19882,
+      "end_char": 20741,
+      "content": "Moreover, if there is an irrebuttable presumption of doli incapax – that is, that the accused did not have sufficient understanding of the nature and quality of his actions – then the requisite mens rea is absent no matter what degree of probability might otherwise have been present. For these purposes, therefore, where the relevant statutes are silent and it is for the common law to form the basis of potential liability, the reasonable person must be endowed with the same intellectual and physical qualities as the accused, and the test must be whether an accused with these specific attributes would have had the requisite foresight and desire. In English law, s. 8 Criminal Justice Act 1967 provides a statutory framework within which mens rea is assessed. It states: A court or jury, in determining whether a person has committed an offense, Under s.",
+      "char_count": 859,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0030",
+      "article_id": "mensrea_c152638a",
+      "section": "== Subjective and objective tests ==",
+      "heading_path": "== Subjective and objective tests ==",
+      "start_char": 20742,
+      "end_char": 20922,
+      "content": "8(b), therefore, the jury is allowed a wide latitude in applying a hybrid test to impute intention or foresight (for the purposes of recklessness) on the basis of all the evidence.",
+      "char_count": 180,
+      "token_estimate": 45,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0031",
+      "article_id": "mensrea_c152638a",
+      "section": "== Relevance of motive ==",
+      "heading_path": "== Relevance of motive ==",
+      "start_char": 20912,
+      "end_char": 21834,
+      "content": "== Relevance of motive == One of the mental components often raised in issue is that of motive. If the accused admits to having a motive consistent with the elements of foresight and desire, this will add to the level of probability that the actual outcome was intended (it makes the prosecution case more credible). But if there is clear evidence that the accused had a different motive, this may decrease the probability that he or she desired the actual outcome. In such a situation, the motive may become subjective evidence that the accused did not intend, but was reckless or willfully blind. Motive cannot normally be a defense. If, for example, a person breaks into a laboratory used for the testing of pharmaceuticals on animals, the question of guilt is determined by the presence of an actus reus, i.e. entry without consent and damage to property, and a mens rea, i.e. intention to enter and cause the damage.",
+      "char_count": 921,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0032",
+      "article_id": "mensrea_c152638a",
+      "section": "== Relevance of motive ==",
+      "heading_path": "== Relevance of motive ==",
+      "start_char": 21834,
+      "end_char": 22350,
+      "content": "That the person might have had a clearly articulated political motive to protest such testing does not affect liability. If motive has any relevance, this may be addressed in the sentencing part of the trial, when the court considers what punishment, if any, is appropriate. Rarely, a motive may amount to a defence if it is specifically allowed in law, or is protected as a right (for example, if a conviction for crimes committed during a protest would unduly interfere with free speech rights; see DPP v Ziegler).",
+      "char_count": 516,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0033",
+      "article_id": "mensrea_c152638a",
+      "section": "== Recklessness (United States: \"willful blindness\") ==",
+      "heading_path": "== Recklessness (United States: \"willful blindness\") ==",
+      "start_char": 22381,
+      "end_char": 23277,
+      "content": "== Recklessness (United States: \"willful blindness\") == In such cases, there is clear subjective evidence that the accused foresaw but did not desire the particular outcome. When the accused failed to stop the given behavior, he took the risk of causing the given loss or damage. There is always some degree of intention subsumed within recklessness. During the course of the conduct, the accused foresees that he may be putting another at risk of injury: A choice must be made at that point in time. By deciding to proceed, the accused actually intends the other to be exposed to the risk of that injury. The greater the probability of that risk maturing into the foreseen injury, the greater the degree of recklessness and, subsequently, sentence rendered. In common law, for example, an unlawful homicide committed recklessly would ordinarily constitute the crime of involuntary manslaughter.",
+      "char_count": 895,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0034",
+      "article_id": "mensrea_c152638a",
+      "section": "== Criminal negligence ==",
+      "heading_path": "== Criminal negligence ==",
+      "start_char": 23450,
+      "end_char": 24226,
+      "content": "== Criminal negligence == Here, the test is both subjective and objective. There is credible subjective evidence that the particular accused neither foresaw nor desired the particular outcome, thus potentially excluding both intention and recklessness. But a reasonable person with the same abilities and skills as the accused would have foreseen and taken precautions to prevent the loss and damage being sustained. Only a small percentage of offences are defined with this mens rea requirement. Most legislatures prefer to base liability on either intention or recklessness and, faced with the need to establish recklessness as the default mens rea for guilt, those practising in most legal systems rely heavily on objective tests to establish the minimum requirement of foresight for recklessness.",
+      "char_count": 800,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "mensrea_c152638a_c0035",
+      "article_id": "mensrea_c152638a",
+      "section": "== Consciousness of guilt ==",
+      "heading_path": "== Consciousness of guilt ==",
+      "start_char": 24254,
+      "end_char": 24961,
+      "content": "== Consciousness of guilt == Consciousness of guilt is a type of circumstantial evidence of criminal intent that judges, prosecutors, and juries may consider when weighing the relative guilt or innocence of a defendant. It is admissible evidence, and judges are required to instruct juries on this form of evidence. Deceptive statements, failure to cooperate with authorities, or evasive actions made by a defendant after the commission of a crime or other wrongdoing are seen as evidence of a guilty conscience. These are not the typical behaviors of an innocent person, and a \"defendant's actions are compared unfavorably to what a normal, innocent person would have done, with the implication that the discrepancy indicates guilt\".",
+      "char_count": 734,
+      "token_estimate": 183,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "In the case of R v. Klundert, what did the Court of Appeal for Ontario determine could negate the fault requirement for an offense under Section 239(1)(d)?",
+        "answer": "The Court of Appeal for Ontario determined that a mistake or ignorance regarding one's liability to pay tax under the Act could negate the fault requirement, regardless of whether the mistake was factual, legal, or a combination of both.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0025"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0025"
+        ]
+      },
+      {
+        "question": "In Justice Stephen Breyer's dissent in Delling v. Idaho, what is the key difference that allows the defendant in 'Case One' to argue a lack of mens rea, while the defendant in 'Case Two' cannot?",
+        "answer": "In 'Case One', the defendant's insanity causes them to believe the victim is a wolf, meaning they do not know they have killed a human being, which negates a necessary mental element of the crime. In 'Case Two', the defendant knows the victim is a human and intentionally kills them, thus possessing the necessary mens rea, even though they were ordered to do so by a supernatural figure in their delusion.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0006"
+        ]
+      },
+      {
+        "question": "Describe the four levels of mens rea as defined in the Model Penal Code §2.02(2).",
+        "answer": "The Model Penal Code (MPC) defines four levels of mens rea: 1. Negligently: A \"reasonable person\" ought to be aware of a \"substantial and unjustifiable risk\" that is a \"gross deviation\" from a normal standard of care. 2. Recklessly: The actor \"consciously disregards a substantial and unjustifiable risk\" in \"gross deviation\" from a normal standard of care. 3. Knowingly: The actor is \"practically certain\" that his conduct will lead to the result, or is aware to a high probability that his conduct is of a prohibited nature or that attendant circumstances exist. 4. Purposefully: The actor consciously engages in conduct and \"desires\" the result.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0009"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0009"
+        ]
+      },
+      {
+        "question": "What is the legal principle in common law that establishes the relationship between the 'guilty act' and the 'guilty mind' for criminal liability?",
+        "answer": "The standard common law principle for criminal liability is expressed in the Latin phrase \"actus reus non facit reum nisi mens sit rea,\" which translates to \"the act is not culpable unless the mind is guilty.\" This means that for most crimes, guilt can only be established if there is proof of both the actus reus (the \"guilty act\") and the mens rea (the \"guilty mind\" or mental state of the defendant).",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0000",
+          "mensrea_c152638a_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0001",
+          "mensrea_c152638a_c0000"
+        ]
+      },
+      {
+        "question": "What two components were traditionally required under common law to establish criminal guilt, and how has the language used to describe these components evolved in some legal systems?",
+        "answer": "Under the common law tradition, establishing criminal guilt required a \"bad state of mind\" (mens rea) in addition to an action or omission (actus reus). In some modern jurisdictions, this terminology has been replaced by alternative terms.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0002",
+          "mensrea_c152638a_c0003"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0003",
+          "mensrea_c152638a_c0002"
+        ]
+      },
+      {
+        "question": "Describe the historical evolution of mens rea in U.S. state criminal law and its current status.",
+        "answer": "Historically, most U.S. states applied common law rules for mens rea similar to those in England. Over time, American interpretations of these rules diverged from English law and from each other, leading to the dominance of concepts like \"general intent\" and \"specific intent\". By the late 1950s, this system was widely considered a \"slippery, vague, and confused mess,\" which was a key factor in the development of the Model Penal Code. Despite this, states continue to have varied criminal codes and often use mental state classifications beyond or in addition to those listed in the Model Penal Code.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0004",
+          "mensrea_c152638a_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0005",
+          "mensrea_c152638a_c0004"
+        ]
+      },
+      {
+        "question": "How does the role of intent or mental state differ between criminal law and civil law cases like torts or contract breaches?",
+        "answer": "In criminal law, a guilty mind (mens rea) is generally required to establish liability. In contrast, for civil law cases such as torts or breach of contract, proving a subjective mental element is usually not necessary to establish liability. However, if a tort or contract breach is committed intentionally, that intent can increase the scope of liability and the damages payable to the plaintiff.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0001",
+          "mensrea_c152638a_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0001",
+          "mensrea_c152638a_c0002"
+        ]
+      },
+      {
+        "question": "Why do the specific culpable mental states, or mens rea, required for crimes vary within the United States?",
+        "answer": "The United States does not have a single, encompassing criminal law. Instead, criminal laws are passed and enforced by individual states and the federal government. These different criminal \"codes\" vary, which leads to different requirements for the culpable mental state (mens rea) for various crimes across jurisdictions.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0003",
+          "mensrea_c152638a_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0003",
+          "mensrea_c152638a_c0004"
+        ]
+      },
+      {
+        "question": "How do the two hypothetical cases described by Justice Stephen Breyer illustrate the complexities in state law *mens rea* that historically led to it being described as a \"confused mess\"?",
+        "answer": "Historically, the common law of *mens rea* in the states was considered a \"slippery, vague, and confused mess.\" Justice Breyer's examples from his dissent in *Delling v. Idaho* illustrate this complexity. In Case One, the defendant's insanity negates the necessary *mens rea* because he does not know he is killing a human being. In Case Two, the defendant possesses the necessary *mens rea* because he intentionally kills a victim he knows is human, even though his actions are driven by an insane delusion. This distinction, where two defendants acting due to insanity face different legal conclusions regarding their mental state, exemplifies the kind of nuanced and confusing legal arguments that characterized the state common law system.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0005",
+          "mensrea_c152638a_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0005",
+          "mensrea_c152638a_c0006"
+        ]
+      },
+      {
+        "question": "How did the Model Penal Code's formulation of mens rea influence and clarify the discussion of criminal culpability in the United States?",
+        "answer": "The Model Penal Code (MPC), completed in 1962, was highly influential in clarifying criminal culpability by establishing a standardized formulation of mens rea. It defined four specific levels of mental states, which the U.S. Supreme Court considers the basis for criminal liability: Negligently, Recklessly, Knowingly, and Purposefully. Furthermore, the MPC organized these states into a hierarchy, where a finding of a higher state (like Purposefully) automatically establishes the lower ones (Knowingly, Recklessly, and Negligently). It also recognized the concept of strict liability for minor civil infractions, where the actor's mental state is irrelevant.",
+        "related_chunk_ids": [
+          "mensrea_c152638a_c0008",
+          "mensrea_c152638a_c0009",
+          "mensrea_c152638a_c0010"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "mensrea_c152638a_c0008",
+          "mensrea_c152638a_c0009",
+          "mensrea_c152638a_c0010"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T13:32:47.681Z",
+    "content_format": "markdown",
+    "total_chunks": 36,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

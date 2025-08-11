@@ -1,0 +1,718 @@
+{
+  "article": {
+    "id": "differentialgeometry_3e90d4e3",
+    "title": "Differential geometry",
+    "url": "https://en.wikipedia.org/wiki/Differential_geometry",
+    "lang": "en",
+    "created_at": "2025-07-31T06:35:01.525163",
+    "content": "---\nid: differentialgeometry_3e90d4e3\nurl: https://en.wikipedia.org/wiki/Differential_geometry\ntitle: Differential geometry\nlang: en\ncreated_at: '2025-07-31T06:27:22.502013'\nchecksum: 6f02eea4f827035165a1a415632f7d4eef5633cd96a769ef839a34c826b1f528\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 5317\n  char_count: 34944\n  num_chunks: 43\n  original_chunks: 51\n  filtered_out: 8\n  num_sections: 0\n---\nDifferential geometry is a mathematical discipline that studies the geometry of smooth shapes and smooth spaces, otherwise known as smooth manifolds. It uses the techniques of single variable calculus, vector calculus, linear algebra and multilinear algebra. The field has its origins in the study of spherical geometry as far back as antiquity. It also relates to astronomy, the geodesy of the Earth, and later the study of hyperbolic geometry by Lobachevsky. The simplest examples of smooth spaces are the plane and space curves and surfaces in the three-dimensional Euclidean space, and the study of these shapes formed the basis for development of modern differential geometry during the 18th and 19th centuries. Since the late 19th century, differential geometry has grown into a field concerned more generally with geometric structures on differentiable manifolds. A geometric structure is one which defines some notion of size, distance, shape, volume, or other rigidifying structure. For example, in Riemannian geometry distances and angles are specified, in symplectic geometry volumes may be computed, in conformal geometry only angles are specified, and in gauge theory certain fields are given over the space. Differential geometry is closely related to, and is sometimes taken to include, differential topology, which concerns itself with properties of differentiable manifolds that do not rely on any additional geometric structure (see that article for more discussion on the distinction between the two subjects). Differential geometry is also related to the geometric aspects of the theory of differential equations, otherwise known as geometric analysis. Differential geometry finds applications throughout mathematics and the natural sciences. Most prominently the language of differential geometry was used by Albert Einstein in his theory of general relativity, and subsequently by physicists in the development of quantum field theory and the standard model of particle physics. Outside of physics, differential geometry finds applications in chemistry, economics, engineering, control theory, computer graphics and computer vision, and recently in machine learning. == History and development == The history and development of differential geometry as a subject begins at least as far back as classical antiquity. It is intimately linked to the development of geometry more generally, of the notion of space and shape, and of topology, especially the study of manifolds. In this section we focus primarily on the history of the application of infinitesimal methods to geometry, and later to the ideas of tangent spaces, and eventually the development of the modern formalism of the subject in terms of tensors and tensor fields. === Classical antiquity until the Renaissance (300 BC – 1600 AD) === The study of differential geometry, or at least the study of the geometry of smooth shapes, can be traced back at least to classical antiquity. In particular, much was known about the geometry of the Earth, a spherical geometry, in the time of the ancient Greek mathematicians. Famously, Eratosthenes calculated the circumference of the Earth around 200 BC, and around 150 AD Ptolemy in his Geography introduced the stereographic projection for the purposes of mapping the shape of the Earth. Implicitly throughout this time principles that form the foundation of differential geometry and calculus were used in geodesy, although in a much simplified form. Namely, as far back as Euclid's Elements it was understood that a straight line could be defined by its property of providing the shortest distance between two points, and applying this same principle to the surface of the Earth leads to the conclusion that great circles, which are only locally similar to straight lines in a flat plane, provide the shortest path between two points on the Earth's surface. Indeed, the measurements of distance along such geodesic paths by Eratosthenes and others can be considered a rudimentary measure of arclength of curves, a concept which did not see a rigorous definition in terms of calculus until the 1600s. Around this time there were only minimal overt applications of the theory of infinitesimals to the study of geometry, a precursor to the modern calculus-based study of the subject. In Euclid's Elements the notion of tangency of a line to a circle is discussed, and Archimedes applied the method of exhaustion to compute the areas of smooth shapes such as the circle, and the volumes of smooth three-dimensional solids such as the sphere, cones, and cylinders. There was little development in the theory of differential geometry between antiquity and the beginning of the Renaissance. Before the development of calculus by Newton and Leibniz, the most significant development in the understanding of differential geometry came from Gerardus Mercator's development of the Mercator projection as a way of mapping the Earth. Mercator had an understanding of the advantages and pitfalls of his map design, and in particular was aware of the conformal nature of his projection, as well as the difference between praga, the lines of shortest distance on the Earth, and the directio, the straight line paths on his map. Mercator noted that the praga were oblique curvatur in this projection. This fact reflects the lack of a metric-preserving map of the Earth's surface onto a flat plane, a consequence of the later Theorema Egregium of Gauss. === After calculus (1600–1800) === The first systematic or rigorous treatment of geometry using the theory of infinitesimals and notions from calculus began around the 1600s when calculus was first developed by Gottfried Leibniz and Isaac Newton. At this time, the recent work of René Descartes introducing analytic coordinates to geometry allowed geometric shapes of increasing complexity to be described rigorously. In particular around this time Pierre de Fermat, Newton, and Leibniz began the study of plane curves and the investigation of concepts such as points of inflection and circles of osculation, which aid in the measurement of curvature. Indeed, already in his first paper on the foundations of calculus, Leibniz notes that the infinitesimal condition d 2 y = 0 {\\displaystyle d^{2}y=0} indicates the existence of an inflection point. Shortly after this time the Bernoulli brothers, Jacob and Johann made important early contributions to the use of infinitesimals to study geometry. In lectures by Johann Bernoulli at the time, later collated by L'Hopital into the first textbook on differential calculus, the tangents to plane curves of various types are computed using the condition d y = 0 {\\displaystyle dy=0} , and similarly points of inflection are calculated. At this same time the orthogonality between the osculating circles of a plane curve and the tangent directions is realised, and the first analytical formula for the radius of an osculating circle, essentially the first analytical formula for the notion of curvature, is written down. In the wake of the development of analytic geometry and plane curves, Alexis Clairaut began the study of space curves at just the age of 16. In his book Clairaut introduced the notion of tangent and subtangent directions to space curves in relation to the directions which lie along a surface on which the space curve lies. Thus Clairaut demonstrated an implicit understanding of the tangent space of a surface and studied this idea using calculus for the first time. Importantly Clairaut introduced the terminology of curvature and double curvature, essentially the notion of principal curvatures later studied by Gauss and others. Around this same time, Leonhard Euler, originally a student of Johann Bernoulli, provided many significant contributions not just to the development of geometry, but to mathematics more broadly. In regards to differential geometry, Euler studied the notion of a geodesic on a surface deriving the first analytical geodesic equation, and later introduced the first set of intrinsic coordinate systems on a surface, beginning the theory of intrinsic geometry upon which modern geometric ideas are based. Around this time Euler's study of mechanics in the Mechanica lead to the realization that a mass traveling along a surface not under the effect of any force would traverse a geodesic path, an early precursor to the important foundational ideas of Einstein's general relativity, and also to the Euler–Lagrange equations and the first theory of the calculus of variations, which underpins in modern differential geometry many techniques in symplectic geometry and geometric analysis. This theory was used by Lagrange, a co-developer of the calculus of variations, to derive the first differential equation describing a minimal surface in terms of the Euler–Lagrange equation. In 1760 Euler proved a theorem expressing the curvature of a space curve on a surface in terms of the principal curvatures, known as Euler's theorem. Later in the 1700s, the new French school led by Gaspard Monge began to make contributions to differential geometry. Monge made important contributions to the theory of plane curves, surfaces, and studied surfaces of revolution and envelopes of plane curves and space curves. Several students of Monge made contributions to this same theory, and for example Charles Dupin provided a new interpretation of Euler's theorem in terms of the principle curvatures, which is the modern form of the equation. === Intrinsic geometry and non-Euclidean geometry (1800–1900) === The field of differential geometry became an area of study considered in its own right, distinct from the more broad idea of analytic geometry, in the 1800s, primarily through the foundational work of Carl Friedrich Gauss and Bernhard Riemann, and also in the important contributions of Nikolai Lobachevsky on hyperbolic geometry and non-Euclidean geometry and throughout the same period the development of projective geometry. Dubbed the single most important work in the history of differential geometry, in 1827 Gauss produced the Disquisitiones generales circa superficies curvas detailing the general theory of curved surfaces. In this work and his subsequent papers and unpublished notes on the theory of surfaces, Gauss has been dubbed the inventor of non-Euclidean geometry and the inventor of intrinsic differential geometry. In his fundamental paper Gauss introduced the Gauss map, Gaussian curvature, first and second fundamental forms, proved the Theorema Egregium showing the intrinsic nature of the Gaussian curvature, and studied geodesics, computing the area of a geodesic triangle in various non-Euclidean geometries on surfaces. At this time Gauss was already of the opinion that the standard paradigm of Euclidean geometry should be discarded, and was in possession of private manuscripts on non-Euclidean geometry which informed his study of geodesic triangles. Around this same time János Bolyai and Lobachevsky independently discovered hyperbolic geometry and thus demonstrated the existence of consistent geometries outside Euclid's paradigm. Concrete models of hyperbolic geometry were produced by Eugenio Beltrami later in the 1860s, and Felix Klein coined the term non-Euclidean geometry in 1871, and through the Erlangen program put Euclidean and non-Euclidean geometries on the same footing. Implicitly, the spherical geometry of the Earth that had been studied since antiquity was a non-Euclidean geometry, an elliptic geometry. The development of intrinsic differential geometry in the language of Gauss was spurred on by his student, Bernhard Riemann in his Habilitationsschrift, On the hypotheses which lie at the foundation of geometry. In this work Riemann introduced the notion of a Riemannian metric and the Riemannian curvature tensor for the first time, and began the systematic study of differential geometry in higher dimensions. This intrinsic point of view in terms of the Riemannian metric, denoted by d s 2 {\\displaystyle ds^{2}} by Riemann, was the development of an idea of Gauss's about the linear element d s {\\displaystyle ds} of a surface. At this time Riemann began to introduce the systematic use of linear algebra and multilinear algebra into the subject, making great use of the theory of quadratic forms in his investigation of metrics and curvature. At this time Riemann did not yet develop the modern notion of a manifold, as even the notion of a topological space had not been encountered, but he did propose that it might be possible to investigate or measure the properties of the metric of spacetime through the analysis of masses within spacetime, linking with the earlier observation of Euler that masses under the effect of no forces would travel along geodesics on surfaces, and predicting Einstein's fundamental observation of the equivalence principle a full 60 years before it appeared in the scientific literature. In the wake of Riemann's new description, the focus of techniques used to study differential geometry shifted from the ad hoc and extrinsic methods of the study of curves and surfaces to a more systematic approach in terms of tensor calculus and Klein's Erlangen program, and progress increased in the field. The notion of groups of transformations was developed by Sophus Lie and Jean Gaston Darboux, leading to important results in the theory of Lie groups and symplectic geometry. The notion of differential calculus on curved spaces was studied by Elwin Christoffel, who introduced the Christoffel symbols which describe the covariant derivative in 1868, and by others including Eugenio Beltrami who studied many analytic questions on manifolds. In 1899 Luigi Bianchi produced his Lectures on differential geometry which studied differential geometry from Riemann's perspective, and a year later Tullio Levi-Civita and Gregorio Ricci-Curbastro produced their textbook systematically developing the theory of absolute differential calculus and tensor calculus. It was in this language that differential geometry was used by Einstein in the development of general relativity and pseudo-Riemannian geometry. === Modern differential geometry (1900–2000) === The subject of modern differential geometry emerged from the early 1900s in response to the foundational contributions of many mathematicians, including importantly the work of Henri Poincaré on the foundations of topology. At the start of the 1900s there was a major movement within mathematics to formalise the foundational aspects of the subject to avoid crises of rigour and accuracy, known as Hilbert's program. As part of this broader movement, the notion of a topological space was distilled in by Felix Hausdorff in 1914, and by 1942 there were many different notions of manifold of a combinatorial and differential-geometric nature. Interest in the subject was also focused by the emergence of Einstein's theory of general relativity and the importance of the Einstein Field equations. Einstein's theory popularised the tensor calculus of Ricci and Levi-Civita and introduced the notation g {\\displaystyle g} for a Riemannian metric, and Γ {\\displaystyle \\Gamma } for the Christoffel symbols, both coming from G in Gravitation. Élie Cartan helped reformulate the foundations of the differential geometry of smooth manifolds in terms of exterior calculus and the theory of moving frames, leading in the world of physics to Einstein–Cartan theory. Following this early development, many mathematicians contributed to the development of the modern theory, including Jean-Louis Koszul who introduced connections on vector bundles, Shiing-Shen Chern who introduced characteristic classes to the subject and began the study of complex manifolds, Sir William Vallance Douglas Hodge and Georges de Rham who expanded understanding of differential forms, Charles Ehresmann who introduced the theory of fibre bundles and Ehresmann connections, and others. Of particular importance was Hermann Weyl who made important contributions to the foundations of general relativity, introduced the Weyl tensor providing insight into conformal geometry, and first defined the notion of a gauge leading to the development of gauge theory in physics and mathematics. In the middle and late 20th century differential geometry as a subject expanded in scope and developed links to other areas of mathematics and physics. The development of gauge theory and Yang–Mills theory in physics brought bundles and connections into focus, leading to developments in gauge theory. Many analytical results were investigated including the proof of the Atiyah–Singer index theorem. The development of complex geometry was spurred on by parallel results in algebraic geometry, and results in the geometry and global analysis of complex manifolds were proven by Shing-Tung Yau and others. In the latter half of the 20th century new analytic techniques were developed in regards to curvature flows such as the Ricci flow, which culminated in Grigori Perelman's proof of the Poincaré conjecture. During this same period primarily due to the influence of Michael Atiyah, new links between theoretical physics and differential geometry were formed. Techniques from the study of the Yang–Mills equations and gauge theory were used by mathematicians to develop new invariants of smooth manifolds. Physicists such as Edward Witten, the only physicist to be awarded a Fields medal, made new impacts in mathematics by using topological quantum field theory and string theory to make predictions and provide frameworks for new rigorous mathematics, which has resulted for example in the conjectural mirror symmetry and the Seiberg–Witten invariants. == Branches == === Riemannian geometry === Riemannian geometry studies Riemannian manifolds, smooth manifolds with a Riemannian metric. This is a concept of distance expressed by means of a smooth positive definite symmetric bilinear form defined on the tangent space at each point. Riemannian geometry generalizes Euclidean geometry to spaces that are not necessarily flat, though they still resemble Euclidean space at each point infinitesimally, i.e. in the first order of approximation. Various concepts based on length, such as the arc length of curves, area of plane regions, and volume of solids all possess natural analogues in Riemannian geometry. The notion of a directional derivative of a function from multivariable calculus is extended to the notion of a covariant derivative of a tensor. Many concepts of analysis and differential equations have been generalized to the setting of Riemannian manifolds. A distance-preserving diffeomorphism between Riemannian manifolds is called an isometry. This notion can also be defined locally, i.e. for small neighborhoods of points. Any two regular curves are locally isometric. However, the Theorema Egregium of Carl Friedrich Gauss showed that for surfaces, the existence of a local isometry imposes that the Gaussian curvatures at the corresponding points must be the same. In higher dimensions, the Riemann curvature tensor is an important pointwise invariant associated with a Riemannian manifold that measures how close it is to being flat. An important class of Riemannian manifolds is the Riemannian symmetric spaces, whose curvature is not necessarily constant. These are the closest analogues to the \"ordinary\" plane and space considered in Euclidean and non-Euclidean geometry. === Pseudo-Riemannian geometry === Pseudo-Riemannian geometry generalizes Riemannian geometry to the case in which the metric tensor need not be positive-definite. A special case of this is a Lorentzian manifold, which is the mathematical basis of Einstein's general relativity theory of gravity. === Finsler geometry === Finsler geometry has Finsler manifolds as the main object of study. This is a differential manifold with a Finsler metric, that is, a Banach norm defined on each tangent space. Riemannian manifolds are special cases of the more general Finsler manifolds. A Finsler structure on a manifold M {\\displaystyle M} is a function F : T M → [ 0 , ∞ ) {\\displaystyle F:\\mathrm {T} M\\to [0,\\infty )} such that: F ( x , m y ) = m F ( x , y ) {\\displaystyle F(x,my)=mF(x,y)} for all ( x , y ) {\\displaystyle (x,y)} in T M {\\displaystyle \\mathrm {T} M} and all m ≥ 0 {\\displaystyle m\\geq 0} , F {\\displaystyle F} is infinitely differentiable in T M ∖ { 0 } {\\displaystyle \\mathrm {T} M\\setminus \\{0\\}} , The vertical Hessian of F 2 {\\displaystyle F^{2}} is positive definite. === Symplectic geometry === Symplectic geometry is the study of symplectic manifolds. An almost symplectic manifold is a differentiable manifold equipped with a smoothly varying non-degenerate skew-symmetric bilinear form on each tangent space, i.e., a nondegenerate 2-form ω, called the symplectic form. A symplectic manifold is an almost symplectic manifold for which the symplectic form ω is closed: dω = 0. A diffeomorphism between two symplectic manifolds which preserves the symplectic form is called a symplectomorphism. Non-degenerate skew-symmetric bilinear forms can only exist on even-dimensional vector spaces, so symplectic manifolds necessarily have even dimension. In dimension 2, a symplectic manifold is just a surface endowed with an area form and a symplectomorphism is an area-preserving diffeomorphism. The phase space of a mechanical system is a symplectic manifold and they made an implicit appearance already in the work of Joseph Louis Lagrange on analytical mechanics and later in Carl Gustav Jacobi's and William Rowan Hamilton's formulations of classical mechanics. By contrast with Riemannian geometry, where the curvature provides a local invariant of Riemannian manifolds, Darboux's theorem states that all symplectic manifolds are locally isomorphic. The only invariants of a symplectic manifold are global in nature and topological aspects play a prominent role in symplectic geometry. The first result in symplectic topology is probably the Poincaré–Birkhoff theorem, conjectured by Henri Poincaré and then proved by G.D. Birkhoff in 1912. It claims that if an area preserving map of an annulus twists each boundary component in opposite directions, then the map has at least two fixed points. === Contact geometry === Contact geometry deals with certain manifolds of odd dimension. It is close to symplectic geometry and like the latter, it originated in questions of classical mechanics. A contact structure on a (2n + 1)-dimensional manifold M is given by a smooth hyperplane field H in the tangent bundle that is as far as possible from being associated with the level sets of a differentiable function on M (the technical term is \"completely nonintegrable tangent hyperplane distribution\"). Near each point p, a hyperplane distribution is determined by a nowhere vanishing 1-form α {\\displaystyle \\alpha } , which is unique up to multiplication by a nowhere vanishing function: H p = ker ⁡ α p ⊂ T p M . {\\displaystyle H_{p}=\\ker \\alpha _{p}\\subset T_{p}M.} A local 1-form on M is a contact form if the restriction of its exterior derivative to H is a non-degenerate two-form and thus induces a symplectic structure on Hp at each point. If the distribution H can be defined by a global one-form α {\\displaystyle \\alpha } then this form is contact if and only if the top-dimensional form α ∧ ( d α ) n {\\displaystyle \\alpha \\wedge (d\\alpha )^{n}} is a volume form on M, i.e. does not vanish anywhere. A contact analogue of the Darboux theorem holds: all contact structures on an odd-dimensional manifold are locally isomorphic and can be brought to a certain local normal form by a suitable choice of the coordinate system. === Complex and Kähler geometry === Complex differential geometry is the study of complex manifolds. An almost complex manifold is a real manifold M {\\displaystyle M} , endowed with a tensor of type (1, 1), i.e. a vector bundle endomorphism (called an almost complex structure) J : T M → T M {\\displaystyle J:TM\\rightarrow TM} , such that J 2 = − 1. {\\displaystyle J^{2}=-1.\\,} It follows from this definition that an almost complex manifold is even-dimensional. An almost complex manifold is called complex if N J = 0 {\\displaystyle N_{J}=0} , where N J {\\displaystyle N_{J}} is a tensor of type (2, 1) related to J {\\displaystyle J} , called the Nijenhuis tensor (or sometimes the torsion). An almost complex manifold is complex if and only if it admits a holomorphic coordinate atlas. An almost Hermitian structure is given by an almost complex structure J, along with a Riemannian metric g, satisfying the compatibility condition g ( J X , J Y ) = g ( X , Y ) . {\\displaystyle g(JX,JY)=g(X,Y).\\,} An almost Hermitian structure defines naturally a differential two-form ω J , g ( X , Y ) := g ( J X , Y ) . {\\displaystyle \\omega _{J,g}(X,Y):=g(JX,Y).\\,} The following two conditions are equivalent: N J = 0 and d ω = 0 {\\displaystyle N_{J}=0{\\mbox{ and }}d\\omega =0\\,} ∇ J = 0 {\\displaystyle \\nabla J=0\\,} where ∇ {\\displaystyle \\nabla } is the Levi-Civita connection of g {\\displaystyle g} . In this case, ( J , g ) {\\displaystyle (J,g)} is called a Kähler structure, and a Kähler manifold is a manifold endowed with a Kähler structure. In particular, a Kähler manifold is both a complex and a symplectic manifold. A large class of Kähler manifolds (the class of Hodge manifolds) is given by all the smooth complex projective varieties. === CR geometry === CR geometry is the study of the intrinsic geometry of boundaries of domains in complex manifolds. === Conformal geometry === Conformal geometry is the study of the set of angle-preserving (conformal) transformations on a space. === Differential topology === Differential topology is the study of global geometric invariants without a metric or symplectic form. Differential topology starts from the natural operations such as Lie derivative of natural vector bundles and de Rham differential of forms. Beside Lie algebroids, also Courant algebroids start playing a more important role. === Lie groups === A Lie group is a group in the category of smooth manifolds. Beside the algebraic properties this enjoys also differential geometric properties. The most obvious construction is that of a Lie algebra which is the tangent space at the unit endowed with the Lie bracket between left-invariant vector fields. Beside the structure theory there is also the wide field of representation theory. === Geometric analysis === Geometric analysis is a mathematical discipline where tools from differential equations, especially elliptic partial differential equations are used to establish new results in differential geometry and differential topology. === Gauge theory === Gauge theory is the study of connections on vector bundles and principal bundles, and arises out of problems in mathematical physics and physical gauge theories which underpin the standard model of particle physics. Gauge theory is concerned with the study of differential equations for connections on bundles, and the resulting geometric moduli spaces of solutions to these equations as well as the invariants that may be derived from them. These equations often arise as the Euler–Lagrange equations describing the equations of motion of certain physical systems in quantum field theory, and so their study is of considerable interest in physics. == Bundles and connections == The apparatus of vector bundles, principal bundles, and connections on bundles plays an extraordinarily important role in modern differential geometry. A smooth manifold always carries a natural vector bundle, the tangent bundle. Loosely speaking, this structure by itself is sufficient only for developing analysis on the manifold, while doing geometry requires, in addition, some way to relate the tangent spaces at different points, i.e. a notion of parallel transport. An important example is provided by affine connections. For a surface in R3, tangent planes at different points can be identified using a natural path-wise parallelism induced by the ambient Euclidean space, which has a well-known standard definition of metric and parallelism. In Riemannian geometry, the Levi-Civita connection serves a similar purpose. More generally, differential geometers consider spaces with a vector bundle and an arbitrary affine connection which is not defined in terms of a metric. In physics, the manifold may be spacetime and the bundles and connections are related to various physical fields. == Intrinsic versus extrinsic == From the beginning and through the middle of the 19th century, differential geometry was studied from the extrinsic point of view: curves and surfaces were considered as lying in a Euclidean space of higher dimension (for example a surface in an ambient space of three dimensions). The simplest results are those in the differential geometry of curves and differential geometry of surfaces. Starting with the work of Riemann, the intrinsic point of view was developed, in which one cannot speak of moving \"outside\" the geometric object because it is considered to be given in a free-standing way. The fundamental result here is Gauss's theorema egregium, to the effect that Gaussian curvature is an intrinsic invariant. The intrinsic point of view is more flexible. For example, it is useful in relativity where space-time cannot naturally be taken as extrinsic. However, there is a price to pay in technical complexity: the intrinsic definitions of curvature and connections become much less visually intuitive. These two points of view can be reconciled, i.e. the extrinsic geometry can be considered as a structure additional to the intrinsic one. (See the Nash embedding theorem.) In the formalism of geometric calculus both extrinsic and intrinsic geometry of a manifold can be characterized by a single bivector-valued one-form called the shape operator. == Applications == Below are some examples of how differential geometry is applied to other fields of science and mathematics. In physics, differential geometry has many applications, including: Differential geometry is the language in which Albert Einstein's general theory of relativity is expressed. According to the theory, the universe is a smooth manifold equipped with a pseudo-Riemannian metric, which describes the curvature of spacetime. Understanding this curvature is essential for the positioning of satellites into orbit around the Earth. Differential geometry is also indispensable in the study of gravitational lensing and black holes. Differential forms are used in the study of electromagnetism. Differential geometry has applications to both Lagrangian mechanics and Hamiltonian mechanics. Symplectic manifolds in particular can be used to study Hamiltonian systems. Riemannian geometry and contact geometry have been used to construct the formalism of geometrothermodynamics which has found applications in classical equilibrium thermodynamics. In chemistry and biophysics when modelling cell membrane structure under varying pressure. In economics, differential geometry has applications to the field of econometrics. Geometric modeling (including computer graphics) and computer-aided geometric design draw on ideas from differential geometry. In engineering, differential geometry can be applied to solve problems in digital signal processing. In control theory, differential geometry can be used to analyze nonlinear controllers, particularly geometric control In probability, statistics, and information theory, one can interpret various structures as Riemannian manifolds, which yields the field of information geometry, particularly via the Fisher information metric. In structural geology, differential geometry is used to analyze and describe geologic structures. In computer vision, differential geometry is used to analyze shapes. In image processing, differential geometry is used to process and analyse data on non-flat surfaces. Grigori Perelman's proof of the Poincaré conjecture using the techniques of Ricci flows demonstrated the power of the differential-geometric approach to questions in topology and it highlighted the important role played by its analytic methods. In wireless communications, Grassmannian manifolds are used for beamforming techniques in multiple antenna systems. In geodesy, for calculating distances and angles on the mean sea level surface of the Earth, modelled by an ellipsoid of revolution. In neuroimaging and brain-computer interface, symmetric positive definite manifolds are used to model functional, structural, or electrophysiological connectivity matrices. == See also == == References == == Further reading == Ethan D. Bloch (27 June 2011). A First Course in Geometric Topology and Differential Geometry. Boston: Springer Science & Business Media. ISBN 978-0-8176-8122-7. OCLC 811474509. Burke, William L. (1997). Applied differential geometry. Cambridge University Press. ISBN 0-521-26929-6. OCLC 53249854. do Carmo, Manfredo Perdigão (1976). Differential geometry of curves and surfaces. Englewood Cliffs, N.J.: Prentice-Hall. ISBN 978-0-13-212589-5. OCLC 1529515. Frankel, Theodore (2004). The geometry of physics : an introduction (2nd ed.). New York: Cambridge University Press. ISBN 978-0-521-53927-2. OCLC 51855212. Elsa Abbena; Simon Salamon; Alfred Gray (2017). Modern Differential Geometry of Curves and Surfaces with Mathematica (3rd ed.). Boca Raton: Chapman and Hall/CRC. ISBN 978-1-351-99220-6. OCLC 1048919510. Kreyszig, Erwin (1991). Differential Geometry. New York: Dover Publications. ISBN 978-0-486-66721-8. OCLC 23384584. Kühnel, Wolfgang (2002). Differential Geometry: Curves – Surfaces – Manifolds (2nd ed.). Providence, R.I.: American Mathematical Society. ISBN 978-0-8218-3988-1. OCLC 61500086. McCleary, John (1994). Geometry from a differentiable viewpoint. Cambridge University Press. ISBN 0-521-13311-4. OCLC 915912917. Spivak, Michael (1999). A Comprehensive Introduction to Differential Geometry (5 Volumes) (3rd ed.). Publish or Perish. ISBN 0-914098-72-1. OCLC 179192286. ter Haar Romeny, Bart M. (2003). Front-end vision and multi-scale image analysis : multi-scale computer vision theory and applications, written in Mathematica. Dordrecht: Kluwer Academic. ISBN 978-1-4020-1507-6. OCLC 52806205. == External links == \"Differential geometry\", Encyclopedia of Mathematics, EMS Press, 2001  B. Conrad. Differential Geometry handouts, Stanford University Michael Murray's online differential geometry course, 1996 Archived 2013-08-01 at the Wayback Machine A Modern Course on Curves and Surfaces, Richard S Palais, 2003 Archived 2019-04-09 at the Wayback Machine Richard Palais's 3DXM Surfaces Gallery Archived 2019-04-09 at the Wayback Machine Balázs Csikós's Notes on Differential Geometry Archived 2009-06-05 at the Wayback Machine N. J. Hicks, Notes on Differential Geometry, Van Nostrand. MIT OpenCourseWare: Differential Geometry, Fall 2008"
+  },
+  "chunks": [
+    {
+      "id": "differentialgeometry_3e90d4e3_c0000",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 992,
+      "content": "Differential geometry is a mathematical discipline that studies the geometry of smooth shapes and smooth spaces, otherwise known as smooth manifolds. It uses the techniques of single variable calculus, vector calculus, linear algebra and multilinear algebra. The field has its origins in the study of spherical geometry as far back as antiquity. It also relates to astronomy, the geodesy of the Earth, and later the study of hyperbolic geometry by Lobachevsky. The simplest examples of smooth spaces are the plane and space curves and surfaces in the three-dimensional Euclidean space, and the study of these shapes formed the basis for development of modern differential geometry during the 18th and 19th centuries. Since the late 19th century, differential geometry has grown into a field concerned more generally with geometric structures on differentiable manifolds. A geometric structure is one which defines some notion of size, distance, shape, volume, or other rigidifying structure.",
+      "char_count": 991,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0001",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 992,
+      "end_char": 1762,
+      "content": "For example, in Riemannian geometry distances and angles are specified, in symplectic geometry volumes may be computed, in conformal geometry only angles are specified, and in gauge theory certain fields are given over the space. Differential geometry is closely related to, and is sometimes taken to include, differential topology, which concerns itself with properties of differentiable manifolds that do not rely on any additional geometric structure (see that article for more discussion on the distinction between the two subjects). Differential geometry is also related to the geometric aspects of the theory of differential equations, otherwise known as geometric analysis. Differential geometry finds applications throughout mathematics and the natural sciences.",
+      "char_count": 770,
+      "token_estimate": 192,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0002",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1763,
+      "end_char": 2188,
+      "content": "Most prominently the language of differential geometry was used by Albert Einstein in his theory of general relativity, and subsequently by physicists in the development of quantum field theory and the standard model of particle physics. Outside of physics, differential geometry finds applications in chemistry, economics, engineering, control theory, computer graphics and computer vision, and recently in machine learning.",
+      "char_count": 425,
+      "token_estimate": 106,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0003",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== History and development ==",
+      "heading_path": "== History and development ==",
+      "start_char": 2218,
+      "end_char": 2752,
+      "content": "== History and development == The history and development of differential geometry as a subject begins at least as far back as classical antiquity. It is intimately linked to the development of geometry more generally, of the notion of space and shape, and of topology, especially the study of manifolds. In this section we focus primarily on the history of the application of infinitesimal methods to geometry, and later to the ideas of tangent spaces, and eventually the development of the modern formalism of the subject in terms of tensors and tensor fields.",
+      "char_count": 562,
+      "token_estimate": 140,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0004",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) ==",
+      "heading_path": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) ==",
+      "start_char": 2820,
+      "end_char": 3547,
+      "content": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) === The study of differential geometry, or at least the study of the geometry of smooth shapes, can be traced back at least to classical antiquity. In particular, much was known about the geometry of the Earth, a spherical geometry, in the time of the ancient Greek mathematicians. Famously, Eratosthenes calculated the circumference of the Earth around 200 BC, and around 150 AD Ptolemy in his Geography introduced the stereographic projection for the purposes of mapping the shape of the Earth. Implicitly throughout this time principles that form the foundation of differential geometry and calculus were used in geodesy, although in a much simplified form.",
+      "char_count": 726,
+      "token_estimate": 181,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0005",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) ==",
+      "heading_path": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) ==",
+      "start_char": 3547,
+      "end_char": 4377,
+      "content": "Namely, as far back as Euclid's Elements it was understood that a straight line could be defined by its property of providing the shortest distance between two points, and applying this same principle to the surface of the Earth leads to the conclusion that great circles, which are only locally similar to straight lines in a flat plane, provide the shortest path between two points on the Earth's surface. Indeed, the measurements of distance along such geodesic paths by Eratosthenes and others can be considered a rudimentary measure of arclength of curves, a concept which did not see a rigorous definition in terms of calculus until the 1600s. Around this time there were only minimal overt applications of the theory of infinitesimals to the study of geometry, a precursor to the modern calculus-based study of the subject.",
+      "char_count": 830,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0006",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) ==",
+      "heading_path": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) ==",
+      "start_char": 4378,
+      "end_char": 5308,
+      "content": "In Euclid's Elements the notion of tangency of a line to a circle is discussed, and Archimedes applied the method of exhaustion to compute the areas of smooth shapes such as the circle, and the volumes of smooth three-dimensional solids such as the sphere, cones, and cylinders. There was little development in the theory of differential geometry between antiquity and the beginning of the Renaissance. Before the development of calculus by Newton and Leibniz, the most significant development in the understanding of differential geometry came from Gerardus Mercator's development of the Mercator projection as a way of mapping the Earth. Mercator had an understanding of the advantages and pitfalls of his map design, and in particular was aware of the conformal nature of his projection, as well as the difference between praga, the lines of shortest distance on the Earth, and the directio, the straight line paths on his map.",
+      "char_count": 930,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0007",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) ==",
+      "heading_path": "== = Classical antiquity until the Renaissance (300 BC – 1600 AD) ==",
+      "start_char": 5309,
+      "end_char": 5532,
+      "content": "Mercator noted that the praga were oblique curvatur in this projection. This fact reflects the lack of a metric-preserving map of the Earth's surface onto a flat plane, a consequence of the later Theorema Egregium of Gauss.",
+      "char_count": 223,
+      "token_estimate": 55,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0008",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = After calculus (1600–1800) ==",
+      "heading_path": "== = After calculus (1600–1800) ==",
+      "start_char": 5499,
+      "end_char": 6349,
+      "content": "== = After calculus (1600–1800) === The first systematic or rigorous treatment of geometry using the theory of infinitesimals and notions from calculus began around the 1600s when calculus was first developed by Gottfried Leibniz and Isaac Newton. At this time, the recent work of René Descartes introducing analytic coordinates to geometry allowed geometric shapes of increasing complexity to be described rigorously. In particular around this time Pierre de Fermat, Newton, and Leibniz began the study of plane curves and the investigation of concepts such as points of inflection and circles of osculation, which aid in the measurement of curvature. Indeed, already in his first paper on the foundations of calculus, Leibniz notes that the infinitesimal condition d 2 y = 0 {\\displaystyle d^{2}y=0} indicates the existence of an inflection point.",
+      "char_count": 849,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0009",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = After calculus (1600–1800) ==",
+      "heading_path": "== = After calculus (1600–1800) ==",
+      "start_char": 6349,
+      "end_char": 7205,
+      "content": "Shortly after this time the Bernoulli brothers, Jacob and Johann made important early contributions to the use of infinitesimals to study geometry. In lectures by Johann Bernoulli at the time, later collated by L'Hopital into the first textbook on differential calculus, the tangents to plane curves of various types are computed using the condition d y = 0 {\\displaystyle dy=0} , and similarly points of inflection are calculated. At this same time the orthogonality between the osculating circles of a plane curve and the tangent directions is realised, and the first analytical formula for the radius of an osculating circle, essentially the first analytical formula for the notion of curvature, is written down. In the wake of the development of analytic geometry and plane curves, Alexis Clairaut began the study of space curves at just the age of 16.",
+      "char_count": 856,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0010",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = After calculus (1600–1800) ==",
+      "heading_path": "== = After calculus (1600–1800) ==",
+      "start_char": 7206,
+      "end_char": 8199,
+      "content": "In his book Clairaut introduced the notion of tangent and subtangent directions to space curves in relation to the directions which lie along a surface on which the space curve lies. Thus Clairaut demonstrated an implicit understanding of the tangent space of a surface and studied this idea using calculus for the first time. Importantly Clairaut introduced the terminology of curvature and double curvature, essentially the notion of principal curvatures later studied by Gauss and others. Around this same time, Leonhard Euler, originally a student of Johann Bernoulli, provided many significant contributions not just to the development of geometry, but to mathematics more broadly. In regards to differential geometry, Euler studied the notion of a geodesic on a surface deriving the first analytical geodesic equation, and later introduced the first set of intrinsic coordinate systems on a surface, beginning the theory of intrinsic geometry upon which modern geometric ideas are based.",
+      "char_count": 993,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0011",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = After calculus (1600–1800) ==",
+      "heading_path": "== = After calculus (1600–1800) ==",
+      "start_char": 8200,
+      "end_char": 9140,
+      "content": "Around this time Euler's study of mechanics in the Mechanica lead to the realization that a mass traveling along a surface not under the effect of any force would traverse a geodesic path, an early precursor to the important foundational ideas of Einstein's general relativity, and also to the Euler–Lagrange equations and the first theory of the calculus of variations, which underpins in modern differential geometry many techniques in symplectic geometry and geometric analysis. This theory was used by Lagrange, a co-developer of the calculus of variations, to derive the first differential equation describing a minimal surface in terms of the Euler–Lagrange equation. In 1760 Euler proved a theorem expressing the curvature of a space curve on a surface in terms of the principal curvatures, known as Euler's theorem. Later in the 1700s, the new French school led by Gaspard Monge began to make contributions to differential geometry.",
+      "char_count": 940,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0012",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = After calculus (1600–1800) ==",
+      "heading_path": "== = After calculus (1600–1800) ==",
+      "start_char": 9141,
+      "end_char": 9524,
+      "content": "Monge made important contributions to the theory of plane curves, surfaces, and studied surfaces of revolution and envelopes of plane curves and space curves. Several students of Monge made contributions to this same theory, and for example Charles Dupin provided a new interpretation of Euler's theorem in terms of the principle curvatures, which is the modern form of the equation.",
+      "char_count": 383,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0013",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "heading_path": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "start_char": 9556,
+      "end_char": 10458,
+      "content": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) === The field of differential geometry became an area of study considered in its own right, distinct from the more broad idea of analytic geometry, in the 1800s, primarily through the foundational work of Carl Friedrich Gauss and Bernhard Riemann, and also in the important contributions of Nikolai Lobachevsky on hyperbolic geometry and non-Euclidean geometry and throughout the same period the development of projective geometry. Dubbed the single most important work in the history of differential geometry, in 1827 Gauss produced the Disquisitiones generales circa superficies curvas detailing the general theory of curved surfaces. In this work and his subsequent papers and unpublished notes on the theory of surfaces, Gauss has been dubbed the inventor of non-Euclidean geometry and the inventor of intrinsic differential geometry.",
+      "char_count": 901,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0014",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "heading_path": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "start_char": 10458,
+      "end_char": 11442,
+      "content": "In his fundamental paper Gauss introduced the Gauss map, Gaussian curvature, first and second fundamental forms, proved the Theorema Egregium showing the intrinsic nature of the Gaussian curvature, and studied geodesics, computing the area of a geodesic triangle in various non-Euclidean geometries on surfaces. At this time Gauss was already of the opinion that the standard paradigm of Euclidean geometry should be discarded, and was in possession of private manuscripts on non-Euclidean geometry which informed his study of geodesic triangles. Around this same time János Bolyai and Lobachevsky independently discovered hyperbolic geometry and thus demonstrated the existence of consistent geometries outside Euclid's paradigm. Concrete models of hyperbolic geometry were produced by Eugenio Beltrami later in the 1860s, and Felix Klein coined the term non-Euclidean geometry in 1871, and through the Erlangen program put Euclidean and non-Euclidean geometries on the same footing.",
+      "char_count": 984,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0015",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "heading_path": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "start_char": 11443,
+      "end_char": 12428,
+      "content": "Implicitly, the spherical geometry of the Earth that had been studied since antiquity was a non-Euclidean geometry, an elliptic geometry. The development of intrinsic differential geometry in the language of Gauss was spurred on by his student, Bernhard Riemann in his Habilitationsschrift, On the hypotheses which lie at the foundation of geometry. In this work Riemann introduced the notion of a Riemannian metric and the Riemannian curvature tensor for the first time, and began the systematic study of differential geometry in higher dimensions. This intrinsic point of view in terms of the Riemannian metric, denoted by d s 2 {\\displaystyle ds^{2}} by Riemann, was the development of an idea of Gauss's about the linear element d s {\\displaystyle ds} of a surface. At this time Riemann began to introduce the systematic use of linear algebra and multilinear algebra into the subject, making great use of the theory of quadratic forms in his investigation of metrics and curvature.",
+      "char_count": 985,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0016",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "heading_path": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "start_char": 12429,
+      "end_char": 13315,
+      "content": "At this time Riemann did not yet develop the modern notion of a manifold, as even the notion of a topological space had not been encountered, but he did propose that it might be possible to investigate or measure the properties of the metric of spacetime through the analysis of masses within spacetime, linking with the earlier observation of Euler that masses under the effect of no forces would travel along geodesics on surfaces, and predicting Einstein's fundamental observation of the equivalence principle a full 60 years before it appeared in the scientific literature. In the wake of Riemann's new description, the focus of techniques used to study differential geometry shifted from the ad hoc and extrinsic methods of the study of curves and surfaces to a more systematic approach in terms of tensor calculus and Klein's Erlangen program, and progress increased in the field.",
+      "char_count": 886,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0017",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "heading_path": "== = Intrinsic geometry and non-Euclidean geometry (1800–1900) ==",
+      "start_char": 13316,
+      "end_char": 14215,
+      "content": "The notion of groups of transformations was developed by Sophus Lie and Jean Gaston Darboux, leading to important results in the theory of Lie groups and symplectic geometry. The notion of differential calculus on curved spaces was studied by Elwin Christoffel, who introduced the Christoffel symbols which describe the covariant derivative in 1868, and by others including Eugenio Beltrami who studied many analytic questions on manifolds. In 1899 Luigi Bianchi produced his Lectures on differential geometry which studied differential geometry from Riemann's perspective, and a year later Tullio Levi-Civita and Gregorio Ricci-Curbastro produced their textbook systematically developing the theory of absolute differential calculus and tensor calculus. It was in this language that differential geometry was used by Einstein in the development of general relativity and pseudo-Riemannian geometry.",
+      "char_count": 899,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0018",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Modern differential geometry (1900–2000) ==",
+      "heading_path": "== = Modern differential geometry (1900–2000) ==",
+      "start_char": 14199,
+      "end_char": 15044,
+      "content": "== = Modern differential geometry (1900–2000) === The subject of modern differential geometry emerged from the early 1900s in response to the foundational contributions of many mathematicians, including importantly the work of Henri Poincaré on the foundations of topology. At the start of the 1900s there was a major movement within mathematics to formalise the foundational aspects of the subject to avoid crises of rigour and accuracy, known as Hilbert's program. As part of this broader movement, the notion of a topological space was distilled in by Felix Hausdorff in 1914, and by 1942 there were many different notions of manifold of a combinatorial and differential-geometric nature. Interest in the subject was also focused by the emergence of Einstein's theory of general relativity and the importance of the Einstein Field equations.",
+      "char_count": 844,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0019",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Modern differential geometry (1900–2000) ==",
+      "heading_path": "== = Modern differential geometry (1900–2000) ==",
+      "start_char": 15044,
+      "end_char": 16002,
+      "content": "Einstein's theory popularised the tensor calculus of Ricci and Levi-Civita and introduced the notation g {\\displaystyle g} for a Riemannian metric, and Γ {\\displaystyle \\Gamma } for the Christoffel symbols, both coming from G in Gravitation. Élie Cartan helped reformulate the foundations of the differential geometry of smooth manifolds in terms of exterior calculus and the theory of moving frames, leading in the world of physics to Einstein–Cartan theory. Following this early development, many mathematicians contributed to the development of the modern theory, including Jean-Louis Koszul who introduced connections on vector bundles, Shiing-Shen Chern who introduced characteristic classes to the subject and began the study of complex manifolds, Sir William Vallance Douglas Hodge and Georges de Rham who expanded understanding of differential forms, Charles Ehresmann who introduced the theory of fibre bundles and Ehresmann connections, and others.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0020",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Modern differential geometry (1900–2000) ==",
+      "heading_path": "== = Modern differential geometry (1900–2000) ==",
+      "start_char": 16003,
+      "end_char": 16905,
+      "content": "Of particular importance was Hermann Weyl who made important contributions to the foundations of general relativity, introduced the Weyl tensor providing insight into conformal geometry, and first defined the notion of a gauge leading to the development of gauge theory in physics and mathematics. In the middle and late 20th century differential geometry as a subject expanded in scope and developed links to other areas of mathematics and physics. The development of gauge theory and Yang–Mills theory in physics brought bundles and connections into focus, leading to developments in gauge theory. Many analytical results were investigated including the proof of the Atiyah–Singer index theorem. The development of complex geometry was spurred on by parallel results in algebraic geometry, and results in the geometry and global analysis of complex manifolds were proven by Shing-Tung Yau and others.",
+      "char_count": 902,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0021",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Modern differential geometry (1900–2000) ==",
+      "heading_path": "== = Modern differential geometry (1900–2000) ==",
+      "start_char": 16906,
+      "end_char": 17756,
+      "content": "In the latter half of the 20th century new analytic techniques were developed in regards to curvature flows such as the Ricci flow, which culminated in Grigori Perelman's proof of the Poincaré conjecture. During this same period primarily due to the influence of Michael Atiyah, new links between theoretical physics and differential geometry were formed. Techniques from the study of the Yang–Mills equations and gauge theory were used by mathematicians to develop new invariants of smooth manifolds. Physicists such as Edward Witten, the only physicist to be awarded a Fields medal, made new impacts in mathematics by using topological quantum field theory and string theory to make predictions and provide frameworks for new rigorous mathematics, which has resulted for example in the conjectural mirror symmetry and the Seiberg–Witten invariants.",
+      "char_count": 850,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0022",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Riemannian geometry ==",
+      "heading_path": "== = Riemannian geometry ==",
+      "start_char": 17751,
+      "end_char": 18655,
+      "content": "== = Riemannian geometry === Riemannian geometry studies Riemannian manifolds, smooth manifolds with a Riemannian metric. This is a concept of distance expressed by means of a smooth positive definite symmetric bilinear form defined on the tangent space at each point. Riemannian geometry generalizes Euclidean geometry to spaces that are not necessarily flat, though they still resemble Euclidean space at each point infinitesimally, i.e. in the first order of approximation. Various concepts based on length, such as the arc length of curves, area of plane regions, and volume of solids all possess natural analogues in Riemannian geometry. The notion of a directional derivative of a function from multivariable calculus is extended to the notion of a covariant derivative of a tensor. Many concepts of analysis and differential equations have been generalized to the setting of Riemannian manifolds.",
+      "char_count": 903,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0023",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Riemannian geometry ==",
+      "heading_path": "== = Riemannian geometry ==",
+      "start_char": 18655,
+      "end_char": 19480,
+      "content": "A distance-preserving diffeomorphism between Riemannian manifolds is called an isometry. This notion can also be defined locally, i.e. for small neighborhoods of points. Any two regular curves are locally isometric. However, the Theorema Egregium of Carl Friedrich Gauss showed that for surfaces, the existence of a local isometry imposes that the Gaussian curvatures at the corresponding points must be the same. In higher dimensions, the Riemann curvature tensor is an important pointwise invariant associated with a Riemannian manifold that measures how close it is to being flat. An important class of Riemannian manifolds is the Riemannian symmetric spaces, whose curvature is not necessarily constant. These are the closest analogues to the \"ordinary\" plane and space considered in Euclidean and non-Euclidean geometry.",
+      "char_count": 825,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0024",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Pseudo-Riemannian geometry ==",
+      "heading_path": "== = Pseudo-Riemannian geometry ==",
+      "start_char": 19488,
+      "end_char": 19752,
+      "content": "== = Pseudo-Riemannian geometry === Pseudo-Riemannian geometry generalizes Riemannian geometry to the case in which the metric tensor need not be positive-definite. A special case of this is a Lorentzian manifold, which is the mathematical basis of Einstein's general relativity theory of gravity.",
+      "char_count": 297,
+      "token_estimate": 74,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0025",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Finsler geometry ==",
+      "heading_path": "== = Finsler geometry ==",
+      "start_char": 19776,
+      "end_char": 20541,
+      "content": "== = Finsler geometry === Finsler geometry has Finsler manifolds as the main object of study. This is a differential manifold with a Finsler metric, that is, a Banach norm defined on each tangent space. Riemannian manifolds are special cases of the more general Finsler manifolds. A Finsler structure on a manifold M {\\displaystyle M} is a function F : T M → [ 0 , ∞ ) {\\displaystyle F:\\mathrm {T} M\\to [0,\\infty )} such that: F ( x , m y ) = m F ( x , y ) {\\displaystyle F(x,my)=mF(x,y)} for all ( x , y ) {\\displaystyle (x,y)} in T M {\\displaystyle \\mathrm {T} M} and all m ≥ 0 {\\displaystyle m\\geq 0} , F {\\displaystyle F} is infinitely differentiable in T M ∖ { 0 } {\\displaystyle \\mathrm {T} M\\setminus \\{0\\}} , The vertical Hessian of F 2 {\\displaystyle F^{2}} is positive definite.",
+      "char_count": 788,
+      "token_estimate": 197,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0026",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Symplectic geometry ==",
+      "heading_path": "== = Symplectic geometry ==",
+      "start_char": 20568,
+      "end_char": 21393,
+      "content": "== = Symplectic geometry === Symplectic geometry is the study of symplectic manifolds. An almost symplectic manifold is a differentiable manifold equipped with a smoothly varying non-degenerate skew-symmetric bilinear form on each tangent space, i.e., a nondegenerate 2-form ω, called the symplectic form. A symplectic manifold is an almost symplectic manifold for which the symplectic form ω is closed: dω = 0. A diffeomorphism between two symplectic manifolds which preserves the symplectic form is called a symplectomorphism. Non-degenerate skew-symmetric bilinear forms can only exist on even-dimensional vector spaces, so symplectic manifolds necessarily have even dimension. In dimension 2, a symplectic manifold is just a surface endowed with an area form and a symplectomorphism is an area-preserving diffeomorphism.",
+      "char_count": 824,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0027",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Symplectic geometry ==",
+      "heading_path": "== = Symplectic geometry ==",
+      "start_char": 21393,
+      "end_char": 22296,
+      "content": "The phase space of a mechanical system is a symplectic manifold and they made an implicit appearance already in the work of Joseph Louis Lagrange on analytical mechanics and later in Carl Gustav Jacobi's and William Rowan Hamilton's formulations of classical mechanics. By contrast with Riemannian geometry, where the curvature provides a local invariant of Riemannian manifolds, Darboux's theorem states that all symplectic manifolds are locally isomorphic. The only invariants of a symplectic manifold are global in nature and topological aspects play a prominent role in symplectic geometry. The first result in symplectic topology is probably the Poincaré–Birkhoff theorem, conjectured by Henri Poincaré and then proved by G.D. Birkhoff in 1912. It claims that if an area preserving map of an annulus twists each boundary component in opposite directions, then the map has at least two fixed points.",
+      "char_count": 903,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0028",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Contact geometry ==",
+      "heading_path": "== = Contact geometry ==",
+      "start_char": 22294,
+      "end_char": 23243,
+      "content": "== = Contact geometry === Contact geometry deals with certain manifolds of odd dimension. It is close to symplectic geometry and like the latter, it originated in questions of classical mechanics. A contact structure on a (2n + 1)-dimensional manifold M is given by a smooth hyperplane field H in the tangent bundle that is as far as possible from being associated with the level sets of a differentiable function on M (the technical term is \"completely nonintegrable tangent hyperplane distribution\"). Near each point p, a hyperplane distribution is determined by a nowhere vanishing 1-form α {\\displaystyle \\alpha } , which is unique up to multiplication by a nowhere vanishing function: H p = ker ⁡ α p ⊂ T p M . {\\displaystyle H_{p}=\\ker \\alpha _{p}\\subset T_{p}M.} A local 1-form on M is a contact form if the restriction of its exterior derivative to H is a non-degenerate two-form and thus induces a symplectic structure on Hp at each point.",
+      "char_count": 948,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0029",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Contact geometry ==",
+      "heading_path": "== = Contact geometry ==",
+      "start_char": 23243,
+      "end_char": 23728,
+      "content": "If the distribution H can be defined by a global one-form α {\\displaystyle \\alpha } then this form is contact if and only if the top-dimensional form α ∧ ( d α ) n {\\displaystyle \\alpha \\wedge (d\\alpha )^{n}} is a volume form on M, i.e. does not vanish anywhere. A contact analogue of the Darboux theorem holds: all contact structures on an odd-dimensional manifold are locally isomorphic and can be brought to a certain local normal form by a suitable choice of the coordinate system.",
+      "char_count": 485,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0030",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Complex and Kähler geometry ==",
+      "heading_path": "== = Complex and Kähler geometry ==",
+      "start_char": 23740,
+      "end_char": 24529,
+      "content": "== = Complex and Kähler geometry === Complex differential geometry is the study of complex manifolds. An almost complex manifold is a real manifold M {\\displaystyle M} , endowed with a tensor of type (1, 1), i.e. a vector bundle endomorphism (called an almost complex structure) J : T M → T M {\\displaystyle J:TM\\rightarrow TM} , such that J 2 = − 1. {\\displaystyle J^{2}=-1.\\,} It follows from this definition that an almost complex manifold is even-dimensional. An almost complex manifold is called complex if N J = 0 {\\displaystyle N_{J}=0} , where N J {\\displaystyle N_{J}} is a tensor of type (2, 1) related to J {\\displaystyle J} , called the Nijenhuis tensor (or sometimes the torsion). An almost complex manifold is complex if and only if it admits a holomorphic coordinate atlas.",
+      "char_count": 788,
+      "token_estimate": 197,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0031",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Complex and Kähler geometry ==",
+      "heading_path": "== = Complex and Kähler geometry ==",
+      "start_char": 24529,
+      "end_char": 25481,
+      "content": "An almost Hermitian structure is given by an almost complex structure J, along with a Riemannian metric g, satisfying the compatibility condition g ( J X , J Y ) = g ( X , Y ) . {\\displaystyle g(JX,JY)=g(X,Y).\\,} An almost Hermitian structure defines naturally a differential two-form ω J , g ( X , Y ) := g ( J X , Y ) . {\\displaystyle \\omega _{J,g}(X,Y):=g(JX,Y).\\,} The following two conditions are equivalent: N J = 0 and d ω = 0 {\\displaystyle N_{J}=0{\\mbox{ and }}d\\omega =0\\,} ∇ J = 0 {\\displaystyle \\nabla J=0\\,} where ∇ {\\displaystyle \\nabla } is the Levi-Civita connection of g {\\displaystyle g} . In this case, ( J , g ) {\\displaystyle (J,g)} is called a Kähler structure, and a Kähler manifold is a manifold endowed with a Kähler structure. In particular, a Kähler manifold is both a complex and a symplectic manifold. A large class of Kähler manifolds (the class of Hodge manifolds) is given by all the smooth complex projective varieties.",
+      "char_count": 952,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0032",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Differential topology ==",
+      "heading_path": "== = Differential topology ==",
+      "start_char": 25726,
+      "end_char": 26056,
+      "content": "== = Differential topology === Differential topology is the study of global geometric invariants without a metric or symplectic form. Differential topology starts from the natural operations such as Lie derivative of natural vector bundles and de Rham differential of forms. Beside Lie algebroids, also Courant algebroids start playing a more important role.",
+      "char_count": 358,
+      "token_estimate": 89,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0033",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Lie groups ==",
+      "heading_path": "== = Lie groups ==",
+      "start_char": 26074,
+      "end_char": 26464,
+      "content": "== = Lie groups === A Lie group is a group in the category of smooth manifolds. Beside the algebraic properties this enjoys also differential geometric properties. The most obvious construction is that of a Lie algebra which is the tangent space at the unit endowed with the Lie bracket between left-invariant vector fields. Beside the structure theory there is also the wide field of representation theory.",
+      "char_count": 407,
+      "token_estimate": 101,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0034",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Geometric analysis ==",
+      "heading_path": "== = Geometric analysis ==",
+      "start_char": 26490,
+      "end_char": 26718,
+      "content": "== = Geometric analysis === Geometric analysis is a mathematical discipline where tools from differential equations, especially elliptic partial differential equations are used to establish new results in differential geometry and differential topology.",
+      "char_count": 253,
+      "token_estimate": 63,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0035",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== = Gauge theory ==",
+      "heading_path": "== = Gauge theory ==",
+      "start_char": 26738,
+      "end_char": 27389,
+      "content": "== = Gauge theory === Gauge theory is the study of connections on vector bundles and principal bundles, and arises out of problems in mathematical physics and physical gauge theories which underpin the standard model of particle physics. Gauge theory is concerned with the study of differential equations for connections on bundles, and the resulting geometric moduli spaces of solutions to these equations as well as the invariants that may be derived from them. These equations often arise as the Euler–Lagrange equations describing the equations of motion of certain physical systems in quantum field theory, and so their study is of considerable interest in physics.",
+      "char_count": 670,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0036",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== Bundles and connections ==",
+      "heading_path": "== Bundles and connections ==",
+      "start_char": 27418,
+      "end_char": 28276,
+      "content": "== Bundles and connections == The apparatus of vector bundles, principal bundles, and connections on bundles plays an extraordinarily important role in modern differential geometry. A smooth manifold always carries a natural vector bundle, the tangent bundle. Loosely speaking, this structure by itself is sufficient only for developing analysis on the manifold, while doing geometry requires, in addition, some way to relate the tangent spaces at different points, i.e. a notion of parallel transport. An important example is provided by affine connections. For a surface in R3, tangent planes at different points can be identified using a natural path-wise parallelism induced by the ambient Euclidean space, which has a well-known standard definition of metric and parallelism. In Riemannian geometry, the Levi-Civita connection serves a similar purpose.",
+      "char_count": 857,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0037",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== Bundles and connections ==",
+      "heading_path": "== Bundles and connections ==",
+      "start_char": 28276,
+      "end_char": 28543,
+      "content": "More generally, differential geometers consider spaces with a vector bundle and an arbitrary affine connection which is not defined in terms of a metric. In physics, the manifold may be spacetime and the bundles and connections are related to various physical fields.",
+      "char_count": 267,
+      "token_estimate": 66,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0038",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== Intrinsic versus extrinsic ==",
+      "heading_path": "== Intrinsic versus extrinsic ==",
+      "start_char": 28547,
+      "end_char": 29443,
+      "content": "== Intrinsic versus extrinsic == From the beginning and through the middle of the 19th century, differential geometry was studied from the extrinsic point of view: curves and surfaces were considered as lying in a Euclidean space of higher dimension (for example a surface in an ambient space of three dimensions). The simplest results are those in the differential geometry of curves and differential geometry of surfaces. Starting with the work of Riemann, the intrinsic point of view was developed, in which one cannot speak of moving \"outside\" the geometric object because it is considered to be given in a free-standing way. The fundamental result here is Gauss's theorema egregium, to the effect that Gaussian curvature is an intrinsic invariant. The intrinsic point of view is more flexible. For example, it is useful in relativity where space-time cannot naturally be taken as extrinsic.",
+      "char_count": 895,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0039",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== Intrinsic versus extrinsic ==",
+      "heading_path": "== Intrinsic versus extrinsic ==",
+      "start_char": 29443,
+      "end_char": 29940,
+      "content": "However, there is a price to pay in technical complexity: the intrinsic definitions of curvature and connections become much less visually intuitive. These two points of view can be reconciled, i.e. the extrinsic geometry can be considered as a structure additional to the intrinsic one. (See the Nash embedding theorem.) In the formalism of geometric calculus both extrinsic and intrinsic geometry of a manifold can be characterized by a single bivector-valued one-form called the shape operator.",
+      "char_count": 497,
+      "token_estimate": 124,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0040",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 29927,
+      "end_char": 30813,
+      "content": "== Applications == Below are some examples of how differential geometry is applied to other fields of science and mathematics. In physics, differential geometry has many applications, including: Differential geometry is the language in which Albert Einstein's general theory of relativity is expressed. According to the theory, the universe is a smooth manifold equipped with a pseudo-Riemannian metric, which describes the curvature of spacetime. Understanding this curvature is essential for the positioning of satellites into orbit around the Earth. Differential geometry is also indispensable in the study of gravitational lensing and black holes. Differential forms are used in the study of electromagnetism. Differential geometry has applications to both Lagrangian mechanics and Hamiltonian mechanics. Symplectic manifolds in particular can be used to study Hamiltonian systems.",
+      "char_count": 885,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0041",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 30813,
+      "end_char": 31721,
+      "content": "Riemannian geometry and contact geometry have been used to construct the formalism of geometrothermodynamics which has found applications in classical equilibrium thermodynamics. In chemistry and biophysics when modelling cell membrane structure under varying pressure. In economics, differential geometry has applications to the field of econometrics. Geometric modeling (including computer graphics) and computer-aided geometric design draw on ideas from differential geometry. In engineering, differential geometry can be applied to solve problems in digital signal processing. In control theory, differential geometry can be used to analyze nonlinear controllers, particularly geometric control In probability, statistics, and information theory, one can interpret various structures as Riemannian manifolds, which yields the field of information geometry, particularly via the Fisher information metric.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "differentialgeometry_3e90d4e3_c0042",
+      "article_id": "differentialgeometry_3e90d4e3",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 31722,
+      "end_char": 32656,
+      "content": "In structural geology, differential geometry is used to analyze and describe geologic structures. In computer vision, differential geometry is used to analyze shapes. In image processing, differential geometry is used to process and analyse data on non-flat surfaces. Grigori Perelman's proof of the Poincaré conjecture using the techniques of Ricci flows demonstrated the power of the differential-geometric approach to questions in topology and it highlighted the important role played by its analytic methods. In wireless communications, Grassmannian manifolds are used for beamforming techniques in multiple antenna systems. In geodesy, for calculating distances and angles on the mean sea level surface of the Earth, modelled by an ellipsoid of revolution. In neuroimaging and brain-computer interface, symmetric positive definite manifolds are used to model functional, structural, or electrophysiological connectivity matrices.",
+      "char_count": 934,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Who introduced the terminology of curvature and double curvature?",
+        "answer": "Clairaut introduced the terminology of curvature and double curvature, which are essentially the notions of principal curvatures later studied by Gauss.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0010"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0010"
+        ]
+      },
+      {
+        "question": "What mathematical techniques does differential geometry use?",
+        "answer": "Differential geometry utilizes the techniques of single variable calculus, vector calculus, linear algebra, and multilinear algebra.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0000"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0000"
+        ]
+      },
+      {
+        "question": "In which work did Bernhard Riemann first introduce the concepts of the Riemannian metric and the Riemannian curvature tensor?",
+        "answer": "Bernhard Riemann introduced the notion of a Riemannian metric and the Riemannian curvature tensor for the first time in his Habilitationsschrift, 'On the hypotheses which lie at the foundation of geometry'.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0015"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0015"
+        ]
+      },
+      {
+        "question": "What is a geometric structure in the context of differential geometry, and what are some examples of the properties these structures can define?",
+        "answer": "A geometric structure is a feature on a differentiable manifold that defines a notion such as size, distance, shape, or volume. For example, Riemannian geometry specifies distances and angles, symplectic geometry allows for the computation of volumes, and conformal geometry defines only angles.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0000",
+          "differentialgeometry_3e90d4e3_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0000",
+          "differentialgeometry_3e90d4e3_c0001"
+        ]
+      },
+      {
+        "question": "Trace the development of differential geometry from its origins in classical antiquity to its modern applications in fields like physics and computer science.",
+        "answer": "The study of differential geometry dates back to classical antiquity, where its foundational principles were implicitly used in geodesy. Early examples include the study of the Earth's spherical geometry, Eratosthenes' calculation of the Earth's circumference around 200 BC, and Ptolemy's use of stereographic projection for mapping in 150 AD. The field's history is closely tied to the evolution of geometry, space, and topology, eventually leading to the modern formalism involving tensors and tensor fields. In the modern era, differential geometry has found significant applications, most prominently in Albert Einstein's theory of general relativity, quantum field theory, and the standard model of particle physics. Its use also extends to other areas such as chemistry, economics, engineering, computer graphics, computer vision, and machine learning.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0002",
+          "differentialgeometry_3e90d4e3_c0003",
+          "differentialgeometry_3e90d4e3_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0003",
+          "differentialgeometry_3e90d4e3_c0004",
+          "differentialgeometry_3e90d4e3_c0002"
+        ]
+      },
+      {
+        "question": "How was the concept of the shortest path on Earth's surface understood and referred to by different figures from classical antiquity through the Renaissance?",
+        "answer": "In classical antiquity, the principle of a straight line providing the shortest distance between two points was applied to the Earth's surface, leading to the understanding that great circles, or geodesic paths, were the shortest routes. Eratosthenes is mentioned as someone who measured these paths. Later, during the Renaissance, Gerardus Mercator distinguished these lines of shortest distance on Earth, which he called \"praga,\" from the straight-line paths (\"directio\") on his maps.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0005",
+          "differentialgeometry_3e90d4e3_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0005",
+          "differentialgeometry_3e90d4e3_c0006"
+        ]
+      },
+      {
+        "question": "Provide an overview of differential geometry, including its fundamental subject of study, the types of geometric structures it examines, and its applications in other fields.",
+        "answer": "Differential geometry is a mathematical discipline that studies the geometry of smooth shapes and spaces, known as smooth manifolds, using techniques from calculus and algebra. It is concerned with geometric structures that define notions such as size, distance, shape, and volume. For example, Riemannian geometry specifies distances and angles, symplectic geometry deals with volumes, and conformal geometry focuses only on angles. The language of differential geometry is prominently used in physics, particularly in Albert Einstein's theory of general relativity and the standard model of particle physics. It also has applications in chemistry, economics, engineering, computer graphics, computer vision, and machine learning.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0000",
+          "differentialgeometry_3e90d4e3_c0001",
+          "differentialgeometry_3e90d4e3_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0000",
+          "differentialgeometry_3e90d4e3_c0001",
+          "differentialgeometry_3e90d4e3_c0002"
+        ]
+      },
+      {
+        "question": "How did the understanding and representation of the shortest distance on the Earth's surface evolve from classical antiquity to the work of Gerardus Mercator?",
+        "answer": "In classical antiquity, mathematicians applied Euclid's principle of a straight line being the shortest distance between two points to the spherical surface of the Earth, leading to the conclusion that great circles are the shortest path. The measurements of these geodesic paths by Eratosthenes are considered a rudimentary form of measuring arclength. During the Renaissance, Gerardus Mercator's map projection further developed this understanding. He explicitly distinguished between 'praga,' the lines of shortest distance on the Earth, and 'directio,' the straight line paths on his flat map, noting that the praga appeared as curved lines in his projection, a reflection of the difficulty in creating a metric-preserving map.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0005",
+          "differentialgeometry_3e90d4e3_c0006",
+          "differentialgeometry_3e90d4e3_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0006",
+          "differentialgeometry_3e90d4e3_c0005",
+          "differentialgeometry_3e90d4e3_c0007"
+        ]
+      },
+      {
+        "question": "Trace the development of the mathematical concept of curvature from the 1600s to the 1700s, as described by the contributions of early mathematicians.",
+        "answer": "The development of the concept of curvature began in the 1600s with mathematicians like Pierre de Fermat, Isaac Newton, and Gottfried Leibniz, who investigated concepts such as circles of osculation to aid in its measurement. This was followed by the creation of the first analytical formula for the radius of an osculating circle, which was essentially the first analytical formula for curvature. Later, Alexis Clairaut introduced the terminology of \"curvature and double curvature,\" an early notion of principal curvatures. Finally, in 1760, Leonhard Euler proved a theorem that expressed the curvature of a space curve on a surface in terms of these principal curvatures.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0008",
+          "differentialgeometry_3e90d4e3_c0009",
+          "differentialgeometry_3e90d4e3_c0010",
+          "differentialgeometry_3e90d4e3_c0011"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0009",
+          "differentialgeometry_3e90d4e3_c0008",
+          "differentialgeometry_3e90d4e3_c0010",
+          "differentialgeometry_3e90d4e3_c0011"
+        ]
+      },
+      {
+        "question": "How did Bernhard Riemann's work on intrinsic differential geometry build upon the foundational contributions of his teacher, Carl Friedrich Gauss?",
+        "answer": "Carl Friedrich Gauss laid the foundation for intrinsic differential geometry, notably in his 1827 work \"Disquisitiones generales circa superficies curvas,\" where he introduced concepts like Gaussian curvature and proved the Theorema Egregium. He also developed the idea of the linear element `ds` of a surface. Bernhard Riemann, his student, expanded on these ideas by developing Gauss's concept of the linear element `ds` into the Riemannian metric `ds^2`, introducing the Riemannian curvature tensor, and initiating the systematic study of differential geometry in higher dimensions.",
+        "related_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0013",
+          "differentialgeometry_3e90d4e3_c0014",
+          "differentialgeometry_3e90d4e3_c0015"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "differentialgeometry_3e90d4e3_c0015",
+          "differentialgeometry_3e90d4e3_c0013",
+          "differentialgeometry_3e90d4e3_c0014"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:48.449Z",
+    "content_format": "markdown",
+    "total_chunks": 43,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,564 @@
+{
+  "article": {
+    "id": "antisatelliteweapon_02eca359",
+    "title": "Anti-satellite weapon",
+    "url": "https://en.wikipedia.org/wiki/Anti-satellite_weapon",
+    "lang": "en",
+    "created_at": "2025-07-31T08:51:07.208021",
+    "content": "---\nid: antisatelliteweapon_02eca359\nurl: https://en.wikipedia.org/wiki/Anti-satellite_weapon\ntitle: Anti-satellite weapon\nlang: en\ncreated_at: '2025-07-31T08:44:35.444625'\nchecksum: 8d43b9fb011c16d8b149fcab5414190b6816c8411511394cdcd69dae7ee0a3ae\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3908\n  char_count: 24615\n  num_chunks: 31\n  original_chunks: 35\n  filtered_out: 4\n  num_sections: 0\n---\nAnti-satellite weapons (ASAT) are space weapons designed to incapacitate or destroy satellites for strategic or tactical purposes. Although no ASAT system has yet been utilized in warfare, a few countries (China, India, Russia, and the United States) have successfully shot down their own satellites to demonstrate their ASAT capabilities in a show of force. ASATs have also been used to remove decommissioned satellites. ASAT roles include: defensive measures against an adversary's space-based and nuclear weapons, a force multiplier for a nuclear first strike, a countermeasure against an adversary's anti-ballistic missile defense (ABM), an asymmetric counter to a technologically superior adversary, and a counter-value weapon. Use of ASATs generates space debris, which can collide with other satellites and generate more space debris. A cascading multiplication of space debris could cause Earth to suffer from Kessler syndrome. == History == The first anti-satellite technologies were developed during the cold war, with the Soviet Istrebitel Sputnikov programme and the American SAINT. Since, other states have also developed or researched ASAT capabilities. === Soviet Union === The specter of bombardment satellites and the reality of ballistic missiles stimulated the Soviet Union to explore defensive space weapons. The Soviet Union first tested the Polyot interceptor in 1963 and successfully tested an orbital anti-satellite (ASAT) weapon in 1968. According to some accounts, Sergei Korolev started some work on the concept in 1956 at his OKB-1, while others attribute the work to Vladimir Chelomei's OKB-52 around 1959. What is certain is that at the beginning of April 1960, Nikita Khrushchev held a meeting at his summer residence in Crimea, discussing an array of defence industry issues. Here, Chelomei outlined his rocket and spacecraft program, and received a go-ahead to start development of the UR-200 rocket, one of its many roles being the launcher for his anti-satellite project. The decision to start work on the weapon, as part of the Istrebitel Sputnikov (IS) (lit. 'destroyer of satellites') program, was made in March 1961. The IS system was \"co-orbital\", approaching its target over time and then exploding a shrapnel warhead close enough to kill it. The missile was launched when a target satellite's ground track rises above the launch site. Once the satellite is detected, the missile is launched into orbit close to the targeted satellite. It takes 90 to 200 minutes (or one to two orbits) for the missile interceptor to get close enough to its target. The missile is guided by an on-board radar. The interceptor, which weighs 1400 kg (3086 lb), may be effective up to one kilometre from a target. Delays in the UR-200 missile program prompted Chelomei to request R-7 rockets for prototype testing of the IS. The Polyot 1 and 2, launched on 1 November 1963 and 12 April 1964 respectively, carried out one such intercept test in early 1964. Later in the year Khrushchev cancelled the UR-200 in favour of the R-36, forcing the IS to switch to this launcher, whose space launcher version was developed as the Tsyklon-2. Delays in that program led to the introduction of a simpler version, the 2A, which launched its first IS test on 27 October 1967, and a second on 28 April 1968. Further tests carried out against a special target spacecraft, the DS-P1-M, which recorded hits by the IS warhead's shrapnel.In November 1968, 4 years after Polyot 1 and 2 were tested for a potential Satellite intercept, Kosmos 248 was successfully destroyed by Kosmos 252 which came within the 5km 'kill radius' and destroyed Kosmos 248 by detonating it's warhead. A total of 23 launches have been identified as being part of the IS test series. The system was declared operational in February 1973. Testing resumed in 1976 as a result of the US work on the Space Shuttle. Elements within the Soviet space industry convinced Leonid Brezhnev that the Shuttle was a single-orbit weapon that would be launched from Vandenberg Air Force Base, manoeuvre to avoid existing anti-ballistic missile sites, bomb Moscow in a first strike, and then land. Although the Soviet military was aware these claims were false, Brezhnev believed them and ordered a resumption of IS testing along with a Shuttle of their own. As part of this work the IS system was expanded to allow attacks at higher altitudes and was declared operational in this new arrangement on 1 July 1979. However, in 1983, Yuri Andropov ended all IS testing and all attempts to resume it failed. Ironically, it was at about this point that the US started its own testing in response to the Soviet program. In the early 1980s, the Soviet Union also started developing a counterpart to the US air-launched ASAT system, using modified MiG-31D 'Foxhounds' (at least six of which were completed) as the launch platform. The system was called 30P6 \"Kontakt\", the missile used is 79M6. The USSR also experimented with arming the Almaz space stations with Rikhter R-23 aircraft auto-cannons. Another Soviet design was the 11F19DM Skif-DM/Polyus, an orbital megawatt laser that failed on launch in 1987. In 1987, Mikhail Gorbachev visited Baikonur Cosmodrome and was shown an anti-satellite system called \"Naryad\" (Sentry), also known as 14F11, launched by UR-100N rockets. === United States === In the late 1950s, the US Air Force started a series of advanced strategic missile projects under the designation Weapon System WS-199A. One of the projects studied under the 199A umbrella was Martin's Bold Orion air-launched ballistic missile (ALBM) for the B-47 Stratojet, based on the rocket motor from the Sergeant missile. Twelve test launches were carried out between 26 May 1958 and 13 October 1959, but these were generally unsuccessful and further work as an ALBM ended. The system was then modified with the addition of an Altair upper stage to create an anti-satellite weapon with a 1770-kilometre (1100 mi) range. Only one test flight of the anti-satellite mission was carried out, making a mock attack on the Explorer 6 at an altitude of 251 km (156 mi). To record its flight path, the Bold Orion transmitted telemetry to the ground, ejected flares to aid visual tracking, and was continuously tracked by radar. The missile successfully passed within 6.4 km (4 mi) of the satellite, which is suitable for use with a nuclear weapon, but useless for conventional warheads. A similar project carried out under 199A, Lockheed's High Virgo, was initially another ALBM for the B-58 Hustler, likewise based on the Sergeant. It too was adapted for the anti-satellite role, and made an attempted intercept on Explorer 5 on 22 September 1959. However, shortly after launch communications with the missile were lost and the camera packs could not be recovered to see if the test was successful. In any event, work on the WS-199 projects ended with the start of the GAM-87 Skybolt project. Simultaneous US Navy projects were also abandoned although smaller projects did continue until the early 1970s. The use of high-altitude nuclear explosions to destroy satellites was considered after the tests of the first conventional missile systems in the 1960s. During the Hardtack Teak test in 1958 observers noted the damaging effects of the electromagnetic pulse (EMP) caused by the explosions on electronic equipment, and during the Starfish Prime test in 1962 the EMP from a 1.4-megaton-of-TNT (5.9 PJ) warhead detonated over the Pacific damaged three satellites and also disrupted power transmission and communications across the Pacific. Further testing of weapons effects was carried out under the DOMINIC I series. An adapted version of the nuclear armed Nike Zeus was used for an ASAT from 1962. Codenamed Mudflap, the missile was designated DM-15S and a single missile was deployed at the Kwajalein atoll until 1966 when the project was ended in favour of the USAF Thor-based Program 437 ASAT which was operational until 6 March 1975. Another area of research was directed-energy weapons, including a nuclear-explosion powered X-ray laser proposal developed at Lawrence Livermore National Laboratory (LLNL) in 1968. Other research was based on more conventional lasers or masers and developed to include the idea of a satellite with a fixed laser and a deployable mirror for targeting. LLNL continued to consider more edgy technology but their X-ray laser system development was cancelled in 1977 (although research into X-ray lasers was resurrected during the 1980s as part of the SDI). ASATs were generally given low priority until 1982, when information about a successful USSR program became widely known in the west. A \"crash program\" followed, which developed into the Vought ASM-135 ASAT, based on the AGM-69 SRAM with an Altair upper stage. The system was carried on a modified F-15 Eagle that carried the missile directly under the central line of the plane. The F-15's guidance system was modified for the mission and provided new directional cuing through the pilot's head-up display, and allowed for mid-course updates via a data link. The first launch of the new anti-satellite missile took place in January 1984. The first, and only, successful interception was on 13 September 1985. The F-15 took off from Edwards Air Force Base, climbed to 11613 m (38100 ft) and vertically launched the missile at the Solwind P78-1, a US gamma ray spectroscopy satellite orbiting at 555 km (345 mi), which was launched in 1979. The last piece of debris from the destruction of Solwind P78-1, catalogued as COSPAR 1979-017GX, SATCAT 16564, deorbited 9 May 2004. Although successful, the program was cancelled in 1988. USA-193 was an American reconnaissance satellite, which was launched on 14 December 2006 by a Delta II rocket, from Vandenberg Air Force Base. It was reported about a month after launch that the satellite had failed. In January 2008, it was noted that the satellite was decaying from orbit at a rate of 500 m (1640 ft) per day. After publicly announcing its intention to do so a week earlier, on 21 February 2008, the US Navy destroyed USA-193 in Operation Burnt Frost, using a ship-fired RIM-161 Standard Missile 3 about 247 km (153 mi) above the Pacific Ocean. That test produced 174 pieces of orbital debris large enough to detect that were cataloged by the US military. While most of the debris re-entered the Earth's atmosphere within a few months, a few pieces lasted slightly longer because they were thrown into higher orbits. The final piece of detectable USA-193 debris re-entered on 28 October 2009. According to the US government, the primary reason for destroying the satellite was the approximately 450 kg (1000 lb) of toxic hydrazine fuel contained on board, which could pose health risks to persons in the immediate vicinity of the crash site should any significant amount survive the re-entry. On 20 February 2008, it was announced that the launch was carried out successfully and an explosion was observed consistent with the destruction of the hydrazine fuel tank. The United States has since ceased the testing of direct-ascent anti-satellite missiles, having outlawed the practice in 2022. === Strategic Defense Initiative and the Cold War === The era of the Strategic Defense Initiative (proposed in 1983) focused primarily on the development of systems to defend against nuclear warheads, however, some of the technologies developed may be useful also for anti-satellite use. The Strategic Defense Initiative gave the US and Soviet ASAT programs a major boost; ASAT projects were adapted for ABM use and the reverse was also true. The initial US plan was to use the already-developed MHV as the basis for a space based constellation of about 40 platforms deploying up to 1,500 kinetic interceptors. By 1988 the US project had evolved into an extended four-stage development. The initial stage would consist of the Brilliant Pebbles defense system, a satellite constellation of 4,600 kinetic interceptors (KE ASAT) of 45 kg (100 lb) each in Low Earth orbit and their associated tracking systems. The next stage would deploy the larger platforms and the following phases would include the laser and charged particle beam weapons that would be developed by that time from existing projects such as MIRACL. The first stage was intended to be completed by 2000 at a cost of around $125 billion. Research in the US and the Soviet Union was proving that the requirements, at least for orbital based energy weapon systems, were, with available technology, close to impossible. Nonetheless, the strategic implications of a possible unforeseen breakthrough in technology forced the USSR to initiate massive spending on research in the 12th Five Year Plan, drawing all the various parts of the project together under the control of GUKOS and matching the US proposed deployment date of 2000. Ultimately, the Soviet Union approached the point of experimental implementation of orbital laser platforms with the (failed) launch of Polyus. Both countries began to reduce expenditure from 1989 and the Russian Federation unilaterally discontinued all SDI research in 1992. Research and Development (both of ASAT systems and other space based/deployed weapons) has, however, reported to have been resumed under the government of Vladimir Putin as a counter to renewed US Strategic Defense efforts post Anti-Ballistic Missile Treaty. However, the status of these efforts, or indeed how they are being funded through National Reconnaissance Office projects of record, remains unclear. The US has begun working on a number of programs which could be foundational for a space-based ASAT. These programs include the Experimental Spacecraft System (USA-165), the Near Field Infrared Experiment (NFIRE), and the space-based interceptor (SBI). === Russia === After the collapse of the Soviet Union, the MiG-31D project was put on hold due to reduced defence expenditures. However, in August 2009, Alexander Zelin announced that the Russian Air Force had resumed this program. The Sokol Eshelon is a prototype laser system based on an A-60 airplane which is reported to be restarting development in 2012. Three more launches were reportedly held in December 2016, on 26 March 2018, and on 23 December 2018—the latter two from a TEL. A new type of ASAT missile was seen carried by a MiG-31 in September 2018. On 15 April 2020, US officials said Russia conducted a direct ascent anti-satellite missile test that could take out spacecraft or satellites in low Earth orbit. A new test launch took place on 16 December 2020. In November 2021, Kosmos 1408 was successfully destroyed by a Russian anti-satellite missile in a test, causing a debris field that affected the International Space Station. In 2024, U.S. intelligence sources hinted that Russia was working on an anti-satellite weapon with some sort of nuclear technology, though it was unclear if it was a nuclear weapon or merely a nuclear-powered device. === China === On 11 January 2007, the People's Republic of China successfully destroyed a defunct Chinese weather satellite, Fengyun-1C (FY-1C, COSPAR 1999-025A). The destruction was reportedly carried out by an SC-19 ASAT missile with a kinetic kill warhead similar in concept to the American Exoatmospheric Kill Vehicle. FY-1C was a weather satellite orbiting Earth in polar orbit at an altitude of about 865 km (537 mi), with a mass of about 750 kg (1650 lb). Launched in 1999, it was the fourth satellite in the Fengyun series. The missile was launched from a mobile Transporter-Erector-Launcher (TEL) vehicle at Xichang (28.247°N 102.025°E﻿ / 28.247; 102.025﻿ (Xichang Satellite Launch Center)) and the warhead destroyed the satellite in a head-on collision at an extremely high relative velocity. Evidence suggests that the same SC-19 system was also tested in 2005, 2006, 2010, and 2013. In January 2007 China demonstrated a satellite knock out whose detonation alone caused more than 40,000 new chunks of debris with a diameter larger than one centimeter and a sudden increase in the total amount of debris in orbit. In May 2013, the Chinese government announced the launch of a suborbital rocket carrying a scientific payload to study the upper ionosphere. However, US government sources described it as the first test of a new ground-based ASAT system. An open source analysis by Secure World Foundation, based in part on commercial satellite imagery, found that it may indeed have been a test of a new ASAT system that could potentially threaten US satellites in geostationary Earth orbit. Similarly on 5 February 2018, China tested an exoatmospheric ballistic missile with the potential to be used as an ASAT weapon, the Dong Neng-3, with state media reporting that the test was purely defensive and it achieved its desired objectives. === India === In a televised press briefing during the 97th Indian Science Congress held in Thiruvananthapuram, the Defence Research and Development Organisation (DRDO) Director General Rupesh announced that India was developing the necessary technology that could be combined to produce a weapon to destroy enemy satellites in orbit. On 10 February 2010, DRDO Director-General and Scientific Advisor to the Defence Minister, Dr. Vijay Kumar Saraswat stated that India had \"all the building blocks necessary\" to integrate an anti-satellite weapon to neutralize hostile satellites in low earth and polar orbits. In April 2012, DRDO's chairman V. K. Saraswat said that India possessed the critical technologies for an ASAT weapon from radars and interceptors developed for Indian Ballistic Missile Defence Programme. In July 2012, Ajay Lele, an Institute for Defence Studies and Analyses fellow, wrote that an ASAT test would bolster India's position if an international regime to control the proliferation of ASATs similar to NPT were to be established. He suggested that a low-orbit test against a purpose-launched satellite would not be seen as irresponsible. The programme was sanctioned in 2017. On 27 March 2019, India successfully conducted an ASAT test called Mission Shakti. The interceptor was able to strike a test satellite at a 300-kilometre (186 mi) altitude in low earth orbit (LEO), thus successfully testing its ASAT missile. The interceptor was launched at around 05:40 UTC at the Integrated Test Range (ITR) in Chandipur, Odisha and hit its target Microsat-R after 168 seconds. The operation was named Mission Shakti. The missile system was developed by the Defence Research and Development Organisation (DRDO)—a research wing of the Indian defence services. With this test, India became the fourth nation with anti-satellite missile capabilities. India stated that this capability is a deterrent and is not directed against any nation. In a statement released after the test, Indian Ministry of External Affairs said that the test was conducted at low altitude to ensure that the resulting debris would \"decay and fall back onto the Earth within weeks\". According to Jonathan McDowell, an astrophysicist at Harvard–Smithsonian Center for Astrophysics, some debris might persist for a year, but most should burn up in the atmosphere within several weeks. Brian Weeden of Secure World Foundation agreed, but warned about the possibility of some fragments getting boosted to higher orbits. US Air Force Space Command said that it was tracking 270 pieces of debris from the test. Following the test, acting United States Secretary of Defense Patrick Shanahan warned about the risks of space debris caused by ASAT tests, but later added that he did not expect debris from the Indian test to last. The United States Department of State acknowledged Ministry of External Affairs' statement on space debris and reiterated its intention to pursue shared interests in space including on space security with India. Russia acknowledged India's statement on the test not being targeted against any nation and invited India to join the Russian–Chinese proposal for a treaty against weaponisation of space. === Israel === The Arrow 3 or Hetz 3 is an anti-ballistic missile, currently in service. It provides exo-atmospheric interception of ballistic missiles. It is also believed (by experts such as Prof. Yitzhak Ben Yisrael, chairman of the Israel Space Agency), that it will operate as an ASAT. In November 2023, Israel's Arrow 3 missile defense system successfully intercepted a missile above the Earths atmosphere launched by Houthi rebels in Yemen. While it was not a satellite, this was the first time a missile was intercepted in space during wartime; demonstrating the theoretical capabilities of such a system to intercept a satellite. == List of satellite interception tests == == Limits of anti-satellite weapons == While it has been suggested that a country intercepting the satellites of another country in the event of a conflict could seriously hinder the latter's military operations, the ease of shooting down orbiting satellites has been questioned. Although satellites have been successfully intercepted at low orbiting altitudes, the tracking of military satellites for a length of time could be complicated by defensive measures like inclination changes. Depending on the level of tracking capabilities, the interceptor would have to pre-determine the point of impact while compensating for the satellite's lateral movement and the time for the interceptor to climb and move. US intelligence, surveillance and reconnaissance (ISR) satellites orbit at about 800 km (500 mi) high and move at 7.5 km/s (4.7 mi/s), so if conflict was to break out between the United States and China, a Chinese Intermediate-range ballistic missile would need to compensate for 1350 km (840 mi) of movement in the three minutes it takes to boost to that altitude. However, even if the ISR satellite is knocked out, the US possesses an extensive array of crewed and uncrewed ISR aircraft that could perform missions at standoff ranges from Chinese land-based air defences. Global Positioning System and communications satellites orbit at higher altitudes of 20200 km (12600 mi) and 35800 km (22200 mi) respectively, and this puts them out of range of solid-fuelled intercontinental ballistic missiles. Liquid-fuelled space launch vehicles could reach those altitudes, but they are more time-consuming to launch and could be attacked on the ground before being able to launch in rapid succession. The constellation of 30 GPS satellites provides redundancy where at least four satellites can be received in six orbital planes at any one time, so an attacker would need to disable at least six satellites to disrupt the network. However, even if the attack is successful, signal degradation only lasts for 95 minutes and backup inertial navigation systems (INS) would still be available for relatively accurate movement as well as laser guidance for weapons targeting. For communications, the Naval Telecommunications System (NTS) used by the US Navy uses three elements: tactical communications among a battle group; long-haul communications between shore-based forward Naval Communications Stations (NAVCOMSTAs) and deployed afloat units; and strategic communication connecting NAVCOMSTAs with National Command Authorities (NCA). The first two elements use line-of-sight (25–30 km (13–16 nmi; 16–19 mi)) and extended line-of-sight (300–500 km (160–270 nmi; 190–310 mi)) radios respectively, so only strategic communications are dependent on satellites. China would prefer to cut off deployed units from each other and then negotiate with the NCA to have the battle group withdraw or stand down, but ASATs could only achieve the opposite. Moreover, even if somehow a communications satellite were hit, a battle group could still perform its missions in the absence of direct guidance from the NCA. === Proposed law === On November 1, 2022, a UN working group adopted for the first time a resolution calling on countries to ban destructive anti-satellite missile tests. Although not legally binding, the resolution reflects an increase in international political support for a ban on these weapons. Other countries have noted that the United States has already tested its ASAT destruction capability and, therefore, this U.S.-backed resolution limits the progress of the other countries. == See also == Anti-ballistic missile Deep Black (1986 book) High-altitude nuclear explosion Kill vehicle Militarisation of space Multiple Kill Vehicle Outer Space Treaty Space gun Space warfare == References == == External links == Media related to Anti-satellite missiles at Wikimedia Commons"
+  },
+  "chunks": [
+    {
+      "id": "antisatelliteweapon_02eca359_c0000",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 936,
+      "content": "Anti-satellite weapons (ASAT) are space weapons designed to incapacitate or destroy satellites for strategic or tactical purposes. Although no ASAT system has yet been utilized in warfare, a few countries (China, India, Russia, and the United States) have successfully shot down their own satellites to demonstrate their ASAT capabilities in a show of force. ASATs have also been used to remove decommissioned satellites. ASAT roles include: defensive measures against an adversary's space-based and nuclear weapons, a force multiplier for a nuclear first strike, a countermeasure against an adversary's anti-ballistic missile defense (ABM), an asymmetric counter to a technologically superior adversary, and a counter-value weapon. Use of ASATs generates space debris, which can collide with other satellites and generate more space debris. A cascading multiplication of space debris could cause Earth to suffer from Kessler syndrome.",
+      "char_count": 935,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0001",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 949,
+      "end_char": 1168,
+      "content": "== History == The first anti-satellite technologies were developed during the cold war, with the Soviet Istrebitel Sputnikov programme and the American SAINT. Since, other states have also developed or researched ASAT capabilities.",
+      "char_count": 231,
+      "token_estimate": 57,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0002",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Soviet Union ==",
+      "heading_path": "== = Soviet Union ==",
+      "start_char": 1188,
+      "end_char": 2117,
+      "content": "== = Soviet Union === The specter of bombardment satellites and the reality of ballistic missiles stimulated the Soviet Union to explore defensive space weapons. The Soviet Union first tested the Polyot interceptor in 1963 and successfully tested an orbital anti-satellite (ASAT) weapon in 1968. According to some accounts, Sergei Korolev started some work on the concept in 1956 at his OKB-1, while others attribute the work to Vladimir Chelomei's OKB-52 around 1959. What is certain is that at the beginning of April 1960, Nikita Khrushchev held a meeting at his summer residence in Crimea, discussing an array of defence industry issues. Here, Chelomei outlined his rocket and spacecraft program, and received a go-ahead to start development of the UR-200 rocket, one of its many roles being the launcher for his anti-satellite project. The decision to start work on the weapon, as part of the Istrebitel Sputnikov (IS) (lit.",
+      "char_count": 928,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0003",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Soviet Union ==",
+      "heading_path": "== = Soviet Union ==",
+      "start_char": 2117,
+      "end_char": 2997,
+      "content": "'destroyer of satellites') program, was made in March 1961. The IS system was \"co-orbital\", approaching its target over time and then exploding a shrapnel warhead close enough to kill it. The missile was launched when a target satellite's ground track rises above the launch site. Once the satellite is detected, the missile is launched into orbit close to the targeted satellite. It takes 90 to 200 minutes (or one to two orbits) for the missile interceptor to get close enough to its target. The missile is guided by an on-board radar. The interceptor, which weighs 1400 kg (3086 lb), may be effective up to one kilometre from a target. Delays in the UR-200 missile program prompted Chelomei to request R-7 rockets for prototype testing of the IS. The Polyot 1 and 2, launched on 1 November 1963 and 12 April 1964 respectively, carried out one such intercept test in early 1964.",
+      "char_count": 880,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0004",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Soviet Union ==",
+      "heading_path": "== = Soviet Union ==",
+      "start_char": 2998,
+      "end_char": 3909,
+      "content": "Later in the year Khrushchev cancelled the UR-200 in favour of the R-36, forcing the IS to switch to this launcher, whose space launcher version was developed as the Tsyklon-2. Delays in that program led to the introduction of a simpler version, the 2A, which launched its first IS test on 27 October 1967, and a second on 28 April 1968. Further tests carried out against a special target spacecraft, the DS-P1-M, which recorded hits by the IS warhead's shrapnel.In November 1968, 4 years after Polyot 1 and 2 were tested for a potential Satellite intercept, Kosmos 248 was successfully destroyed by Kosmos 252 which came within the 5km 'kill radius' and destroyed Kosmos 248 by detonating it's warhead. A total of 23 launches have been identified as being part of the IS test series. The system was declared operational in February 1973. Testing resumed in 1976 as a result of the US work on the Space Shuttle.",
+      "char_count": 911,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0005",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Soviet Union ==",
+      "heading_path": "== = Soviet Union ==",
+      "start_char": 3910,
+      "end_char": 4904,
+      "content": "Elements within the Soviet space industry convinced Leonid Brezhnev that the Shuttle was a single-orbit weapon that would be launched from Vandenberg Air Force Base, manoeuvre to avoid existing anti-ballistic missile sites, bomb Moscow in a first strike, and then land. Although the Soviet military was aware these claims were false, Brezhnev believed them and ordered a resumption of IS testing along with a Shuttle of their own. As part of this work the IS system was expanded to allow attacks at higher altitudes and was declared operational in this new arrangement on 1 July 1979. However, in 1983, Yuri Andropov ended all IS testing and all attempts to resume it failed. Ironically, it was at about this point that the US started its own testing in response to the Soviet program. In the early 1980s, the Soviet Union also started developing a counterpart to the US air-launched ASAT system, using modified MiG-31D 'Foxhounds' (at least six of which were completed) as the launch platform.",
+      "char_count": 994,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0006",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Soviet Union ==",
+      "heading_path": "== = Soviet Union ==",
+      "start_char": 4905,
+      "end_char": 5354,
+      "content": "The system was called 30P6 \"Kontakt\", the missile used is 79M6. The USSR also experimented with arming the Almaz space stations with Rikhter R-23 aircraft auto-cannons. Another Soviet design was the 11F19DM Skif-DM/Polyus, an orbital megawatt laser that failed on launch in 1987. In 1987, Mikhail Gorbachev visited Baikonur Cosmodrome and was shown an anti-satellite system called \"Naryad\" (Sentry), also known as 14F11, launched by UR-100N rockets.",
+      "char_count": 449,
+      "token_estimate": 112,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0007",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 5356,
+      "end_char": 6304,
+      "content": "== = United States === In the late 1950s, the US Air Force started a series of advanced strategic missile projects under the designation Weapon System WS-199A. One of the projects studied under the 199A umbrella was Martin's Bold Orion air-launched ballistic missile (ALBM) for the B-47 Stratojet, based on the rocket motor from the Sergeant missile. Twelve test launches were carried out between 26 May 1958 and 13 October 1959, but these were generally unsuccessful and further work as an ALBM ended. The system was then modified with the addition of an Altair upper stage to create an anti-satellite weapon with a 1770-kilometre (1100 mi) range. Only one test flight of the anti-satellite mission was carried out, making a mock attack on the Explorer 6 at an altitude of 251 km (156 mi). To record its flight path, the Bold Orion transmitted telemetry to the ground, ejected flares to aid visual tracking, and was continuously tracked by radar.",
+      "char_count": 947,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0008",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 6304,
+      "end_char": 7234,
+      "content": "The missile successfully passed within 6.4 km (4 mi) of the satellite, which is suitable for use with a nuclear weapon, but useless for conventional warheads. A similar project carried out under 199A, Lockheed's High Virgo, was initially another ALBM for the B-58 Hustler, likewise based on the Sergeant. It too was adapted for the anti-satellite role, and made an attempted intercept on Explorer 5 on 22 September 1959. However, shortly after launch communications with the missile were lost and the camera packs could not be recovered to see if the test was successful. In any event, work on the WS-199 projects ended with the start of the GAM-87 Skybolt project. Simultaneous US Navy projects were also abandoned although smaller projects did continue until the early 1970s. The use of high-altitude nuclear explosions to destroy satellites was considered after the tests of the first conventional missile systems in the 1960s.",
+      "char_count": 930,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0009",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 7235,
+      "end_char": 8199,
+      "content": "During the Hardtack Teak test in 1958 observers noted the damaging effects of the electromagnetic pulse (EMP) caused by the explosions on electronic equipment, and during the Starfish Prime test in 1962 the EMP from a 1.4-megaton-of-TNT (5.9 PJ) warhead detonated over the Pacific damaged three satellites and also disrupted power transmission and communications across the Pacific. Further testing of weapons effects was carried out under the DOMINIC I series. An adapted version of the nuclear armed Nike Zeus was used for an ASAT from 1962. Codenamed Mudflap, the missile was designated DM-15S and a single missile was deployed at the Kwajalein atoll until 1966 when the project was ended in favour of the USAF Thor-based Program 437 ASAT which was operational until 6 March 1975. Another area of research was directed-energy weapons, including a nuclear-explosion powered X-ray laser proposal developed at Lawrence Livermore National Laboratory (LLNL) in 1968.",
+      "char_count": 964,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0010",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 8200,
+      "end_char": 9131,
+      "content": "Other research was based on more conventional lasers or masers and developed to include the idea of a satellite with a fixed laser and a deployable mirror for targeting. LLNL continued to consider more edgy technology but their X-ray laser system development was cancelled in 1977 (although research into X-ray lasers was resurrected during the 1980s as part of the SDI). ASATs were generally given low priority until 1982, when information about a successful USSR program became widely known in the west. A \"crash program\" followed, which developed into the Vought ASM-135 ASAT, based on the AGM-69 SRAM with an Altair upper stage. The system was carried on a modified F-15 Eagle that carried the missile directly under the central line of the plane. The F-15's guidance system was modified for the mission and provided new directional cuing through the pilot's head-up display, and allowed for mid-course updates via a data link.",
+      "char_count": 931,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0011",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 9132,
+      "end_char": 10028,
+      "content": "The first launch of the new anti-satellite missile took place in January 1984. The first, and only, successful interception was on 13 September 1985. The F-15 took off from Edwards Air Force Base, climbed to 11613 m (38100 ft) and vertically launched the missile at the Solwind P78-1, a US gamma ray spectroscopy satellite orbiting at 555 km (345 mi), which was launched in 1979. The last piece of debris from the destruction of Solwind P78-1, catalogued as COSPAR 1979-017GX, SATCAT 16564, deorbited 9 May 2004. Although successful, the program was cancelled in 1988. USA-193 was an American reconnaissance satellite, which was launched on 14 December 2006 by a Delta II rocket, from Vandenberg Air Force Base. It was reported about a month after launch that the satellite had failed. In January 2008, it was noted that the satellite was decaying from orbit at a rate of 500 m (1640 ft) per day.",
+      "char_count": 896,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0012",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 10029,
+      "end_char": 10911,
+      "content": "After publicly announcing its intention to do so a week earlier, on 21 February 2008, the US Navy destroyed USA-193 in Operation Burnt Frost, using a ship-fired RIM-161 Standard Missile 3 about 247 km (153 mi) above the Pacific Ocean. That test produced 174 pieces of orbital debris large enough to detect that were cataloged by the US military. While most of the debris re-entered the Earth's atmosphere within a few months, a few pieces lasted slightly longer because they were thrown into higher orbits. The final piece of detectable USA-193 debris re-entered on 28 October 2009. According to the US government, the primary reason for destroying the satellite was the approximately 450 kg (1000 lb) of toxic hydrazine fuel contained on board, which could pose health risks to persons in the immediate vicinity of the crash site should any significant amount survive the re-entry.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0013",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 10912,
+      "end_char": 11211,
+      "content": "On 20 February 2008, it was announced that the launch was carried out successfully and an explosion was observed consistent with the destruction of the hydrazine fuel tank. The United States has since ceased the testing of direct-ascent anti-satellite missiles, having outlawed the practice in 2022.",
+      "char_count": 299,
+      "token_estimate": 74,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0014",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Strategic Defense Initiative and the Cold War ==",
+      "heading_path": "== = Strategic Defense Initiative and the Cold War ==",
+      "start_char": 11244,
+      "end_char": 12152,
+      "content": "== = Strategic Defense Initiative and the Cold War === The era of the Strategic Defense Initiative (proposed in 1983) focused primarily on the development of systems to defend against nuclear warheads, however, some of the technologies developed may be useful also for anti-satellite use. The Strategic Defense Initiative gave the US and Soviet ASAT programs a major boost; ASAT projects were adapted for ABM use and the reverse was also true. The initial US plan was to use the already-developed MHV as the basis for a space based constellation of about 40 platforms deploying up to 1,500 kinetic interceptors. By 1988 the US project had evolved into an extended four-stage development. The initial stage would consist of the Brilliant Pebbles defense system, a satellite constellation of 4,600 kinetic interceptors (KE ASAT) of 45 kg (100 lb) each in Low Earth orbit and their associated tracking systems.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0015",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Strategic Defense Initiative and the Cold War ==",
+      "heading_path": "== = Strategic Defense Initiative and the Cold War ==",
+      "start_char": 12152,
+      "end_char": 13081,
+      "content": "The next stage would deploy the larger platforms and the following phases would include the laser and charged particle beam weapons that would be developed by that time from existing projects such as MIRACL. The first stage was intended to be completed by 2000 at a cost of around $125 billion. Research in the US and the Soviet Union was proving that the requirements, at least for orbital based energy weapon systems, were, with available technology, close to impossible. Nonetheless, the strategic implications of a possible unforeseen breakthrough in technology forced the USSR to initiate massive spending on research in the 12th Five Year Plan, drawing all the various parts of the project together under the control of GUKOS and matching the US proposed deployment date of 2000. Ultimately, the Soviet Union approached the point of experimental implementation of orbital laser platforms with the (failed) launch of Polyus.",
+      "char_count": 929,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0016",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Strategic Defense Initiative and the Cold War ==",
+      "heading_path": "== = Strategic Defense Initiative and the Cold War ==",
+      "start_char": 13082,
+      "end_char": 13875,
+      "content": "Both countries began to reduce expenditure from 1989 and the Russian Federation unilaterally discontinued all SDI research in 1992. Research and Development (both of ASAT systems and other space based/deployed weapons) has, however, reported to have been resumed under the government of Vladimir Putin as a counter to renewed US Strategic Defense efforts post Anti-Ballistic Missile Treaty. However, the status of these efforts, or indeed how they are being funded through National Reconnaissance Office projects of record, remains unclear. The US has begun working on a number of programs which could be foundational for a space-based ASAT. These programs include the Experimental Spacecraft System (USA-165), the Near Field Infrared Experiment (NFIRE), and the space-based interceptor (SBI).",
+      "char_count": 793,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0017",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Russia ==",
+      "heading_path": "== = Russia ==",
+      "start_char": 13837,
+      "end_char": 14801,
+      "content": "== = Russia === After the collapse of the Soviet Union, the MiG-31D project was put on hold due to reduced defence expenditures. However, in August 2009, Alexander Zelin announced that the Russian Air Force had resumed this program. The Sokol Eshelon is a prototype laser system based on an A-60 airplane which is reported to be restarting development in 2012. Three more launches were reportedly held in December 2016, on 26 March 2018, and on 23 December 2018—the latter two from a TEL. A new type of ASAT missile was seen carried by a MiG-31 in September 2018. On 15 April 2020, US officials said Russia conducted a direct ascent anti-satellite missile test that could take out spacecraft or satellites in low Earth orbit. A new test launch took place on 16 December 2020. In November 2021, Kosmos 1408 was successfully destroyed by a Russian anti-satellite missile in a test, causing a debris field that affected the International Space Station. In 2024, U.S.",
+      "char_count": 963,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0018",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Russia ==",
+      "heading_path": "== = Russia ==",
+      "start_char": 14801,
+      "end_char": 15003,
+      "content": "intelligence sources hinted that Russia was working on an anti-satellite weapon with some sort of nuclear technology, though it was unclear if it was a nuclear weapon or merely a nuclear-powered device.",
+      "char_count": 202,
+      "token_estimate": 50,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0019",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = China ==",
+      "heading_path": "== = China ==",
+      "start_char": 15003,
+      "end_char": 15899,
+      "content": "== = China === On 11 January 2007, the People's Republic of China successfully destroyed a defunct Chinese weather satellite, Fengyun-1C (FY-1C, COSPAR 1999-025A). The destruction was reportedly carried out by an SC-19 ASAT missile with a kinetic kill warhead similar in concept to the American Exoatmospheric Kill Vehicle. FY-1C was a weather satellite orbiting Earth in polar orbit at an altitude of about 865 km (537 mi), with a mass of about 750 kg (1650 lb). Launched in 1999, it was the fourth satellite in the Fengyun series. The missile was launched from a mobile Transporter-Erector-Launcher (TEL) vehicle at Xichang (28.247°N 102.025°E﻿ / 28.247; 102.025﻿ (Xichang Satellite Launch Center)) and the warhead destroyed the satellite in a head-on collision at an extremely high relative velocity. Evidence suggests that the same SC-19 system was also tested in 2005, 2006, 2010, and 2013.",
+      "char_count": 895,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0020",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = China ==",
+      "heading_path": "== = China ==",
+      "start_char": 15899,
+      "end_char": 16851,
+      "content": "In January 2007 China demonstrated a satellite knock out whose detonation alone caused more than 40,000 new chunks of debris with a diameter larger than one centimeter and a sudden increase in the total amount of debris in orbit. In May 2013, the Chinese government announced the launch of a suborbital rocket carrying a scientific payload to study the upper ionosphere. However, US government sources described it as the first test of a new ground-based ASAT system. An open source analysis by Secure World Foundation, based in part on commercial satellite imagery, found that it may indeed have been a test of a new ASAT system that could potentially threaten US satellites in geostationary Earth orbit. Similarly on 5 February 2018, China tested an exoatmospheric ballistic missile with the potential to be used as an ASAT weapon, the Dong Neng-3, with state media reporting that the test was purely defensive and it achieved its desired objectives.",
+      "char_count": 952,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0021",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 16852,
+      "end_char": 17668,
+      "content": "== = India === In a televised press briefing during the 97th Indian Science Congress held in Thiruvananthapuram, the Defence Research and Development Organisation (DRDO) Director General Rupesh announced that India was developing the necessary technology that could be combined to produce a weapon to destroy enemy satellites in orbit. On 10 February 2010, DRDO Director-General and Scientific Advisor to the Defence Minister, Dr. Vijay Kumar Saraswat stated that India had \"all the building blocks necessary\" to integrate an anti-satellite weapon to neutralize hostile satellites in low earth and polar orbits. In April 2012, DRDO's chairman V. K. Saraswat said that India possessed the critical technologies for an ASAT weapon from radars and interceptors developed for Indian Ballistic Missile Defence Programme.",
+      "char_count": 815,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0022",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 17668,
+      "end_char": 18628,
+      "content": "In July 2012, Ajay Lele, an Institute for Defence Studies and Analyses fellow, wrote that an ASAT test would bolster India's position if an international regime to control the proliferation of ASATs similar to NPT were to be established. He suggested that a low-orbit test against a purpose-launched satellite would not be seen as irresponsible. The programme was sanctioned in 2017. On 27 March 2019, India successfully conducted an ASAT test called Mission Shakti. The interceptor was able to strike a test satellite at a 300-kilometre (186 mi) altitude in low earth orbit (LEO), thus successfully testing its ASAT missile. The interceptor was launched at around 05:40 UTC at the Integrated Test Range (ITR) in Chandipur, Odisha and hit its target Microsat-R after 168 seconds. The operation was named Mission Shakti. The missile system was developed by the Defence Research and Development Organisation (DRDO)—a research wing of the Indian defence services.",
+      "char_count": 960,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0023",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 18629,
+      "end_char": 19446,
+      "content": "With this test, India became the fourth nation with anti-satellite missile capabilities. India stated that this capability is a deterrent and is not directed against any nation. In a statement released after the test, Indian Ministry of External Affairs said that the test was conducted at low altitude to ensure that the resulting debris would \"decay and fall back onto the Earth within weeks\". According to Jonathan McDowell, an astrophysicist at Harvard–Smithsonian Center for Astrophysics, some debris might persist for a year, but most should burn up in the atmosphere within several weeks. Brian Weeden of Secure World Foundation agreed, but warned about the possibility of some fragments getting boosted to higher orbits. US Air Force Space Command said that it was tracking 270 pieces of debris from the test.",
+      "char_count": 817,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0024",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = India ==",
+      "heading_path": "== = India ==",
+      "start_char": 19447,
+      "end_char": 20062,
+      "content": "Following the test, acting United States Secretary of Defense Patrick Shanahan warned about the risks of space debris caused by ASAT tests, but later added that he did not expect debris from the Indian test to last. The United States Department of State acknowledged Ministry of External Affairs' statement on space debris and reiterated its intention to pursue shared interests in space including on space security with India. Russia acknowledged India's statement on the test not being targeted against any nation and invited India to join the Russian–Chinese proposal for a treaty against weaponisation of space.",
+      "char_count": 615,
+      "token_estimate": 153,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0025",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Israel ==",
+      "heading_path": "== = Israel ==",
+      "start_char": 20064,
+      "end_char": 20690,
+      "content": "== = Israel === The Arrow 3 or Hetz 3 is an anti-ballistic missile, currently in service. It provides exo-atmospheric interception of ballistic missiles. It is also believed (by experts such as Prof. Yitzhak Ben Yisrael, chairman of the Israel Space Agency), that it will operate as an ASAT. In November 2023, Israel's Arrow 3 missile defense system successfully intercepted a missile above the Earths atmosphere launched by Houthi rebels in Yemen. While it was not a satellite, this was the first time a missile was intercepted in space during wartime; demonstrating the theoretical capabilities of such a system to intercept a satellite.",
+      "char_count": 639,
+      "token_estimate": 159,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0026",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== Limits of anti-satellite weapons ==",
+      "heading_path": "== Limits of anti-satellite weapons ==",
+      "start_char": 20771,
+      "end_char": 21480,
+      "content": "== Limits of anti-satellite weapons == While it has been suggested that a country intercepting the satellites of another country in the event of a conflict could seriously hinder the latter's military operations, the ease of shooting down orbiting satellites has been questioned. Although satellites have been successfully intercepted at low orbiting altitudes, the tracking of military satellites for a length of time could be complicated by defensive measures like inclination changes. Depending on the level of tracking capabilities, the interceptor would have to pre-determine the point of impact while compensating for the satellite's lateral movement and the time for the interceptor to climb and move.",
+      "char_count": 708,
+      "token_estimate": 177,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0027",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== Limits of anti-satellite weapons ==",
+      "heading_path": "== Limits of anti-satellite weapons ==",
+      "start_char": 21480,
+      "end_char": 22476,
+      "content": "US intelligence, surveillance and reconnaissance (ISR) satellites orbit at about 800 km (500 mi) high and move at 7.5 km/s (4.7 mi/s), so if conflict was to break out between the United States and China, a Chinese Intermediate-range ballistic missile would need to compensate for 1350 km (840 mi) of movement in the three minutes it takes to boost to that altitude. However, even if the ISR satellite is knocked out, the US possesses an extensive array of crewed and uncrewed ISR aircraft that could perform missions at standoff ranges from Chinese land-based air defences. Global Positioning System and communications satellites orbit at higher altitudes of 20200 km (12600 mi) and 35800 km (22200 mi) respectively, and this puts them out of range of solid-fuelled intercontinental ballistic missiles. Liquid-fuelled space launch vehicles could reach those altitudes, but they are more time-consuming to launch and could be attacked on the ground before being able to launch in rapid succession.",
+      "char_count": 996,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0028",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== Limits of anti-satellite weapons ==",
+      "heading_path": "== Limits of anti-satellite weapons ==",
+      "start_char": 22477,
+      "end_char": 23309,
+      "content": "The constellation of 30 GPS satellites provides redundancy where at least four satellites can be received in six orbital planes at any one time, so an attacker would need to disable at least six satellites to disrupt the network. However, even if the attack is successful, signal degradation only lasts for 95 minutes and backup inertial navigation systems (INS) would still be available for relatively accurate movement as well as laser guidance for weapons targeting. For communications, the Naval Telecommunications System (NTS) used by the US Navy uses three elements: tactical communications among a battle group; long-haul communications between shore-based forward Naval Communications Stations (NAVCOMSTAs) and deployed afloat units; and strategic communication connecting NAVCOMSTAs with National Command Authorities (NCA).",
+      "char_count": 832,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0029",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== Limits of anti-satellite weapons ==",
+      "heading_path": "== Limits of anti-satellite weapons ==",
+      "start_char": 23310,
+      "end_char": 23876,
+      "content": "The first two elements use line-of-sight (25–30 km (13–16 nmi; 16–19 mi)) and extended line-of-sight (300–500 km (160–270 nmi; 190–310 mi)) radios respectively, so only strategic communications are dependent on satellites. China would prefer to cut off deployed units from each other and then negotiate with the NCA to have the battle group withdraw or stand down, but ASATs could only achieve the opposite. Moreover, even if somehow a communications satellite were hit, a battle group could still perform its missions in the absence of direct guidance from the NCA.",
+      "char_count": 566,
+      "token_estimate": 141,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "antisatelliteweapon_02eca359_c0030",
+      "article_id": "antisatelliteweapon_02eca359",
+      "section": "== = Proposed law ==",
+      "heading_path": "== = Proposed law ==",
+      "start_char": 23859,
+      "end_char": 24329,
+      "content": "== = Proposed law === On November 1, 2022, a UN working group adopted for the first time a resolution calling on countries to ban destructive anti-satellite missile tests. Although not legally binding, the resolution reflects an increase in international political support for a ban on these weapons. Other countries have noted that the United States has already tested its ASAT destruction capability and, therefore, this U.S.-backed resolution limits the progress of the other countries.",
+      "char_count": 489,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Why are Global Positioning System and communications satellites difficult to target with solid-fuelled intercontinental ballistic missiles?",
+        "answer": "Global Positioning System and communications satellites are difficult to target with solid-fuelled intercontinental ballistic missiles because they orbit at very high altitudes of 20,200 km and 35,800 km respectively, which puts them out of the missiles' range.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0027"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0027"
+        ]
+      },
+      {
+        "question": "Who ended all Soviet IS (Istrebitel Sputnikov) testing in 1983?",
+        "answer": "In 1983, Yuri Andropov ended all IS testing.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0005"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0005"
+        ]
+      },
+      {
+        "question": "What were the observed consequences of the Starfish Prime test in 1962?",
+        "answer": "During the Starfish Prime test in 1962, the electromagnetic pulse (EMP) from a 1.4-megaton warhead detonated over the Pacific damaged three satellites and also disrupted power transmission and communications across the Pacific.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0009"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0009"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0000",
+          "antisatelliteweapon_02eca359_c0001",
+          "antisatelliteweapon_02eca359_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0000",
+          "antisatelliteweapon_02eca359_c0001",
+          "antisatelliteweapon_02eca359_c0002"
+        ]
+      },
+      {
+        "question": "Trace the evolution of the Soviet IS anti-satellite program's operational status and the key political motivations behind its testing phases.",
+        "answer": "The Soviet IS anti-satellite system was first declared operational in February 1973 after a series of tests that began in the late 1960s. Testing resumed in 1976, prompted by the development of the US Space Shuttle. Soviet leader Leonid Brezhnev, believing the Shuttle was a first-strike weapon, ordered the resumption of tests and an expansion of the IS system's capabilities. This led to the enhanced system being declared operational for a second time on July 1, 1979. However, all testing was ultimately ended in 1983 by Yuri Andropov.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0004",
+          "antisatelliteweapon_02eca359_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0005",
+          "antisatelliteweapon_02eca359_c0004"
+        ]
+      },
+      {
+        "question": "How did the early anti-satellite weapon strategies of the United States and the Soviet Union differ based on the systems they developed?",
+        "answer": "In the late 1950s, the United States' strategy focused on adapting air-launched ballistic missiles (ALBMs) for anti-satellite roles, such as the Bold Orion and High Virgo projects. In contrast, the Soviet Union developed a more diverse range of systems, including the ground-launched 30P6 \"Kontakt\" missile system, armed Almaz space stations, the \"Naryad\" system, and an orbital laser called Skif-DM/Polyus.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0006",
+          "antisatelliteweapon_02eca359_c0007",
+          "antisatelliteweapon_02eca359_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0007",
+          "antisatelliteweapon_02eca359_c0006",
+          "antisatelliteweapon_02eca359_c0008"
+        ]
+      },
+      {
+        "question": "What was the development and operational timeline of the Soviet Istrebitel Sputnikov (IS) anti-satellite program, from its initial approval to its termination?",
+        "answer": "The Soviet Istrebitel Sputnikov (IS) anti-satellite program received a go-ahead from Nikita Khrushchev in April 1960, with formal development starting in March 1961. Initially intended to be launched by the UR-200 rocket, program delays led to prototype tests (Polyot 1 and 2) using R-7 rockets in 1963-1964. After the UR-200 was cancelled, the IS system was adapted for the R-36 rocket (Tsyklon-2 space launcher version). The first IS test occurred in October 1967, with a successful intercept in November 1968. The system was declared operational in February 1973. Testing resumed in 1976 due to concerns over the US Space Shuttle, leading to an expanded system for higher altitudes that was declared operational on July 1, 1979. Finally, Yuri Andropov ended all IS testing in 1983.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0002",
+          "antisatelliteweapon_02eca359_c0003",
+          "antisatelliteweapon_02eca359_c0004",
+          "antisatelliteweapon_02eca359_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0002",
+          "antisatelliteweapon_02eca359_c0003",
+          "antisatelliteweapon_02eca359_c0005",
+          "antisatelliteweapon_02eca359_c0004"
+        ]
+      },
+      {
+        "question": "What information is provided about == = United States ==?",
+        "answer": "The text provides information about == = United States == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0007",
+          "antisatelliteweapon_02eca359_c0008",
+          "antisatelliteweapon_02eca359_c0009",
+          "antisatelliteweapon_02eca359_c0010"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0007",
+          "antisatelliteweapon_02eca359_c0009",
+          "antisatelliteweapon_02eca359_c0010",
+          "antisatelliteweapon_02eca359_c0008"
+        ]
+      },
+      {
+        "question": "Describe the competitive evolution of the US Strategic Defense Initiative and the Soviet response during the Cold War, including the proposed technologies and the eventual outcome of these programs in the early 1990s.",
+        "answer": "The US Strategic Defense Initiative (SDI), proposed in 1983, initiated a major technological competition. The initial US plan centered on the \"Brilliant Pebbles\" system, a constellation of 4,600 kinetic interceptors, with later stages planned to include laser and charged particle beam weapons. In response, the USSR was forced to initiate massive spending on research to match the proposed US deployment date of 2000, culminating in an attempt to launch the Polyus orbital laser platform. Despite these ambitious plans, both countries began reducing expenditures from 1989, and the Russian Federation unilaterally discontinued all SDI research in 1992.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0014",
+          "antisatelliteweapon_02eca359_c0015",
+          "antisatelliteweapon_02eca359_c0016"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0014",
+          "antisatelliteweapon_02eca359_c0016",
+          "antisatelliteweapon_02eca359_c0015"
+        ]
+      },
+      {
+        "question": "What different types of anti-satellite weapon technologies has Russia developed or tested since the post-Soviet era?",
+        "answer": "Since the collapse of the Soviet Union, Russia has pursued several types of anti-satellite (ASAT) technologies. These include the MiG-31D missile project, the Sokol Eshelon prototype laser system, and direct ascent anti-satellite missiles, one of which destroyed the Kosmos 1408 satellite in 2021. As of 2024, intelligence sources also indicated Russia was developing an ASAT weapon involving some form of nuclear technology, though it was unclear if it was a nuclear weapon or a nuclear-powered device.",
+        "related_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0017",
+          "antisatelliteweapon_02eca359_c0018"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "antisatelliteweapon_02eca359_c0017",
+          "antisatelliteweapon_02eca359_c0018"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T10:54:57.839Z",
+    "content_format": "markdown",
+    "total_chunks": 31,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

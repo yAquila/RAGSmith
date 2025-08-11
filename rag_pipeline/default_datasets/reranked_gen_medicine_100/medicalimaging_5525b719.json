@@ -1,0 +1,829 @@
+{
+  "article": {
+    "id": "medicalimaging_5525b719",
+    "title": "Medical imaging",
+    "url": "https://en.wikipedia.org/wiki/Medical_imaging",
+    "lang": "en",
+    "created_at": "2025-07-31T07:12:48.253890",
+    "content": "---\nid: medicalimaging_5525b719\nurl: https://en.wikipedia.org/wiki/Medical_imaging\ntitle: Medical imaging\nlang: en\ncreated_at: '2025-07-31T07:05:26.453839'\nchecksum: 76b951ac39df2d43380c4afe12dfeed2c54dceb7cffffb6e33098fce370c39cd\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 5725\n  char_count: 37915\n  num_chunks: 52\n  original_chunks: 61\n  filtered_out: 9\n  num_sections: 0\n---\nMedical imaging is the technique and process of imaging the interior of a body for clinical analysis and medical intervention, as well as visual representation of the function of some organs or tissues (physiology). Medical imaging seeks to reveal internal structures hidden by the skin and bones, as well as to diagnose and treat disease. Medical imaging also establishes a database of normal anatomy and physiology to make it possible to identify abnormalities. Although imaging of removed organs and tissues can be performed for medical reasons, such procedures are usually considered part of pathology instead of medical imaging. Measurement and recording techniques that are not primarily designed to produce images, such as electroencephalography (EEG), magnetoencephalography (MEG), electrocardiography (ECG), and others, represent other technologies that produce data susceptible to representation as a parameter graph versus time or maps that contain data about the measurement locations. In a limited comparison, these technologies can be considered forms of medical imaging in another discipline of medical instrumentation. As of 2010, 5 billion medical imaging studies had been conducted worldwide. Radiation exposure from medical imaging in 2006 made up about 50% of total ionizing radiation exposure in the United States. Medical imaging equipment is manufactured using technology from the semiconductor industry, including CMOS integrated circuit chips, power semiconductor devices, sensors such as image sensors (particularly CMOS sensors) and biosensors, and processors such as microcontrollers, microprocessors, digital signal processors, media processors and system-on-chip devices. As of 2015, annual shipments of medical imaging chips amount to 46 million units and $1.1 billion. The term \"noninvasive\" is used to denote a procedure where no instrument is introduced into a patient's body, which is the case for most imaging techniques used. == History == In 1972, engineer Godfrey Hounsfield from the British company EMI invented the X-ray computed tomography device for head diagnosis, which is commonly referred to as computed tomography (CT). The CT nucleus method is based on the projecting X-rays through a section of the human head, which are then processed by computer to reconstruct the cross-sectional image, known as image reconstruction. In 1975, EMI successfully developed a CT device for the entire body, enabling the clear acquisition of tomographic images of various parts of the human body. This revolutionary diagnostic technique earned Hounsfield and physicist Allan Cormack the Nobel Prize in Physiology or Medicine in 1979. Digital image processing technology for medical applications was inducted into the Space Foundation's Space Technology Hall of Fame in 1994. By 2010, over 5 billion medical imaging studies had been conducted worldwide. Radiation exposure from medical imaging in 2006 accounted for about 50% of total ionizing radiation exposure in the United States. Medical imaging equipment is manufactured using technology from the semiconductor industry, including CMOS integrated circuit chips, power semiconductor devices, sensors such as image sensors (particularly CMOS sensors) and biosensors, as well as processors like microcontrollers, microprocessors, digital signal processors, media processors and system-on-chip devices. As of 2015, annual shipments of medical imaging chips reached 46 million units, generating a market value of $1.1 billion. == Types == In the clinical context, \"invisible light\" medical imaging is generally equated to radiology or \"clinical imaging\". \"Visible light\" medical imaging involves digital video or still pictures that can be seen without special equipment. Dermatology and wound care are two modalities that use visible light imagery. Interpretation of medical images is generally undertaken by a physician specialising in radiology known as a radiologist; however, this may be undertaken by any healthcare professional who is trained and certified in radiological clinical evaluation. Increasingly interpretation is being undertaken by non-physicians, for example radiographers frequently train in interpretation as part of expanded practice. Diagnostic radiography designates the technical aspects of medical imaging and in particular the acquisition of medical images. The radiographer (also known as a radiologic technologist) is usually responsible for acquiring medical images of diagnostic quality; although other professionals may train in this area, notably some radiological interventions performed by radiologists are done so without a radiographer. As a field of scientific investigation, medical imaging constitutes a sub-discipline of biomedical engineering, medical physics or medicine depending on the context: Research and development in the area of instrumentation, image acquisition (e.g., radiography), modeling and quantification are usually the preserve of biomedical engineering, medical physics, and computer science; Research into the application and interpretation of medical images is usually the preserve of radiology and the medical sub-discipline relevant to medical condition or area of medical science (neuroscience, cardiology, psychiatry, psychology, etc.) under investigation. Many of the techniques developed for medical imaging also have scientific and industrial applications. === Radiography === Two forms of radiographic images are in use in medical imaging. Projection radiography and fluoroscopy, with the latter being useful for catheter guidance. These 2D techniques are still in wide use despite the advance of 3D tomography due to the low cost, high resolution, and depending on the application, lower radiation dosages with 2D technique. This imaging modality uses a wide beam of X-rays for image acquisition and is the first imaging technique available in modern medicine. Fluoroscopy produces real-time images of internal structures of the body in a similar fashion to radiography, but employs a constant input of X-rays, at a lower dose rate. Contrast media, such as barium, iodine, and air are used to visualize internal organs as they work. Fluoroscopy is also used in image-guided procedures when constant feedback during a procedure is required. An image receptor is required to convert the radiation into an image after it has passed through the area of interest. Early on, this was a fluorescing screen, which gave way to an Image Amplifier (IA) which was a large vacuum tube that had the receiving end coated with cesium iodide, and a mirror at the opposite end. Eventually the mirror was replaced with a TV camera. Projectional radiographs, more commonly known as X-rays, are often used to determine the type and extent of a fracture as well as for detecting pathological changes in the lungs. With the use of radio-opaque contrast media, such as barium, they can also be used to visualize the structure of the stomach and intestines – this can help diagnose ulcers or certain types of colon cancer. === Magnetic resonance imaging === A magnetic resonance imaging instrument (MRI scanner), or \"nuclear magnetic resonance (NMR) imaging\" scanner as it was originally known, uses powerful magnets to polarize and excite hydrogen nuclei (i.e., single protons) of water molecules in human tissue, producing a detectable signal which is spatially encoded, resulting in images of the body. The MRI machine emits a radio frequency (RF) pulse at the resonant frequency of the hydrogen atoms on water molecules. Radio frequency antennas (\"RF coils\") send the pulse to the area of the body to be examined. The RF pulse is absorbed by protons, causing their direction with respect to the primary magnetic field to change. When the RF pulse is turned off, the protons \"relax\" back to alignment with the primary magnet and emit radio-waves in the process. This radio-frequency emission from the hydrogen-atoms on water is what is detected and reconstructed into an image. The resonant frequency of a spinning magnetic dipole (of which protons are one example) is called the Larmor frequency and is determined by the strength of the main magnetic field and the chemical environment of the nuclei of interest. MRI uses three electromagnetic fields: a very strong (typically 1.5 to 3 teslas) static magnetic field to polarize the hydrogen nuclei, called the primary field; gradient fields that can be modified to vary in space and time (on the order of 1 kHz) for spatial encoding, often simply called gradients; and a spatially homogeneous radio-frequency (RF) field for manipulation of the hydrogen nuclei to produce measurable signals, collected through an RF antenna. Like CT, MRI traditionally creates a two-dimensional image of a thin \"slice\" of the body and is therefore considered a tomographic imaging technique. Modern MRI instruments are capable of producing images in the form of 3D blocks, which may be considered a generalization of the single-slice, tomographic, concept. Unlike CT, MRI does not involve the use of ionizing radiation and is therefore not associated with the same health hazards. For example, because MRI has only been in use since the early 1980s, there are no known long-term effects of exposure to strong static fields (this is the subject of some debate; see 'Safety' in MRI) and therefore there is no limit to the number of scans to which an individual can be subjected, in contrast with X-ray and CT. However, there are well-identified health risks associated with tissue heating from exposure to the RF field and the presence of implanted devices in the body, such as pacemakers. These risks are strictly controlled as part of the design of the instrument and the scanning protocols used. Because CT and MRI are sensitive to different tissue properties, the appearances of the images obtained with the two techniques differ markedly. In CT, X-rays must be blocked by some form of dense tissue to create an image, so the image quality when looking at soft tissues will be poor. In MRI, while any nucleus with a net nuclear spin can be used, the proton of the hydrogen atom remains the most widely used, especially in the clinical setting, because it is so ubiquitous and returns a large signal. This nucleus, present in water molecules, allows the excellent soft-tissue contrast achievable with MRI. A number of different pulse sequences can be used for specific MRI diagnostic imaging (multiparametric MRI or mpMRI). It is possible to differentiate tissue characteristics by combining two or more of the following imaging sequences, depending on the information being sought: T1-weighted (T1-MRI), T2-weighted (T2-MRI), diffusion weighted imaging (DWI-MRI), dynamic contrast enhancement (DCE-MRI), and spectroscopy (MRI-S). For example, imaging of prostate tumors is better accomplished using T2-MRI and DWI-MRI than T2-weighted imaging alone. The number of applications of mpMRI for detecting disease in various organs continues to expand, including liver studies, breast tumors, pancreatic tumors, and assessing the effects of vascular disruption agents on cancer tumors. === Nuclear medicine === Nuclear medicine encompasses both diagnostic imaging and treatment of disease, and may also be referred to as molecular medicine or molecular imaging and therapeutics. Nuclear medicine uses certain properties of isotopes and the energetic particles emitted from radioactive material to diagnose or treat various pathology. Different from the typical concept of anatomic radiology, nuclear medicine enables assessment of physiology. This function-based approach to medical evaluation has useful applications in most subspecialties, notably oncology, neurology, and cardiology. Gamma cameras and PET scanners are used in e.g. scintigraphy, SPECT and PET to detect regions of biologic activity that may be associated with a disease. Relatively short-lived isotope, such as 99mTc is administered to the patient. Isotopes are often preferentially absorbed by biologically active tissue in the body, and can be used to identify tumors or fracture points in bone. Images are acquired after collimated photons are detected by a crystal that gives off a light signal, which is in turn amplified and converted into count data. Scintigraphy (\"scint\") is a form of diagnostic test wherein radioisotopes are taken internally, for example, intravenously or orally. Then, gamma cameras capture and form two-dimensional images from the radiation emitted by the radiopharmaceuticals. SPECT is a 3D tomographic technique that uses gamma camera data from many projections and can be reconstructed in different planes. A dual detector head gamma camera combined with a CT scanner, which provides localization of functional SPECT data, is termed a SPECT-CT camera, and has shown utility in advancing the field of molecular imaging. In most other medical imaging modalities, energy is passed through the body and the reaction or result is read by detectors. In SPECT imaging, the patient is injected with a radioisotope, most commonly Thallium 201TI, Technetium 99mTC, Iodine 123I, and Gallium 67Ga. The radioactive gamma rays are emitted through the body as the natural decaying process of these isotopes takes place. The emissions of the gamma rays are captured by detectors that surround the body. This essentially means that the human is now the source of the radioactivity, rather than the medical imaging devices such as X-ray or CT. Positron emission tomography (PET) uses coincidence detection to image functional processes. Short-lived positron emitting isotope, such as 18F, is incorporated with an organic substance such as glucose, creating F18-fluorodeoxyglucose, which can be used as a marker of metabolic utilization. Images of activity distribution throughout the body can show rapidly growing tissue, like tumor, metastasis, or infection. PET images can be viewed in comparison to computed tomography scans to determine an anatomic correlate. Modern scanners may integrate PET, allowing PET-CT, or PET-MRI to optimize the image reconstruction involved with positron imaging. This is performed on the same equipment without physically moving the patient off of the gantry. The resultant hybrid of functional and anatomic imaging information is a useful tool in non-invasive diagnosis and patient management. Fiduciary markers are used in a wide range of medical imaging applications. Images of the same subject produced with two different imaging systems may be correlated (called image registration) by placing a fiduciary marker in the area imaged by both systems. In this case, a marker which is visible in the images produced by both imaging modalities must be used. By this method, functional information from SPECT or positron emission tomography can be related to anatomical information provided by magnetic resonance imaging (MRI). Similarly, fiducial points established during MRI can be correlated with brain images generated by magnetoencephalography to localize the source of brain activity. === Ultrasound === Medical ultrasound uses high frequency broadband sound waves in the megahertz range that are reflected by tissue to varying degrees to produce (up to 3D) images. This is commonly associated with imaging the fetus in pregnant women. Uses of ultrasound are much broader, however. Other important uses include imaging the abdominal organs, heart, breast, muscles, tendons, arteries and veins. While it may provide less anatomical detail than techniques such as CT or MRI, it has several advantages which make it ideal in numerous situations, in particular that it studies the function of moving structures in real-time, emits no ionizing radiation, and contains speckle that can be used in elastography. Ultrasound is also used as a popular research tool for capturing raw data, that can be made available through an ultrasound research interface, for the purpose of tissue characterization and implementation of new image processing techniques. The concepts of ultrasound differ from other medical imaging modalities in the fact that it is operated by the transmission and receipt of sound waves. The high frequency sound waves are sent into the tissue and depending on the composition of the different tissues; the signal will be attenuated and returned at separate intervals. A path of reflected sound waves in a multilayered structure can be defined by an input acoustic impedance (ultrasound sound wave) and the Reflection and transmission coefficients of the relative structures. It is very safe to use and does not appear to cause any adverse effects. It is also relatively inexpensive and quick to perform. Ultrasound scanners can be taken to critically ill patients in intensive care units, avoiding the danger caused while moving the patient to the radiology department. The real-time moving image obtained can be used to guide drainage and biopsy procedures. Doppler capabilities on modern scanners allow the blood flow in arteries and veins to be assessed. === Elastography === Elastography is a relatively new imaging modality that maps the elastic properties of soft tissue. This modality emerged in the last two decades. Elastography is useful in medical diagnoses, as elasticity can discern healthy from unhealthy tissue for specific organs/growths. For example, cancerous tumours will often be harder than the surrounding tissue, and diseased livers are stiffer than healthy ones. There are several elastographic techniques based on the use of ultrasound, magnetic resonance imaging and tactile imaging. The wide clinical use of ultrasound elastography is a result of the implementation of technology in clinical ultrasound machines. Main branches of ultrasound elastography include Quasistatic Elastography/Strain Imaging, Shear Wave Elasticity Imaging (SWEI), Acoustic Radiation Force Impulse imaging (ARFI), Supersonic Shear Imaging (SSI), and Transient Elastography. In the last decade, a steady increase of activities in the field of elastography is observed demonstrating successful application of the technology in various areas of medical diagnostics and treatment monitoring. === Photoacoustic imaging === Photoacoustic imaging is a recently developed hybrid biomedical imaging modality based on the photoacoustic effect. It combines the advantages of optical absorption contrast with an ultrasonic spatial resolution for deep imaging in (optical) diffusive or quasi-diffusive regime. Recent studies have shown that photoacoustic imaging can be used in vivo for tumor angiogenesis monitoring, blood oxygenation mapping, functional brain imaging, and skin melanoma detection, etc. === Tomography === Tomography is the imaging by sections or sectioning. The main such methods in medical imaging are: X-ray computed tomography (CT), or Computed Axial Tomography (CAT) scan, is a helical tomography technique (latest generation), which traditionally produces a 2D image of the structures in a thin section of the body. In CT, a beam of X-rays spins around an object being examined and is picked up by sensitive radiation detectors after having penetrated the object from multiple angles. A computer then analyses the information received from the scanner's detectors and constructs a detailed image of the object and its contents using the mathematical principles laid out in the Radon transform. It has a greater ionizing radiation dose burden than projection radiography; repeated scans must be limited to avoid health effects. CT is based on the same principles as X-ray projections but in this case, the patient is enclosed in a surrounding ring of detectors assigned with 500–1000 scintillation detectors (fourth-generation X-ray CT scanner geometry). Previously in older generation scanners, the X-ray beam was paired by a translating source and detector. Computed tomography has almost completely replaced focal plane tomography in X-ray tomography imaging. Positron emission tomography (PET) also used in conjunction with computed tomography, PET-CT, and magnetic resonance imaging PET-MRI. Magnetic resonance imaging (MRI) commonly produces tomographic images of cross-sections of the body. (See separate MRI section in this article.) === Echocardiography === When ultrasound is used to image the heart it is referred to as an echocardiogram. Echocardiography allows detailed structures of the heart, including chamber size, heart function, the valves of the heart, as well as the pericardium (the sac around the heart) to be seen. Echocardiography uses 2D, 3D, and Doppler imaging to create pictures of the heart and visualize the blood flowing through each of the four heart valves. Echocardiography is widely used in an array of patients ranging from those experiencing symptoms, such as shortness of breath or chest pain, to those undergoing cancer treatments. Transthoracic ultrasound has been proven to be safe for patients of all ages, from infants to the elderly, without risk of harmful side effects or radiation, differentiating it from other imaging modalities. Echocardiography is one of the most commonly used imaging modalities in the world due to its portability and use in a variety of applications. In emergency situations, echocardiography is quick, easily accessible, and able to be performed at the bedside, making it the modality of choice for many physicians. === Functional near-infrared spectroscopy === FNIR Is a relatively new non-invasive imaging technique. NIRS (near infrared spectroscopy) is used for the purpose of functional neuroimaging and has been widely accepted as a brain imaging technique. === Magnetic particle imaging === Using superparamagnetic iron oxide nanoparticles, magnetic particle imaging (MPI) is a developing diagnostic imaging technique used for tracking superparamagnetic iron oxide nanoparticles. The primary advantage is the high sensitivity and specificity, along with the lack of signal decrease with tissue depth. MPI has been used in medical research to image cardiovascular performance, neuroperfusion, and cell tracking. == Industry == Organizations in the medical imaging industry include manufacturers of imaging equipment, freestanding radiology facilities, and hospitals. The global market for manufactured devices was estimated at $5 billion in 2018. Notable manufacturers included Fujifilm,GE HealthCare, Siemens Healthineers, Philips, Shimadzu, Canon, Carestream Health, Hologic, and Esaote. In 2016, the manufacturing industry was characterized as oligopolistic and mature; new entrants included in Samsung and Neusoft Medical. In 2024, Fischer MVL in India began manufacturing MRI machines. In 2016, Toshiba exited the industry by selling its medical imaging division to Canon, which was ultimately renamed to Canon. In 2019, Hitachi exited the industry by selling its business to Fujifilm for about $1.6 billion. The simpler x-ray machines were being commoditized by 1998, when Kodak had about 30% market share globally; Kodak later sold its medical imaging business in 2007 and the business was ultimately renamed to Carestream Health. In the 1970s, CT scanners were introduced, followed by MRI machines in the 1980s, with GE leading in both. Digital radiography has replaced older computed radiography over time, which reduces radiation doses. In the United States, as estimate as of 2015 places the US market for imaging scans at about $100b, with 60% occurring in hospitals and 40% occurring in freestanding clinics, such as the RadNet chain. == In pregnancy == Medical imaging may be indicated in pregnancy because of pregnancy complications, a pre-existing disease or an acquired disease in pregnancy, or routine prenatal care. Magnetic resonance imaging (MRI) without MRI contrast agents as well as obstetric ultrasonography are not associated with any risk for the mother or the fetus, and are the imaging techniques of choice for pregnant women. Projectional radiography, CT scan and nuclear medicine imaging result some degree of ionizing radiation exposure, but have with a few exceptions much lower absorbed doses than what are associated with fetal harm. At higher dosages, effects can include miscarriage, birth defects and intellectual disability. == Maximizing imaging procedure use == The amount of data obtained in a single MR or CT scan is very extensive. Some of the data that radiologists discard could save patients time and money, while reducing their exposure to radiation and risk of complications from invasive procedures. Another approach for making the procedures more efficient is based on utilizing additional constraints, e.g., in some medical imaging modalities one can improve the efficiency of the data acquisition by taking into account the fact the reconstructed density is positive. == Creation of three-dimensional images == Volume rendering techniques have been developed to enable CT, MRI and ultrasound scanning software to produce 3D images for the physician. Traditionally CT and MRI scans produced 2D static output on film. To produce 3D images, many scans are made and then combined by computers to produce a 3D model, which can then be manipulated by the physician. 3D ultrasounds are produced using a somewhat similar technique. In diagnosing disease of the viscera of the abdomen, ultrasound is particularly sensitive on imaging of biliary tract, urinary tract and female reproductive organs (ovary, fallopian tubes). As for example, diagnosis of gallstone by dilatation of common bile duct and stone in the common bile duct. With the ability to visualize important structures in great detail, 3D visualization methods are a valuable resource for the diagnosis and surgical treatment of many pathologies. It was a key resource for the famous, but ultimately unsuccessful attempt by Singaporean surgeons to separate Iranian twins Ladan and Laleh Bijani in 2003. The 3D equipment was used previously for similar operations with great success. Other proposed or developed techniques include: Diffuse optical tomography Elastography Electrical impedance tomography Optoacoustic imaging Ophthalmology A-scan B-scan Corneal topography Optical coherence tomography Scanning laser ophthalmoscopy Some of these techniques are still at a research stage and not yet used in clinical routines. == Non-diagnostic imaging == Neuroimaging has also been used in experimental circumstances to allow people (especially disabled persons) to control outside devices, acting as a brain computer interface. Many medical imaging software applications are used for non-diagnostic imaging, specifically because they do not have an FDA approval and not allowed to use in clinical research for patient diagnosis. Note that many clinical research studies are not designed for patient diagnosis anyway. == Archiving and recording == Used primarily in ultrasound imaging, capturing the image produced by a medical imaging device is required for archiving and telemedicine applications. In most scenarios, a frame grabber is used in order to capture the video signal from the medical device and relay it to a computer for further processing and operations. === DICOM === The Digital Imaging and Communication in Medicine (DICOM) Standard is used globally to store, exchange, and transmit medical images. The DICOM Standard incorporates protocols for imaging techniques such as radiography, computed tomography (CT), magnetic resonance imaging (MRI), ultrasound, and radiation therapy. === Compression of medical images === Medical imaging techniques produce very large amounts of data, especially from CT, MRI and PET modalities. As a result, storage and communications of electronic image data are prohibitive without the use of compression. JPEG 2000 image compression is used by the DICOM standard for storage and transmission of medical images. The cost and feasibility of accessing large image data sets over low or various bandwidths are further addressed by use of another DICOM standard, called JPIP, to enable efficient streaming of the JPEG 2000 compressed image data. === Medical imaging in the cloud === There has been growing trend to migrate from on-premise PACS to a cloud-based PACS. A recent article by Applied Radiology said, \"As the digital-imaging realm is embraced across the healthcare enterprise, the swift transition from terabytes to petabytes of data has put radiology on the brink of information overload. Cloud computing offers the imaging department of the future the tools to manage data much more intelligently.\" == Use in pharmaceutical clinical trials == Medical imaging has become a major tool in clinical trials since it enables rapid diagnosis with visualization and quantitative assessment. A typical clinical trial goes through multiple phases and can take up to eight years. Clinical endpoints or outcomes are used to determine whether the therapy is safe and effective. Once a patient reaches the endpoint, he or she is generally excluded from further experimental interaction. Trials that rely solely on clinical endpoints are very costly as they have long durations and tend to need large numbers of patients. In contrast to clinical endpoints, surrogate endpoints have been shown to cut down the time required to confirm whether a drug has clinical benefits. Imaging biomarkers (a characteristic that is objectively measured by an imaging technique, which is used as an indicator of pharmacological response to a therapy) and surrogate endpoints have shown to facilitate the use of small group sizes, obtaining quick results with good statistical power. Imaging is able to reveal subtle change that is indicative of the progression of therapy that may be missed out by more subjective, traditional approaches. Statistical bias is reduced as the findings are evaluated without any direct patient contact. Imaging techniques such as positron emission tomography (PET) and magnetic resonance imaging (MRI) are routinely used in oncology and neuroscience areas. For example, measurement of tumour shrinkage is a commonly used surrogate endpoint in solid tumour response evaluation. This allows for faster and more objective assessment of the effects of anticancer drugs. In Alzheimer's disease, MRI scans of the entire brain can accurately assess the rate of hippocampal atrophy, while PET scans can measure the brain's metabolic activity by measuring regional glucose metabolism, and beta-amyloid plaques using tracers such as Pittsburgh compound B (PiB). Historically less use has been made of quantitative medical imaging in other areas of drug development although interest is growing. An imaging-based trial will usually be made up of three components: A realistic imaging protocol. The protocol is an outline that standardizes (as far as practically possible) the way in which the images are acquired using the various modalities (PET, SPECT, CT, MRI). It covers the specifics in which images are to be stored, processed and evaluated. An imaging centre that is responsible for collecting the images, perform quality control and provide tools for data storage, distribution and analysis. It is important for images acquired at different time points are displayed in a standardised format to maintain the reliability of the evaluation. Certain specialised imaging contract research organizations provide end to end medical imaging services, from protocol design and site management through to data quality assurance and image analysis. Clinical sites that recruit patients to generate the images to send back to the imaging centre. == Risks and safety issues == Medical imaging can lead to patient and healthcare provider harm through exposure to ionizing radiation, iodinated contrast, magnetic fields, and other hazards. Lead is the main material used for radiographic shielding against scattered X-rays. In magnetic resonance imaging, there is MRI RF shielding as well as magnetic shielding to prevent external disturbance of image quality. == Privacy protection == Medical imaging are generally covered by laws of medical privacy. For example, in the United States the Health Insurance Portability and Accountability Act (HIPAA) sets restrictions for health care providers on utilizing protected health information, which is any individually identifiable information relating to the past, present, or future physical or mental health of any individual. While there has not been any definitive legal decision in the matter, many studies have indicated that medical imaging contain biometric information that can uniquely identify a person, and as such qualify as PHI and/or special categories of personal data. The UK General Medical Council's ethical guidelines indicate that the Council does not require consent prior to making recordings of X-ray images. However, the same guidance indicates that the images and recordings need to be anonimized, and acknowledges that in deciding whether a recording is anonymised, one should bear in mind that apparently insignificant details may still be capable of identifying a patient. As such, one should be particularly careful about the anonymity of a recordings of an X-ray image before using or publishing them without consent in journals and other learning materials, whether they are printed or in an electronic format. == Copyright == === United States === As per chapter 300 of the Compendium of U.S. Copyright Office Practices, \"the Office will not register works produced by a machine or mere mechanical process that operates randomly or automatically without any creative input or intervention from a human author\" including \"Medical imaging produced by X-rays, ultrasounds, magnetic resonance imaging, or other diagnostic equipment.\" This position differs from the broad copyright protections afforded to photographs. While the Copyright Compendium is an agency statutory interpretation and not legally binding, courts are likely to give deference to it if they find it reasonable. Yet, there is no U.S. federal case law directly addressing the issue of the copyrightability of X-ray images. ==== Derivatives ==== An extensive definition of the term derivative work is given by the United States Copyright Act in 17 U.S.C. § 101: A \"derivative work\" is a work based upon one or more preexisting works, such as a translation... art reproduction, abridgment, condensation, or any other form in which a work may be recast, transformed, or adapted. A work consisting of editorial revisions, annotations, elaborations, or other modifications which, as a whole, represent an original work of authorship, is a \"derivative work\". 17 U.S.C. § 103(b) provides: The copyright in a compilation or derivative work extends only to the material contributed by the author of such work, as distinguished from the preexisting material employed in the work, and does not imply any exclusive right in the preexisting material. The copyright in such work is independent of, and does not affect or enlarge the scope, duration, ownership, or subsistence of, any copyright protection in the preexisting material. === Germany === In Germany, X-ray images as well as MRI, medical ultrasound, PET and scintigraphy images are protected by (copyright-like) related rights or neighbouring rights. This protection does not require creativity (as would be necessary for regular copyright protection) and lasts only for 50 years after image creation, if not published within 50 years, or for 50 years after the first legitimate publication. The letter of the law grants this right to the \"Lichtbildner\", i.e. the person who created the image. The literature seems to uniformly consider the medical doctor, dentist or veterinary physician as the rights holder, which may result from the circumstance that in Germany many X-rays are performed in ambulatory settings. === United Kingdom === Medical images created in the United Kingdom will normally be protected by copyright due to \"the high level of skill, labour and judgement required to produce a good quality X-ray, particularly to show contrast between bones and various soft tissues\". The Society of Radiographers believe this copyright is owned by employer (unless the radiographer is self-employed—though even then their contract might require them to transfer ownership to the hospital). This copyright owner can grant certain permissions to whoever they wish, without giving up their ownership of the copyright. So the hospital and its employees will be given permission to use such radiographic images for the various purposes that they require for medical care. Physicians employed at the hospital will, in their contracts, be given the right to publish patient information in journal papers or books they write (providing they are made anonymous). Patients may also be granted permission to \"do what they like with\" their own images. === Sweden === The Cyber Law in Sweden states: \"Pictures can be protected as photographic works or as photographic pictures. The former requires a higher level of originality; the latter protects all types of photographs, also the ones taken by amateurs, or within medicine or science. The protection requires some sort of photographic technique being used, which includes digital cameras as well as holograms created by laser technique. The difference between the two types of work is the term of protection, which amounts to seventy years after the death of the author of a photographic work as opposed to fifty years, from the year in which the photographic picture was taken.\" Medical imaging may possibly be included in the scope of \"photography\", similarly to a U.S. statement that \"MRI images, CT scans, and the like are analogous to photography.\" == See also == Biological imaging Medical image sharing Radiologists Without Borders Confocal endoscopy == Explanatory notes == == References == == Further reading == == External links =="
+  },
+  "chunks": [
+    {
+      "id": "medicalimaging_5525b719_c0000",
+      "article_id": "medicalimaging_5525b719",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 634,
+      "content": "Medical imaging is the technique and process of imaging the interior of a body for clinical analysis and medical intervention, as well as visual representation of the function of some organs or tissues (physiology). Medical imaging seeks to reveal internal structures hidden by the skin and bones, as well as to diagnose and treat disease. Medical imaging also establishes a database of normal anatomy and physiology to make it possible to identify abnormalities. Although imaging of removed organs and tissues can be performed for medical reasons, such procedures are usually considered part of pathology instead of medical imaging.",
+      "char_count": 633,
+      "token_estimate": 158,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0001",
+      "article_id": "medicalimaging_5525b719",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 634,
+      "end_char": 1335,
+      "content": "Measurement and recording techniques that are not primarily designed to produce images, such as electroencephalography (EEG), magnetoencephalography (MEG), electrocardiography (ECG), and others, represent other technologies that produce data susceptible to representation as a parameter graph versus time or maps that contain data about the measurement locations. In a limited comparison, these technologies can be considered forms of medical imaging in another discipline of medical instrumentation. As of 2010, 5 billion medical imaging studies had been conducted worldwide. Radiation exposure from medical imaging in 2006 made up about 50% of total ionizing radiation exposure in the United States.",
+      "char_count": 701,
+      "token_estimate": 175,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0002",
+      "article_id": "medicalimaging_5525b719",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1336,
+      "end_char": 1962,
+      "content": "Medical imaging equipment is manufactured using technology from the semiconductor industry, including CMOS integrated circuit chips, power semiconductor devices, sensors such as image sensors (particularly CMOS sensors) and biosensors, and processors such as microcontrollers, microprocessors, digital signal processors, media processors and system-on-chip devices. As of 2015, annual shipments of medical imaging chips amount to 46 million units and $1.1 billion. The term \"noninvasive\" is used to denote a procedure where no instrument is introduced into a patient's body, which is the case for most imaging techniques used.",
+      "char_count": 626,
+      "token_estimate": 156,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0003",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1976,
+      "end_char": 2898,
+      "content": "== History == In 1972, engineer Godfrey Hounsfield from the British company EMI invented the X-ray computed tomography device for head diagnosis, which is commonly referred to as computed tomography (CT). The CT nucleus method is based on the projecting X-rays through a section of the human head, which are then processed by computer to reconstruct the cross-sectional image, known as image reconstruction. In 1975, EMI successfully developed a CT device for the entire body, enabling the clear acquisition of tomographic images of various parts of the human body. This revolutionary diagnostic technique earned Hounsfield and physicist Allan Cormack the Nobel Prize in Physiology or Medicine in 1979. Digital image processing technology for medical applications was inducted into the Space Foundation's Space Technology Hall of Fame in 1994. By 2010, over 5 billion medical imaging studies had been conducted worldwide.",
+      "char_count": 921,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0004",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2898,
+      "end_char": 3521,
+      "content": "Radiation exposure from medical imaging in 2006 accounted for about 50% of total ionizing radiation exposure in the United States. Medical imaging equipment is manufactured using technology from the semiconductor industry, including CMOS integrated circuit chips, power semiconductor devices, sensors such as image sensors (particularly CMOS sensors) and biosensors, as well as processors like microcontrollers, microprocessors, digital signal processors, media processors and system-on-chip devices. As of 2015, annual shipments of medical imaging chips reached 46 million units, generating a market value of $1.1 billion.",
+      "char_count": 623,
+      "token_estimate": 155,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0005",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 3520,
+      "end_char": 4380,
+      "content": "== Types == In the clinical context, \"invisible light\" medical imaging is generally equated to radiology or \"clinical imaging\". \"Visible light\" medical imaging involves digital video or still pictures that can be seen without special equipment. Dermatology and wound care are two modalities that use visible light imagery. Interpretation of medical images is generally undertaken by a physician specialising in radiology known as a radiologist; however, this may be undertaken by any healthcare professional who is trained and certified in radiological clinical evaluation. Increasingly interpretation is being undertaken by non-physicians, for example radiographers frequently train in interpretation as part of expanded practice. Diagnostic radiography designates the technical aspects of medical imaging and in particular the acquisition of medical images.",
+      "char_count": 859,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0006",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 4380,
+      "end_char": 5319,
+      "content": "The radiographer (also known as a radiologic technologist) is usually responsible for acquiring medical images of diagnostic quality; although other professionals may train in this area, notably some radiological interventions performed by radiologists are done so without a radiographer. As a field of scientific investigation, medical imaging constitutes a sub-discipline of biomedical engineering, medical physics or medicine depending on the context: Research and development in the area of instrumentation, image acquisition (e.g., radiography), modeling and quantification are usually the preserve of biomedical engineering, medical physics, and computer science; Research into the application and interpretation of medical images is usually the preserve of radiology and the medical sub-discipline relevant to medical condition or area of medical science (neuroscience, cardiology, psychiatry, psychology, etc.) under investigation.",
+      "char_count": 939,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0007",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Radiography ==",
+      "heading_path": "== = Radiography ==",
+      "start_char": 5431,
+      "end_char": 6317,
+      "content": "== = Radiography === Two forms of radiographic images are in use in medical imaging. Projection radiography and fluoroscopy, with the latter being useful for catheter guidance. These 2D techniques are still in wide use despite the advance of 3D tomography due to the low cost, high resolution, and depending on the application, lower radiation dosages with 2D technique. This imaging modality uses a wide beam of X-rays for image acquisition and is the first imaging technique available in modern medicine. Fluoroscopy produces real-time images of internal structures of the body in a similar fashion to radiography, but employs a constant input of X-rays, at a lower dose rate. Contrast media, such as barium, iodine, and air are used to visualize internal organs as they work. Fluoroscopy is also used in image-guided procedures when constant feedback during a procedure is required.",
+      "char_count": 885,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0008",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Radiography ==",
+      "heading_path": "== = Radiography ==",
+      "start_char": 6317,
+      "end_char": 7074,
+      "content": "An image receptor is required to convert the radiation into an image after it has passed through the area of interest. Early on, this was a fluorescing screen, which gave way to an Image Amplifier (IA) which was a large vacuum tube that had the receiving end coated with cesium iodide, and a mirror at the opposite end. Eventually the mirror was replaced with a TV camera. Projectional radiographs, more commonly known as X-rays, are often used to determine the type and extent of a fracture as well as for detecting pathological changes in the lungs. With the use of radio-opaque contrast media, such as barium, they can also be used to visualize the structure of the stomach and intestines – this can help diagnose ulcers or certain types of colon cancer.",
+      "char_count": 757,
+      "token_estimate": 189,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0009",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Magnetic resonance imaging ==",
+      "heading_path": "== = Magnetic resonance imaging ==",
+      "start_char": 7090,
+      "end_char": 8049,
+      "content": "== = Magnetic resonance imaging === A magnetic resonance imaging instrument (MRI scanner), or \"nuclear magnetic resonance (NMR) imaging\" scanner as it was originally known, uses powerful magnets to polarize and excite hydrogen nuclei (i.e., single protons) of water molecules in human tissue, producing a detectable signal which is spatially encoded, resulting in images of the body. The MRI machine emits a radio frequency (RF) pulse at the resonant frequency of the hydrogen atoms on water molecules. Radio frequency antennas (\"RF coils\") send the pulse to the area of the body to be examined. The RF pulse is absorbed by protons, causing their direction with respect to the primary magnetic field to change. When the RF pulse is turned off, the protons \"relax\" back to alignment with the primary magnet and emit radio-waves in the process. This radio-frequency emission from the hydrogen-atoms on water is what is detected and reconstructed into an image.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0010",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Magnetic resonance imaging ==",
+      "heading_path": "== = Magnetic resonance imaging ==",
+      "start_char": 8049,
+      "end_char": 8895,
+      "content": "The resonant frequency of a spinning magnetic dipole (of which protons are one example) is called the Larmor frequency and is determined by the strength of the main magnetic field and the chemical environment of the nuclei of interest. MRI uses three electromagnetic fields: a very strong (typically 1.5 to 3 teslas) static magnetic field to polarize the hydrogen nuclei, called the primary field; gradient fields that can be modified to vary in space and time (on the order of 1 kHz) for spatial encoding, often simply called gradients; and a spatially homogeneous radio-frequency (RF) field for manipulation of the hydrogen nuclei to produce measurable signals, collected through an RF antenna. Like CT, MRI traditionally creates a two-dimensional image of a thin \"slice\" of the body and is therefore considered a tomographic imaging technique.",
+      "char_count": 846,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0011",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Magnetic resonance imaging ==",
+      "heading_path": "== = Magnetic resonance imaging ==",
+      "start_char": 8896,
+      "end_char": 9800,
+      "content": "Modern MRI instruments are capable of producing images in the form of 3D blocks, which may be considered a generalization of the single-slice, tomographic, concept. Unlike CT, MRI does not involve the use of ionizing radiation and is therefore not associated with the same health hazards. For example, because MRI has only been in use since the early 1980s, there are no known long-term effects of exposure to strong static fields (this is the subject of some debate; see 'Safety' in MRI) and therefore there is no limit to the number of scans to which an individual can be subjected, in contrast with X-ray and CT. However, there are well-identified health risks associated with tissue heating from exposure to the RF field and the presence of implanted devices in the body, such as pacemakers. These risks are strictly controlled as part of the design of the instrument and the scanning protocols used.",
+      "char_count": 904,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0012",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Magnetic resonance imaging ==",
+      "heading_path": "== = Magnetic resonance imaging ==",
+      "start_char": 9801,
+      "end_char": 10528,
+      "content": "Because CT and MRI are sensitive to different tissue properties, the appearances of the images obtained with the two techniques differ markedly. In CT, X-rays must be blocked by some form of dense tissue to create an image, so the image quality when looking at soft tissues will be poor. In MRI, while any nucleus with a net nuclear spin can be used, the proton of the hydrogen atom remains the most widely used, especially in the clinical setting, because it is so ubiquitous and returns a large signal. This nucleus, present in water molecules, allows the excellent soft-tissue contrast achievable with MRI. A number of different pulse sequences can be used for specific MRI diagnostic imaging (multiparametric MRI or mpMRI).",
+      "char_count": 727,
+      "token_estimate": 181,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0013",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Magnetic resonance imaging ==",
+      "heading_path": "== = Magnetic resonance imaging ==",
+      "start_char": 10529,
+      "end_char": 11185,
+      "content": "It is possible to differentiate tissue characteristics by combining two or more of the following imaging sequences, depending on the information being sought: T1-weighted (T1-MRI), T2-weighted (T2-MRI), diffusion weighted imaging (DWI-MRI), dynamic contrast enhancement (DCE-MRI), and spectroscopy (MRI-S). For example, imaging of prostate tumors is better accomplished using T2-MRI and DWI-MRI than T2-weighted imaging alone. The number of applications of mpMRI for detecting disease in various organs continues to expand, including liver studies, breast tumors, pancreatic tumors, and assessing the effects of vascular disruption agents on cancer tumors.",
+      "char_count": 656,
+      "token_estimate": 164,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0014",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Nuclear medicine ==",
+      "heading_path": "== = Nuclear medicine ==",
+      "start_char": 11176,
+      "end_char": 12010,
+      "content": "== = Nuclear medicine === Nuclear medicine encompasses both diagnostic imaging and treatment of disease, and may also be referred to as molecular medicine or molecular imaging and therapeutics. Nuclear medicine uses certain properties of isotopes and the energetic particles emitted from radioactive material to diagnose or treat various pathology. Different from the typical concept of anatomic radiology, nuclear medicine enables assessment of physiology. This function-based approach to medical evaluation has useful applications in most subspecialties, notably oncology, neurology, and cardiology. Gamma cameras and PET scanners are used in e.g. scintigraphy, SPECT and PET to detect regions of biologic activity that may be associated with a disease. Relatively short-lived isotope, such as 99mTc is administered to the patient.",
+      "char_count": 833,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0015",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Nuclear medicine ==",
+      "heading_path": "== = Nuclear medicine ==",
+      "start_char": 12010,
+      "end_char": 12912,
+      "content": "Isotopes are often preferentially absorbed by biologically active tissue in the body, and can be used to identify tumors or fracture points in bone. Images are acquired after collimated photons are detected by a crystal that gives off a light signal, which is in turn amplified and converted into count data. Scintigraphy (\"scint\") is a form of diagnostic test wherein radioisotopes are taken internally, for example, intravenously or orally. Then, gamma cameras capture and form two-dimensional images from the radiation emitted by the radiopharmaceuticals. SPECT is a 3D tomographic technique that uses gamma camera data from many projections and can be reconstructed in different planes. A dual detector head gamma camera combined with a CT scanner, which provides localization of functional SPECT data, is termed a SPECT-CT camera, and has shown utility in advancing the field of molecular imaging.",
+      "char_count": 902,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0016",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Nuclear medicine ==",
+      "heading_path": "== = Nuclear medicine ==",
+      "start_char": 12913,
+      "end_char": 13812,
+      "content": "In most other medical imaging modalities, energy is passed through the body and the reaction or result is read by detectors. In SPECT imaging, the patient is injected with a radioisotope, most commonly Thallium 201TI, Technetium 99mTC, Iodine 123I, and Gallium 67Ga. The radioactive gamma rays are emitted through the body as the natural decaying process of these isotopes takes place. The emissions of the gamma rays are captured by detectors that surround the body. This essentially means that the human is now the source of the radioactivity, rather than the medical imaging devices such as X-ray or CT. Positron emission tomography (PET) uses coincidence detection to image functional processes. Short-lived positron emitting isotope, such as 18F, is incorporated with an organic substance such as glucose, creating F18-fluorodeoxyglucose, which can be used as a marker of metabolic utilization.",
+      "char_count": 899,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0017",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Nuclear medicine ==",
+      "heading_path": "== = Nuclear medicine ==",
+      "start_char": 13813,
+      "end_char": 14766,
+      "content": "Images of activity distribution throughout the body can show rapidly growing tissue, like tumor, metastasis, or infection. PET images can be viewed in comparison to computed tomography scans to determine an anatomic correlate. Modern scanners may integrate PET, allowing PET-CT, or PET-MRI to optimize the image reconstruction involved with positron imaging. This is performed on the same equipment without physically moving the patient off of the gantry. The resultant hybrid of functional and anatomic imaging information is a useful tool in non-invasive diagnosis and patient management. Fiduciary markers are used in a wide range of medical imaging applications. Images of the same subject produced with two different imaging systems may be correlated (called image registration) by placing a fiduciary marker in the area imaged by both systems. In this case, a marker which is visible in the images produced by both imaging modalities must be used.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0018",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Nuclear medicine ==",
+      "heading_path": "== = Nuclear medicine ==",
+      "start_char": 14767,
+      "end_char": 15099,
+      "content": "By this method, functional information from SPECT or positron emission tomography can be related to anatomical information provided by magnetic resonance imaging (MRI). Similarly, fiducial points established during MRI can be correlated with brain images generated by magnetoencephalography to localize the source of brain activity.",
+      "char_count": 332,
+      "token_estimate": 83,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0019",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Ultrasound ==",
+      "heading_path": "== = Ultrasound ==",
+      "start_char": 15094,
+      "end_char": 16057,
+      "content": "== = Ultrasound === Medical ultrasound uses high frequency broadband sound waves in the megahertz range that are reflected by tissue to varying degrees to produce (up to 3D) images. This is commonly associated with imaging the fetus in pregnant women. Uses of ultrasound are much broader, however. Other important uses include imaging the abdominal organs, heart, breast, muscles, tendons, arteries and veins. While it may provide less anatomical detail than techniques such as CT or MRI, it has several advantages which make it ideal in numerous situations, in particular that it studies the function of moving structures in real-time, emits no ionizing radiation, and contains speckle that can be used in elastography. Ultrasound is also used as a popular research tool for capturing raw data, that can be made available through an ultrasound research interface, for the purpose of tissue characterization and implementation of new image processing techniques.",
+      "char_count": 962,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0020",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Ultrasound ==",
+      "heading_path": "== = Ultrasound ==",
+      "start_char": 16057,
+      "end_char": 16980,
+      "content": "The concepts of ultrasound differ from other medical imaging modalities in the fact that it is operated by the transmission and receipt of sound waves. The high frequency sound waves are sent into the tissue and depending on the composition of the different tissues; the signal will be attenuated and returned at separate intervals. A path of reflected sound waves in a multilayered structure can be defined by an input acoustic impedance (ultrasound sound wave) and the Reflection and transmission coefficients of the relative structures. It is very safe to use and does not appear to cause any adverse effects. It is also relatively inexpensive and quick to perform. Ultrasound scanners can be taken to critically ill patients in intensive care units, avoiding the danger caused while moving the patient to the radiology department. The real-time moving image obtained can be used to guide drainage and biopsy procedures.",
+      "char_count": 923,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0021",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Elastography ==",
+      "heading_path": "== = Elastography ==",
+      "start_char": 17082,
+      "end_char": 18002,
+      "content": "== = Elastography === Elastography is a relatively new imaging modality that maps the elastic properties of soft tissue. This modality emerged in the last two decades. Elastography is useful in medical diagnoses, as elasticity can discern healthy from unhealthy tissue for specific organs/growths. For example, cancerous tumours will often be harder than the surrounding tissue, and diseased livers are stiffer than healthy ones. There are several elastographic techniques based on the use of ultrasound, magnetic resonance imaging and tactile imaging. The wide clinical use of ultrasound elastography is a result of the implementation of technology in clinical ultrasound machines. Main branches of ultrasound elastography include Quasistatic Elastography/Strain Imaging, Shear Wave Elasticity Imaging (SWEI), Acoustic Radiation Force Impulse imaging (ARFI), Supersonic Shear Imaging (SSI), and Transient Elastography.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0022",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Elastography ==",
+      "heading_path": "== = Elastography ==",
+      "start_char": 18002,
+      "end_char": 18215,
+      "content": "In the last decade, a steady increase of activities in the field of elastography is observed demonstrating successful application of the technology in various areas of medical diagnostics and treatment monitoring.",
+      "char_count": 213,
+      "token_estimate": 53,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0023",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Photoacoustic imaging ==",
+      "heading_path": "== = Photoacoustic imaging ==",
+      "start_char": 18225,
+      "end_char": 18701,
+      "content": "== = Photoacoustic imaging === Photoacoustic imaging is a recently developed hybrid biomedical imaging modality based on the photoacoustic effect. It combines the advantages of optical absorption contrast with an ultrasonic spatial resolution for deep imaging in (optical) diffusive or quasi-diffusive regime. Recent studies have shown that photoacoustic imaging can be used in vivo for tumor angiogenesis monitoring, blood oxygenation mapping, functional brain imaging, and skin melanoma detection, etc.",
+      "char_count": 504,
+      "token_estimate": 126,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0024",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Tomography ==",
+      "heading_path": "== = Tomography ==",
+      "start_char": 18719,
+      "end_char": 19566,
+      "content": "== = Tomography === Tomography is the imaging by sections or sectioning. The main such methods in medical imaging are: X-ray computed tomography (CT), or Computed Axial Tomography (CAT) scan, is a helical tomography technique (latest generation), which traditionally produces a 2D image of the structures in a thin section of the body. In CT, a beam of X-rays spins around an object being examined and is picked up by sensitive radiation detectors after having penetrated the object from multiple angles. A computer then analyses the information received from the scanner's detectors and constructs a detailed image of the object and its contents using the mathematical principles laid out in the Radon transform. It has a greater ionizing radiation dose burden than projection radiography; repeated scans must be limited to avoid health effects.",
+      "char_count": 846,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0025",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Tomography ==",
+      "heading_path": "== = Tomography ==",
+      "start_char": 19566,
+      "end_char": 20279,
+      "content": "CT is based on the same principles as X-ray projections but in this case, the patient is enclosed in a surrounding ring of detectors assigned with 500–1000 scintillation detectors (fourth-generation X-ray CT scanner geometry). Previously in older generation scanners, the X-ray beam was paired by a translating source and detector. Computed tomography has almost completely replaced focal plane tomography in X-ray tomography imaging. Positron emission tomography (PET) also used in conjunction with computed tomography, PET-CT, and magnetic resonance imaging PET-MRI. Magnetic resonance imaging (MRI) commonly produces tomographic images of cross-sections of the body. (See separate MRI section in this article.)",
+      "char_count": 713,
+      "token_estimate": 178,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0026",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Echocardiography ==",
+      "heading_path": "== = Echocardiography ==",
+      "start_char": 20286,
+      "end_char": 21125,
+      "content": "== = Echocardiography === When ultrasound is used to image the heart it is referred to as an echocardiogram. Echocardiography allows detailed structures of the heart, including chamber size, heart function, the valves of the heart, as well as the pericardium (the sac around the heart) to be seen. Echocardiography uses 2D, 3D, and Doppler imaging to create pictures of the heart and visualize the blood flowing through each of the four heart valves. Echocardiography is widely used in an array of patients ranging from those experiencing symptoms, such as shortness of breath or chest pain, to those undergoing cancer treatments. Transthoracic ultrasound has been proven to be safe for patients of all ages, from infants to the elderly, without risk of harmful side effects or radiation, differentiating it from other imaging modalities.",
+      "char_count": 838,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0027",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Echocardiography ==",
+      "heading_path": "== = Echocardiography ==",
+      "start_char": 21125,
+      "end_char": 21433,
+      "content": "Echocardiography is one of the most commonly used imaging modalities in the world due to its portability and use in a variety of applications. In emergency situations, echocardiography is quick, easily accessible, and able to be performed at the bedside, making it the modality of choice for many physicians.",
+      "char_count": 308,
+      "token_estimate": 77,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0028",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Functional near-infrared spectroscopy ==",
+      "heading_path": "== = Functional near-infrared spectroscopy ==",
+      "start_char": 21455,
+      "end_char": 21658,
+      "content": "== = Functional near-infrared spectroscopy === FNIR Is a relatively new non-invasive imaging technique. NIRS (near infrared spectroscopy) is used for the purpose of functional neuroimaging and has been widely accepted as a brain imaging technique.",
+      "char_count": 247,
+      "token_estimate": 61,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0029",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Magnetic particle imaging ==",
+      "heading_path": "== = Magnetic particle imaging ==",
+      "start_char": 21691,
+      "end_char": 22113,
+      "content": "== = Magnetic particle imaging === Using superparamagnetic iron oxide nanoparticles, magnetic particle imaging (MPI) is a developing diagnostic imaging technique used for tracking superparamagnetic iron oxide nanoparticles. The primary advantage is the high sensitivity and specificity, along with the lack of signal decrease with tissue depth. MPI has been used in medical research to image cardiovascular performance, neuroperfusion, and cell tracking.",
+      "char_count": 454,
+      "token_estimate": 113,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0030",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Industry ==",
+      "heading_path": "== Industry ==",
+      "start_char": 22127,
+      "end_char": 22929,
+      "content": "== Industry == Organizations in the medical imaging industry include manufacturers of imaging equipment, freestanding radiology facilities, and hospitals. The global market for manufactured devices was estimated at $5 billion in 2018. Notable manufacturers included Fujifilm,GE HealthCare, Siemens Healthineers, Philips, Shimadzu, Canon, Carestream Health, Hologic, and Esaote. In 2016, the manufacturing industry was characterized as oligopolistic and mature; new entrants included in Samsung and Neusoft Medical. In 2024, Fischer MVL in India began manufacturing MRI machines. In 2016, Toshiba exited the industry by selling its medical imaging division to Canon, which was ultimately renamed to Canon. In 2019, Hitachi exited the industry by selling its business to Fujifilm for about $1.6 billion.",
+      "char_count": 801,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0031",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Industry ==",
+      "heading_path": "== Industry ==",
+      "start_char": 22929,
+      "end_char": 23562,
+      "content": "The simpler x-ray machines were being commoditized by 1998, when Kodak had about 30% market share globally; Kodak later sold its medical imaging business in 2007 and the business was ultimately renamed to Carestream Health. In the 1970s, CT scanners were introduced, followed by MRI machines in the 1980s, with GE leading in both. Digital radiography has replaced older computed radiography over time, which reduces radiation doses. In the United States, as estimate as of 2015 places the US market for imaging scans at about $100b, with 60% occurring in hospitals and 40% occurring in freestanding clinics, such as the RadNet chain.",
+      "char_count": 633,
+      "token_estimate": 158,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0032",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== In pregnancy ==",
+      "heading_path": "== In pregnancy ==",
+      "start_char": 23567,
+      "end_char": 24265,
+      "content": "== In pregnancy == Medical imaging may be indicated in pregnancy because of pregnancy complications, a pre-existing disease or an acquired disease in pregnancy, or routine prenatal care. Magnetic resonance imaging (MRI) without MRI contrast agents as well as obstetric ultrasonography are not associated with any risk for the mother or the fetus, and are the imaging techniques of choice for pregnant women. Projectional radiography, CT scan and nuclear medicine imaging result some degree of ionizing radiation exposure, but have with a few exceptions much lower absorbed doses than what are associated with fetal harm. At higher dosages, effects can include miscarriage, birth defects and intellectual disability.",
+      "char_count": 715,
+      "token_estimate": 178,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0033",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Maximizing imaging procedure use ==",
+      "heading_path": "== Maximizing imaging procedure use ==",
+      "start_char": 24303,
+      "end_char": 24822,
+      "content": "== Maximizing imaging procedure use == The amount of data obtained in a single MR or CT scan is very extensive. Some of the data that radiologists discard could save patients time and money, while reducing their exposure to radiation and risk of complications from invasive procedures. Another approach for making the procedures more efficient is based on utilizing additional constraints, e.g., in some medical imaging modalities one can improve the efficiency of the data acquisition by taking into account the fact the reconstructed density is positive.",
+      "char_count": 556,
+      "token_estimate": 139,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0034",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Creation of three-dimensional images ==",
+      "heading_path": "== Creation of three-dimensional images ==",
+      "start_char": 24864,
+      "end_char": 25797,
+      "content": "== Creation of three-dimensional images == Volume rendering techniques have been developed to enable CT, MRI and ultrasound scanning software to produce 3D images for the physician. Traditionally CT and MRI scans produced 2D static output on film. To produce 3D images, many scans are made and then combined by computers to produce a 3D model, which can then be manipulated by the physician. 3D ultrasounds are produced using a somewhat similar technique. In diagnosing disease of the viscera of the abdomen, ultrasound is particularly sensitive on imaging of biliary tract, urinary tract and female reproductive organs (ovary, fallopian tubes). As for example, diagnosis of gallstone by dilatation of common bile duct and stone in the common bile duct. With the ability to visualize important structures in great detail, 3D visualization methods are a valuable resource for the diagnosis and surgical treatment of many pathologies.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0035",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Creation of three-dimensional images ==",
+      "heading_path": "== Creation of three-dimensional images ==",
+      "start_char": 25797,
+      "end_char": 26373,
+      "content": "It was a key resource for the famous, but ultimately unsuccessful attempt by Singaporean surgeons to separate Iranian twins Ladan and Laleh Bijani in 2003. The 3D equipment was used previously for similar operations with great success. Other proposed or developed techniques include: Diffuse optical tomography Elastography Electrical impedance tomography Optoacoustic imaging Ophthalmology A-scan B-scan Corneal topography Optical coherence tomography Scanning laser ophthalmoscopy Some of these techniques are still at a research stage and not yet used in clinical routines.",
+      "char_count": 576,
+      "token_estimate": 144,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0036",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Non-diagnostic imaging ==",
+      "heading_path": "== Non-diagnostic imaging ==",
+      "start_char": 26360,
+      "end_char": 26824,
+      "content": "== Non-diagnostic imaging == Neuroimaging has also been used in experimental circumstances to allow people (especially disabled persons) to control outside devices, acting as a brain computer interface. Many medical imaging software applications are used for non-diagnostic imaging, specifically because they do not have an FDA approval and not allowed to use in clinical research for patient diagnosis. Note that many clinical research studies are not designed for patient diagnosis anyway.",
+      "char_count": 491,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0037",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Archiving and recording ==",
+      "heading_path": "== Archiving and recording ==",
+      "start_char": 26853,
+      "end_char": 27176,
+      "content": "== Archiving and recording == Used primarily in ultrasound imaging, capturing the image produced by a medical imaging device is required for archiving and telemedicine applications. In most scenarios, a frame grabber is used in order to capture the video signal from the medical device and relay it to a computer for further processing and operations.",
+      "char_count": 351,
+      "token_estimate": 87,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0038",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = DICOM ==",
+      "heading_path": "== = DICOM ==",
+      "start_char": 27189,
+      "end_char": 27505,
+      "content": "== = DICOM === The Digital Imaging and Communication in Medicine (DICOM) Standard is used globally to store, exchange, and transmit medical images. The DICOM Standard incorporates protocols for imaging techniques such as radiography, computed tomography (CT), magnetic resonance imaging (MRI), ultrasound, and radiation therapy.",
+      "char_count": 328,
+      "token_estimate": 82,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0039",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Compression of medical images ==",
+      "heading_path": "== = Compression of medical images ==",
+      "start_char": 27542,
+      "end_char": 28100,
+      "content": "== = Compression of medical images === Medical imaging techniques produce very large amounts of data, especially from CT, MRI and PET modalities. As a result, storage and communications of electronic image data are prohibitive without the use of compression. JPEG 2000 image compression is used by the DICOM standard for storage and transmission of medical images. The cost and feasibility of accessing large image data sets over low or various bandwidths are further addressed by use of another DICOM standard, called JPIP, to enable efficient streaming of the JPEG 2000 compressed image data.",
+      "char_count": 594,
+      "token_estimate": 148,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0040",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Medical imaging in the cloud ==",
+      "heading_path": "== = Medical imaging in the cloud ==",
+      "start_char": 28136,
+      "end_char": 28566,
+      "content": "== = Medical imaging in the cloud === There has been growing trend to migrate from on-premise PACS to a cloud-based PACS. A recent article by Applied Radiology said, \"As the digital-imaging realm is embraced across the healthcare enterprise, the swift transition from terabytes to petabytes of data has put radiology on the brink of information overload. Cloud computing offers the imaging department of the future the tools to manage data much more intelligently.\"",
+      "char_count": 465,
+      "token_estimate": 116,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0041",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Use in pharmaceutical clinical trials ==",
+      "heading_path": "== Use in pharmaceutical clinical trials ==",
+      "start_char": 28609,
+      "end_char": 29367,
+      "content": "== Use in pharmaceutical clinical trials == Medical imaging has become a major tool in clinical trials since it enables rapid diagnosis with visualization and quantitative assessment. A typical clinical trial goes through multiple phases and can take up to eight years. Clinical endpoints or outcomes are used to determine whether the therapy is safe and effective. Once a patient reaches the endpoint, he or she is generally excluded from further experimental interaction. Trials that rely solely on clinical endpoints are very costly as they have long durations and tend to need large numbers of patients. In contrast to clinical endpoints, surrogate endpoints have been shown to cut down the time required to confirm whether a drug has clinical benefits.",
+      "char_count": 757,
+      "token_estimate": 189,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0042",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Use in pharmaceutical clinical trials ==",
+      "heading_path": "== Use in pharmaceutical clinical trials ==",
+      "start_char": 29367,
+      "end_char": 30274,
+      "content": "Imaging biomarkers (a characteristic that is objectively measured by an imaging technique, which is used as an indicator of pharmacological response to a therapy) and surrogate endpoints have shown to facilitate the use of small group sizes, obtaining quick results with good statistical power. Imaging is able to reveal subtle change that is indicative of the progression of therapy that may be missed out by more subjective, traditional approaches. Statistical bias is reduced as the findings are evaluated without any direct patient contact. Imaging techniques such as positron emission tomography (PET) and magnetic resonance imaging (MRI) are routinely used in oncology and neuroscience areas. For example, measurement of tumour shrinkage is a commonly used surrogate endpoint in solid tumour response evaluation. This allows for faster and more objective assessment of the effects of anticancer drugs.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0043",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Use in pharmaceutical clinical trials ==",
+      "heading_path": "== Use in pharmaceutical clinical trials ==",
+      "start_char": 30275,
+      "end_char": 31197,
+      "content": "In Alzheimer's disease, MRI scans of the entire brain can accurately assess the rate of hippocampal atrophy, while PET scans can measure the brain's metabolic activity by measuring regional glucose metabolism, and beta-amyloid plaques using tracers such as Pittsburgh compound B (PiB). Historically less use has been made of quantitative medical imaging in other areas of drug development although interest is growing. An imaging-based trial will usually be made up of three components: A realistic imaging protocol. The protocol is an outline that standardizes (as far as practically possible) the way in which the images are acquired using the various modalities (PET, SPECT, CT, MRI). It covers the specifics in which images are to be stored, processed and evaluated. An imaging centre that is responsible for collecting the images, perform quality control and provide tools for data storage, distribution and analysis.",
+      "char_count": 922,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0044",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Use in pharmaceutical clinical trials ==",
+      "heading_path": "== Use in pharmaceutical clinical trials ==",
+      "start_char": 31198,
+      "end_char": 31640,
+      "content": "It is important for images acquired at different time points are displayed in a standardised format to maintain the reliability of the evaluation. Certain specialised imaging contract research organizations provide end to end medical imaging services, from protocol design and site management through to data quality assurance and image analysis. Clinical sites that recruit patients to generate the images to send back to the imaging centre.",
+      "char_count": 442,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0045",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Risks and safety issues ==",
+      "heading_path": "== Risks and safety issues ==",
+      "start_char": 31627,
+      "end_char": 32010,
+      "content": "== Risks and safety issues == Medical imaging can lead to patient and healthcare provider harm through exposure to ionizing radiation, iodinated contrast, magnetic fields, and other hazards. Lead is the main material used for radiographic shielding against scattered X-rays. In magnetic resonance imaging, there is MRI RF shielding as well as magnetic shielding to prevent external disturbance of image quality.",
+      "char_count": 411,
+      "token_estimate": 102,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0046",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Privacy protection ==",
+      "heading_path": "== Privacy protection ==",
+      "start_char": 32034,
+      "end_char": 32851,
+      "content": "== Privacy protection == Medical imaging are generally covered by laws of medical privacy. For example, in the United States the Health Insurance Portability and Accountability Act (HIPAA) sets restrictions for health care providers on utilizing protected health information, which is any individually identifiable information relating to the past, present, or future physical or mental health of any individual. While there has not been any definitive legal decision in the matter, many studies have indicated that medical imaging contain biometric information that can uniquely identify a person, and as such qualify as PHI and/or special categories of personal data. The UK General Medical Council's ethical guidelines indicate that the Council does not require consent prior to making recordings of X-ray images.",
+      "char_count": 816,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0047",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== Privacy protection ==",
+      "heading_path": "== Privacy protection ==",
+      "start_char": 32851,
+      "end_char": 33360,
+      "content": "However, the same guidance indicates that the images and recordings need to be anonimized, and acknowledges that in deciding whether a recording is anonymised, one should bear in mind that apparently insignificant details may still be capable of identifying a patient. As such, one should be particularly careful about the anonymity of a recordings of an X-ray image before using or publishing them without consent in journals and other learning materials, whether they are printed or in an electronic format.",
+      "char_count": 509,
+      "token_estimate": 127,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0048",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = United States ==",
+      "heading_path": "== = United States ==",
+      "start_char": 33374,
+      "end_char": 34116,
+      "content": "== = United States === As per chapter 300 of the Compendium of U.S. Copyright Office Practices, \"the Office will not register works produced by a machine or mere mechanical process that operates randomly or automatically without any creative input or intervention from a human author\" including \"Medical imaging produced by X-rays, ultrasounds, magnetic resonance imaging, or other diagnostic equipment.\" This position differs from the broad copyright protections afforded to photographs. While the Copyright Compendium is an agency statutory interpretation and not legally binding, courts are likely to give deference to it if they find it reasonable. Yet, there is no U.S. federal case law directly addressing the issue of the copyrightability of X-ray images.",
+      "char_count": 762,
+      "token_estimate": 190,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0049",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Germany ==",
+      "heading_path": "== = Germany ==",
+      "start_char": 34131,
+      "end_char": 34860,
+      "content": "== = Germany === In Germany, X-ray images as well as MRI, medical ultrasound, PET and scintigraphy images are protected by (copyright-like) related rights or neighbouring rights. This protection does not require creativity (as would be necessary for regular copyright protection) and lasts only for 50 years after image creation, if not published within 50 years, or for 50 years after the first legitimate publication. The letter of the law grants this right to the \"Lichtbildner\", i.e. the person who created the image. The literature seems to uniformly consider the medical doctor, dentist or veterinary physician as the rights holder, which may result from the circumstance that in Germany many X-rays are performed in ambulatory settings.",
+      "char_count": 743,
+      "token_estimate": 185,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0050",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = United Kingdom ==",
+      "heading_path": "== = United Kingdom ==",
+      "start_char": 34882,
+      "end_char": 35828,
+      "content": "== = United Kingdom === Medical images created in the United Kingdom will normally be protected by copyright due to \"the high level of skill, labour and judgement required to produce a good quality X-ray, particularly to show contrast between bones and various soft tissues\". The Society of Radiographers believe this copyright is owned by employer (unless the radiographer is self-employed—though even then their contract might require them to transfer ownership to the hospital). This copyright owner can grant certain permissions to whoever they wish, without giving up their ownership of the copyright. So the hospital and its employees will be given permission to use such radiographic images for the various purposes that they require for medical care. Physicians employed at the hospital will, in their contracts, be given the right to publish patient information in journal papers or books they write (providing they are made anonymous).",
+      "char_count": 945,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "medicalimaging_5525b719_c0051",
+      "article_id": "medicalimaging_5525b719",
+      "section": "== = Sweden ==",
+      "heading_path": "== = Sweden ==",
+      "start_char": 35906,
+      "end_char": 36748,
+      "content": "== = Sweden === The Cyber Law in Sweden states: \"Pictures can be protected as photographic works or as photographic pictures. The former requires a higher level of originality; the latter protects all types of photographs, also the ones taken by amateurs, or within medicine or science. The protection requires some sort of photographic technique being used, which includes digital cameras as well as holograms created by laser technique. The difference between the two types of work is the term of protection, which amounts to seventy years after the death of the author of a photographic work as opposed to fifty years, from the year in which the photographic picture was taken.\" Medical imaging may possibly be included in the scope of \"photography\", similarly to a U.S. statement that \"MRI images, CT scans, and the like are analogous to photography.\"",
+      "char_count": 855,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What information is provided about == = Ultrasound ==?",
+        "answer": "The text provides information about == = Ultrasound == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0019"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0019"
+        ]
+      },
+      {
+        "question": "What was the original name for a Magnetic Resonance Imaging (MRI) scanner?",
+        "answer": "The original name for a Magnetic Resonance Imaging (MRI) scanner was \"nuclear magnetic resonance (NMR) imaging\" scanner.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0009"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0009"
+        ]
+      },
+      {
+        "question": "What is the term for correlating images of the same subject that were produced by two different imaging systems?",
+        "answer": "The process of correlating images of the same subject produced with two different imaging systems is called image registration.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0017"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0017"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0000",
+          "medicalimaging_5525b719_c0001",
+          "medicalimaging_5525b719_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0002",
+          "medicalimaging_5525b719_c0001",
+          "medicalimaging_5525b719_c0000"
+        ]
+      },
+      {
+        "question": "What information is provided about == History ==?",
+        "answer": "The text provides information about == History == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0003",
+          "medicalimaging_5525b719_c0004",
+          "medicalimaging_5525b719_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0003",
+          "medicalimaging_5525b719_c0004",
+          "medicalimaging_5525b719_c0005"
+        ]
+      },
+      {
+        "question": "Describe the process and application of radiography, including the roles of the professionals involved and the technology used for image capture.",
+        "answer": "The process of radiography is typically managed by a radiographer, who is responsible for acquiring the images. This is done using 2D techniques like projection radiography or fluoroscopy, which utilize a wide beam of X-rays. After the radiation passes through the area of interest, an image receptor—which has evolved from fluorescing screens to Image Amplifiers and TV cameras—converts it into an image. Radiography is used to identify fractures and lung pathologies, and with the use of contrast media like barium, it can visualize the stomach and intestines. While the radiographer acquires the image, its interpretation is generally the responsibility of radiology specialists.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0006",
+          "medicalimaging_5525b719_c0007",
+          "medicalimaging_5525b719_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0006",
+          "medicalimaging_5525b719_c0007",
+          "medicalimaging_5525b719_c0008"
+        ]
+      },
+      {
+        "question": "How do measurement techniques like EEG and ECG relate to the primary definition of medical imaging?",
+        "answer": "While medical imaging is primarily defined as the process of creating visual images of the body's interior, techniques like electroencephalography (EEG) and electrocardiography (ECG) are not designed to produce images. Instead, they are considered a form of medical imaging in a different discipline because they produce data that can be represented graphically, such as in parameter graphs versus time.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0000",
+          "medicalimaging_5525b719_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0001",
+          "medicalimaging_5525b719_c0000"
+        ]
+      },
+      {
+        "question": "What information is provided about == History ==?",
+        "answer": "The text provides information about == History == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0003",
+          "medicalimaging_5525b719_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0003",
+          "medicalimaging_5525b719_c0004"
+        ]
+      },
+      {
+        "question": "Based on the clinical and technical aspects of medical imaging, what are the distinct primary roles of a radiographer versus a radiologist?",
+        "answer": "A radiographer, also known as a radiologic technologist, is primarily responsible for the technical aspect of acquiring medical images of diagnostic quality. In contrast, a radiologist is a physician who specializes in the interpretation of these medical images. However, these roles can sometimes overlap, as radiographers may train in interpretation as part of an expanded practice.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0005",
+          "medicalimaging_5525b719_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0006",
+          "medicalimaging_5525b719_c0005"
+        ]
+      },
+      {
+        "question": "How are contrast media, such as barium, utilized in different forms of radiography to visualize internal structures?",
+        "answer": "In fluoroscopy, contrast media like barium, iodine, and air are used to visualize internal organs as they work, producing real-time images. In projectional radiographs, also known as X-rays, radio-opaque contrast media such as barium are employed to visualize the structure of the stomach and intestines, which can help diagnose conditions like ulcers or certain types of colon cancer.",
+        "related_chunk_ids": [
+          "medicalimaging_5525b719_c0007",
+          "medicalimaging_5525b719_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "medicalimaging_5525b719_c0007",
+          "medicalimaging_5525b719_c0008"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T08:34:17.541Z",
+    "content_format": "markdown",
+    "total_chunks": 52,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

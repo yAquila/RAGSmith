@@ -1,0 +1,253 @@
+{
+  "article": {
+    "id": "directedenergyweapon_f1d7c05a",
+    "title": "Directed-energy weapon",
+    "url": "https://en.wikipedia.org/wiki/Directed-energy_weapon",
+    "lang": "en",
+    "created_at": "2025-07-31T08:50:10.476696",
+    "content": "---\nid: directedenergyweapon_f1d7c05a\nurl: https://en.wikipedia.org/wiki/Directed-energy_weapon\ntitle: Directed-energy weapon\nlang: en\ncreated_at: '2025-07-31T08:44:36.907825'\nchecksum: 8db2c0a0aeaa2698156212fb199062ea3bf00294318573bb2173f01633585682\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3808\n  char_count: 24604\n  num_chunks: 10\n  original_chunks: 22\n  filtered_out: 12\n  num_sections: 0\n---\nA directed-energy weapon (DEW) is a ranged weapon that damages its target with highly focused energy without a solid projectile, including lasers, microwaves, particle beams, and sound beams. Potential applications of this technology include weapons that target personnel, missiles, vehicles, and optical devices. In the United States, the Pentagon, DARPA, the Air Force Research Laboratory, United States Army Armament Research Development and Engineering Center, and the Naval Research Laboratory are researching directed-energy weapons to counter ballistic missiles, hypersonic cruise missiles, and hypersonic glide vehicles. These systems of missile defense are expected to come online no sooner than the mid to late 2020s. China, France, Germany, the United Kingdom, Russia, India, Israel are also developing military-grade directed-energy weapons, while Iran and Turkey claim to have them in active service. The first use of directed-energy weapons in combat between military forces was claimed to have occurred in Libya in August 2019 by Turkey, which claimed to use the ALKA directed-energy weapon. After decades of research and development, most directed-energy weapons are still at the experimental stage and it remains to be seen if or when they will be deployed as practical, high-performance military weapons. == Operational advantages == Directed energy weapons could have several main advantages over conventional weaponry: Directed-energy weapons can be used discreetly; radiation does not generate sound and is invisible if outside the visible spectrum. Light is, for practical purposes, unaffected by gravity, windage and Coriolis force, giving it an almost perfectly flat trajectory. This makes aim much more precise and extends the range to line-of-sight, limited only by beam diffraction and spread (which dilute the power and weaken the effect), and absorption or scattering by intervening atmospheric contents. Lasers travel at light-speed and have long range, making them suitable for use in space warfare. Laser weapons potentially eliminate many logistical problems in terms of ammunition supply, as long as there is enough energy to power them. Depending on several operational factors, directed-energy weapons may be cheaper to operate than conventional weapons in certain contexts. Use of high-powered microwave weapons, which are typically used to degrade and damage electronics such as drones, can be hard to attribute to a particular actor. == Types == === Microwave === Some devices are described as microwave weapons; the microwave frequency is commonly defined as being between 300 MHz and 300 GHz (wavelengths of 1 meter to 1 millimeter), which is within the radiofrequency (RF) range. ==== Active Denial System ==== Active Denial System is a millimeter wave source that heats the water in a human target's skin and thus causes incapacitating pain. It was developed by the U.S. Air Force Research Laboratory and Raytheon for riot-control duty. Though intended to cause severe pain while leaving no lasting damage, concern has been voiced as to whether the system could cause irreversible damage to the eyes. There has yet to be testing for long-term side effects of exposure to the microwave beam. It can also destroy unshielded electronics. ==== Vigilant Eagle ==== Vigilant Eagle is a ground-based airport defense system that directs high-frequency microwaves towards any projectile that is fired at an aircraft. It was announced by Raytheon in 2005, and the effectiveness of its waveforms was reported to have been demonstrated in field tests to be highly effective in defeating MANPADS missiles. The system consists of a missile-detecting and tracking subsystem (MDT), a command and control system, and a scanning array. The MDT is a fixed grid of passive infrared (IR) cameras. The command and control system determines the missile launch point. The scanning array projects microwaves that disrupt the surface-to-air missile's guidance system, deflecting it from the aircraft. Vigilant Eagle was not mentioned on Raytheon's Web site in 2022. ==== Bofors HPM Blackout ==== Bofors HPM Blackout is a high-powered microwave weapon that is said to be able to destroy at short distance a wide variety of commercial off-the-shelf (COTS) electronic equipment and is purportedly non-lethal. ==== EL/M-2080 Green Pine|EL/M-2080 Green P ==== The effective radiated power (ERP) of the EL/M-2080 Green Pine radar makes it a hypothetical candidate for conversion into a directed-energy weapon, by focusing pulses of radar energy on target missiles. The energy spikes are tailored to enter missiles through antennas or sensor apertures where they can fool guidance systems, scramble computer memories or even burn out sensitive electronic components. ==== Active electronically scanned array ==== AESA radars mounted on fighter aircraft have been slated as directed energy weapons against missiles, however, a senior US Air Force officer noted: \"they aren't particularly suited to create weapons effects on missiles because of limited antenna size, power and field of view\". Potentially lethal effects are produced only inside 100 meters range, and disruptive effects at distances on the order of one kilometer. Moreover, cheap countermeasures can be applied to existing missiles. ==== Anti-drone rifle ==== A weapon often described as an \"anti-drone rifle\" or \"anti-drone gun\" is a battery-powered electromagnetic pulse weapon held to an operator's shoulder, pointed at a flying target in a way similar to a rifle, and operated. While not a rifle or gun, it is so nicknamed as it is handled in the same way as a personal rifle. The device emits separate electromagnetic pulses to suppress navigation and transmission channels used to operate an aerial drone, terminating the drone's contact with its operator; the out-of-control drone then crashes. The Russian Stupor is reported to have a range of two kilometers, covering a 20-degree sector; it also suppresses the drone's cameras. Stupor is reported to have been used by Russian forces during the Russian military intervention in the Syrian civil war. Both Russia and Ukraine are reported to use these devices during the 2022 Russian invasion of Ukraine. The Ukrainian army are reported to use the Ukrainian KVS G-6, with a 3.5 km range and able to operate continuously for 30 minutes. The manufacturer states that the weapon can disrupt remote control, the transmission of video at 2.4 and 5 GHz, and GPS and Glonass satellite navigation signals. Ukraine has also used the EDM4S anti drone rifle to shoot down Russian Eleron-3 drones. Due to the threat posed by drones in regard to terrorism, several police forces have carried anti-drone guns as part of their equipment. For example, during the policing of the Commonwealth Games in 2018, the Australian Queensland Police Service carried anti-drone guns with an effective range of 3 km (2 mi). In Myanmar, police have been equipped with anti-drone guns \"ostensibly to defend VIPs\". ==== Counter-electronics High Power Microwave Advanced Missile Project ==== ==== THOR/Mjolnir ==== ==== Radio Frequency Directed Energy Weapon (RFDEW) ==== This UK-developed system was unveiled in May 2024 and uses radio waves to fry the electronic components of its targets, rendering them inoperable. It is capable of engaging multiple targets, including drone swarms, and reportedly costs less than 10 pence (13 cents) per shot, making it a cheaper alternative to traditional missile-based air defense systems. === Laser === A laser weapon is a directed-energy weapon based on lasers. ==== DragonFire ==== An example of a laser directed-energy weapon is the DragonFire currently being developed by the United Kingdom. It is reportedly in the 50 kW class and is capable of engaging any target within line-of-sight at a currently classified range. It has been tested against drones and mortar rounds and is expected to equip ships, aircraft and ground vehicles from 2027. === Particle-beam === Particle-beam weapons can use charged or neutral particles, and can be either endoatmospheric or exoatmospheric. Particle beams as beam weapons are theoretically possible, but practical weapons have not been demonstrated yet. Certain types of particle beams have the advantage of being self-focusing in the atmosphere. Blooming is also a problem in particle-beam weapons. Energy that would otherwise be focused on the target spreads out and the beam becomes less effective: Thermal blooming occurs in both charged and neutral particle beams, and occurs when particles bump into one another under the effects of thermal vibration, or bump into air molecules. Electrical blooming occurs only in charged particle beams, as ions of like charge repel one another. === Plasma === Plasma weapons fire a beam, bolt, or stream of plasma, which is an excited state of matter consisting of atomic electrons and nuclei, and free electrons if ionized, or other particles if pinched. The MARAUDER (Magnetically Accelerated Ring to Achieve Ultra-high Directed-Energy and Radiation) used the Shiva Star project (a high energy capacitor bank which provided the means to test weapons and other devices requiring brief and extremely large amounts of energy) to accelerate a toroid of plasma at a significant percentage of the speed of light. The Russian Federation claims to be developing various plasma weapons. === Sonic === ==== Long Range Acoustic Device (LRAD) ==== The Long Range Acoustic Device (LRAD) is an acoustic hailing device developed by Genasys (formerly LRAD Corporation) to send messages and warning tones over longer distances or at higher volume than normal loudspeakers, and as a non-lethal directed-acoustic-energy weapon. LRAD systems are used for long-range communications in a variety of applications and as a means of non-lethal, non-projectile crowd control. They are also used on ships as an anti-piracy measure. According to the manufacturer's specifications, the systems weigh from 15 to 320 pounds (7 to 145 kg) and can emit sound in a 30°- 60° beam at 2.5 kHz. They range in size from small, portable handheld units which can be strapped to a person's chest, to larger models which require a mount. The power of the sound beam which LRADs produce is sufficient to penetrate vehicles and buildings while retaining a high degree of fidelity, so that verbal messages can be conveyed clearly in some situations. == History == === Ancient === ==== Mirrors of Archimedes ==== According to a legend, Archimedes created a mirror with an adjustable focal length (or more likely, a series of mirrors focused on a common point) to focus sunlight on ships of the Roman fleet as they invaded Syracuse, setting them on fire. Historians point out that the earliest accounts of the battle did not mention a \"burning mirror\", but merely stated that Archimedes's ingenuity combined with a way to hurl fire were relevant to the victory. Some attempts to replicate this feat have had some success; in particular, an experiment by students at MIT showed that a mirror-based weapon was at least possible, if not necessarily practical. The hosts of MythBusters tackled the Mirrors of Archimedes three times (in episodes 19, 57 and 172) and were never able to make the target ship catch fire, declaring the myth busted three separate times. === 20th Century === ==== Robert Watson-Watt ==== In 1935, the British Air Ministry asked Robert Watson-Watt of the Radio Research Station (UK) whether a \"death ray\" was possible. He and colleague Arnold Wilkins quickly concluded that it was not feasible, but as a consequence suggested using radio for the detection of aircraft and this started the development of radar in Britain. ==== The fictional \"engine-stopping ray\" ==== Stories in the 1930s and World War II gave rise to the idea of an \"engine-stopping ray\". They seemed to have arisen from the testing of the television transmitter in Feldberg, Germany. Because electrical noise from car engines would interfere with field strength measurements, sentries would stop all traffic in the vicinity for the twenty minutes or so needed for a test. Reversing the order of events in retelling the story created a \"tale\" where tourists car engine stopped first and then were approached by a German soldier who told them that they had to wait. The soldier returned a short time later to say that the engine would now work and the tourists drove off. Such stories were circulating in Britain around 1938 and during the war British Intelligence relaunched the myth as a \"British engine-stopping ray,\" trying to spoof the Germans into researching what the British had supposedly invented in an attempt to tie up German scientific resources. ==== German World War II experimental weapons ==== During the early 1940s Axis engineers developed a sonic cannon that could cause fatal vibrations in its target body. A methane gas combustion chamber leading to two parabolic dishes pulse-detonated at roughly 44 Hz. This sound, magnified by the dish reflectors, caused vertigo and nausea at 200–400 meters (220–440 yd) by vibrating the middle ear bones and shaking the cochlear fluid within the inner ear. At distances of 50–200 meters (160–660 ft), the sound waves could act on organ tissues and fluids by repeatedly compressing and releasing compressive resistant organs such as the kidneys, spleen, and liver. (It had little detectable effect on malleable organs such as the heart, stomach and intestines.) Lung tissue was affected at only the closest ranges as atmospheric air is highly compressible and only the blood rich alveoli resist compression. In practice, the weapon was highly vulnerable to enemy fire. Rifle, bazooka and mortar rounds easily deformed the parabolic reflectors, rendering the wave amplification ineffective. In the later phases of World War II, Nazi Germany increasingly put its hopes on research into technologically revolutionary secret weapons, the Wunderwaffe. Among the directed-energy weapons the Nazis investigated were X-ray beam weapons developed under Heinz Schmellenmeier, Richard Gans and Fritz Houtermans. They built an electron accelerator called Rheotron to generate hard X-ray synchrotron beams for the Reichsluftfahrtministerium (RLM). Invented by Max Steenbeck at Siemens-Schuckert in the 1930s, these were later called Betatrons by the Americans. The intent was to pre-ionize ignition in aircraft engines and hence serve as anti-aircraft DEW and bring planes down into the reach of the flak. The Rheotron was captured by the Americans in Burggrub on April 14, 1945. Another approach was Ernst Schiebolds 'Röntgenkanone' developed from 1943 in Großostheim near Aschaffenburg. Richert Seifert & Co from Hamburg delivered parts. ==== Reported use in Sino-Soviet conflicts ==== The Central Intelligence Agency informed Secretary Henry Kissinger that it had twelve reports of Soviet forces using laser weapons against Chinese forces during the 1969 Sino-Soviet border clashes, though William Colby doubted that they had actually been employed. ==== Northern Ireland \"squawk box\" field trials ==== In 1973, New Scientist magazine reported that a sonic weapon known as a \"squawk box\" underwent successful field trials in Northern Ireland, using soldiers as guinea pigs. The device combined two slightly different frequencies which when heard would be heard as the sum of the two frequencies (ultrasonic) and the difference between the two frequencies (infrasonic) e.g. two directional speakers emitting 16,000 Hz and 16,002 Hz frequencies would produce in the ear two frequencies of 32,002 Hz and 2 Hz. The article states: \"The squawk box is highly directional which gives it its appeal. Its effective beam width is so small that it can be directed at individuals in a riot. Other members of a crowd are unaffected, except by panic when they see people fainting, being sick, or running from the scene with their hands over their ears. The virtual inaudibility of the equipment is said to produce a 'spooky' psychological effect.\" The UK's Ministry of Defence denied the existence of such a device. It stated that it did have, however, an \"ultra-loud public address system which [...] could be 'used for verbal communication over two miles, or put out a sustained or modulated sound blanket to make conversation, and thus crowd organisation, impossible.'\" ==== East German \"decomposition\" methods ==== In East Germany in the 1960s, in an effort to avoid international condemnation for arresting and interrogating people for holding politically incorrect views or for performing actions deemed hostile by the state the state security service, the Stasi, attempted alternative methods of repression which could paralyze people without imprisoning them. One such alternative method was called decomposition (transl. Zersetzung). In the 1970s and 1980s it became the primary method of repressing domestic \"hostile-negative\" forces. Some of the victims of this method suffered from cancer and claimed that they had also been targeted with directed X-rays. In addition, when the East German state collapsed, powerful X-ray equipment was found in prisons without there being any apparent reason to justify its presence. In 1999, the modern German state was investigating the possibility that this X-ray equipment was being used as weaponry and that it was a deliberate policy of the Stasi to attempt to give prisoners radiation poisoning, and thereby cancer, through the use of directed X-rays. The negative effects of the radiation poisoning and cancer would extend past the period of incarceration. In this manner someone could be debilitated even though they were no longer imprisoned. The historian Mary Fulbrook states, The subsequent serious illnesses and premature deaths of dissidents such as the novelist Jürgen Fuchs, and the author of the critical analysis of 'The Alternative in Eastern Europe', Rudolf Bahro, have been linked by some to the suspicion of exposure to extraordinarily high and sustained levels of X-rays while waiting for interrogations, and being strapped to unpleasant chairs in small prison cells in front of mysterious closed boxes- boxes that, along with their mysterious apparatus, curiously disappeared after the collapse of the SED (Socialist Unity Party of Germany) system. ==== Strategic Defense Initiative ==== In the 1980s, U.S. President Ronald Reagan proposed the Strategic Defense Initiative (SDI) program, which was nicknamed Star Wars. It suggested that lasers, perhaps space-based X-ray lasers, could destroy ICBMs in flight. Panel discussions on the role of high-power lasers in SDI took place at various laser conferences, during the 1980s, with the participation of noted physicists including Edward Teller. A notable example of a directed energy system which came out of the SDI program is the Neutral Particle Beam Accelerator developed by Los Alamos National Laboratory. This system is officially described (on the Smithsonian Air and Space Museum website) as a low power neutral particle beam (NPB) accelerator, which was among several directed energy weapons examined by the Strategic Defense Initiative Organization for potential use in missile defense. In July 1989, the accelerator was launched from White Sands Missile Range as part of the Beam Experiment Aboard Rocket (BEAR) project, reaching an altitude of 200 kilometers (124 miles) and operating successfully in space before being recovered intact after reentry. The primary objectives of the test were to assess NPB propagation characteristics in space and gauge the effects on spacecraft components. Despite continued research into NPBs, no known weapon system utilizing this technology has been deployed. Though the strategic missile defense concept has continued to the present under the Missile Defense Agency, most of the directed-energy weapon concepts were shelved. However, Boeing has been somewhat successful with the Boeing YAL-1 and Boeing NC-135, the first of which destroyed two missiles in February 2010. Funding has been cut to both of the programs. ==== Iraq War ==== During the Iraq War, electromagnetic weapons, including high power microwaves, were used by the U.S. military to disrupt and destroy Iraqi electronic systems and may have been used for crowd control. Types and magnitudes of exposure to electromagnetic fields are unknown. ==== Alleged tracking of Space Shuttle Challenger ==== The Soviet Union invested some effort in the development of ruby and carbon dioxide lasers as anti-ballistic missile systems, and later as a tracking and anti-satellite system. There are reports that the Terra-3 complex at Sary Shagan was used on several occasions to temporarily \"blind\" US spy satellites in the IR range. It has been claimed that the USSR made use of the lasers at the Terra-3 site to target the Space Shuttle Challenger in 1984. At the time, the Soviet Union was concerned that the shuttle was being used as a reconnaissance platform. On 10 October 1984 (STS-41-G), the Terra-3 tracking laser was allegedly aimed at Challenger as it passed over the facility. Early reports claimed that this was responsible for causing \"malfunctions on the space shuttle and distress to the crew\", and that the United States filed a diplomatic protest about the incident. However, this story is comprehensively denied by the crew members of STS-41-G and knowledgeable members of the US intelligence community. After the end of the Cold War, the Terra-3 facility was found to be a low-power laser testing site with limited satellite tracking capabilities, which is now abandoned and partially disassembled. == Modern 21st-century use == === Havana syndrome === Havana syndrome is a disputed medical condition reported by US personnel in Havana, Cuba and other locations, originally suspected to be caused by microwave radiation. In January 2022, the Central Intelligence Agency issued an interim assessment concluding that the syndrome is not the result of \"a sustained global campaign by a hostile power.\" Foreign involvement was ruled out in 976 cases of the 1,000 reviewed. In February 2022, the State Department released a report by the JASON Advisory Group, which stated that it was highly unlikely that a directed-energy attack had caused the health incidents. The cause of Havana syndrome remains unknown and controversial. === Anti-piracy measures === LRADs are often fitted on commercial and military ships. They have been used on several occasions to repel pirate attacks by sending warnings and by producing intolerable levels of sound. For example, in 2005 the cruise liner Seabourn Spirit used a sonic weapon to defend itself from Somali pirates in the Indian ocean. A few years later, the cruise liner Spirit of Adventure also defended itself from Somali pirates by using its LRAD to force them to retreat. == Non-lethal weapon capability == The TECOM Technology Symposium in 1997 concluded on non-lethal weapons, \"determining the target effects on personnel is the greatest challenge to the testing community\", primarily because \"the potential of injury and death severely limits human tests\". Also, \"directed-energy weapons that target the central nervous system and cause neurophysiological disorders may violate the Certain Conventional Weapons Convention of 1980. Weapons that go beyond non-lethal intentions and cause 'superfluous injury or unnecessary suffering' may also violate the Protocol I to the Geneva Conventions of 1977.\" Some common bio-effects of non-lethal electromagnetic weapons include: Difficulty breathing Disorientation Nausea Pain Vertigo Other systemic discomfort Interference with breathing poses the most significant, potentially lethal results. Light and repetitive visual signals can induce epileptic seizures. Vection and motion sickness can also occur. Russia has reportedly been using blinding laser weapons during the Russo-Ukrainian War. == See also == Electronic warfare Electromagnetic pulse Ivan's hammer L3Harris Technologies Laser applications MEDUSA (weapon) == Notes == == References == == External links == Airpower Australia Applied Energetics – Photonic and high-voltage energetics (formerly Ionatron) Wired (AP) article on weapons deployment in Iraq, Active Denial System and Stunstrike, July 10, 2005 Boeing Tests Laser-Mounted Humvee as IED Hunter, November 13, 2007 WSTIAC Quarterly, Vol. 7, No. 1 – \"Directed Energy Weapons\" Archived 2016-10-07 at the Wayback Machine Ogonek Report on '21st Century Weapons' \"How 'Revolutionary' Is CHAMP, New Air Force Microwave Weapon?\", November 28, 2012 by David Axe"
+  },
+  "chunks": [
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0000",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 914,
+      "content": "A directed-energy weapon (DEW) is a ranged weapon that damages its target with highly focused energy without a solid projectile, including lasers, microwaves, particle beams, and sound beams. Potential applications of this technology include weapons that target personnel, missiles, vehicles, and optical devices. In the United States, the Pentagon, DARPA, the Air Force Research Laboratory, United States Army Armament Research Development and Engineering Center, and the Naval Research Laboratory are researching directed-energy weapons to counter ballistic missiles, hypersonic cruise missiles, and hypersonic glide vehicles. These systems of missile defense are expected to come online no sooner than the mid to late 2020s. China, France, Germany, the United Kingdom, Russia, India, Israel are also developing military-grade directed-energy weapons, while Iran and Turkey claim to have them in active service.",
+      "char_count": 913,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0001",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 914,
+      "end_char": 1322,
+      "content": "The first use of directed-energy weapons in combat between military forces was claimed to have occurred in Libya in August 2019 by Turkey, which claimed to use the ALKA directed-energy weapon. After decades of research and development, most directed-energy weapons are still at the experimental stage and it remains to be seen if or when they will be deployed as practical, high-performance military weapons.",
+      "char_count": 408,
+      "token_estimate": 102,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0002",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "== Operational advantages ==",
+      "heading_path": "== Operational advantages ==",
+      "start_char": 1351,
+      "end_char": 2200,
+      "content": "== Operational advantages == Directed energy weapons could have several main advantages over conventional weaponry: Directed-energy weapons can be used discreetly; radiation does not generate sound and is invisible if outside the visible spectrum. Light is, for practical purposes, unaffected by gravity, windage and Coriolis force, giving it an almost perfectly flat trajectory. This makes aim much more precise and extends the range to line-of-sight, limited only by beam diffraction and spread (which dilute the power and weaken the effect), and absorption or scattering by intervening atmospheric contents. Lasers travel at light-speed and have long range, making them suitable for use in space warfare. Laser weapons potentially eliminate many logistical problems in terms of ammunition supply, as long as there is enough energy to power them.",
+      "char_count": 848,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0003",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "== Operational advantages ==",
+      "heading_path": "== Operational advantages ==",
+      "start_char": 2200,
+      "end_char": 2500,
+      "content": "Depending on several operational factors, directed-energy weapons may be cheaper to operate than conventional weapons in certain contexts. Use of high-powered microwave weapons, which are typically used to degrade and damage electronics such as drones, can be hard to attribute to a particular actor.",
+      "char_count": 300,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0004",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "== = Microwave ==",
+      "heading_path": "== = Microwave ==",
+      "start_char": 2502,
+      "end_char": 2723,
+      "content": "== = Microwave === Some devices are described as microwave weapons; the microwave frequency is commonly defined as being between 300 MHz and 300 GHz (wavelengths of 1 meter to 1 millimeter), which is within the radiofrequency (RF) range.",
+      "char_count": 237,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0005",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "== = Particle-beam ==",
+      "heading_path": "== = Particle-beam ==",
+      "start_char": 2819,
+      "end_char": 3580,
+      "content": "== = Particle-beam === Particle-beam weapons can use charged or neutral particles, and can be either endoatmospheric or exoatmospheric. Particle beams as beam weapons are theoretically possible, but practical weapons have not been demonstrated yet. Certain types of particle beams have the advantage of being self-focusing in the atmosphere. Blooming is also a problem in particle-beam weapons. Energy that would otherwise be focused on the target spreads out and the beam becomes less effective: Thermal blooming occurs in both charged and neutral particle beams, and occurs when particles bump into one another under the effects of thermal vibration, or bump into air molecules. Electrical blooming occurs only in charged particle beams, as ions of like charge repel one another.",
+      "char_count": 781,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0006",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "== = Plasma ==",
+      "heading_path": "== = Plasma ==",
+      "start_char": 3594,
+      "end_char": 4216,
+      "content": "== = Plasma === Plasma weapons fire a beam, bolt, or stream of plasma, which is an excited state of matter consisting of atomic electrons and nuclei, and free electrons if ionized, or other particles if pinched. The MARAUDER (Magnetically Accelerated Ring to Achieve Ultra-high Directed-Energy and Radiation) used the Shiva Star project (a high energy capacitor bank which provided the means to test weapons and other devices requiring brief and extremely large amounts of energy) to accelerate a toroid of plasma at a significant percentage of the speed of light. The Russian Federation claims to be developing various plasma weapons.",
+      "char_count": 635,
+      "token_estimate": 158,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0007",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "== = Havana syndrome ==",
+      "heading_path": "== = Havana syndrome ==",
+      "start_char": 4337,
+      "end_char": 5009,
+      "content": "== = Havana syndrome === Havana syndrome is a disputed medical condition reported by US personnel in Havana, Cuba and other locations, originally suspected to be caused by microwave radiation. In January 2022, the Central Intelligence Agency issued an interim assessment concluding that the syndrome is not the result of \"a sustained global campaign by a hostile power.\" Foreign involvement was ruled out in 976 cases of the 1,000 reviewed. In February 2022, the State Department released a report by the JASON Advisory Group, which stated that it was highly unlikely that a directed-energy attack had caused the health incidents. The cause of Havana syndrome remains unknown and controversial.",
+      "char_count": 694,
+      "token_estimate": 173,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0008",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "== = Anti-piracy measures ==",
+      "heading_path": "== = Anti-piracy measures ==",
+      "start_char": 5037,
+      "end_char": 5500,
+      "content": "== = Anti-piracy measures === LRADs are often fitted on commercial and military ships. They have been used on several occasions to repel pirate attacks by sending warnings and by producing intolerable levels of sound. For example, in 2005 the cruise liner Seabourn Spirit used a sonic weapon to defend itself from Somali pirates in the Indian ocean. A few years later, the cruise liner Spirit of Adventure also defended itself from Somali pirates by using its LRAD to force them to retreat.",
+      "char_count": 490,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "directedenergyweapon_f1d7c05a_c0009",
+      "article_id": "directedenergyweapon_f1d7c05a",
+      "section": "== Non-lethal weapon capability ==",
+      "heading_path": "== Non-lethal weapon capability ==",
+      "start_char": 5534,
+      "end_char": 6469,
+      "content": "== Non-lethal weapon capability == The TECOM Technology Symposium in 1997 concluded on non-lethal weapons, \"determining the target effects on personnel is the greatest challenge to the testing community\", primarily because \"the potential of injury and death severely limits human tests\". Also, \"directed-energy weapons that target the central nervous system and cause neurophysiological disorders may violate the Certain Conventional Weapons Convention of 1980. Weapons that go beyond non-lethal intentions and cause 'superfluous injury or unnecessary suffering' may also violate the Protocol I to the Geneva Conventions of 1977.\" Some common bio-effects of non-lethal electromagnetic weapons include: Difficulty breathing Disorientation Nausea Pain Vertigo Other systemic discomfort Interference with breathing poses the most significant, potentially lethal results. Light and repetitive visual signals can induce epileptic seizures.",
+      "char_count": 934,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 8,
+    "items": [
+      {
+        "question": "What did the 1997 TECOM Technology Symposium identify as the greatest challenge in testing non-lethal weapons?",
+        "answer": "The 1997 TECOM Technology Symposium concluded that \"determining the target effects on personnel is the greatest challenge to the testing community,\" mainly because the risk of injury and death severely restricts human testing.",
+        "related_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0009"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0009"
+        ]
+      },
+      {
+        "question": "Which countries claim to have directed-energy weapons in active service?",
+        "answer": "Iran and Turkey claim to have directed-energy weapons in active service.",
+        "related_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0000"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0000"
+        ]
+      },
+      {
+        "question": "What information is provided about == Operational advantages ==?",
+        "answer": "The text provides information about == Operational advantages == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0002"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0000",
+          "directedenergyweapon_f1d7c05a_c0001",
+          "directedenergyweapon_f1d7c05a_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0000",
+          "directedenergyweapon_f1d7c05a_c0001",
+          "directedenergyweapon_f1d7c05a_c0002"
+        ]
+      },
+      {
+        "question": "How do microwave weapons and particle-beam weapons differ in terms of their practical application and operational status?",
+        "answer": "Microwave weapons are currently used in an operational capacity to degrade and damage electronics, such as drones. In contrast, particle-beam weapons are described as only theoretically possible, with practical weapons not yet having been demonstrated.",
+        "related_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0003",
+          "directedenergyweapon_f1d7c05a_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0005",
+          "directedenergyweapon_f1d7c05a_c0003"
+        ]
+      },
+      {
+        "question": "What is the connection between directed energy weapons, such as plasma weapons, and the investigation into Havana syndrome?",
+        "answer": "Directed energy weapons include plasma weapons, which fire a beam or stream of plasma, an excited state of matter. The connection to Havana syndrome is that the disputed medical condition was initially suspected to be caused by a directed-energy attack, specifically microwave radiation. However, a 2022 State Department report concluded it was highly unlikely that a directed-energy attack was the cause, and the origin of the syndrome remains unknown.",
+        "related_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0006",
+          "directedenergyweapon_f1d7c05a_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0007",
+          "directedenergyweapon_f1d7c05a_c0006"
+        ]
+      },
+      {
+        "question": "What is the general development status of directed-energy weapons, and which country has claimed to be the first to use one in a combat situation?",
+        "answer": "Most directed-energy weapons are still in the experimental stage after decades of research. For example, U.S. missile defense systems using this technology are not expected to be online until the mid to late 2020s. However, Turkey claimed to be the first to use a directed-energy weapon, the ALKA, in combat in Libya in August 2019.",
+        "related_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0000",
+          "directedenergyweapon_f1d7c05a_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0001",
+          "directedenergyweapon_f1d7c05a_c0000"
+        ]
+      },
+      {
+        "question": "What are the operational advantages of directed-energy weapons that make them suitable for discreet or hard-to-attribute use?",
+        "answer": "Directed-energy weapons can be used discreetly because the radiation they emit does not generate sound and is invisible if it is outside the visible spectrum. Additionally, the use of certain types, such as high-powered microwave weapons, can be difficult to attribute to a specific actor.",
+        "related_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0002",
+          "directedenergyweapon_f1d7c05a_c0003"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "directedenergyweapon_f1d7c05a_c0002",
+          "directedenergyweapon_f1d7c05a_c0003"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T10:54:58.084Z",
+    "content_format": "markdown",
+    "total_chunks": 10,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

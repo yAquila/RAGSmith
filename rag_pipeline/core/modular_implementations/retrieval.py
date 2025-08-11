@@ -59,7 +59,7 @@ class SimpleVectorRAG(RetrievalComponent):
                     dataset_path = os.path.join(
                         "rag_pipeline",
                         "default_datasets",
-                        "cleaned_gen_programming_5"
+                        "reranked_gen_programming_5"
                     )
                 
                 # Generate hash from the folder
@@ -144,7 +144,7 @@ class KeywordSearchBM25(RetrievalComponent):
                 dataset_path = os.path.join(
                     "rag_pipeline",
                     "default_datasets",
-                    "cleaned_gen_programming_5"
+                    "reranked_gen_programming_5"
                 )
             
             # Generate hash from the folder

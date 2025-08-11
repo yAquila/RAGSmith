@@ -84,7 +84,7 @@ async def evaluate_endpoint(request: EvaluationRequest) -> Dict[str, Any]:
         final_score = max(0.0, min(1.0, final_score))
         
         logger.info(f"Final score: {final_score}")
-        
+        # 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
         return {"evaluation": {"final_score": final_score}}
 
     except Exception as e:
@@ -139,8 +139,8 @@ def parse_config(config_dict: Dict[str, str] = None):
             'semantic_similarity': 0.5
         },
         overall_weights={
-            'retrieval': 0.5,
-            'generation': 0.5
+            'retrieval': 0.3,
+            'generation': 0.7
         }
     )
     return config

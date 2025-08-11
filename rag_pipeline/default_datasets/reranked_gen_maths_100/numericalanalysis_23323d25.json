@@ -1,0 +1,489 @@
+{
+  "article": {
+    "id": "numericalanalysis_23323d25",
+    "title": "Numerical analysis",
+    "url": "https://en.wikipedia.org/wiki/Numerical_analysis",
+    "lang": "en",
+    "created_at": "2025-07-31T06:34:23.053732",
+    "content": "---\nid: numericalanalysis_23323d25\nurl: https://en.wikipedia.org/wiki/Numerical_analysis\ntitle: Numerical analysis\nlang: en\ncreated_at: '2025-07-31T06:27:12.984502'\nchecksum: 570594a21059bdaa2c7bf524bdb02690ef921c7ab59a3f8fff6e388db4477f80\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2802\n  char_count: 18360\n  num_chunks: 26\n  original_chunks: 38\n  filtered_out: 12\n  num_sections: 0\n---\nNumerical analysis is the study of algorithms that use numerical approximation (as opposed to symbolic manipulations) for the problems of mathematical analysis (as distinguished from discrete mathematics). It is the study of numerical methods that attempt to find approximate solutions of problems rather than the exact ones. Numerical analysis finds application in all fields of engineering and the physical sciences, and in the 21st century also the life and social sciences like economics, medicine, business and even the arts. Current growth in computing power has enabled the use of more complex numerical analysis, providing detailed and realistic mathematical models in science and engineering. Examples of numerical analysis include: ordinary differential equations as found in celestial mechanics (predicting the motions of planets, stars and galaxies), numerical linear algebra in data analysis, and stochastic differential equations and Markov chains for simulating living cells in medicine and biology. Before modern computers, numerical methods often relied on hand interpolation formulas, using data from large printed tables. Since the mid-20th century, computers calculate the required functions instead, but many of the same formulas continue to be used in software algorithms. The numerical point of view goes back to the earliest mathematical writings. A tablet from the Yale Babylonian Collection (YBC 7289), gives a sexagesimal numerical approximation of the square root of 2, the length of the diagonal in a unit square. Numerical analysis continues this long tradition: rather than giving exact symbolic answers translated into digits and applicable only to real-world measurements, approximate solutions within specified error bounds are used. == Applications == The overall goal of the field of numerical analysis is the design and analysis of techniques to give approximate but accurate solutions to a wide variety of hard problems, many of which are infeasible to solve symbolically: Advanced numerical methods are essential in making numerical weather prediction feasible. Computing the trajectory of a spacecraft requires the accurate numerical solution of a system of ordinary differential equations. Car companies can improve the crash safety of their vehicles by using computer simulations of car crashes. Such simulations essentially consist of solving partial differential equations numerically. In the financial field, (private investment funds) and other financial institutions use quantitative finance tools from numerical analysis to attempt to calculate the value of stocks and derivatives more precisely than other market participants. Airlines use sophisticated optimization algorithms to decide ticket prices, airplane and crew assignments and fuel needs. Historically, such algorithms were developed within the overlapping field of operations research. Insurance companies use numerical programs for actuarial analysis. == History == The field of numerical analysis predates the invention of modern computers by many centuries. Linear interpolation was already in use more than 2000 years ago. Many great mathematicians of the past were preoccupied by numerical analysis, as is obvious from the names of important algorithms like Newton's method, Lagrange interpolation polynomial, Gaussian elimination, or Euler's method. The origins of modern numerical analysis are often linked to a 1947 paper by John von Neumann and Herman Goldstine, but others consider modern numerical analysis to go back to work by E. T. Whittaker in 1912. To facilitate computations by hand, large books were produced with formulas and tables of data such as interpolation points and function coefficients. Using these tables, often calculated out to 16 decimal places or more for some functions, one could look up values to plug into the formulas given and achieve very good numerical estimates of some functions. The canonical work in the field is the NIST publication edited by Abramowitz and Stegun, a 1000-plus page book of a very large number of commonly used formulas and functions and their values at many points. The function values are no longer very useful when a computer is available, but the large listing of formulas can still be very handy. The mechanical calculator was also developed as a tool for hand computation. These calculators evolved into electronic computers in the 1940s, and it was then found that these computers were also useful for administrative purposes. But the invention of the computer also influenced the field of numerical analysis, since now longer and more complicated calculations could be done. The Leslie Fox Prize for Numerical Analysis was initiated in 1985 by the Institute of Mathematics and its Applications. == Key concepts == === Direct and iterative methods === Direct methods compute the solution to a problem in a finite number of steps. These methods would give the precise answer if they were performed in infinite precision arithmetic. Examples include Gaussian elimination, the QR factorization method for solving systems of linear equations, and the simplex method of linear programming. In practice, finite precision is used and the result is an approximation of the true solution (assuming stability). In contrast to direct methods, iterative methods are not expected to terminate in a finite number of steps, even if infinite precision were possible. Starting from an initial guess, iterative methods form successive approximations that converge to the exact solution only in the limit. A convergence test, often involving the residual, is specified in order to decide when a sufficiently accurate solution has (hopefully) been found. Even using infinite precision arithmetic these methods would not reach the solution within a finite number of steps (in general). Examples include Newton's method, the bisection method, and Jacobi iteration. In computational matrix algebra, iterative methods are generally needed for large problems. Iterative methods are more common than direct methods in numerical analysis. Some methods are direct in principle but are usually used as though they were not, e.g. GMRES and the conjugate gradient method. For these methods the number of steps needed to obtain the exact solution is so large that an approximation is accepted in the same manner as for an iterative method. As an example, consider the problem of solving 3x3 + 4 = 28 for the unknown quantity x. For the iterative method, apply the bisection method to f(x) = 3x3 − 24. The initial values are a = 0, b = 3, f(a) = −24, f(b) = 57. From this table it can be concluded that the solution is between 1.875 and 2.0625. The algorithm might return any number in that range with an error less than 0.2. === Conditioning === Ill-conditioned problem: Take the function f(x) = 1/(x − 1). Note that f(1.1) = 10 and f(1.001) = 1000: a change in x of less than 0.1 turns into a change in f(x) of nearly 1000. Evaluating f(x) near x = 1 is an ill-conditioned problem. Well-conditioned problem: By contrast, evaluating the same function f(x) = 1/(x − 1) near x = 10 is a well-conditioned problem. For instance, f(10) = 1/9 ≈ 0.111 and f(11) = 0.1: a modest change in x leads to a modest change in f(x). === Discretization === Furthermore, continuous problems must sometimes be replaced by a discrete problem whose solution is known to approximate that of the continuous problem; this process is called 'discretization'. For example, the solution of a differential equation is a function. This function must be represented by a finite amount of data, for instance by its value at a finite number of points at its domain, even though this domain is a continuum. == Generation and propagation of errors == The study of errors forms an important part of numerical analysis. There are several ways in which error can be introduced in the solution of the problem. === Round-off === Round-off errors arise because it is impossible to represent all real numbers exactly on a machine with finite memory (which is what all practical digital computers are). === Truncation and discretization error === Truncation errors are committed when an iterative method is terminated or a mathematical procedure is approximated and the approximate solution differs from the exact solution. Similarly, discretization induces a discretization error because the solution of the discrete problem does not coincide with the solution of the continuous problem. In the example above to compute the solution of 3 x 3 + 4 = 28 {\\displaystyle 3x^{3}+4=28} , after ten iterations, the calculated root is roughly 1.99. Therefore, the truncation error is roughly 0.01. Once an error is generated, it propagates through the calculation. For example, the operation + on a computer is inexact. A calculation of the type ⁠ a + b + c + d + e {\\displaystyle a+b+c+d+e} ⁠ is even more inexact. A truncation error is created when a mathematical procedure is approximated. To integrate a function exactly, an infinite sum of regions must be found, but numerically only a finite sum of regions can be found, and hence the approximation of the exact solution. Similarly, to differentiate a function, the differential element approaches zero, but numerically only a nonzero value of the differential element can be chosen. === Numerical stability and well-posed problems === An algorithm is called numerically stable if an error, whatever its cause, does not grow to be much larger during the calculation. This happens if the problem is well-conditioned, meaning that the solution changes by only a small amount if the problem data are changed by a small amount. To the contrary, if a problem is 'ill-conditioned', then any small error in the data will grow to be a large error. Both the original problem and the algorithm used to solve that problem can be well-conditioned or ill-conditioned, and any combination is possible. So an algorithm that solves a well-conditioned problem may be either numerically stable or numerically unstable. An art of numerical analysis is to find a stable algorithm for solving a well-posed mathematical problem. == Areas of study == The field of numerical analysis includes many sub-disciplines. Some of the major ones are: === Computing values of functions === One of the simplest problems is the evaluation of a function at a given point. The most straightforward approach, of just plugging in the number in the formula is sometimes not very efficient. For polynomials, a better approach is using the Horner scheme, since it reduces the necessary number of multiplications and additions. Generally, it is important to estimate and control round-off errors arising from the use of floating-point arithmetic. === Interpolation, extrapolation, and regression === Interpolation solves the following problem: given the value of some unknown function at a number of points, what value does that function have at some other point between the given points? Extrapolation is very similar to interpolation, except that now the value of the unknown function at a point which is outside the given points must be found. Regression is also similar, but it takes into account that the data are imprecise. Given some points, and a measurement of the value of some function at these points (with an error), the unknown function can be found. The least squares-method is one way to achieve this. === Solving equations and systems of equations === Another fundamental problem is computing the solution of some given equation. Two cases are commonly distinguished, depending on whether the equation is linear or not. For instance, the equation 2 x + 5 = 3 {\\displaystyle 2x+5=3} is linear while 2 x 2 + 5 = 3 {\\displaystyle 2x^{2}+5=3} is not. Much effort has been put in the development of methods for solving systems of linear equations. Standard direct methods, i.e., methods that use some matrix decomposition are Gaussian elimination, LU decomposition, Cholesky decomposition for symmetric (or hermitian) and positive-definite matrix, and QR decomposition for non-square matrices. Iterative methods such as the Jacobi method, Gauss–Seidel method, successive over-relaxation and conjugate gradient method are usually preferred for large systems. General iterative methods can be developed using a matrix splitting. Root-finding algorithms are used to solve nonlinear equations (they are so named since a root of a function is an argument for which the function yields zero). If the function is differentiable and the derivative is known, then Newton's method is a popular choice. Linearization is another technique for solving nonlinear equations. === Solving eigenvalue or singular value problems === Several important problems can be phrased in terms of eigenvalue decompositions or singular value decompositions. For instance, the spectral image compression algorithm is based on the singular value decomposition. The corresponding tool in statistics is called principal component analysis. === Optimization === Optimization problems ask for the point at which a given function is maximized (or minimized). Often, the point also has to satisfy some constraints. The field of optimization is further split in several subfields, depending on the form of the objective function and the constraint. For instance, linear programming deals with the case that both the objective function and the constraints are linear. A famous method in linear programming is the simplex method. The method of Lagrange multipliers can be used to reduce optimization problems with constraints to unconstrained optimization problems. === Evaluating integrals === Numerical integration, in some instances also known as numerical quadrature, asks for the value of a definite integral. Popular methods use one of the Newton–Cotes formulas (like the midpoint rule or Simpson's rule) or Gaussian quadrature. These methods rely on a \"divide and conquer\" strategy, whereby an integral on a relatively large set is broken down into integrals on smaller sets. In higher dimensions, where these methods become prohibitively expensive in terms of computational effort, one may use Monte Carlo or quasi-Monte Carlo methods (see Monte Carlo integration), or, in modestly large dimensions, the method of sparse grids. === Differential equations === Numerical analysis is also concerned with computing (in an approximate way) the solution of differential equations, both ordinary differential equations and partial differential equations. Partial differential equations are solved by first discretizing the equation, bringing it into a finite-dimensional subspace. This can be done by a finite element method, a finite difference method, or (particularly in engineering) a finite volume method. The theoretical justification of these methods often involves theorems from functional analysis. This reduces the problem to the solution of an algebraic equation. == Software == Since the late twentieth century, most algorithms are implemented in a variety of programming languages. The Netlib repository contains various collections of software routines for numerical problems, mostly in Fortran and C. Commercial products implementing many different numerical algorithms include the IMSL and NAG libraries; a free-software alternative is the GNU Scientific Library. Over the years the Royal Statistical Society published numerous algorithms in its Applied Statistics (code for these \"AS\" functions is here); ACM similarly, in its Transactions on Mathematical Software (\"TOMS\" code is here). The Naval Surface Warfare Center several times published its Library of Mathematics Subroutines (code here). There are several popular numerical computing applications such as MATLAB, TK Solver, S-PLUS, and IDL as well as free and open-source alternatives such as FreeMat, Scilab, GNU Octave (similar to Matlab), and IT++ (a C++ library). There are also programming languages such as R (similar to S-PLUS), Julia, and Python with libraries such as NumPy, SciPy and SymPy. Performance varies widely: while vector and matrix operations are usually fast, scalar loops may vary in speed by more than an order of magnitude. Many computer algebra systems such as Mathematica also benefit from the availability of arbitrary-precision arithmetic which can provide more accurate results. Also, any spreadsheet software can be used to solve simple problems relating to numerical analysis. Excel, for example, has hundreds of available functions, including for matrices, which may be used in conjunction with its built in \"solver\". == See also == == Notes == == References == === Citations === === Sources === == External links == === Journals === Numerische Mathematik, volumes 1–..., Springer, 1959– volumes 1–66, 1959–1994 (searchable; pages are images). (in English and German) Journal on Numerical Analysis (SINUM), volumes 1–..., SIAM, 1964– === Online texts === \"Numerical analysis\", Encyclopedia of Mathematics, EMS Press, 2001  Numerical Recipes, William H. Press (free, downloadable previous editions) First Steps in Numerical Analysis (archived), R.J.Hosking, S.Joe, D.C.Joyce, and J.C.Turner CSEP (Computational Science Education Project), U.S. Department of Energy (archived 2017-08-01) Numerical Methods, ch 3. in the Digital Library of Mathematical Functions Numerical Interpolation, Differentiation and Integration, ch 25. in the Handbook of Mathematical Functions (Abramowitz and Stegun) Tobin A. Driscoll and Richard J. Braun: Fundamentals of Numerical Computation (free online version) === Online course material === Numerical Methods (Archived 28 July 2009 at the Wayback Machine), Stuart Dalziel University of Cambridge Lectures on Numerical Analysis, Dennis Deturck and Herbert S. Wilf University of Pennsylvania Numerical methods, John D. Fenton University of Karlsruhe Numerical Methods for Physicists, Anthony O’Hare Oxford University Lectures in Numerical Analysis (archived), R. Radok Mahidol University Introduction to Numerical Analysis for Engineering, Henrik Schmidt Massachusetts Institute of Technology Numerical Analysis for Engineering, D. W. Harder University of Waterloo Introduction to Numerical Analysis, Doron Levy University of Maryland Numerical Analysis - Numerical Methods (archived), John H. Mathews California State University Fullerton"
+  },
+  "chunks": [
+    {
+      "id": "numericalanalysis_23323d25_c0000",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 702,
+      "content": "Numerical analysis is the study of algorithms that use numerical approximation (as opposed to symbolic manipulations) for the problems of mathematical analysis (as distinguished from discrete mathematics). It is the study of numerical methods that attempt to find approximate solutions of problems rather than the exact ones. Numerical analysis finds application in all fields of engineering and the physical sciences, and in the 21st century also the life and social sciences like economics, medicine, business and even the arts. Current growth in computing power has enabled the use of more complex numerical analysis, providing detailed and realistic mathematical models in science and engineering.",
+      "char_count": 701,
+      "token_estimate": 175,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0001",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 702,
+      "end_char": 1542,
+      "content": "Examples of numerical analysis include: ordinary differential equations as found in celestial mechanics (predicting the motions of planets, stars and galaxies), numerical linear algebra in data analysis, and stochastic differential equations and Markov chains for simulating living cells in medicine and biology. Before modern computers, numerical methods often relied on hand interpolation formulas, using data from large printed tables. Since the mid-20th century, computers calculate the required functions instead, but many of the same formulas continue to be used in software algorithms. The numerical point of view goes back to the earliest mathematical writings. A tablet from the Yale Babylonian Collection (YBC 7289), gives a sexagesimal numerical approximation of the square root of 2, the length of the diagonal in a unit square.",
+      "char_count": 840,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0002",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 1786,
+      "end_char": 2694,
+      "content": "== Applications == The overall goal of the field of numerical analysis is the design and analysis of techniques to give approximate but accurate solutions to a wide variety of hard problems, many of which are infeasible to solve symbolically: Advanced numerical methods are essential in making numerical weather prediction feasible. Computing the trajectory of a spacecraft requires the accurate numerical solution of a system of ordinary differential equations. Car companies can improve the crash safety of their vehicles by using computer simulations of car crashes. Such simulations essentially consist of solving partial differential equations numerically. In the financial field, (private investment funds) and other financial institutions use quantitative finance tools from numerical analysis to attempt to calculate the value of stocks and derivatives more precisely than other market participants.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0003",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 2694,
+      "end_char": 2980,
+      "content": "Airlines use sophisticated optimization algorithms to decide ticket prices, airplane and crew assignments and fuel needs. Historically, such algorithms were developed within the overlapping field of operations research. Insurance companies use numerical programs for actuarial analysis.",
+      "char_count": 286,
+      "token_estimate": 71,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0004",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2976,
+      "end_char": 3947,
+      "content": "== History == The field of numerical analysis predates the invention of modern computers by many centuries. Linear interpolation was already in use more than 2000 years ago. Many great mathematicians of the past were preoccupied by numerical analysis, as is obvious from the names of important algorithms like Newton's method, Lagrange interpolation polynomial, Gaussian elimination, or Euler's method. The origins of modern numerical analysis are often linked to a 1947 paper by John von Neumann and Herman Goldstine, but others consider modern numerical analysis to go back to work by E. T. Whittaker in 1912. To facilitate computations by hand, large books were produced with formulas and tables of data such as interpolation points and function coefficients. Using these tables, often calculated out to 16 decimal places or more for some functions, one could look up values to plug into the formulas given and achieve very good numerical estimates of some functions.",
+      "char_count": 970,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0005",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3947,
+      "end_char": 4789,
+      "content": "The canonical work in the field is the NIST publication edited by Abramowitz and Stegun, a 1000-plus page book of a very large number of commonly used formulas and functions and their values at many points. The function values are no longer very useful when a computer is available, but the large listing of formulas can still be very handy. The mechanical calculator was also developed as a tool for hand computation. These calculators evolved into electronic computers in the 1940s, and it was then found that these computers were also useful for administrative purposes. But the invention of the computer also influenced the field of numerical analysis, since now longer and more complicated calculations could be done. The Leslie Fox Prize for Numerical Analysis was initiated in 1985 by the Institute of Mathematics and its Applications.",
+      "char_count": 842,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0006",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Direct and iterative methods ==",
+      "heading_path": "== = Direct and iterative methods ==",
+      "start_char": 4832,
+      "end_char": 5753,
+      "content": "== = Direct and iterative methods === Direct methods compute the solution to a problem in a finite number of steps. These methods would give the precise answer if they were performed in infinite precision arithmetic. Examples include Gaussian elimination, the QR factorization method for solving systems of linear equations, and the simplex method of linear programming. In practice, finite precision is used and the result is an approximation of the true solution (assuming stability). In contrast to direct methods, iterative methods are not expected to terminate in a finite number of steps, even if infinite precision were possible. Starting from an initial guess, iterative methods form successive approximations that converge to the exact solution only in the limit. A convergence test, often involving the residual, is specified in order to decide when a sufficiently accurate solution has (hopefully) been found.",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0007",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Direct and iterative methods ==",
+      "heading_path": "== = Direct and iterative methods ==",
+      "start_char": 5753,
+      "end_char": 6729,
+      "content": "Even using infinite precision arithmetic these methods would not reach the solution within a finite number of steps (in general). Examples include Newton's method, the bisection method, and Jacobi iteration. In computational matrix algebra, iterative methods are generally needed for large problems. Iterative methods are more common than direct methods in numerical analysis. Some methods are direct in principle but are usually used as though they were not, e.g. GMRES and the conjugate gradient method. For these methods the number of steps needed to obtain the exact solution is so large that an approximation is accepted in the same manner as for an iterative method. As an example, consider the problem of solving 3x3 + 4 = 28 for the unknown quantity x. For the iterative method, apply the bisection method to f(x) = 3x3 − 24. The initial values are a = 0, b = 3, f(a) = −24, f(b) = 57. From this table it can be concluded that the solution is between 1.875 and 2.0625.",
+      "char_count": 976,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0008",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Conditioning ==",
+      "heading_path": "== = Conditioning ==",
+      "start_char": 6795,
+      "end_char": 7268,
+      "content": "== = Conditioning === Ill-conditioned problem: Take the function f(x) = 1/(x − 1). Note that f(1.1) = 10 and f(1.001) = 1000: a change in x of less than 0.1 turns into a change in f(x) of nearly 1000. Evaluating f(x) near x = 1 is an ill-conditioned problem. Well-conditioned problem: By contrast, evaluating the same function f(x) = 1/(x − 1) near x = 10 is a well-conditioned problem. For instance, f(10) = 1/9 ≈ 0.111 and f(11) = 0.1: a modest change in x leads to a modest change in f(x).",
+      "char_count": 492,
+      "token_estimate": 123,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0009",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Discretization ==",
+      "heading_path": "== = Discretization ==",
+      "start_char": 7290,
+      "end_char": 7726,
+      "content": "== = Discretization === Furthermore, continuous problems must sometimes be replaced by a discrete problem whose solution is known to approximate that of the continuous problem; this process is called 'discretization'. For example, the solution of a differential equation is a function. This function must be represented by a finite amount of data, for instance by its value at a finite number of points at its domain, even though this domain is a continuum.",
+      "char_count": 457,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0010",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== Generation and propagation of errors ==",
+      "heading_path": "== Generation and propagation of errors ==",
+      "start_char": 7768,
+      "end_char": 7924,
+      "content": "== Generation and propagation of errors == The study of errors forms an important part of numerical analysis. There are several ways in which error can be introduced in the solution of the problem.",
+      "char_count": 197,
+      "token_estimate": 49,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0011",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Round-off ==",
+      "heading_path": "== = Round-off ==",
+      "start_char": 7941,
+      "end_char": 8114,
+      "content": "== = Round-off === Round-off errors arise because it is impossible to represent all real numbers exactly on a machine with finite memory (which is what all practical digital computers are).",
+      "char_count": 189,
+      "token_estimate": 47,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0012",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Truncation and discretization error ==",
+      "heading_path": "== = Truncation and discretization error ==",
+      "start_char": 8157,
+      "end_char": 9040,
+      "content": "== = Truncation and discretization error === Truncation errors are committed when an iterative method is terminated or a mathematical procedure is approximated and the approximate solution differs from the exact solution. Similarly, discretization induces a discretization error because the solution of the discrete problem does not coincide with the solution of the continuous problem. In the example above to compute the solution of 3 x 3 + 4 = 28 {\\displaystyle 3x^{3}+4=28} , after ten iterations, the calculated root is roughly 1.99. Therefore, the truncation error is roughly 0.01. Once an error is generated, it propagates through the calculation. For example, the operation + on a computer is inexact. A calculation of the type ⁠ a + b + c + d + e {\\displaystyle a+b+c+d+e} ⁠ is even more inexact. A truncation error is created when a mathematical procedure is approximated.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0013",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Truncation and discretization error ==",
+      "heading_path": "== = Truncation and discretization error ==",
+      "start_char": 9040,
+      "end_char": 9386,
+      "content": "To integrate a function exactly, an infinite sum of regions must be found, but numerically only a finite sum of regions can be found, and hence the approximation of the exact solution. Similarly, to differentiate a function, the differential element approaches zero, but numerically only a nonzero value of the differential element can be chosen.",
+      "char_count": 346,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0014",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Numerical stability and well-posed problems ==",
+      "heading_path": "== = Numerical stability and well-posed problems ==",
+      "start_char": 9395,
+      "end_char": 10168,
+      "content": "== = Numerical stability and well-posed problems === An algorithm is called numerically stable if an error, whatever its cause, does not grow to be much larger during the calculation. This happens if the problem is well-conditioned, meaning that the solution changes by only a small amount if the problem data are changed by a small amount. To the contrary, if a problem is 'ill-conditioned', then any small error in the data will grow to be a large error. Both the original problem and the algorithm used to solve that problem can be well-conditioned or ill-conditioned, and any combination is possible. So an algorithm that solves a well-conditioned problem may be either numerically stable or numerically unstable. An art of numerical analysis is to find a stable algorithm for solving a well-posed mathematical problem.",
+      "char_count": 823,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0015",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Computing values of functions ==",
+      "heading_path": "== = Computing values of functions ==",
+      "start_char": 10317,
+      "end_char": 10766,
+      "content": "== = Computing values of functions === One of the simplest problems is the evaluation of a function at a given point. The most straightforward approach, of just plugging in the number in the formula is sometimes not very efficient. For polynomials, a better approach is using the Horner scheme, since it reduces the necessary number of multiplications and additions. Generally, it is important to estimate and control round-off errors arising from the use of floating-point arithmetic.",
+      "char_count": 485,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0016",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Interpolation, extrapolation, and regression ==",
+      "heading_path": "== = Interpolation, extrapolation, and regression ==",
+      "start_char": 10818,
+      "end_char": 11438,
+      "content": "== = Interpolation, extrapolation, and regression === Interpolation solves the following problem: given the value of some unknown function at a number of points, what value does that function have at some other point between the given points? Extrapolation is very similar to interpolation, except that now the value of the unknown function at a point which is outside the given points must be found. Regression is also similar, but it takes into account that the data are imprecise. Given some points, and a measurement of the value of some function at these points (with an error), the unknown function can be found. The least squares-method is one way to achieve this.",
+      "char_count": 671,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0017",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Solving equations and systems of equations ==",
+      "heading_path": "== = Solving equations and systems of equations ==",
+      "start_char": 11488,
+      "end_char": 12410,
+      "content": "== = Solving equations and systems of equations === Another fundamental problem is computing the solution of some given equation. Two cases are commonly distinguished, depending on whether the equation is linear or not. For instance, the equation 2 x + 5 = 3 {\\displaystyle 2x+5=3} is linear while 2 x 2 + 5 = 3 {\\displaystyle 2x^{2}+5=3} is not. Much effort has been put in the development of methods for solving systems of linear equations. Standard direct methods, i.e., methods that use some matrix decomposition are Gaussian elimination, LU decomposition, Cholesky decomposition for symmetric (or hermitian) and positive-definite matrix, and QR decomposition for non-square matrices. Iterative methods such as the Jacobi method, Gauss–Seidel method, successive over-relaxation and conjugate gradient method are usually preferred for large systems. General iterative methods can be developed using a matrix splitting.",
+      "char_count": 921,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0018",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Solving equations and systems of equations ==",
+      "heading_path": "== = Solving equations and systems of equations ==",
+      "start_char": 12410,
+      "end_char": 12742,
+      "content": "Root-finding algorithms are used to solve nonlinear equations (they are so named since a root of a function is an argument for which the function yields zero). If the function is differentiable and the derivative is known, then Newton's method is a popular choice. Linearization is another technique for solving nonlinear equations.",
+      "char_count": 332,
+      "token_estimate": 83,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0019",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Solving eigenvalue or singular value problems ==",
+      "heading_path": "== = Solving eigenvalue or singular value problems ==",
+      "start_char": 12746,
+      "end_char": 13040,
+      "content": "== = Solving eigenvalue or singular value problems === Several important problems can be phrased in terms of eigenvalue decompositions or singular value decompositions. For instance, the spectral image compression algorithm is based on the singular value decomposition. The corresponding tool in statistics is called principal component analysis.",
+      "char_count": 346,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0020",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Optimization ==",
+      "heading_path": "== = Optimization ==",
+      "start_char": 13060,
+      "end_char": 13660,
+      "content": "== = Optimization === Optimization problems ask for the point at which a given function is maximized (or minimized). Often, the point also has to satisfy some constraints. The field of optimization is further split in several subfields, depending on the form of the objective function and the constraint. For instance, linear programming deals with the case that both the objective function and the constraints are linear. A famous method in linear programming is the simplex method. The method of Lagrange multipliers can be used to reduce optimization problems with constraints to unconstrained optimization problems.",
+      "char_count": 619,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0021",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Evaluating integrals ==",
+      "heading_path": "== = Evaluating integrals ==",
+      "start_char": 13688,
+      "end_char": 14331,
+      "content": "== = Evaluating integrals === Numerical integration, in some instances also known as numerical quadrature, asks for the value of a definite integral. Popular methods use one of the Newton–Cotes formulas (like the midpoint rule or Simpson's rule) or Gaussian quadrature. These methods rely on a \"divide and conquer\" strategy, whereby an integral on a relatively large set is broken down into integrals on smaller sets. In higher dimensions, where these methods become prohibitively expensive in terms of computational effort, one may use Monte Carlo or quasi-Monte Carlo methods (see Monte Carlo integration), or, in modestly large dimensions, the method of sparse grids.",
+      "char_count": 670,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0022",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Differential equations ==",
+      "heading_path": "== = Differential equations ==",
+      "start_char": 14361,
+      "end_char": 14972,
+      "content": "== = Differential equations === Numerical analysis is also concerned with computing (in an approximate way) the solution of differential equations, both ordinary differential equations and partial differential equations. Partial differential equations are solved by first discretizing the equation, bringing it into a finite-dimensional subspace. This can be done by a finite element method, a finite difference method, or (particularly in engineering) a finite volume method. The theoretical justification of these methods often involves theorems from functional analysis. This reduces the problem to the solution of an algebraic equation.",
+      "char_count": 640,
+      "token_estimate": 160,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0023",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== Software ==",
+      "heading_path": "== Software ==",
+      "start_char": 14986,
+      "end_char": 15955,
+      "content": "== Software == Since the late twentieth century, most algorithms are implemented in a variety of programming languages. The Netlib repository contains various collections of software routines for numerical problems, mostly in Fortran and C. Commercial products implementing many different numerical algorithms include the IMSL and NAG libraries; a free-software alternative is the GNU Scientific Library. Over the years the Royal Statistical Society published numerous algorithms in its Applied Statistics (code for these \"AS\" functions is here); ACM similarly, in its Transactions on Mathematical Software (\"TOMS\" code is here). The Naval Surface Warfare Center several times published its Library of Mathematics Subroutines (code here). There are several popular numerical computing applications such as MATLAB, TK Solver, S-PLUS, and IDL as well as free and open-source alternatives such as FreeMat, Scilab, GNU Octave (similar to Matlab), and IT++ (a C++ library).",
+      "char_count": 968,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0024",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== Software ==",
+      "heading_path": "== Software ==",
+      "start_char": 15955,
+      "end_char": 16636,
+      "content": "There are also programming languages such as R (similar to S-PLUS), Julia, and Python with libraries such as NumPy, SciPy and SymPy. Performance varies widely: while vector and matrix operations are usually fast, scalar loops may vary in speed by more than an order of magnitude. Many computer algebra systems such as Mathematica also benefit from the availability of arbitrary-precision arithmetic which can provide more accurate results. Also, any spreadsheet software can be used to solve simple problems relating to numerical analysis. Excel, for example, has hundreds of available functions, including for matrices, which may be used in conjunction with its built in \"solver\".",
+      "char_count": 681,
+      "token_estimate": 170,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "numericalanalysis_23323d25_c0025",
+      "article_id": "numericalanalysis_23323d25",
+      "section": "== = Journals ==",
+      "heading_path": "== = Journals ==",
+      "start_char": 16740,
+      "end_char": 16942,
+      "content": "== = Journals === Numerische Mathematik, volumes 1–..., Springer, 1959– volumes 1–66, 1959–1994 (searchable; pages are images). (in English and German) Journal on Numerical Analysis (SINUM), volumes 1–..., SIAM, 1964–",
+      "char_count": 217,
+      "token_estimate": 54,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What are some examples of iterative methods provided in the text?",
+        "answer": "Examples of iterative methods include Newton's method, the bisection method, and Jacobi iteration.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0007"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0007"
+        ]
+      },
+      {
+        "question": "What two different starting points are cited for the origins of modern numerical analysis?",
+        "answer": "The origins of modern numerical analysis are often linked to a 1947 paper by John von Neumann and Herman Goldstine, while others consider it to have started with the work of E. T. Whittaker in 1912.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0004"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0004"
+        ]
+      },
+      {
+        "question": "What are some examples of free and open-source alternatives to popular numerical computing applications?",
+        "answer": "Free and open-source alternatives to popular numerical computing applications include FreeMat, Scilab, GNU Octave, and IT++ (a C++ library).",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0023"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0023"
+        ]
+      },
+      {
+        "question": "Summarize the various applications of numerical analysis across different fields, including the types of mathematical problems that are solved.",
+        "answer": "Numerical analysis is applied across a wide range of fields including engineering, physical sciences, life and social sciences, business, and finance. Specific applications include using ordinary differential equations to predict the motion of planets and stars in celestial mechanics and to compute spacecraft trajectories. In medicine and biology, stochastic differential equations and Markov chains are used to simulate living cells. Car companies improve vehicle safety by using computer simulations of crashes, which involve solving partial differential equations. Additionally, numerical linear algebra is used in data analysis, and financial institutions use it to calculate the value of stocks and derivatives.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0000",
+          "numericalanalysis_23323d25_c0001",
+          "numericalanalysis_23323d25_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0002",
+          "numericalanalysis_23323d25_c0000",
+          "numericalanalysis_23323d25_c0001"
+        ]
+      },
+      {
+        "question": "What information is provided about == Applications ==?",
+        "answer": "The text provides information about == Applications == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0003",
+          "numericalanalysis_23323d25_c0004",
+          "numericalanalysis_23323d25_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0004",
+          "numericalanalysis_23323d25_c0003",
+          "numericalanalysis_23323d25_c0005"
+        ]
+      },
+      {
+        "question": "What information is provided about == = Direct and iterative methods ==?",
+        "answer": "The text provides information about == = Direct and iterative methods == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0006",
+          "numericalanalysis_23323d25_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0006",
+          "numericalanalysis_23323d25_c0007"
+        ]
+      },
+      {
+        "question": "How has the practice and application of numerical analysis evolved from its historical origins to the modern era?",
+        "answer": "The numerical point of view has ancient origins, with examples like a Babylonian tablet approximating the square root of 2. Before modern computers, practitioners relied on hand interpolation using large printed tables. Since the mid-20th century, computers have taken over these calculations. This, coupled with increased computing power, has enabled the use of more complex and realistic mathematical models. Consequently, the application of numerical analysis has expanded from traditional fields like engineering and physical sciences to also include life sciences, social sciences, medicine, and business.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0000",
+          "numericalanalysis_23323d25_c0001"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0000",
+          "numericalanalysis_23323d25_c0001"
+        ]
+      },
+      {
+        "question": "Across which different industries are numerical analysis and related optimization algorithms applied?",
+        "answer": "Numerical analysis and related algorithms are applied across several industries, including weather prediction, aerospace for spacecraft trajectories, automotive for crash safety simulations, finance for valuing stocks, airlines for optimizing ticket prices and logistics, and insurance for actuarial analysis.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0002",
+          "numericalanalysis_23323d25_c0003"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0003",
+          "numericalanalysis_23323d25_c0002"
+        ]
+      },
+      {
+        "question": "How did the resources used for numerical analysis computations evolve from the pre-computer era to the computer era?",
+        "answer": "Before modern computers, numerical analysis relied on hand computation, which was supported by large books containing formulas and tables of data, such as interpolation points and function coefficients. A canonical example of such a book is the NIST publication by Abramowitz and Stegun. Mechanical calculators were also used. In the 1940s, these calculators evolved into electronic computers, which changed the field. While the extensive lists of formulas in the books remained handy, the tables of function values became less useful. The invention of the computer primarily influenced numerical analysis by making it possible to perform longer and more complicated calculations.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0004",
+          "numericalanalysis_23323d25_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0004",
+          "numericalanalysis_23323d25_c0005"
+        ]
+      },
+      {
+        "question": "Compare and contrast direct and iterative methods for solving numerical problems, providing examples of each.",
+        "answer": "Direct methods compute a solution in a finite number of steps and would provide the exact answer if infinite precision arithmetic were used. Examples include Gaussian elimination and the QR factorization method. In contrast, iterative methods are not expected to terminate in a finite number of steps. They begin with an initial guess and generate successive approximations that converge to the solution in the limit, using a convergence test to determine when the solution is sufficiently accurate. Examples of iterative methods include Newton's method, the bisection method, and Jacobi iteration. Iterative methods are generally preferred for large problems and are more common in numerical analysis.",
+        "related_chunk_ids": [
+          "numericalanalysis_23323d25_c0006",
+          "numericalanalysis_23323d25_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "numericalanalysis_23323d25_c0006",
+          "numericalanalysis_23323d25_c0007"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:48.656Z",
+    "content_format": "markdown",
+    "total_chunks": 26,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

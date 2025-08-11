@@ -1,0 +1,584 @@
+{
+  "article": {
+    "id": "stealthaircraft_0f79848d",
+    "title": "Stealth aircraft",
+    "url": "https://en.wikipedia.org/wiki/Stealth_aircraft",
+    "lang": "en",
+    "created_at": "2025-07-31T08:51:33.877608",
+    "content": "---\nid: stealthaircraft_0f79848d\nurl: https://en.wikipedia.org/wiki/Stealth_aircraft\ntitle: Stealth aircraft\nlang: en\ncreated_at: '2025-07-31T08:44:33.124640'\nchecksum: e44e0e1418a1c6daffa25b4655befe7bfe7a54683fc0a33110251b6e305b8b2d\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3752\n  char_count: 24144\n  num_chunks: 33\n  original_chunks: 41\n  filtered_out: 8\n  num_sections: 0\n---\nStealth aircraft are designed to avoid detection using a variety of technologies that reduce reflection/emission of radar, infrared, visible light, radio frequency (RF) spectrum, and audio, collectively known as stealth technology. The F-117 Nighthawk was the first operational aircraft explicitly designed around stealth technology. Other examples of stealth aircraft include the B-2 Spirit, the B-21 Raider, the F-22 Raptor, the F-35 Lightning II, the Chengdu J-20, and the Sukhoi Su-57. While no aircraft is completely invisible to radar, stealth aircraft make it more difficult for conventional radar to detect or track the aircraft effectively, increasing the odds of an aircraft avoiding detection by enemy radar and/or avoiding being successfully targeted by radar guided weapons. Stealth is a combination of passive low observable (LO) features and active emitters such as low-probability-of-intercept radars, radios and laser designators. These are typically combined with operational measures such as carefully planning mission maneuvers to minimize the aircraft's radar cross-section (RCS), since common hard turns or opening bomb bay doors can more than double an otherwise stealthy aircraft's radar return. Stealth is accomplished by using a complex design philosophy to reduce the ability of an opponent's sensors to detect, track, or attack the stealth aircraft. This philosophy takes into account the heat, sound, and other emissions of the aircraft which can also be used to locate it. Sensors are made to reduce the impact of low observable technologies and others have been proposed such as IRST (infrared search and track) systems to detect even reduced heat emissions, long wavelength radars to counter stealth shaping and RAM focused on shorter wavelength radar, or radar setups with multiple emitters to counter stealth shaping. However these have disadvantages compared to traditional radar against non-stealthy aircraft. Full-size stealth combat aircraft demonstrators have been flown by the United States (in 1977), Russia (in 2000) and China (in 2011). As of December 2020, the only combat-ready stealth aircraft in service are the Northrop Grumman B-2 Spirit (1997), the Lockheed Martin F-22 Raptor (2005), the Lockheed Martin F-35 Lightning II (2015), the Chengdu J-20 (2017), and the Sukhoi Su-57 (2020), with a number of other countries developing their own designs. There are also various aircraft with reduced detectability, either unintentionally or as a secondary feature. In the 1999 NATO bombing of Yugoslavia two stealth aircraft were used by the United States, the veteran F-117 Nighthawk, and the newly introduced B-2 Spirit strategic stealth bomber. The F-117 performed its usual role of striking precision high-value targets and performed well, although one F-117 was shot down by a Serbian Isayev S-125 'Neva-M' missile brigade commanded by Colonel Zoltán Dani. == Design principles == Besides all the usual demands of flight, the design of a stealth or low-observability aircraft aims to reduce radar and infrared (thermal) detection, including: Reduce thermal infra-red emission from the engine and its exhaust wake Reduce radar reflection back to a hostile receiver by shaping the airframe Reduce radar reflections from the airframe by the use of radar-absorbent materials (RAM) or radar-transparent materials such as plastics. Reduce radar detection from exposed internal surfaces such as the cockpit, weapons bay and engine intake ducting. Reduce infra-red and radar detection during adverse weather conditions The distance at which a target can be detected for a given radar configuration varies with the fourth root of its radar cross-section (RCS). Therefore, in order to cut the detection distance to one tenth, the RCS should be reduced by a factor of 10,000. Rotorcraft introduce a particular design challenge, due not only to their multiple wing surfaces and articulated joints, but also to the constantly-changing relationship of these to the main airframe surfaces. The Boeing–Sikorsky RAH-66 Comanche was one of the first attempts at a stealth helicopter. == Limitations == === Instability of design === Early stealth aircraft were designed with a focus on minimal RCS rather than aerodynamic performance. Highly stealthy aircraft like the F-117 Nighthawk are aerodynamically unstable in all three axes and require constant flight corrections from a fly-by-wire (FBW) flight system to maintain controlled flight. As for the B-2 Spirit, which was based on the development of the flying wing aircraft by Jack Northrop in 1940, this design allowed for a stable aircraft with sufficient yaw control, even without vertical surfaces such as rudders. === Aerodynamic limitations === Earlier stealth aircraft (such as the F-117 and B-2) lack afterburners, because the hot exhaust would increase their infrared footprint, and flying faster than the speed of sound would produce an obvious sonic boom, as well as surface heating of the aircraft skin, which also increases the infrared footprint. As a result, their performance in air combat maneuvering required in a dogfight would never match that of a dedicated fighter aircraft. This was unimportant in the case of these two aircraft since both were designed to be bombers. More recent design techniques allow for stealthy designs such as the F-22 without compromising aerodynamic performance. Newer stealth aircraft, like the F-22, F-35 and the Su-57, have performance characteristics that meet or exceed those of front-line jet fighters due to advances in other technologies such as flight control systems, engines, airframe construction and materials. === Electromagnetic emissions === The high level of computerization and large amount of electronic equipment found inside stealth aircraft are often claimed to make them vulnerable to passive detection. This is highly unlikely and certainly systems such as Tamara and Kolchuga, which are often described as counter-stealth radars, are not designed to detect stray electromagnetic fields of this type. Such systems are designed to detect intentional, higher power emissions such as radar and communication signals. Stealth aircraft are deliberately operated to avoid or reduce such emissions. Radar Warning Receivers look for regular pings of energy from mechanically swept radars while fifth generation jet fighters use Low Probability of Intercept Radars with no regular repeat pattern. === Vulnerable modes of flight === Stealth aircraft are still vulnerable to detection while and immediately after using their weaponry. Since stealth payload (reduced RCS bombs and cruise missiles) is not yet generally available, and ordnance mount points create a significant radar return, stealth aircraft carry all armaments internally. As soon as weapons bay doors are opened, the plane's RCS will be multiplied and even older generation radar systems will be able to locate the stealth aircraft. While the aircraft will reacquire its stealth as soon as the bay doors are closed, a fast response defensive weapons system has a short opportunity to engage the aircraft. This vulnerability is addressed by operating in a manner that reduces the risk and consequences of temporary acquisition. The B-2's operational altitude imposes a flight time for defensive weapons that makes it virtually impossible to engage the aircraft during its weapons deployment. New stealth aircraft designs such as the F-22 and F-35 can open their bays, release munitions and return to stealthy flight in less than a second. Some weapons require that the weapon's guidance system acquire the target while the weapon is still attached to the aircraft. This forces relatively extended operations with the bay doors open. Such aircraft as the F-22 Raptor and F-35 Lightning II Joint Strike Fighter can also carry additional weapons and fuel on hardpoints below their wings. When operating in this mode the planes will not be nearly as stealthy, as the hardpoints and the weapons mounted on those hardpoints will show up on radar systems. This option therefore represents a trade off between stealth or range and payload. External stores allow those aircraft to attack more targets further away, but will not allow for stealth during that mission as compared to a shorter range mission flying on just internal fuel and using only the more limited space of the internal weapon bays for armaments. === Reduced payload === Fully stealth aircraft carry all fuel and armament internally, which limits the payload. By way of comparison, the F-117 carries only two laser- or GPS-guided bombs, while a non-stealth attack aircraft can carry several times more. This requires the deployment of additional aircraft to engage targets that would normally require a single non-stealth attack aircraft. This apparent disadvantage however is offset by the reduction in fewer supporting aircraft that are required to provide air cover, air-defense suppression and electronic counter measures, making stealth aircraft \"force multipliers\". === Sensitive skin === Stealth aircraft often have skins made with radiation-absorbent materials (RAMs). Some of these contain carbon black particles, while some contain tiny iron spheres. There are many materials used in RAMs, and some are classified, particularly the materials that specific aircraft use. === Cost of operations === Stealth aircraft are usually expensive to develop and manufacture. For example, the B-2 Spirit is many times more expensive to manufacture and support than conventional bomber aircraft. The B-2 program cost the U.S. Air Force almost $45 billion. == Countermeasures == === Reflected waves === Passive (multistatic) radar, bistatic radar and especially multistatic radar systems detect some stealth aircraft better than conventional monostatic radars, since first-generation stealth technology (such as the F-117) reflects energy away from the transmitter's line of sight, effectively increasing the RCS in other directions, which the passive radars monitor. Such a system typically uses either low frequency broadcast TV and FM radio signals (at which frequencies controlling the aircraft's signature is more difficult). Researchers at the University of Illinois at Urbana–Champaign with support of DARPA, have shown that it is possible to build a synthetic aperture radar image of an aircraft target using passive multistatic radar, possibly detailed enough to enable automatic target recognition. In December 2007, SAAB researchers revealed details for a system called Associative Aperture Synthesis Radar (AASR) that would employ a large array of inexpensive and redundant transmitters and receivers that could detect targets when they directly pass between the receivers/transmitters and create a shadow. The system was originally designed to detect stealthy cruise missiles and should be just as effective against low-flying stealth aircraft. That the array could contain a large amount of inexpensive equipment could potentially offer some \"protection\" against attacks by expensive anti-radiation missiles (ARMs). === Infrared (heat) === Some analysts claim Infra-red search and track systems (IRSTs) can be deployed against stealth aircraft, because any aircraft surface heats up due to air friction and with a two channel IRST is a CO2 (4.3 μm absorption maxima) detection possible, through difference comparing between the low and high channel. These analysts point to the resurgence in such systems in Russian designs in the 1980s, such as those fitted to the MiG-29 and Su-27. The latest version of the MiG-29, the MiG-35, is equipped with a new Optical Locator System that includes more advanced IRST capabilities. The French Rafale, the British/German/Italian/Spanish Eurofighter and the Swedish Gripen also make extensive use of IRST. In air combat, the optronic suite allows: Detection of non-afterburning targets at 45 kilometres (28 mi) range and more; Identification of those targets at 8-to-10-kilometre (5.0 to 6.2 mi) range; and Estimates of aerial target range at up to 15 kilometres (9.3 mi). For ground targets, the suite allows: A tank-effective detection range up to 15 kilometres (9.3 mi), and aircraft carrier detection at 60 to 80 kilometres (37 to 50 mi); Identification of the tank type on the 8-to-10-kilometre (5.0 to 6.2 mi) range, and of an aircraft carrier at 40 to 60 kilometres (25 to 37 mi); and Estimates of ground target range of up to 20 kilometres (12 mi). === Longer wavelength radar === VHF radar systems have wavelengths comparable to aircraft feature sizes and should exhibit scattering in the resonance region rather than the optical region, allowing most stealth aircraft to be detected. This has prompted Nizhny Novgorod Research Institute of Radio Engineering (NNIIRT) to develop VHF AESAs such as the NEBO SVU, which is capable of performing target acquisition for Surface-to-air missile batteries. Despite the advantages offered by VHF radar, their longer wavelengths result in poor resolution compared to comparably sized X band radar array. As a result, these systems must be very large before they can have the resolution for an engagement radar. An example of a ground-based VHF radar with counter-stealth capability is the P-18 radar. The Dutch company Thales Nederland, formerly known as Holland Signaal, developed a naval phased-array radar called SMART-L, which is operated at L Band and has counter-stealth. All ships of the Royal Dutch Navy's De Zeven Provinciën class carry, among others, the SMART-L radar. === OTH radar (over-the-horizon radar) === Over-the-horizon radar is a concept increasing radar's effective range over conventional radar. The Australian JORN Jindalee Operational Radar Network can overcome certain stealth characteristics. It is claimed that the HF frequency used and the method of bouncing radar from ionosphere overcomes the stealth characteristics of the F-117A. In other words, stealth aircraft are optimized for defeating much higher-frequency radar from front-on rather than low-frequency radars from above. == History == === World War I and World War II === During World War I, the Germans experimented with the use of Cellon (Cellulose acetate), a transparent covering material, in an attempt to reduce the visibility of military aircraft. Single examples of the Fokker E.III Eindecker fighter monoplane, the Albatros C.I two-seat observation biplane, and the Linke-Hofmann R.I prototype heavy bomber were covered with Cellon. However, it proved ineffective, and even counterproductive, as sunlight glinting from the covering made the aircraft even more visible. The material was also found to be quickly degraded both by sunlight and in-flight temperature changes, so the attempt to make transparent aircraft was not proceeded with. In 1916, the British modified a small SS class airship for the purpose of night-time aerial reconnaissance over German lines on the Western Front. Fitted with a silenced engine and a black gas bag, the craft was both invisible and inaudible from the ground, but several night-time flights over German-held territory produced little useful intelligence, and the idea was dropped. Nearly three decades later, the Horten Ho 229 flying wing fighter-bomber was developed in Nazi Germany during the last years of World War II. In 1983, its designer Reimar Horten claimed that he planned to add charcoal to the adhesive layers of the plywood skin of the production model to render it invisible to radar. This claim was investigated, as the Ho 229's lack of vertical surfaces, an inherent feature of all flying wing aircraft, is also a key characteristic of all stealth aircraft. Tests were performed in 2008 by the Northrop Grumman Corporation to establish if the aircraft's shape would have avoided detection by top-end HF-band, 20–30 MHz primary signals of Britain's Chain Home early warning radar, if the aircraft was traveling at high speed (approximately 550 mph (890 km/h)) at extremely low altitude – 50–100 feet (15–30 m). The testing did not find any evidence that charcoal was used, and confirmed that it would have been a poor absorber if used, concluding that the Ho 229 did not have stealth characteristics and was never intended to be a stealth aircraft. === Modern origins === Modern stealth aircraft first became possible when Denys Overholser, a mathematician working for Lockheed Aircraft during the 1970s, adopted a mathematical model developed by Petr Ufimtsev, a Soviet scientist, to develop a computer program called Echo 1. Echo made it possible to predict the radar signature of an aircraft made with flat panels, called facets. In 1975, engineers at Lockheed Skunk Works found that an aircraft made with faceted surfaces could have a very low radar signature because the surfaces would radiate almost all of the radar energy away from the receiver. Under a 1977 contract from DARPA, Lockheed built a proof of concept demonstrator aircraft, the Lockheed Have Blue, nicknamed \"the Hopeless Diamond\", a reference to the famous Hope Diamond and the design's shape and predicted instability. Because advanced computers were available to control the flight of an aircraft that was designed for stealth but aerodynamically unstable such as the Have Blue, for the first time designers realized that it might be possible to make an aircraft that was virtually invisible to radar. Lockheed soon developed the Have Blue into F-117. Reduced radar cross section is only one of five factors the designers addressed to create a truly stealthy design such as the F-22. The F-22 has also been designed to disguise its infrared emissions to make it harder to detect by infrared homing (\"heat seeking\") surface-to-air or air-to-air missiles. The F-22 puts a focus on air superiority, with supercruise, high thrust-to-weight ratio, integrated avionics, and of course, stealth. === Modern operations === The first combat use of purpose-designed stealth aircraft was in January 1968, Operation \"Prize Crew\". Two Lockheed Missiles and Space Company QT-2 (Quiet Thrusters) operated in near silence over South Vietnam at low altitudes at night without running lights. Using handheld night vision scopes, they could locate, observe, identify the enemy, and report on or call in offensive weapons to destroy the enemy. The QT-2PC was followed by the Army-Lockheed YO-3A \"Quiet Star.' Nine of the eleven production airplanes were deployed to Vietnam in June 1970. They operated silently at night, without running lights, and were equipped with a 2nd generation Night Vision Aerial Periscope, Laser Target Designator, and Tracking infrared illuminator. In 14 months of operation at 800-1500 ft, no YO-3A ever took a round. They successfully shut down the VC night movement in the Delta. YO-3As were involved in locating and calling in offensive weapons to destroy the largest Russian Trawler entering South Vietnamese waters. On 20 December 1989, during Operation Just Cause in Panama, two United States Air Force F-117s bombed a Panamanian Defense Force barracks in Rio Hato, Panama. In 1991, F-117s were tasked with attacking the most heavily fortified targets in Iraq in the opening phase of Operation Desert Storm and were the only coalition aircraft allowed to operate inside Baghdad's city limits and over its airspace. The F-117 while having sufficient stealth, also had a low visual signature. Even still, if the F-117 was visually acquired, it, like all aircraft, were subject to visual air-to-air interception. This was easily circumvented by flying at night. The U.S, UK, and Israel are the only countries to have used stealth aircraft in combat. These deployments include the United States invasion of Panama, the first Gulf War, the Kosovo Conflict, the War in Afghanistan, the War in Iraq and the 2011 military intervention in Libya. The first use of stealth aircraft was in the U.S. invasion of Panama, where F-117 Nighthawk stealth attack aircraft were used to drop bombs on enemy airfields and positions while evading enemy radar. The F-117 Nighthawk was used in the Gulf War in 1990, in which 42 F-117s flew 1,299 sorties and scored 1,664 direct hits with laser-guided bombs while not suffering battle damage, while hitting 1,600 high-value targets in Iraq. F-117s flew approximately 168 strikes against Scud-associated targets while accumulating 6,905 flight hours. Only 2.5% of the American aircraft in Iraq were F-117s, yet they struck 40% of the strategic targets, dropping 2,000 tons of precision-guided munitions and striking their targets with an 80% success rate. However the F-117 still had flaws; it had to refuel and was defenesless in an enemy attack. All F-117 sorties had to be refueled. In the 1999 NATO bombing of Yugoslavia two stealth aircraft were used by the United States: the veteran F-117 Nighthawk, and the newly introduced B-2 Spirit strategic stealth bomber. The F-117 performed its usual role of striking precision high-value targets and performed well, although one F-117 was shot down by a Serbian Isayev S-125 'Neva-M' missile commanded by Colonel Zoltán Dani. The then-new B-2 Spirit was highly successful, destroying 33% of all Serbian bombing targets in the first eight weeks of U.S. involvement in the war. During this war, B-2s flew non-stop to Kosovo from their home base in Missouri and back. In the 2003 invasion of Iraq, F-117 Nighthawks and B-2 Spirits were used, and this was the last time the F-117 would see combat. F-117s dropped satellite-guided strike munitions on selected targets, with high success. B-2 Spirits conducted 49 sorties in the invasion, releasing more than 1.5 million pounds of munitions. During the May 2011 operation to kill Osama bin Laden, one of the helicopters used to clandestinely insert U.S. troops into Pakistan crashed in the bin Laden compound. From the wreckage it was revealed this helicopter had stealth characteristics, making this the first publicly known operational use of a stealth helicopter. Stealth aircraft were used in the 2011 military intervention in Libya, where B-2 Spirits dropped 40 bombs on a Libyan airfield with concentrated air defenses in support of the UN no-fly zone. Stealth aircraft will continue to play a valuable role in air combat with the United States using the F-22 Raptor, B-2 Spirit, and the F-35 Lightning II to perform a variety of operations. The F-22 made its combat debut over Syria in September 2014 as part of the US-led coalition to defeat ISIS. From February 2018, Su-57s performed the first international flight as they were spotted landing at the Russian Khmeimim Air Base in Syria. These Su-57s were deployed along with four Sukhoi Su-35 fighters, four Sukhoi Su-25s, and one Beriev A-50 AEW&C aircraft. It is believed that at least 4 Su-57 are deployed in Syria and that they have likely been armed with cruise missiles in combat. In 2018, a report surfaced noting that Israeli F-35I stealth fighters conducted a number of missions in Syria and even infiltrated Iranian airspace without detection. In May 2018, Major General Amikam Norkin of IAF reported that Israeli Air Force F-35I stealth fighters carried out the first-ever F-35 strike in combat over Syria. The People's Republic of China started flight testing its Chengdu J-20 stealth multirole fighter around in 2011 and made its first public appearance at Airshow China 2016. The aircraft entered service with the People's Liberation Army Air Force (PLAAF) in March 2017. Another fifth-generation stealth multirole fighter from China, the Shenyang FC-31 is also under flight testing. Australia already use a fleet of 72 F-35 stealth fighters, also developed and produced an unmanned stealth aircraft Boeing MQ-28 Ghost Bat. MQ-28 is an autonomous fighter AI & loyal wingman. The first flight took place 27 February 2021. 8 aircraft (Block 1) was produced to 2024, more aircraft (Block 2) are in production. == List of stealth aircraft == == See also == Cloaking device Metamaterial Penetration aid QTOL Hush kit == References == === Bibliography === Clancy, Tom (1996) . Fighter Wing. London: HarperCollins. ISBN 0-00-255527-1. == External links =="
+  },
+  "chunks": [
+    {
+      "id": "stealthaircraft_0f79848d_c0000",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 948,
+      "content": "Stealth aircraft are designed to avoid detection using a variety of technologies that reduce reflection/emission of radar, infrared, visible light, radio frequency (RF) spectrum, and audio, collectively known as stealth technology. The F-117 Nighthawk was the first operational aircraft explicitly designed around stealth technology. Other examples of stealth aircraft include the B-2 Spirit, the B-21 Raider, the F-22 Raptor, the F-35 Lightning II, the Chengdu J-20, and the Sukhoi Su-57. While no aircraft is completely invisible to radar, stealth aircraft make it more difficult for conventional radar to detect or track the aircraft effectively, increasing the odds of an aircraft avoiding detection by enemy radar and/or avoiding being successfully targeted by radar guided weapons. Stealth is a combination of passive low observable (LO) features and active emitters such as low-probability-of-intercept radars, radios and laser designators.",
+      "char_count": 947,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0001",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 948,
+      "end_char": 1945,
+      "content": "These are typically combined with operational measures such as carefully planning mission maneuvers to minimize the aircraft's radar cross-section (RCS), since common hard turns or opening bomb bay doors can more than double an otherwise stealthy aircraft's radar return. Stealth is accomplished by using a complex design philosophy to reduce the ability of an opponent's sensors to detect, track, or attack the stealth aircraft. This philosophy takes into account the heat, sound, and other emissions of the aircraft which can also be used to locate it. Sensors are made to reduce the impact of low observable technologies and others have been proposed such as IRST (infrared search and track) systems to detect even reduced heat emissions, long wavelength radars to counter stealth shaping and RAM focused on shorter wavelength radar, or radar setups with multiple emitters to counter stealth shaping. However these have disadvantages compared to traditional radar against non-stealthy aircraft.",
+      "char_count": 997,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0002",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1946,
+      "end_char": 2904,
+      "content": "Full-size stealth combat aircraft demonstrators have been flown by the United States (in 1977), Russia (in 2000) and China (in 2011). As of December 2020, the only combat-ready stealth aircraft in service are the Northrop Grumman B-2 Spirit (1997), the Lockheed Martin F-22 Raptor (2005), the Lockheed Martin F-35 Lightning II (2015), the Chengdu J-20 (2017), and the Sukhoi Su-57 (2020), with a number of other countries developing their own designs. There are also various aircraft with reduced detectability, either unintentionally or as a secondary feature. In the 1999 NATO bombing of Yugoslavia two stealth aircraft were used by the United States, the veteran F-117 Nighthawk, and the newly introduced B-2 Spirit strategic stealth bomber. The F-117 performed its usual role of striking precision high-value targets and performed well, although one F-117 was shot down by a Serbian Isayev S-125 'Neva-M' missile brigade commanded by Colonel Zoltán Dani.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0003",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== Design principles ==",
+      "heading_path": "== Design principles ==",
+      "start_char": 2928,
+      "end_char": 3836,
+      "content": "== Design principles == Besides all the usual demands of flight, the design of a stealth or low-observability aircraft aims to reduce radar and infrared (thermal) detection, including: Reduce thermal infra-red emission from the engine and its exhaust wake Reduce radar reflection back to a hostile receiver by shaping the airframe Reduce radar reflections from the airframe by the use of radar-absorbent materials (RAM) or radar-transparent materials such as plastics. Reduce radar detection from exposed internal surfaces such as the cockpit, weapons bay and engine intake ducting. Reduce infra-red and radar detection during adverse weather conditions The distance at which a target can be detected for a given radar configuration varies with the fourth root of its radar cross-section (RCS). Therefore, in order to cut the detection distance to one tenth, the RCS should be reduced by a factor of 10,000.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0004",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== Design principles ==",
+      "heading_path": "== Design principles ==",
+      "start_char": 3836,
+      "end_char": 4136,
+      "content": "Rotorcraft introduce a particular design challenge, due not only to their multiple wing surfaces and articulated joints, but also to the constantly-changing relationship of these to the main airframe surfaces. The Boeing–Sikorsky RAH-66 Comanche was one of the first attempts at a stealth helicopter.",
+      "char_count": 300,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0005",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Instability of design ==",
+      "heading_path": "== = Instability of design ==",
+      "start_char": 4161,
+      "end_char": 4703,
+      "content": "== = Instability of design === Early stealth aircraft were designed with a focus on minimal RCS rather than aerodynamic performance. Highly stealthy aircraft like the F-117 Nighthawk are aerodynamically unstable in all three axes and require constant flight corrections from a fly-by-wire (FBW) flight system to maintain controlled flight. As for the B-2 Spirit, which was based on the development of the flying wing aircraft by Jack Northrop in 1940, this design allowed for a stable aircraft with sufficient yaw control, even without vertical surfaces such as rudders.",
+      "char_count": 570,
+      "token_estimate": 142,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0006",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Aerodynamic limitations ==",
+      "heading_path": "== = Aerodynamic limitations ==",
+      "start_char": 4734,
+      "end_char": 5658,
+      "content": "== = Aerodynamic limitations === Earlier stealth aircraft (such as the F-117 and B-2) lack afterburners, because the hot exhaust would increase their infrared footprint, and flying faster than the speed of sound would produce an obvious sonic boom, as well as surface heating of the aircraft skin, which also increases the infrared footprint. As a result, their performance in air combat maneuvering required in a dogfight would never match that of a dedicated fighter aircraft. This was unimportant in the case of these two aircraft since both were designed to be bombers. More recent design techniques allow for stealthy designs such as the F-22 without compromising aerodynamic performance. Newer stealth aircraft, like the F-22, F-35 and the Su-57, have performance characteristics that meet or exceed those of front-line jet fighters due to advances in other technologies such as flight control systems, engines, airframe construction and materials.",
+      "char_count": 954,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0007",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Electromagnetic emissions ==",
+      "heading_path": "== = Electromagnetic emissions ==",
+      "start_char": 5691,
+      "end_char": 6447,
+      "content": "== = Electromagnetic emissions === The high level of computerization and large amount of electronic equipment found inside stealth aircraft are often claimed to make them vulnerable to passive detection. This is highly unlikely and certainly systems such as Tamara and Kolchuga, which are often described as counter-stealth radars, are not designed to detect stray electromagnetic fields of this type. Such systems are designed to detect intentional, higher power emissions such as radar and communication signals. Stealth aircraft are deliberately operated to avoid or reduce such emissions. Radar Warning Receivers look for regular pings of energy from mechanically swept radars while fifth generation jet fighters use Low Probability of Intercept Radars with no regular repeat pattern.",
+      "char_count": 788,
+      "token_estimate": 197,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0008",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Vulnerable modes of flight ==",
+      "heading_path": "== = Vulnerable modes of flight ==",
+      "start_char": 6481,
+      "end_char": 7441,
+      "content": "== = Vulnerable modes of flight === Stealth aircraft are still vulnerable to detection while and immediately after using their weaponry. Since stealth payload (reduced RCS bombs and cruise missiles) is not yet generally available, and ordnance mount points create a significant radar return, stealth aircraft carry all armaments internally. As soon as weapons bay doors are opened, the plane's RCS will be multiplied and even older generation radar systems will be able to locate the stealth aircraft. While the aircraft will reacquire its stealth as soon as the bay doors are closed, a fast response defensive weapons system has a short opportunity to engage the aircraft. This vulnerability is addressed by operating in a manner that reduces the risk and consequences of temporary acquisition. The B-2's operational altitude imposes a flight time for defensive weapons that makes it virtually impossible to engage the aircraft during its weapons deployment.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0009",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Vulnerable modes of flight ==",
+      "heading_path": "== = Vulnerable modes of flight ==",
+      "start_char": 7441,
+      "end_char": 8180,
+      "content": "New stealth aircraft designs such as the F-22 and F-35 can open their bays, release munitions and return to stealthy flight in less than a second. Some weapons require that the weapon's guidance system acquire the target while the weapon is still attached to the aircraft. This forces relatively extended operations with the bay doors open. Such aircraft as the F-22 Raptor and F-35 Lightning II Joint Strike Fighter can also carry additional weapons and fuel on hardpoints below their wings. When operating in this mode the planes will not be nearly as stealthy, as the hardpoints and the weapons mounted on those hardpoints will show up on radar systems. This option therefore represents a trade off between stealth or range and payload.",
+      "char_count": 739,
+      "token_estimate": 184,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0010",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Vulnerable modes of flight ==",
+      "heading_path": "== = Vulnerable modes of flight ==",
+      "start_char": 8181,
+      "end_char": 8454,
+      "content": "External stores allow those aircraft to attack more targets further away, but will not allow for stealth during that mission as compared to a shorter range mission flying on just internal fuel and using only the more limited space of the internal weapon bays for armaments.",
+      "char_count": 273,
+      "token_estimate": 68,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0011",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Reduced payload ==",
+      "heading_path": "== = Reduced payload ==",
+      "start_char": 8444,
+      "end_char": 9047,
+      "content": "== = Reduced payload === Fully stealth aircraft carry all fuel and armament internally, which limits the payload. By way of comparison, the F-117 carries only two laser- or GPS-guided bombs, while a non-stealth attack aircraft can carry several times more. This requires the deployment of additional aircraft to engage targets that would normally require a single non-stealth attack aircraft. This apparent disadvantage however is offset by the reduction in fewer supporting aircraft that are required to provide air cover, air-defense suppression and electronic counter measures, making stealth aircraft \"force multipliers\".",
+      "char_count": 625,
+      "token_estimate": 156,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0012",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Sensitive skin ==",
+      "heading_path": "== = Sensitive skin ==",
+      "start_char": 9069,
+      "end_char": 9356,
+      "content": "== = Sensitive skin === Stealth aircraft often have skins made with radiation-absorbent materials (RAMs). Some of these contain carbon black particles, while some contain tiny iron spheres. There are many materials used in RAMs, and some are classified, particularly the materials that specific aircraft use.",
+      "char_count": 308,
+      "token_estimate": 77,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0013",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Cost of operations ==",
+      "heading_path": "== = Cost of operations ==",
+      "start_char": 9382,
+      "end_char": 9630,
+      "content": "== = Cost of operations === Stealth aircraft are usually expensive to develop and manufacture. For example, the B-2 Spirit is many times more expensive to manufacture and support than conventional bomber aircraft. The B-2 program cost the U.S. Air Force almost $45 billion.",
+      "char_count": 273,
+      "token_estimate": 68,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0014",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Reflected waves ==",
+      "heading_path": "== = Reflected waves ==",
+      "start_char": 9675,
+      "end_char": 10506,
+      "content": "== = Reflected waves === Passive (multistatic) radar, bistatic radar and especially multistatic radar systems detect some stealth aircraft better than conventional monostatic radars, since first-generation stealth technology (such as the F-117) reflects energy away from the transmitter's line of sight, effectively increasing the RCS in other directions, which the passive radars monitor. Such a system typically uses either low frequency broadcast TV and FM radio signals (at which frequencies controlling the aircraft's signature is more difficult). Researchers at the University of Illinois at Urbana–Champaign with support of DARPA, have shown that it is possible to build a synthetic aperture radar image of an aircraft target using passive multistatic radar, possibly detailed enough to enable automatic target recognition.",
+      "char_count": 830,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0015",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Reflected waves ==",
+      "heading_path": "== = Reflected waves ==",
+      "start_char": 10506,
+      "end_char": 11126,
+      "content": "In December 2007, SAAB researchers revealed details for a system called Associative Aperture Synthesis Radar (AASR) that would employ a large array of inexpensive and redundant transmitters and receivers that could detect targets when they directly pass between the receivers/transmitters and create a shadow. The system was originally designed to detect stealthy cruise missiles and should be just as effective against low-flying stealth aircraft. That the array could contain a large amount of inexpensive equipment could potentially offer some \"protection\" against attacks by expensive anti-radiation missiles (ARMs).",
+      "char_count": 620,
+      "token_estimate": 155,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0016",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Infrared (heat) ==",
+      "heading_path": "== = Infrared (heat) ==",
+      "start_char": 11127,
+      "end_char": 11857,
+      "content": "== = Infrared (heat) === Some analysts claim Infra-red search and track systems (IRSTs) can be deployed against stealth aircraft, because any aircraft surface heats up due to air friction and with a two channel IRST is a CO2 (4.3 μm absorption maxima) detection possible, through difference comparing between the low and high channel. These analysts point to the resurgence in such systems in Russian designs in the 1980s, such as those fitted to the MiG-29 and Su-27. The latest version of the MiG-29, the MiG-35, is equipped with a new Optical Locator System that includes more advanced IRST capabilities. The French Rafale, the British/German/Italian/Spanish Eurofighter and the Swedish Gripen also make extensive use of IRST.",
+      "char_count": 729,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0017",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Infrared (heat) ==",
+      "heading_path": "== = Infrared (heat) ==",
+      "start_char": 11857,
+      "end_char": 12507,
+      "content": "In air combat, the optronic suite allows: Detection of non-afterburning targets at 45 kilometres (28 mi) range and more; Identification of those targets at 8-to-10-kilometre (5.0 to 6.2 mi) range; and Estimates of aerial target range at up to 15 kilometres (9.3 mi). For ground targets, the suite allows: A tank-effective detection range up to 15 kilometres (9.3 mi), and aircraft carrier detection at 60 to 80 kilometres (37 to 50 mi); Identification of the tank type on the 8-to-10-kilometre (5.0 to 6.2 mi) range, and of an aircraft carrier at 40 to 60 kilometres (25 to 37 mi); and Estimates of ground target range of up to 20 kilometres (12 mi).",
+      "char_count": 650,
+      "token_estimate": 162,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0018",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Longer wavelength radar ==",
+      "heading_path": "== = Longer wavelength radar ==",
+      "start_char": 12516,
+      "end_char": 13310,
+      "content": "== = Longer wavelength radar === VHF radar systems have wavelengths comparable to aircraft feature sizes and should exhibit scattering in the resonance region rather than the optical region, allowing most stealth aircraft to be detected. This has prompted Nizhny Novgorod Research Institute of Radio Engineering (NNIIRT) to develop VHF AESAs such as the NEBO SVU, which is capable of performing target acquisition for Surface-to-air missile batteries. Despite the advantages offered by VHF radar, their longer wavelengths result in poor resolution compared to comparably sized X band radar array. As a result, these systems must be very large before they can have the resolution for an engagement radar. An example of a ground-based VHF radar with counter-stealth capability is the P-18 radar.",
+      "char_count": 793,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0019",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Longer wavelength radar ==",
+      "heading_path": "== = Longer wavelength radar ==",
+      "start_char": 13310,
+      "end_char": 13588,
+      "content": "The Dutch company Thales Nederland, formerly known as Holland Signaal, developed a naval phased-array radar called SMART-L, which is operated at L Band and has counter-stealth. All ships of the Royal Dutch Navy's De Zeven Provinciën class carry, among others, the SMART-L radar.",
+      "char_count": 278,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0020",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = OTH radar (over-the-horizon radar) ==",
+      "heading_path": "== = OTH radar (over-the-horizon radar) ==",
+      "start_char": 13600,
+      "end_char": 14090,
+      "content": "== = OTH radar (over-the-horizon radar) === Over-the-horizon radar is a concept increasing radar's effective range over conventional radar. The Australian JORN Jindalee Operational Radar Network can overcome certain stealth characteristics. It is claimed that the HF frequency used and the method of bouncing radar from ionosphere overcomes the stealth characteristics of the F-117A. In other words, stealth aircraft are optimized for defeating much higher-frequency radar from front-on rather than low-frequency radars from above.",
+      "char_count": 531,
+      "token_estimate": 132,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0021",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = World War I and World War II ==",
+      "heading_path": "== = World War I and World War II ==",
+      "start_char": 14140,
+      "end_char": 15002,
+      "content": "== = World War I and World War II === During World War I, the Germans experimented with the use of Cellon (Cellulose acetate), a transparent covering material, in an attempt to reduce the visibility of military aircraft. Single examples of the Fokker E.III Eindecker fighter monoplane, the Albatros C.I two-seat observation biplane, and the Linke-Hofmann R.I prototype heavy bomber were covered with Cellon. However, it proved ineffective, and even counterproductive, as sunlight glinting from the covering made the aircraft even more visible. The material was also found to be quickly degraded both by sunlight and in-flight temperature changes, so the attempt to make transparent aircraft was not proceeded with. In 1916, the British modified a small SS class airship for the purpose of night-time aerial reconnaissance over German lines on the Western Front.",
+      "char_count": 861,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0022",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = World War I and World War II ==",
+      "heading_path": "== = World War I and World War II ==",
+      "start_char": 15002,
+      "end_char": 15726,
+      "content": "Fitted with a silenced engine and a black gas bag, the craft was both invisible and inaudible from the ground, but several night-time flights over German-held territory produced little useful intelligence, and the idea was dropped. Nearly three decades later, the Horten Ho 229 flying wing fighter-bomber was developed in Nazi Germany during the last years of World War II. In 1983, its designer Reimar Horten claimed that he planned to add charcoal to the adhesive layers of the plywood skin of the production model to render it invisible to radar. This claim was investigated, as the Ho 229's lack of vertical surfaces, an inherent feature of all flying wing aircraft, is also a key characteristic of all stealth aircraft.",
+      "char_count": 724,
+      "token_estimate": 181,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0023",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = World War I and World War II ==",
+      "heading_path": "== = World War I and World War II ==",
+      "start_char": 15727,
+      "end_char": 16316,
+      "content": "Tests were performed in 2008 by the Northrop Grumman Corporation to establish if the aircraft's shape would have avoided detection by top-end HF-band, 20–30 MHz primary signals of Britain's Chain Home early warning radar, if the aircraft was traveling at high speed (approximately 550 mph (890 km/h)) at extremely low altitude – 50–100 feet (15–30 m). The testing did not find any evidence that charcoal was used, and confirmed that it would have been a poor absorber if used, concluding that the Ho 229 did not have stealth characteristics and was never intended to be a stealth aircraft.",
+      "char_count": 589,
+      "token_estimate": 147,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0024",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern origins ==",
+      "heading_path": "== = Modern origins ==",
+      "start_char": 16303,
+      "end_char": 17147,
+      "content": "== = Modern origins === Modern stealth aircraft first became possible when Denys Overholser, a mathematician working for Lockheed Aircraft during the 1970s, adopted a mathematical model developed by Petr Ufimtsev, a Soviet scientist, to develop a computer program called Echo 1. Echo made it possible to predict the radar signature of an aircraft made with flat panels, called facets. In 1975, engineers at Lockheed Skunk Works found that an aircraft made with faceted surfaces could have a very low radar signature because the surfaces would radiate almost all of the radar energy away from the receiver. Under a 1977 contract from DARPA, Lockheed built a proof of concept demonstrator aircraft, the Lockheed Have Blue, nicknamed \"the Hopeless Diamond\", a reference to the famous Hope Diamond and the design's shape and predicted instability.",
+      "char_count": 843,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0025",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern origins ==",
+      "heading_path": "== = Modern origins ==",
+      "start_char": 17147,
+      "end_char": 17916,
+      "content": "Because advanced computers were available to control the flight of an aircraft that was designed for stealth but aerodynamically unstable such as the Have Blue, for the first time designers realized that it might be possible to make an aircraft that was virtually invisible to radar. Lockheed soon developed the Have Blue into F-117. Reduced radar cross section is only one of five factors the designers addressed to create a truly stealthy design such as the F-22. The F-22 has also been designed to disguise its infrared emissions to make it harder to detect by infrared homing (\"heat seeking\") surface-to-air or air-to-air missiles. The F-22 puts a focus on air superiority, with supercruise, high thrust-to-weight ratio, integrated avionics, and of course, stealth.",
+      "char_count": 769,
+      "token_estimate": 192,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0026",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern operations ==",
+      "heading_path": "== = Modern operations ==",
+      "start_char": 17920,
+      "end_char": 18822,
+      "content": "== = Modern operations === The first combat use of purpose-designed stealth aircraft was in January 1968, Operation \"Prize Crew\". Two Lockheed Missiles and Space Company QT-2 (Quiet Thrusters) operated in near silence over South Vietnam at low altitudes at night without running lights. Using handheld night vision scopes, they could locate, observe, identify the enemy, and report on or call in offensive weapons to destroy the enemy. The QT-2PC was followed by the Army-Lockheed YO-3A \"Quiet Star.' Nine of the eleven production airplanes were deployed to Vietnam in June 1970. They operated silently at night, without running lights, and were equipped with a 2nd generation Night Vision Aerial Periscope, Laser Target Designator, and Tracking infrared illuminator. In 14 months of operation at 800-1500 ft, no YO-3A ever took a round. They successfully shut down the VC night movement in the Delta.",
+      "char_count": 901,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0027",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern operations ==",
+      "heading_path": "== = Modern operations ==",
+      "start_char": 18822,
+      "end_char": 19692,
+      "content": "YO-3As were involved in locating and calling in offensive weapons to destroy the largest Russian Trawler entering South Vietnamese waters. On 20 December 1989, during Operation Just Cause in Panama, two United States Air Force F-117s bombed a Panamanian Defense Force barracks in Rio Hato, Panama. In 1991, F-117s were tasked with attacking the most heavily fortified targets in Iraq in the opening phase of Operation Desert Storm and were the only coalition aircraft allowed to operate inside Baghdad's city limits and over its airspace. The F-117 while having sufficient stealth, also had a low visual signature. Even still, if the F-117 was visually acquired, it, like all aircraft, were subject to visual air-to-air interception. This was easily circumvented by flying at night. The U.S, UK, and Israel are the only countries to have used stealth aircraft in combat.",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0028",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern operations ==",
+      "heading_path": "== = Modern operations ==",
+      "start_char": 19693,
+      "end_char": 20624,
+      "content": "These deployments include the United States invasion of Panama, the first Gulf War, the Kosovo Conflict, the War in Afghanistan, the War in Iraq and the 2011 military intervention in Libya. The first use of stealth aircraft was in the U.S. invasion of Panama, where F-117 Nighthawk stealth attack aircraft were used to drop bombs on enemy airfields and positions while evading enemy radar. The F-117 Nighthawk was used in the Gulf War in 1990, in which 42 F-117s flew 1,299 sorties and scored 1,664 direct hits with laser-guided bombs while not suffering battle damage, while hitting 1,600 high-value targets in Iraq. F-117s flew approximately 168 strikes against Scud-associated targets while accumulating 6,905 flight hours. Only 2.5% of the American aircraft in Iraq were F-117s, yet they struck 40% of the strategic targets, dropping 2,000 tons of precision-guided munitions and striking their targets with an 80% success rate.",
+      "char_count": 931,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0029",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern operations ==",
+      "heading_path": "== = Modern operations ==",
+      "start_char": 20625,
+      "end_char": 21600,
+      "content": "However the F-117 still had flaws; it had to refuel and was defenesless in an enemy attack. All F-117 sorties had to be refueled. In the 1999 NATO bombing of Yugoslavia two stealth aircraft were used by the United States: the veteran F-117 Nighthawk, and the newly introduced B-2 Spirit strategic stealth bomber. The F-117 performed its usual role of striking precision high-value targets and performed well, although one F-117 was shot down by a Serbian Isayev S-125 'Neva-M' missile commanded by Colonel Zoltán Dani. The then-new B-2 Spirit was highly successful, destroying 33% of all Serbian bombing targets in the first eight weeks of U.S. involvement in the war. During this war, B-2s flew non-stop to Kosovo from their home base in Missouri and back. In the 2003 invasion of Iraq, F-117 Nighthawks and B-2 Spirits were used, and this was the last time the F-117 would see combat. F-117s dropped satellite-guided strike munitions on selected targets, with high success.",
+      "char_count": 975,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0030",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern operations ==",
+      "heading_path": "== = Modern operations ==",
+      "start_char": 21601,
+      "end_char": 22517,
+      "content": "B-2 Spirits conducted 49 sorties in the invasion, releasing more than 1.5 million pounds of munitions. During the May 2011 operation to kill Osama bin Laden, one of the helicopters used to clandestinely insert U.S. troops into Pakistan crashed in the bin Laden compound. From the wreckage it was revealed this helicopter had stealth characteristics, making this the first publicly known operational use of a stealth helicopter. Stealth aircraft were used in the 2011 military intervention in Libya, where B-2 Spirits dropped 40 bombs on a Libyan airfield with concentrated air defenses in support of the UN no-fly zone. Stealth aircraft will continue to play a valuable role in air combat with the United States using the F-22 Raptor, B-2 Spirit, and the F-35 Lightning II to perform a variety of operations. The F-22 made its combat debut over Syria in September 2014 as part of the US-led coalition to defeat ISIS.",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0031",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern operations ==",
+      "heading_path": "== = Modern operations ==",
+      "start_char": 22518,
+      "end_char": 23506,
+      "content": "From February 2018, Su-57s performed the first international flight as they were spotted landing at the Russian Khmeimim Air Base in Syria. These Su-57s were deployed along with four Sukhoi Su-35 fighters, four Sukhoi Su-25s, and one Beriev A-50 AEW&C aircraft. It is believed that at least 4 Su-57 are deployed in Syria and that they have likely been armed with cruise missiles in combat. In 2018, a report surfaced noting that Israeli F-35I stealth fighters conducted a number of missions in Syria and even infiltrated Iranian airspace without detection. In May 2018, Major General Amikam Norkin of IAF reported that Israeli Air Force F-35I stealth fighters carried out the first-ever F-35 strike in combat over Syria. The People's Republic of China started flight testing its Chengdu J-20 stealth multirole fighter around in 2011 and made its first public appearance at Airshow China 2016. The aircraft entered service with the People's Liberation Army Air Force (PLAAF) in March 2017.",
+      "char_count": 988,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "stealthaircraft_0f79848d_c0032",
+      "article_id": "stealthaircraft_0f79848d",
+      "section": "== = Modern operations ==",
+      "heading_path": "== = Modern operations ==",
+      "start_char": 23507,
+      "end_char": 23941,
+      "content": "Another fifth-generation stealth multirole fighter from China, the Shenyang FC-31 is also under flight testing. Australia already use a fleet of 72 F-35 stealth fighters, also developed and produced an unmanned stealth aircraft Boeing MQ-28 Ghost Bat. MQ-28 is an autonomous fighter AI & loyal wingman. The first flight took place 27 February 2021. 8 aircraft (Block 1) was produced to 2024, more aircraft (Block 2) are in production.",
+      "char_count": 434,
+      "token_estimate": 108,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0001"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0001"
+        ]
+      },
+      {
+        "question": "What information is provided about == = Modern operations ==?",
+        "answer": "The text provides information about == = Modern operations == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0031"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0031"
+        ]
+      },
+      {
+        "question": "How is the vulnerability of a stealth aircraft during weapons deployment mitigated?",
+        "answer": "The vulnerability during weapons deployment is addressed by operating in a way that reduces the risk of temporary acquisition. For example, the B-2 bomber flies at an operational altitude that imposes a long flight time for defensive weapons, making it virtually impossible to engage the aircraft while its weapons bay is open.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0008"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0000",
+          "stealthaircraft_0f79848d_c0001",
+          "stealthaircraft_0f79848d_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0001",
+          "stealthaircraft_0f79848d_c0000",
+          "stealthaircraft_0f79848d_c0002"
+        ]
+      },
+      {
+        "question": "What are some of the key design challenges and trade-offs in developing stealth aircraft, considering both fixed-wing and rotorcraft designs?",
+        "answer": "The primary goal of stealth aircraft design is to reduce radar and infrared detection by shaping the airframe, using radar-absorbent materials, and reducing thermal emissions. A major trade-off, particularly in early fixed-wing designs like the F-117 Nighthawk, was prioritizing a minimal radar cross-section (RCS) over aerodynamic performance, which resulted in aerodynamically unstable aircraft requiring constant computer corrections to fly. In contrast, the B-2 Spirit's flying wing design achieved stability without traditional rudders. Rotorcraft, such as the RAH-66 Comanche, present a unique design challenge due to their multiple moving wing surfaces and articulated joints, which have a constantly-changing relationship with the main airframe.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0003",
+          "stealthaircraft_0f79848d_c0004",
+          "stealthaircraft_0f79848d_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0004",
+          "stealthaircraft_0f79848d_c0003",
+          "stealthaircraft_0f79848d_c0005"
+        ]
+      },
+      {
+        "question": "What are some of the key vulnerabilities of stealth aircraft related to their emissions, flight, and weapon systems, and what strategies are used to mitigate these risks?",
+        "answer": "Stealth aircraft have several vulnerabilities that are addressed through specific design choices and operational tactics. To minimize their infrared footprint, early stealth aircraft like the F-117 and B-2 were designed without afterburners and flew at subsonic speeds. To avoid passive detection of their electromagnetic emissions, they are operated to reduce or avoid intentional signals from radar and communications. Another significant vulnerability is the temporary increase in radar cross-section when weapon bay doors are opened; this risk is managed by operating in a way that minimizes the opportunity for engagement, such as the B-2 flying at a very high altitude during weapons deployment.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0006",
+          "stealthaircraft_0f79848d_c0007",
+          "stealthaircraft_0f79848d_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0008",
+          "stealthaircraft_0f79848d_c0007",
+          "stealthaircraft_0f79848d_c0006"
+        ]
+      },
+      {
+        "question": "What was the historical significance of the F-117 Nighthawk, and how did it perform during the 1999 NATO bombing of Yugoslavia?",
+        "answer": "The F-117 Nighthawk holds the distinction of being the first operational aircraft explicitly designed with stealth technology. During the 1999 NATO bombing of Yugoslavia, it was used by the United States for its typical role of striking high-value targets and performed well, though one F-117 was shot down by a Serbian missile brigade.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0000",
+          "stealthaircraft_0f79848d_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0002",
+          "stealthaircraft_0f79848d_c0000"
+        ]
+      },
+      {
+        "question": "How do the unique characteristics of rotorcraft complicate the application of the stealth design principle of airframe shaping?",
+        "answer": "A key design principle for stealth aircraft is shaping the airframe to reduce radar reflection. Rotorcraft present a particular challenge to this principle due to their multiple wing surfaces and articulated joints, which have a constantly-changing relationship with the main airframe, making it difficult to maintain a consistent low-radar-reflection shape.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0003",
+          "stealthaircraft_0f79848d_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0004",
+          "stealthaircraft_0f79848d_c0003"
+        ]
+      },
+      {
+        "question": "What is the trade-off that stealth aircraft like the F-22 and F-35 face when deciding how to carry armaments and fuel for a mission?",
+        "answer": "Stealth aircraft such as the F-22 and F-35 face a trade-off between maintaining stealth and increasing their range and payload. To remain stealthy, they must carry all armaments internally, which limits their capacity. Alternatively, they can carry additional weapons and fuel on external hardpoints, allowing them to attack more targets at greater distances, but this configuration significantly compromises their stealth as the external stores are visible to radar systems.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0008",
+          "stealthaircraft_0f79848d_c0009",
+          "stealthaircraft_0f79848d_c0010"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0009",
+          "stealthaircraft_0f79848d_c0010",
+          "stealthaircraft_0f79848d_c0008"
+        ]
+      },
+      {
+        "question": "How do the detection methods of passive multistatic radar systems and the Associative Aperture Synthesis Radar (AASR) system differ in their approach to countering stealth technology?",
+        "answer": "Passive multistatic radar systems detect stealth aircraft by monitoring the energy that is reflected away from the transmitter's line of sight, capitalizing on an increased Radar Cross Section (RCS) in those other directions. In contrast, the Associative Aperture Synthesis Radar (AASR) system uses a large array of transmitters and receivers to detect a target by the \"shadow\" it creates when passing directly between them.",
+        "related_chunk_ids": [
+          "stealthaircraft_0f79848d_c0014",
+          "stealthaircraft_0f79848d_c0015"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "stealthaircraft_0f79848d_c0014",
+          "stealthaircraft_0f79848d_c0015"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T10:54:57.079Z",
+    "content_format": "markdown",
+    "total_chunks": 33,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

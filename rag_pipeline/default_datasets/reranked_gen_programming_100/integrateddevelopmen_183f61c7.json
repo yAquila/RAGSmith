@@ -1,0 +1,320 @@
+{
+  "article": {
+    "id": "integrateddevelopmen_183f61c7",
+    "title": "Integrated development environment",
+    "url": "https://en.wikipedia.org/wiki/Integrated_development_environment",
+    "lang": "en",
+    "created_at": "2025-07-30T08:35:54.303784",
+    "content": "---\nid: integrateddevelopmen_183f61c7\nurl: https://en.wikipedia.org/wiki/Integrated_development_environment\ntitle: Integrated development environment\nlang: en\ncreated_at: '2025-07-30T08:32:44.401623'\nchecksum: 3b7bf2fb13ad60b5003004332ff3a1ab74a6f272eaf09a9e46c46ac107c7e066\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1572\n  char_count: 10340\n  num_chunks: 13\n  original_chunks: 22\n  filtered_out: 9\n  num_sections: 0\n---\nAn integrated development environment (IDE) is a software application that provides comprehensive facilities for software development. An IDE normally consists of at least a source-code editor, build automation tools, and a debugger. Some IDEs, such as IntelliJ IDEA, Eclipse and Lazarus contain the necessary compiler, interpreter or both; others, such as SharpDevelop and NetBeans, do not. The boundary between an IDE and other parts of the broader software development environment is not well-defined; sometimes a version control system or various tools to simplify the construction of a graphical user interface (GUI) are integrated. Many modern IDEs also have a class browser, an object browser, and a class hierarchy diagram for use in object-oriented software development. == Overview == Integrated development environments are designed to maximize programmer productivity by providing tight-knit components with similar user interfaces. IDEs present a single program in which all development is done. This program typically provides many features for authoring, modifying, compiling, deploying and debugging software. This contrasts with software development using unrelated tools, such as vi, GDB, GNU Compiler Collection, or make. One aim of the IDE is to reduce the configuration necessary to piece together multiple development utilities. Instead, it provides the same set of capabilities as one cohesive unit. Reducing setup time can increase developer productivity, especially in cases where learning to use the IDE is faster than manually integrating and learning all of the individual tools. Tighter integration of all development tasks has the potential to improve overall productivity beyond just helping with setup tasks. For example, code can be continuously parsed while it is being edited, providing instant feedback when syntax errors are introduced, thus allowing developers to debug code much faster and more easily with an IDE. Some IDEs are dedicated to a specific programming language, allowing a feature set that most closely matches the programming paradigms of the language. However, there are many multiple-language IDEs. While most modern IDEs are graphical, text-based IDEs such as Turbo Pascal were in popular use before the availability of windowing systems like Microsoft Windows and the X Window System (X11). They commonly use function keys or hotkeys to execute frequently used commands or macros. == History == IDEs initially became possible when developing via a console or terminal. Early systems could not support one, since programs were submitted to a compiler or assembler via punched cards, paper tape, etc. Dartmouth BASIC was the first language to be created with an IDE (and was also the first to be designed for use while sitting in front of a console or terminal). Its IDE (part of the Dartmouth Time-Sharing System) was command-based, and therefore did not look much like the menu-driven, graphical IDEs popular after the advent of the graphical user interface. However it integrated editing, file management, compilation, debugging and execution in a manner consistent with a modern IDE. Maestro I is a product from Softlab Munich and was the world's first integrated development environment for software. Maestro I was installed for 22,000 programmers worldwide. Until 1989, 6,000 installations existed in the Federal Republic of Germany. Maestro was arguably the world leader in this field during the 1970s and 1980s. Today one of the last Maestro I can be found in the Museum of Information Technology at Arlington in Texas. One of the first IDEs with a plug-in concept was Softbench. In 1995 Computerwoche commented that the use of an IDE was not well received by developers since it would fence in their creativity. As of August 2023, the most commonly searched for IDEs on Google Search were Visual Studio, Visual Studio Code, and Eclipse. == Topics == === Syntax highlighting === The IDE editor usually provides syntax highlighting, it can show both the structures, the language keywords and the syntax errors with visually distinct colors and font effects. === Code completion === Code completion is an important IDE feature, intended to speed up programming. Modern IDEs even have intelligent code completion. ==== Intelligent code completion ==== === Refactoring === Advanced IDEs provide support for automated refactoring. === Version control === An IDE is expected to provide integrated version control, in order to interact with source repositories. === Debugging === IDEs are also used for debugging, using an integrated debugger, with support for setting breakpoints in the editor, visual rendering of steps, etc. === Code search === IDEs may provide support for code search. Code search has two different meanings. First, it means searching for class and function declarations, usages, variable and field read/write, etc. IDEs can use different kinds of user interface for code search, for example form-based widgets and natural-language based interfaces. Second, it means searching for a concrete implementation of some specified functionality. === Visual programming === Visual programming is a usage scenario in which an IDE is generally required. Visual Basic allows users to create new applications by moving programming, building blocks, or code nodes to create flowcharts or structure diagrams that are then compiled or interpreted. These flowcharts often are based on the Unified Modeling Language. This interface has been popularized with the Lego Mindstorms system and is being actively perused by a number of companies wishing to capitalize on the power of custom browsers like those found at Mozilla. KTechlab supports flowcode and is a popular open-source IDE and Simulator for developing software for microcontrollers. Visual programming is also responsible for the power of distributed programming (cf. LabVIEW and EICASLAB software). An early visual programming system, Max, was modeled after an analog synthesizer design and has been used to develop real-time music performance software since the 1980s. Another early example was Prograph, a dataflow-based system originally developed for the Macintosh. The graphical programming environment \"GRAPE\" is used to program qfix robot kits. This approach is also used in specialist software such as Openlab, where the end-users want the flexibility of a full programming language, without the traditional learning curve associated with one. === Language support === Some IDEs support multiple languages, such as GNU Emacs, IntelliJ IDEA, Eclipse, MyEclipse, NetBeans, MonoDevelop, JDoodle or PlayCode. Support for alternative languages is often provided by plugins, allowing them to be installed on the same IDE at the same time. For example, Flycheck is a modern on-the-fly syntax checking extension for GNU Emacs 24 with support for 39 languages. Another example is JDoodle, an online cloud-based IDE that supports 88 languages. Eclipse, and Netbeans have plugins for C/C++, Ada, GNAT (for example AdaGIDE), Perl, Python, Ruby, and PHP, which are selected between automatically based on file extension, environment or project settings. === Implementation === IDEs can be implemented in various languages, for example: GNU Emacs using Emacs Lisp and C; IntelliJ IDEA, Eclipse and NetBeans, using Java; MonoDevelop and Rider using C#. === Attitudes across different computing platforms === Unix programmers can combine command-line POSIX tools into a complete development environment, capable of developing large programs such as the Linux kernel and its environment. In this sense, the entire Unix system functions as an IDE. The free software GNU toolchain (including GNU Compiler Collection (GCC), GNU Debugger (GDB), and GNU make) is available on many platforms, including Windows. The pervasive Unix philosophy of \"everything is a text stream\" enables developers who favor command-line oriented tools to use editors with support for many of the standard Unix and GNU build tools, building an IDE with programs like Emacs or Vim. Data Display Debugger is intended to be an advanced graphical front-end for many text-based debugger standard tools. Some programmers prefer managing makefiles and their derivatives to the similar code building tools included in a full IDE. For example, most contributors to the PostgreSQL database use make and GDB directly to develop new features. Even when building PostgreSQL for Microsoft Windows using Visual C++, Perl scripts are used as a replacement for make rather than relying on any IDE features. Some Linux IDEs such as Geany attempt to provide a graphical front end to traditional build operations. On the various Microsoft Windows platforms, command-line tools for development are seldom used. Accordingly, there are many commercial and non-commercial products. However, each has a different design commonly creating incompatibilities. Most major compiler vendors for Windows still provide free copies of their command-line tools, including Microsoft (Visual C++, Platform SDK, .NET Framework SDK, nmake utility). IDEs have always been popular on the Apple Macintosh's classic Mac OS and macOS, dating back to Macintosh Programmer's Workshop, Turbo Pascal, THINK Pascal and THINK C environments of the mid-1980s. Currently macOS programmers can choose between native IDEs like Xcode and open-source tools such as Eclipse and Netbeans. ActiveState Komodo is a proprietary multilanguage IDE supported on macOS. == Online == An online integrated development environment, also known as a web IDE or cloud IDE, is a browser based IDE that allows for software development or web development. An online IDE can be accessed from a web browser, allowing for a portable work environment. An online IDE does not usually contain all of the same features as a traditional or desktop IDE although all of the basic IDE features, such as syntax highlighting, are typically present. A Mobile-Based Integrated Development Environment (IDE) is a software application that provides a comprehensive suite of tools for software development on mobile platforms. Unlike traditional desktop IDEs, mobile-based IDEs are designed to run on smartphones and tablets, allowing developers to write, debug, and deploy code directly from their mobile devices. == See also == == References =="
+  },
+  "chunks": [
+    {
+      "id": "integrateddevelopmen_183f61c7_c0000",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 780,
+      "content": "An integrated development environment (IDE) is a software application that provides comprehensive facilities for software development. An IDE normally consists of at least a source-code editor, build automation tools, and a debugger. Some IDEs, such as IntelliJ IDEA, Eclipse and Lazarus contain the necessary compiler, interpreter or both; others, such as SharpDevelop and NetBeans, do not. The boundary between an IDE and other parts of the broader software development environment is not well-defined; sometimes a version control system or various tools to simplify the construction of a graphical user interface (GUI) are integrated. Many modern IDEs also have a class browser, an object browser, and a class hierarchy diagram for use in object-oriented software development.",
+      "char_count": 779,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0001",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 794,
+      "end_char": 1755,
+      "content": "== Overview == Integrated development environments are designed to maximize programmer productivity by providing tight-knit components with similar user interfaces. IDEs present a single program in which all development is done. This program typically provides many features for authoring, modifying, compiling, deploying and debugging software. This contrasts with software development using unrelated tools, such as vi, GDB, GNU Compiler Collection, or make. One aim of the IDE is to reduce the configuration necessary to piece together multiple development utilities. Instead, it provides the same set of capabilities as one cohesive unit. Reducing setup time can increase developer productivity, especially in cases where learning to use the IDE is faster than manually integrating and learning all of the individual tools. Tighter integration of all development tasks has the potential to improve overall productivity beyond just helping with setup tasks.",
+      "char_count": 960,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0002",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 1755,
+      "end_char": 2451,
+      "content": "For example, code can be continuously parsed while it is being edited, providing instant feedback when syntax errors are introduced, thus allowing developers to debug code much faster and more easily with an IDE. Some IDEs are dedicated to a specific programming language, allowing a feature set that most closely matches the programming paradigms of the language. However, there are many multiple-language IDEs. While most modern IDEs are graphical, text-based IDEs such as Turbo Pascal were in popular use before the availability of windowing systems like Microsoft Windows and the X Window System (X11). They commonly use function keys or hotkeys to execute frequently used commands or macros.",
+      "char_count": 696,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0003",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2451,
+      "end_char": 3408,
+      "content": "== History == IDEs initially became possible when developing via a console or terminal. Early systems could not support one, since programs were submitted to a compiler or assembler via punched cards, paper tape, etc. Dartmouth BASIC was the first language to be created with an IDE (and was also the first to be designed for use while sitting in front of a console or terminal). Its IDE (part of the Dartmouth Time-Sharing System) was command-based, and therefore did not look much like the menu-driven, graphical IDEs popular after the advent of the graphical user interface. However it integrated editing, file management, compilation, debugging and execution in a manner consistent with a modern IDE. Maestro I is a product from Softlab Munich and was the world's first integrated development environment for software. Maestro I was installed for 22,000 programmers worldwide. Until 1989, 6,000 installations existed in the Federal Republic of Germany.",
+      "char_count": 956,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0004",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3408,
+      "end_char": 3913,
+      "content": "Maestro was arguably the world leader in this field during the 1970s and 1980s. Today one of the last Maestro I can be found in the Museum of Information Technology at Arlington in Texas. One of the first IDEs with a plug-in concept was Softbench. In 1995 Computerwoche commented that the use of an IDE was not well received by developers since it would fence in their creativity. As of August 2023, the most commonly searched for IDEs on Google Search were Visual Studio, Visual Studio Code, and Eclipse.",
+      "char_count": 505,
+      "token_estimate": 126,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0005",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== = Syntax highlighting ==",
+      "heading_path": "== = Syntax highlighting ==",
+      "start_char": 3941,
+      "end_char": 4121,
+      "content": "== = Syntax highlighting === The IDE editor usually provides syntax highlighting, it can show both the structures, the language keywords and the syntax errors with visually distinct colors and font effects.",
+      "char_count": 206,
+      "token_estimate": 51,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0006",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== = Code search ==",
+      "heading_path": "== = Code search ==",
+      "start_char": 4670,
+      "end_char": 5085,
+      "content": "== = Code search === IDEs may provide support for code search. Code search has two different meanings. First, it means searching for class and function declarations, usages, variable and field read/write, etc. IDEs can use different kinds of user interface for code search, for example form-based widgets and natural-language based interfaces. Second, it means searching for a concrete implementation of some specified functionality.",
+      "char_count": 433,
+      "token_estimate": 108,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0007",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== = Visual programming ==",
+      "heading_path": "== = Visual programming ==",
+      "start_char": 5111,
+      "end_char": 5916,
+      "content": "== = Visual programming === Visual programming is a usage scenario in which an IDE is generally required. Visual Basic allows users to create new applications by moving programming, building blocks, or code nodes to create flowcharts or structure diagrams that are then compiled or interpreted. These flowcharts often are based on the Unified Modeling Language. This interface has been popularized with the Lego Mindstorms system and is being actively perused by a number of companies wishing to capitalize on the power of custom browsers like those found at Mozilla. KTechlab supports flowcode and is a popular open-source IDE and Simulator for developing software for microcontrollers. Visual programming is also responsible for the power of distributed programming (cf. LabVIEW and EICASLAB software).",
+      "char_count": 804,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0008",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== = Visual programming ==",
+      "heading_path": "== = Visual programming ==",
+      "start_char": 5916,
+      "end_char": 6468,
+      "content": "An early visual programming system, Max, was modeled after an analog synthesizer design and has been used to develop real-time music performance software since the 1980s. Another early example was Prograph, a dataflow-based system originally developed for the Macintosh. The graphical programming environment \"GRAPE\" is used to program qfix robot kits. This approach is also used in specialist software such as Openlab, where the end-users want the flexibility of a full programming language, without the traditional learning curve associated with one.",
+      "char_count": 552,
+      "token_estimate": 138,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0009",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== = Language support ==",
+      "heading_path": "== = Language support ==",
+      "start_char": 6467,
+      "end_char": 7141,
+      "content": "== = Language support === Some IDEs support multiple languages, such as GNU Emacs, IntelliJ IDEA, Eclipse, MyEclipse, NetBeans, MonoDevelop, JDoodle or PlayCode. Support for alternative languages is often provided by plugins, allowing them to be installed on the same IDE at the same time. For example, Flycheck is a modern on-the-fly syntax checking extension for GNU Emacs 24 with support for 39 languages. Another example is JDoodle, an online cloud-based IDE that supports 88 languages. Eclipse, and Netbeans have plugins for C/C++, Ada, GNAT (for example AdaGIDE), Perl, Python, Ruby, and PHP, which are selected between automatically based on file extension, environment or project settings.",
+      "char_count": 697,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0010",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== = Implementation ==",
+      "heading_path": "== = Implementation ==",
+      "start_char": 7163,
+      "end_char": 7339,
+      "content": "== = Implementation === IDEs can be implemented in various languages, for example: GNU Emacs using Emacs Lisp and C; IntelliJ IDEA, Eclipse and NetBeans, using Java; MonoDevelop and Rider using C#.",
+      "char_count": 197,
+      "token_estimate": 49,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0011",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== = Attitudes across different computing platforms ==",
+      "heading_path": "== = Attitudes across different computing platforms ==",
+      "start_char": 7393,
+      "end_char": 8334,
+      "content": "== = Attitudes across different computing platforms === Unix programmers can combine command-line POSIX tools into a complete development environment, capable of developing large programs such as the Linux kernel and its environment. In this sense, the entire Unix system functions as an IDE. The free software GNU toolchain (including GNU Compiler Collection (GCC), GNU Debugger (GDB), and GNU make) is available on many platforms, including Windows. The pervasive Unix philosophy of \"everything is a text stream\" enables developers who favor command-line oriented tools to use editors with support for many of the standard Unix and GNU build tools, building an IDE with programs like Emacs or Vim. Data Display Debugger is intended to be an advanced graphical front-end for many text-based debugger standard tools. Some programmers prefer managing makefiles and their derivatives to the similar code building tools included in a full IDE.",
+      "char_count": 940,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "integrateddevelopmen_183f61c7_c0012",
+      "article_id": "integrateddevelopmen_183f61c7",
+      "section": "== = Attitudes across different computing platforms ==",
+      "heading_path": "== = Attitudes across different computing platforms ==",
+      "start_char": 8334,
+      "end_char": 9320,
+      "content": "For example, most contributors to the PostgreSQL database use make and GDB directly to develop new features. Even when building PostgreSQL for Microsoft Windows using Visual C++, Perl scripts are used as a replacement for make rather than relying on any IDE features. Some Linux IDEs such as Geany attempt to provide a graphical front end to traditional build operations. On the various Microsoft Windows platforms, command-line tools for development are seldom used. Accordingly, there are many commercial and non-commercial products. However, each has a different design commonly creating incompatibilities. Most major compiler vendors for Windows still provide free copies of their command-line tools, including Microsoft (Visual C++, Platform SDK, .NET Framework SDK, nmake utility). IDEs have always been popular on the Apple Macintosh's classic Mac OS and macOS, dating back to Macintosh Programmer's Workshop, Turbo Pascal, THINK Pascal and THINK C environments of the mid-1980s.",
+      "char_count": 986,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What tools do most contributors to the PostgreSQL database use to develop new features?",
+        "answer": "Most contributors to the PostgreSQL database use make and GDB directly to develop new features.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0012"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0012"
+        ]
+      },
+      {
+        "question": "How does an Integrated Development Environment (IDE) aim to increase developer productivity?",
+        "answer": "An IDE aims to increase developer productivity by reducing the configuration and setup time necessary to piece together multiple development utilities. It provides a single, cohesive program with tightly-integrated components, which can be faster to learn and use than manually integrating and learning all the individual tools. This tight integration of tasks can improve overall productivity beyond just the initial setup.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0001"
+        ]
+      },
+      {
+        "question": "What product is identified as the world's first integrated development environment for software?",
+        "answer": "Maestro I, a product from Softlab Munich, was the world's first integrated development environment for software.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0003"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0003"
+        ]
+      },
+      {
+        "question": "Based on its core components and design philosophy, explain what an Integrated Development Environment (IDE) is, its primary objective, and provide a specific example of how its features achieve this objective.",
+        "answer": "An Integrated Development Environment (IDE) is a software application that bundles comprehensive facilities for software development, typically including at least a source-code editor, build automation tools, and a debugger. The primary objective of an IDE is to maximize programmer productivity by providing these tools as a single, cohesive program with a similar user interface, which reduces the setup time and complexity of using separate, unrelated tools. A specific example of this is how an IDE can continuously parse code as it is being edited, providing instant feedback on syntax errors, which allows developers to debug their code much faster and more easily.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0000",
+          "integrateddevelopmen_183f61c7_c0001",
+          "integrateddevelopmen_183f61c7_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0000",
+          "integrateddevelopmen_183f61c7_c0001",
+          "integrateddevelopmen_183f61c7_c0002"
+        ]
+      },
+      {
+        "question": "Provide a summary of the Maestro I IDE, including its origin, adoption, and historical standing.",
+        "answer": "Maestro I, a product from Softlab Munich, was the world's first integrated development environment (IDE) for software. It was widely adopted, with installations for 22,000 programmers worldwide and 6,000 in the Federal Republic of Germany by 1989. Maestro was considered a world leader in its field during the 1970s and 1980s, and one of the last remaining systems can be found in the Museum of Information Technology in Arlington, Texas.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0003",
+          "integrateddevelopmen_183f61c7_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0003",
+          "integrateddevelopmen_183f61c7_c0004"
+        ]
+      },
+      {
+        "question": "Summarize the key features and usage scenarios of an IDE, covering visual aids for code, code navigation, and visual programming methodologies.",
+        "answer": "IDEs offer several key features to assist developers. They provide visual aids like syntax highlighting, which uses distinct colors and font effects to show code structures, keywords, and syntax errors. For code navigation, they support code search, which can find class and function declarations, usages, or specific implementations of functionality through various interfaces. Furthermore, IDEs are often required for visual programming, a scenario where users create applications by moving programming building blocks to form flowcharts or structure diagrams.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0005",
+          "integrateddevelopmen_183f61c7_c0006",
+          "integrateddevelopmen_183f61c7_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0007",
+          "integrateddevelopmen_183f61c7_c0005",
+          "integrateddevelopmen_183f61c7_c0006"
+        ]
+      },
+      {
+        "question": "How do Integrated Development Environments (IDEs) improve developer productivity beyond simply reducing initial setup time?",
+        "answer": "IDEs improve productivity beyond reducing setup time through the tight integration of development tasks. For example, an IDE can continuously parse code as it is being edited, providing instant feedback on syntax errors, which allows developers to debug their code much faster and more easily.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0001",
+          "integrateddevelopmen_183f61c7_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0001",
+          "integrateddevelopmen_183f61c7_c0002"
+        ]
+      },
+      {
+        "question": "What was the historical significance of the Maestro I IDE and where can one be found today?",
+        "answer": "Maestro I, a product from Softlab Munich, was the world's first integrated development environment for software and was considered a world leader in the field during the 1970s and 1980s. It was installed for 22,000 programmers worldwide. Today, one of the last remaining Maestro I systems can be found in the Museum of Information Technology at Arlington in Texas.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0003",
+          "integrateddevelopmen_183f61c7_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0003",
+          "integrateddevelopmen_183f61c7_c0004"
+        ]
+      },
+      {
+        "question": "What are some diverse examples of visual programming systems and their applications?",
+        "answer": "Visual programming systems have a range of applications. For instance, Visual Basic allows users to create new applications by arranging programming building blocks into flowcharts. KTechlab is an open-source IDE used for developing software for microcontrollers, while LabVIEW and EICASLAB demonstrate its use in distributed programming. Early examples include Max, a system used for developing real-time music performance software since the 1980s, and Prograph, a dataflow-based system. Other specialized applications include GRAPE for programming qfix robot kits and Openlab, which offers programming flexibility without a steep learning curve.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0007",
+          "integrateddevelopmen_183f61c7_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0008",
+          "integrateddevelopmen_183f61c7_c0007"
+        ]
+      },
+      {
+        "question": "How do the common approaches to development environments differ between Unix-like systems and Microsoft Windows platforms?",
+        "answer": "On Unix-like systems, programmers often combine command-line tools such as the GNU toolchain (GCC, GDB, make) to create a development environment, treating the entire system as an IDE. This is exemplified by PostgreSQL developers who use make and GDB directly. In contrast, on Microsoft Windows platforms, command-line tools for development are seldom used. Instead, developers typically rely on various commercial and non-commercial IDE products, which often have incompatible designs.",
+        "related_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0011",
+          "integrateddevelopmen_183f61c7_c0012"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "integrateddevelopmen_183f61c7_c0011",
+          "integrateddevelopmen_183f61c7_c0012"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:32.849Z",
+    "content_format": "markdown",
+    "total_chunks": 13,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

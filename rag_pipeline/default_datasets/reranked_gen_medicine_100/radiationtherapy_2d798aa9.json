@@ -1,0 +1,837 @@
+{
+  "article": {
+    "id": "radiationtherapy_2d798aa9",
+    "title": "Radiation therapy",
+    "url": "https://en.wikipedia.org/wiki/Radiation_therapy",
+    "lang": "en",
+    "created_at": "2025-07-31T07:12:27.380311",
+    "content": "---\nid: radiationtherapy_2d798aa9\nurl: https://en.wikipedia.org/wiki/Radiation_therapy\ntitle: Radiation therapy\nlang: en\ncreated_at: '2025-07-31T07:05:18.563898'\nchecksum: 2dc69e3b78a2468af5a71b6d43893f9c315a58d0ef4eb740e82e1c4be4013f7d\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 9221\n  char_count: 61398\n  num_chunks: 52\n  original_chunks: 59\n  filtered_out: 7\n  num_sections: 0\n---\nRadiation therapy or radiotherapy (RT, RTx, or XRT) is a treatment using ionizing radiation, generally provided as part of cancer therapy to either kill or control the growth of malignant cells. It is normally delivered by a linear particle accelerator. Radiation therapy may be curative in a number of types of cancer if they are localized to one area of the body, and have not spread to other parts. It may also be used as part of adjuvant therapy, to prevent tumor recurrence after surgery to remove a primary malignant tumor (for example, early stages of breast cancer). Radiation therapy is synergistic with chemotherapy, and has been used before, during, and after chemotherapy in susceptible cancers. The subspecialty of oncology concerned with radiotherapy is called radiation oncology. A physician who practices in this subspecialty is a radiation oncologist. Radiation therapy is commonly applied to the cancerous tumor because of its ability to control cell growth. Ionizing radiation works by damaging the DNA of cancerous tissue leading to cellular death. To spare normal tissues (such as skin or organs which radiation must pass through to treat the tumor), shaped radiation beams are aimed from several angles of exposure to intersect at the tumor, providing a much larger absorbed dose there than in the surrounding healthy tissue. Besides the tumor itself, the radiation fields may also include the draining lymph nodes if they are clinically or radiologically involved with the tumor, or if there is thought to be a risk of subclinical malignant spread. It is necessary to include a margin of normal tissue around the tumor to allow for uncertainties in daily set-up and internal tumor motion. These uncertainties can be caused by internal movement (for example, respiration and bladder filling) and movement of external skin marks relative to the tumor position. Radiation oncology is the medical specialty concerned with prescribing radiation, and is distinct from radiology, the use of radiation in medical imaging and diagnosis. Radiation may be prescribed by a radiation oncologist with intent to cure or for adjuvant therapy. It may also be used as palliative treatment (where cure is not possible and the aim is for local disease control or symptomatic relief) or as therapeutic treatment (where the therapy has survival benefit and can be curative). It is also common to combine radiation therapy with surgery, chemotherapy, hormone therapy, immunotherapy or some mixture of the four. Most common cancer types can be treated with radiation therapy in some way. The precise treatment intent (curative, adjuvant, neoadjuvant therapeutic, or palliative) will depend on the tumor type, location, and stage, as well as the general health of the patient. Total body irradiation (TBI) is a radiation therapy technique used to prepare the body to receive a bone marrow transplant. Brachytherapy, in which a radioactive source is placed inside or next to the area requiring treatment, is another form of radiation therapy that minimizes exposure to healthy tissue during procedures to treat cancers of the breast, prostate, and other organs. Radiation therapy has several applications in non-malignant conditions, such as the treatment of trigeminal neuralgia, acoustic neuromas, severe thyroid eye disease, pterygium, pigmented villonodular synovitis, and prevention of keloid scar growth, vascular restenosis, and heterotopic ossification. The use of radiation therapy in non-malignant conditions is limited partly by worries about the risk of radiation-induced cancers. == Medical uses == It is estimated that half of the US' 1.2M invasive cancer cases diagnosed in 2022 received radiation therapy in their treatment program. Different cancers respond to radiation therapy in different ways. The response of a cancer to radiation is described by its radiosensitivity. Highly radiosensitive cancer cells are rapidly killed by modest doses of radiation. These include leukemias, most lymphomas, and germ cell tumors. The majority of epithelial cancers are only moderately radiosensitive, and require a significantly higher dose of radiation (60–70 Gy) to achieve a radical cure. Some types of cancer are notably radioresistant, that is, much higher doses are required to produce a radical cure than may be safe in clinical practice. Renal cell cancer and melanoma are generally considered to be radioresistant but radiation therapy is still a palliative option for many patients with metastatic melanoma. Combining radiation therapy with immunotherapy is an active area of investigation and has shown some promise for melanoma and other cancers. It is important to distinguish the radiosensitivity of a particular tumor, which to some extent is a laboratory measure, from the radiation \"curability\" of a cancer in actual clinical practice. For example, leukemias are not generally curable with radiation therapy, because they are disseminated through the body. Lymphoma may be radically curable if it is localized to one area of the body. Similarly, many of the common, moderately radioresponsive tumors are routinely treated with curative doses of radiation therapy if they are at an early stage. For example, non-melanoma skin cancer, head and neck cancer, breast cancer, non-small cell lung cancer, cervical cancer, anal cancer, and prostate cancer. With the exception of oligometastatic disease, metastatic cancers are incurable with radiation therapy because it is not possible to treat the whole body. Modern radiation therapy relies on a CT scan to identify the tumor and surrounding normal structures and to perform dose calculations for the creation of a complex radiation treatment plan. The patient receives small skin marks to guide the placement of treatment fields. Patient positioning is crucial at this stage as the patient will have to be placed in an identical position during each treatment. Many patient positioning devices have been developed for this purpose, including masks and cushions which can be molded to the patient. Image-guided radiation therapy is a method that uses imaging to correct for positional errors of each treatment session. Building on the principles of Image-guided radiation therapy, Daily MR-guided ART (MRgART) offers many dosimetric advantages over the traditional single-plan RT workflow, including the ability to conform the high-dose region to the tumor as the anatomy changes throughout the course of RT. The response of a tumor to radiation therapy is also related to its size. Due to complex radiobiology, very large tumors are affected less by radiation compared to smaller tumors or microscopic disease. Various strategies are used to overcome this effect. The most common technique is surgical resection prior to radiation therapy. This is most commonly seen in the treatment of breast cancer with wide local excision or mastectomy followed by adjuvant radiation therapy. Another method is to shrink the tumor with neoadjuvant chemotherapy prior to radical radiation therapy. A third technique is to enhance the radiosensitivity of the cancer by giving certain drugs during a course of radiation therapy. Examples of radiosensitizing drugs include cisplatin, nimorazole, and cetuximab. The impact of radiotherapy varies between different types of cancer and different groups. For example, for breast cancer after breast-conserving surgery, radiotherapy has been found to halve the rate at which the disease recurs. In pancreatic cancer, radiotherapy has increased survival times for inoperable tumors. == Side effects == Radiation therapy (RT) is in itself painless, but has iatrogenic side effect risks. Many low-dose palliative treatments (for example, radiation therapy to bony metastases) cause minimal or no side effects, although short-term pain flare-up can be experienced in the days following treatment due to oedema compressing nerves in the treated area. Higher doses can cause varying side effects during treatment (acute side effects), in the months or years following treatment (long-term side effects), or after re-treatment (cumulative side effects). The nature, severity, and longevity of side effects depends on the organs that receive the radiation, the treatment itself (type of radiation, dose, fractionation, concurrent chemotherapy), and the patient. Serious radiation complications may occur in 5% of RT cases. Acute (near immediate) or sub-acute (2 to 3 months post RT) radiation side effects may develop after 50 Gy RT dosing. Late or delayed radiation injury (6 months to decades) may develop after 65 Gy. Side effects from radiation are usually limited to the area of the patient's body that is under treatment. Side effects are dose-dependent; for example, higher doses of head and neck radiation can be associated with cardiovascular complications, thyroid dysfunction, and pituitary axis dysfunction. Modern radiation therapy aims to reduce side effects to a minimum and to help the patient understand and deal with side effects that are unavoidable. The main side effects reported are fatigue and skin irritation, like a mild to moderate sun burn. The fatigue often sets in during the middle of a course of treatment and can last for weeks after treatment ends. The irritated skin will heal, but may not be as elastic as it was before. === Acute side effects === Nausea and vomiting This is not a general side effect of radiation therapy, and mechanistically is associated only with treatment of the stomach or abdomen (which commonly react a few hours after treatment), or with radiation therapy to certain nausea-producing structures in the head during treatment of certain head and neck tumors, most commonly the vestibules of the inner ears. As with any distressing treatment, some patients vomit immediately during radiotherapy, or even in anticipation of it, but this is considered a psychological response. Nausea for any reason can be treated with antiemetics. Damage to the epithelial surfaces Epithelial surfaces may sustain damage from radiation therapy. Depending on the area being treated, this may include the skin, oral mucosa, pharyngeal, bowel mucosa, and ureter. The rates of onset of damage and recovery from it depend upon the turnover rate of epithelial cells. Typically the skin starts to become pink and sore several weeks into treatment. The reaction may become more severe during the treatment and for up to about one week following the end of radiation therapy, and the skin may break down. Although this moist desquamation is uncomfortable, recovery is usually quick. Skin reactions tend to be worse in areas where there are natural folds in the skin, such as underneath the female breast, behind the ear, and in the groin. Mouth, throat and stomach sores If the head and neck area is treated, temporary soreness and ulceration commonly occur in the mouth and throat. If severe, this can affect swallowing, and the patient may need painkillers and nutritional support/food supplements. The esophagus can also become sore if it is treated directly, or if, as commonly occurs, it receives a dose of collateral radiation during treatment of lung cancer. When treating liver malignancies and metastases, it is possible for collateral radiation to cause gastric, stomach, or duodenal ulcers This collateral radiation is commonly caused by non-targeted delivery (reflux) of the radioactive agents being infused. Methods, techniques and devices are available to lower the occurrence of this type of adverse side effect. Intestinal discomfort The lower bowel may be treated directly with radiation (treatment of rectal or anal cancer) or be exposed by radiation therapy to other pelvic structures (prostate, bladder, female genital tract). Typical symptoms are soreness, diarrhoea, and nausea. Nutritional interventions may be able to help with diarrhoea associated with radiotherapy. Studies in people having pelvic radiotherapy as part of anticancer treatment for a primary pelvic cancer found that changes in dietary fat, fibre and lactose during radiotherapy reduced diarrhoea at the end of treatment. Swelling As part of the general inflammation that occurs, swelling of soft tissues may cause problems during radiation therapy. This is a concern during treatment of brain tumors and brain metastases, especially where there is pre-existing raised intracranial pressure or where the tumor is causing near-total obstruction of a lumen (e.g., trachea or main bronchus). Surgical intervention may be considered prior to treatment with radiation. If surgery is deemed unnecessary or inappropriate, the patient may receive steroids during radiation therapy to reduce swelling. Infertility The gonads (ovaries and testicles) are very sensitive to radiation. They may be unable to produce gametes following direct exposure to most normal treatment doses of radiation. Treatment planning for all body sites is designed to minimize, if not completely exclude dose to the gonads if they are not the primary area of treatment. === Late side effects === Late side effects occur months to years after treatment and are generally limited to the area that has been treated. They are often due to damage of blood vessels and connective tissue cells. Many late effects are reduced by fractionating treatment into smaller parts. Fibrosis Tissues which have been irradiated tend to become less elastic over time due to a diffuse scarring process. Epilation Epilation (hair loss) may occur on any hair bearing skin with doses above 1 Gy. It only occurs within the radiation field(s). Hair loss may be permanent with a single dose of 10 Gy, but if the dose is fractionated permanent hair loss may not occur until dose exceeds 45 Gy. Dryness The salivary glands and tear glands have a radiation tolerance of about 30 Gy in 2 Gy fractions, a dose which is exceeded by most radical head and neck cancer treatments. Dry mouth (xerostomia) and dry eyes (xerophthalmia) can become irritating long-term problems and severely reduce the patient's quality of life. Similarly, sweat glands in treated skin (such as the armpit) tend to stop working, and the naturally moist vaginal mucosa is often dry following pelvic irradiation. Chronic sinus drainage Radiation therapy treatments to the head and neck regions for soft tissue, palate or bone cancer can cause chronic sinus tract draining and fistulae from the bone. Lymphedema Lymphedema, a condition of localized fluid retention and tissue swelling, can result from damage to the lymphatic system sustained during radiation therapy. It is the most commonly reported complication in breast radiation therapy patients who receive adjuvant axillary radiotherapy following surgery to clear the axillary lymph nodes . Cancer Radiation is a potential cause of cancer, and secondary malignancies are seen in some patients. Cancer survivors are already more likely than the general population to develop malignancies due to a number of factors including lifestyle choices, genetics, and previous radiation treatment. It is difficult to directly quantify the rates of these secondary cancers from any single cause. Studies have found radiation therapy as the cause of secondary malignancies for only a small minority of patients, e.g., exposure to ionizing radiation is an identified risk factor for subsequent glioma; see main topic Glioma#Causes. The combined risk of a radiation-induced glioblastoma or astrocytoma within 15 years of the initial radiotherapy is 0.5-2.7%. New techniques such as proton beam therapy and carbon ion radiotherapy which aim to reduce dose to healthy tissues will lower these risks. It starts to occur 4–6 years following treatment, although some haematological malignancies may develop within 3 years. In the vast majority of cases, this risk is greatly outweighed by the reduction in risk conferred by treating the primary cancer even in pediatric malignancies which carry a higher burden of secondary malignancies. Cardiovascular disease Radiation can increase the risk of heart disease and death as observed in previous breast cancer RT regimens. Therapeutic radiation increases the risk of a subsequent cardiovascular event (i.e., heart attack or stroke) by 1.5 to 4 times a person's normal rate, aggravating factors included. The increase is dose dependent, related to the RT's dose strength, volume and location. Use of concomitant chemotherapy, e.g. anthracyclines, is an aggravating risk factor. The occurrence rate of RT induced cardiovascular disease is estimated between 10 and 30%. Cardiovascular late side effects have been termed radiation-induced heart disease (RIHD) and radiation-induced cardiovascular disease (RIVD). Symptoms are dose dependent and include cardiomyopathy, myocardial fibrosis, valvular heart disease, coronary artery disease, heart arrhythmia and peripheral artery disease. Radiation-induced fibrosis, vascular cell damage and oxidative stress can lead to these and other late side effect symptoms. Most radiation-induced cardiovascular diseases occur 10 or more years post treatment, making causality determinations more difficult. Cognitive decline In cases of radiation applied to the head radiation therapy may cause cognitive decline. Cognitive decline was especially apparent in young children, between the ages of 5 and 11. Studies found, for example, that the IQ of 5-year-old children declined each year after treatment by several IQ points. Radiation enteropathy The gastrointestinal tract can be damaged following abdominal and pelvic radiotherapy. Atrophy, fibrosis and vascular changes produce malabsorption, diarrhea, steatorrhea and bleeding with bile acid diarrhea and vitamin B12 malabsorption commonly found due to ileal involvement. Pelvic radiation disease includes radiation proctitis, producing bleeding, diarrhoea and urgency, and can also cause radiation cystitis when the bladder is affected. Lung injury Radiation-induced lung injury (RILI) encompasses radiation pneumonitis and pulmonary fibrosis. Lung tissue is sensitive to ionizing radiation, tolerating only 18–20 Gy, a fraction of typical therapeutic dosage levels. The lung's terminal airways and associated alveoli can become damaged, preventing effective respiratory gas exchange. The adverse effects of radiation are often asymptomatic with clinically significant RILI occurrence rates varying widely in literature, affecting 5–25% of those treated for thoracic and mediastinal malignancies and 1–5% of those treated for breast cancer. Neurogenic lower urinary tract dysfunction Pelvic radiation therapy has been associated with acquired neurogenic bladder dysfunction, radiation impacting the nerves or structures involved with urinary continence and voiding. The voluntary micturition process is controlled by the central nervous system, synchronizing the bladder's detrusor muscle and the internal and external urethral sphincters. Trauma to the process's components, e.g., spinal cord, peripheral motor and sensor nerves, and the bladder and urethra sphincters, can cause dysfunction, e.g., dysuria, frequency and incontinence. Radiation-induced polyneuropathy Radiation treatments may damage nerves near the target area or within the delivery path as nerve tissue is also radiosensitive. Nerve damage from ionizing radiation occurs in phases, the initial phase from microvascular injury, capillary damage and nerve demyelination. Subsequent damage occurs from vascular constriction and nerve compression due to uncontrolled fibrous tissue growth caused by radiation. Radiation-induced polyneuropathy, ICD-10-CM Code G62.82, occurs in approximately 1–5% of those receiving radiation therapy. Depending upon the irradiated zone, late effect neuropathy may occur in either the central nervous system (CNS) or the peripheral nervous system (PNS). In the CNS for example, cranial nerve injury typically presents as a visual acuity loss 1–14 years post treatment. In the PNS, injury to the plexus nerves presents as radiation-induced brachial plexopathy or radiation-induced lumbosacral plexopathy appearing up to 3 decades post treatment. Myokymia (muscle cramping, spasms or twitching) may develop. Radiation-induced nerve injury, chronic compressive neuropathies and polyradiculopathies are the most common cause of myokymic discharges. Clinically, the majority of patients receiving radiation therapy have measurable myokymic discharges within their field of radiation which present as focal or segmental myokymia. Common areas affected include the arms, legs or face depending upon the location of nerve injury. Myokymia is more frequent when radiation doses exceed 10 gray (Gy). Radiation necrosis Radiation necrosis is the death of healthy tissue near the irradiated site. It is a type of coagulative necrosis that occurs because the radiation directly or indirectly damages blood vessels in the area, which reduces the blood supply to the remaining healthy tissue, causing it to die by ischemia, similar to what happens in an ischemic stroke. Because it is an indirect effect of the treatment, it occurs months to decades after radiation exposure. Radiation necrosis most commonly presents as osteoradionecrosis, vaginal radionecrosis, soft tissue radionecrosis, or laryngeal radionecrosis. === Cumulative side effects === Cumulative effects from this process should not be confused with long-term effects – when short-term effects have disappeared and long-term effects are subclinical, reirradiation can still be problematic. These doses are calculated by the radiation oncologist and many factors are taken into account before the subsequent radiation takes place. === Effects on reproduction === During the first two weeks after fertilization, radiation therapy is lethal but not teratogenic. High doses of radiation during pregnancy induce anomalies, impaired growth and intellectual disability, and there may be an increased risk of childhood leukemia and other tumors in the offspring. In males previously having undergone radiotherapy, there appears to be no increase in genetic defects or congenital malformations in their children conceived after therapy. However, the use of assisted reproductive technologies and micromanipulation techniques might increase this risk. === Effects on pituitary system === Hypopituitarism commonly develops after radiation therapy for sellar and parasellar neoplasms, extrasellar brain tumors, head and neck tumors, and following whole body irradiation for systemic malignancies. 40–50% of children treated for childhood cancer develop some endocrine side effect. Radiation-induced hypopituitarism mainly affects growth hormone and gonadal hormones. In contrast, adrenocorticotrophic hormone (ACTH) and thyroid stimulating hormone (TSH) deficiencies are the least common among people with radiation-induced hypopituitarism. Changes in prolactin-secretion is usually mild, and vasopressin deficiency appears to be very rare as a consequence of radiation. === Effects on subsequent surgery === Delayed tissue injury with impaired wound healing capability often develops after receiving doses in excess of 65 Gy. A diffuse injury pattern due to the external beam radiotherapy's holographic isodosing occurs. While the targeted tumor receives the majority of radiation, healthy tissue at incremental distances from the center of the tumor are also irradiated in a diffuse pattern due to beam divergence. These wounds demonstrate progressive, proliferative endarteritis, inflamed arterial linings that disrupt the tissue's blood supply. Such tissue ends up chronically hypoxic, fibrotic, and without an adequate nutrient and oxygen supply. Surgery of previously irradiated tissue has a very high failure rate, e.g. women who have received radiation for breast cancer develop late effect chest wall tissue fibrosis and hypovascularity, making successful reconstruction and healing difficult, if not impossible. === Radiation therapy accidents === There are rigorous procedures in place to minimise the risk of accidental overexposure of radiation therapy to patients. However, mistakes do occasionally occur; for example, the radiation therapy machine Therac-25 was responsible for at least six accidents between 1985 and 1987, where patients were given up to one hundred times the intended dose; two people were killed directly by the radiation overdoses. From 2005 to 2010, a hospital in Missouri overexposed 76 patients (most with brain cancer) during a five-year period because new radiation equipment had been set up incorrectly. Although medical errors are exceptionally rare, radiation oncologists, medical physicists and other members of the radiation therapy treatment team are working to eliminate them. In 2010 the American Society for Radiation Oncology (ASTRO) launched a safety initiative called Target Safely that, among other things, aimed to record errors nationwide so that doctors can learn from each and every mistake and prevent them from recurring. ASTRO also publishes a list of questions for patients to ask their doctors about radiation safety to ensure every treatment is as safe as possible. == Use in non-cancerous diseases == Radiation therapy is used to treat early stage Dupuytren's disease and Ledderhose disease. When Dupuytren's disease is at the nodules and cords stage or fingers are at a minimal deformation stage of less than 10 degrees, then radiation therapy is used to prevent further progress of the disease. Radiation therapy is also used post surgery in some cases to prevent the disease continuing to progress. Low doses of radiation are used typically three gray of radiation for five days, with a break of three months followed by another phase of three gray of radiation for five days. == Technique == === Mechanism of action === Radiation therapy works by damaging the DNA of cancer cells and can cause them to undergo mitotic catastrophe. This DNA damage is caused by one of two types of energy, photon or charged particle. This damage is either direct or indirect ionization of the atoms which make up the DNA chain. Indirect ionization happens as a result of the ionization of water, forming free radicals, notably hydroxyl radicals, which then damage the DNA. In photon therapy, most of the radiation effect is through free radicals. Cells have mechanisms for repairing single-strand DNA damage and double-stranded DNA damage. However, double-stranded DNA breaks are much more difficult to repair, and can lead to dramatic chromosomal abnormalities and genetic deletions. Targeting double-stranded breaks increases the probability that cells will undergo cell death. Cancer cells are generally less differentiated and more stem cell-like; they reproduce more than most healthy differentiated cells, and have a diminished ability to repair sub-lethal damage. Single-strand DNA damage is then passed on through cell division; damage to the cancer cells' DNA accumulates, causing them to die or reproduce more slowly. One of the major limitations of photon radiation therapy is that the cells of solid tumors become deficient in oxygen. Solid tumors can outgrow their blood supply, causing a low-oxygen state known as hypoxia. Oxygen is a potent radiosensitizer, increasing the effectiveness of a given dose of radiation by forming DNA-damaging free radicals. Tumor cells in a hypoxic environment may be as much as 2 to 3 times more resistant to radiation damage than those in a normal oxygen environment. Much research has been devoted to overcoming hypoxia including the use of high pressure oxygen tanks, hyperthermia therapy (heat therapy which dilates blood vessels to the tumor site), blood substitutes that carry increased oxygen, hypoxic cell radiosensitizer drugs such as misonidazole and metronidazole, and hypoxic cytotoxins (tissue poisons), such as tirapazamine. Newer research approaches are currently being studied, including preclinical and clinical investigations into the use of an oxygen diffusion-enhancing compound such as trans sodium crocetinate as a radiosensitizer. Charged particles such as protons and boron, carbon, and neon ions can cause direct damage to cancer cell DNA through high-LET (linear energy transfer) and have an antitumor effect independent of tumor oxygen supply because these particles act mostly via direct energy transfer usually causing double-stranded DNA breaks. Due to their relatively large mass, protons and other charged particles have little lateral side scatter in the tissue – the beam does not broaden much, stays focused on the tumor shape, and delivers small dose side-effects to surrounding tissue. They also more precisely target the tumor using the Bragg peak effect. See proton therapy for a good example of the different effects of intensity-modulated radiation therapy (IMRT) vs. charged particle therapy. This procedure reduces damage to healthy tissue between the charged particle radiation source and the tumor and sets a finite range for tissue damage after the tumor has been reached. In contrast, IMRT's use of uncharged particles causes its energy to damage healthy cells when it exits the body. This exiting damage is not therapeutic, can increase treatment side effects, and increases the probability of secondary cancer induction. This difference is very important in cases where the close proximity of other organs makes any stray ionization very damaging (example: head and neck cancers). This X-ray exposure is especially bad for children, due to their growing bodies, and while depending on a multitude of factors, they are around 10 times more sensitive to developing secondary malignancies after radiotherapy as compared to adults. === Dose === The amount of radiation used in photon radiation therapy is measured in grays (Gy), and varies depending on the type and stage of cancer being treated. For curative cases, the typical dose for a solid epithelial tumor ranges from 60 to 80 Gy, while lymphomas are treated with 20 to 40 Gy. Preventive (adjuvant) doses are typically around 45–60 Gy in 1.8–2 Gy fractions (for breast, head, and neck cancers.) Many other factors are considered by radiation oncologists when selecting a dose, including whether the patient is receiving chemotherapy, patient comorbidities, whether radiation therapy is being administered before or after surgery, and the degree of success of surgery. Delivery parameters of a prescribed dose are determined during treatment planning (part of dosimetry). Treatment planning is generally performed on dedicated computers using specialized treatment planning software. Depending on the radiation delivery method, several angles or sources may be used to sum to the total necessary dose. The planner will try to design a plan that delivers a uniform prescription dose to the tumor and minimizes dose to surrounding healthy tissues. In radiation therapy, three-dimensional dose distributions may be evaluated using the dosimetry technique known as gel dosimetry. ==== Fractionation ==== The total dose is fractionated (spread out over time) for several important reasons. Fractionation allows normal cells time to recover, while tumor cells are generally less efficient in repair between fractions. Fractionation also allows tumor cells that were in a relatively radio-resistant phase of the cell cycle during one treatment to cycle into a sensitive phase of the cycle before the next fraction is given. Similarly, tumor cells that were chronically or acutely hypoxic (and therefore more radioresistant) may reoxygenate between fractions, improving the tumor cell kill. Fractionation regimens are individualised between different radiation therapy centers and even between individual doctors. In North America, Australia, and Europe, the typical fractionation schedule for adults is 1.8 to 2 Gy per day, five days a week. In some cancer types, prolongation of the fraction schedule over too long can allow for the tumor to begin repopulating, and for these tumor types, including head-and-neck and cervical squamous cell cancers, radiation treatment is preferably completed within a certain amount of time. For children, a typical fraction size may be 1.5 to 1.8 Gy per day, as smaller fraction sizes are associated with reduced incidence and severity of late-onset side effects in normal tissues. In some cases, two fractions per day are used near the end of a course of treatment. This schedule, known as a concomitant boost regimen or hyperfractionation, is used on tumors that regenerate more quickly when they are smaller. In particular, tumors in the head-and-neck demonstrate this behavior. Patients receiving palliative radiation to treat uncomplicated painful bone metastasis should not receive more than a single fraction of radiation. A single treatment gives comparable pain relief and morbidity outcomes to multiple-fraction treatments, and for patients with limited life expectancy, a single treatment is best to improve patient comfort. ==== Schedules for fractionation ==== One fractionation schedule that is increasingly being used and continues to be studied is hypofractionation. This is a radiation treatment in which the total dose of radiation is divided into large doses. Typical doses vary significantly by cancer type, from 2.2 Gy/fraction to 20 Gy/fraction, the latter being typical of stereotactic treatments (stereotactic ablative body radiotherapy, or SABR – also known as SBRT, or stereotactic body radiotherapy) for subcranial lesions, or SRS (stereotactic radiosurgery) for intracranial lesions. The rationale of hypofractionation is to reduce the probability of local recurrence by denying clonogenic cells the time they require to reproduce and also to exploit the radiosensitivity of some tumors. In particular, stereotactic treatments are intended to destroy clonogenic cells by a process of ablation, i.e., the delivery of a dose intended to destroy clonogenic cells directly, rather than to interrupt the process of clonogenic cell division repeatedly (apoptosis), as in routine radiotherapy. ==== Estimation of dose based on target sensitivity ==== Different cancer types have different radiation sensitivity. While predicting the sensitivity based on genomic or proteomic analyses of biopsy samples has proven challenging, the predictions of radiation effect on individual patients from genomic signatures of intrinsic cellular radiosensitivity have been shown to associate with clinical outcome. An alternative approach to genomics and proteomics was offered by the discovery that radiation protection in microbes is offered by non-enzymatic complexes of manganese and small organic metabolites. The content and variation of manganese (measurable by electron paramagnetic resonance) were found to be good predictors of radiosensitivity, and this finding extends also to human cells. An association was confirmed between total cellular manganese contents and their variation, and clinically inferred radioresponsiveness in different tumor cells, a finding that may be useful for more precise radiodosages and improved treatment of cancer patients. == Types == Historically, the three main divisions of radiation therapy are: external beam radiation therapy (EBRT or XRT) or teletherapy; brachytherapy or sealed source radiation therapy; and systemic radioisotope therapy or unsealed source radiotherapy. The differences relate to the position of the radiation source; external is outside the body, brachytherapy uses sealed radioactive sources placed precisely in the area under treatment, and systemic radioisotopes are given by infusion or oral ingestion. Brachytherapy can use temporary or permanent placement of radioactive sources. The temporary sources are usually placed by a technique called afterloading. In afterloading a hollow tube or applicator is placed surgically in the organ to be treated, and the sources are loaded into the applicator after the applicator is implanted. This minimizes radiation exposure to health care personnel. Particle therapy is a special case of external beam radiation therapy where the particles are protons or heavier ions. A review of radiation therapy randomised clinical trials from 2018 to 2021 found many practice-changing data and new concepts that emerge from RCTs, identifying techniques that improve the therapeutic ratio, techniques that lead to more tailored treatments, stressing the importance of patient satisfaction, and identifying areas that require further study. === External beam radiation therapy === The following three sections refer to treatment using X-rays. ==== Conventional external beam radiation therapy ==== Historically conventional external beam radiation therapy (2DXRT) was delivered via two-dimensional beams using kilovoltage therapy X-ray units, medical linear accelerators that generate high-energy X-rays, or with machines that were similar to a linear accelerator in appearance, but used a sealed radioactive source like the one shown above. 2DXRT mainly consists of a single beam of radiation delivered to the patient from several directions: often front or back, and both sides. Conventional refers to the way the treatment is planned or simulated on a specially calibrated diagnostic X-ray machine known as a simulator because it recreates the linear accelerator actions (or sometimes by eye), and to the usually well-established arrangements of the radiation beams to achieve a desired plan. The aim of simulation is to accurately target or localize the volume which is to be treated. This technique is well established and is generally quick and reliable. The worry is that some high-dose treatments may be limited by the radiation toxicity capacity of healthy tissues which lie close to the target tumor volume. An example of this problem is seen in radiation of the prostate gland, where the sensitivity of the adjacent rectum limited the dose which could be safely prescribed using 2DXRT planning to such an extent that tumor control may not be easily achievable. Prior to the invention of the CT, physicians and physicists had limited knowledge about the true radiation dosage delivered to both cancerous and healthy tissue. For this reason, 3-dimensional conformal radiation therapy has become the standard treatment for almost all tumor sites. More recently other forms of imaging are used including MRI, PET, SPECT and Ultrasound. ==== Stereotactic radiation ==== Stereotactic radiation is a specialized type of external beam radiation therapy. It uses focused radiation beams targeting a well-defined tumor using extremely detailed imaging scans. Radiation oncologists perform stereotactic treatments, often with the help of a neurosurgeon for tumors in the brain or spine. There are two types of stereotactic radiation. Stereotactic radiosurgery (SRS) is when doctors use a single or several stereotactic radiation treatments of the brain or spine. Stereotactic body radiation therapy (SBRT) refers to one or several stereotactic radiation treatments with the body, such as the lungs. Some doctors say an advantage to stereotactic treatments is that they deliver the right amount of radiation to the cancer in a shorter amount of time than traditional treatments, which can often take 6 to 11 weeks. Plus treatments are given with extreme accuracy, which should limit the effect of the radiation on healthy tissues. One problem with stereotactic treatments is that they are only suitable for certain small tumors. Stereotactic treatments can be confusing because many hospitals call the treatments by the name of the manufacturer rather than calling it SRS or SBRT. Brand names for these treatments include Axesse, Cyberknife, Gamma Knife, Novalis, Primatom, Synergy, X-Knife, TomoTherapy, Trilogy and Truebeam. This list changes as equipment manufacturers continue to develop new, specialized technologies to treat cancers. ==== Virtual simulation, and 3-dimensional conformal radiation therapy ==== The planning of radiation therapy treatment has been revolutionized by the ability to delineate tumors and adjacent normal structures in three dimensions using specialized CT and/or MRI scanners and planning software. Virtual simulation, the most basic form of planning, allows more accurate placement of radiation beams than is possible using conventional X-rays, where soft-tissue structures are often difficult to assess and normal tissues difficult to protect. An enhancement of virtual simulation is 3-dimensional conformal radiation therapy (3DCRT), in which the profile of each radiation beam is shaped to fit the profile of the target from a beam's eye view (BEV) using a multileaf collimator (MLC) and a variable number of beams. When the treatment volume conforms to the shape of the tumor, the relative toxicity of radiation to the surrounding normal tissues is reduced, allowing a higher dose of radiation to be delivered to the tumor than conventional techniques would allow. ==== Intensity-modulated radiation therapy (IMRT) ==== Intensity-modulated radiation therapy (IMRT) is an advanced type of high-precision radiation that is the next generation of 3DCRT. IMRT also improves the ability to conform the treatment volume to concave tumor shapes, for example when the tumor is wrapped around a vulnerable structure such as the spinal cord or a major organ or blood vessel. Computer-controlled X-ray accelerators distribute precise radiation doses to malignant tumors or specific areas within the tumor. The pattern of radiation delivery is determined using highly tailored computing applications to perform optimization and treatment simulation (Treatment Planning). The radiation dose is consistent with the 3-D shape of the tumor by controlling, or modulating, the radiation beam's intensity. The radiation dose intensity is elevated near the gross tumor volume while radiation among the neighboring normal tissues is decreased or avoided completely. This results in better tumor targeting, lessened side effects, and improved treatment outcomes than even 3DCRT. 3DCRT is still used extensively for many body sites but the use of IMRT is growing in more complicated body sites such as CNS, head and neck, prostate, breast, and lung. Unfortunately, IMRT is limited by its need for additional time from experienced medical personnel. This is because physicians must manually delineate the tumors one CT image at a time through the entire disease site which can take much longer than 3DCRT preparation. Then, medical physicists and dosimetrists must be engaged to create a viable treatment plan. Also, the IMRT technology has only been used commercially since the late 1990s even at the most advanced cancer centers, so radiation oncologists who did not learn it as part of their residency programs must find additional sources of education before implementing IMRT. Proof of improved survival benefit from either of these two techniques over conventional radiation therapy (2DXRT) is growing for many tumor sites, but the ability to reduce toxicity is generally accepted. This is particularly the case for head and neck cancers in a series of pivotal trials performed by Professor Christopher Nutting of the Royal Marsden Hospital. Both techniques enable dose escalation, potentially increasing usefulness. There has been some concern, particularly with IMRT, about increased exposure of normal tissue to radiation and the consequent potential for secondary malignancy. Overconfidence in the accuracy of imaging may increase the chance of missing lesions that are invisible on the planning scans (and therefore not included in the treatment plan) or that move between or during a treatment (for example, due to respiration or inadequate patient immobilization). New techniques are being developed to better control this uncertainty – for example, real-time imaging combined with real-time adjustment of the therapeutic beams. This new technology is called image-guided radiation therapy or four-dimensional radiation therapy. Another technique is the real-time tracking and localization of one or more small implantable electric devices implanted inside or close to the tumor. There are various types of medical implantable devices that are used for this purpose. It can be a magnetic transponder which senses the magnetic field generated by several transmitting coils, and then transmits the measurements back to the positioning system to determine the location. The implantable device can also be a small wireless transmitter sending out an RF signal which then will be received by a sensor array and used for localization and real-time tracking of the tumor position. A well-studied issue with IMRT is the \"tongue and groove effect\" which results in unwanted underdosing, due to irradiating through extended tongues and grooves of overlapping MLC (multileaf collimator) leaves. While solutions to this issue have been developed, which either reduce the TG effect to negligible amounts or remove it completely, they depend upon the method of IMRT being used and some of them carry costs of their own. Some texts distinguish \"tongue and groove error\" from \"tongue or groove error\", according as both or one side of the aperture is occluded. ==== Volumetric modulated arc therapy (VMAT) ==== Volumetric modulated arc therapy (VMAT) is a radiation technique introduced in 2007 which can achieve highly conformal dose distributions on target volume coverage and sparing of normal tissues. The specificity of this technique is to modify three parameters during the treatment. VMAT delivers radiation by rotating gantry (usually 360° rotating fields with one or more arcs), changing speed and shape of the beam with a multileaf collimator (MLC) (\"sliding window\" system of moving) and fluence output rate (dose rate) of the medical linear accelerator. VMAT has an advantage in patient treatment, compared with conventional static field intensity modulated radiotherapy (IMRT), of reduced radiation delivery times. Comparisons between VMAT and conventional IMRT for their sparing of healthy tissues and Organs at Risk (OAR) depends upon the cancer type. In the treatment of nasopharyngeal, oropharyngeal and hypopharyngeal carcinomas VMAT provides equivalent or better protection of the organ at risk (OAR). In the treatment of prostate cancer the OAR protection result is mixed with some studies favoring VMAT, others favoring IMRT. ==== Temporally feathered radiation therapy (TFRT) ==== Temporally feathered radiation therapy (TFRT) is a radiation technique introduced in 2018 which aims to use the inherent non-linearities in normal tissue repair to allow for sparing of these tissues without affecting the dose delivered to the tumor. The application of this technique, which has yet to be automated, has been described carefully to enhance the ability of departments to perform it, and in 2021 it was reported as feasible in a small clinical trial, though its efficacy has yet to be formally studied. ==== Automated planning ==== Automated treatment planning has become an integrated part of radiotherapy treatment planning. There are in general two approaches of automated planning. 1) Knowledge based planning where the treatment planning system has a library of high quality plans, from which it can predict the target and dose-volume histogram of the organ at risk. 2) The other approach is commonly called protocol based planning, where the treatment planning system tried to mimic an experienced treatment planner and through an iterative process evaluates the plan quality from on the basis of the protocol. ==== Particle therapy ==== In particle therapy (proton therapy being one example), energetic ionizing particles (protons or carbon ions) are directed at the target tumor. The dose increases while the particle penetrates the tissue, up to a maximum (the Bragg peak) that occurs near the end of the particle's range, and it then drops to (almost) zero. The advantage of this energy deposition profile is that less energy is deposited into the healthy tissue surrounding the target tissue. ==== Auger therapy ==== Auger therapy (AT) makes use of a very high dose of ionizing radiation in situ that provides molecular modifications at an atomic scale. AT differs from conventional radiation therapy in several aspects; it neither relies upon radioactive nuclei to cause cellular radiation damage at a cellular dimension, nor engages multiple external pencil-beams from different directions to zero-in to deliver a dose to the targeted area with reduced dose outside the targeted tissue/organ locations. Instead, the in situ delivery of a very high dose at the molecular level using AT aims for in situ molecular modifications involving molecular breakages and molecular re-arrangements such as a change of stacking structures as well as cellular metabolic functions related to the said molecule structures. ==== Motion compensation ==== In many types of external beam radiotherapy, motion can negatively impact the treatment delivery by moving target tissue out of, or other healthy tissue into, the intended beam path. Some form of patient immobilisation is common, to prevent the large movements of the body during treatment, however this cannot prevent all motion, for example as a result of breathing. Several techniques have been developed to account for motion like this. Deep inspiration breath-hold (DIBH) is commonly used for breast treatments where it is important to avoid irradiating the heart. In DIBH the patient holds their breath after breathing in to provide a stable position for the treatment beam to be turned on. This can be done automatically using an external monitoring system such as a spirometer or a camera and markers. The same monitoring techniques, as well as 4DCT imaging, can also be for respiratory gated treatment, where the patient breathes freely and the beam is only engaged at certain points in the breathing cycle. Other techniques include using 4DCT imaging to plan treatments with margins that account for motion, and active movement of the treatment couch, or beam, to follow motion. === Contact X-ray brachytherapy === Contact X-ray brachytherapy (also called \"CXB\", \"electronic brachytherapy\" or the \"Papillon Technique\") is a type of radiation therapy using low energy (50 kVp) kilovoltage X-rays applied directly to the tumor to treat rectal cancer. The process involves endoscopic examination first to identify the tumor in the rectum and then inserting treatment applicator on the tumor through the anus into the rectum and placing it against the cancerous tissue. Finally, treatment tube is inserted into the applicator to deliver high doses of X-rays (30Gy) emitted directly onto the tumor at two weekly intervals for three times over four weeks period. It is typically used for treating early rectal cancer in patients who may not be candidates for surgery. A 2015 NICE review found the main side effect to be bleeding that occurred in about 38% of cases, and radiation-induced ulcer which occurred in 27% of cases. === Brachytherapy (sealed source radiotherapy) === Brachytherapy is delivered by placing radiation source(s) inside or next to the area requiring treatment. Brachytherapy is commonly used as an effective treatment for cervical, prostate, breast, and skin cancer and can also be used to treat tumors in many other body sites. In brachytherapy, radiation sources are precisely placed directly at the site of the cancerous tumor. This means that the irradiation only affects a very localized area – exposure to radiation of healthy tissues further away from the sources is reduced. These characteristics of brachytherapy provide advantages over external beam radiation therapy – the tumor can be treated with very high doses of localized radiation, whilst reducing the probability of unnecessary damage to surrounding healthy tissues. A course of brachytherapy can often be completed in less time than other radiation therapy techniques. This can help reduce the chance of surviving cancer cells dividing and growing in the intervals between each radiation therapy dose. As one example of the localized nature of breast brachytherapy, the SAVI device delivers the radiation dose through multiple catheters, each of which can be individually controlled. This approach decreases the exposure of healthy tissue and resulting side effects, compared both to external beam radiation therapy and older methods of breast brachytherapy. === Radionuclide therapy === Radionuclide therapy (also known as systemic radioisotope therapy, radiopharmaceutical therapy, or molecular radiotherapy), is a form of targeted therapy. Targeting can be due to the chemical properties of the isotope such as radioiodine which is specifically absorbed by the thyroid gland a thousandfold better than other bodily organs. Targeting can also be achieved by attaching the radioisotope to another molecule or antibody to guide it to the target tissue. The radioisotopes are delivered through infusion (into the bloodstream) or ingestion. Examples are the infusion of metaiodobenzylguanidine (MIBG) to treat neuroblastoma, of oral iodine-131 to treat thyroid cancer or thyrotoxicosis, and of hormone-bound lutetium-177 and yttrium-90 to treat neuroendocrine tumors (peptide receptor radionuclide therapy). Another example is the injection of radioactive yttrium-90 or holmium-166 microspheres into the hepatic artery to radioembolize liver tumors or liver metastases. These microspheres are used for the treatment approach known as selective internal radiation therapy. The microspheres are approximately 30 μm in diameter (about one-third of a human hair) and are delivered directly into the artery supplying blood to the tumors. These treatments begin by guiding a catheter up through the femoral artery in the leg, navigating to the desired target site and administering treatment. The blood feeding the tumor will carry the microspheres directly to the tumor enabling a more selective approach than traditional systemic chemotherapy. There are currently three different kinds of microspheres: SIR-Spheres, TheraSphere and QuiremSpheres. A major use of systemic radioisotope therapy is in the treatment of bone metastasis from cancer. The radioisotopes travel selectively to areas of damaged bone, and spare normal undamaged bone. Isotopes commonly used in the treatment of bone metastasis are radium-223, strontium-89 and samarium (153Sm) lexidronam. In 2002, the United States Food and Drug Administration (FDA) approved ibritumomab tiuxetan (Zevalin), which is an anti-CD20 monoclonal antibody conjugated to yttrium-90. In 2003, the FDA approved the tositumomab/iodine (131I) tositumomab regimen (Bexxar), which is a combination of an iodine-131 labelled and an unlabelled anti-CD20 monoclonal antibody. These medications were the first agents of what is known as radioimmunotherapy, and they were approved for the treatment of refractory non-Hodgkin's lymphoma. === Intraoperative radiotherapy === Intraoperative radiation therapy (IORT) is applying therapeutic levels of radiation to a target area, such as a cancer tumor, while the area is exposed during surgery. ==== Rationale ==== The rationale for IORT is to deliver a high dose of radiation precisely to the targeted area with minimal exposure of surrounding tissues which are displaced or shielded during the IORT. Conventional radiation techniques such as external beam radiotherapy (EBRT) following surgical removal of the tumor have several drawbacks: The tumor bed where the highest dose should be applied is frequently missed due to the complex localization of the wound cavity even when modern radiotherapy planning is used. Additionally, the usual delay between the surgical removal of the tumor and EBRT may allow a repopulation of the tumor cells. These potentially harmful effects can be avoided by delivering the radiation more precisely to the targeted tissues leading to immediate sterilization of residual tumor cells. Another aspect is that wound fluid has a stimulating effect on tumor cells. IORT was found to inhibit the stimulating effects of wound fluid. == History == Medicine has used radiation therapy as a treatment for cancer for more than 100 years, with its earliest roots traced from the discovery of X-rays in 1895 by Wilhelm Röntgen. Emil Grubbe of Chicago was possibly the first American physician to use X-rays to treat cancer, beginning in 1896. The field of radiation therapy began to grow in the early 1900s largely due to the groundbreaking work of Nobel Prize–winning scientist Marie Curie (1867–1934), who discovered the radioactive elements polonium and radium in 1898. This began a new era in medical treatment and research. Through the 1920s the hazards of radiation exposure were not understood, and little protection was used. Radium was believed to have wide curative powers and radiotherapy was applied to many diseases. Prior to World War 2, the only practical sources of radiation for radiotherapy were radium, its \"emanation\", radon gas, and the X-ray tube. External beam radiotherapy (teletherapy) began at the turn of the century with relatively low voltage (<150 kV) X-ray machines. It was found that while superficial tumors could be treated with low voltage X-rays, more penetrating, higher energy beams were required to reach tumors inside the body, requiring higher voltages. Orthovoltage X-rays, which used tube voltages of 200-500 kV, began to be used during the 1920s. To reach the most deeply buried tumors without exposing intervening skin and tissue to dangerous radiation doses required rays with energies of 1 MV or above, called \"megavolt\" radiation. Producing megavolt X-rays required voltages on the X-ray tube of 3 to 5 million volts, which required huge expensive installations. Megavoltage X-ray units were first built in the late 1930s but because of cost were limited to a few institutions. One of the first, installed at St. Bartholomew's hospital, London in 1937 and used until 1960, used a 30 foot long X-ray tube and weighed 10 tons. Radium produced megavolt gamma rays, but was extremely rare and expensive due to its low occurrence in ores. In 1937 the entire world supply of radium for radiotherapy was 50 grams, valued at £800,000, or $50 million in 2005 dollars. The invention of the nuclear reactor in the Manhattan Project during World War 2 made possible the production of artificial radioisotopes for radiotherapy. Cobalt therapy, teletherapy machines using megavolt gamma rays emitted by cobalt-60, a radioisotope produced by irradiating ordinary cobalt metal in a reactor, revolutionized the field between the 1950s and the early 1980s. Cobalt machines were relatively cheap, robust and simple to use, although due to its 5.27 year half-life the cobalt had to be replaced about every 5 years. Medical linear particle accelerators, developed since the 1940s, began replacing X-ray and cobalt units in the 1980s and these older therapies are now declining. The first medical linear accelerator was used at the Hammersmith Hospital in London in 1953. Linear accelerators can produce higher energies, have more collimated beams, and do not produce radioactive waste with its attendant disposal problems like radioisotope therapies. With Godfrey Hounsfield's invention of computed tomography (CT) in 1971, three-dimensional planning became a possibility and created a shift from 2-D to 3-D radiation delivery. CT-based planning allows physicians to more accurately determine the dose distribution using axial tomographic images of the patient's anatomy. The advent of new imaging technologies, including magnetic resonance imaging (MRI) in the 1970s and positron emission tomography (PET) in the 1980s, has moved radiation therapy from 3-D conformal to intensity-modulated radiation therapy (IMRT) and to image-guided radiation therapy tomotherapy. These advances allowed radiation oncologists to better see and target tumors, which have resulted in better treatment outcomes, more organ preservation and fewer side effects. While access to radiotherapy is improving globally, more than half of patients in low and middle income countries still do not have available access to the therapy as of 2017. == See also == == References == == Further reading == == External links == Information Human Health Campus The official website of the International Atomic Energy Agency dedicated to Professionals in Radiation Medicine. This site is managed by the Division of Human Health, Department of Nuclear Sciences and Applications RT Answers – ASTRO: patient information site The Radiation Therapy Oncology Group: an organisation for radiation oncology research RadiologyInfo -The radiology information resource for patients: Radiation Therapy Source of cancer stem cells' resistance to radiation explained on YouTube. Biologically equivalent dose calculator Radiobiology Treatment Gap Compensator Calculator About the profession PROS (Paediatric Radiation Oncology Society) American Society for Radiation Oncology European Society for Radiotherapy and Oncology Who does what in Radiation Oncology? – Responsibilities of the various personnel within Radiation Oncology in the United States Accidents and QA Verification of dose calculations in radiation therapy Radiation Safety in External Beam Radiotherapy (IAEA)"
+  },
+  "chunks": [
+    {
+      "id": "radiationtherapy_2d798aa9_c0000",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 977,
+      "content": "Radiation therapy or radiotherapy (RT, RTx, or XRT) is a treatment using ionizing radiation, generally provided as part of cancer therapy to either kill or control the growth of malignant cells. It is normally delivered by a linear particle accelerator. Radiation therapy may be curative in a number of types of cancer if they are localized to one area of the body, and have not spread to other parts. It may also be used as part of adjuvant therapy, to prevent tumor recurrence after surgery to remove a primary malignant tumor (for example, early stages of breast cancer). Radiation therapy is synergistic with chemotherapy, and has been used before, during, and after chemotherapy in susceptible cancers. The subspecialty of oncology concerned with radiotherapy is called radiation oncology. A physician who practices in this subspecialty is a radiation oncologist. Radiation therapy is commonly applied to the cancerous tumor because of its ability to control cell growth.",
+      "char_count": 976,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0001",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 977,
+      "end_char": 1881,
+      "content": "Ionizing radiation works by damaging the DNA of cancerous tissue leading to cellular death. To spare normal tissues (such as skin or organs which radiation must pass through to treat the tumor), shaped radiation beams are aimed from several angles of exposure to intersect at the tumor, providing a much larger absorbed dose there than in the surrounding healthy tissue. Besides the tumor itself, the radiation fields may also include the draining lymph nodes if they are clinically or radiologically involved with the tumor, or if there is thought to be a risk of subclinical malignant spread. It is necessary to include a margin of normal tissue around the tumor to allow for uncertainties in daily set-up and internal tumor motion. These uncertainties can be caused by internal movement (for example, respiration and bladder filling) and movement of external skin marks relative to the tumor position.",
+      "char_count": 904,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0002",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1882,
+      "end_char": 2774,
+      "content": "Radiation oncology is the medical specialty concerned with prescribing radiation, and is distinct from radiology, the use of radiation in medical imaging and diagnosis. Radiation may be prescribed by a radiation oncologist with intent to cure or for adjuvant therapy. It may also be used as palliative treatment (where cure is not possible and the aim is for local disease control or symptomatic relief) or as therapeutic treatment (where the therapy has survival benefit and can be curative). It is also common to combine radiation therapy with surgery, chemotherapy, hormone therapy, immunotherapy or some mixture of the four. Most common cancer types can be treated with radiation therapy in some way. The precise treatment intent (curative, adjuvant, neoadjuvant therapeutic, or palliative) will depend on the tumor type, location, and stage, as well as the general health of the patient.",
+      "char_count": 892,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0003",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 2775,
+      "end_char": 3589,
+      "content": "Total body irradiation (TBI) is a radiation therapy technique used to prepare the body to receive a bone marrow transplant. Brachytherapy, in which a radioactive source is placed inside or next to the area requiring treatment, is another form of radiation therapy that minimizes exposure to healthy tissue during procedures to treat cancers of the breast, prostate, and other organs. Radiation therapy has several applications in non-malignant conditions, such as the treatment of trigeminal neuralgia, acoustic neuromas, severe thyroid eye disease, pterygium, pigmented villonodular synovitis, and prevention of keloid scar growth, vascular restenosis, and heterotopic ossification. The use of radiation therapy in non-malignant conditions is limited partly by worries about the risk of radiation-induced cancers.",
+      "char_count": 814,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0004",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 3608,
+      "end_char": 4541,
+      "content": "== Medical uses == It is estimated that half of the US' 1.2M invasive cancer cases diagnosed in 2022 received radiation therapy in their treatment program. Different cancers respond to radiation therapy in different ways. The response of a cancer to radiation is described by its radiosensitivity. Highly radiosensitive cancer cells are rapidly killed by modest doses of radiation. These include leukemias, most lymphomas, and germ cell tumors. The majority of epithelial cancers are only moderately radiosensitive, and require a significantly higher dose of radiation (60–70 Gy) to achieve a radical cure. Some types of cancer are notably radioresistant, that is, much higher doses are required to produce a radical cure than may be safe in clinical practice. Renal cell cancer and melanoma are generally considered to be radioresistant but radiation therapy is still a palliative option for many patients with metastatic melanoma.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0005",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 4541,
+      "end_char": 5388,
+      "content": "Combining radiation therapy with immunotherapy is an active area of investigation and has shown some promise for melanoma and other cancers. It is important to distinguish the radiosensitivity of a particular tumor, which to some extent is a laboratory measure, from the radiation \"curability\" of a cancer in actual clinical practice. For example, leukemias are not generally curable with radiation therapy, because they are disseminated through the body. Lymphoma may be radically curable if it is localized to one area of the body. Similarly, many of the common, moderately radioresponsive tumors are routinely treated with curative doses of radiation therapy if they are at an early stage. For example, non-melanoma skin cancer, head and neck cancer, breast cancer, non-small cell lung cancer, cervical cancer, anal cancer, and prostate cancer.",
+      "char_count": 847,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0006",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 5389,
+      "end_char": 6203,
+      "content": "With the exception of oligometastatic disease, metastatic cancers are incurable with radiation therapy because it is not possible to treat the whole body. Modern radiation therapy relies on a CT scan to identify the tumor and surrounding normal structures and to perform dose calculations for the creation of a complex radiation treatment plan. The patient receives small skin marks to guide the placement of treatment fields. Patient positioning is crucial at this stage as the patient will have to be placed in an identical position during each treatment. Many patient positioning devices have been developed for this purpose, including masks and cushions which can be molded to the patient. Image-guided radiation therapy is a method that uses imaging to correct for positional errors of each treatment session.",
+      "char_count": 814,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0007",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 6204,
+      "end_char": 7198,
+      "content": "Building on the principles of Image-guided radiation therapy, Daily MR-guided ART (MRgART) offers many dosimetric advantages over the traditional single-plan RT workflow, including the ability to conform the high-dose region to the tumor as the anatomy changes throughout the course of RT. The response of a tumor to radiation therapy is also related to its size. Due to complex radiobiology, very large tumors are affected less by radiation compared to smaller tumors or microscopic disease. Various strategies are used to overcome this effect. The most common technique is surgical resection prior to radiation therapy. This is most commonly seen in the treatment of breast cancer with wide local excision or mastectomy followed by adjuvant radiation therapy. Another method is to shrink the tumor with neoadjuvant chemotherapy prior to radical radiation therapy. A third technique is to enhance the radiosensitivity of the cancer by giving certain drugs during a course of radiation therapy.",
+      "char_count": 994,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0008",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Medical uses ==",
+      "heading_path": "== Medical uses ==",
+      "start_char": 7199,
+      "end_char": 7595,
+      "content": "Examples of radiosensitizing drugs include cisplatin, nimorazole, and cetuximab. The impact of radiotherapy varies between different types of cancer and different groups. For example, for breast cancer after breast-conserving surgery, radiotherapy has been found to halve the rate at which the disease recurs. In pancreatic cancer, radiotherapy has increased survival times for inoperable tumors.",
+      "char_count": 396,
+      "token_estimate": 99,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0009",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Side effects ==",
+      "heading_path": "== Side effects ==",
+      "start_char": 7596,
+      "end_char": 8547,
+      "content": "== Side effects == Radiation therapy (RT) is in itself painless, but has iatrogenic side effect risks. Many low-dose palliative treatments (for example, radiation therapy to bony metastases) cause minimal or no side effects, although short-term pain flare-up can be experienced in the days following treatment due to oedema compressing nerves in the treated area. Higher doses can cause varying side effects during treatment (acute side effects), in the months or years following treatment (long-term side effects), or after re-treatment (cumulative side effects). The nature, severity, and longevity of side effects depends on the organs that receive the radiation, the treatment itself (type of radiation, dose, fractionation, concurrent chemotherapy), and the patient. Serious radiation complications may occur in 5% of RT cases. Acute (near immediate) or sub-acute (2 to 3 months post RT) radiation side effects may develop after 50 Gy RT dosing.",
+      "char_count": 950,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0010",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Side effects ==",
+      "heading_path": "== Side effects ==",
+      "start_char": 8547,
+      "end_char": 9361,
+      "content": "Late or delayed radiation injury (6 months to decades) may develop after 65 Gy. Side effects from radiation are usually limited to the area of the patient's body that is under treatment. Side effects are dose-dependent; for example, higher doses of head and neck radiation can be associated with cardiovascular complications, thyroid dysfunction, and pituitary axis dysfunction. Modern radiation therapy aims to reduce side effects to a minimum and to help the patient understand and deal with side effects that are unavoidable. The main side effects reported are fatigue and skin irritation, like a mild to moderate sun burn. The fatigue often sets in during the middle of a course of treatment and can last for weeks after treatment ends. The irritated skin will heal, but may not be as elastic as it was before.",
+      "char_count": 814,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0011",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Acute side effects ==",
+      "heading_path": "== = Acute side effects ==",
+      "start_char": 9370,
+      "end_char": 10317,
+      "content": "== = Acute side effects === Nausea and vomiting This is not a general side effect of radiation therapy, and mechanistically is associated only with treatment of the stomach or abdomen (which commonly react a few hours after treatment), or with radiation therapy to certain nausea-producing structures in the head during treatment of certain head and neck tumors, most commonly the vestibules of the inner ears. As with any distressing treatment, some patients vomit immediately during radiotherapy, or even in anticipation of it, but this is considered a psychological response. Nausea for any reason can be treated with antiemetics. Damage to the epithelial surfaces Epithelial surfaces may sustain damage from radiation therapy. Depending on the area being treated, this may include the skin, oral mucosa, pharyngeal, bowel mucosa, and ureter. The rates of onset of damage and recovery from it depend upon the turnover rate of epithelial cells.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0012",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Acute side effects ==",
+      "heading_path": "== = Acute side effects ==",
+      "start_char": 10317,
+      "end_char": 11212,
+      "content": "Typically the skin starts to become pink and sore several weeks into treatment. The reaction may become more severe during the treatment and for up to about one week following the end of radiation therapy, and the skin may break down. Although this moist desquamation is uncomfortable, recovery is usually quick. Skin reactions tend to be worse in areas where there are natural folds in the skin, such as underneath the female breast, behind the ear, and in the groin. Mouth, throat and stomach sores If the head and neck area is treated, temporary soreness and ulceration commonly occur in the mouth and throat. If severe, this can affect swallowing, and the patient may need painkillers and nutritional support/food supplements. The esophagus can also become sore if it is treated directly, or if, as commonly occurs, it receives a dose of collateral radiation during treatment of lung cancer.",
+      "char_count": 895,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0013",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Acute side effects ==",
+      "heading_path": "== = Acute side effects ==",
+      "start_char": 11213,
+      "end_char": 12159,
+      "content": "When treating liver malignancies and metastases, it is possible for collateral radiation to cause gastric, stomach, or duodenal ulcers This collateral radiation is commonly caused by non-targeted delivery (reflux) of the radioactive agents being infused. Methods, techniques and devices are available to lower the occurrence of this type of adverse side effect. Intestinal discomfort The lower bowel may be treated directly with radiation (treatment of rectal or anal cancer) or be exposed by radiation therapy to other pelvic structures (prostate, bladder, female genital tract). Typical symptoms are soreness, diarrhoea, and nausea. Nutritional interventions may be able to help with diarrhoea associated with radiotherapy. Studies in people having pelvic radiotherapy as part of anticancer treatment for a primary pelvic cancer found that changes in dietary fat, fibre and lactose during radiotherapy reduced diarrhoea at the end of treatment.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0014",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Acute side effects ==",
+      "heading_path": "== = Acute side effects ==",
+      "start_char": 12160,
+      "end_char": 13074,
+      "content": "Swelling As part of the general inflammation that occurs, swelling of soft tissues may cause problems during radiation therapy. This is a concern during treatment of brain tumors and brain metastases, especially where there is pre-existing raised intracranial pressure or where the tumor is causing near-total obstruction of a lumen (e.g., trachea or main bronchus). Surgical intervention may be considered prior to treatment with radiation. If surgery is deemed unnecessary or inappropriate, the patient may receive steroids during radiation therapy to reduce swelling. Infertility The gonads (ovaries and testicles) are very sensitive to radiation. They may be unable to produce gametes following direct exposure to most normal treatment doses of radiation. Treatment planning for all body sites is designed to minimize, if not completely exclude dose to the gonads if they are not the primary area of treatment.",
+      "char_count": 914,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0015",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 13074,
+      "end_char": 13950,
+      "content": "== = Late side effects === Late side effects occur months to years after treatment and are generally limited to the area that has been treated. They are often due to damage of blood vessels and connective tissue cells. Many late effects are reduced by fractionating treatment into smaller parts. Fibrosis Tissues which have been irradiated tend to become less elastic over time due to a diffuse scarring process. Epilation Epilation (hair loss) may occur on any hair bearing skin with doses above 1 Gy. It only occurs within the radiation field(s). Hair loss may be permanent with a single dose of 10 Gy, but if the dose is fractionated permanent hair loss may not occur until dose exceeds 45 Gy. Dryness The salivary glands and tear glands have a radiation tolerance of about 30 Gy in 2 Gy fractions, a dose which is exceeded by most radical head and neck cancer treatments.",
+      "char_count": 875,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0016",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 13950,
+      "end_char": 14896,
+      "content": "Dry mouth (xerostomia) and dry eyes (xerophthalmia) can become irritating long-term problems and severely reduce the patient's quality of life. Similarly, sweat glands in treated skin (such as the armpit) tend to stop working, and the naturally moist vaginal mucosa is often dry following pelvic irradiation. Chronic sinus drainage Radiation therapy treatments to the head and neck regions for soft tissue, palate or bone cancer can cause chronic sinus tract draining and fistulae from the bone. Lymphedema Lymphedema, a condition of localized fluid retention and tissue swelling, can result from damage to the lymphatic system sustained during radiation therapy. It is the most commonly reported complication in breast radiation therapy patients who receive adjuvant axillary radiotherapy following surgery to clear the axillary lymph nodes . Cancer Radiation is a potential cause of cancer, and secondary malignancies are seen in some patients.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0017",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 14897,
+      "end_char": 15805,
+      "content": "Cancer survivors are already more likely than the general population to develop malignancies due to a number of factors including lifestyle choices, genetics, and previous radiation treatment. It is difficult to directly quantify the rates of these secondary cancers from any single cause. Studies have found radiation therapy as the cause of secondary malignancies for only a small minority of patients, e.g., exposure to ionizing radiation is an identified risk factor for subsequent glioma; see main topic Glioma#Causes. The combined risk of a radiation-induced glioblastoma or astrocytoma within 15 years of the initial radiotherapy is 0.5-2.7%. New techniques such as proton beam therapy and carbon ion radiotherapy which aim to reduce dose to healthy tissues will lower these risks. It starts to occur 4–6 years following treatment, although some haematological malignancies may develop within 3 years.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0018",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 15806,
+      "end_char": 16739,
+      "content": "In the vast majority of cases, this risk is greatly outweighed by the reduction in risk conferred by treating the primary cancer even in pediatric malignancies which carry a higher burden of secondary malignancies. Cardiovascular disease Radiation can increase the risk of heart disease and death as observed in previous breast cancer RT regimens. Therapeutic radiation increases the risk of a subsequent cardiovascular event (i.e., heart attack or stroke) by 1.5 to 4 times a person's normal rate, aggravating factors included. The increase is dose dependent, related to the RT's dose strength, volume and location. Use of concomitant chemotherapy, e.g. anthracyclines, is an aggravating risk factor. The occurrence rate of RT induced cardiovascular disease is estimated between 10 and 30%. Cardiovascular late side effects have been termed radiation-induced heart disease (RIHD) and radiation-induced cardiovascular disease (RIVD).",
+      "char_count": 933,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0019",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 16740,
+      "end_char": 17599,
+      "content": "Symptoms are dose dependent and include cardiomyopathy, myocardial fibrosis, valvular heart disease, coronary artery disease, heart arrhythmia and peripheral artery disease. Radiation-induced fibrosis, vascular cell damage and oxidative stress can lead to these and other late side effect symptoms. Most radiation-induced cardiovascular diseases occur 10 or more years post treatment, making causality determinations more difficult. Cognitive decline In cases of radiation applied to the head radiation therapy may cause cognitive decline. Cognitive decline was especially apparent in young children, between the ages of 5 and 11. Studies found, for example, that the IQ of 5-year-old children declined each year after treatment by several IQ points. Radiation enteropathy The gastrointestinal tract can be damaged following abdominal and pelvic radiotherapy.",
+      "char_count": 859,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0020",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 17600,
+      "end_char": 18561,
+      "content": "Atrophy, fibrosis and vascular changes produce malabsorption, diarrhea, steatorrhea and bleeding with bile acid diarrhea and vitamin B12 malabsorption commonly found due to ileal involvement. Pelvic radiation disease includes radiation proctitis, producing bleeding, diarrhoea and urgency, and can also cause radiation cystitis when the bladder is affected. Lung injury Radiation-induced lung injury (RILI) encompasses radiation pneumonitis and pulmonary fibrosis. Lung tissue is sensitive to ionizing radiation, tolerating only 18–20 Gy, a fraction of typical therapeutic dosage levels. The lung's terminal airways and associated alveoli can become damaged, preventing effective respiratory gas exchange. The adverse effects of radiation are often asymptomatic with clinically significant RILI occurrence rates varying widely in literature, affecting 5–25% of those treated for thoracic and mediastinal malignancies and 1–5% of those treated for breast cancer.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0021",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 18562,
+      "end_char": 19460,
+      "content": "Neurogenic lower urinary tract dysfunction Pelvic radiation therapy has been associated with acquired neurogenic bladder dysfunction, radiation impacting the nerves or structures involved with urinary continence and voiding. The voluntary micturition process is controlled by the central nervous system, synchronizing the bladder's detrusor muscle and the internal and external urethral sphincters. Trauma to the process's components, e.g., spinal cord, peripheral motor and sensor nerves, and the bladder and urethra sphincters, can cause dysfunction, e.g., dysuria, frequency and incontinence. Radiation-induced polyneuropathy Radiation treatments may damage nerves near the target area or within the delivery path as nerve tissue is also radiosensitive. Nerve damage from ionizing radiation occurs in phases, the initial phase from microvascular injury, capillary damage and nerve demyelination.",
+      "char_count": 898,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0022",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 19461,
+      "end_char": 20364,
+      "content": "Subsequent damage occurs from vascular constriction and nerve compression due to uncontrolled fibrous tissue growth caused by radiation. Radiation-induced polyneuropathy, ICD-10-CM Code G62.82, occurs in approximately 1–5% of those receiving radiation therapy. Depending upon the irradiated zone, late effect neuropathy may occur in either the central nervous system (CNS) or the peripheral nervous system (PNS). In the CNS for example, cranial nerve injury typically presents as a visual acuity loss 1–14 years post treatment. In the PNS, injury to the plexus nerves presents as radiation-induced brachial plexopathy or radiation-induced lumbosacral plexopathy appearing up to 3 decades post treatment. Myokymia (muscle cramping, spasms or twitching) may develop. Radiation-induced nerve injury, chronic compressive neuropathies and polyradiculopathies are the most common cause of myokymic discharges.",
+      "char_count": 903,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0023",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Late side effects ==",
+      "heading_path": "== = Late side effects ==",
+      "start_char": 20365,
+      "end_char": 21323,
+      "content": "Clinically, the majority of patients receiving radiation therapy have measurable myokymic discharges within their field of radiation which present as focal or segmental myokymia. Common areas affected include the arms, legs or face depending upon the location of nerve injury. Myokymia is more frequent when radiation doses exceed 10 gray (Gy). Radiation necrosis Radiation necrosis is the death of healthy tissue near the irradiated site. It is a type of coagulative necrosis that occurs because the radiation directly or indirectly damages blood vessels in the area, which reduces the blood supply to the remaining healthy tissue, causing it to die by ischemia, similar to what happens in an ischemic stroke. Because it is an indirect effect of the treatment, it occurs months to decades after radiation exposure. Radiation necrosis most commonly presents as osteoradionecrosis, vaginal radionecrosis, soft tissue radionecrosis, or laryngeal radionecrosis.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0024",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Cumulative side effects ==",
+      "heading_path": "== = Cumulative side effects ==",
+      "start_char": 21330,
+      "end_char": 21677,
+      "content": "== = Cumulative side effects === Cumulative effects from this process should not be confused with long-term effects – when short-term effects have disappeared and long-term effects are subclinical, reirradiation can still be problematic. These doses are calculated by the radiation oncologist and many factors are taken into account before the subsequent radiation takes place.",
+      "char_count": 377,
+      "token_estimate": 94,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0025",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Effects on reproduction ==",
+      "heading_path": "== = Effects on reproduction ==",
+      "start_char": 21708,
+      "end_char": 22290,
+      "content": "== = Effects on reproduction === During the first two weeks after fertilization, radiation therapy is lethal but not teratogenic. High doses of radiation during pregnancy induce anomalies, impaired growth and intellectual disability, and there may be an increased risk of childhood leukemia and other tumors in the offspring. In males previously having undergone radiotherapy, there appears to be no increase in genetic defects or congenital malformations in their children conceived after therapy. However, the use of assisted reproductive technologies and micromanipulation techniques might increase this risk.",
+      "char_count": 612,
+      "token_estimate": 153,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0026",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Effects on pituitary system ==",
+      "heading_path": "== = Effects on pituitary system ==",
+      "start_char": 22325,
+      "end_char": 23008,
+      "content": "== = Effects on pituitary system === Hypopituitarism commonly develops after radiation therapy for sellar and parasellar neoplasms, extrasellar brain tumors, head and neck tumors, and following whole body irradiation for systemic malignancies. 40–50% of children treated for childhood cancer develop some endocrine side effect. Radiation-induced hypopituitarism mainly affects growth hormone and gonadal hormones. In contrast, adrenocorticotrophic hormone (ACTH) and thyroid stimulating hormone (TSH) deficiencies are the least common among people with radiation-induced hypopituitarism. Changes in prolactin-secretion is usually mild, and vasopressin deficiency appears to be very rare as a consequence of radiation.",
+      "char_count": 717,
+      "token_estimate": 179,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0027",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Effects on subsequent surgery ==",
+      "heading_path": "== = Effects on subsequent surgery ==",
+      "start_char": 23045,
+      "end_char": 23960,
+      "content": "== = Effects on subsequent surgery === Delayed tissue injury with impaired wound healing capability often develops after receiving doses in excess of 65 Gy. A diffuse injury pattern due to the external beam radiotherapy's holographic isodosing occurs. While the targeted tumor receives the majority of radiation, healthy tissue at incremental distances from the center of the tumor are also irradiated in a diffuse pattern due to beam divergence. These wounds demonstrate progressive, proliferative endarteritis, inflamed arterial linings that disrupt the tissue's blood supply. Such tissue ends up chronically hypoxic, fibrotic, and without an adequate nutrient and oxygen supply. Surgery of previously irradiated tissue has a very high failure rate, e.g. women who have received radiation for breast cancer develop late effect chest wall tissue fibrosis and hypovascularity, making successful reconstruction and healing difficult, if not impossible.",
+      "char_count": 951,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0028",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Radiation therapy accidents ==",
+      "heading_path": "== = Radiation therapy accidents ==",
+      "start_char": 23995,
+      "end_char": 24799,
+      "content": "== = Radiation therapy accidents === There are rigorous procedures in place to minimise the risk of accidental overexposure of radiation therapy to patients. However, mistakes do occasionally occur; for example, the radiation therapy machine Therac-25 was responsible for at least six accidents between 1985 and 1987, where patients were given up to one hundred times the intended dose; two people were killed directly by the radiation overdoses. From 2005 to 2010, a hospital in Missouri overexposed 76 patients (most with brain cancer) during a five-year period because new radiation equipment had been set up incorrectly. Although medical errors are exceptionally rare, radiation oncologists, medical physicists and other members of the radiation therapy treatment team are working to eliminate them.",
+      "char_count": 803,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0029",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Radiation therapy accidents ==",
+      "heading_path": "== = Radiation therapy accidents ==",
+      "start_char": 24799,
+      "end_char": 25203,
+      "content": "In 2010 the American Society for Radiation Oncology (ASTRO) launched a safety initiative called Target Safely that, among other things, aimed to record errors nationwide so that doctors can learn from each and every mistake and prevent them from recurring. ASTRO also publishes a list of questions for patients to ask their doctors about radiation safety to ensure every treatment is as safe as possible.",
+      "char_count": 404,
+      "token_estimate": 101,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0030",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Use in non-cancerous diseases ==",
+      "heading_path": "== Use in non-cancerous diseases ==",
+      "start_char": 25204,
+      "end_char": 25784,
+      "content": "== Use in non-cancerous diseases == Radiation therapy is used to treat early stage Dupuytren's disease and Ledderhose disease. When Dupuytren's disease is at the nodules and cords stage or fingers are at a minimal deformation stage of less than 10 degrees, then radiation therapy is used to prevent further progress of the disease. Radiation therapy is also used post surgery in some cases to prevent the disease continuing to progress. Low doses of radiation are used typically three gray of radiation for five days, with a break of three months followed by another phase of three gray of radiation for five days.",
+      "char_count": 614,
+      "token_estimate": 153,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0031",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Mechanism of action ==",
+      "heading_path": "== = Mechanism of action ==",
+      "start_char": 25827,
+      "end_char": 26698,
+      "content": "== = Mechanism of action === Radiation therapy works by damaging the DNA of cancer cells and can cause them to undergo mitotic catastrophe. This DNA damage is caused by one of two types of energy, photon or charged particle. This damage is either direct or indirect ionization of the atoms which make up the DNA chain. Indirect ionization happens as a result of the ionization of water, forming free radicals, notably hydroxyl radicals, which then damage the DNA. In photon therapy, most of the radiation effect is through free radicals. Cells have mechanisms for repairing single-strand DNA damage and double-stranded DNA damage. However, double-stranded DNA breaks are much more difficult to repair, and can lead to dramatic chromosomal abnormalities and genetic deletions. Targeting double-stranded breaks increases the probability that cells will undergo cell death.",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0032",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Mechanism of action ==",
+      "heading_path": "== = Mechanism of action ==",
+      "start_char": 26698,
+      "end_char": 27533,
+      "content": "Cancer cells are generally less differentiated and more stem cell-like; they reproduce more than most healthy differentiated cells, and have a diminished ability to repair sub-lethal damage. Single-strand DNA damage is then passed on through cell division; damage to the cancer cells' DNA accumulates, causing them to die or reproduce more slowly. One of the major limitations of photon radiation therapy is that the cells of solid tumors become deficient in oxygen. Solid tumors can outgrow their blood supply, causing a low-oxygen state known as hypoxia. Oxygen is a potent radiosensitizer, increasing the effectiveness of a given dose of radiation by forming DNA-damaging free radicals. Tumor cells in a hypoxic environment may be as much as 2 to 3 times more resistant to radiation damage than those in a normal oxygen environment.",
+      "char_count": 835,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0033",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Mechanism of action ==",
+      "heading_path": "== = Mechanism of action ==",
+      "start_char": 27534,
+      "end_char": 28440,
+      "content": "Much research has been devoted to overcoming hypoxia including the use of high pressure oxygen tanks, hyperthermia therapy (heat therapy which dilates blood vessels to the tumor site), blood substitutes that carry increased oxygen, hypoxic cell radiosensitizer drugs such as misonidazole and metronidazole, and hypoxic cytotoxins (tissue poisons), such as tirapazamine. Newer research approaches are currently being studied, including preclinical and clinical investigations into the use of an oxygen diffusion-enhancing compound such as trans sodium crocetinate as a radiosensitizer. Charged particles such as protons and boron, carbon, and neon ions can cause direct damage to cancer cell DNA through high-LET (linear energy transfer) and have an antitumor effect independent of tumor oxygen supply because these particles act mostly via direct energy transfer usually causing double-stranded DNA breaks.",
+      "char_count": 906,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0034",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Mechanism of action ==",
+      "heading_path": "== = Mechanism of action ==",
+      "start_char": 28441,
+      "end_char": 29334,
+      "content": "Due to their relatively large mass, protons and other charged particles have little lateral side scatter in the tissue – the beam does not broaden much, stays focused on the tumor shape, and delivers small dose side-effects to surrounding tissue. They also more precisely target the tumor using the Bragg peak effect. See proton therapy for a good example of the different effects of intensity-modulated radiation therapy (IMRT) vs. charged particle therapy. This procedure reduces damage to healthy tissue between the charged particle radiation source and the tumor and sets a finite range for tissue damage after the tumor has been reached. In contrast, IMRT's use of uncharged particles causes its energy to damage healthy cells when it exits the body. This exiting damage is not therapeutic, can increase treatment side effects, and increases the probability of secondary cancer induction.",
+      "char_count": 893,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0035",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Mechanism of action ==",
+      "heading_path": "== = Mechanism of action ==",
+      "start_char": 29335,
+      "end_char": 29741,
+      "content": "This difference is very important in cases where the close proximity of other organs makes any stray ionization very damaging (example: head and neck cancers). This X-ray exposure is especially bad for children, due to their growing bodies, and while depending on a multitude of factors, they are around 10 times more sensitive to developing secondary malignancies after radiotherapy as compared to adults.",
+      "char_count": 406,
+      "token_estimate": 101,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0036",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Dose ==",
+      "heading_path": "== = Dose ==",
+      "start_char": 29727,
+      "end_char": 30636,
+      "content": "== = Dose === The amount of radiation used in photon radiation therapy is measured in grays (Gy), and varies depending on the type and stage of cancer being treated. For curative cases, the typical dose for a solid epithelial tumor ranges from 60 to 80 Gy, while lymphomas are treated with 20 to 40 Gy. Preventive (adjuvant) doses are typically around 45–60 Gy in 1.8–2 Gy fractions (for breast, head, and neck cancers.) Many other factors are considered by radiation oncologists when selecting a dose, including whether the patient is receiving chemotherapy, patient comorbidities, whether radiation therapy is being administered before or after surgery, and the degree of success of surgery. Delivery parameters of a prescribed dose are determined during treatment planning (part of dosimetry). Treatment planning is generally performed on dedicated computers using specialized treatment planning software.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0037",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Dose ==",
+      "heading_path": "== = Dose ==",
+      "start_char": 30636,
+      "end_char": 31027,
+      "content": "Depending on the radiation delivery method, several angles or sources may be used to sum to the total necessary dose. The planner will try to design a plan that delivers a uniform prescription dose to the tumor and minimizes dose to surrounding healthy tissues. In radiation therapy, three-dimensional dose distributions may be evaluated using the dosimetry technique known as gel dosimetry.",
+      "char_count": 391,
+      "token_estimate": 97,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0038",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 31027,
+      "end_char": 31928,
+      "content": "== Types == Historically, the three main divisions of radiation therapy are: external beam radiation therapy (EBRT or XRT) or teletherapy; brachytherapy or sealed source radiation therapy; and systemic radioisotope therapy or unsealed source radiotherapy. The differences relate to the position of the radiation source; external is outside the body, brachytherapy uses sealed radioactive sources placed precisely in the area under treatment, and systemic radioisotopes are given by infusion or oral ingestion. Brachytherapy can use temporary or permanent placement of radioactive sources. The temporary sources are usually placed by a technique called afterloading. In afterloading a hollow tube or applicator is placed surgically in the organ to be treated, and the sources are loaded into the applicator after the applicator is implanted. This minimizes radiation exposure to health care personnel.",
+      "char_count": 900,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0039",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 31928,
+      "end_char": 32404,
+      "content": "Particle therapy is a special case of external beam radiation therapy where the particles are protons or heavier ions. A review of radiation therapy randomised clinical trials from 2018 to 2021 found many practice-changing data and new concepts that emerge from RCTs, identifying techniques that improve the therapeutic ratio, techniques that lead to more tailored treatments, stressing the importance of patient satisfaction, and identifying areas that require further study.",
+      "char_count": 476,
+      "token_estimate": 119,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0040",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Contact X-ray brachytherapy ==",
+      "heading_path": "== = Contact X-ray brachytherapy ==",
+      "start_char": 32532,
+      "end_char": 33439,
+      "content": "== = Contact X-ray brachytherapy === Contact X-ray brachytherapy (also called \"CXB\", \"electronic brachytherapy\" or the \"Papillon Technique\") is a type of radiation therapy using low energy (50 kVp) kilovoltage X-rays applied directly to the tumor to treat rectal cancer. The process involves endoscopic examination first to identify the tumor in the rectum and then inserting treatment applicator on the tumor through the anus into the rectum and placing it against the cancerous tissue. Finally, treatment tube is inserted into the applicator to deliver high doses of X-rays (30Gy) emitted directly onto the tumor at two weekly intervals for three times over four weeks period. It is typically used for treating early rectal cancer in patients who may not be candidates for surgery. A 2015 NICE review found the main side effect to be bleeding that occurred in about 38% of cases, and radiation-induced ulcer which occurred in 27% of cases.",
+      "char_count": 941,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0041",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Brachytherapy (sealed source radiotherapy) ==",
+      "heading_path": "== = Brachytherapy (sealed source radiotherapy) ==",
+      "start_char": 33489,
+      "end_char": 34425,
+      "content": "== = Brachytherapy (sealed source radiotherapy) === Brachytherapy is delivered by placing radiation source(s) inside or next to the area requiring treatment. Brachytherapy is commonly used as an effective treatment for cervical, prostate, breast, and skin cancer and can also be used to treat tumors in many other body sites. In brachytherapy, radiation sources are precisely placed directly at the site of the cancerous tumor. This means that the irradiation only affects a very localized area – exposure to radiation of healthy tissues further away from the sources is reduced. These characteristics of brachytherapy provide advantages over external beam radiation therapy – the tumor can be treated with very high doses of localized radiation, whilst reducing the probability of unnecessary damage to surrounding healthy tissues. A course of brachytherapy can often be completed in less time than other radiation therapy techniques.",
+      "char_count": 935,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0042",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Brachytherapy (sealed source radiotherapy) ==",
+      "heading_path": "== = Brachytherapy (sealed source radiotherapy) ==",
+      "start_char": 34425,
+      "end_char": 34914,
+      "content": "This can help reduce the chance of surviving cancer cells dividing and growing in the intervals between each radiation therapy dose. As one example of the localized nature of breast brachytherapy, the SAVI device delivers the radiation dose through multiple catheters, each of which can be individually controlled. This approach decreases the exposure of healthy tissue and resulting side effects, compared both to external beam radiation therapy and older methods of breast brachytherapy.",
+      "char_count": 489,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0043",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Radionuclide therapy ==",
+      "heading_path": "== = Radionuclide therapy ==",
+      "start_char": 34893,
+      "end_char": 35741,
+      "content": "== = Radionuclide therapy === Radionuclide therapy (also known as systemic radioisotope therapy, radiopharmaceutical therapy, or molecular radiotherapy), is a form of targeted therapy. Targeting can be due to the chemical properties of the isotope such as radioiodine which is specifically absorbed by the thyroid gland a thousandfold better than other bodily organs. Targeting can also be achieved by attaching the radioisotope to another molecule or antibody to guide it to the target tissue. The radioisotopes are delivered through infusion (into the bloodstream) or ingestion. Examples are the infusion of metaiodobenzylguanidine (MIBG) to treat neuroblastoma, of oral iodine-131 to treat thyroid cancer or thyrotoxicosis, and of hormone-bound lutetium-177 and yttrium-90 to treat neuroendocrine tumors (peptide receptor radionuclide therapy).",
+      "char_count": 847,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0044",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Radionuclide therapy ==",
+      "heading_path": "== = Radionuclide therapy ==",
+      "start_char": 35741,
+      "end_char": 36672,
+      "content": "Another example is the injection of radioactive yttrium-90 or holmium-166 microspheres into the hepatic artery to radioembolize liver tumors or liver metastases. These microspheres are used for the treatment approach known as selective internal radiation therapy. The microspheres are approximately 30 μm in diameter (about one-third of a human hair) and are delivered directly into the artery supplying blood to the tumors. These treatments begin by guiding a catheter up through the femoral artery in the leg, navigating to the desired target site and administering treatment. The blood feeding the tumor will carry the microspheres directly to the tumor enabling a more selective approach than traditional systemic chemotherapy. There are currently three different kinds of microspheres: SIR-Spheres, TheraSphere and QuiremSpheres. A major use of systemic radioisotope therapy is in the treatment of bone metastasis from cancer.",
+      "char_count": 931,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0045",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Radionuclide therapy ==",
+      "heading_path": "== = Radionuclide therapy ==",
+      "start_char": 36673,
+      "end_char": 37403,
+      "content": "The radioisotopes travel selectively to areas of damaged bone, and spare normal undamaged bone. Isotopes commonly used in the treatment of bone metastasis are radium-223, strontium-89 and samarium (153Sm) lexidronam. In 2002, the United States Food and Drug Administration (FDA) approved ibritumomab tiuxetan (Zevalin), which is an anti-CD20 monoclonal antibody conjugated to yttrium-90. In 2003, the FDA approved the tositumomab/iodine (131I) tositumomab regimen (Bexxar), which is a combination of an iodine-131 labelled and an unlabelled anti-CD20 monoclonal antibody. These medications were the first agents of what is known as radioimmunotherapy, and they were approved for the treatment of refractory non-Hodgkin's lymphoma.",
+      "char_count": 730,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0046",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== = Intraoperative radiotherapy ==",
+      "heading_path": "== = Intraoperative radiotherapy ==",
+      "start_char": 37411,
+      "end_char": 37581,
+      "content": "== = Intraoperative radiotherapy === Intraoperative radiation therapy (IORT) is applying therapeutic levels of radiation to a target area, such as a cancer tumor, while the area is exposed during surgery.",
+      "char_count": 204,
+      "token_estimate": 51,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0047",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 37594,
+      "end_char": 38525,
+      "content": "== History == Medicine has used radiation therapy as a treatment for cancer for more than 100 years, with its earliest roots traced from the discovery of X-rays in 1895 by Wilhelm Röntgen. Emil Grubbe of Chicago was possibly the first American physician to use X-rays to treat cancer, beginning in 1896. The field of radiation therapy began to grow in the early 1900s largely due to the groundbreaking work of Nobel Prize–winning scientist Marie Curie (1867–1934), who discovered the radioactive elements polonium and radium in 1898. This began a new era in medical treatment and research. Through the 1920s the hazards of radiation exposure were not understood, and little protection was used. Radium was believed to have wide curative powers and radiotherapy was applied to many diseases. Prior to World War 2, the only practical sources of radiation for radiotherapy were radium, its \"emanation\", radon gas, and the X-ray tube.",
+      "char_count": 930,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0048",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 38525,
+      "end_char": 39415,
+      "content": "External beam radiotherapy (teletherapy) began at the turn of the century with relatively low voltage (<150 kV) X-ray machines. It was found that while superficial tumors could be treated with low voltage X-rays, more penetrating, higher energy beams were required to reach tumors inside the body, requiring higher voltages. Orthovoltage X-rays, which used tube voltages of 200-500 kV, began to be used during the 1920s. To reach the most deeply buried tumors without exposing intervening skin and tissue to dangerous radiation doses required rays with energies of 1 MV or above, called \"megavolt\" radiation. Producing megavolt X-rays required voltages on the X-ray tube of 3 to 5 million volts, which required huge expensive installations. Megavoltage X-ray units were first built in the late 1930s but because of cost were limited to a few institutions. One of the first, installed at St.",
+      "char_count": 890,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0049",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 39416,
+      "end_char": 40297,
+      "content": "Bartholomew's hospital, London in 1937 and used until 1960, used a 30 foot long X-ray tube and weighed 10 tons. Radium produced megavolt gamma rays, but was extremely rare and expensive due to its low occurrence in ores. In 1937 the entire world supply of radium for radiotherapy was 50 grams, valued at £800,000, or $50 million in 2005 dollars. The invention of the nuclear reactor in the Manhattan Project during World War 2 made possible the production of artificial radioisotopes for radiotherapy. Cobalt therapy, teletherapy machines using megavolt gamma rays emitted by cobalt-60, a radioisotope produced by irradiating ordinary cobalt metal in a reactor, revolutionized the field between the 1950s and the early 1980s. Cobalt machines were relatively cheap, robust and simple to use, although due to its 5.27 year half-life the cobalt had to be replaced about every 5 years.",
+      "char_count": 881,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0050",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 40298,
+      "end_char": 41053,
+      "content": "Medical linear particle accelerators, developed since the 1940s, began replacing X-ray and cobalt units in the 1980s and these older therapies are now declining. The first medical linear accelerator was used at the Hammersmith Hospital in London in 1953. Linear accelerators can produce higher energies, have more collimated beams, and do not produce radioactive waste with its attendant disposal problems like radioisotope therapies. With Godfrey Hounsfield's invention of computed tomography (CT) in 1971, three-dimensional planning became a possibility and created a shift from 2-D to 3-D radiation delivery. CT-based planning allows physicians to more accurately determine the dose distribution using axial tomographic images of the patient's anatomy.",
+      "char_count": 755,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "radiationtherapy_2d798aa9_c0051",
+      "article_id": "radiationtherapy_2d798aa9",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 41054,
+      "end_char": 41700,
+      "content": "The advent of new imaging technologies, including magnetic resonance imaging (MRI) in the 1970s and positron emission tomography (PET) in the 1980s, has moved radiation therapy from 3-D conformal to intensity-modulated radiation therapy (IMRT) and to image-guided radiation therapy tomotherapy. These advances allowed radiation oncologists to better see and target tumors, which have resulted in better treatment outcomes, more organ preservation and fewer side effects. While access to radiotherapy is improving globally, more than half of patients in low and middle income countries still do not have available access to the therapy as of 2017.",
+      "char_count": 646,
+      "token_estimate": 161,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What information is provided about == Medical uses ==?",
+        "answer": "The text provides information about == Medical uses == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0007"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0000"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0000"
+        ]
+      },
+      {
+        "question": "What is the radiation tolerance dose for lung tissue?",
+        "answer": "Lung tissue is sensitive to ionizing radiation and can tolerate only 18–20 Gy, which is a fraction of typical therapeutic dosage levels.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0020"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0020"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0000",
+          "radiationtherapy_2d798aa9_c0001",
+          "radiationtherapy_2d798aa9_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0000",
+          "radiationtherapy_2d798aa9_c0002",
+          "radiationtherapy_2d798aa9_c0001"
+        ]
+      },
+      {
+        "question": "Explain the relationship between a cancer's radiosensitivity, its dissemination in the body, and its potential curability with radiation therapy, using specific cancer types as examples.",
+        "answer": "A cancer's curability with radiation therapy depends on both its radiosensitivity and whether it is localized or disseminated. Radiosensitivity is a measure of how effectively radiation kills cancer cells; highly radiosensitive cancers like leukemias and lymphomas are rapidly killed by modest doses, while moderately radiosensitive cancers like most epithelial cancers require higher doses. However, high radiosensitivity does not guarantee curability. For example, leukemias are highly radiosensitive but are not generally curable with radiation because they are disseminated throughout the body. In contrast, lymphomas, which are also highly radiosensitive, may be radically curable if localized to one area. Similarly, many common, moderately radioresponsive tumors like breast, prostate, and non-small cell lung cancer can be routinely cured with radiation if they are at an early, localized stage, sometimes using techniques like brachytherapy to target the specific area.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0003",
+          "radiationtherapy_2d798aa9_c0004",
+          "radiationtherapy_2d798aa9_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0005",
+          "radiationtherapy_2d798aa9_c0004",
+          "radiationtherapy_2d798aa9_c0003"
+        ]
+      },
+      {
+        "question": "How does Daily MR-guided ART (MRgART) improve upon the principles of Image-guided radiation therapy (IGRT)?",
+        "answer": "Image-guided radiation therapy (IGRT) is a method that utilizes imaging to correct for a patient's positional errors during each treatment session. Daily MR-guided ART (MRgART) builds on this principle by not only correcting positioning but also adapting the radiation plan itself, allowing the high-dose region to be conformed to the tumor as the anatomy changes throughout the course of treatment.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0006",
+          "radiationtherapy_2d798aa9_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0007",
+          "radiationtherapy_2d798aa9_c0006"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0000",
+          "radiationtherapy_2d798aa9_c0001",
+          "radiationtherapy_2d798aa9_c0002",
+          "radiationtherapy_2d798aa9_c0003"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0000",
+          "radiationtherapy_2d798aa9_c0003",
+          "radiationtherapy_2d798aa9_c0002",
+          "radiationtherapy_2d798aa9_c0001"
+        ]
+      },
+      {
+        "question": "What factors can limit the curability of cancer using radiation therapy, and what strategies can be employed to overcome some of these limitations?",
+        "answer": "Several factors can limit the curability of cancer with radiation therapy. These include the cancer's inherent radioresistance (e.g., melanoma), its dissemination throughout the body (e.g., leukemia), or if it is metastatic, as it's not possible to treat the whole body. Additionally, very large tumors are less affected by radiation than smaller ones. Strategies to overcome these challenges include combining radiation with immunotherapy, performing surgical resection prior to radiation, using neoadjuvant chemotherapy to shrink the tumor, or administering drugs that enhance the cancer's radiosensitivity.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0004",
+          "radiationtherapy_2d798aa9_c0005",
+          "radiationtherapy_2d798aa9_c0006",
+          "radiationtherapy_2d798aa9_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0005",
+          "radiationtherapy_2d798aa9_c0006",
+          "radiationtherapy_2d798aa9_c0007",
+          "radiationtherapy_2d798aa9_c0004"
+        ]
+      },
+      {
+        "question": "How does the radiation dosage level influence the timing of when side effects appear?",
+        "answer": "The timing of radiation side effects is dose-dependent. Acute or sub-acute side effects, which can appear almost immediately or up to 3 months post-treatment, may develop after a 50 Gy radiation dose. In contrast, late or delayed radiation injuries, which can manifest from 6 months to decades later, are associated with a higher dose of 65 Gy.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0009",
+          "radiationtherapy_2d798aa9_c0010"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0010",
+          "radiationtherapy_2d798aa9_c0009"
+        ]
+      },
+      {
+        "question": "Describe the various ways radiation therapy can damage the epithelial surfaces of the gastrointestinal tract, from the mouth to the lower bowel.",
+        "answer": "Radiation therapy can damage epithelial surfaces throughout the gastrointestinal tract. Treatment of the head and neck can cause temporary soreness and ulceration in the mouth and throat, which may affect swallowing. The esophagus can also become sore, especially as a result of collateral radiation during lung cancer treatment. When treating liver malignancies, collateral radiation can cause gastric, stomach, or duodenal ulcers. Finally, direct or indirect radiation to the lower bowel can lead to soreness, diarrhea, and nausea.",
+        "related_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0011",
+          "radiationtherapy_2d798aa9_c0012",
+          "radiationtherapy_2d798aa9_c0013"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "radiationtherapy_2d798aa9_c0011",
+          "radiationtherapy_2d798aa9_c0013",
+          "radiationtherapy_2d798aa9_c0012"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T08:34:18.990Z",
+    "content_format": "markdown",
+    "total_chunks": 52,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "article": {
+    "id": "formalverification_fd877f7b",
+    "title": "Formal verification",
+    "url": "https://en.wikipedia.org/wiki/Formal_verification",
+    "lang": "en",
+    "created_at": "2025-07-30T10:37:16.632617",
+    "content": "---\nid: formalverification_fd877f7b\nurl: https://en.wikipedia.org/wiki/Formal_verification\ntitle: Formal verification\nlang: en\ncreated_at: '2025-07-30T10:36:43.061818'\nchecksum: 5126b4e3435d0936f3c5fa5343b231d12ca141a2c2d6dcbefe194e65e335fbd8\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 2\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1349\n  char_count: 9354\n  num_chunks: 11\n  original_chunks: 15\n  filtered_out: 4\n  num_sections: 0\n---\nIn the context of hardware and software systems, formal verification is the act of proving or disproving the correctness of a system with respect to a certain formal specification or property, using formal methods of mathematics. Formal verification is a key incentive for formal specification of systems, and is at the core of formal methods. It represents an important dimension of analysis and verification in electronic design automation and is one approach to software verification. The use of formal verification enables the highest Evaluation Assurance Level (EAL7) in the framework of common criteria for computer security certification. Formal verification can be helpful in proving the correctness of systems such as: cryptographic protocols, combinational circuits, digital circuits with internal memory, and software expressed as source code in a programming language. Prominent examples of verified software systems include the CompCert verified C compiler and the seL4 high-assurance operating system kernel. The verification of these systems is done by ensuring the existence of a formal proof of a mathematical model of the system. Examples of mathematical objects used to model systems are: finite-state machines, labelled transition systems, Horn clauses, Petri nets, vector addition systems, timed automata, hybrid automata, process algebra, formal semantics of programming languages such as operational semantics, denotational semantics, axiomatic semantics and Hoare logic. == Approaches == === Model checking === Model checking involves a systematic and exhaustive exploration of the mathematical model. Such exploration is possible for finite models, but also for some infinite models, where infinite sets of states can be effectively represented finitely by using abstraction or taking advantage of symmetry. Usually, this consists of exploring all states and transitions in the model, by using smart and domain-specific abstraction techniques to consider whole groups of states in a single operation and reduce computing time. Implementation techniques include state space enumeration, symbolic state space enumeration, abstract interpretation, symbolic simulation, abstraction refinement. The properties to be verified are often described in temporal logics, such as linear temporal logic (LTL), Property Specification Language (PSL), SystemVerilog Assertions (SVA), or computational tree logic (CTL). The great advantage of model checking is that it is often fully automatic; its primary disadvantage is that it does not in general scale to large systems; symbolic models are typically limited to a few hundred bits of state, while explicit state enumeration requires the state space being explored to be relatively small. === Deductive verification === Another approach is deductive verification. It consists of generating from the system and its specifications (and possibly other annotations) a collection of mathematical proof obligations, the truth of which imply conformance of the system to its specification, and discharging these obligations using either proof assistants (interactive theorem provers) (such as HOL, ACL2, Isabelle, Rocq (previously known as Coq) or PVS), or automatic theorem provers, including in particular satisfiability modulo theories (SMT) solvers. This approach has the disadvantage that it may require the user to understand in detail why the system works correctly, and to convey this information to the verification system, either in the form of a sequence of theorems to be proved or in the form of specifications (invariants, preconditions, postconditions) of system components (e.g. functions or procedures) and perhaps subcomponents (such as loops or data structures). === Application to software === Formal verification of software programs involves proving that a program satisfies a formal specification of its behavior. Subareas of formal verification include deductive verification (see above), abstract interpretation, automated theorem proving, type systems, and lightweight formal methods. A promising type-based verification approach is dependently typed programming, in which the types of functions include (at least part of) those functions' specifications, and type-checking the code establishes its correctness against those specifications. Fully featured dependently typed languages support deductive verification as a special case. Another complementary approach is program derivation, in which efficient code is produced from functional specifications by a series of correctness-preserving steps. An example of this approach is the Bird–Meertens formalism, and this approach can be seen as another form of program synthesis. These techniques can be sound, meaning that the verified properties can be logically deduced from the semantics, or unsound, meaning that there is no such guarantee. A sound technique yields a result only once it has covered the entire space of possibilities. An example of an unsound technique is one that covers only a subset of the possibilities, for instance only integers up to a certain number, and give a \"good-enough\" result. Techniques can also be decidable, meaning that their algorithmic implementations are guaranteed to terminate with an answer, or undecidable, meaning that they may never terminate. By bounding the scope of possibilities, unsound techniques that are decidable might be able to be constructed when no decidable sound techniques are available. == Verification and validation == Verification is one aspect of testing a product's fitness for purpose. Validation is the complementary aspect. Often one refers to the overall checking process as V & V. Validation: \"Are we trying to make the right thing?\", i.e., is the product specified to the user's actual needs? Verification: \"Have we made what we were trying to make?\", i.e., does the product conform to the specifications? The verification process consists of static/structural and dynamic/behavioral aspects. E.g., for a software product one can inspect the source code (static) and run against specific test cases (dynamic). Validation usually can be done only dynamically, i.e., the product is tested by putting it through typical and atypical usages (\"Does it satisfactorily meet all use cases?\"). == Automated program repair == Program repair is performed with respect to an oracle, encompassing the desired functionality of the program which is used for validation of the generated fix. A simple example is a test-suite—the input/output pairs specify the functionality of the program. A variety of techniques are employed, most notably using satisfiability modulo theories (SMT) solvers, and genetic programming, using evolutionary computing to generate and evaluate possible candidates for fixes. The former method is deterministic, while the latter is randomized. Program repair combines techniques from formal verification and program synthesis. Fault-localization techniques in formal verification are used to compute program points which might be possible bug-locations, which can be targeted by the synthesis modules. Repair systems often focus on a small pre-defined class of bugs in order to reduce the search space. Industrial use is limited owing to the computational cost of existing techniques. == Industry use == The growth in complexity of designs increases the importance of formal verification techniques in the hardware industry. At present, formal verification is used by most or all leading hardware companies, but its use in the software industry is still languishing. This could be attributed to the greater need in the hardware industry, where errors have greater commercial significance. Because of the potential subtle interactions between components, it is increasingly difficult to exercise a realistic set of possibilities by simulation. Important aspects of hardware design are amenable to automated proof methods, making formal verification easier to introduce and more productive. As of 2011, several operating systems have been formally verified: NICTA's Secure Embedded L4 microkernel, sold commercially as seL4 by OK Labs; OSEK/VDX based real-time operating system ORIENTAIS by East China Normal University; Green Hills Software's Integrity operating system; and SYSGO's PikeOS. In 2016, a team led by Zhong Shao at Yale developed a formally verified operating system kernel called CertiKOS. As of 2017, formal verification has been applied to the design of large computer networks through a mathematical model of the network, and as part of a new network technology category, intent-based networking. Network software vendors that offer formal verification solutions include Cisco Forward Networks and Veriflow Systems. The SPARK programming language provides a toolset which enables software development with formal verification and is used in several high-integrity systems. The CompCert C compiler is a formally verified C compiler implementing the majority of ISO C. == See also == Automated theorem proving Model checking List of model checking tools Formal equivalence checking Proof checker Property Specification Language Static code analysis Temporal logic in finite-state verification Post-silicon validation Intelligent verification Runtime verification Software verification Hardware verification == References =="
+  },
+  "chunks": [
+    {
+      "id": "formalverification_fd877f7b_c0000",
+      "article_id": "formalverification_fd877f7b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 881,
+      "content": "In the context of hardware and software systems, formal verification is the act of proving or disproving the correctness of a system with respect to a certain formal specification or property, using formal methods of mathematics. Formal verification is a key incentive for formal specification of systems, and is at the core of formal methods. It represents an important dimension of analysis and verification in electronic design automation and is one approach to software verification. The use of formal verification enables the highest Evaluation Assurance Level (EAL7) in the framework of common criteria for computer security certification. Formal verification can be helpful in proving the correctness of systems such as: cryptographic protocols, combinational circuits, digital circuits with internal memory, and software expressed as source code in a programming language.",
+      "char_count": 880,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0001",
+      "article_id": "formalverification_fd877f7b",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 881,
+      "end_char": 1494,
+      "content": "Prominent examples of verified software systems include the CompCert verified C compiler and the seL4 high-assurance operating system kernel. The verification of these systems is done by ensuring the existence of a formal proof of a mathematical model of the system. Examples of mathematical objects used to model systems are: finite-state machines, labelled transition systems, Horn clauses, Petri nets, vector addition systems, timed automata, hybrid automata, process algebra, formal semantics of programming languages such as operational semantics, denotational semantics, axiomatic semantics and Hoare logic.",
+      "char_count": 613,
+      "token_estimate": 153,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0002",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== = Model checking ==",
+      "heading_path": "== = Model checking ==",
+      "start_char": 1534,
+      "end_char": 2451,
+      "content": "== = Model checking === Model checking involves a systematic and exhaustive exploration of the mathematical model. Such exploration is possible for finite models, but also for some infinite models, where infinite sets of states can be effectively represented finitely by using abstraction or taking advantage of symmetry. Usually, this consists of exploring all states and transitions in the model, by using smart and domain-specific abstraction techniques to consider whole groups of states in a single operation and reduce computing time. Implementation techniques include state space enumeration, symbolic state space enumeration, abstract interpretation, symbolic simulation, abstraction refinement. The properties to be verified are often described in temporal logics, such as linear temporal logic (LTL), Property Specification Language (PSL), SystemVerilog Assertions (SVA), or computational tree logic (CTL).",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0003",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== = Model checking ==",
+      "heading_path": "== = Model checking ==",
+      "start_char": 2451,
+      "end_char": 2772,
+      "content": "The great advantage of model checking is that it is often fully automatic; its primary disadvantage is that it does not in general scale to large systems; symbolic models are typically limited to a few hundred bits of state, while explicit state enumeration requires the state space being explored to be relatively small.",
+      "char_count": 321,
+      "token_estimate": 80,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0004",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== = Deductive verification ==",
+      "heading_path": "== = Deductive verification ==",
+      "start_char": 2781,
+      "end_char": 3738,
+      "content": "== = Deductive verification === Another approach is deductive verification. It consists of generating from the system and its specifications (and possibly other annotations) a collection of mathematical proof obligations, the truth of which imply conformance of the system to its specification, and discharging these obligations using either proof assistants (interactive theorem provers) (such as HOL, ACL2, Isabelle, Rocq (previously known as Coq) or PVS), or automatic theorem provers, including in particular satisfiability modulo theories (SMT) solvers. This approach has the disadvantage that it may require the user to understand in detail why the system works correctly, and to convey this information to the verification system, either in the form of a sequence of theorems to be proved or in the form of specifications (invariants, preconditions, postconditions) of system components (e.g. functions or procedures) and perhaps subcomponents (such as loops or data structures).",
+      "char_count": 986,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0005",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== = Application to software ==",
+      "heading_path": "== = Application to software ==",
+      "start_char": 3769,
+      "end_char": 4614,
+      "content": "== = Application to software === Formal verification of software programs involves proving that a program satisfies a formal specification of its behavior. Subareas of formal verification include deductive verification (see above), abstract interpretation, automated theorem proving, type systems, and lightweight formal methods. A promising type-based verification approach is dependently typed programming, in which the types of functions include (at least part of) those functions' specifications, and type-checking the code establishes its correctness against those specifications. Fully featured dependently typed languages support deductive verification as a special case. Another complementary approach is program derivation, in which efficient code is produced from functional specifications by a series of correctness-preserving steps.",
+      "char_count": 844,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0006",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== = Application to software ==",
+      "heading_path": "== = Application to software ==",
+      "start_char": 4614,
+      "end_char": 5515,
+      "content": "An example of this approach is the Bird–Meertens formalism, and this approach can be seen as another form of program synthesis. These techniques can be sound, meaning that the verified properties can be logically deduced from the semantics, or unsound, meaning that there is no such guarantee. A sound technique yields a result only once it has covered the entire space of possibilities. An example of an unsound technique is one that covers only a subset of the possibilities, for instance only integers up to a certain number, and give a \"good-enough\" result. Techniques can also be decidable, meaning that their algorithmic implementations are guaranteed to terminate with an answer, or undecidable, meaning that they may never terminate. By bounding the scope of possibilities, unsound techniques that are decidable might be able to be constructed when no decidable sound techniques are available.",
+      "char_count": 901,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0007",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== Verification and validation ==",
+      "heading_path": "== Verification and validation ==",
+      "start_char": 5518,
+      "end_char": 6294,
+      "content": "== Verification and validation == Verification is one aspect of testing a product's fitness for purpose. Validation is the complementary aspect. Often one refers to the overall checking process as V & V. Validation: \"Are we trying to make the right thing?\", i.e., is the product specified to the user's actual needs? Verification: \"Have we made what we were trying to make?\", i.e., does the product conform to the specifications? The verification process consists of static/structural and dynamic/behavioral aspects. E.g., for a software product one can inspect the source code (static) and run against specific test cases (dynamic). Validation usually can be done only dynamically, i.e., the product is tested by putting it through typical and atypical usages (\"Does it satisfactorily meet all use cases?\").",
+      "char_count": 808,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0008",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== Automated program repair ==",
+      "heading_path": "== Automated program repair ==",
+      "start_char": 6324,
+      "end_char": 7253,
+      "content": "== Automated program repair == Program repair is performed with respect to an oracle, encompassing the desired functionality of the program which is used for validation of the generated fix. A simple example is a test-suite—the input/output pairs specify the functionality of the program. A variety of techniques are employed, most notably using satisfiability modulo theories (SMT) solvers, and genetic programming, using evolutionary computing to generate and evaluate possible candidates for fixes. The former method is deterministic, while the latter is randomized. Program repair combines techniques from formal verification and program synthesis. Fault-localization techniques in formal verification are used to compute program points which might be possible bug-locations, which can be targeted by the synthesis modules. Repair systems often focus on a small pre-defined class of bugs in order to reduce the search space.",
+      "char_count": 928,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0009",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== Industry use ==",
+      "heading_path": "== Industry use ==",
+      "start_char": 7323,
+      "end_char": 8027,
+      "content": "== Industry use == The growth in complexity of designs increases the importance of formal verification techniques in the hardware industry. At present, formal verification is used by most or all leading hardware companies, but its use in the software industry is still languishing. This could be attributed to the greater need in the hardware industry, where errors have greater commercial significance. Because of the potential subtle interactions between components, it is increasingly difficult to exercise a realistic set of possibilities by simulation. Important aspects of hardware design are amenable to automated proof methods, making formal verification easier to introduce and more productive.",
+      "char_count": 703,
+      "token_estimate": 175,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "formalverification_fd877f7b_c0010",
+      "article_id": "formalverification_fd877f7b",
+      "section": "== Industry use ==",
+      "heading_path": "== Industry use ==",
+      "start_char": 8027,
+      "end_char": 9020,
+      "content": "As of 2011, several operating systems have been formally verified: NICTA's Secure Embedded L4 microkernel, sold commercially as seL4 by OK Labs; OSEK/VDX based real-time operating system ORIENTAIS by East China Normal University; Green Hills Software's Integrity operating system; and SYSGO's PikeOS. In 2016, a team led by Zhong Shao at Yale developed a formally verified operating system kernel called CertiKOS. As of 2017, formal verification has been applied to the design of large computer networks through a mathematical model of the network, and as part of a new network technology category, intent-based networking. Network software vendors that offer formal verification solutions include Cisco Forward Networks and Veriflow Systems. The SPARK programming language provides a toolset which enables software development with formal verification and is used in several high-integrity systems. The CompCert C compiler is a formally verified C compiler implementing the majority of ISO C.",
+      "char_count": 993,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 2,
+    "items": [
+      {
+        "question": "What is the name of the formally verified operating system kernel developed at Yale in 2016?",
+        "answer": "A team at Yale led by Zhong Shao developed a formally verified operating system kernel called CertiKOS in 2016.",
+        "related_chunk_ids": [
+          "formalverification_fd877f7b_c0010"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "formalverification_fd877f7b_c0010"
+        ]
+      },
+      {
+        "question": "How does the technique of model checking relate to the broader process of formal verification, and what role do mathematical models play in this context?",
+        "answer": "Formal verification is the general process of proving a system's correctness against a formal specification. This is achieved by creating a mathematical model of the system, such as a finite-state machine or Petri net, and then formally proving its properties. Model checking is a specific technique used for formal verification that involves a systematic and exhaustive exploration of this mathematical model to check if it satisfies the required properties, which are often described in temporal logics.",
+        "related_chunk_ids": [
+          "formalverification_fd877f7b_c0000",
+          "formalverification_fd877f7b_c0001",
+          "formalverification_fd877f7b_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "formalverification_fd877f7b_c0002",
+          "formalverification_fd877f7b_c0001",
+          "formalverification_fd877f7b_c0000"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:30.749Z",
+    "content_format": "markdown",
+    "total_chunks": 11,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "article": {
+    "id": "appeal_f7ecb6ee",
+    "title": "Appeal",
+    "url": "https://en.wikipedia.org/wiki/Appeal",
+    "lang": "en",
+    "created_at": "2025-07-30T12:42:39.883968",
+    "content": "---\nid: appeal_f7ecb6ee\nurl: https://en.wikipedia.org/wiki/Appeal\ntitle: Appeal\nlang: en\ncreated_at: '2025-07-30T12:36:50.979405'\nchecksum: b6c1072779cd8569c34680f8b8528d63da35037058c995aae9c057f50c7b9867\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 952\n  char_count: 6081\n  num_chunks: 9\n  original_chunks: 12\n  filtered_out: 3\n  num_sections: 0\n---\nIn law, an appeal is the process in which cases are reviewed by a higher authority, where parties request a formal change to an official decision. Appeals function both as a process for error correction as well as a process of clarifying and interpreting law. Although appellate courts have existed for thousands of years, common law countries did not incorporate an affirmative right to appeal into their jurisprudence until the 19th century. == Terminology == American English and British English have diverged significantly on the topic of appellate terminology. American cases go up \"on appeal\" and one \"appeals from\" (intransitive) or \"appeals\" (transitive) an order, award, judgment, or conviction, while decisions of British courts are said to be \"under appeal\" and one \"appeals against\" a judgment. An American court disposes of an appeal with words like \"judgment affirmed\" (the appeal is without merit) or \"judgment reversed\" (the appeal has merit), while a British court disposes of an appeal with words like \"appeal dismissed\" (the appeal is without merit) or \"appeal allowed\" (the appeal has merit). == History == Appellate courts and other systems of error correction have existed for many millennia. During the first dynasty of Babylon, Hammurabi and his governors served as the highest appellate courts of the land. Ancient Roman law recognized the right to appeal in the Valerian and Porcian laws since 509 BC. Later it employed a complex hierarchy of appellate courts, where some appeals would be heard by the emperor. Additionally, appellate courts have existed in Japan since at least the Kamakura shogunate (1185–1333). During this time, the shogunate established hikitsuke, a high appellate court to aid the state in adjudicating lawsuits. Although some scholars argue that \"the right to appeal is itself a substantive liberty interest\", the notion of a right to appeal is a relatively recent advent in common law jurisdictions. Commentators have observed that common law jurisdictions were particularly \"slow to incorporate a right to appeal into either its civil or criminal jurisprudence\". The idea of an appeal from court to court (as distinguished from court directly to the Crown) was unheard of in early English courts. English common law courts eventually developed the writs of error and certiorari as routes to appellate relief, but both types of writs were severely limited in comparison to modern appeals in terms of availability, scope of review, and remedies afforded. For example, writs of error were originally not available as a matter of right and were issued only upon the recommendation of the attorney general (which was initially discretionary but by modern times was regularly granted). Certiorari was originally available only for summary offences; in the early 19th century, certiorari became available for indictable offences, but only to obtain relief before judgment. Due to widespread dissatisfaction with writs (resulting in the introduction of at least 28 separate bills in Parliament), England switched over to appeals in civil cases in 1873, and in criminal cases in 1907. == Appellate procedure == Although some courts permit appeals at preliminary stages of litigation, most litigants appeal final orders and judgments from lower courts. A fundamental premise of many legal systems is that appellate courts review questions of law de novo, but appellate courts do not conduct independent fact-finding. Instead, appellate courts will generally defer to the record established by the trial court, unless some error occurred during the fact-finding process. In some jurisdictions on the other hand, such as the Netherlands, appellate courts review cases in their entirety, which includes fact-finding. Many jurisdictions provide a statutory or constitutional right for litigants to appeal adverse decisions. However, most jurisdictions also recognize that this right may be waived. In the United States, for example, litigants may waive the right to appeal, as long as the waiver is \"considered and intelligent\". The appellate process usually begins when an appellate court grants a party's petition for review or petition for certiorari. Unlike trials, which many common law jurisdictions typically perform with a jury, appeals are generally presented to a judge, or a panel of judges. Before hearing oral argument, parties will generally submit legal briefs in which the parties present their arguments at length in writing. Appellate courts may also grant permission for an amicus curiae to submit a brief in support of a particular party or position. After submitting briefs, parties often have the opportunity to present an oral argument to a judge or panel of judges. During oral arguments, judges often ask questions to attorneys to challenge their arguments or to advance their own legal theories. After deliberating in chambers, appellate courts issue formal written opinions that resolve the legal issues presented for review. The appeal may end with a reversal, in which the lower court's decision is found to be incorrect (resulting in the original judgement being vacated, and the lower court instructed to retry the case) or an affirmation, in which the lower court's decision is found to be correct. == Appellate courts == When considering cases on appeal, appellate courts generally affirm, reverse, or vacate the decision of a lower court. Some courts maintain a dual function, where they consider both appeals and matters of \"first instance\". For example, the Supreme Court of the United States primarily hears cases on appeal but retains original jurisdiction over a limited range of cases. Some jurisdictions maintain a system of intermediate appellate courts, which are subject to the review of higher appellate courts. The highest appellate court in a jurisdiction is sometimes referred to as a \"court of last resort\" or supreme court. == See also == Appellate procedure in the United States Civil procedure Criminal appeal Judicial review List of legal topics Scope of review == Notes == == References =="
+  },
+  "chunks": [
+    {
+      "id": "appeal_f7ecb6ee_c0000",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 444,
+      "content": "In law, an appeal is the process in which cases are reviewed by a higher authority, where parties request a formal change to an official decision. Appeals function both as a process for error correction as well as a process of clarifying and interpreting law. Although appellate courts have existed for thousands of years, common law countries did not incorporate an affirmative right to appeal into their jurisprudence until the 19th century.",
+      "char_count": 443,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "appeal_f7ecb6ee_c0001",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "== Terminology ==",
+      "heading_path": "== Terminology ==",
+      "start_char": 461,
+      "end_char": 1113,
+      "content": "== Terminology == American English and British English have diverged significantly on the topic of appellate terminology. American cases go up \"on appeal\" and one \"appeals from\" (intransitive) or \"appeals\" (transitive) an order, award, judgment, or conviction, while decisions of British courts are said to be \"under appeal\" and one \"appeals against\" a judgment. An American court disposes of an appeal with words like \"judgment affirmed\" (the appeal is without merit) or \"judgment reversed\" (the appeal has merit), while a British court disposes of an appeal with words like \"appeal dismissed\" (the appeal is without merit) or \"appeal allowed\" (the appeal has merit).",
+      "char_count": 668,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "appeal_f7ecb6ee_c0002",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1126,
+      "end_char": 1964,
+      "content": "== History == Appellate courts and other systems of error correction have existed for many millennia. During the first dynasty of Babylon, Hammurabi and his governors served as the highest appellate courts of the land. Ancient Roman law recognized the right to appeal in the Valerian and Porcian laws since 509 BC. Later it employed a complex hierarchy of appellate courts, where some appeals would be heard by the emperor. Additionally, appellate courts have existed in Japan since at least the Kamakura shogunate (1185–1333). During this time, the shogunate established hikitsuke, a high appellate court to aid the state in adjudicating lawsuits. Although some scholars argue that \"the right to appeal is itself a substantive liberty interest\", the notion of a right to appeal is a relatively recent advent in common law jurisdictions.",
+      "char_count": 837,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "appeal_f7ecb6ee_c0003",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1964,
+      "end_char": 2930,
+      "content": "Commentators have observed that common law jurisdictions were particularly \"slow to incorporate a right to appeal into either its civil or criminal jurisprudence\". The idea of an appeal from court to court (as distinguished from court directly to the Crown) was unheard of in early English courts. English common law courts eventually developed the writs of error and certiorari as routes to appellate relief, but both types of writs were severely limited in comparison to modern appeals in terms of availability, scope of review, and remedies afforded. For example, writs of error were originally not available as a matter of right and were issued only upon the recommendation of the attorney general (which was initially discretionary but by modern times was regularly granted). Certiorari was originally available only for summary offences; in the early 19th century, certiorari became available for indictable offences, but only to obtain relief before judgment.",
+      "char_count": 966,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "appeal_f7ecb6ee_c0004",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2931,
+      "end_char": 3140,
+      "content": "Due to widespread dissatisfaction with writs (resulting in the introduction of at least 28 separate bills in Parliament), England switched over to appeals in civil cases in 1873, and in criminal cases in 1907.",
+      "char_count": 209,
+      "token_estimate": 52,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "appeal_f7ecb6ee_c0005",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "== Appellate procedure ==",
+      "heading_path": "== Appellate procedure ==",
+      "start_char": 3153,
+      "end_char": 4092,
+      "content": "== Appellate procedure == Although some courts permit appeals at preliminary stages of litigation, most litigants appeal final orders and judgments from lower courts. A fundamental premise of many legal systems is that appellate courts review questions of law de novo, but appellate courts do not conduct independent fact-finding. Instead, appellate courts will generally defer to the record established by the trial court, unless some error occurred during the fact-finding process. In some jurisdictions on the other hand, such as the Netherlands, appellate courts review cases in their entirety, which includes fact-finding. Many jurisdictions provide a statutory or constitutional right for litigants to appeal adverse decisions. However, most jurisdictions also recognize that this right may be waived. In the United States, for example, litigants may waive the right to appeal, as long as the waiver is \"considered and intelligent\".",
+      "char_count": 938,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "appeal_f7ecb6ee_c0006",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "== Appellate procedure ==",
+      "heading_path": "== Appellate procedure ==",
+      "start_char": 4092,
+      "end_char": 5015,
+      "content": "The appellate process usually begins when an appellate court grants a party's petition for review or petition for certiorari. Unlike trials, which many common law jurisdictions typically perform with a jury, appeals are generally presented to a judge, or a panel of judges. Before hearing oral argument, parties will generally submit legal briefs in which the parties present their arguments at length in writing. Appellate courts may also grant permission for an amicus curiae to submit a brief in support of a particular party or position. After submitting briefs, parties often have the opportunity to present an oral argument to a judge or panel of judges. During oral arguments, judges often ask questions to attorneys to challenge their arguments or to advance their own legal theories. After deliberating in chambers, appellate courts issue formal written opinions that resolve the legal issues presented for review.",
+      "char_count": 923,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "appeal_f7ecb6ee_c0007",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "== Appellate procedure ==",
+      "heading_path": "== Appellate procedure ==",
+      "start_char": 5016,
+      "end_char": 5293,
+      "content": "The appeal may end with a reversal, in which the lower court's decision is found to be incorrect (resulting in the original judgement being vacated, and the lower court instructed to retry the case) or an affirmation, in which the lower court's decision is found to be correct.",
+      "char_count": 277,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "appeal_f7ecb6ee_c0008",
+      "article_id": "appeal_f7ecb6ee",
+      "section": "== Appellate courts ==",
+      "heading_path": "== Appellate courts ==",
+      "start_char": 5291,
+      "end_char": 5912,
+      "content": "== Appellate courts == When considering cases on appeal, appellate courts generally affirm, reverse, or vacate the decision of a lower court. Some courts maintain a dual function, where they consider both appeals and matters of \"first instance\". For example, the Supreme Court of the United States primarily hears cases on appeal but retains original jurisdiction over a limited range of cases. Some jurisdictions maintain a system of intermediate appellate courts, which are subject to the review of higher appellate courts. The highest appellate court in a jurisdiction is sometimes referred to as a \"court of last resort\" or supreme court.",
+      "char_count": 642,
+      "token_estimate": 160,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 8,
+    "items": [
+      {
+        "question": "What two types of writs were developed by English common law courts as early routes to appellate relief?",
+        "answer": "English common law courts developed the writs of error and certiorari as routes to appellate relief.",
+        "related_chunk_ids": [
+          "appeal_f7ecb6ee_c0003"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "appeal_f7ecb6ee_c0003"
+        ]
+      },
+      {
+        "question": "Under what condition can a litigant in the United States waive their right to appeal?",
+        "answer": "In the United States, a litigant may waive their right to appeal as long as the waiver is \"considered and intelligent\".",
+        "related_chunk_ids": [
+          "appeal_f7ecb6ee_c0005"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "appeal_f7ecb6ee_c0005"
+        ]
+      },
+      {
+        "question": "How does an American court's terminology for disposing of an appeal with merit differ from a British court's?",
+        "answer": "An American court indicates an appeal has merit with the phrase \"judgment reversed,\" while a British court uses the phrase \"appeal allowed\" to indicate the same.",
+        "related_chunk_ids": [
+          "appeal_f7ecb6ee_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "appeal_f7ecb6ee_c0001"
+        ]
+      },
+      {
+        "question": "How does the historical existence of appellate courts contrast with the establishment of the right to appeal in common law jurisdictions?",
+        "answer": "While appellate courts have existed for millennia, with examples in ancient Babylon, ancient Rome (since 509 BC), and Japan (since at least 1185), the affirmative right to appeal is a relatively recent development in common law countries, having been incorporated into their jurisprudence only in the 19th century.",
+        "related_chunk_ids": [
+          "appeal_f7ecb6ee_c0000",
+          "appeal_f7ecb6ee_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "appeal_f7ecb6ee_c0002",
+          "appeal_f7ecb6ee_c0000"
+        ]
+      },
+      {
+        "question": "Trace the evolution of the appellate process in England, from its early common law mechanisms to the modern system, highlighting the key differences in procedure.",
+        "answer": "Initially, English common law was slow to adopt a right to appeal and instead used limited mechanisms like the writs of error and certiorari. These writs were severely restricted in availability, scope, and remedies compared to modern appeals. For example, writs of error were not available as a matter of right. Due to widespread dissatisfaction with this system, England officially switched to a modern appeals process for civil cases in 1873 and for criminal cases in 1907. A key feature of the modern system is that appellate courts typically review questions of law de novo (from the beginning) but defer to the factual record established by the trial court, a significant change from the limited review offered by the earlier writs.",
+        "related_chunk_ids": [
+          "appeal_f7ecb6ee_c0003",
+          "appeal_f7ecb6ee_c0004",
+          "appeal_f7ecb6ee_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "appeal_f7ecb6ee_c0003",
+          "appeal_f7ecb6ee_c0004",
+          "appeal_f7ecb6ee_c0005"
+        ]
+      },
+      {
+        "question": "Describe the full appellate process, from how it begins to the potential final decisions an appellate court can issue.",
+        "answer": "The appellate process typically starts when a court grants a party's petition for review or certiorari. Following this, parties submit written legal briefs and often present oral arguments to a judge or panel of judges. After deliberation, the court issues a formal written opinion. The final decision may be an affirmation, if the lower court's decision is deemed correct, or a reversal or vacation if it is found to be incorrect. In the case of a reversal, the original judgment is vacated, and the case may be sent back to the lower court for a retrial.",
+        "related_chunk_ids": [
+          "appeal_f7ecb6ee_c0006",
+          "appeal_f7ecb6ee_c0007",
+          "appeal_f7ecb6ee_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "appeal_f7ecb6ee_c0006",
+          "appeal_f7ecb6ee_c0008",
+          "appeal_f7ecb6ee_c0007"
+        ]
+      },
+      {
+        "question": "Contrast the historical timeline for the establishment of appellate systems in English common law with that of other ancient legal systems.",
+        "answer": "Appellate systems existed for millennia in some ancient legal traditions, with examples in the first dynasty of Babylon, ancient Rome since 509 BC, and Japan since at least 1185. In contrast, English common law jurisdictions were much slower to establish a right to appeal. Early English courts used limited writs of error and certiorari for appellate relief, only formally switching to a modern appeals system for civil cases in 1873 and for criminal cases in 1907 due to widespread dissatisfaction with the writ system.",
+        "related_chunk_ids": [
+          "appeal_f7ecb6ee_c0002",
+          "appeal_f7ecb6ee_c0003",
+          "appeal_f7ecb6ee_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "appeal_f7ecb6ee_c0002",
+          "appeal_f7ecb6ee_c0003",
+          "appeal_f7ecb6ee_c0004"
+        ]
+      },
+      {
+        "question": "Describe the typical process of an appeal, from its initiation after a lower court's decision to its final outcome.",
+        "answer": "The appellate process typically begins after a final order or judgment in a lower court, when a litigant exercises their right to appeal. The process formally starts when an appellate court grants a petition for review. Parties then submit written legal briefs outlining their arguments, and an oral argument is often held before a panel of judges. During this process, the appellate court reviews questions of law de novo but generally defers to the facts established by the trial court. After deliberation, the court issues a formal written opinion, which can either be an affirmation, upholding the lower court's decision as correct, or a reversal, which finds the decision incorrect and vacates the original judgment.",
+        "related_chunk_ids": [
+          "appeal_f7ecb6ee_c0005",
+          "appeal_f7ecb6ee_c0006",
+          "appeal_f7ecb6ee_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "appeal_f7ecb6ee_c0006",
+          "appeal_f7ecb6ee_c0005",
+          "appeal_f7ecb6ee_c0007"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T13:32:49.312Z",
+    "content_format": "markdown",
+    "total_chunks": 9,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

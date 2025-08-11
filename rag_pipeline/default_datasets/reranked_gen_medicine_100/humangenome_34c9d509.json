@@ -1,0 +1,762 @@
+{
+  "article": {
+    "id": "humangenome_34c9d509",
+    "title": "Human genome",
+    "url": "https://en.wikipedia.org/wiki/Human_genome",
+    "lang": "en",
+    "created_at": "2025-07-31T07:12:27.532972",
+    "content": "---\nid: humangenome_34c9d509\nurl: https://en.wikipedia.org/wiki/Human_genome\ntitle: Human genome\nlang: en\ncreated_at: '2025-07-31T07:05:30.493007'\nchecksum: dd2d3f32c95760b8fe6040d63586f1bd4966dd3c7c5c8b22a1b1a4c67ab3e390\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 5688\n  char_count: 37561\n  num_chunks: 47\n  original_chunks: 53\n  filtered_out: 6\n  num_sections: 0\n---\nThe human genome is a complete set of nucleic acid sequences for humans, encoded as the DNA within each of the 23 distinct chromosomes in the cell nucleus. A small DNA molecule is found within individual mitochondria. These are usually treated separately as the nuclear genome and the mitochondrial genome. Human genomes include both protein-coding DNA sequences and various types of DNA that does not encode proteins. The latter is a diverse category that includes DNA coding for non-translated RNA, such as that for ribosomal RNA, transfer RNA, ribozymes, small nuclear RNAs, and several types of regulatory RNAs. It also includes promoters and their associated gene-regulatory elements, DNA playing structural and replicatory roles, such as scaffolding regions, telomeres, centromeres, and origins of replication, plus large numbers of transposable elements, inserted viral DNA, non-functional pseudogenes and simple, highly repetitive sequences. Introns make up a large percentage of non-coding DNA. Some of this non-coding DNA is non-functional junk DNA, such as pseudogenes, but there is no firm consensus on the total amount of junk DNA. Although the sequence of the human genome has been completely determined by DNA sequencing in 2022 (including methylome), it is not yet fully understood. Most, but not all, genes have been identified by a combination of high throughput experimental and bioinformatics approaches, yet much work still needs to be done to further elucidate the biological functions of their protein and RNA products. == Size of the human genome == In 2000, scientists reported the sequencing of 88% of human genome, but as of 2020, at least 8% was still missing. In 2021, scientists reported sequencing a complete, female genome (i.e., without the Y chromosome). The human Y chromosome, consisting of 62,460,029 base pairs from a different cell line and found in all males, was sequenced completely in January 2022. The current version of the standard reference genome is called GRCh38.p14 (July 2023). It consists of 22 autosomes plus one copy of the X chromosome and one copy of the Y chromosome. It contains approximately 3.1 billion base pairs. This represents the size of a composite genome based on data from multiple individuals but it is a good indication of the typical amount of DNA in a haploid set of chromosomes because the Y chromosome is quite small. Most human cells are diploid so they contain twice as much DNA (~6.2 billion base pairs). In 2023, a draft human pangenome reference was published. It is based on 47 genomes from persons of varied ethnicity. Plans are underway for an improved reference capturing still more biodiversity from a still wider sample. While there are significant differences among the genomes of human individuals (on the order of 0.1% due to single-nucleotide variants and 0.6% when considering indels), these are considerably smaller than the differences between humans and their closest living relatives, the bonobos and chimpanzees (~1.1% fixed single-nucleotide variants and 4% when including indels). == Molecular organization and gene content == The total length of the human reference genome does not represent the sequence of any specific individual, nor does it represent the sequence of all of the DNA found within a cell. The human reference genome only includes one copy of each of the paired, homologous autosomes plus one copy of each of the two sex chromosomes (X and Y). The total amount of DNA in this reference genome is 3.1 billion base pairs. === Protein-coding genes === Protein-coding sequences represent the most widely studied and best understood component of the human genome. These sequences ultimately lead to the production of all human proteins, although several biological processes (e.g. DNA rearrangements and alternative pre-mRNA splicing) can lead to the production of many more unique proteins than the number of protein-coding genes. The human reference genome contains somewhere between 19,000 and 20,000 protein-coding genes. These genes contain an average of 10 introns and the average size of an intron is about 6 kb (6,000 bp). This means that the average size of a protein-coding gene is about 62 kb and these genes take up about 40% of the genome. Exon sequences consist of coding DNA and untranslated regions (UTRs) at either end of the mature mRNA. The total amount of coding DNA is about 1-2% of the genome. Many people divide the genome into coding and non-coding DNA based on the idea that coding DNA is the most important functional component of the genome. About 98-99% of the human genome is non-coding DNA. === Non-coding genes === Noncoding RNA molecules play many essential roles in cells, especially in the many reactions of protein synthesis and RNA processing. Noncoding genes include those for tRNAs, ribosomal RNAs, microRNAs, snRNAs and long non-coding RNAs (lncRNAs). The number of reported non-coding genes continues to rise slowly but the exact number in the human genome is yet to be determined. Many RNAs are thought to be non-functional. Many ncRNAs are critical elements in gene regulation and expression. Noncoding RNA also contributes to epigenetics, transcription, RNA splicing, and the translational machinery. The role of RNA in genetic regulation and disease offers a new potential level of unexplored genomic complexity. === Pseudogenes === Pseudogenes are inactive copies of protein-coding genes, often generated by gene duplication, that have become nonfunctional through the accumulation of inactivating mutations. The number of pseudogenes in the human genome is on the order of 13,000, and in some chromosomes is nearly the same as the number of functional protein-coding genes. Gene duplication is a major mechanism through which new genetic material is generated during molecular evolution. For example, the olfactory receptor gene family is one of the best-documented examples of pseudogenes in the human genome. More than 60 percent of the genes in this family are non-functional pseudogenes in humans. By comparison, only 20 percent of genes in the mouse olfactory receptor gene family are pseudogenes. Research suggests that this is a species-specific characteristic, as the most closely related primates all have proportionally fewer pseudogenes. This genetic discovery helps to explain the less acute sense of smell in humans relative to other mammals. === Regulatory DNA sequences === The human genome has many different regulatory sequences which are crucial to controlling gene expression. Conservative estimates indicate that these sequences make up 8% of the genome, however extrapolations from the ENCODE project give that 20 or more of the genome is gene regulatory sequence. Some types of non-coding DNA are genetic \"switches\" that do not encode proteins, but do regulate when and where genes are expressed (called enhancers). Regulatory sequences have been known since the late 1960s. The first identification of regulatory sequences in the human genome relied on recombinant DNA technology. Later with the advent of genomic sequencing, the identification of these sequences could be inferred by evolutionary conservation. The evolutionary branch between the primates and mouse, for example, occurred 70–90 million years ago. So computer comparisons of gene sequences that identify conserved non-coding sequences will be an indication of their importance in duties such as gene regulation. Other genomes have been sequenced with the same intention of aiding conservation-guided methods, one example being the pufferfish genome. However, regulatory sequences disappear and re-evolve during evolution at a high rate. As of 2012, the efforts have shifted toward finding interactions between DNA and regulatory proteins by the technique ChIP-Seq, or gaps where the DNA is not packaged by histones (DNase hypersensitive sites), both of which tell where there are active regulatory sequences in the investigated cell type. === Repetitive DNA sequences === Repetitive DNA sequences comprise approximately 50% of the human genome. About 8% of the human genome consists of tandem DNA arrays or tandem repeats, low complexity repeat sequences that have multiple adjacent copies (e.g. \"CAGCAGCAG...\"). The tandem sequences may be of variable lengths, from two nucleotides to tens of nucleotides. These sequences are highly variable, even among closely related individuals, and so are used for genealogical DNA testing and forensic DNA analysis. Repeated sequences of fewer than ten nucleotides (e.g. the dinucleotide repeat (AC)n) are termed microsatellite sequences. Among the microsatellite sequences, trinucleotide repeats are of particular importance, as sometimes occur within coding regions of genes for proteins and may lead to genetic disorders. For example, Huntington's disease results from an expansion of the trinucleotide repeat (CAG)n within the Huntingtin gene on human chromosome 4. Telomeres (the ends of linear chromosomes) end with a microsatellite hexanucleotide repeat of the sequence (TTAGGG)n. Tandem repeats of longer sequences (arrays of repeated sequences 10–60 nucleotides long) are termed minisatellites. Transposable genetic elements, DNA sequences that can replicate and insert copies of themselves at other locations within a host genome, are an abundant component in the human genome. The most abundant transposon lineage, Alu, has about 50,000 active copies, and can be inserted into intragenic and intergenic regions. One other lineage, LINE-1, has about 100 active copies per genome (the number varies between people). Together with non-functional relics of old transposons, they account for over half of total human DNA. Sometimes called \"jumping genes\", transposons have played a major role in sculpting the human genome. Some of these sequences represent endogenous retroviruses, DNA copies of viral sequences that have become permanently integrated into the genome and are now passed on to succeeding generations. There are also a significant number of retroviruses in human DNA, at least 3 of which have been proven to possess an important function (i.e., HIV-like functional HERV-K; envelope genes of non-functional viruses HERV-W and HERV-FRD play a role in placenta formation by inducing cell-cell fusion). Mobile elements within the human genome can be classified into LTR retrotransposons (8.3% of total genome), SINEs (13.1% of total genome) including Alu elements, LINEs (20.4% of total genome), SVAs (SINE-VNTR-Alu) and Class II DNA transposons (2.9% of total genome). === Junk DNA === There is no consensus on what constitutes a \"functional\" element in the genome since geneticists, evolutionary biologists, and molecular biologists employ different definitions and methods. Due to the ambiguity in the terminology, different schools of thought have emerged. In evolutionary definitions, \"functional\" DNA, whether it is coding or non-coding, contributes to the fitness of the organism, and therefore is maintained by negative evolutionary pressure whereas \"non-functional\" DNA has no benefit to the organism and therefore is under neutral selective pressure. This type of DNA has been described as junk DNA. In genetic definitions, \"functional\" DNA is related to how DNA segments manifest by phenotype and \"nonfunctional\" is related to loss-of-function effects on the organism. In biochemical definitions, \"functional\" DNA relates to DNA sequences that specify molecular products (e.g. noncoding RNAs) and biochemical activities with mechanistic roles in gene or genome regulation (i.e. DNA sequences that impact cellular level activity such as cell type, condition, and molecular processes). There is no consensus in the literature on the amount of functional DNA since, depending on how \"function\" is understood, ranges have been estimated from up to 90% of the human genome is likely nonfunctional DNA (junk DNA) to up to 80% of the genome is likely functional. It is also possible that junk DNA may acquire a function in the future and therefore may play a role in evolution, but this is likely to occur only very rarely. Finally DNA that is deliterious to the organism and is under negative selective pressure is called garbage DNA. == Sequencing == The first human genome sequences were published in nearly complete draft form in February 2001 by the Human Genome Project and Celera Corporation. Completion of the Human Genome Project's sequencing effort was announced in 2004 with the publication of a draft genome sequence, leaving just 341 gaps in the sequence, representing highly repetitive and other DNA that could not be sequenced with the technology available at the time. The human genome was the first of all vertebrates to be sequenced to such near-completion, and as of 2018, the diploid genomes of over a million individual humans had been determined using next-generation sequencing. These data are used worldwide in biomedical science, anthropology, forensics and other branches of science. Such genomic studies have led to advances in the diagnosis and treatment of diseases, and to new insights in many fields of biology, including human evolution. By 2018, the total number of genes had been raised to at least 46,831, plus another 2300 micro-RNA genes. A 2018 population survey found another 300 million bases of human genome that was not in the reference sequence. Prior to the acquisition of the full genome sequence, estimates of the number of human genes ranged from 50,000 to 140,000 (with occasional vagueness about whether these estimates included non-protein coding genes). As genome sequence quality and the methods for identifying protein-coding genes improved, the count of recognized protein-coding genes dropped to 19,000–20,000. In 2022, the Telomere-to-Telomere (T2T) consortium reported the complete sequence of a human female genome, filling all the gaps in the X chromosome (2020) and the 22 autosomes (May 2021). The previously unsequenced parts contain immune response genes that help to adapt to and survive infections, as well as genes that are important for predicting drug response. The completed human genome sequence will also provide better understanding of human formation as an individual organism and how humans vary both between each other and other species. Although the 'completion' of the human genome project was announced in 2001, there remained hundreds of gaps, with about 5–10% of the total sequence remaining undetermined. The missing genetic information was mostly in repetitive heterochromatic regions and near the centromeres and telomeres, but also some gene-encoding euchromatic regions. There remained 160 euchromatic gaps in 2015 when the sequences spanning another 50 formerly unsequenced regions were determined. Only in 2020 was the first truly complete telomere-to-telomere sequence of a human chromosome determined, namely of the X chromosome. The first complete telomere-to-telomere sequence of a human autosomal chromosome, chromosome 8, followed a year later. The complete human genome (without Y chromosome) was published in 2021, while with Y chromosome in January 2022. In 2023, a draft human pangenome reference was published. It is based on 47 genomes from persons of varied ethnicity. Plans are underway for an improved reference capturing still more biodiversity from a still wider sample. == Genomic variation in humans == === Human reference genome === With the exception of identical twins, all humans show significant variation in genomic DNA sequences. The human reference genome (HRG) is used as a standard sequence reference. There are several important points concerning the human reference genome: The HRG is a haploid sequence. Each chromosome is represented once. The HRG is a composite sequence, and does not correspond to any actual human individual. The HRG is periodically updated to correct errors, ambiguities, and unknown \"gaps\". The HRG in no way represents an \"ideal\" or \"perfect\" human individual. It is simply a standardized representation or model that is used for comparative purposes. The Genome Reference Consortium is responsible for updating the HRG. Version 38 was released in December 2013. === Measuring human genetic variation === Most studies of human genetic variation have focused on single-nucleotide polymorphisms (SNPs), which are substitutions in individual bases along a chromosome. Most analyses estimate that SNPs occur 1 in 1000 base pairs, on average, in the euchromatic human genome, although they do not occur at a uniform density. Thus follows the popular statement that \"we are all, regardless of race, genetically 99.9% the same\", although this would be somewhat qualified by most geneticists. For example, a much larger fraction of the genome is now thought to be involved in copy number variation. A large-scale collaborative effort to catalog SNP variations in the human genome is being undertaken by the International HapMap Project. The genomic loci and length of certain types of small repetitive sequences are highly variable from person to person, which is the basis of DNA fingerprinting and DNA paternity testing technologies. The heterochromatic portions of the human genome, which total several hundred million base pairs, are also thought to be quite variable within the human population (they are so repetitive and so long that they cannot be accurately sequenced with current technology). These regions contain few genes, and it is unclear whether any significant phenotypic effect results from typical variation in repeats or heterochromatin. Most gross genomic mutations in gamete germ cells probably result in inviable embryos; however, a number of human diseases are related to large-scale genomic abnormalities. Down syndrome, Turner Syndrome, and a number of other diseases result from nondisjunction of entire chromosomes. Cancer cells frequently have aneuploidy of chromosomes and chromosome arms, although a cause and effect relationship between aneuploidy and cancer has not been established. ==== Mapping human genomic variation ==== Whereas a genome sequence lists the order of every DNA base in a genome, a genome map identifies the landmarks. A genome map is less detailed than a genome sequence and aids in navigating around the genome. An example of a variation map is the HapMap being developed by the International HapMap Project. The HapMap is a haplotype map of the human genome, \"which will describe the common patterns of human DNA sequence variation.\" It catalogs the patterns of small-scale variations in the genome that involve single DNA letters, or bases. Researchers published the first sequence-based map of large-scale structural variation across the human genome in the journal Nature in May 2008. Large-scale structural variations are differences in the genome among people that range from a few thousand to a few million DNA bases; some are gains or losses of stretches of genome sequence and others appear as re-arrangements of stretches of sequence. These variations include differences in the number of copies individuals have of a particular gene, deletions, translocations and inversions. === Structural variation === Structural variation refers to genetic variants that affect larger segments of the human genome, as opposed to point mutations. Often, structural variants (SVs) are defined as variants of 50 base pairs (bp) or greater, such as deletions, duplications, insertions, inversions and other rearrangements. About 90% of structural variants are noncoding deletions but most individuals have more than a thousand such deletions; the size of deletions ranges from dozens of base pairs to tens of thousands of bp. On average, individuals carry ~3 rare structural variants that alter coding regions, e.g. delete exons. About 2% of individuals carry ultra-rare megabase-scale structural variants, especially rearrangements. That is, millions of base pairs may be inverted within a chromosome; ultra-rare means that they are only found in individuals or their family members and thus have arisen very recently. === SNP frequency across the human genome === Single-nucleotide polymorphisms (SNPs) do not occur homogeneously across the human genome. In fact, there is enormous diversity in SNP frequency between genes, reflecting different selective pressures on each gene as well as different mutation and recombination rates across the genome. However, studies on SNPs are biased towards coding regions, the data generated from them are unlikely to reflect the overall distribution of SNPs throughout the genome. Therefore, the SNP Consortium protocol was designed to identify SNPs with no bias towards coding regions and the Consortium's 100,000 SNPs generally reflect sequence diversity across the human chromosomes. The SNP Consortium aims to expand the number of SNPs identified across the genome to 300 000 by the end of the first quarter of 2001. Changes in non-coding sequence and synonymous changes in coding sequence are generally more common than non-synonymous changes, reflecting greater selective pressure reducing diversity at positions dictating amino acid identity. Transitional changes are more common than transversions, with CpG dinucleotides showing the highest mutation rate, presumably due to deamination. === Personal genomes === A personal genome sequence is a (nearly) complete sequence of the chemical base pairs that make up the DNA of a single person. Because medical treatments have different effects on different people due to genetic variations such as single-nucleotide polymorphisms (SNPs), the analysis of personal genomes may lead to personalized medical treatment based on individual genotypes. The first personal genome sequence to be determined was that of Craig Venter in 2007. Personal genomes had not been sequenced in the public Human Genome Project to protect the identity of volunteers who provided DNA samples. That sequence was derived from the DNA of several volunteers from a diverse population. However, early in the Venter-led Celera Genomics genome sequencing effort the decision was made to switch from sequencing a composite sample to using DNA from a single individual, later revealed to have been Venter himself. Thus the Celera human genome sequence released in 2000 was largely that of one man. Subsequent replacement of the early composite-derived data and determination of the diploid sequence, representing both sets of chromosomes, rather than a haploid sequence originally reported, allowed the release of the first personal genome. In April 2008, that of James Watson was also completed. In 2009, Stephen Quake published his own genome sequence derived from a sequencer of his own design, the Heliscope. A Stanford team led by Euan Ashley published a framework for the medical interpretation of human genomes implemented on Quake's genome and made whole genome-informed medical decisions for the first time. That team further extended the approach to the West family, the first family sequenced as part of Illumina's Personal Genome Sequencing program. Since then hundreds of personal genome sequences have been released, including those of Desmond Tutu, and of a Paleo-Eskimo. In 2012, the whole genome sequences of two family trios among 1092 genomes was made public. In November 2013, a Spanish family made four personal exome datasets (about 1% of the genome) publicly available under a Creative Commons public domain license. The Personal Genome Project (started in 2005) is among the few to make both genome sequences and corresponding medical phenotypes publicly available. The sequencing of individual genomes further unveiled levels of genetic complexity that had not been appreciated before. Personal genomics helped reveal the significant level of diversity in the human genome attributed not only to SNPs but structural variations as well. However, the application of such knowledge to the treatment of disease and in the medical field is only in its very beginnings. Exome sequencing has become increasingly popular as a tool to aid in diagnosis of genetic disease because the exome contributes only 1% of the genomic sequence but accounts for roughly 85% of mutations that contribute significantly to disease. === Human knockouts === In humans, gene knockouts naturally occur as heterozygous or homozygous loss-of-function gene knockouts. These knockouts are often difficult to distinguish, especially within heterogeneous genetic backgrounds. They are also difficult to find as they occur in low frequencies. Populations with high rates of consanguinity, such as countries with high rates of first-cousin marriages, display the highest frequencies of homozygous gene knockouts. Such populations include Pakistan, Iceland, and Amish populations. These populations with a high level of parental-relatedness have been subjects of human knock out research which has helped to determine the function of specific genes in humans. By distinguishing specific knockouts, researchers are able to use phenotypic analyses of these individuals to help characterize the gene that has been knocked out. Knockouts in specific genes can cause genetic diseases, potentially have beneficial effects, or even result in no phenotypic effect at all. However, determining a knockout's phenotypic effect and in humans can be challenging. Challenges to characterizing and clinically interpreting knockouts include difficulty calling of DNA variants, determining disruption of protein function (annotation), and considering the amount of influence mosaicism has on the phenotype. One major study that investigated human knockouts is the Pakistan Risk of Myocardial Infarction study. It was found that individuals possessing a heterozygous loss-of-function gene knockout for the APOC3 gene had lower triglycerides in the blood after consuming a high fat meal as compared to individuals without the mutation. However, individuals possessing homozygous loss-of-function gene knockouts of the APOC3 gene displayed the lowest level of triglycerides in the blood after the fat load test, as they produce no functional APOC3 protein. === DNA damage === In each cell of the human body, the human genome experiences, on average, tens of thousands of DNA damages per day. These damages can block genome replication or genome transcription, and if they are not repaired or are repaired incorrectly, they may lead to mutations, or other genome alterations in the human genome that threaten cell viability. == Human genetic disorders == Most aspects of human biology involve both genetic (inherited) and non-genetic (environmental) factors. Some inherited variation influences aspects of our biology that are not medical in nature (height, eye color, ability to taste or smell certain compounds, etc.). Moreover, some genetic disorders only cause disease in combination with the appropriate environmental factors (such as diet). With these caveats, genetic disorders may be described as clinically defined diseases caused by genomic DNA sequence variation. In the most straightforward cases, the disorder can be associated with variation in a single gene. For example, cystic fibrosis is caused by mutations in the CFTR gene and is the most common recessive disorder in caucasian populations with over 1,300 different mutations known. Disease-causing mutations in specific genes are usually severe in terms of gene function and are rare, thus genetic disorders are similarly individually rare. However, since there are many genes that can vary to cause genetic disorders, in aggregate they constitute a significant component of known medical conditions, especially in pediatric medicine. Molecularly characterized genetic disorders are those for which the underlying causal gene has been identified. Currently there are approximately 2,200 such disorders annotated in the OMIM database. Studies of genetic disorders are often performed by means of family-based studies. In some instances, population based approaches are employed, particularly in the case of so-called founder populations such as those in Finland, French-Canada, Utah, Sardinia, etc. Diagnosis and treatment of genetic disorders are usually performed by a geneticist-physician trained in clinical/medical genetics. The results of the Human Genome Project are likely to provide increased availability of genetic testing for gene-related disorders, and eventually improved treatment. Parents can be screened for hereditary conditions and counselled on the consequences, the probability of inheritance, and how to avoid or ameliorate it in their offspring. There are many different kinds of DNA sequence variation, ranging from complete extra or missing chromosomes down to single nucleotide changes. It is generally presumed that much naturally occurring genetic variation in human populations is phenotypically neutral, i.e., has little or no detectable effect on the physiology of the individual (although there may be fractional differences in fitness defined over evolutionary time frames). Genetic disorders can be caused by any or all known types of sequence variation. To molecularly characterize a new genetic disorder, it is necessary to establish a causal link between a particular genomic sequence variant and the clinical disease under investigation. Such studies constitute the realm of human molecular genetics. With the advent of the Human Genome and International HapMap Project, it has become feasible to explore subtle genetic influences on many common disease conditions such as diabetes, asthma, migraine, schizophrenia, etc. Although some causal links have been made between genomic sequence variants in particular genes and some of these diseases, often with much publicity in the general media, these are usually not considered to be genetic disorders per se as their causes are complex, involving many different genetic and environmental factors. Thus there may be disagreement in particular cases whether a specific medical condition should be termed a genetic disorder. Additional genetic disorders of mention are Kallman syndrome and Pfeiffer syndrome (gene FGFR1), Fuchs corneal dystrophy (gene TCF4), Hirschsprung's disease (genes RET and FECH), Bardet-Biedl syndrome 1 (genes CCDC28B and BBS1), Bardet-Biedl syndrome 10 (gene BBS10), and facioscapulohumeral muscular dystrophy type 2 (genes D4Z4 and SMCHD1). Genome sequencing is now able to narrow the genome down to specific locations to more accurately find mutations that will result in a genetic disorder. Copy number variants (CNVs) and single nucleotide variants (SNVs) are also able to be detected at the same time as genome sequencing with newer sequencing procedures available, called Next Generation Sequencing (NGS). This only analyzes a small portion of the genome, around 1–2%. The results of this sequencing can be used for clinical diagnosis of a genetic condition, including Usher syndrome, retinal disease, hearing impairments, diabetes, epilepsy, Leigh disease, hereditary cancers, neuromuscular diseases, primary immunodeficiencies, severe combined immunodeficiency (SCID), and diseases of the mitochondria. NGS can also be used to identify carriers of diseases before conception. The diseases that can be detected in this sequencing include Tay-Sachs disease, Bloom syndrome, Gaucher disease, Canavan disease, familial dysautonomia, cystic fibrosis, spinal muscular atrophy, and fragile-X syndrome. The Next Genome Sequencing can be narrowed down to specifically look for diseases more prevalent in certain ethnic populations. == Evolution == Comparative genomics studies of mammalian genomes suggest that approximately 5% of the human genome has been conserved by evolution since the divergence of extant lineages approximately 200 million years ago, containing the vast majority of genes. The published chimpanzee genome differs from that of the human genome by 1.23% in direct sequence comparisons. Around 20% of this figure is accounted for by variation within each species, leaving only ~1.06% consistent sequence divergence between humans and chimps at shared genes. This nucleotide by nucleotide difference is dwarfed, however, by the portion of each genome that is not shared, including around 6% of functional genes that are unique to either humans or chimps. In other words, the considerable observable differences between humans and chimps may be due as much or more to genome level variation in the number, function and expression of genes rather than DNA sequence changes in shared genes. Indeed, even within humans, there has been found to be a previously unappreciated amount of copy number variation (CNV) which can make up as much as 5–15% of the human genome. In other words, between humans, there could be +/- 500,000,000 base pairs of DNA, some being active genes, others inactivated, or active at different levels. The full significance of this finding remains to be seen. On average, a typical human protein-coding gene differs from its chimpanzee ortholog by only two amino acid substitutions; nearly one third of human genes have exactly the same protein translation as their chimpanzee orthologs. A major difference between the two genomes is human chromosome 2, which is equivalent to a fusion product of chimpanzee chromosomes 12 and 13. (later renamed to chromosomes 2A and 2B, respectively). Humans have undergone an extraordinary loss of olfactory receptor genes during our recent evolution, which explains our relatively crude sense of smell compared to most other mammals. Evolutionary evidence suggests that the emergence of color vision in humans and several other primate species has diminished the need for the sense of smell. In September 2016, scientists reported that, based on human DNA genetic studies, all non-Africans in the world today can be traced to a single population that exited Africa between 50,000 and 80,000 years ago. == Mitochondrial DNA == The human mitochondrial DNA is of tremendous interest to geneticists, since it undoubtedly plays a role in mitochondrial disease. It also sheds light on human evolution; for example, analysis of variation in the human mitochondrial genome has led to the postulation of a recent common ancestor for all humans on the maternal line of descent (see Mitochondrial Eve). Due to the damage induced by the exposure to Reactive Oxygen Species mitochondrial DNA (mtDNA) has a more rapid rate of variation than nuclear DNA. This 20-fold higher mutation rate allows mtDNA to be used for more accurate tracing of maternal ancestry. Studies of mtDNA in populations have allowed ancient migration paths to be traced, such as the migration of Native Americans from Siberia or Polynesians from southeastern Asia. It has also been used to show that there is no trace of Neanderthal DNA in the European gene mixture inherited through purely maternal lineage. Due to the restrictive all or none manner of mtDNA inheritance, this result (no trace of Neanderthal mtDNA) would be likely unless there were a large percentage of Neanderthal ancestry, or there was strong positive selection for that mtDNA. For example, going back 5 generations, only 1 of a person's 32 ancestors contributed to that person's mtDNA, so if one of these 32 was pure Neanderthal an expected ~3% of that person's autosomal DNA would be of Neanderthal origin, yet they would have a ~97% chance of having no trace of Neanderthal mtDNA. == Epigenome == Epigenetics describes a variety of features of the human genome that transcend its primary DNA sequence, such as chromatin packaging, histone modifications and DNA methylation, and which are important in regulating gene expression, genome replication and other cellular processes. Epigenetic markers strengthen and weaken transcription of certain genes but do not affect the actual sequence of DNA nucleotides. DNA methylation is a major form of epigenetic control over gene expression and one of the most highly studied topics in epigenetics. During development, the human DNA methylation profile experiences dramatic changes. In early germ line cells, the genome has very low methylation levels. These low levels generally describe active genes. As development progresses, parental imprinting tags lead to increased methylation activity. Epigenetic patterns can be identified between tissues within an individual as well as between individuals themselves. Identical genes that have differences only in their epigenetic state are called epialleles. Epialleles can be placed into three categories: those directly determined by an individual's genotype, those influenced by genotype, and those entirely independent of genotype. The epigenome is also influenced significantly by environmental factors. Diet, toxins, and hormones impact the epigenetic state. Studies in dietary manipulation have demonstrated that methyl-deficient diets are associated with hypomethylation of the epigenome. Such studies establish epigenetics as an important interface between the environment and the genome. == See also == == References == == External links == Annotated (version 110) genome viewer of T2T-CHM13 v2.0 Complete human genome T2T-CHM13 v2.0 (no gaps) Ensembl The Ensembl Genome Browser Project National Library of Medicine Genome Data Viewer (GDV) UCSC Genome Browser using T2T-CHM13 v2.0 Uniprot: per chromosome gene list Human Genome Project The National Human Genome Research Institute The National Office of Public Health Genomics Simple Human Genome viewer"
+  },
+  "chunks": [
+    {
+      "id": "humangenome_34c9d509_c0000",
+      "article_id": "humangenome_34c9d509",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 950,
+      "content": "The human genome is a complete set of nucleic acid sequences for humans, encoded as the DNA within each of the 23 distinct chromosomes in the cell nucleus. A small DNA molecule is found within individual mitochondria. These are usually treated separately as the nuclear genome and the mitochondrial genome. Human genomes include both protein-coding DNA sequences and various types of DNA that does not encode proteins. The latter is a diverse category that includes DNA coding for non-translated RNA, such as that for ribosomal RNA, transfer RNA, ribozymes, small nuclear RNAs, and several types of regulatory RNAs. It also includes promoters and their associated gene-regulatory elements, DNA playing structural and replicatory roles, such as scaffolding regions, telomeres, centromeres, and origins of replication, plus large numbers of transposable elements, inserted viral DNA, non-functional pseudogenes and simple, highly repetitive sequences.",
+      "char_count": 949,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0001",
+      "article_id": "humangenome_34c9d509",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 950,
+      "end_char": 1542,
+      "content": "Introns make up a large percentage of non-coding DNA. Some of this non-coding DNA is non-functional junk DNA, such as pseudogenes, but there is no firm consensus on the total amount of junk DNA. Although the sequence of the human genome has been completely determined by DNA sequencing in 2022 (including methylome), it is not yet fully understood. Most, but not all, genes have been identified by a combination of high throughput experimental and bioinformatics approaches, yet much work still needs to be done to further elucidate the biological functions of their protein and RNA products.",
+      "char_count": 592,
+      "token_estimate": 148,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0002",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Size of the human genome ==",
+      "heading_path": "== Size of the human genome ==",
+      "start_char": 1573,
+      "end_char": 2512,
+      "content": "== Size of the human genome == In 2000, scientists reported the sequencing of 88% of human genome, but as of 2020, at least 8% was still missing. In 2021, scientists reported sequencing a complete, female genome (i.e., without the Y chromosome). The human Y chromosome, consisting of 62,460,029 base pairs from a different cell line and found in all males, was sequenced completely in January 2022. The current version of the standard reference genome is called GRCh38.p14 (July 2023). It consists of 22 autosomes plus one copy of the X chromosome and one copy of the Y chromosome. It contains approximately 3.1 billion base pairs. This represents the size of a composite genome based on data from multiple individuals but it is a good indication of the typical amount of DNA in a haploid set of chromosomes because the Y chromosome is quite small. Most human cells are diploid so they contain twice as much DNA (~6.2 billion base pairs).",
+      "char_count": 938,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0003",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Size of the human genome ==",
+      "heading_path": "== Size of the human genome ==",
+      "start_char": 2512,
+      "end_char": 3107,
+      "content": "In 2023, a draft human pangenome reference was published. It is based on 47 genomes from persons of varied ethnicity. Plans are underway for an improved reference capturing still more biodiversity from a still wider sample. While there are significant differences among the genomes of human individuals (on the order of 0.1% due to single-nucleotide variants and 0.6% when considering indels), these are considerably smaller than the differences between humans and their closest living relatives, the bonobos and chimpanzees (~1.1% fixed single-nucleotide variants and 4% when including indels).",
+      "char_count": 595,
+      "token_estimate": 148,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0004",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Molecular organization and gene content ==",
+      "heading_path": "== Molecular organization and gene content ==",
+      "start_char": 3123,
+      "end_char": 3535,
+      "content": "== Molecular organization and gene content == The total length of the human reference genome does not represent the sequence of any specific individual, nor does it represent the sequence of all of the DNA found within a cell. The human reference genome only includes one copy of each of the paired, homologous autosomes plus one copy of each of the two sex chromosomes (X and Y). The total amount of DNA in this reference genome is 3.1 billion base pairs.",
+      "char_count": 456,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0005",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Protein-coding genes ==",
+      "heading_path": "== = Protein-coding genes ==",
+      "start_char": 3563,
+      "end_char": 4455,
+      "content": "== = Protein-coding genes === Protein-coding sequences represent the most widely studied and best understood component of the human genome. These sequences ultimately lead to the production of all human proteins, although several biological processes (e.g. DNA rearrangements and alternative pre-mRNA splicing) can lead to the production of many more unique proteins than the number of protein-coding genes. The human reference genome contains somewhere between 19,000 and 20,000 protein-coding genes. These genes contain an average of 10 introns and the average size of an intron is about 6 kb (6,000 bp). This means that the average size of a protein-coding gene is about 62 kb and these genes take up about 40% of the genome. Exon sequences consist of coding DNA and untranslated regions (UTRs) at either end of the mature mRNA. The total amount of coding DNA is about 1-2% of the genome.",
+      "char_count": 891,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0006",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Protein-coding genes ==",
+      "heading_path": "== = Protein-coding genes ==",
+      "start_char": 4455,
+      "end_char": 4659,
+      "content": "Many people divide the genome into coding and non-coding DNA based on the idea that coding DNA is the most important functional component of the genome. About 98-99% of the human genome is non-coding DNA.",
+      "char_count": 204,
+      "token_estimate": 51,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0007",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Non-coding genes ==",
+      "heading_path": "== = Non-coding genes ==",
+      "start_char": 4656,
+      "end_char": 5369,
+      "content": "== = Non-coding genes === Noncoding RNA molecules play many essential roles in cells, especially in the many reactions of protein synthesis and RNA processing. Noncoding genes include those for tRNAs, ribosomal RNAs, microRNAs, snRNAs and long non-coding RNAs (lncRNAs). The number of reported non-coding genes continues to rise slowly but the exact number in the human genome is yet to be determined. Many RNAs are thought to be non-functional. Many ncRNAs are critical elements in gene regulation and expression. Noncoding RNA also contributes to epigenetics, transcription, RNA splicing, and the translational machinery. The role of RNA in genetic regulation and disease offers a new potential level of unexplored genomic complexity.",
+      "char_count": 736,
+      "token_estimate": 184,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0008",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Pseudogenes ==",
+      "heading_path": "== = Pseudogenes ==",
+      "start_char": 5388,
+      "end_char": 6327,
+      "content": "== = Pseudogenes === Pseudogenes are inactive copies of protein-coding genes, often generated by gene duplication, that have become nonfunctional through the accumulation of inactivating mutations. The number of pseudogenes in the human genome is on the order of 13,000, and in some chromosomes is nearly the same as the number of functional protein-coding genes. Gene duplication is a major mechanism through which new genetic material is generated during molecular evolution. For example, the olfactory receptor gene family is one of the best-documented examples of pseudogenes in the human genome. More than 60 percent of the genes in this family are non-functional pseudogenes in humans. By comparison, only 20 percent of genes in the mouse olfactory receptor gene family are pseudogenes. Research suggests that this is a species-specific characteristic, as the most closely related primates all have proportionally fewer pseudogenes.",
+      "char_count": 938,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0009",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Regulatory DNA sequences ==",
+      "heading_path": "== = Regulatory DNA sequences ==",
+      "start_char": 6447,
+      "end_char": 7330,
+      "content": "== = Regulatory DNA sequences === The human genome has many different regulatory sequences which are crucial to controlling gene expression. Conservative estimates indicate that these sequences make up 8% of the genome, however extrapolations from the ENCODE project give that 20 or more of the genome is gene regulatory sequence. Some types of non-coding DNA are genetic \"switches\" that do not encode proteins, but do regulate when and where genes are expressed (called enhancers). Regulatory sequences have been known since the late 1960s. The first identification of regulatory sequences in the human genome relied on recombinant DNA technology. Later with the advent of genomic sequencing, the identification of these sequences could be inferred by evolutionary conservation. The evolutionary branch between the primates and mouse, for example, occurred 70–90 million years ago.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0010",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Regulatory DNA sequences ==",
+      "heading_path": "== = Regulatory DNA sequences ==",
+      "start_char": 7330,
+      "end_char": 8020,
+      "content": "So computer comparisons of gene sequences that identify conserved non-coding sequences will be an indication of their importance in duties such as gene regulation. Other genomes have been sequenced with the same intention of aiding conservation-guided methods, one example being the pufferfish genome. However, regulatory sequences disappear and re-evolve during evolution at a high rate. As of 2012, the efforts have shifted toward finding interactions between DNA and regulatory proteins by the technique ChIP-Seq, or gaps where the DNA is not packaged by histones (DNase hypersensitive sites), both of which tell where there are active regulatory sequences in the investigated cell type.",
+      "char_count": 690,
+      "token_estimate": 172,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0011",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Repetitive DNA sequences ==",
+      "heading_path": "== = Repetitive DNA sequences ==",
+      "start_char": 8021,
+      "end_char": 8848,
+      "content": "== = Repetitive DNA sequences === Repetitive DNA sequences comprise approximately 50% of the human genome. About 8% of the human genome consists of tandem DNA arrays or tandem repeats, low complexity repeat sequences that have multiple adjacent copies (e.g. \"CAGCAGCAG...\"). The tandem sequences may be of variable lengths, from two nucleotides to tens of nucleotides. These sequences are highly variable, even among closely related individuals, and so are used for genealogical DNA testing and forensic DNA analysis. Repeated sequences of fewer than ten nucleotides (e.g. the dinucleotide repeat (AC)n) are termed microsatellite sequences. Among the microsatellite sequences, trinucleotide repeats are of particular importance, as sometimes occur within coding regions of genes for proteins and may lead to genetic disorders.",
+      "char_count": 826,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0012",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Repetitive DNA sequences ==",
+      "heading_path": "== = Repetitive DNA sequences ==",
+      "start_char": 8848,
+      "end_char": 9750,
+      "content": "For example, Huntington's disease results from an expansion of the trinucleotide repeat (CAG)n within the Huntingtin gene on human chromosome 4. Telomeres (the ends of linear chromosomes) end with a microsatellite hexanucleotide repeat of the sequence (TTAGGG)n. Tandem repeats of longer sequences (arrays of repeated sequences 10–60 nucleotides long) are termed minisatellites. Transposable genetic elements, DNA sequences that can replicate and insert copies of themselves at other locations within a host genome, are an abundant component in the human genome. The most abundant transposon lineage, Alu, has about 50,000 active copies, and can be inserted into intragenic and intergenic regions. One other lineage, LINE-1, has about 100 active copies per genome (the number varies between people). Together with non-functional relics of old transposons, they account for over half of total human DNA.",
+      "char_count": 902,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0013",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Repetitive DNA sequences ==",
+      "heading_path": "== = Repetitive DNA sequences ==",
+      "start_char": 9751,
+      "end_char": 10610,
+      "content": "Sometimes called \"jumping genes\", transposons have played a major role in sculpting the human genome. Some of these sequences represent endogenous retroviruses, DNA copies of viral sequences that have become permanently integrated into the genome and are now passed on to succeeding generations. There are also a significant number of retroviruses in human DNA, at least 3 of which have been proven to possess an important function (i.e., HIV-like functional HERV-K; envelope genes of non-functional viruses HERV-W and HERV-FRD play a role in placenta formation by inducing cell-cell fusion). Mobile elements within the human genome can be classified into LTR retrotransposons (8.3% of total genome), SINEs (13.1% of total genome) including Alu elements, LINEs (20.4% of total genome), SVAs (SINE-VNTR-Alu) and Class II DNA transposons (2.9% of total genome).",
+      "char_count": 859,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0014",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Junk DNA ==",
+      "heading_path": "== = Junk DNA ==",
+      "start_char": 10595,
+      "end_char": 11514,
+      "content": "== = Junk DNA === There is no consensus on what constitutes a \"functional\" element in the genome since geneticists, evolutionary biologists, and molecular biologists employ different definitions and methods. Due to the ambiguity in the terminology, different schools of thought have emerged. In evolutionary definitions, \"functional\" DNA, whether it is coding or non-coding, contributes to the fitness of the organism, and therefore is maintained by negative evolutionary pressure whereas \"non-functional\" DNA has no benefit to the organism and therefore is under neutral selective pressure. This type of DNA has been described as junk DNA. In genetic definitions, \"functional\" DNA is related to how DNA segments manifest by phenotype and \"nonfunctional\" is related to loss-of-function effects on the organism. In biochemical definitions, \"functional\" DNA relates to DNA sequences that specify molecular products (e.g.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0015",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Junk DNA ==",
+      "heading_path": "== = Junk DNA ==",
+      "start_char": 11514,
+      "end_char": 12265,
+      "content": "noncoding RNAs) and biochemical activities with mechanistic roles in gene or genome regulation (i.e. DNA sequences that impact cellular level activity such as cell type, condition, and molecular processes). There is no consensus in the literature on the amount of functional DNA since, depending on how \"function\" is understood, ranges have been estimated from up to 90% of the human genome is likely nonfunctional DNA (junk DNA) to up to 80% of the genome is likely functional. It is also possible that junk DNA may acquire a function in the future and therefore may play a role in evolution, but this is likely to occur only very rarely. Finally DNA that is deliterious to the organism and is under negative selective pressure is called garbage DNA.",
+      "char_count": 751,
+      "token_estimate": 187,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0016",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Sequencing ==",
+      "heading_path": "== Sequencing ==",
+      "start_char": 12266,
+      "end_char": 13200,
+      "content": "== Sequencing == The first human genome sequences were published in nearly complete draft form in February 2001 by the Human Genome Project and Celera Corporation. Completion of the Human Genome Project's sequencing effort was announced in 2004 with the publication of a draft genome sequence, leaving just 341 gaps in the sequence, representing highly repetitive and other DNA that could not be sequenced with the technology available at the time. The human genome was the first of all vertebrates to be sequenced to such near-completion, and as of 2018, the diploid genomes of over a million individual humans had been determined using next-generation sequencing. These data are used worldwide in biomedical science, anthropology, forensics and other branches of science. Such genomic studies have led to advances in the diagnosis and treatment of diseases, and to new insights in many fields of biology, including human evolution.",
+      "char_count": 933,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0017",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Sequencing ==",
+      "heading_path": "== Sequencing ==",
+      "start_char": 13200,
+      "end_char": 14159,
+      "content": "By 2018, the total number of genes had been raised to at least 46,831, plus another 2300 micro-RNA genes. A 2018 population survey found another 300 million bases of human genome that was not in the reference sequence. Prior to the acquisition of the full genome sequence, estimates of the number of human genes ranged from 50,000 to 140,000 (with occasional vagueness about whether these estimates included non-protein coding genes). As genome sequence quality and the methods for identifying protein-coding genes improved, the count of recognized protein-coding genes dropped to 19,000–20,000. In 2022, the Telomere-to-Telomere (T2T) consortium reported the complete sequence of a human female genome, filling all the gaps in the X chromosome (2020) and the 22 autosomes (May 2021). The previously unsequenced parts contain immune response genes that help to adapt to and survive infections, as well as genes that are important for predicting drug response.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0018",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Sequencing ==",
+      "heading_path": "== Sequencing ==",
+      "start_char": 14160,
+      "end_char": 15067,
+      "content": "The completed human genome sequence will also provide better understanding of human formation as an individual organism and how humans vary both between each other and other species. Although the 'completion' of the human genome project was announced in 2001, there remained hundreds of gaps, with about 5–10% of the total sequence remaining undetermined. The missing genetic information was mostly in repetitive heterochromatic regions and near the centromeres and telomeres, but also some gene-encoding euchromatic regions. There remained 160 euchromatic gaps in 2015 when the sequences spanning another 50 formerly unsequenced regions were determined. Only in 2020 was the first truly complete telomere-to-telomere sequence of a human chromosome determined, namely of the X chromosome. The first complete telomere-to-telomere sequence of a human autosomal chromosome, chromosome 8, followed a year later.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0019",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Sequencing ==",
+      "heading_path": "== Sequencing ==",
+      "start_char": 15068,
+      "end_char": 15404,
+      "content": "The complete human genome (without Y chromosome) was published in 2021, while with Y chromosome in January 2022. In 2023, a draft human pangenome reference was published. It is based on 47 genomes from persons of varied ethnicity. Plans are underway for an improved reference capturing still more biodiversity from a still wider sample.",
+      "char_count": 336,
+      "token_estimate": 84,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0020",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Human reference genome ==",
+      "heading_path": "== = Human reference genome ==",
+      "start_char": 15453,
+      "end_char": 16221,
+      "content": "== = Human reference genome === With the exception of identical twins, all humans show significant variation in genomic DNA sequences. The human reference genome (HRG) is used as a standard sequence reference. There are several important points concerning the human reference genome: The HRG is a haploid sequence. Each chromosome is represented once. The HRG is a composite sequence, and does not correspond to any actual human individual. The HRG is periodically updated to correct errors, ambiguities, and unknown \"gaps\". The HRG in no way represents an \"ideal\" or \"perfect\" human individual. It is simply a standardized representation or model that is used for comparative purposes. The Genome Reference Consortium is responsible for updating the HRG. Version 38 was released in December 2013.",
+      "char_count": 797,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0021",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Measuring human genetic variation ==",
+      "heading_path": "== = Measuring human genetic variation ==",
+      "start_char": 16262,
+      "end_char": 17029,
+      "content": "== = Measuring human genetic variation === Most studies of human genetic variation have focused on single-nucleotide polymorphisms (SNPs), which are substitutions in individual bases along a chromosome. Most analyses estimate that SNPs occur 1 in 1000 base pairs, on average, in the euchromatic human genome, although they do not occur at a uniform density. Thus follows the popular statement that \"we are all, regardless of race, genetically 99.9% the same\", although this would be somewhat qualified by most geneticists. For example, a much larger fraction of the genome is now thought to be involved in copy number variation. A large-scale collaborative effort to catalog SNP variations in the human genome is being undertaken by the International HapMap Project.",
+      "char_count": 766,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0022",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Measuring human genetic variation ==",
+      "heading_path": "== = Measuring human genetic variation ==",
+      "start_char": 17029,
+      "end_char": 17935,
+      "content": "The genomic loci and length of certain types of small repetitive sequences are highly variable from person to person, which is the basis of DNA fingerprinting and DNA paternity testing technologies. The heterochromatic portions of the human genome, which total several hundred million base pairs, are also thought to be quite variable within the human population (they are so repetitive and so long that they cannot be accurately sequenced with current technology). These regions contain few genes, and it is unclear whether any significant phenotypic effect results from typical variation in repeats or heterochromatin. Most gross genomic mutations in gamete germ cells probably result in inviable embryos; however, a number of human diseases are related to large-scale genomic abnormalities. Down syndrome, Turner Syndrome, and a number of other diseases result from nondisjunction of entire chromosomes.",
+      "char_count": 906,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0023",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Structural variation ==",
+      "heading_path": "== = Structural variation ==",
+      "start_char": 18096,
+      "end_char": 18996,
+      "content": "== = Structural variation === Structural variation refers to genetic variants that affect larger segments of the human genome, as opposed to point mutations. Often, structural variants (SVs) are defined as variants of 50 base pairs (bp) or greater, such as deletions, duplications, insertions, inversions and other rearrangements. About 90% of structural variants are noncoding deletions but most individuals have more than a thousand such deletions; the size of deletions ranges from dozens of base pairs to tens of thousands of bp. On average, individuals carry ~3 rare structural variants that alter coding regions, e.g. delete exons. About 2% of individuals carry ultra-rare megabase-scale structural variants, especially rearrangements. That is, millions of base pairs may be inverted within a chromosome; ultra-rare means that they are only found in individuals or their family members and thus have arisen very recently.",
+      "char_count": 927,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0024",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = SNP frequency across the human genome ==",
+      "heading_path": "== = SNP frequency across the human genome ==",
+      "start_char": 19041,
+      "end_char": 19884,
+      "content": "== = SNP frequency across the human genome === Single-nucleotide polymorphisms (SNPs) do not occur homogeneously across the human genome. In fact, there is enormous diversity in SNP frequency between genes, reflecting different selective pressures on each gene as well as different mutation and recombination rates across the genome. However, studies on SNPs are biased towards coding regions, the data generated from them are unlikely to reflect the overall distribution of SNPs throughout the genome. Therefore, the SNP Consortium protocol was designed to identify SNPs with no bias towards coding regions and the Consortium's 100,000 SNPs generally reflect sequence diversity across the human chromosomes. The SNP Consortium aims to expand the number of SNPs identified across the genome to 300 000 by the end of the first quarter of 2001.",
+      "char_count": 842,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0025",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = SNP frequency across the human genome ==",
+      "heading_path": "== = SNP frequency across the human genome ==",
+      "start_char": 19884,
+      "end_char": 20258,
+      "content": "Changes in non-coding sequence and synonymous changes in coding sequence are generally more common than non-synonymous changes, reflecting greater selective pressure reducing diversity at positions dictating amino acid identity. Transitional changes are more common than transversions, with CpG dinucleotides showing the highest mutation rate, presumably due to deamination.",
+      "char_count": 374,
+      "token_estimate": 93,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0026",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Personal genomes ==",
+      "heading_path": "== = Personal genomes ==",
+      "start_char": 20238,
+      "end_char": 21179,
+      "content": "== = Personal genomes === A personal genome sequence is a (nearly) complete sequence of the chemical base pairs that make up the DNA of a single person. Because medical treatments have different effects on different people due to genetic variations such as single-nucleotide polymorphisms (SNPs), the analysis of personal genomes may lead to personalized medical treatment based on individual genotypes. The first personal genome sequence to be determined was that of Craig Venter in 2007. Personal genomes had not been sequenced in the public Human Genome Project to protect the identity of volunteers who provided DNA samples. That sequence was derived from the DNA of several volunteers from a diverse population. However, early in the Venter-led Celera Genomics genome sequencing effort the decision was made to switch from sequencing a composite sample to using DNA from a single individual, later revealed to have been Venter himself.",
+      "char_count": 940,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0027",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Personal genomes ==",
+      "heading_path": "== = Personal genomes ==",
+      "start_char": 21179,
+      "end_char": 22151,
+      "content": "Thus the Celera human genome sequence released in 2000 was largely that of one man. Subsequent replacement of the early composite-derived data and determination of the diploid sequence, representing both sets of chromosomes, rather than a haploid sequence originally reported, allowed the release of the first personal genome. In April 2008, that of James Watson was also completed. In 2009, Stephen Quake published his own genome sequence derived from a sequencer of his own design, the Heliscope. A Stanford team led by Euan Ashley published a framework for the medical interpretation of human genomes implemented on Quake's genome and made whole genome-informed medical decisions for the first time. That team further extended the approach to the West family, the first family sequenced as part of Illumina's Personal Genome Sequencing program. Since then hundreds of personal genome sequences have been released, including those of Desmond Tutu, and of a Paleo-Eskimo.",
+      "char_count": 972,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0028",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Personal genomes ==",
+      "heading_path": "== = Personal genomes ==",
+      "start_char": 22152,
+      "end_char": 22953,
+      "content": "In 2012, the whole genome sequences of two family trios among 1092 genomes was made public. In November 2013, a Spanish family made four personal exome datasets (about 1% of the genome) publicly available under a Creative Commons public domain license. The Personal Genome Project (started in 2005) is among the few to make both genome sequences and corresponding medical phenotypes publicly available. The sequencing of individual genomes further unveiled levels of genetic complexity that had not been appreciated before. Personal genomics helped reveal the significant level of diversity in the human genome attributed not only to SNPs but structural variations as well. However, the application of such knowledge to the treatment of disease and in the medical field is only in its very beginnings.",
+      "char_count": 801,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0029",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Personal genomes ==",
+      "heading_path": "== = Personal genomes ==",
+      "start_char": 22954,
+      "end_char": 23197,
+      "content": "Exome sequencing has become increasingly popular as a tool to aid in diagnosis of genetic disease because the exome contributes only 1% of the genomic sequence but accounts for roughly 85% of mutations that contribute significantly to disease.",
+      "char_count": 243,
+      "token_estimate": 60,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0030",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Human knockouts ==",
+      "heading_path": "== = Human knockouts ==",
+      "start_char": 23197,
+      "end_char": 24077,
+      "content": "== = Human knockouts === In humans, gene knockouts naturally occur as heterozygous or homozygous loss-of-function gene knockouts. These knockouts are often difficult to distinguish, especially within heterogeneous genetic backgrounds. They are also difficult to find as they occur in low frequencies. Populations with high rates of consanguinity, such as countries with high rates of first-cousin marriages, display the highest frequencies of homozygous gene knockouts. Such populations include Pakistan, Iceland, and Amish populations. These populations with a high level of parental-relatedness have been subjects of human knock out research which has helped to determine the function of specific genes in humans. By distinguishing specific knockouts, researchers are able to use phenotypic analyses of these individuals to help characterize the gene that has been knocked out.",
+      "char_count": 879,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0031",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Human knockouts ==",
+      "heading_path": "== = Human knockouts ==",
+      "start_char": 24077,
+      "end_char": 24869,
+      "content": "Knockouts in specific genes can cause genetic diseases, potentially have beneficial effects, or even result in no phenotypic effect at all. However, determining a knockout's phenotypic effect and in humans can be challenging. Challenges to characterizing and clinically interpreting knockouts include difficulty calling of DNA variants, determining disruption of protein function (annotation), and considering the amount of influence mosaicism has on the phenotype. One major study that investigated human knockouts is the Pakistan Risk of Myocardial Infarction study. It was found that individuals possessing a heterozygous loss-of-function gene knockout for the APOC3 gene had lower triglycerides in the blood after consuming a high fat meal as compared to individuals without the mutation.",
+      "char_count": 792,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0032",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = Human knockouts ==",
+      "heading_path": "== = Human knockouts ==",
+      "start_char": 24870,
+      "end_char": 25089,
+      "content": "However, individuals possessing homozygous loss-of-function gene knockouts of the APOC3 gene displayed the lowest level of triglycerides in the blood after the fat load test, as they produce no functional APOC3 protein.",
+      "char_count": 219,
+      "token_estimate": 54,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0033",
+      "article_id": "humangenome_34c9d509",
+      "section": "== = DNA damage ==",
+      "heading_path": "== = DNA damage ==",
+      "start_char": 25085,
+      "end_char": 25435,
+      "content": "== = DNA damage === In each cell of the human body, the human genome experiences, on average, tens of thousands of DNA damages per day. These damages can block genome replication or genome transcription, and if they are not repaired or are repaired incorrectly, they may lead to mutations, or other genome alterations in the human genome that threaten cell viability.",
+      "char_count": 367,
+      "token_estimate": 91,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0034",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Human genetic disorders ==",
+      "heading_path": "== Human genetic disorders ==",
+      "start_char": 25464,
+      "end_char": 26292,
+      "content": "== Human genetic disorders == Most aspects of human biology involve both genetic (inherited) and non-genetic (environmental) factors. Some inherited variation influences aspects of our biology that are not medical in nature (height, eye color, ability to taste or smell certain compounds, etc.). Moreover, some genetic disorders only cause disease in combination with the appropriate environmental factors (such as diet). With these caveats, genetic disorders may be described as clinically defined diseases caused by genomic DNA sequence variation. In the most straightforward cases, the disorder can be associated with variation in a single gene. For example, cystic fibrosis is caused by mutations in the CFTR gene and is the most common recessive disorder in caucasian populations with over 1,300 different mutations known.",
+      "char_count": 827,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0035",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Human genetic disorders ==",
+      "heading_path": "== Human genetic disorders ==",
+      "start_char": 26292,
+      "end_char": 27238,
+      "content": "Disease-causing mutations in specific genes are usually severe in terms of gene function and are rare, thus genetic disorders are similarly individually rare. However, since there are many genes that can vary to cause genetic disorders, in aggregate they constitute a significant component of known medical conditions, especially in pediatric medicine. Molecularly characterized genetic disorders are those for which the underlying causal gene has been identified. Currently there are approximately 2,200 such disorders annotated in the OMIM database. Studies of genetic disorders are often performed by means of family-based studies. In some instances, population based approaches are employed, particularly in the case of so-called founder populations such as those in Finland, French-Canada, Utah, Sardinia, etc. Diagnosis and treatment of genetic disorders are usually performed by a geneticist-physician trained in clinical/medical genetics.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0036",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Human genetic disorders ==",
+      "heading_path": "== Human genetic disorders ==",
+      "start_char": 27239,
+      "end_char": 28097,
+      "content": "The results of the Human Genome Project are likely to provide increased availability of genetic testing for gene-related disorders, and eventually improved treatment. Parents can be screened for hereditary conditions and counselled on the consequences, the probability of inheritance, and how to avoid or ameliorate it in their offspring. There are many different kinds of DNA sequence variation, ranging from complete extra or missing chromosomes down to single nucleotide changes. It is generally presumed that much naturally occurring genetic variation in human populations is phenotypically neutral, i.e., has little or no detectable effect on the physiology of the individual (although there may be fractional differences in fitness defined over evolutionary time frames). Genetic disorders can be caused by any or all known types of sequence variation.",
+      "char_count": 858,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0037",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Human genetic disorders ==",
+      "heading_path": "== Human genetic disorders ==",
+      "start_char": 28098,
+      "end_char": 29017,
+      "content": "To molecularly characterize a new genetic disorder, it is necessary to establish a causal link between a particular genomic sequence variant and the clinical disease under investigation. Such studies constitute the realm of human molecular genetics. With the advent of the Human Genome and International HapMap Project, it has become feasible to explore subtle genetic influences on many common disease conditions such as diabetes, asthma, migraine, schizophrenia, etc. Although some causal links have been made between genomic sequence variants in particular genes and some of these diseases, often with much publicity in the general media, these are usually not considered to be genetic disorders per se as their causes are complex, involving many different genetic and environmental factors. Thus there may be disagreement in particular cases whether a specific medical condition should be termed a genetic disorder.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0038",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Human genetic disorders ==",
+      "heading_path": "== Human genetic disorders ==",
+      "start_char": 29018,
+      "end_char": 29793,
+      "content": "Additional genetic disorders of mention are Kallman syndrome and Pfeiffer syndrome (gene FGFR1), Fuchs corneal dystrophy (gene TCF4), Hirschsprung's disease (genes RET and FECH), Bardet-Biedl syndrome 1 (genes CCDC28B and BBS1), Bardet-Biedl syndrome 10 (gene BBS10), and facioscapulohumeral muscular dystrophy type 2 (genes D4Z4 and SMCHD1). Genome sequencing is now able to narrow the genome down to specific locations to more accurately find mutations that will result in a genetic disorder. Copy number variants (CNVs) and single nucleotide variants (SNVs) are also able to be detected at the same time as genome sequencing with newer sequencing procedures available, called Next Generation Sequencing (NGS). This only analyzes a small portion of the genome, around 1–2%.",
+      "char_count": 775,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0039",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Human genetic disorders ==",
+      "heading_path": "== Human genetic disorders ==",
+      "start_char": 29794,
+      "end_char": 30549,
+      "content": "The results of this sequencing can be used for clinical diagnosis of a genetic condition, including Usher syndrome, retinal disease, hearing impairments, diabetes, epilepsy, Leigh disease, hereditary cancers, neuromuscular diseases, primary immunodeficiencies, severe combined immunodeficiency (SCID), and diseases of the mitochondria. NGS can also be used to identify carriers of diseases before conception. The diseases that can be detected in this sequencing include Tay-Sachs disease, Bloom syndrome, Gaucher disease, Canavan disease, familial dysautonomia, cystic fibrosis, spinal muscular atrophy, and fragile-X syndrome. The Next Genome Sequencing can be narrowed down to specifically look for diseases more prevalent in certain ethnic populations.",
+      "char_count": 755,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0040",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Evolution ==",
+      "heading_path": "== Evolution ==",
+      "start_char": 30536,
+      "end_char": 31511,
+      "content": "== Evolution == Comparative genomics studies of mammalian genomes suggest that approximately 5% of the human genome has been conserved by evolution since the divergence of extant lineages approximately 200 million years ago, containing the vast majority of genes. The published chimpanzee genome differs from that of the human genome by 1.23% in direct sequence comparisons. Around 20% of this figure is accounted for by variation within each species, leaving only ~1.06% consistent sequence divergence between humans and chimps at shared genes. This nucleotide by nucleotide difference is dwarfed, however, by the portion of each genome that is not shared, including around 6% of functional genes that are unique to either humans or chimps. In other words, the considerable observable differences between humans and chimps may be due as much or more to genome level variation in the number, function and expression of genes rather than DNA sequence changes in shared genes.",
+      "char_count": 974,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0041",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Evolution ==",
+      "heading_path": "== Evolution ==",
+      "start_char": 31511,
+      "end_char": 32329,
+      "content": "Indeed, even within humans, there has been found to be a previously unappreciated amount of copy number variation (CNV) which can make up as much as 5–15% of the human genome. In other words, between humans, there could be +/- 500,000,000 base pairs of DNA, some being active genes, others inactivated, or active at different levels. The full significance of this finding remains to be seen. On average, a typical human protein-coding gene differs from its chimpanzee ortholog by only two amino acid substitutions; nearly one third of human genes have exactly the same protein translation as their chimpanzee orthologs. A major difference between the two genomes is human chromosome 2, which is equivalent to a fusion product of chimpanzee chromosomes 12 and 13. (later renamed to chromosomes 2A and 2B, respectively).",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0042",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Evolution ==",
+      "heading_path": "== Evolution ==",
+      "start_char": 32330,
+      "end_char": 32881,
+      "content": "Humans have undergone an extraordinary loss of olfactory receptor genes during our recent evolution, which explains our relatively crude sense of smell compared to most other mammals. Evolutionary evidence suggests that the emergence of color vision in humans and several other primate species has diminished the need for the sense of smell. In September 2016, scientists reported that, based on human DNA genetic studies, all non-Africans in the world today can be traced to a single population that exited Africa between 50,000 and 80,000 years ago.",
+      "char_count": 551,
+      "token_estimate": 137,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0043",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Mitochondrial DNA ==",
+      "heading_path": "== Mitochondrial DNA ==",
+      "start_char": 32890,
+      "end_char": 33855,
+      "content": "== Mitochondrial DNA == The human mitochondrial DNA is of tremendous interest to geneticists, since it undoubtedly plays a role in mitochondrial disease. It also sheds light on human evolution; for example, analysis of variation in the human mitochondrial genome has led to the postulation of a recent common ancestor for all humans on the maternal line of descent (see Mitochondrial Eve). Due to the damage induced by the exposure to Reactive Oxygen Species mitochondrial DNA (mtDNA) has a more rapid rate of variation than nuclear DNA. This 20-fold higher mutation rate allows mtDNA to be used for more accurate tracing of maternal ancestry. Studies of mtDNA in populations have allowed ancient migration paths to be traced, such as the migration of Native Americans from Siberia or Polynesians from southeastern Asia. It has also been used to show that there is no trace of Neanderthal DNA in the European gene mixture inherited through purely maternal lineage.",
+      "char_count": 964,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0044",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Mitochondrial DNA ==",
+      "heading_path": "== Mitochondrial DNA ==",
+      "start_char": 33855,
+      "end_char": 34401,
+      "content": "Due to the restrictive all or none manner of mtDNA inheritance, this result (no trace of Neanderthal mtDNA) would be likely unless there were a large percentage of Neanderthal ancestry, or there was strong positive selection for that mtDNA. For example, going back 5 generations, only 1 of a person's 32 ancestors contributed to that person's mtDNA, so if one of these 32 was pure Neanderthal an expected ~3% of that person's autosomal DNA would be of Neanderthal origin, yet they would have a ~97% chance of having no trace of Neanderthal mtDNA.",
+      "char_count": 546,
+      "token_estimate": 136,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0045",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Epigenome ==",
+      "heading_path": "== Epigenome ==",
+      "start_char": 34394,
+      "end_char": 35368,
+      "content": "== Epigenome == Epigenetics describes a variety of features of the human genome that transcend its primary DNA sequence, such as chromatin packaging, histone modifications and DNA methylation, and which are important in regulating gene expression, genome replication and other cellular processes. Epigenetic markers strengthen and weaken transcription of certain genes but do not affect the actual sequence of DNA nucleotides. DNA methylation is a major form of epigenetic control over gene expression and one of the most highly studied topics in epigenetics. During development, the human DNA methylation profile experiences dramatic changes. In early germ line cells, the genome has very low methylation levels. These low levels generally describe active genes. As development progresses, parental imprinting tags lead to increased methylation activity. Epigenetic patterns can be identified between tissues within an individual as well as between individuals themselves.",
+      "char_count": 973,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "humangenome_34c9d509_c0046",
+      "article_id": "humangenome_34c9d509",
+      "section": "== Epigenome ==",
+      "heading_path": "== Epigenome ==",
+      "start_char": 35368,
+      "end_char": 35998,
+      "content": "Identical genes that have differences only in their epigenetic state are called epialleles. Epialleles can be placed into three categories: those directly determined by an individual's genotype, those influenced by genotype, and those entirely independent of genotype. The epigenome is also influenced significantly by environmental factors. Diet, toxins, and hormones impact the epigenetic state. Studies in dietary manipulation have demonstrated that methyl-deficient diets are associated with hypomethylation of the epigenome. Such studies establish epigenetics as an important interface between the environment and the genome.",
+      "char_count": 630,
+      "token_estimate": 157,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is the percentage difference in direct sequence comparisons between the published chimpanzee and human genomes?",
+        "answer": "The published chimpanzee genome differs from the human genome by 1.23% in direct sequence comparisons.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0040"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0040"
+        ]
+      },
+      {
+        "question": "What is described as a major form of epigenetic control over gene expression and a highly studied topic in epigenetics?",
+        "answer": "DNA methylation is a major form of epigenetic control over gene expression and one of the most highly studied topics in epigenetics.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0045"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0045"
+        ]
+      },
+      {
+        "question": "Whose personal genome was completed in April 2008?",
+        "answer": "The personal genome of James Watson was completed in April 2008.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0027"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0027"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0000",
+          "humangenome_34c9d509_c0001",
+          "humangenome_34c9d509_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0000",
+          "humangenome_34c9d509_c0001",
+          "humangenome_34c9d509_c0002"
+        ]
+      },
+      {
+        "question": "Explain the disparity between the total genomic space occupied by protein-coding genes and the actual amount of coding DNA within the human reference genome.",
+        "answer": "Protein-coding genes occupy a substantial portion of the human reference genome, about 40%. However, the DNA sequences that actually code for proteins represent a much smaller fraction, only about 1-2% of the total genome. This difference exists because protein-coding genes contain large non-coding regions called introns, which are significantly larger on average than the coding exon sequences.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0004",
+          "humangenome_34c9d509_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0005",
+          "humangenome_34c9d509_c0004"
+        ]
+      },
+      {
+        "question": "How do non-coding genes and pseudogenes represent two different functional states of non-coding DNA?",
+        "answer": "Non-coding genes represent a functional state of non-coding DNA, producing essential non-coding RNA molecules (ncRNAs) that are critical for processes like gene regulation and protein synthesis. In contrast, pseudogenes represent a nonfunctional state; they are inactive copies of protein-coding genes that have been disabled by mutations and no longer have a function.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0006",
+          "humangenome_34c9d509_c0007",
+          "humangenome_34c9d509_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0008",
+          "humangenome_34c9d509_c0007",
+          "humangenome_34c9d509_c0006"
+        ]
+      },
+      {
+        "question": "What are the different types of non-protein-coding DNA found in the human genome, and what is the current understanding of their functionality?",
+        "answer": "The human genome includes a diverse category of DNA that does not encode proteins. This includes DNA that codes for non-translated RNA (such as ribosomal RNA and transfer RNA), promoters and other gene-regulatory elements, structural DNA like telomeres and centromeres, transposable elements, inserted viral DNA, and non-functional pseudogenes. Introns also constitute a large portion of this non-coding DNA. While some of it, like pseudogenes, is considered non-functional \"junk DNA,\" there is no firm scientific consensus on the total amount of junk DNA, and the biological functions of many of these components are not yet fully understood.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0000",
+          "humangenome_34c9d509_c0001"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0000",
+          "humangenome_34c9d509_c0001"
+        ]
+      },
+      {
+        "question": "How does the human pangenome reference published in 2023 differ from the standard reference genome GRCh38.p14 in terms of its composition and goal?",
+        "answer": "The standard reference genome, GRCh38.p14, is a composite genome based on data from multiple individuals, representing a typical haploid set of chromosomes. In contrast, the human pangenome reference, published in 2023, is based on the genomes of 47 individuals from varied ethnicities with the goal of better capturing human biodiversity.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0002",
+          "humangenome_34c9d509_c0003"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0003",
+          "humangenome_34c9d509_c0002"
+        ]
+      },
+      {
+        "question": "How can protein-coding genes constitute about 40% of the human genome, while coding DNA only accounts for 1-2%?",
+        "answer": "Protein-coding genes are composed of both coding sequences (exons) and large non-coding sequences (introns). While the entire gene structure, including introns, takes up about 40% of the genome, the actual coding DNA within the exons only represents 1-2% of the total genome. The remaining 98-99% of the genome is considered non-coding DNA, which includes these introns.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0005",
+          "humangenome_34c9d509_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0005",
+          "humangenome_34c9d509_c0006"
+        ]
+      },
+      {
+        "question": "How have the primary methods for identifying regulatory DNA sequences evolved over time?",
+        "answer": "Initially, the identification of regulatory sequences in the human genome, starting in the late 1960s, relied on recombinant DNA technology. Later, with the advent of genomic sequencing, the approach shifted to inferring these sequences through evolutionary conservation by comparing genomes, such as those of humans and mice. As of 2012, efforts have moved towards more direct methods that find active regulatory sequences in specific cell types, such as using ChIP-Seq to identify interactions between DNA and regulatory proteins, or locating DNase hypersensitive sites, which are areas where DNA is not packaged by histones.",
+        "related_chunk_ids": [
+          "humangenome_34c9d509_c0009",
+          "humangenome_34c9d509_c0010"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "humangenome_34c9d509_c0009",
+          "humangenome_34c9d509_c0010"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T08:34:18.768Z",
+    "content_format": "markdown",
+    "total_chunks": 47,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

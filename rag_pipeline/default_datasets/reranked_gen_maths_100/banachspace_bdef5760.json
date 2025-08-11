@@ -1,0 +1,400 @@
+{
+  "article": {
+    "id": "banachspace_bdef5760",
+    "title": "Banach space",
+    "url": "https://en.wikipedia.org/wiki/Banach_space",
+    "lang": "en",
+    "created_at": "2025-07-31T06:34:49.418579",
+    "content": "---\nid: banachspace_bdef5760\nurl: https://en.wikipedia.org/wiki/Banach_space\ntitle: Banach space\nlang: en\ncreated_at: '2025-07-31T06:27:25.002575'\nchecksum: bd041ebb40be7e1e278d75b2b9a908ddbe4d9e221f8d813a77a7d1f9a0ad315b\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 7850\n  char_count: 43834\n  num_chunks: 22\n  original_chunks: 25\n  filtered_out: 3\n  num_sections: 0\n---\nIn mathematics, more specifically in functional analysis, a Banach space (, Polish pronunciation: [ˈba.nax]) is a complete normed vector space. Thus, a Banach space is a vector space with a metric that allows the computation of vector length and distance between vectors and is complete in the sense that a Cauchy sequence of vectors always converges to a well-defined limit that is within the space. Banach spaces are named after the Polish mathematician Stefan Banach, who introduced this concept and studied it systematically in 1920–1922 along with Hans Hahn and Eduard Helly. Maurice René Fréchet was the first to use the term \"Banach space\" and Banach in turn then coined the term \"Fréchet space\". Banach spaces originally grew out of the study of function spaces by Hilbert, Fréchet, and Riesz earlier in the century. Banach spaces play a central role in functional analysis. In other areas of analysis, the spaces under study are often Banach spaces. == Definition == A Banach space is a complete normed space ( X , ‖ ⋅ ‖ ) . {\\displaystyle (X,\\|{\\cdot }\\|).} A normed space is a pair ( X , ‖ ⋅ ‖ ) {\\displaystyle (X,\\|{\\cdot }\\|)} consisting of a vector space X {\\displaystyle X} over a scalar field K {\\displaystyle \\mathbb {K} } (where K {\\displaystyle \\mathbb {K} } is commonly R {\\displaystyle \\mathbb {R} } or C {\\displaystyle \\mathbb {C} } ) together with a distinguished norm ‖ ⋅ ‖ : X → R . {\\displaystyle \\|{\\cdot }\\|:X\\to \\mathbb {R} .} Like all norms, this norm induces a translation invariant distance function, called the canonical or (norm) induced metric, defined for all vectors x , y ∈ X {\\displaystyle x,y\\in X} by d ( x , y ) := ‖ y − x ‖ = ‖ x − y ‖ . {\\displaystyle d(x,y):=\\|y-x\\|=\\|x-y\\|.} This makes X {\\displaystyle X} into a metric space ( X , d ) . {\\displaystyle (X,d).} A sequence x 1 , x 2 , … {\\displaystyle x_{1},x_{2},\\ldots } is called Cauchy in ( X , d ) {\\displaystyle (X,d)} or d {\\displaystyle d} -Cauchy or ‖ ⋅ ‖ {\\displaystyle \\|{\\cdot }\\|} -Cauchy if for every real r > 0 , {\\displaystyle r>0,} there exists some index N {\\displaystyle N} such that d ( x n , x m ) = ‖ x n − x m ‖ < r {\\displaystyle d(x_{n},x_{m})=\\|x_{n}-x_{m}\\| 0 {\\displaystyle r>0} centered at a point x ∈ X {\\displaystyle x\\in X} are, respectively, the sets B r ( x ) := { z ∈ X ∣ ‖ z − x ‖ < r } and C r ( x ) := { z ∈ X ∣ ‖ z − x ‖ ≤ r } . {\\displaystyle B_{r}(x):=\\{z\\in X\\mid \\|z-x\\| 0 } , { C r ( 0 ) ∣ r > 0 } , { B r n ( 0 ) ∣ n ∈ N } , and { C r n ( 0 ) ∣ n ∈ N } , {\\displaystyle \\{B_{r}(0)\\mid r>0\\},\\qquad \\{C_{r}(0)\\mid r>0\\},\\qquad \\{B_{r_{n}}(0)\\mid n\\in \\mathbb {N} \\},\\qquad {\\text{ and }}\\qquad \\{C_{r_{n}}(0)\\mid n\\in \\mathbb {N} \\},} where r 1 , r 2 , … {\\displaystyle r_{1},r_{2},\\ldots } can be any sequence of positive real numbers that converges to 0 {\\displaystyle 0} in R {\\displaystyle \\mathbb {R} } (common choices are r n := 1 n {\\displaystyle r_{n}:={\\tfrac {1}{n}}} or r n := 1 / 2 n {\\displaystyle r_{n}:=1/2^{n}} ). So, for example, any open subset U {\\displaystyle U} of X {\\displaystyle X} can be written as a union U = ⋃ x ∈ I B r x ( x ) = ⋃ x ∈ I x + B r x ( 0 ) = ⋃ x ∈ I x + r x B 1 ( 0 ) {\\displaystyle U=\\bigcup _{x\\in I}B_{r_{x}}(x)=\\bigcup _{x\\in I}x+B_{r_{x}}(0)=\\bigcup _{x\\in I}x+r_{x}\\,B_{1}(0)} indexed by some subset I ⊆ U , {\\displaystyle I\\subseteq U,} where each r x {\\displaystyle r_{x}} may be chosen from the aforementioned sequence r 1 , r 2 , … . {\\displaystyle r_{1},r_{2},\\ldots .} (The open balls can also be replaced with closed balls, although the indexing set I {\\displaystyle I} and radii r x {\\displaystyle r_{x}} may then also need to be replaced). Additionally, I {\\displaystyle I} can always be chosen to be countable if X {\\displaystyle X} is a separable space, which by definition means that X {\\displaystyle X} contains some countable dense subset. ==== Homeomorphism classes of separable Banach spaces ==== All finite–dimensional normed spaces are separable Banach spaces and any two Banach spaces of the same finite dimension are linearly homeomorphic. Every separable infinite–dimensional Hilbert space is linearly isometrically isomorphic to the separable Hilbert sequence space ℓ 2 ( N ) {\\displaystyle \\ell ^{2}(\\mathbb {N} )} with its usual norm ‖ ⋅ ‖ 2 . {\\displaystyle \\|{\\cdot }\\|_{2}.} The Anderson–Kadec theorem states that every infinite–dimensional separable Fréchet space is homeomorphic to the product space ∏ i ∈ N R {\\textstyle \\prod _{i\\in \\mathbb {N} }\\mathbb {R} } of countably many copies of R {\\displaystyle \\mathbb {R} } (this homeomorphism need not be a linear map). Thus all infinite–dimensional separable Fréchet spaces are homeomorphic to each other (or said differently, their topology is unique up to a homeomorphism). Since every Banach space is a Fréchet space, this is also true of all infinite–dimensional separable Banach spaces, including ℓ 2 ( N ) . {\\displaystyle \\ell ^{2}(\\mathbb {N} ).} In fact, ℓ 2 ( N ) {\\displaystyle \\ell ^{2}(\\mathbb {N} )} is even homeomorphic to its own unit sphere { x ∈ ℓ 2 ( N ) ∣ ‖ x ‖ 2 = 1 } , {\\displaystyle \\{x\\in \\ell ^{2}(\\mathbb {N} )\\mid \\|x\\|_{2}=1\\},} which stands in sharp contrast to finite–dimensional spaces (the Euclidean plane R 2 {\\displaystyle \\mathbb {R} ^{2}} is not homeomorphic to the unit circle, for instance). This pattern in homeomorphism classes extends to generalizations of metrizable (locally Euclidean) topological manifolds known as metric Banach manifolds, which are metric spaces that are around every point, locally homeomorphic to some open subset of a given Banach space (metric Hilbert manifolds and metric Fréchet manifolds are defined similarly). For example, every open subset U {\\displaystyle U} of a Banach space X {\\displaystyle X} is canonically a metric Banach manifold modeled on X {\\displaystyle X} since the inclusion map U → X {\\displaystyle U\\to X} is an open local homeomorphism. Using Hilbert space microbundles, David Henderson showed in 1969 that every metric manifold modeled on a separable infinite–dimensional Banach (or Fréchet) space can be topologically embedded as an open subset of ℓ 2 ( N ) {\\displaystyle \\ell ^{2}(\\mathbb {N} )} and, consequently, also admits a unique smooth structure making it into a C ∞ {\\displaystyle C^{\\infty }} Hilbert manifold. ==== Compact and convex subsets ==== There is a compact subset S {\\displaystyle S} of ℓ 2 ( N ) {\\displaystyle \\ell ^{2}(\\mathbb {N} )} whose convex hull co ⁡ ( S ) {\\displaystyle \\operatorname {co} (S)} is not closed and thus also not compact. However, like in all Banach spaces, the closed convex hull co ¯ S {\\displaystyle {\\overline {\\operatorname {co} }}S} of this (and every other) compact subset will be compact. In a normed space that is not complete then it is in general not guaranteed that co ¯ S {\\displaystyle {\\overline {\\operatorname {co} }}S} will be compact whenever S {\\displaystyle S} is; an example can even be found in a (non-complete) pre-Hilbert vector subspace of ℓ 2 ( N ) . {\\displaystyle \\ell ^{2}(\\mathbb {N} ).} ==== As a topological vector space ==== This norm-induced topology also makes ( X , τ d ) {\\displaystyle (X,\\tau _{d})} into what is known as a topological vector space (TVS), which by definition is a vector space endowed with a topology making the operations of addition and scalar multiplication continuous. It is emphasized that the TVS ( X , τ d ) {\\displaystyle (X,\\tau _{d})} is only a vector space together with a certain type of topology; that is to say, when considered as a TVS, it is not associated with any particular norm or metric (both of which are \"forgotten\"). This Hausdorff TVS ( X , τ d ) {\\displaystyle (X,\\tau _{d})} is even locally convex because the set of all open balls centered at the origin forms a neighbourhood basis at the origin consisting of convex balanced open sets. This TVS is also normable, which by definition refers to any TVS whose topology is induced by some (possibly unknown) norm. Normable TVSs are characterized by being Hausdorff and having a bounded convex neighborhood of the origin. All Banach spaces are barrelled spaces, which means that every barrel is neighborhood of the origin (all closed balls centered at the origin are barrels, for example) and guarantees that the Banach–Steinhaus theorem holds. ==== Comparison of complete metrizable vector topologies ==== The open mapping theorem implies that when τ 1 {\\displaystyle \\tau _{1}} and τ 2 {\\displaystyle \\tau _{2}} are topologies on X {\\displaystyle X} that make both ( X , τ 1 ) {\\displaystyle (X,\\tau _{1})} and ( X , τ 2 ) {\\displaystyle (X,\\tau _{2})} into complete metrizable TVSes (for example, Banach or Fréchet spaces), if one topology is finer or coarser than the other, then they must be equal (that is, if τ 1 ⊆ τ 2 {\\displaystyle \\tau _{1}\\subseteq \\tau _{2}} or τ 2 ⊆ τ 1 {\\displaystyle \\tau _{2}\\subseteq \\tau _{1}} then τ 1 = τ 2 {\\displaystyle \\tau _{1}=\\tau _{2}} ). So, for example, if ( X , p ) {\\displaystyle (X,p)} and ( X , q ) {\\displaystyle (X,q)} are Banach spaces with topologies τ p {\\displaystyle \\tau _{p}} and τ q , {\\displaystyle \\tau _{q},} and if one of these spaces has some open ball that is also an open subset of the other space (or, equivalently, if one of p : ( X , τ q ) → R {\\displaystyle p:(X,\\tau _{q})\\to \\mathbb {R} } or q : ( X , τ p ) → R {\\displaystyle q:(X,\\tau _{p})\\to \\mathbb {R} } is continuous), then their topologies are identical and the norms p {\\displaystyle p} and q {\\displaystyle q} are equivalent. === Completeness === ==== Complete norms and equivalent norms ==== Two norms, p {\\displaystyle p} and q , {\\displaystyle q,} on a vector space X {\\displaystyle X} are said to be equivalent if they induce the same topology; this happens if and only if there exist real numbers c , C > 0 {\\displaystyle c,C>0} such that c q ( x ) ≤ p ( x ) ≤ C q ( x ) {\\textstyle c\\,q(x)\\leq p(x)\\leq C\\,q(x)} for all x ∈ X . {\\displaystyle x\\in X.} If p {\\displaystyle p} and q {\\displaystyle q} are two equivalent norms on a vector space X {\\displaystyle X} then ( X , p ) {\\displaystyle (X,p)} is a Banach space if and only if ( X , q ) {\\displaystyle (X,q)} is a Banach space. See this footnote for an example of a continuous norm on a Banach space that is not equivalent to that Banach space's given norm. All norms on a finite-dimensional vector space are equivalent and every finite-dimensional normed space is a Banach space. ==== Complete norms vs complete metrics ==== A metric D {\\displaystyle D} on a vector space X {\\displaystyle X} is induced by a norm on X {\\displaystyle X} if and only if D {\\displaystyle D} is translation invariant and absolutely homogeneous, which means that D ( s x , s y ) = | s | D ( x , y ) {\\displaystyle D(sx,sy)=|s|D(x,y)} for all scalars s {\\displaystyle s} and all x , y ∈ X , {\\displaystyle x,y\\in X,} in which case the function ‖ x ‖ := D ( x , 0 ) {\\displaystyle \\|x\\|:=D(x,0)} defines a norm on X {\\displaystyle X} and the canonical metric induced by ‖ ⋅ ‖ {\\displaystyle \\|{\\cdot }\\|} is equal to D . {\\displaystyle D.} Suppose that ( X , ‖ ⋅ ‖ ) {\\displaystyle (X,\\|{\\cdot }\\|)} is a normed space and that τ {\\displaystyle \\tau } is the norm topology induced on X . {\\displaystyle X.} Suppose that D {\\displaystyle D} is any metric on X {\\displaystyle X} such that the topology that D {\\displaystyle D} induces on X {\\displaystyle X} is equal to τ . {\\displaystyle \\tau .} If D {\\displaystyle D} is translation invariant then ( X , ‖ ⋅ ‖ ) {\\displaystyle (X,\\|{\\cdot }\\|)} is a Banach space if and only if ( X , D ) {\\displaystyle (X,D)} is a complete metric space. If D {\\displaystyle D} is not translation invariant, then it may be possible for ( X , ‖ ⋅ ‖ ) {\\displaystyle (X,\\|{\\cdot }\\|)} to be a Banach space but for ( X , D ) {\\displaystyle (X,D)} to not be a complete metric space (see this footnote for an example). In contrast, a theorem of Klee, which also applies to all metrizable topological vector spaces, implies that if there exists any complete metric D {\\displaystyle D} on X {\\displaystyle X} that induces the norm topology τ {\\displaystyle \\tau } on X , {\\displaystyle X,} then ( X , ‖ ⋅ ‖ ) {\\displaystyle (X,\\|{\\cdot }\\|)} is a Banach space. A Fréchet space is a locally convex topological vector space whose topology is induced by some translation-invariant complete metric. Every Banach space is a Fréchet space but not conversely; indeed, there even exist Fréchet spaces on which no norm is a continuous function (such as the space of real sequences R N = ∏ i ∈ N R {\\textstyle \\mathbb {R} ^{\\mathbb {N} }=\\prod _{i\\in \\mathbb {N} }\\mathbb {R} } with the product topology). However, the topology of every Fréchet space is induced by some countable family of real-valued (necessarily continuous) maps called seminorms, which are generalizations of norms. It is even possible for a Fréchet space to have a topology that is induced by a countable family of norms (such norms would necessarily be continuous) but to not be a Banach/normable space because its topology can not be defined by any single norm. An example of such a space is the Fréchet space C ∞ ( K ) , {\\displaystyle C^{\\infty }(K),} whose definition can be found in the article on spaces of test functions and distributions. ==== Complete norms vs complete topological vector spaces ==== There is another notion of completeness besides metric completeness and that is the notion of a complete topological vector space (TVS) or TVS-completeness, which uses the theory of uniform spaces. Specifically, the notion of TVS-completeness uses a unique translation-invariant uniformity, called the canonical uniformity, that depends only on vector subtraction and the topology τ {\\displaystyle \\tau } that the vector space is endowed with, and so in particular, this notion of TVS completeness is independent of whatever norm induced the topology τ {\\displaystyle \\tau } (and even applies to TVSs that are not even metrizable). Every Banach space is a complete TVS. Moreover, a normed space is a Banach space (that is, its norm-induced metric is complete) if and only if it is complete as a topological vector space. If ( X , τ ) {\\displaystyle (X,\\tau )} is a metrizable topological vector space (such as any norm induced topology, for example), then ( X , τ ) {\\displaystyle (X,\\tau )} is a complete TVS if and only if it is a sequentially complete TVS, meaning that it is enough to check that every Cauchy sequence in ( X , τ ) {\\displaystyle (X,\\tau )} converges in ( X , τ ) {\\displaystyle (X,\\tau )} to some point of X {\\displaystyle X} (that is, there is no need to consider the more general notion of arbitrary Cauchy nets). If ( X , τ ) {\\displaystyle (X,\\tau )} is a topological vector space whose topology is induced by some (possibly unknown) norm (such spaces are called normable), then ( X , τ ) {\\displaystyle (X,\\tau )} is a complete topological vector space if and only if X {\\displaystyle X} may be assigned a norm ‖ ⋅ ‖ {\\displaystyle \\|{\\cdot }\\|} that induces on X {\\displaystyle X} the topology τ {\\displaystyle \\tau } and also makes ( X , ‖ ⋅ ‖ ) {\\displaystyle (X,\\|{\\cdot }\\|)} into a Banach space. A Hausdorff locally convex topological vector space X {\\displaystyle X} is normable if and only if its strong dual space X b ′ {\\displaystyle X'_{b}} is normable, in which case X b ′ {\\displaystyle X'_{b}} is a Banach space ( X b ′ {\\displaystyle X'_{b}} denotes the strong dual space of X , {\\displaystyle X,} whose topology is a generalization of the dual norm-induced topology on the continuous dual space X ′ {\\displaystyle X'} ; see this footnote for more details). If X {\\displaystyle X} is a metrizable locally convex TVS, then X {\\displaystyle X} is normable if and only if X b ′ {\\displaystyle X'_{b}} is a Fréchet–Urysohn space. This shows that in the category of locally convex TVSs, Banach spaces are exactly those complete spaces that are both metrizable and have metrizable strong dual spaces. ==== Completions ==== Every normed space can be isometrically embedded onto a dense vector subspace of a Banach space, where this Banach space is called a completion of the normed space. This Hausdorff completion is unique up to isometric isomorphism. More precisely, for every normed space X , {\\displaystyle X,} there exists a Banach space Y {\\displaystyle Y} and a mapping T : X → Y {\\displaystyle T:X\\to Y} such that T {\\displaystyle T} is an isometric mapping and T ( X ) {\\displaystyle T(X)} is dense in Y . {\\displaystyle Y.} If Z {\\displaystyle Z} is another Banach space such that there is an isometric isomorphism from X {\\displaystyle X} onto a dense subset of Z , {\\displaystyle Z,} then Z {\\displaystyle Z} is isometrically isomorphic to Y . {\\displaystyle Y.} The Banach space Y {\\displaystyle Y} is the Hausdorff completion of the normed space X . {\\displaystyle X.} The underlying metric space for Y {\\displaystyle Y} is the same as the metric completion of X , {\\displaystyle X,} with the vector space operations extended from X {\\displaystyle X} to Y . {\\displaystyle Y.} The completion of X {\\displaystyle X} is sometimes denoted by X ^ . {\\displaystyle {\\widehat {X}}.} == General theory == === Linear operators, isomorphisms === If X {\\displaystyle X} and Y {\\displaystyle Y} are normed spaces over the same ground field K , {\\displaystyle \\mathbb {K} ,} the set of all continuous K {\\displaystyle \\mathbb {K} } -linear maps T : X → Y {\\displaystyle T:X\\to Y} is denoted by B ( X , Y ) . {\\displaystyle B(X,Y).} In infinite-dimensional spaces, not all linear maps are continuous. A linear mapping from a normed space X {\\displaystyle X} to another normed space is continuous if and only if it is bounded on the closed unit ball of X . {\\displaystyle X.} Thus, the vector space B ( X , Y ) {\\displaystyle B(X,Y)} can be given the operator norm ‖ T ‖ = sup { ‖ T x ‖ Y ∣ x ∈ X , ‖ x ‖ X ≤ 1 } . {\\displaystyle \\|T\\|=\\sup\\{\\|Tx\\|_{Y}\\mid x\\in X,\\ \\|x\\|_{X}\\leq 1\\}.} For Y {\\displaystyle Y} a Banach space, the space B ( X , Y ) {\\displaystyle B(X,Y)} is a Banach space with respect to this norm. In categorical contexts, it is sometimes convenient to restrict the function space between two Banach spaces to only the short maps; in that case the space B ( X , Y ) {\\displaystyle B(X,Y)} reappears as a natural bifunctor. If X {\\displaystyle X} is a Banach space, the space B ( X ) = B ( X , X ) {\\displaystyle B(X)=B(X,X)} forms a unital Banach algebra; the multiplication operation is given by the composition of linear maps. If X {\\displaystyle X} and Y {\\displaystyle Y} are normed spaces, they are isomorphic normed spaces if there exists a linear bijection T : X → Y {\\displaystyle T:X\\to Y} such that T {\\displaystyle T} and its inverse T − 1 {\\displaystyle T^{-1}} are continuous. If one of the two spaces X {\\displaystyle X} or Y {\\displaystyle Y} is complete (or reflexive, separable, etc.) then so is the other space. Two normed spaces X {\\displaystyle X} and Y {\\displaystyle Y} are isometrically isomorphic if in addition, T {\\displaystyle T} is an isometry, that is, ‖ T ( x ) ‖ = ‖ x ‖ {\\displaystyle \\|T(x)\\|=\\|x\\|} for every x {\\displaystyle x} in X . {\\displaystyle X.} The Banach–Mazur distance d ( X , Y ) {\\displaystyle d(X,Y)} between two isomorphic but not isometric spaces X {\\displaystyle X} and Y {\\displaystyle Y} gives a measure of how much the two spaces X {\\displaystyle X} and Y {\\displaystyle Y} differ. ==== Continuous and bounded linear functions and seminorms ==== Every continuous linear operator is a bounded linear operator and if dealing only with normed spaces then the converse is also true. That is, a linear operator between two normed spaces is bounded if and only if it is a continuous function. So in particular, because the scalar field (which is R {\\displaystyle \\mathbb {R} } or C {\\displaystyle \\mathbb {C} } ) is a normed space, a linear functional on a normed space is a bounded linear functional if and only if it is a continuous linear functional. This allows for continuity-related results (like those below) to be applied to Banach spaces. Although boundedness is the same as continuity for linear maps between normed spaces, the term \"bounded\" is more commonly used when dealing primarily with Banach spaces. If f : X → R {\\displaystyle f:X\\to \\mathbb {R} } is a subadditive function (such as a norm, a sublinear function, or real linear functional), then f {\\displaystyle f} is continuous at the origin if and only if f {\\displaystyle f} is uniformly continuous on all of X {\\displaystyle X} ; and if in addition f ( 0 ) = 0 {\\displaystyle f(0)=0} then f {\\displaystyle f} is continuous if and only if its absolute value | f | : X → [ 0 , ∞ ) {\\displaystyle |f|:X\\to [0,\\infty )} is continuous, which happens if and only if { x ∈ X ∣ | f ( x ) | < 1 } {\\displaystyle \\{x\\in X\\mid |f(x)|<1\\}} is an open subset of X . {\\displaystyle X.} And very importantly for applying the Hahn–Banach theorem, a linear functional f {\\displaystyle f} is continuous if and only if this is true of its real part Re ⁡ f {\\displaystyle \\operatorname {Re} f} and moreover, ‖ Re ⁡ f ‖ = ‖ f ‖ {\\displaystyle \\|\\operatorname {Re} f\\|=\\|f\\|} and the real part Re ⁡ f {\\displaystyle \\operatorname {Re} f} completely determines f , {\\displaystyle f,} which is why the Hahn–Banach theorem is often stated only for real linear functionals. Also, a linear functional f {\\displaystyle f} on X {\\displaystyle X} is continuous if and only if the seminorm | f | {\\displaystyle |f|} is continuous, which happens if and only if there exists a continuous seminorm p : X → R {\\displaystyle p:X\\to \\mathbb {R} } such that | f | ≤ p {\\displaystyle |f|\\leq p} ; this last statement involving the linear functional f {\\displaystyle f} and seminorm p {\\displaystyle p} is encountered in many versions of the Hahn–Banach theorem. === Basic notions === The Cartesian product X × Y {\\displaystyle X\\times Y} of two normed spaces is not canonically equipped with a norm. However, several equivalent norms are commonly used, such as ‖ ( x , y ) ‖ 1 = ‖ x ‖ + ‖ y ‖ , ‖ ( x , y ) ‖ ∞ = max ( ‖ x ‖ , ‖ y ‖ ) {\\displaystyle \\|(x,y)\\|_{1}=\\|x\\|+\\|y\\|,\\qquad \\|(x,y)\\|_{\\infty }=\\max(\\|x\\|,\\|y\\|)} which correspond (respectively) to the coproduct and product in the category of Banach spaces and short maps (discussed above). For finite (co)products, these norms give rise to isomorphic normed spaces, and the product X × Y {\\displaystyle X\\times Y} (or the direct sum X ⊕ Y {\\displaystyle X\\oplus Y} ) is complete if and only if the two factors are complete. If M {\\displaystyle M} is a closed linear subspace of a normed space X , {\\displaystyle X,} there is a natural norm on the quotient space X / M , {\\displaystyle X/M,} ‖ x + M ‖ = inf m ∈ M ‖ x + m ‖ . {\\displaystyle \\|x+M\\|=\\inf \\limits _{m\\in M}\\|x+m\\|.} The quotient X / M {\\displaystyle X/M} is a Banach space when X {\\displaystyle X} is complete. The quotient map from X {\\displaystyle X} onto X / M , {\\displaystyle X/M,} sending x ∈ X {\\displaystyle x\\in X} to its class x + M , {\\displaystyle x+M,} is linear, onto, and of norm 1 , {\\displaystyle 1,} except when M = X , {\\displaystyle M=X,} in which case the quotient is the null space. The closed linear subspace M {\\displaystyle M} of X {\\displaystyle X} is said to be a complemented subspace of X {\\displaystyle X} if M {\\displaystyle M} is the range of a surjective bounded linear projection P : X → M . {\\displaystyle P:X\\to M.} In this case, the space X {\\displaystyle X} is isomorphic to the direct sum of M {\\displaystyle M} and ker ⁡ P , {\\displaystyle \\ker P,} the kernel of the projection P . {\\displaystyle P.} Suppose that X {\\displaystyle X} and Y {\\displaystyle Y} are Banach spaces and that T ∈ B ( X , Y ) . {\\displaystyle T\\in B(X,Y).} There exists a canonical factorization of T {\\displaystyle T} as T = T 1 ∘ π , T : X ⟶ π X / ker ⁡ T ⟶ T 1 Y {\\displaystyle T=T_{1}\\circ \\pi ,\\quad T:X{\\overset {\\pi }{{}\\longrightarrow {}}}X/\\ker T{\\overset {T_{1}}{{}\\longrightarrow {}}}Y} where the first map π {\\displaystyle \\pi } is the quotient map, and the second map T 1 {\\displaystyle T_{1}} sends every class x + ker ⁡ T {\\displaystyle x+\\ker T} in the quotient to the image T ( x ) {\\displaystyle T(x)} in Y . {\\displaystyle Y.} This is well defined because all elements in the same class have the same image. The mapping T 1 {\\displaystyle T_{1}} is a linear bijection from X / ker ⁡ T {\\displaystyle X/\\ker T} onto the range T ( X ) , {\\displaystyle T(X),} whose inverse need not be bounded. === Classical spaces === Basic examples of Banach spaces include: the Lp spaces L p {\\displaystyle L^{p}} and their special cases, the sequence spaces ℓ p {\\displaystyle \\ell ^{p}} that consist of scalar sequences indexed by natural numbers N {\\displaystyle \\mathbb {N} } ; among them, the space ℓ 1 {\\displaystyle \\ell ^{1}} of absolutely summable sequences and the space ℓ 2 {\\displaystyle \\ell ^{2}} of square summable sequences; the space c 0 {\\displaystyle c_{0}} of sequences tending to zero and the space ℓ ∞ {\\displaystyle \\ell ^{\\infty }} of bounded sequences; the space C ( K ) {\\displaystyle C(K)} of continuous scalar functions on a compact Hausdorff space K , {\\displaystyle K,} equipped with the max norm, ‖ f ‖ C ( K ) = max { | f ( x ) | ∣ x ∈ K } , f ∈ C ( K ) . {\\displaystyle \\|f\\|_{C(K)}=\\max\\{|f(x)|\\mid x\\in K\\},\\quad f\\in C(K).} According to the Banach–Mazur theorem, every Banach space is isometrically isomorphic to a subspace of some C ( K ) . {\\displaystyle C(K).} For every separable Banach space X , {\\displaystyle X,} there is a closed subspace M {\\displaystyle M} of ℓ 1 {\\displaystyle \\ell ^{1}} such that X := ℓ 1 / M . {\\displaystyle X:=\\ell ^{1}/M.} Any Hilbert space serves as an example of a Banach space. A Hilbert space H {\\displaystyle H} on K = R , C {\\displaystyle \\mathbb {K} =\\mathbb {R} ,\\mathbb {C} } is complete for a norm of the form ‖ x ‖ H = ⟨ x , x ⟩ , {\\displaystyle \\|x\\|_{H}={\\sqrt {\\langle x,x\\rangle }},} where ⟨ ⋅ , ⋅ ⟩ : H × H → K {\\displaystyle \\langle \\cdot ,\\cdot \\rangle :H\\times H\\to \\mathbb {K} } is the inner product, linear in its first argument that satisfies the following: ⟨ y , x ⟩ = ⟨ x , y ⟩ ¯ , for all x , y ∈ H ⟨ x , x ⟩ ≥ 0 , for all x ∈ H ⟨ x , x ⟩ = 0 if and only if x = 0. {\\displaystyle {\\begin{aligned}\\langle y,x\\rangle &={\\overline {\\langle x,y\\rangle }},\\quad {\\text{ for all }}x,y\\in H\\\\\\langle x,x\\rangle &\\geq 0,\\quad {\\text{ for all }}x\\in H\\\\\\langle x,x\\rangle =0{\\text{ if and only if }}x&=0.\\end{aligned}}} For example, the space L 2 {\\displaystyle L^{2}} is a Hilbert space. The Hardy spaces, the Sobolev spaces are examples of Banach spaces that are related to L p {\\displaystyle L^{p}} spaces and have additional structure. They are important in different branches of analysis, Harmonic analysis and Partial differential equations among others. === Banach algebras === A Banach algebra is a Banach space A {\\displaystyle A} over K = R {\\displaystyle \\mathbb {K} =\\mathbb {R} } or C , {\\displaystyle \\mathbb {C} ,} together with a structure of algebra over K {\\displaystyle \\mathbb {K} } , such that the product map A × A ∋ ( a , b ) ↦ a b ∈ A {\\displaystyle A\\times A\\ni (a,b)\\mapsto ab\\in A} is continuous. An equivalent norm on A {\\displaystyle A} can be found so that ‖ a b ‖ ≤ ‖ a ‖ ‖ b ‖ {\\displaystyle \\|ab\\|\\leq \\|a\\|\\|b\\|} for all a , b ∈ A . {\\displaystyle a,b\\in A.} ==== Examples ==== The Banach space C ( K ) {\\displaystyle C(K)} with the pointwise product, is a Banach algebra. The disk algebra A ( D ) {\\displaystyle A(\\mathbf {D} )} consists of functions holomorphic in the open unit disk D ⊆ C {\\displaystyle D\\subseteq \\mathbb {C} } and continuous on its closure: D ¯ . {\\displaystyle {\\overline {\\mathbf {D} }}.} Equipped with the max norm on D ¯ , {\\displaystyle {\\overline {\\mathbf {D} }},} the disk algebra A ( D ) {\\displaystyle A(\\mathbf {D} )} is a closed subalgebra of C ( D ¯ ) . {\\displaystyle C\\left({\\overline {\\mathbf {D} }}\\right).} The Wiener algebra A ( T ) {\\displaystyle A(\\mathbf {T} )} is the algebra of functions on the unit circle T {\\displaystyle \\mathbf {T} } with absolutely convergent Fourier series. Via the map associating a function on T {\\displaystyle \\mathbf {T} } to the sequence of its Fourier coefficients, this algebra is isomorphic to the Banach algebra ℓ 1 ( Z ) , {\\displaystyle \\ell ^{1}(Z),} where the product is the convolution of sequences. For every Banach space X , {\\displaystyle X,} the space B ( X ) {\\displaystyle B(X)} of bounded linear operators on X , {\\displaystyle X,} with the composition of maps as product, is a Banach algebra. A C*-algebra is a complex Banach algebra A {\\displaystyle A} with an antilinear involution a ↦ a ∗ {\\displaystyle a\\mapsto a^{*}} such that ‖ a ∗ a ‖ = ‖ a ‖ 2 . {\\displaystyle \\|a^{*}a\\|=\\|a\\|^{2}.} The space B ( H ) {\\displaystyle B(H)} of bounded linear operators on a Hilbert space H {\\displaystyle H} is a fundamental example of C*-algebra. The Gelfand–Naimark theorem states that every C*-algebra is isometrically isomorphic to a C*-subalgebra of some B ( H ) . {\\displaystyle B(H).} The space C ( K ) {\\displaystyle C(K)} of complex continuous functions on a compact Hausdorff space K {\\displaystyle K} is an example of commutative C*-algebra, where the involution associates to every function f {\\displaystyle f} its complex conjugate f ¯ . {\\displaystyle {\\overline {f}}.} === Dual space === If X {\\displaystyle X} is a normed space and K {\\displaystyle \\mathbb {K} } the underlying field (either the reals or the complex numbers), the continuous dual space is the space of continuous linear maps from X {\\displaystyle X} into K , {\\displaystyle \\mathbb {K} ,} or continuous linear functionals. The notation for the continuous dual is X ′ = B ( X , K ) {\\displaystyle X'=B(X,\\mathbb {K} )} in this article. Since K {\\displaystyle \\mathbb {K} } is a Banach space (using the absolute value as norm), the dual X ′ {\\displaystyle X'} is a Banach space, for every normed space X . {\\displaystyle X.} The Dixmier–Ng theorem characterizes the dual spaces of Banach spaces. The main tool for proving the existence of continuous linear functionals is the Hahn–Banach theorem. In particular, every continuous linear functional on a subspace of a normed space can be continuously extended to the whole space, without increasing the norm of the functional. An important special case is the following: for every vector x {\\displaystyle x} in a normed space X , {\\displaystyle X,} there exists a continuous linear functional f {\\displaystyle f} on X {\\displaystyle X} such that f ( x ) = ‖ x ‖ X , ‖ f ‖ X ′ ≤ 1. {\\displaystyle f(x)=\\|x\\|_{X},\\quad \\|f\\|_{X'}\\leq 1.} When x {\\displaystyle x} is not equal to the 0 {\\displaystyle \\mathbf {0} } vector, the functional f {\\displaystyle f} must have norm one, and is called a norming functional for x . {\\displaystyle x.} The Hahn–Banach separation theorem states that two disjoint non-empty convex sets in a real Banach space, one of them open, can be separated by a closed affine hyperplane. The open convex set lies strictly on one side of the hyperplane, the second convex set lies on the other side but may touch the hyperplane. A subset S {\\displaystyle S} in a Banach space X {\\displaystyle X} is total if the linear span of S {\\displaystyle S} is dense in X . {\\displaystyle X.} The subset S {\\displaystyle S} is total in X {\\displaystyle X} if and only if the only continuous linear functional that vanishes on S {\\displaystyle S} is the 0 {\\displaystyle \\mathbf {0} } functional: this equivalence follows from the Hahn–Banach theorem. If X {\\displaystyle X} is the direct sum of two closed linear subspaces M {\\displaystyle M} and N , {\\displaystyle N,} then the dual X ′ {\\displaystyle X'} of X {\\displaystyle X} is isomorphic to the direct sum of the duals of M {\\displaystyle M} and N . {\\displaystyle N.} If M {\\displaystyle M} is a closed linear subspace in X , {\\displaystyle X,} one can associate the orthogonal of M {\\displaystyle M} in the dual, M ⊥ = { x ′ ∈ X ∣ x ′ ( m ) = 0 for all m ∈ M } . {\\displaystyle M^{\\bot }=\\{x'\\in X\\mid x'(m)=0{\\text{ for all }}m\\in M\\}.} The orthogonal M ⊥ {\\displaystyle M^{\\bot }} is a closed linear subspace of the dual. The dual of M {\\displaystyle M} is isometrically isomorphic to X ′ / M ⊥ . {\\displaystyle X'/M^{\\bot }.} The dual of X / M {\\displaystyle X/M} is isometrically isomorphic to M ⊥ . {\\displaystyle M^{\\bot }.} The dual of a separable Banach space need not be separable, but: When X ′ {\\displaystyle X'} is separable, the above criterion for totality can be used for proving the existence of a countable total subset in X . {\\displaystyle X.} ==== Weak topologies ==== The weak topology on a Banach space X {\\displaystyle X} is the coarsest topology on X {\\displaystyle X} for which all elements x ′ {\\displaystyle x'} in the continuous dual space X ′ {\\displaystyle X'} are continuous. The norm topology is therefore finer than the weak topology. It follows from the Hahn–Banach separation theorem that the weak topology is Hausdorff, and that a norm-closed convex subset of a Banach space is also weakly closed. A norm-continuous linear map between two Banach spaces X {\\displaystyle X} and Y {\\displaystyle Y} is also weakly continuous, that is, continuous from the weak topology of X {\\displaystyle X} to that of Y . {\\displaystyle Y.} If X {\\displaystyle X} is infinite-dimensional, there exist linear maps which are not continuous. The space X ∗ {\\displaystyle X^{*}} of all linear maps from X {\\displaystyle X} to the underlying field K {\\displaystyle \\mathbb {K} } (this space X ∗ {\\displaystyle X^{*}} is called the algebraic dual space, to distinguish it from X ′ {\\displaystyle X'} also induces a topology on X {\\displaystyle X} which is finer than the weak topology, and much less used in functional analysis. On a dual space X ′ , {\\displaystyle X',} there is a topology weaker than the weak topology of X ′ , {\\displaystyle X',} called the weak* topology. It is the coarsest topology on X ′ {\\displaystyle X'} for which all evaluation maps x ′ ∈ X ′ ↦ x ′ ( x ) , {\\displaystyle x'\\in X'\\mapsto x'(x),} where x {\\displaystyle x} ranges over X , {\\displaystyle X,} are continuous. Its importance comes from the Banach–Alaoglu theorem. The Banach–Alaoglu theorem can be proved using Tychonoff's theorem about infinite products of compact Hausdorff spaces. When X {\\displaystyle X} is separable, the unit ball B ′ {\\displaystyle B'} of the dual is a metrizable compact in the weak* topology. ==== Examples of dual spaces ==== The dual of c 0 {\\displaystyle c_{0}} is isometrically isomorphic to ℓ 1 {\\displaystyle \\ell ^{1}} : for every bounded linear functional f {\\displaystyle f} on c 0 , {\\displaystyle c_{0},} there is a unique element y = { y n } ∈ ℓ 1 {\\displaystyle y=\\{y_{n}\\}\\in \\ell ^{1}} such that f ( x ) = ∑ n ∈ N x n y n , x = { x n } ∈ c 0 , and ‖ f ‖ ( c 0 ) ′ = ‖ y ‖ ℓ 1 . {\\displaystyle f(x)=\\sum _{n\\in \\mathbb {N} }x_{n}y_{n},\\qquad x=\\{x_{n}\\}\\in c_{0},\\ \\ {\\text{and}}\\ \\ \\|f\\|_{(c_{0})'}=\\|y\\|_{\\ell _{1}}.} The dual of ℓ 1 {\\displaystyle \\ell ^{1}} is isometrically isomorphic to ℓ ∞ {\\displaystyle \\ell ^{\\infty }} . The dual of Lebesgue space L p ( [ 0 , 1 ] ) {\\displaystyle L^{p}([0,1])} is isometrically isomorphic to L q ( [ 0 , 1 ] ) {\\displaystyle L^{q}([0,1])} when 1 ≤ p < ∞ {\\displaystyle 1\\leq p<\\infty } and 1 p + 1 q = 1. {\\displaystyle {\\frac {1}{p}}+{\\frac {1}{q}}=1.} For every vector y {\\displaystyle y} in a Hilbert space H , {\\displaystyle H,} the mapping x ∈ H → f y ( x ) = ⟨ x , y ⟩ {\\displaystyle x\\in H\\to f_{y}(x)=\\langle x,y\\rangle } defines a continuous linear functional f y {\\displaystyle f_{y}} on H . {\\displaystyle H.} The Riesz representation theorem states that every continuous linear functional on H {\\displaystyle H} is of the form f y {\\displaystyle f_{y}} for a uniquely defined vector y {\\displaystyle y} in H . {\\displaystyle H.} The mapping y ∈ H → f y {\\displaystyle y\\in H\\to f_{y}} is an antilinear isometric bijection from H {\\displaystyle H} onto its dual H ′ . {\\displaystyle H'.} When the scalars are real, this map is an isometric isomorphism. When K {\\displaystyle K} is a compact Hausdorff topological space, the dual M ( K ) {\\displaystyle M(K)} of C ( K ) {\\displaystyle C(K)} is the space of Radon measures in the sense of Bourbaki. The subset P ( K ) {\\displaystyle P(K)} of M ( K ) {\\displaystyle M(K)} consisting of non-negative measures of mass 1 (probability measures) is a convex w*-closed subset of the unit ball of M ( K ) . {\\displaystyle M(K).} The extreme points of P ( K ) {\\displaystyle P(K)} are the Dirac measures on K . {\\displaystyle K.} The set of Dirac measures on K , {\\displaystyle K,} equipped with the w*-topology, is homeomorphic to K . {\\displaystyle K.} The result has been extended by Amir and Cambern to the case when the multiplicative Banach–Mazur distance between C ( K ) {\\displaystyle C(K)} and C ( L ) {\\displaystyle C(L)} is < 2. {\\displaystyle <2.} The theorem is no longer true when the distance is = 2. {\\displaystyle =2.} In the commutative Banach algebra C ( K ) , {\\displaystyle C(K),} the maximal ideals are precisely kernels of Dirac measures on K , {\\displaystyle K,} I x = ker ⁡ δ x = { f ∈ C ( K ) ∣ f ( x ) = 0 } , x ∈ K . {\\displaystyle I_{x}=\\ker \\delta _{x}=\\{f\\in C(K)\\mid f(x)=0\\},\\quad x\\in K.} More generally, by the Gelfand–Mazur theorem, the maximal ideals of a unital commutative Banach algebra can be identified with its characters—not merely as sets but as topological spaces: the former with the hull-kernel topology and the latter with the w*-topology. In this identification, the maximal ideal space can be viewed as a w*-compact subset of the unit ball in the dual A ′ . {\\displaystyle A'.} Not every unital commutative Banach algebra is of the form C ( K ) {\\displaystyle C(K)} for some compact Hausdorff space K . {\\displaystyle K.} However, this statement holds if one places C ( K ) {\\displaystyle C(K)} in the smaller category of commutative C*-algebras. Gelfand's representation theorem for commutative C*-algebras states that every commutative unital C*-algebra A {\\displaystyle A} is isometrically isomorphic to a C ( K ) {\\displaystyle C(K)} space. The Hausdorff compact space K {\\displaystyle K} here is again the maximal ideal space, also called the spectrum of A {\\displaystyle A} in the C*-algebra context. ==== Bidual ==== If X {\\displaystyle X} is a normed space, the (continuous) dual X ″ {\\displaystyle X''} of the dual X ′ {\\displaystyle X'} is called the bidual or second dual of X . {\\displaystyle X.} For every normed space X , {\\displaystyle X,} there is a natural map, { F X : X → X ″ F X ( x ) ( f ) = f ( x ) for all x ∈ X , and for all f ∈ X ′ {\\displaystyle {\\begin{cases}F_{X}\\colon X\\to X''\\\\F_{X}(x)(f)=f(x)&{\\text{ for all }}x\\in X,{\\text{ and for all }}f\\in X'\\end{cases}}} This defines F X ( x ) {\\displaystyle F_{X}(x)} as a continuous linear functional on X ′ , {\\displaystyle X',} that is, an element of X ″ . {\\displaystyle X''.} The map F X : x → F X ( x ) {\\displaystyle F_{X}\\colon x\\to F_{X}(x)} is a linear map from X {\\displaystyle X} to X ″ . {\\displaystyle X''.} As a consequence of the existence of a norming functional f {\\displaystyle f} for every x ∈ X , {\\displaystyle x\\in X,} this map F X {\\displaystyle F_{X}} is isometric, thus injective. For example, the dual of X = c 0 {\\displaystyle X=c_{0}} is identified with ℓ 1 , {\\displaystyle \\ell ^{1},} and the dual of ℓ 1 {\\displaystyle \\ell ^{1}} is identified with ℓ ∞ , {\\displaystyle \\ell ^{\\infty },} the space of bounded scalar sequences. Under these identifications, F X {\\displaystyle F_{X}} is the inclusion map from c 0 {\\displaystyle c_{0}} to ℓ ∞ . {\\displaystyle \\ell ^{\\infty }.} It is indeed isometric, but not onto. If F X {\\displaystyle F_{X}} is surjective, then the normed space X {\\displaystyle X} is called reflexive (see below). Being the dual of a normed space, the bidual X ″ {\\displaystyle X''} is complete, therefore, every reflexive normed space is a Banach space. Using the isometric embedding F X , {\\displaystyle F_{X},} it is customary to consider a normed space X {\\displaystyle X} as a subset of its bidual. When X {\\displaystyle X} is a Banach space, it is viewed as a closed linear subspace of X ″ . {\\displaystyle X''.} If X {\\displaystyle X} is not reflexive, the unit ball of X {\\displaystyle X} is a proper subset of the unit ball of X ″ . {\\displaystyle X''.} The Goldstine theorem states that the unit ball of a normed space is weakly*-dense in the unit ball of the bidual. In other words, for every x ″ {\\displaystyle x''} in the bidual, there exists a net ( x i ) i ∈ I {\\displaystyle (x_{i})_{i\\in I}} in X {\\displaystyle X} so that sup i ∈ I ‖ x i ‖ ≤ ‖ x ″ ‖ , x ″ ( f ) = lim i f ( x i ) , f ∈ X ′ . {\\displaystyle \\sup _{i\\in I}\\|x_{i}\\|\\leq \\|x''\\|,\\ \\ x''(f)=\\lim _{i}f(x_{i}),\\quad f\\in X'.} The net may be replaced by a weakly*-convergent sequence when the dual X ′ {\\displaystyle X'} is separable. On the other hand, elements of the bidual of ℓ 1 {\\displaystyle \\ell ^{1}} that are not in ℓ 1 {\\displaystyle \\ell ^{1}} cannot be weak*-limit of sequences in ℓ 1 , {\\displaystyle \\ell ^{1},} since ℓ 1 {\\displaystyle \\ell ^{1}} is weakly sequentially complete. === Banach's theorems === Here are the main general results about Banach spaces that go back to the time of Banach's book (Banach (1932)) and are related to the Baire category theorem. According to this theorem, a complete metric space (such as a Banach space, a Fréchet space or an F-space) cannot be equal to a union of countably many closed subsets with empty interiors. Therefore, a Banach space cannot be the union of countably many closed subspaces, unless it is already equal to one of them; a Banach space with a countable Hamel basis is finite-dimensional. The Banach–Steinhaus theorem is not limited to Banach spaces. It can be extended for example to the case where X {\\displaystyle X} is a Fréchet space, provided the conclusion is modified as follows: under the same hypothesis, there exists a neighborhood U {\\displaystyle U} of 0 {\\displaystyle \\mathbf {0} } in X {\\displaystyle X} such that all T {\\displaystyle T} in F {\\displaystyle F} are uniformly bounded on U , {\\displaystyle U,} sup T ∈ F sup x ∈ U ‖ T ( x ) ‖ Y < ∞ . {\\displaystyle \\sup _{T\\in F}\\sup _{x\\in U}\\;\\|T(x)\\|_{Y}<\\infty .} This result is a direct consequence of the preceding Banach isomorphism theorem and of the canonical factorization of bounded linear maps. This is another consequence of Banach's isomorphism theorem, applied to the continuous bijection from M 1 ⊕ ⋯ ⊕ M n {\\displaystyle M_{1}\\oplus \\cdots \\oplus M_{n}} onto X {\\displaystyle X} sending m 1 , ⋯ , m n {\\displaystyle m_{1},\\cdots ,m_{n}} to the sum m 1 + ⋯ + m n . {\\displaystyle m_{1}+\\cdots +m_{n}.} === Reflexivity === The normed space X {\\displaystyle X} is called reflexive when the natural map { F X : X → X ″ F X ( x ) ( f ) = f ( x ) for all x ∈ X , and for all f ∈ X ′ {\\displaystyle {\\begin{cases}F_{X}:X\\to X''\\\\F_{X}(x)(f)=f(x)&{\\text{ for all }}x\\in X,{\\text{ and for all }}f\\in X'\\end{cases}}} is surjective. Reflexive normed spaces are Banach spaces. This is a consequence of the Hahn–Banach theorem. Further, by the open mapping theorem, if there is a bounded linear operator from the Banach space X {\\displaystyle X} onto the Banach space Y , {\\displaystyle Y,} then Y {\\displaystyle Y} is reflexive. Indeed, if the dual Y ′ {\\displaystyle Y'} of a Banach space Y {\\displaystyle Y} is separable, then Y {\\displaystyle Y} is separable. If X {\\displaystyle X} is reflexive and separable, then the dual of X ′ {\\displaystyle X'} is separable, so X ′ {\\displaystyle X'} is separable. Hilbert spaces are reflexive. The L p {\\displaystyle L^{p}} spaces are reflexive when 1 < p < ∞ . {\\displaystyle 1"
+  },
+  "chunks": [
+    {
+      "id": "banachspace_bdef5760_c0000",
+      "article_id": "banachspace_bdef5760",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 959,
+      "content": "In mathematics, more specifically in functional analysis, a Banach space (, Polish pronunciation: [ˈba.nax]) is a complete normed vector space. Thus, a Banach space is a vector space with a metric that allows the computation of vector length and distance between vectors and is complete in the sense that a Cauchy sequence of vectors always converges to a well-defined limit that is within the space. Banach spaces are named after the Polish mathematician Stefan Banach, who introduced this concept and studied it systematically in 1920–1922 along with Hans Hahn and Eduard Helly. Maurice René Fréchet was the first to use the term \"Banach space\" and Banach in turn then coined the term \"Fréchet space\". Banach spaces originally grew out of the study of function spaces by Hilbert, Fréchet, and Riesz earlier in the century. Banach spaces play a central role in functional analysis. In other areas of analysis, the spaces under study are often Banach spaces.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0001",
+      "article_id": "banachspace_bdef5760",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 975,
+      "end_char": 1801,
+      "content": "== Definition == A Banach space is a complete normed space ( X , ‖ ⋅ ‖ ) . {\\displaystyle (X,\\|{\\cdot }\\|).} A normed space is a pair ( X , ‖ ⋅ ‖ ) {\\displaystyle (X,\\|{\\cdot }\\|)} consisting of a vector space X {\\displaystyle X} over a scalar field K {\\displaystyle \\mathbb {K} } (where K {\\displaystyle \\mathbb {K} } is commonly R {\\displaystyle \\mathbb {R} } or C {\\displaystyle \\mathbb {C} } ) together with a distinguished norm ‖ ⋅ ‖ : X → R . {\\displaystyle \\|{\\cdot }\\|:X\\to \\mathbb {R} .} Like all norms, this norm induces a translation invariant distance function, called the canonical or (norm) induced metric, defined for all vectors x , y ∈ X {\\displaystyle x,y\\in X} by d ( x , y ) := ‖ y − x ‖ = ‖ x − y ‖ . {\\displaystyle d(x,y):=\\|y-x\\|=\\|x-y\\|.} This makes X {\\displaystyle X} into a metric space ( X , d ) .",
+      "char_count": 825,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0002",
+      "article_id": "banachspace_bdef5760",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 1801,
+      "end_char": 2379,
+      "content": "{\\displaystyle (X,d).} A sequence x 1 , x 2 , … {\\displaystyle x_{1},x_{2},\\ldots } is called Cauchy in ( X , d ) {\\displaystyle (X,d)} or d {\\displaystyle d} -Cauchy or ‖ ⋅ ‖ {\\displaystyle \\|{\\cdot }\\|} -Cauchy if for every real r > 0 , {\\displaystyle r>0,} there exists some index N {\\displaystyle N} such that d ( x n , x m ) = ‖ x n − x m ‖ < r {\\displaystyle d(x_{n},x_{m})=\\|x_{n}-x_{m}\\| 0 {\\displaystyle r>0} centered at a point x ∈ X {\\displaystyle x\\in X} are, respectively, the sets B r ( x ) := { z ∈ X ∣ ‖ z − x ‖ < r } and C r ( x ) := { z ∈ X ∣ ‖ z − x ‖ ≤ r } .",
+      "char_count": 578,
+      "token_estimate": 144,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0003",
+      "article_id": "banachspace_bdef5760",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 2380,
+      "end_char": 2985,
+      "content": "{\\displaystyle B_{r}(x):=\\{z\\in X\\mid \\|z-x\\| 0 } , { C r ( 0 ) ∣ r > 0 } , { B r n ( 0 ) ∣ n ∈ N } , and { C r n ( 0 ) ∣ n ∈ N } , {\\displaystyle \\{B_{r}(0)\\mid r>0\\},\\qquad \\{C_{r}(0)\\mid r>0\\},\\qquad \\{B_{r_{n}}(0)\\mid n\\in \\mathbb {N} \\},\\qquad {\\text{ and }}\\qquad \\{C_{r_{n}}(0)\\mid n\\in \\mathbb {N} \\},} where r 1 , r 2 , … {\\displaystyle r_{1},r_{2},\\ldots } can be any sequence of positive real numbers that converges to 0 {\\displaystyle 0} in R {\\displaystyle \\mathbb {R} } (common choices are r n := 1 n {\\displaystyle r_{n}:={\\tfrac {1}{n}}} or r n := 1 / 2 n {\\displaystyle r_{n}:=1/2^{n}} ).",
+      "char_count": 605,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0004",
+      "article_id": "banachspace_bdef5760",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 2986,
+      "end_char": 3857,
+      "content": "So, for example, any open subset U {\\displaystyle U} of X {\\displaystyle X} can be written as a union U = ⋃ x ∈ I B r x ( x ) = ⋃ x ∈ I x + B r x ( 0 ) = ⋃ x ∈ I x + r x B 1 ( 0 ) {\\displaystyle U=\\bigcup _{x\\in I}B_{r_{x}}(x)=\\bigcup _{x\\in I}x+B_{r_{x}}(0)=\\bigcup _{x\\in I}x+r_{x}\\,B_{1}(0)} indexed by some subset I ⊆ U , {\\displaystyle I\\subseteq U,} where each r x {\\displaystyle r_{x}} may be chosen from the aforementioned sequence r 1 , r 2 , … . {\\displaystyle r_{1},r_{2},\\ldots .} (The open balls can also be replaced with closed balls, although the indexing set I {\\displaystyle I} and radii r x {\\displaystyle r_{x}} may then also need to be replaced). Additionally, I {\\displaystyle I} can always be chosen to be countable if X {\\displaystyle X} is a separable space, which by definition means that X {\\displaystyle X} contains some countable dense subset.",
+      "char_count": 871,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0005",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Linear operators, isomorphisms ==",
+      "heading_path": "== = Linear operators, isomorphisms ==",
+      "start_char": 3923,
+      "end_char": 4828,
+      "content": "== = Linear operators, isomorphisms === If X {\\displaystyle X} and Y {\\displaystyle Y} are normed spaces over the same ground field K , {\\displaystyle \\mathbb {K} ,} the set of all continuous K {\\displaystyle \\mathbb {K} } -linear maps T : X → Y {\\displaystyle T:X\\to Y} is denoted by B ( X , Y ) . {\\displaystyle B(X,Y).} In infinite-dimensional spaces, not all linear maps are continuous. A linear mapping from a normed space X {\\displaystyle X} to another normed space is continuous if and only if it is bounded on the closed unit ball of X . {\\displaystyle X.} Thus, the vector space B ( X , Y ) {\\displaystyle B(X,Y)} can be given the operator norm ‖ T ‖ = sup { ‖ T x ‖ Y ∣ x ∈ X , ‖ x ‖ X ≤ 1 } . {\\displaystyle \\|T\\|=\\sup\\{\\|Tx\\|_{Y}\\mid x\\in X,\\ \\|x\\|_{X}\\leq 1\\}.} For Y {\\displaystyle Y} a Banach space, the space B ( X , Y ) {\\displaystyle B(X,Y)} is a Banach space with respect to this norm.",
+      "char_count": 904,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0006",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Linear operators, isomorphisms ==",
+      "heading_path": "== = Linear operators, isomorphisms ==",
+      "start_char": 4828,
+      "end_char": 5659,
+      "content": "In categorical contexts, it is sometimes convenient to restrict the function space between two Banach spaces to only the short maps; in that case the space B ( X , Y ) {\\displaystyle B(X,Y)} reappears as a natural bifunctor. If X {\\displaystyle X} is a Banach space, the space B ( X ) = B ( X , X ) {\\displaystyle B(X)=B(X,X)} forms a unital Banach algebra; the multiplication operation is given by the composition of linear maps. If X {\\displaystyle X} and Y {\\displaystyle Y} are normed spaces, they are isomorphic normed spaces if there exists a linear bijection T : X → Y {\\displaystyle T:X\\to Y} such that T {\\displaystyle T} and its inverse T − 1 {\\displaystyle T^{-1}} are continuous. If one of the two spaces X {\\displaystyle X} or Y {\\displaystyle Y} is complete (or reflexive, separable, etc.) then so is the other space.",
+      "char_count": 831,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0007",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Linear operators, isomorphisms ==",
+      "heading_path": "== = Linear operators, isomorphisms ==",
+      "start_char": 5660,
+      "end_char": 6166,
+      "content": "Two normed spaces X {\\displaystyle X} and Y {\\displaystyle Y} are isometrically isomorphic if in addition, T {\\displaystyle T} is an isometry, that is, ‖ T ( x ) ‖ = ‖ x ‖ {\\displaystyle \\|T(x)\\|=\\|x\\|} for every x {\\displaystyle x} in X . {\\displaystyle X.} The Banach–Mazur distance d ( X , Y ) {\\displaystyle d(X,Y)} between two isomorphic but not isometric spaces X {\\displaystyle X} and Y {\\displaystyle Y} gives a measure of how much the two spaces X {\\displaystyle X} and Y {\\displaystyle Y} differ.",
+      "char_count": 506,
+      "token_estimate": 126,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0008",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Basic notions ==",
+      "heading_path": "== = Basic notions ==",
+      "start_char": 6150,
+      "end_char": 7074,
+      "content": "== = Basic notions === The Cartesian product X × Y {\\displaystyle X\\times Y} of two normed spaces is not canonically equipped with a norm. However, several equivalent norms are commonly used, such as ‖ ( x , y ) ‖ 1 = ‖ x ‖ + ‖ y ‖ , ‖ ( x , y ) ‖ ∞ = max ( ‖ x ‖ , ‖ y ‖ ) {\\displaystyle \\|(x,y)\\|_{1}=\\|x\\|+\\|y\\|,\\qquad \\|(x,y)\\|_{\\infty }=\\max(\\|x\\|,\\|y\\|)} which correspond (respectively) to the coproduct and product in the category of Banach spaces and short maps (discussed above). For finite (co)products, these norms give rise to isomorphic normed spaces, and the product X × Y {\\displaystyle X\\times Y} (or the direct sum X ⊕ Y {\\displaystyle X\\oplus Y} ) is complete if and only if the two factors are complete. If M {\\displaystyle M} is a closed linear subspace of a normed space X , {\\displaystyle X,} there is a natural norm on the quotient space X / M , {\\displaystyle X/M,} ‖ x + M ‖ = inf m ∈ M ‖ x + m ‖ .",
+      "char_count": 923,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0009",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Basic notions ==",
+      "heading_path": "== = Basic notions ==",
+      "start_char": 7074,
+      "end_char": 8055,
+      "content": "{\\displaystyle \\|x+M\\|=\\inf \\limits _{m\\in M}\\|x+m\\|.} The quotient X / M {\\displaystyle X/M} is a Banach space when X {\\displaystyle X} is complete. The quotient map from X {\\displaystyle X} onto X / M , {\\displaystyle X/M,} sending x ∈ X {\\displaystyle x\\in X} to its class x + M , {\\displaystyle x+M,} is linear, onto, and of norm 1 , {\\displaystyle 1,} except when M = X , {\\displaystyle M=X,} in which case the quotient is the null space. The closed linear subspace M {\\displaystyle M} of X {\\displaystyle X} is said to be a complemented subspace of X {\\displaystyle X} if M {\\displaystyle M} is the range of a surjective bounded linear projection P : X → M . {\\displaystyle P:X\\to M.} In this case, the space X {\\displaystyle X} is isomorphic to the direct sum of M {\\displaystyle M} and ker ⁡ P , {\\displaystyle \\ker P,} the kernel of the projection P . {\\displaystyle P.} Suppose that X {\\displaystyle X} and Y {\\displaystyle Y} are Banach spaces and that T ∈ B ( X , Y ) .",
+      "char_count": 981,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0010",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Basic notions ==",
+      "heading_path": "== = Basic notions ==",
+      "start_char": 8056,
+      "end_char": 8838,
+      "content": "{\\displaystyle T\\in B(X,Y).} There exists a canonical factorization of T {\\displaystyle T} as T = T 1 ∘ π , T : X ⟶ π X / ker ⁡ T ⟶ T 1 Y {\\displaystyle T=T_{1}\\circ \\pi ,\\quad T:X{\\overset {\\pi }{{}\\longrightarrow {}}}X/\\ker T{\\overset {T_{1}}{{}\\longrightarrow {}}}Y} where the first map π {\\displaystyle \\pi } is the quotient map, and the second map T 1 {\\displaystyle T_{1}} sends every class x + ker ⁡ T {\\displaystyle x+\\ker T} in the quotient to the image T ( x ) {\\displaystyle T(x)} in Y . {\\displaystyle Y.} This is well defined because all elements in the same class have the same image. The mapping T 1 {\\displaystyle T_{1}} is a linear bijection from X / ker ⁡ T {\\displaystyle X/\\ker T} onto the range T ( X ) , {\\displaystyle T(X),} whose inverse need not be bounded.",
+      "char_count": 782,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0011",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Classical spaces ==",
+      "heading_path": "== = Classical spaces ==",
+      "start_char": 8842,
+      "end_char": 9813,
+      "content": "== = Classical spaces === Basic examples of Banach spaces include: the Lp spaces L p {\\displaystyle L^{p}} and their special cases, the sequence spaces ℓ p {\\displaystyle \\ell ^{p}} that consist of scalar sequences indexed by natural numbers N {\\displaystyle \\mathbb {N} } ; among them, the space ℓ 1 {\\displaystyle \\ell ^{1}} of absolutely summable sequences and the space ℓ 2 {\\displaystyle \\ell ^{2}} of square summable sequences; the space c 0 {\\displaystyle c_{0}} of sequences tending to zero and the space ℓ ∞ {\\displaystyle \\ell ^{\\infty }} of bounded sequences; the space C ( K ) {\\displaystyle C(K)} of continuous scalar functions on a compact Hausdorff space K , {\\displaystyle K,} equipped with the max norm, ‖ f ‖ C ( K ) = max { | f ( x ) | ∣ x ∈ K } , f ∈ C ( K ) . {\\displaystyle \\|f\\|_{C(K)}=\\max\\{|f(x)|\\mid x\\in K\\},\\quad f\\in C(K).} According to the Banach–Mazur theorem, every Banach space is isometrically isomorphic to a subspace of some C ( K ) .",
+      "char_count": 970,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0012",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Classical spaces ==",
+      "heading_path": "== = Classical spaces ==",
+      "start_char": 9813,
+      "end_char": 10594,
+      "content": "{\\displaystyle C(K).} For every separable Banach space X , {\\displaystyle X,} there is a closed subspace M {\\displaystyle M} of ℓ 1 {\\displaystyle \\ell ^{1}} such that X := ℓ 1 / M . {\\displaystyle X:=\\ell ^{1}/M.} Any Hilbert space serves as an example of a Banach space. A Hilbert space H {\\displaystyle H} on K = R , C {\\displaystyle \\mathbb {K} =\\mathbb {R} ,\\mathbb {C} } is complete for a norm of the form ‖ x ‖ H = ⟨ x , x ⟩ , {\\displaystyle \\|x\\|_{H}={\\sqrt {\\langle x,x\\rangle }},} where ⟨ ⋅ , ⋅ ⟩ : H × H → K {\\displaystyle \\langle \\cdot ,\\cdot \\rangle :H\\times H\\to \\mathbb {K} } is the inner product, linear in its first argument that satisfies the following: ⟨ y , x ⟩ = ⟨ x , y ⟩ ¯ , for all x , y ∈ H ⟨ x , x ⟩ ≥ 0 , for all x ∈ H ⟨ x , x ⟩ = 0 if and only if x = 0.",
+      "char_count": 781,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0013",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Classical spaces ==",
+      "heading_path": "== = Classical spaces ==",
+      "start_char": 10595,
+      "end_char": 11181,
+      "content": "{\\displaystyle {\\begin{aligned}\\langle y,x\\rangle &={\\overline {\\langle x,y\\rangle }},\\quad {\\text{ for all }}x,y\\in H\\\\\\langle x,x\\rangle &\\geq 0,\\quad {\\text{ for all }}x\\in H\\\\\\langle x,x\\rangle =0{\\text{ if and only if }}x&=0.\\end{aligned}}} For example, the space L 2 {\\displaystyle L^{2}} is a Hilbert space. The Hardy spaces, the Sobolev spaces are examples of Banach spaces that are related to L p {\\displaystyle L^{p}} spaces and have additional structure. They are important in different branches of analysis, Harmonic analysis and Partial differential equations among others.",
+      "char_count": 586,
+      "token_estimate": 146,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0014",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Banach algebras ==",
+      "heading_path": "== = Banach algebras ==",
+      "start_char": 11181,
+      "end_char": 11691,
+      "content": "== = Banach algebras === A Banach algebra is a Banach space A {\\displaystyle A} over K = R {\\displaystyle \\mathbb {K} =\\mathbb {R} } or C , {\\displaystyle \\mathbb {C} ,} together with a structure of algebra over K {\\displaystyle \\mathbb {K} } , such that the product map A × A ∋ ( a , b ) ↦ a b ∈ A {\\displaystyle A\\times A\\ni (a,b)\\mapsto ab\\in A} is continuous. An equivalent norm on A {\\displaystyle A} can be found so that ‖ a b ‖ ≤ ‖ a ‖ ‖ b ‖ {\\displaystyle \\|ab\\|\\leq \\|a\\|\\|b\\|} for all a , b ∈ A . {\\displaystyle a,b\\in A.}",
+      "char_count": 532,
+      "token_estimate": 133,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0015",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Dual space ==",
+      "heading_path": "== = Dual space ==",
+      "start_char": 11709,
+      "end_char": 12682,
+      "content": "== = Dual space === If X {\\displaystyle X} is a normed space and K {\\displaystyle \\mathbb {K} } the underlying field (either the reals or the complex numbers), the continuous dual space is the space of continuous linear maps from X {\\displaystyle X} into K , {\\displaystyle \\mathbb {K} ,} or continuous linear functionals. The notation for the continuous dual is X ′ = B ( X , K ) {\\displaystyle X'=B(X,\\mathbb {K} )} in this article. Since K {\\displaystyle \\mathbb {K} } is a Banach space (using the absolute value as norm), the dual X ′ {\\displaystyle X'} is a Banach space, for every normed space X . {\\displaystyle X.} The Dixmier–Ng theorem characterizes the dual spaces of Banach spaces. The main tool for proving the existence of continuous linear functionals is the Hahn–Banach theorem. In particular, every continuous linear functional on a subspace of a normed space can be continuously extended to the whole space, without increasing the norm of the functional.",
+      "char_count": 972,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0016",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Dual space ==",
+      "heading_path": "== = Dual space ==",
+      "start_char": 12682,
+      "end_char": 13637,
+      "content": "An important special case is the following: for every vector x {\\displaystyle x} in a normed space X , {\\displaystyle X,} there exists a continuous linear functional f {\\displaystyle f} on X {\\displaystyle X} such that f ( x ) = ‖ x ‖ X , ‖ f ‖ X ′ ≤ 1. {\\displaystyle f(x)=\\|x\\|_{X},\\quad \\|f\\|_{X'}\\leq 1.} When x {\\displaystyle x} is not equal to the 0 {\\displaystyle \\mathbf {0} } vector, the functional f {\\displaystyle f} must have norm one, and is called a norming functional for x . {\\displaystyle x.} The Hahn–Banach separation theorem states that two disjoint non-empty convex sets in a real Banach space, one of them open, can be separated by a closed affine hyperplane. The open convex set lies strictly on one side of the hyperplane, the second convex set lies on the other side but may touch the hyperplane. A subset S {\\displaystyle S} in a Banach space X {\\displaystyle X} is total if the linear span of S {\\displaystyle S} is dense in X .",
+      "char_count": 955,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0017",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Dual space ==",
+      "heading_path": "== = Dual space ==",
+      "start_char": 13638,
+      "end_char": 14620,
+      "content": "{\\displaystyle X.} The subset S {\\displaystyle S} is total in X {\\displaystyle X} if and only if the only continuous linear functional that vanishes on S {\\displaystyle S} is the 0 {\\displaystyle \\mathbf {0} } functional: this equivalence follows from the Hahn–Banach theorem. If X {\\displaystyle X} is the direct sum of two closed linear subspaces M {\\displaystyle M} and N , {\\displaystyle N,} then the dual X ′ {\\displaystyle X'} of X {\\displaystyle X} is isomorphic to the direct sum of the duals of M {\\displaystyle M} and N . {\\displaystyle N.} If M {\\displaystyle M} is a closed linear subspace in X , {\\displaystyle X,} one can associate the orthogonal of M {\\displaystyle M} in the dual, M ⊥ = { x ′ ∈ X ∣ x ′ ( m ) = 0 for all m ∈ M } . {\\displaystyle M^{\\bot }=\\{x'\\in X\\mid x'(m)=0{\\text{ for all }}m\\in M\\}.} The orthogonal M ⊥ {\\displaystyle M^{\\bot }} is a closed linear subspace of the dual. The dual of M {\\displaystyle M} is isometrically isomorphic to X ′ / M ⊥ .",
+      "char_count": 982,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0018",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Dual space ==",
+      "heading_path": "== = Dual space ==",
+      "start_char": 14621,
+      "end_char": 14984,
+      "content": "{\\displaystyle X'/M^{\\bot }.} The dual of X / M {\\displaystyle X/M} is isometrically isomorphic to M ⊥ . {\\displaystyle M^{\\bot }.} The dual of a separable Banach space need not be separable, but: When X ′ {\\displaystyle X'} is separable, the above criterion for totality can be used for proving the existence of a countable total subset in X . {\\displaystyle X.}",
+      "char_count": 363,
+      "token_estimate": 90,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0019",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Banach's theorems ==",
+      "heading_path": "== = Banach's theorems ==",
+      "start_char": 14992,
+      "end_char": 15621,
+      "content": "== = Banach's theorems === Here are the main general results about Banach spaces that go back to the time of Banach's book (Banach (1932)) and are related to the Baire category theorem. According to this theorem, a complete metric space (such as a Banach space, a Fréchet space or an F-space) cannot be equal to a union of countably many closed subsets with empty interiors. Therefore, a Banach space cannot be the union of countably many closed subspaces, unless it is already equal to one of them; a Banach space with a countable Hamel basis is finite-dimensional. The Banach–Steinhaus theorem is not limited to Banach spaces.",
+      "char_count": 628,
+      "token_estimate": 157,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0020",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Banach's theorems ==",
+      "heading_path": "== = Banach's theorems ==",
+      "start_char": 15621,
+      "end_char": 16552,
+      "content": "It can be extended for example to the case where X {\\displaystyle X} is a Fréchet space, provided the conclusion is modified as follows: under the same hypothesis, there exists a neighborhood U {\\displaystyle U} of 0 {\\displaystyle \\mathbf {0} } in X {\\displaystyle X} such that all T {\\displaystyle T} in F {\\displaystyle F} are uniformly bounded on U , {\\displaystyle U,} sup T ∈ F sup x ∈ U ‖ T ( x ) ‖ Y < ∞ . {\\displaystyle \\sup _{T\\in F}\\sup _{x\\in U}\\;\\|T(x)\\|_{Y}<\\infty .} This result is a direct consequence of the preceding Banach isomorphism theorem and of the canonical factorization of bounded linear maps. This is another consequence of Banach's isomorphism theorem, applied to the continuous bijection from M 1 ⊕ ⋯ ⊕ M n {\\displaystyle M_{1}\\oplus \\cdots \\oplus M_{n}} onto X {\\displaystyle X} sending m 1 , ⋯ , m n {\\displaystyle m_{1},\\cdots ,m_{n}} to the sum m 1 + ⋯ + m n . {\\displaystyle m_{1}+\\cdots +m_{n}.}",
+      "char_count": 931,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "banachspace_bdef5760_c0021",
+      "article_id": "banachspace_bdef5760",
+      "section": "== = Reflexivity ==",
+      "heading_path": "== = Reflexivity ==",
+      "start_char": 16547,
+      "end_char": 17473,
+      "content": "== = Reflexivity === The normed space X {\\displaystyle X} is called reflexive when the natural map { F X : X → X ″ F X ( x ) ( f ) = f ( x ) for all x ∈ X , and for all f ∈ X ′ {\\displaystyle {\\begin{cases}F_{X}:X\\to X''\\\\F_{X}(x)(f)=f(x)&{\\text{ for all }}x\\in X,{\\text{ and for all }}f\\in X'\\end{cases}}} is surjective. Reflexive normed spaces are Banach spaces. This is a consequence of the Hahn–Banach theorem. Further, by the open mapping theorem, if there is a bounded linear operator from the Banach space X {\\displaystyle X} onto the Banach space Y , {\\displaystyle Y,} then Y {\\displaystyle Y} is reflexive. Indeed, if the dual Y ′ {\\displaystyle Y'} of a Banach space Y {\\displaystyle Y} is separable, then Y {\\displaystyle Y} is separable. If X {\\displaystyle X} is reflexive and separable, then the dual of X ′ {\\displaystyle X'} is separable, so X ′ {\\displaystyle X'} is separable. Hilbert spaces are reflexive.",
+      "char_count": 925,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 7,
+    "items": [
+      {
+        "question": "If a space X is the direct sum of two closed linear subspaces M and N, what is its dual space X' isomorphic to?",
+        "answer": "If X is the direct sum of two closed linear subspaces M and N, then its dual space X' is isomorphic to the direct sum of the duals of M and N.",
+        "related_chunk_ids": [
+          "banachspace_bdef5760_c0017"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "banachspace_bdef5760_c0017"
+        ]
+      },
+      {
+        "question": "Under what condition is the quotient space X/M a Banach space?",
+        "answer": "The quotient space X/M is a Banach space when the space X is complete.",
+        "related_chunk_ids": [
+          "banachspace_bdef5760_c0009"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "banachspace_bdef5760_c0009"
+        ]
+      },
+      {
+        "question": "According to the Banach–Mazur theorem, what is the relationship between any Banach space and the space C(K)?",
+        "answer": "The Banach–Mazur theorem states that every Banach space is isometrically isomorphic to a subspace of some C(K) space, which is the space of continuous scalar functions on a compact Hausdorff space K.",
+        "related_chunk_ids": [
+          "banachspace_bdef5760_c0011"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "banachspace_bdef5760_c0011"
+        ]
+      },
+      {
+        "question": "If two normed spaces, X and Y, are isometrically isomorphic, and the Cartesian product space X × Z is complete for some other normed space Z, what can be concluded about the completeness of space Y?",
+        "answer": "If the Cartesian product space X × Z is complete, it implies that both of its factor spaces, X and Z, must also be complete. Since spaces X and Y are isometrically isomorphic, they are also considered isomorphic, a condition under which the property of completeness is shared. Therefore, because space X is complete, space Y must also be a complete space.",
+        "related_chunk_ids": [
+          "banachspace_bdef5760_c0006",
+          "banachspace_bdef5760_c0007",
+          "banachspace_bdef5760_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "banachspace_bdef5760_c0007",
+          "banachspace_bdef5760_c0008",
+          "banachspace_bdef5760_c0006"
+        ]
+      },
+      {
+        "question": "What is the distinction between two normed spaces being \"isomorphic\" versus \"isometrically isomorphic\"?",
+        "answer": "Two normed spaces X and Y are considered isomorphic if there exists a linear bijection T: X → Y such that both T and its inverse T⁻¹ are continuous. They are considered isometrically isomorphic if, in addition to being an isomorphism, the map T is also an isometry, meaning it preserves the norm such that ‖T(x)‖ = ‖x‖ for every x in X. Therefore, being isometrically isomorphic is a stricter condition than being isomorphic.",
+        "related_chunk_ids": [
+          "banachspace_bdef5760_c0006",
+          "banachspace_bdef5760_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "banachspace_bdef5760_c0007",
+          "banachspace_bdef5760_c0006"
+        ]
+      },
+      {
+        "question": "Explain the role of the quotient space `X/ker T` in the canonical factorization of a linear operator `T` from a Banach space `X` to `Y`.",
+        "answer": "The quotient space `X/ker T` serves as an intermediate space in the canonical factorization of a linear operator `T`, which is expressed as `T = T1 ∘ π`. In this factorization, `π` is the quotient map that sends an element `x` from the space `X` to its corresponding class `x + ker T` in the quotient space. The second map, `T1`, is a linear bijection from the quotient space `X/ker T` onto the range of `T`, mapping the class `x + ker T` to the image `T(x)`. The norm on the quotient space is defined as `‖x + ker T‖ = inf m ∈ ker T ‖x + m‖`, and this space is a Banach space if `X` is complete.",
+        "related_chunk_ids": [
+          "banachspace_bdef5760_c0008",
+          "banachspace_bdef5760_c0009",
+          "banachspace_bdef5760_c0010"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "banachspace_bdef5760_c0010",
+          "banachspace_bdef5760_c0009",
+          "banachspace_bdef5760_c0008"
+        ]
+      },
+      {
+        "question": "Explain the relationship between Banach spaces, Hilbert spaces, and L2 spaces, based on the examples provided.",
+        "answer": "Hilbert spaces are a specific type of Banach space, characterized by a norm derived from an inner product. The L2 space, which is a special case of the more general Lp spaces (which are themselves Banach spaces), is given as an example of a Hilbert space. Therefore, L2 is a Hilbert space, and all Hilbert spaces are Banach spaces.",
+        "related_chunk_ids": [
+          "banachspace_bdef5760_c0011",
+          "banachspace_bdef5760_c0012",
+          "banachspace_bdef5760_c0013"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "banachspace_bdef5760_c0013",
+          "banachspace_bdef5760_c0011",
+          "banachspace_bdef5760_c0012"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:48.441Z",
+    "content_format": "markdown",
+    "total_chunks": 22,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

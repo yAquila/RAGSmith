@@ -1,0 +1,794 @@
+{
+  "article": {
+    "id": "typesystem_f0474783",
+    "title": "Type system",
+    "url": "https://en.wikipedia.org/wiki/Type_system",
+    "lang": "en",
+    "created_at": "2025-07-30T08:35:53.273982",
+    "content": "---\nid: typesystem_f0474783\nurl: https://en.wikipedia.org/wiki/Type_system\ntitle: Type system\nlang: en\ncreated_at: '2025-07-30T08:32:40.887089'\nchecksum: 4476832e349598c0ad62bf2df12479a9b596ef2030a6020668a7a9415b597731\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 6463\n  char_count: 39581\n  num_chunks: 49\n  original_chunks: 57\n  filtered_out: 8\n  num_sections: 0\n---\nIn computer programming, a type system is a logical system comprising a set of rules that assigns a property called a type (for example, integer, floating point, string) to every term (a word, phrase, or other set of symbols). Usually the terms are various language constructs of a computer program, such as variables, expressions, functions, or modules. A type system dictates the operations that can be performed on a term. For variables, the type system determines the allowed values of that term. Type systems formalize and enforce the otherwise implicit categories the programmer uses for algebraic data types, data structures, or other data types, such as \"string\", \"array of float\", \"function returning boolean\". Type systems are often specified as part of programming languages and built into interpreters and compilers, although the type system of a language can be extended by optional tools that perform added checks using the language's original type syntax and grammar. The main purpose of a type system in a programming language is to reduce possibilities for bugs in computer programs due to type errors. The given type system in question determines what constitutes a type error, but in general, the aim is to prevent operations expecting a certain kind of value from being used with values of which that operation does not make sense (validity errors). Type systems allow defining interfaces between different parts of a computer program, and then checking that the parts have been connected in a consistent way. This checking can happen statically (at compile time), dynamically (at run time), or as a combination of both. Type systems have other purposes as well, such as expressing business rules, enabling certain compiler optimizations, allowing for multiple dispatch, and providing a form of documentation. == Usage overview == An example of a simple type system is that of the C language. The portions of a C program are the function definitions. One function is invoked by another function. The interface of a function states the name of the function and a list of parameters that are passed to the function's code. The code of an invoking function states the name of the invoked, along with the names of variables that hold values to pass to it. During a computer program's execution, the values are placed into temporary storage, then execution jumps to the code of the invoked function. The invoked function's code accesses the values and makes use of them. If the instructions inside the function are written with the assumption of receiving an integer value, but the calling code passed a floating-point value, then the wrong result will be computed by the invoked function. The C compiler checks the types of the arguments passed to a function when it is called against the types of the parameters declared in the function's definition. If the types do not match, the compiler throws a compile-time error or warning. A compiler may also use the static type of a value to optimize the storage it needs and the choice of algorithms for operations on the value. In many C compilers the float data type, for example, is represented in 32 bits, in accord with the IEEE specification for single-precision floating point numbers. They will thus use floating-point-specific microprocessor operations on those values (floating-point addition, multiplication, etc.). The depth of type constraints and the manner of their evaluation affect the typing of the language. A programming language may further associate an operation with various resolutions for each type, in the case of type polymorphism. Type theory is the study of type systems. The concrete types of some programming languages, such as integers and strings, depend on practical issues of computer architecture, compiler implementation, and language design. == Fundamentals == Formally, type theory studies type systems. A programming language must have the opportunity to type check using the type system whether at compile time or runtime, manually annotated or automatically inferred. As Mark Manasse concisely put it: The fundamental problem addressed by a type theory is to ensure that programs have meaning. The fundamental problem caused by a type theory is that meaningful programs may not have meanings ascribed to them. The quest for richer type systems results from this tension. Assigning a data type, termed typing, gives meaning to a sequence of bits such as a value in memory or some object such as a variable. The hardware of a general purpose computer is unable to discriminate between for example a memory address and an instruction code, or between a character, an integer, or a floating-point number, because it makes no intrinsic distinction between any of the possible values that a sequence of bits might mean. Associating a sequence of bits with a type conveys that meaning to the programmable hardware to form a symbolic system composed of that hardware and some program. A program associates each value with at least one specific type, but it also can occur that one value is associated with many subtypes. Other entities, such as objects, modules, communication channels, and dependencies can become associated with a type. Even a type can become associated with a type. An implementation of a type system could in theory associate identifications called data type (a type of a value), class (a type of an object), and kind (a type of a type, or metatype). These are the abstractions that typing can go through, on a hierarchy of levels contained in a system. When a programming language evolves a more elaborate type system, it gains a more finely grained rule set than basic type checking, but this comes at a price when the type inferences (and other properties) become undecidable, and when more attention must be paid by the programmer to annotate code or to consider computer-related operations and functioning. It is challenging to find a sufficiently expressive type system that satisfies all programming practices in a type safe manner. A programming language compiler can also implement a dependent type or an effect system, which enables even more program specifications to be verified by a type checker. Beyond simple value-type pairs, a virtual \"region\" of code is associated with an \"effect\" component describing what is being done with what, and enabling for example to \"throw\" an error report. Thus the symbolic system may be a type and effect system, which endows it with more safety checking than type checking alone. Whether automated by the compiler or specified by a programmer, a type system renders program behavior illegal if it falls outside the type-system rules. Advantages provided by programmer-specified type systems include: Abstraction (or modularity) – Types enable programmers to think at a higher level than the bit or byte, not bothering with low-level implementation. For example, programmers can begin to think of a string as a set of character values instead of as an array of bytes. Higher still, types enable programmers to think about and express interfaces between two of any-sized subsystems. This enables more levels of localization so that the definitions required for interoperability of the subsystems remain consistent when those two subsystems communicate. Documentation – In more expressive type systems, types can serve as a form of documentation clarifying the intent of the programmer. For example, if a programmer declares a function as returning a timestamp type, this documents the function when the timestamp type can be explicitly declared deeper in the code to be an integer type. Advantages provided by compiler-specified type systems include: Optimization – Static type-checking may provide useful compile-time information. For example, if a type requires that a value must align in memory at a multiple of four bytes, the compiler may be able to use more efficient machine instructions. Safety – A type system enables the compiler to detect meaningless or invalid code. For example, we can identify an expression 3 / \"Hello, World\" as invalid, when the rules do not specify how to divide an integer by a string. Strong typing offers more safety, but cannot guarantee complete type safety. === Type errors === A type error occurs when an operation receives a different type of data than it expected. For example, a type error would happen if a line of code divides two integers, and is passed a string of letters instead of an integer. It is an unintended condition which might manifest in multiple stages of a program's development. Thus a facility for detection of the error is needed in the type system. In some languages, such as Haskell, for which type inference is automated, lint might be available to its compiler to aid in the detection of error. Type safety contributes to program correctness, but might only guarantee correctness at the cost of making the type checking itself an undecidable problem (as in the halting problem). In a type system with automated type checking, a program may prove to run incorrectly yet produce no compiler errors. Division by zero is an unsafe and incorrect operation, but a type checker which only runs at compile time does not scan for division by zero in most languages; that division would surface as a runtime error. To prove the absence of these defects, other kinds of formal methods, collectively known as program analyses, are in common use. Alternatively, a sufficiently expressive type system, such as in dependently typed languages, can prevent these kinds of errors (for example, expressing the type of non-zero numbers). In addition, software testing is an empirical method for finding errors that such a type checker would not detect. == Type checking == The process of verifying and enforcing the constraints of types—type checking—may occur at compile time (a static check) or at run-time (a dynamic check). If a language specification requires its typing rules strongly, more or less allowing only those automatic type conversions that do not lose information, one can refer to the process as strongly typed; if not, as weakly typed. The terms are not usually used in a strict sense. === Static type checking === Static type checking is the process of verifying the type safety of a program based on analysis of a program's text (source code). If a program passes a static type checker, then the program is guaranteed to satisfy some set of type safety properties for all possible inputs. Static type checking can be considered a limited form of program verification (see type safety), and in a type-safe language, can also be considered an optimization. If a compiler can prove that a program is well-typed, then it does not need to emit dynamic safety checks, allowing the resulting compiled binary to run faster and to be smaller. Static type checking for Turing-complete languages is inherently conservative. That is, if a type system is both sound (meaning that it rejects all incorrect programs) and decidable (meaning that it is possible to write an algorithm that determines whether a program is well-typed), then it must be incomplete (meaning there are correct programs, which are also rejected, even though they do not encounter runtime errors). For example, consider a program containing the code: if then else Even if the expression always evaluates to true at run-time, most type checkers will reject the program as ill-typed, because it is difficult (if not impossible) for a static analyzer to determine that the else branch will not be taken. Consequently, a static type checker will quickly detect type errors in rarely used code paths. Without static type checking, even code coverage tests with 100% coverage may be unable to find such type errors. The tests may fail to detect such type errors, because the combination of all places where values are created and all places where a certain value is used must be taken into account. A number of useful and common programming language features cannot be checked statically, such as downcasting. Thus, many languages will have both static and dynamic type checking; the static type checker verifies what it can, and dynamic checks verify the rest. Many languages with static type checking provide a way to bypass the type checker. Some languages allow programmers to choose between static and dynamic type safety. For example, historically C# declares variables statically, but C# 4.0 introduces the dynamic keyword, which is used to declare variables to be checked dynamically at runtime. Other languages allow writing code that is not type-safe; for example, in C, programmers can freely cast a value between any two types that have the same size, effectively subverting the type concept. === Dynamic type checking and runtime type information === Dynamic type checking is the process of verifying the type safety of a program at runtime. Implementations of dynamically type-checked languages generally associate each runtime object with a type tag (i.e., a reference to a type) containing its type information. This runtime type information (RTTI) can also be used to implement dynamic dispatch, late binding, downcasting, reflective programming (reflection), and similar features. Most type-safe languages include some form of dynamic type checking, even if they also have a static type checker. The reason for this is that many useful features or properties are difficult or impossible to verify statically. For example, suppose that a program defines two types, A and B, where B is a subtype of A. If the program tries to convert a value of type A to type B, which is known as downcasting, then the operation is legal only if the value being converted is actually a value of type B. Thus, a dynamic check is needed to verify that the operation is safe. This requirement is one of the criticisms of downcasting. By definition, dynamic type checking may cause a program to fail at runtime. In some programming languages, it is possible to anticipate and recover from these failures. In others, type-checking errors are considered fatal. Programming languages that include dynamic type checking but not static type checking are often called \"dynamically typed programming languages\". === Combining static and dynamic type checking === Certain languages allow both static and dynamic typing. For example, Java and some other ostensibly statically typed languages support downcasting types to their subtypes, querying an object to discover its dynamic type and other type operations that depend on runtime type information. Another example is C++ RTTI. More generally, most programming languages include mechanisms for dispatching over different 'kinds' of data, such as disjoint unions, runtime polymorphism, and variant types. Even when not interacting with type annotations or type checking, such mechanisms are materially similar to dynamic typing implementations. See programming language for more discussion of the interactions between static and dynamic typing. Objects in object-oriented languages are usually accessed by a reference whose static target type (or manifest type) is equal to either the object's run-time type (its latent type) or a supertype thereof. This is conformant with the Liskov substitution principle, which states that all operations performed on an instance of a given type can also be performed on an instance of a subtype. This concept is also known as subsumption or subtype polymorphism. In some languages subtypes may also possess covariant or contravariant return types and argument types respectively. Certain languages, for example Clojure, Common Lisp, or Cython are dynamically type checked by default, but allow programs to opt into static type checking by providing optional annotations. One reason to use such hints would be to optimize the performance of critical sections of a program. This is formalized by gradual typing. The programming environment DrRacket, a pedagogic environment based on Lisp, and a precursor of the language Racket is also soft-typed. Conversely, as of version 4.0, the C# language provides a way to indicate that a variable should not be statically type checked. A variable whose type is dynamic will not be subject to static type checking. Instead, the program relies on runtime type information to determine how the variable may be used. In Rust, the dyn std::any::Any type provides dynamic typing of 'static types. === Static and dynamic type checking in practice === The choice between static and dynamic typing requires certain trade-offs. Static typing can find type errors reliably at compile time, which increases the reliability of the delivered program. However, programmers disagree over how commonly type errors occur, resulting in further disagreements over the proportion of those bugs that are coded that would be caught by appropriately representing the designed types in code. Static typing advocates believe programs are more reliable when they have been well type-checked, whereas dynamic-typing advocates point to distributed code that has proven reliable and to small bug databases. The value of static typing increases as the strength of the type system is increased. Advocates of dependent typing, implemented in languages such as Dependent ML and Epigram, have suggested that almost all bugs can be considered type errors, if the types used in a program are properly declared by the programmer or correctly inferred by the compiler. Static typing usually results in compiled code that executes faster. When the compiler knows the exact data types that are in use (which is necessary for static verification, either through declaration or inference) it can produce optimized machine code. Some dynamically typed languages such as Common Lisp allow optional type declarations for optimization for this reason. By contrast, dynamic typing may allow compilers to run faster and interpreters to dynamically load new code, because changes to source code in dynamically typed languages may result in less checking to perform and less code to revisit. This too may reduce the edit-compile-test-debug cycle. Statically typed languages that lack type inference (such as C and Java prior to version 10) require that programmers declare the types that a method or function must use. This can serve as added program documentation, that is active and dynamic, instead of static. This allows a compiler to prevent it from drifting out of synchrony, and from being ignored by programmers. However, a language can be statically typed without requiring type declarations (examples include Haskell, Scala, OCaml, F#, Swift, and to a lesser extent C# and C++), so explicit type declaration is not a necessary requirement for static typing in all languages. Dynamic typing allows constructs that some (simple) static type checking would reject as illegal. For example, eval functions, which execute arbitrary data as code, become possible. An eval function is possible with static typing, but requires advanced uses of algebraic data types. Further, dynamic typing better accommodates transitional code and prototyping, such as allowing a placeholder data structure (mock object) to be transparently used in place of a full data structure (usually for the purposes of experimentation and testing). Dynamic typing typically allows duck typing (which enables easier code reuse). Many languages with static typing also feature duck typing or other mechanisms like generic programming that also enable easier code reuse. Dynamic typing typically makes metaprogramming easier to use. For example, C++ templates are typically more cumbersome to write than the equivalent Ruby or Python code since C++ has stronger rules regarding type definitions (for both functions and variables). This forces a developer to write more boilerplate code for a template than a Python developer would need to. More advanced run-time constructs such as metaclasses and introspection are often harder to use in statically typed languages. In some languages, such features may also be used e.g. to generate new types and behaviors on the fly, based on run-time data. Such advanced constructs are often provided by dynamic programming languages; many of these are dynamically typed, although dynamic typing need not be related to dynamic programming languages. === Strong and weak type systems === Languages are often colloquially referred to as strongly typed or weakly typed. In fact, there is no universally accepted definition of what these terms mean. In general, there are more precise terms to represent the differences between type systems that lead people to call them \"strong\" or \"weak\". === Type safety and memory safety === A third way of categorizing the type system of a programming language is by the safety of typed operations and conversions. Computer scientists use the term type-safe language to describe languages that do not allow operations or conversions that violate the rules of the type system. Computer scientists use the term memory-safe language (or just safe language) to describe languages that do not allow programs to access memory that has not been assigned for their use. For example, a memory-safe language will check array bounds, or else statically guarantee (i.e., at compile time before execution) that array accesses out of the array boundaries will cause compile-time and perhaps runtime errors. Consider the following program of a language that is both type-safe and memory-safe: In this example, the variable z will have the value 42. Although this may not be what the programmer anticipated, it is a well-defined result. If y were a different string, one that could not be converted to a number (e.g. \"Hello World\"), the result would be well-defined as well. Note that a program can be type-safe or memory-safe and still crash on an invalid operation. This is for languages where the type system is not sufficiently advanced to precisely specify the validity of operations on all possible operands. But if a program encounters an operation that is not type-safe, terminating the program is often the only option. Now consider a similar example in C: In this example z will point to a memory address five characters beyond y, equivalent to three characters after the terminating zero character of the string pointed to by y. This is memory that the program is not expected to access. In C terms this is simply undefined behaviour and the program may do anything; with a simple compiler it might actually print whatever byte is stored after the string \"37\". As this example shows, C is not memory-safe. As arbitrary data was assumed to be a character, it is also not a type-safe language. In general, type-safety and memory-safety go hand in hand. For example, a language that supports pointer arithmetic and number-to-pointer conversions (like C) is neither memory-safe nor type-safe, because it allows arbitrary memory to be accessed as if it were valid memory of any type. === Variable levels of type checking === Some languages allow different levels of checking to apply to different regions of code. Examples include: The use strict directive in JavaScript and Perl applies stronger checking. The declare(strict_types=1) in PHP on a per-file basis allows only a variable of exact type of the type declaration will be accepted, or a TypeError will be thrown. The Option Strict On in VB.NET allows the compiler to require a conversion between objects. Additional tools such as lint and IBM Rational Purify can also be used to achieve a higher level of strictness. === Optional type systems === It has been proposed, chiefly by Gilad Bracha, that the choice of type system be made independent of choice of language; that a type system should be a module that can be plugged into a language as needed. He believes this is advantageous, because what he calls mandatory type systems make languages less expressive and code more fragile. The requirement that the type system does not affect the semantics of the language is difficult to fulfill. Optional typing is related to, but distinct from, gradual typing. While both typing disciplines can be used to perform static analysis of code (static typing), optional type systems do not enforce type safety at runtime (dynamic typing). == Polymorphism and types == The term polymorphism refers to the ability of code (especially, functions or classes) to act on values of multiple types, or to the ability of different instances of the same data structure to contain elements of different types. Type systems that allow polymorphism generally do so in order to improve the potential for code re-use: in a language with polymorphism, programmers need only implement a data structure such as a list or an associative array once, rather than once for each type of element with which they plan to use it. For this reason computer scientists sometimes call the use of certain forms of polymorphism generic programming. The type-theoretic foundations of polymorphism are closely related to those of abstraction, modularity and (in some cases) subtyping. == Specialized type systems == Many type systems have been created that are specialized for use in certain environments with certain types of data, or for out-of-band static program analysis. Frequently, these are based on ideas from formal type theory and are only available as part of prototype research systems. The following table gives an overview over type theoretic concepts that are used in specialized type systems. The names M, N, O range over terms and the names σ , τ {\\displaystyle \\sigma ,\\tau } range over types. The following notation will be used: M : σ {\\displaystyle M:\\sigma } means that M {\\displaystyle M} has type σ {\\displaystyle \\sigma } ; M ( N ) {\\displaystyle M(N)} is that application of M {\\displaystyle M} on N {\\displaystyle N} ; τ [ α := σ ] {\\displaystyle \\tau [\\alpha :=\\sigma ]} (resp. τ [ x := N ] {\\displaystyle \\tau [x:=N]} ) describes the type which results from replacing all occurrences of the type variable α (resp. term variable x) in τ {\\displaystyle \\tau } by the type σ (resp. term N). === Dependent types === Dependent types are based on the idea of using scalars or values to more precisely describe the type of some other value. For example, m a t r i x ( 3 , 3 ) {\\displaystyle \\mathrm {matrix} (3,3)} might be the type of a 3 × 3 {\\displaystyle 3\\times 3} matrix. We can then define typing rules such as the following rule for matrix multiplication: m a t r i x m u l t i p l y : m a t r i x ( k , m ) × m a t r i x ( m , n ) → m a t r i x ( k , n ) {\\displaystyle \\mathrm {matrix} _{\\mathrm {multiply} }:\\mathrm {matrix} (k,m)\\times \\mathrm {matrix} (m,n)\\to \\mathrm {matrix} (k,n)} where k, m, n are arbitrary positive integer values. A variant of ML called Dependent ML has been created based on this type system, but because type checking for conventional dependent types is undecidable, not all programs using them can be type-checked without some kind of limits. Dependent ML limits the sort of equality it can decide to Presburger arithmetic. Other languages such as Epigram make the value of all expressions in the language decidable so that type checking can be decidable. However, in general proof of decidability is undecidable, so many programs require hand-written annotations that may be very non-trivial. As this impedes the development process, many language implementations provide an easy way out in the form of an option to disable this condition. This, however, comes at the cost of making the type-checker run in an infinite loop when fed programs that do not type-check, causing the compilation to fail. === Linear types === Linear types, based on the theory of linear logic, and closely related to uniqueness types, are types assigned to values having the property that they have one and only one reference to them at all times. These are valuable for describing large immutable values such as files, strings, and so on, because any operation that simultaneously destroys a linear object and creates a similar object (such as str = str + \"a\") can be optimized \"under the hood\" into an in-place mutation. Normally this is not possible, as such mutations could cause side effects on parts of the program holding other references to the object, violating referential transparency. They are also used in the prototype operating system Singularity for interprocess communication, statically ensuring that processes cannot share objects in shared memory in order to prevent race conditions. The Clean language (a Haskell-like language) uses this type system in order to gain a lot of speed (compared to performing a deep copy) while remaining safe. === Intersection types === Intersection types are types describing values that belong to both of two other given types with overlapping value sets. For example, in most implementations of C the signed char has range -128 to 127 and the unsigned char has range 0 to 255, so the intersection type of these two types would have range 0 to 127. Such an intersection type could be safely passed into functions expecting either signed or unsigned chars, because it is compatible with both types. Intersection types are useful for describing overloaded function types: for example, if \"int → int\" is the type of functions taking an integer argument and returning an integer, and \"float → float\" is the type of functions taking a float argument and returning a float, then the intersection of these two types can be used to describe functions that do one or the other, based on what type of input they are given. Such a function could be passed into another function expecting an \"int → int\" function safely; it simply would not use the \"float → float\" functionality. In a subclassing hierarchy, the intersection of a type and an ancestor type (such as its parent) is the most derived type. The intersection of sibling types is empty. The Forsythe language includes a general implementation of intersection types. A restricted form is refinement types. === Union types === Union types are types describing values that belong to either of two types. For example, in C, the signed char has a -128 to 127 range, and the unsigned char has a 0 to 255 range, so the union of these two types would have an overall \"virtual\" range of -128 to 255 that may be used partially depending on which union member is accessed. Any function handling this union type would have to deal with integers in this complete range. More generally, the only valid operations on a union type are operations that are valid on both types being unioned. C's \"union\" concept is similar to union types, but is not typesafe, as it permits operations that are valid on either type, rather than both. Union types are important in program analysis, where they are used to represent symbolic values whose exact nature (e.g., value or type) is not known. In a subclassing hierarchy, the union of a type and an ancestor type (such as its parent) is the ancestor type. The union of sibling types is a subtype of their common ancestor (that is, all operations permitted on their common ancestor are permitted on the union type, but they may also have other valid operations in common). === Existential types === Existential types are frequently used in connection with record types to represent modules and abstract data types, due to their ability to separate implementation from interface. For example, the type \"T = ∃X { a: X; f: (X → int); }\" describes a module interface that has a data member named a of type X and a function named f that takes a parameter of the same type X and returns an integer. This could be implemented in different ways; for example: intT = { a: int; f: (int → int); } floatT = { a: float; f: (float → int); } These types are both subtypes of the more general existential type T and correspond to concrete implementation types, so any value of one of these types is a value of type T. Given a value \"t\" of type \"T\", we know that \"t.f(t.a)\" is well-typed, regardless of what the abstract type X is. This gives flexibility for choosing types suited to a particular implementation, while clients that use only values of the interface type—the existential type—are isolated from these choices. In general it's impossible for the typechecker to infer which existential type a given module belongs to. In the above example intT { a: int; f: (int → int); } could also have the type ∃X { a: X; f: (int → int); }. The simplest solution is to annotate every module with its intended type, e.g.: intT = { a: int; f: (int → int); } as ∃X { a: X; f: (X → int); } Although abstract data types and modules had been implemented in programming languages for quite some time, it wasn't until 1988 that John C. Mitchell and Gordon Plotkin established the formal theory under the slogan: \"Abstract [data] types have existential type\". The theory is a second-order typed lambda calculus similar to System F, but with existential instead of universal quantification. === Gradual typing === In a type system with Gradual typing, variables may be assigned a type either at compile-time (which is static typing), or at run-time (which is dynamic typing). This allows software developers to choose either type paradigm as appropriate, from within a single language. Gradual typing uses a special type named dynamic to represent statically unknown types; gradual typing replaces the notion of type equality with a new relation called consistency that relates the dynamic type to every other type. The consistency relation is symmetric but not transitive. == Explicit or implicit declaration and inference == Many static type systems, such as those of C and Java, require type declarations: the programmer must explicitly associate each variable with a specific type. Others, such as Haskell's, perform type inference: the compiler draws conclusions about the types of variables based on how programmers use those variables. For example, given a function f(x, y) that adds x and y together, the compiler can infer that x and y must be numbers—since addition is only defined for numbers. Thus, any call to f elsewhere in the program that specifies a non-numeric type (such as a string or list) as an argument would signal an error. Numerical and string constants and expressions in code can and often do imply type in a particular context. For example, an expression 3.14 might imply a type of floating-point, while [1, 2, 3] might imply a list of integers—typically an array. Type inference is in general possible, if it is computable in the type system in question. Moreover, even if inference is not computable in general for a given type system, inference is often possible for a large subset of real-world programs. Haskell's type system, a version of Hindley–Milner, is a restriction of System Fω to so-called rank-1 polymorphic types, in which type inference is computable. Most Haskell compilers allow arbitrary-rank polymorphism as an extension, but this makes type inference not computable. (Type checking is decidable, however, and rank-1 programs still have type inference; higher rank polymorphic programs are rejected unless given explicit type annotations.) == Decision problems == A type system that assigns types to terms in type environments using typing rules is naturally associated with the decision problems of type checking, typability, and type inhabitation. Given a type environment Γ {\\displaystyle \\Gamma } , a term e {\\displaystyle e} , and a type τ {\\displaystyle \\tau } , decide whether the term e {\\displaystyle e} can be assigned the type τ {\\displaystyle \\tau } in the type environment. Given a term e {\\displaystyle e} , decide whether there exists a type environment Γ {\\displaystyle \\Gamma } and a type τ {\\displaystyle \\tau } such that the term e {\\displaystyle e} can be assigned the type τ {\\displaystyle \\tau } in the type environment Γ {\\displaystyle \\Gamma } . Given a type environment Γ {\\displaystyle \\Gamma } and a type τ {\\displaystyle \\tau } , decide whether there exists a term e {\\displaystyle e} that can be assigned the type τ {\\displaystyle \\tau } in the type environment. == Unified type system == Some languages like C# or Scala have a unified type system. This means that all C# types including primitive types inherit from a single root object. Every type in C# inherits from the Object class. Some languages, like Java and Raku, have a root type but also have primitive types that are not objects. Java provides wrapper object types that exist together with the primitive types so developers can use either the wrapper object types or the simpler non-object primitive types. Raku automatically converts primitive types to objects when their methods are accessed. == Compatibility: equivalence and subtyping == A type checker for a statically typed language must verify that the type of any expression is consistent with the type expected by the context in which that expression appears. For example, in an assignment statement of the form x := e, the inferred type of the expression e must be consistent with the declared or inferred type of the variable x. This notion of consistency, called compatibility, is specific to each programming language. If the type of e and the type of x are the same, and assignment is allowed for that type, then this is a valid expression. Thus, in the simplest type systems, the question of whether two types are compatible reduces to that of whether they are equal (or equivalent). Different languages, however, have different criteria for when two type expressions are understood to denote the same type. These different equational theories of types vary widely, two extreme cases being structural type systems, in which any two types that describe values with the same structure are equivalent, and nominative type systems, in which no two syntactically distinct type expressions denote the same type (i.e., types must have the same \"name\" in order to be equal). In languages with subtyping, the compatibility relation is more complex: If B is a subtype of A, then a value of type B can be used in a context where one of type A is expected (covariant), even if the reverse is not true. Like equivalence, the subtype relation is defined differently for each programming language, with many variations possible. The presence of parametric or ad hoc polymorphism in a language may also have implications for type compatibility. == See also == Comparison of type systems Covariance and contravariance (computer science) Polymorphism in object-oriented programming Type signature Type theory == Notes == == References == == Further reading == Cardelli, Luca; Wegner, Peter (December 1985). \"On Understanding Types, Data Abstraction, and Polymorphism\" (PDF). ACM Computing Surveys. 17 (4): 471–523. CiteSeerX 10.1.1.117.695. doi:10.1145/6041.6042. S2CID 2921816. Pierce, Benjamin C. (2002). Types and Programming Languages. MIT Press. ISBN 978-0-262-16209-8. Cardelli, Luca (2004). \"Type systems\" (PDF). In Allen B. Tucker (ed.). CRC Handbook of Computer Science and Engineering (2nd ed.). CRC Press. ISBN 978-1584883609. Tratt, Laurence (July 2009). \"5. Dynamically Typed Languages\". Advances in Computers. Vol. 77. Elsevier. pp. 149–184. doi:10.1016/S0065-2458(09)01205-4. ISBN 978-0-12-374812-6. == External links == Media related to Type systems at Wikimedia Commons Smith, Chris (2011). \"What to Know Before Debating Type Systems\"."
+  },
+  "chunks": [
+    {
+      "id": "typesystem_f0474783_c0000",
+      "article_id": "typesystem_f0474783",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 983,
+      "content": "In computer programming, a type system is a logical system comprising a set of rules that assigns a property called a type (for example, integer, floating point, string) to every term (a word, phrase, or other set of symbols). Usually the terms are various language constructs of a computer program, such as variables, expressions, functions, or modules. A type system dictates the operations that can be performed on a term. For variables, the type system determines the allowed values of that term. Type systems formalize and enforce the otherwise implicit categories the programmer uses for algebraic data types, data structures, or other data types, such as \"string\", \"array of float\", \"function returning boolean\". Type systems are often specified as part of programming languages and built into interpreters and compilers, although the type system of a language can be extended by optional tools that perform added checks using the language's original type syntax and grammar.",
+      "char_count": 982,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0001",
+      "article_id": "typesystem_f0474783",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 983,
+      "end_char": 1829,
+      "content": "The main purpose of a type system in a programming language is to reduce possibilities for bugs in computer programs due to type errors. The given type system in question determines what constitutes a type error, but in general, the aim is to prevent operations expecting a certain kind of value from being used with values of which that operation does not make sense (validity errors). Type systems allow defining interfaces between different parts of a computer program, and then checking that the parts have been connected in a consistent way. This checking can happen statically (at compile time), dynamically (at run time), or as a combination of both. Type systems have other purposes as well, such as expressing business rules, enabling certain compiler optimizations, allowing for multiple dispatch, and providing a form of documentation.",
+      "char_count": 846,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0002",
+      "article_id": "typesystem_f0474783",
+      "section": "== Usage overview ==",
+      "heading_path": "== Usage overview ==",
+      "start_char": 1850,
+      "end_char": 2725,
+      "content": "== Usage overview == An example of a simple type system is that of the C language. The portions of a C program are the function definitions. One function is invoked by another function. The interface of a function states the name of the function and a list of parameters that are passed to the function's code. The code of an invoking function states the name of the invoked, along with the names of variables that hold values to pass to it. During a computer program's execution, the values are placed into temporary storage, then execution jumps to the code of the invoked function. The invoked function's code accesses the values and makes use of them. If the instructions inside the function are written with the assumption of receiving an integer value, but the calling code passed a floating-point value, then the wrong result will be computed by the invoked function.",
+      "char_count": 874,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0003",
+      "article_id": "typesystem_f0474783",
+      "section": "== Usage overview ==",
+      "heading_path": "== Usage overview ==",
+      "start_char": 2725,
+      "end_char": 3681,
+      "content": "The C compiler checks the types of the arguments passed to a function when it is called against the types of the parameters declared in the function's definition. If the types do not match, the compiler throws a compile-time error or warning. A compiler may also use the static type of a value to optimize the storage it needs and the choice of algorithms for operations on the value. In many C compilers the float data type, for example, is represented in 32 bits, in accord with the IEEE specification for single-precision floating point numbers. They will thus use floating-point-specific microprocessor operations on those values (floating-point addition, multiplication, etc.). The depth of type constraints and the manner of their evaluation affect the typing of the language. A programming language may further associate an operation with various resolutions for each type, in the case of type polymorphism. Type theory is the study of type systems.",
+      "char_count": 956,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0004",
+      "article_id": "typesystem_f0474783",
+      "section": "== Fundamentals ==",
+      "heading_path": "== Fundamentals ==",
+      "start_char": 3859,
+      "end_char": 4835,
+      "content": "== Fundamentals == Formally, type theory studies type systems. A programming language must have the opportunity to type check using the type system whether at compile time or runtime, manually annotated or automatically inferred. As Mark Manasse concisely put it: The fundamental problem addressed by a type theory is to ensure that programs have meaning. The fundamental problem caused by a type theory is that meaningful programs may not have meanings ascribed to them. The quest for richer type systems results from this tension. Assigning a data type, termed typing, gives meaning to a sequence of bits such as a value in memory or some object such as a variable. The hardware of a general purpose computer is unable to discriminate between for example a memory address and an instruction code, or between a character, an integer, or a floating-point number, because it makes no intrinsic distinction between any of the possible values that a sequence of bits might mean.",
+      "char_count": 975,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0005",
+      "article_id": "typesystem_f0474783",
+      "section": "== Fundamentals ==",
+      "heading_path": "== Fundamentals ==",
+      "start_char": 4835,
+      "end_char": 5587,
+      "content": "Associating a sequence of bits with a type conveys that meaning to the programmable hardware to form a symbolic system composed of that hardware and some program. A program associates each value with at least one specific type, but it also can occur that one value is associated with many subtypes. Other entities, such as objects, modules, communication channels, and dependencies can become associated with a type. Even a type can become associated with a type. An implementation of a type system could in theory associate identifications called data type (a type of a value), class (a type of an object), and kind (a type of a type, or metatype). These are the abstractions that typing can go through, on a hierarchy of levels contained in a system.",
+      "char_count": 752,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0006",
+      "article_id": "typesystem_f0474783",
+      "section": "== Fundamentals ==",
+      "heading_path": "== Fundamentals ==",
+      "start_char": 5588,
+      "end_char": 6563,
+      "content": "When a programming language evolves a more elaborate type system, it gains a more finely grained rule set than basic type checking, but this comes at a price when the type inferences (and other properties) become undecidable, and when more attention must be paid by the programmer to annotate code or to consider computer-related operations and functioning. It is challenging to find a sufficiently expressive type system that satisfies all programming practices in a type safe manner. A programming language compiler can also implement a dependent type or an effect system, which enables even more program specifications to be verified by a type checker. Beyond simple value-type pairs, a virtual \"region\" of code is associated with an \"effect\" component describing what is being done with what, and enabling for example to \"throw\" an error report. Thus the symbolic system may be a type and effect system, which endows it with more safety checking than type checking alone.",
+      "char_count": 975,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0007",
+      "article_id": "typesystem_f0474783",
+      "section": "== Fundamentals ==",
+      "heading_path": "== Fundamentals ==",
+      "start_char": 6564,
+      "end_char": 7467,
+      "content": "Whether automated by the compiler or specified by a programmer, a type system renders program behavior illegal if it falls outside the type-system rules. Advantages provided by programmer-specified type systems include: Abstraction (or modularity) – Types enable programmers to think at a higher level than the bit or byte, not bothering with low-level implementation. For example, programmers can begin to think of a string as a set of character values instead of as an array of bytes. Higher still, types enable programmers to think about and express interfaces between two of any-sized subsystems. This enables more levels of localization so that the definitions required for interoperability of the subsystems remain consistent when those two subsystems communicate. Documentation – In more expressive type systems, types can serve as a form of documentation clarifying the intent of the programmer.",
+      "char_count": 903,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0008",
+      "article_id": "typesystem_f0474783",
+      "section": "== Fundamentals ==",
+      "heading_path": "== Fundamentals ==",
+      "start_char": 7468,
+      "end_char": 8279,
+      "content": "For example, if a programmer declares a function as returning a timestamp type, this documents the function when the timestamp type can be explicitly declared deeper in the code to be an integer type. Advantages provided by compiler-specified type systems include: Optimization – Static type-checking may provide useful compile-time information. For example, if a type requires that a value must align in memory at a multiple of four bytes, the compiler may be able to use more efficient machine instructions. Safety – A type system enables the compiler to detect meaningless or invalid code. For example, we can identify an expression 3 / \"Hello, World\" as invalid, when the rules do not specify how to divide an integer by a string. Strong typing offers more safety, but cannot guarantee complete type safety.",
+      "char_count": 811,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0009",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Type errors ==",
+      "heading_path": "== = Type errors ==",
+      "start_char": 8281,
+      "end_char": 9150,
+      "content": "== = Type errors === A type error occurs when an operation receives a different type of data than it expected. For example, a type error would happen if a line of code divides two integers, and is passed a string of letters instead of an integer. It is an unintended condition which might manifest in multiple stages of a program's development. Thus a facility for detection of the error is needed in the type system. In some languages, such as Haskell, for which type inference is automated, lint might be available to its compiler to aid in the detection of error. Type safety contributes to program correctness, but might only guarantee correctness at the cost of making the type checking itself an undecidable problem (as in the halting problem). In a type system with automated type checking, a program may prove to run incorrectly yet produce no compiler errors.",
+      "char_count": 868,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0010",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Type errors ==",
+      "heading_path": "== = Type errors ==",
+      "start_char": 9150,
+      "end_char": 9785,
+      "content": "Division by zero is an unsafe and incorrect operation, but a type checker which only runs at compile time does not scan for division by zero in most languages; that division would surface as a runtime error. To prove the absence of these defects, other kinds of formal methods, collectively known as program analyses, are in common use. Alternatively, a sufficiently expressive type system, such as in dependently typed languages, can prevent these kinds of errors (for example, expressing the type of non-zero numbers). In addition, software testing is an empirical method for finding errors that such a type checker would not detect.",
+      "char_count": 635,
+      "token_estimate": 158,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0011",
+      "article_id": "typesystem_f0474783",
+      "section": "== Type checking ==",
+      "heading_path": "== Type checking ==",
+      "start_char": 9786,
+      "end_char": 10219,
+      "content": "== Type checking == The process of verifying and enforcing the constraints of types—type checking—may occur at compile time (a static check) or at run-time (a dynamic check). If a language specification requires its typing rules strongly, more or less allowing only those automatic type conversions that do not lose information, one can refer to the process as strongly typed; if not, as weakly typed. The terms are not usually used in a strict sense.",
+      "char_count": 451,
+      "token_estimate": 112,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0012",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Static type checking ==",
+      "heading_path": "== = Static type checking ==",
+      "start_char": 10247,
+      "end_char": 10977,
+      "content": "== = Static type checking === Static type checking is the process of verifying the type safety of a program based on analysis of a program's text (source code). If a program passes a static type checker, then the program is guaranteed to satisfy some set of type safety properties for all possible inputs. Static type checking can be considered a limited form of program verification (see type safety), and in a type-safe language, can also be considered an optimization. If a compiler can prove that a program is well-typed, then it does not need to emit dynamic safety checks, allowing the resulting compiled binary to run faster and to be smaller. Static type checking for Turing-complete languages is inherently conservative.",
+      "char_count": 729,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0013",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Static type checking ==",
+      "heading_path": "== = Static type checking ==",
+      "start_char": 10977,
+      "end_char": 11832,
+      "content": "That is, if a type system is both sound (meaning that it rejects all incorrect programs) and decidable (meaning that it is possible to write an algorithm that determines whether a program is well-typed), then it must be incomplete (meaning there are correct programs, which are also rejected, even though they do not encounter runtime errors). For example, consider a program containing the code: if then else Even if the expression always evaluates to true at run-time, most type checkers will reject the program as ill-typed, because it is difficult (if not impossible) for a static analyzer to determine that the else branch will not be taken. Consequently, a static type checker will quickly detect type errors in rarely used code paths. Without static type checking, even code coverage tests with 100% coverage may be unable to find such type errors.",
+      "char_count": 855,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0014",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Static type checking ==",
+      "heading_path": "== = Static type checking ==",
+      "start_char": 11833,
+      "end_char": 12821,
+      "content": "The tests may fail to detect such type errors, because the combination of all places where values are created and all places where a certain value is used must be taken into account. A number of useful and common programming language features cannot be checked statically, such as downcasting. Thus, many languages will have both static and dynamic type checking; the static type checker verifies what it can, and dynamic checks verify the rest. Many languages with static type checking provide a way to bypass the type checker. Some languages allow programmers to choose between static and dynamic type safety. For example, historically C# declares variables statically, but C# 4.0 introduces the dynamic keyword, which is used to declare variables to be checked dynamically at runtime. Other languages allow writing code that is not type-safe; for example, in C, programmers can freely cast a value between any two types that have the same size, effectively subverting the type concept.",
+      "char_count": 988,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0015",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Dynamic type checking and runtime type information ==",
+      "heading_path": "== = Dynamic type checking and runtime type information ==",
+      "start_char": 12852,
+      "end_char": 13666,
+      "content": "== = Dynamic type checking and runtime type information === Dynamic type checking is the process of verifying the type safety of a program at runtime. Implementations of dynamically type-checked languages generally associate each runtime object with a type tag (i.e., a reference to a type) containing its type information. This runtime type information (RTTI) can also be used to implement dynamic dispatch, late binding, downcasting, reflective programming (reflection), and similar features. Most type-safe languages include some form of dynamic type checking, even if they also have a static type checker. The reason for this is that many useful features or properties are difficult or impossible to verify statically. For example, suppose that a program defines two types, A and B, where B is a subtype of A.",
+      "char_count": 813,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0016",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Dynamic type checking and runtime type information ==",
+      "heading_path": "== = Dynamic type checking and runtime type information ==",
+      "start_char": 13666,
+      "end_char": 14348,
+      "content": "If the program tries to convert a value of type A to type B, which is known as downcasting, then the operation is legal only if the value being converted is actually a value of type B. Thus, a dynamic check is needed to verify that the operation is safe. This requirement is one of the criticisms of downcasting. By definition, dynamic type checking may cause a program to fail at runtime. In some programming languages, it is possible to anticipate and recover from these failures. In others, type-checking errors are considered fatal. Programming languages that include dynamic type checking but not static type checking are often called \"dynamically typed programming languages\".",
+      "char_count": 682,
+      "token_estimate": 170,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0017",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Combining static and dynamic type checking ==",
+      "heading_path": "== = Combining static and dynamic type checking ==",
+      "start_char": 14341,
+      "end_char": 15125,
+      "content": "== = Combining static and dynamic type checking === Certain languages allow both static and dynamic typing. For example, Java and some other ostensibly statically typed languages support downcasting types to their subtypes, querying an object to discover its dynamic type and other type operations that depend on runtime type information. Another example is C++ RTTI. More generally, most programming languages include mechanisms for dispatching over different 'kinds' of data, such as disjoint unions, runtime polymorphism, and variant types. Even when not interacting with type annotations or type checking, such mechanisms are materially similar to dynamic typing implementations. See programming language for more discussion of the interactions between static and dynamic typing.",
+      "char_count": 783,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0018",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Combining static and dynamic type checking ==",
+      "heading_path": "== = Combining static and dynamic type checking ==",
+      "start_char": 15125,
+      "end_char": 16027,
+      "content": "Objects in object-oriented languages are usually accessed by a reference whose static target type (or manifest type) is equal to either the object's run-time type (its latent type) or a supertype thereof. This is conformant with the Liskov substitution principle, which states that all operations performed on an instance of a given type can also be performed on an instance of a subtype. This concept is also known as subsumption or subtype polymorphism. In some languages subtypes may also possess covariant or contravariant return types and argument types respectively. Certain languages, for example Clojure, Common Lisp, or Cython are dynamically type checked by default, but allow programs to opt into static type checking by providing optional annotations. One reason to use such hints would be to optimize the performance of critical sections of a program. This is formalized by gradual typing.",
+      "char_count": 902,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0019",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Combining static and dynamic type checking ==",
+      "heading_path": "== = Combining static and dynamic type checking ==",
+      "start_char": 16028,
+      "end_char": 16547,
+      "content": "The programming environment DrRacket, a pedagogic environment based on Lisp, and a precursor of the language Racket is also soft-typed. Conversely, as of version 4.0, the C# language provides a way to indicate that a variable should not be statically type checked. A variable whose type is dynamic will not be subject to static type checking. Instead, the program relies on runtime type information to determine how the variable may be used. In Rust, the dyn std::any::Any type provides dynamic typing of 'static types.",
+      "char_count": 519,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0020",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Static and dynamic type checking in practice ==",
+      "heading_path": "== = Static and dynamic type checking in practice ==",
+      "start_char": 16550,
+      "end_char": 17323,
+      "content": "== = Static and dynamic type checking in practice === The choice between static and dynamic typing requires certain trade-offs. Static typing can find type errors reliably at compile time, which increases the reliability of the delivered program. However, programmers disagree over how commonly type errors occur, resulting in further disagreements over the proportion of those bugs that are coded that would be caught by appropriately representing the designed types in code. Static typing advocates believe programs are more reliable when they have been well type-checked, whereas dynamic-typing advocates point to distributed code that has proven reliable and to small bug databases. The value of static typing increases as the strength of the type system is increased.",
+      "char_count": 772,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0021",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Static and dynamic type checking in practice ==",
+      "heading_path": "== = Static and dynamic type checking in practice ==",
+      "start_char": 17323,
+      "end_char": 18255,
+      "content": "Advocates of dependent typing, implemented in languages such as Dependent ML and Epigram, have suggested that almost all bugs can be considered type errors, if the types used in a program are properly declared by the programmer or correctly inferred by the compiler. Static typing usually results in compiled code that executes faster. When the compiler knows the exact data types that are in use (which is necessary for static verification, either through declaration or inference) it can produce optimized machine code. Some dynamically typed languages such as Common Lisp allow optional type declarations for optimization for this reason. By contrast, dynamic typing may allow compilers to run faster and interpreters to dynamically load new code, because changes to source code in dynamically typed languages may result in less checking to perform and less code to revisit. This too may reduce the edit-compile-test-debug cycle.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0022",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Static and dynamic type checking in practice ==",
+      "heading_path": "== = Static and dynamic type checking in practice ==",
+      "start_char": 18256,
+      "end_char": 19176,
+      "content": "Statically typed languages that lack type inference (such as C and Java prior to version 10) require that programmers declare the types that a method or function must use. This can serve as added program documentation, that is active and dynamic, instead of static. This allows a compiler to prevent it from drifting out of synchrony, and from being ignored by programmers. However, a language can be statically typed without requiring type declarations (examples include Haskell, Scala, OCaml, F#, Swift, and to a lesser extent C# and C++), so explicit type declaration is not a necessary requirement for static typing in all languages. Dynamic typing allows constructs that some (simple) static type checking would reject as illegal. For example, eval functions, which execute arbitrary data as code, become possible. An eval function is possible with static typing, but requires advanced uses of algebraic data types.",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0023",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Static and dynamic type checking in practice ==",
+      "heading_path": "== = Static and dynamic type checking in practice ==",
+      "start_char": 19177,
+      "end_char": 20148,
+      "content": "Further, dynamic typing better accommodates transitional code and prototyping, such as allowing a placeholder data structure (mock object) to be transparently used in place of a full data structure (usually for the purposes of experimentation and testing). Dynamic typing typically allows duck typing (which enables easier code reuse). Many languages with static typing also feature duck typing or other mechanisms like generic programming that also enable easier code reuse. Dynamic typing typically makes metaprogramming easier to use. For example, C++ templates are typically more cumbersome to write than the equivalent Ruby or Python code since C++ has stronger rules regarding type definitions (for both functions and variables). This forces a developer to write more boilerplate code for a template than a Python developer would need to. More advanced run-time constructs such as metaclasses and introspection are often harder to use in statically typed languages.",
+      "char_count": 971,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0024",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Static and dynamic type checking in practice ==",
+      "heading_path": "== = Static and dynamic type checking in practice ==",
+      "start_char": 20149,
+      "end_char": 20468,
+      "content": "In some languages, such features may also be used e.g. to generate new types and behaviors on the fly, based on run-time data. Such advanced constructs are often provided by dynamic programming languages; many of these are dynamically typed, although dynamic typing need not be related to dynamic programming languages.",
+      "char_count": 319,
+      "token_estimate": 79,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0025",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Strong and weak type systems ==",
+      "heading_path": "== = Strong and weak type systems ==",
+      "start_char": 20453,
+      "end_char": 20755,
+      "content": "== = Strong and weak type systems === Languages are often colloquially referred to as strongly typed or weakly typed. In fact, there is no universally accepted definition of what these terms mean. In general, there are more precise terms to represent the differences between type systems that lead people to call them \"strong\" or \"weak\".",
+      "char_count": 337,
+      "token_estimate": 84,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0026",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Type safety and memory safety ==",
+      "heading_path": "== = Type safety and memory safety ==",
+      "start_char": 20792,
+      "end_char": 21674,
+      "content": "== = Type safety and memory safety === A third way of categorizing the type system of a programming language is by the safety of typed operations and conversions. Computer scientists use the term type-safe language to describe languages that do not allow operations or conversions that violate the rules of the type system. Computer scientists use the term memory-safe language (or just safe language) to describe languages that do not allow programs to access memory that has not been assigned for their use. For example, a memory-safe language will check array bounds, or else statically guarantee (i.e., at compile time before execution) that array accesses out of the array boundaries will cause compile-time and perhaps runtime errors. Consider the following program of a language that is both type-safe and memory-safe: In this example, the variable z will have the value 42.",
+      "char_count": 881,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0027",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Type safety and memory safety ==",
+      "heading_path": "== = Type safety and memory safety ==",
+      "start_char": 21674,
+      "end_char": 22522,
+      "content": "Although this may not be what the programmer anticipated, it is a well-defined result. If y were a different string, one that could not be converted to a number (e.g. \"Hello World\"), the result would be well-defined as well. Note that a program can be type-safe or memory-safe and still crash on an invalid operation. This is for languages where the type system is not sufficiently advanced to precisely specify the validity of operations on all possible operands. But if a program encounters an operation that is not type-safe, terminating the program is often the only option. Now consider a similar example in C: In this example z will point to a memory address five characters beyond y, equivalent to three characters after the terminating zero character of the string pointed to by y. This is memory that the program is not expected to access.",
+      "char_count": 848,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0028",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Type safety and memory safety ==",
+      "heading_path": "== = Type safety and memory safety ==",
+      "start_char": 22523,
+      "end_char": 23113,
+      "content": "In C terms this is simply undefined behaviour and the program may do anything; with a simple compiler it might actually print whatever byte is stored after the string \"37\". As this example shows, C is not memory-safe. As arbitrary data was assumed to be a character, it is also not a type-safe language. In general, type-safety and memory-safety go hand in hand. For example, a language that supports pointer arithmetic and number-to-pointer conversions (like C) is neither memory-safe nor type-safe, because it allows arbitrary memory to be accessed as if it were valid memory of any type.",
+      "char_count": 590,
+      "token_estimate": 147,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0029",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Variable levels of type checking ==",
+      "heading_path": "== = Variable levels of type checking ==",
+      "start_char": 23117,
+      "end_char": 23670,
+      "content": "== = Variable levels of type checking === Some languages allow different levels of checking to apply to different regions of code. Examples include: The use strict directive in JavaScript and Perl applies stronger checking. The declare(strict_types=1) in PHP on a per-file basis allows only a variable of exact type of the type declaration will be accepted, or a TypeError will be thrown. The Option Strict On in VB.NET allows the compiler to require a conversion between objects. Additional tools such as lint and IBM Rational Purify can also be used to achieve a higher level of strictness.",
+      "char_count": 592,
+      "token_estimate": 148,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0030",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Optional type systems ==",
+      "heading_path": "== = Optional type systems ==",
+      "start_char": 23699,
+      "end_char": 24386,
+      "content": "== = Optional type systems === It has been proposed, chiefly by Gilad Bracha, that the choice of type system be made independent of choice of language; that a type system should be a module that can be plugged into a language as needed. He believes this is advantageous, because what he calls mandatory type systems make languages less expressive and code more fragile. The requirement that the type system does not affect the semantics of the language is difficult to fulfill. Optional typing is related to, but distinct from, gradual typing. While both typing disciplines can be used to perform static analysis of code (static typing), optional type systems do not enforce type safety at runtime (dynamic typing).",
+      "char_count": 715,
+      "token_estimate": 178,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0031",
+      "article_id": "typesystem_f0474783",
+      "section": "== Polymorphism and types ==",
+      "heading_path": "== Polymorphism and types ==",
+      "start_char": 24414,
+      "end_char": 25198,
+      "content": "== Polymorphism and types == The term polymorphism refers to the ability of code (especially, functions or classes) to act on values of multiple types, or to the ability of different instances of the same data structure to contain elements of different types. Type systems that allow polymorphism generally do so in order to improve the potential for code re-use: in a language with polymorphism, programmers need only implement a data structure such as a list or an associative array once, rather than once for each type of element with which they plan to use it. For this reason computer scientists sometimes call the use of certain forms of polymorphism generic programming. The type-theoretic foundations of polymorphism are closely related to those of abstraction, modularity and (in some cases) subtyping.",
+      "char_count": 811,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0032",
+      "article_id": "typesystem_f0474783",
+      "section": "== Specialized type systems ==",
+      "heading_path": "== Specialized type systems ==",
+      "start_char": 25228,
+      "end_char": 26187,
+      "content": "== Specialized type systems == Many type systems have been created that are specialized for use in certain environments with certain types of data, or for out-of-band static program analysis. Frequently, these are based on ideas from formal type theory and are only available as part of prototype research systems. The following table gives an overview over type theoretic concepts that are used in specialized type systems. The names M, N, O range over terms and the names σ , τ {\\displaystyle \\sigma ,\\tau } range over types. The following notation will be used: M : σ {\\displaystyle M:\\sigma } means that M {\\displaystyle M} has type σ {\\displaystyle \\sigma } ; M ( N ) {\\displaystyle M(N)} is that application of M {\\displaystyle M} on N {\\displaystyle N} ; τ [ α := σ ] {\\displaystyle \\tau [\\alpha :=\\sigma ]} (resp. τ [ x := N ] {\\displaystyle \\tau [x:=N]} ) describes the type which results from replacing all occurrences of the type variable α (resp.",
+      "char_count": 958,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0033",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Dependent types ==",
+      "heading_path": "== = Dependent types ==",
+      "start_char": 26254,
+      "end_char": 27224,
+      "content": "== = Dependent types === Dependent types are based on the idea of using scalars or values to more precisely describe the type of some other value. For example, m a t r i x ( 3 , 3 ) {\\displaystyle \\mathrm {matrix} (3,3)} might be the type of a 3 × 3 {\\displaystyle 3\\times 3} matrix. We can then define typing rules such as the following rule for matrix multiplication: m a t r i x m u l t i p l y : m a t r i x ( k , m ) × m a t r i x ( m , n ) → m a t r i x ( k , n ) {\\displaystyle \\mathrm {matrix} _{\\mathrm {multiply} }:\\mathrm {matrix} (k,m)\\times \\mathrm {matrix} (m,n)\\to \\mathrm {matrix} (k,n)} where k, m, n are arbitrary positive integer values. A variant of ML called Dependent ML has been created based on this type system, but because type checking for conventional dependent types is undecidable, not all programs using them can be type-checked without some kind of limits. Dependent ML limits the sort of equality it can decide to Presburger arithmetic.",
+      "char_count": 969,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0034",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Dependent types ==",
+      "heading_path": "== = Dependent types ==",
+      "start_char": 27224,
+      "end_char": 27799,
+      "content": "Other languages such as Epigram make the value of all expressions in the language decidable so that type checking can be decidable. However, in general proof of decidability is undecidable, so many programs require hand-written annotations that may be very non-trivial. As this impedes the development process, many language implementations provide an easy way out in the form of an option to disable this condition. This, however, comes at the cost of making the type-checker run in an infinite loop when fed programs that do not type-check, causing the compilation to fail.",
+      "char_count": 575,
+      "token_estimate": 143,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0035",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Linear types ==",
+      "heading_path": "== = Linear types ==",
+      "start_char": 27797,
+      "end_char": 28680,
+      "content": "== = Linear types === Linear types, based on the theory of linear logic, and closely related to uniqueness types, are types assigned to values having the property that they have one and only one reference to them at all times. These are valuable for describing large immutable values such as files, strings, and so on, because any operation that simultaneously destroys a linear object and creates a similar object (such as str = str + \"a\") can be optimized \"under the hood\" into an in-place mutation. Normally this is not possible, as such mutations could cause side effects on parts of the program holding other references to the object, violating referential transparency. They are also used in the prototype operating system Singularity for interprocess communication, statically ensuring that processes cannot share objects in shared memory in order to prevent race conditions.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0036",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Intersection types ==",
+      "heading_path": "== = Intersection types ==",
+      "start_char": 28844,
+      "end_char": 29750,
+      "content": "== = Intersection types === Intersection types are types describing values that belong to both of two other given types with overlapping value sets. For example, in most implementations of C the signed char has range -128 to 127 and the unsigned char has range 0 to 255, so the intersection type of these two types would have range 0 to 127. Such an intersection type could be safely passed into functions expecting either signed or unsigned chars, because it is compatible with both types. Intersection types are useful for describing overloaded function types: for example, if \"int → int\" is the type of functions taking an integer argument and returning an integer, and \"float → float\" is the type of functions taking a float argument and returning a float, then the intersection of these two types can be used to describe functions that do one or the other, based on what type of input they are given.",
+      "char_count": 905,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0037",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Intersection types ==",
+      "heading_path": "== = Intersection types ==",
+      "start_char": 29750,
+      "end_char": 30189,
+      "content": "Such a function could be passed into another function expecting an \"int → int\" function safely; it simply would not use the \"float → float\" functionality. In a subclassing hierarchy, the intersection of a type and an ancestor type (such as its parent) is the most derived type. The intersection of sibling types is empty. The Forsythe language includes a general implementation of intersection types. A restricted form is refinement types.",
+      "char_count": 439,
+      "token_estimate": 109,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0038",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Union types ==",
+      "heading_path": "== = Union types ==",
+      "start_char": 30183,
+      "end_char": 31158,
+      "content": "== = Union types === Union types are types describing values that belong to either of two types. For example, in C, the signed char has a -128 to 127 range, and the unsigned char has a 0 to 255 range, so the union of these two types would have an overall \"virtual\" range of -128 to 255 that may be used partially depending on which union member is accessed. Any function handling this union type would have to deal with integers in this complete range. More generally, the only valid operations on a union type are operations that are valid on both types being unioned. C's \"union\" concept is similar to union types, but is not typesafe, as it permits operations that are valid on either type, rather than both. Union types are important in program analysis, where they are used to represent symbolic values whose exact nature (e.g., value or type) is not known. In a subclassing hierarchy, the union of a type and an ancestor type (such as its parent) is the ancestor type.",
+      "char_count": 974,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0039",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Union types ==",
+      "heading_path": "== = Union types ==",
+      "start_char": 31158,
+      "end_char": 31373,
+      "content": "The union of sibling types is a subtype of their common ancestor (that is, all operations permitted on their common ancestor are permitted on the union type, but they may also have other valid operations in common).",
+      "char_count": 215,
+      "token_estimate": 53,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0040",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Existential types ==",
+      "heading_path": "== = Existential types ==",
+      "start_char": 31380,
+      "end_char": 32223,
+      "content": "== = Existential types === Existential types are frequently used in connection with record types to represent modules and abstract data types, due to their ability to separate implementation from interface. For example, the type \"T = ∃X { a: X; f: (X → int); }\" describes a module interface that has a data member named a of type X and a function named f that takes a parameter of the same type X and returns an integer. This could be implemented in different ways; for example: intT = { a: int; f: (int → int); } floatT = { a: float; f: (float → int); } These types are both subtypes of the more general existential type T and correspond to concrete implementation types, so any value of one of these types is a value of type T. Given a value \"t\" of type \"T\", we know that \"t.f(t.a)\" is well-typed, regardless of what the abstract type X is.",
+      "char_count": 842,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0041",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Existential types ==",
+      "heading_path": "== = Existential types ==",
+      "start_char": 32223,
+      "end_char": 33169,
+      "content": "This gives flexibility for choosing types suited to a particular implementation, while clients that use only values of the interface type—the existential type—are isolated from these choices. In general it's impossible for the typechecker to infer which existential type a given module belongs to. In the above example intT { a: int; f: (int → int); } could also have the type ∃X { a: X; f: (int → int); }. The simplest solution is to annotate every module with its intended type, e.g.: intT = { a: int; f: (int → int); } as ∃X { a: X; f: (X → int); } Although abstract data types and modules had been implemented in programming languages for quite some time, it wasn't until 1988 that John C. Mitchell and Gordon Plotkin established the formal theory under the slogan: \"Abstract [data] types have existential type\". The theory is a second-order typed lambda calculus similar to System F, but with existential instead of universal quantification.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0042",
+      "article_id": "typesystem_f0474783",
+      "section": "== = Gradual typing ==",
+      "heading_path": "== = Gradual typing ==",
+      "start_char": 33167,
+      "end_char": 33729,
+      "content": "== = Gradual typing === In a type system with Gradual typing, variables may be assigned a type either at compile-time (which is static typing), or at run-time (which is dynamic typing). This allows software developers to choose either type paradigm as appropriate, from within a single language. Gradual typing uses a special type named dynamic to represent statically unknown types; gradual typing replaces the notion of type equality with a new relation called consistency that relates the dynamic type to every other type. The consistency relation is symmetric but not transitive.",
+      "char_count": 583,
+      "token_estimate": 145,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0043",
+      "article_id": "typesystem_f0474783",
+      "section": "== Explicit or implicit declaration and inference ==",
+      "heading_path": "== Explicit or implicit declaration and inference ==",
+      "start_char": 33781,
+      "end_char": 34701,
+      "content": "== Explicit or implicit declaration and inference == Many static type systems, such as those of C and Java, require type declarations: the programmer must explicitly associate each variable with a specific type. Others, such as Haskell's, perform type inference: the compiler draws conclusions about the types of variables based on how programmers use those variables. For example, given a function f(x, y) that adds x and y together, the compiler can infer that x and y must be numbers—since addition is only defined for numbers. Thus, any call to f elsewhere in the program that specifies a non-numeric type (such as a string or list) as an argument would signal an error. Numerical and string constants and expressions in code can and often do imply type in a particular context. For example, an expression 3.14 might imply a type of floating-point, while [1, 2, 3] might imply a list of integers—typically an array.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0044",
+      "article_id": "typesystem_f0474783",
+      "section": "== Explicit or implicit declaration and inference ==",
+      "heading_path": "== Explicit or implicit declaration and inference ==",
+      "start_char": 34701,
+      "end_char": 35396,
+      "content": "Type inference is in general possible, if it is computable in the type system in question. Moreover, even if inference is not computable in general for a given type system, inference is often possible for a large subset of real-world programs. Haskell's type system, a version of Hindley–Milner, is a restriction of System Fω to so-called rank-1 polymorphic types, in which type inference is computable. Most Haskell compilers allow arbitrary-rank polymorphism as an extension, but this makes type inference not computable. (Type checking is decidable, however, and rank-1 programs still have type inference; higher rank polymorphic programs are rejected unless given explicit type annotations.)",
+      "char_count": 695,
+      "token_estimate": 173,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0045",
+      "article_id": "typesystem_f0474783",
+      "section": "== Decision problems ==",
+      "heading_path": "== Decision problems ==",
+      "start_char": 35368,
+      "end_char": 36297,
+      "content": "== Decision problems == A type system that assigns types to terms in type environments using typing rules is naturally associated with the decision problems of type checking, typability, and type inhabitation. Given a type environment Γ {\\displaystyle \\Gamma } , a term e {\\displaystyle e} , and a type τ {\\displaystyle \\tau } , decide whether the term e {\\displaystyle e} can be assigned the type τ {\\displaystyle \\tau } in the type environment. Given a term e {\\displaystyle e} , decide whether there exists a type environment Γ {\\displaystyle \\Gamma } and a type τ {\\displaystyle \\tau } such that the term e {\\displaystyle e} can be assigned the type τ {\\displaystyle \\tau } in the type environment Γ {\\displaystyle \\Gamma } . Given a type environment Γ {\\displaystyle \\Gamma } and a type τ {\\displaystyle \\tau } , decide whether there exists a term e {\\displaystyle e} that can be assigned the type τ {\\displaystyle \\tau } in the type environment.",
+      "char_count": 951,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0046",
+      "article_id": "typesystem_f0474783",
+      "section": "== Unified type system ==",
+      "heading_path": "== Unified type system ==",
+      "start_char": 36322,
+      "end_char": 36892,
+      "content": "== Unified type system == Some languages like C# or Scala have a unified type system. This means that all C# types including primitive types inherit from a single root object. Every type in C# inherits from the Object class. Some languages, like Java and Raku, have a root type but also have primitive types that are not objects. Java provides wrapper object types that exist together with the primitive types so developers can use either the wrapper object types or the simpler non-object primitive types. Raku automatically converts primitive types to objects when their methods are accessed.",
+      "char_count": 594,
+      "token_estimate": 148,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0047",
+      "article_id": "typesystem_f0474783",
+      "section": "== Compatibility: equivalence and subtyping ==",
+      "heading_path": "== Compatibility: equivalence and subtyping ==",
+      "start_char": 36938,
+      "end_char": 37816,
+      "content": "== Compatibility: equivalence and subtyping == A type checker for a statically typed language must verify that the type of any expression is consistent with the type expected by the context in which that expression appears. For example, in an assignment statement of the form x := e, the inferred type of the expression e must be consistent with the declared or inferred type of the variable x. This notion of consistency, called compatibility, is specific to each programming language. If the type of e and the type of x are the same, and assignment is allowed for that type, then this is a valid expression. Thus, in the simplest type systems, the question of whether two types are compatible reduces to that of whether they are equal (or equivalent). Different languages, however, have different criteria for when two type expressions are understood to denote the same type.",
+      "char_count": 877,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "typesystem_f0474783_c0048",
+      "article_id": "typesystem_f0474783",
+      "section": "== Compatibility: equivalence and subtyping ==",
+      "heading_path": "== Compatibility: equivalence and subtyping ==",
+      "start_char": 37816,
+      "end_char": 38636,
+      "content": "These different equational theories of types vary widely, two extreme cases being structural type systems, in which any two types that describe values with the same structure are equivalent, and nominative type systems, in which no two syntactically distinct type expressions denote the same type (i.e., types must have the same \"name\" in order to be equal). In languages with subtyping, the compatibility relation is more complex: If B is a subtype of A, then a value of type B can be used in a context where one of type A is expected (covariant), even if the reverse is not true. Like equivalence, the subtype relation is defined differently for each programming language, with many variations possible. The presence of parametric or ad hoc polymorphism in a language may also have implications for type compatibility.",
+      "char_count": 820,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What version of C# introduced the `dynamic` keyword, which is used to declare variables to be checked dynamically at runtime?",
+        "answer": "C# 4.0 introduced the `dynamic` keyword for declaring variables to be checked dynamically at runtime.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0014"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0014"
+        ]
+      },
+      {
+        "question": "What is a type system in computer programming and what are its primary functions?",
+        "answer": "A type system is a logical system with a set of rules that assigns a property called a type (e.g., integer, string) to every term (e.g., variable, function) in a program. Its primary functions are to dictate the operations that can be performed on a term and to determine the allowed values for variables. It formalizes and enforces categories for data types.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0000"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0000"
+        ]
+      },
+      {
+        "question": "According to Mark Manasse, what is the fundamental problem caused by a type theory?",
+        "answer": "The fundamental problem caused by a type theory is that meaningful programs may not have meanings ascribed to them.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0004"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0004"
+        ]
+      },
+      {
+        "question": "Using the C language as an example, explain how a type system works to prevent bugs.",
+        "answer": "A type system assigns a property, such as 'integer' or 'floating point', to program constructs like function parameters. Its main purpose is to reduce bugs by preventing type errors, which occur when an operation is used on a value of an incompatible type. For instance, in C, if a function is written to work with an integer but the calling code passes it a floating-point value, a type error occurs, leading to an incorrect result. A type system is designed to prevent these kinds of mismatches.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0000",
+          "typesystem_f0474783_c0001",
+          "typesystem_f0474783_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0001",
+          "typesystem_f0474783_c0002",
+          "typesystem_f0474783_c0000"
+        ]
+      },
+      {
+        "question": "How does a type system give meaning to a sequence of bits that hardware cannot distinguish on its own, and what is a practical example of this process?",
+        "answer": "A type system gives meaning to a sequence of bits by associating it with a specific type, which the hardware of a general-purpose computer cannot do intrinsically. This association conveys meaning to the programmable hardware, forming a symbolic system. For example, while hardware sees only a sequence of bits, a C compiler can be instructed that a particular sequence represents a `float` data type. This type is often represented as a 32-bit value according to the IEEE single-precision specification, which in turn allows the compiler to use specific microprocessor operations, such as floating-point addition and multiplication, on that value.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0003",
+          "typesystem_f0474783_c0004",
+          "typesystem_f0474783_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0004",
+          "typesystem_f0474783_c0005",
+          "typesystem_f0474783_c0003"
+        ]
+      },
+      {
+        "question": "What are the key benefits of type systems, and what is the main trade-off when they become more elaborate?",
+        "answer": "Type systems provide several key benefits, including abstraction for higher-level thinking, documentation to clarify programmer intent, compiler optimization for more efficient code, and safety to detect invalid operations. The main trade-off for evolving to more elaborate type systems is that type inferences can become undecidable, and they require more attention from the programmer for code annotation and consideration of computer-related operations.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0006",
+          "typesystem_f0474783_c0007",
+          "typesystem_f0474783_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0006",
+          "typesystem_f0474783_c0007",
+          "typesystem_f0474783_c0008"
+        ]
+      },
+      {
+        "question": "How does a type system's function of assigning types and dictating operations on terms relate to its main purpose in a programming language?",
+        "answer": "A type system functions by assigning a type, such as integer or string, to program terms like variables and expressions, and it dictates the valid operations that can be performed on them. This fundamental role directly serves its main purpose, which is to reduce bugs caused by type errors. By enforcing these rules, the system prevents operations from being used with values for which they don't make sense, thus preventing validity errors and ensuring different parts of a program are connected consistently.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0000",
+          "typesystem_f0474783_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0000",
+          "typesystem_f0474783_c0001"
+        ]
+      },
+      {
+        "question": "How does the C language's type system prevent the incorrect computation that could arise from a type mismatch during function calls?",
+        "answer": "In C, a function call with a type mismatch, such as passing a floating-point value to a function expecting an integer, could lead to an incorrect result during program execution. The C compiler prevents this by checking the types of the arguments against the function's declared parameters during compilation. If the types do not match, the compiler will issue a compile-time error or warning, thus catching the potential issue before the program runs.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0002",
+          "typesystem_f0474783_c0003"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0003",
+          "typesystem_f0474783_c0002"
+        ]
+      },
+      {
+        "question": "Explain how a type system transforms raw data into a meaningful symbolic system and what key advantages this provides to programmers.",
+        "answer": "A type system addresses the issue that computer hardware cannot intrinsically distinguish the meaning of a sequence of bits (e.g., whether it represents a memory address, an instruction, or a character). By assigning a data type, a program gives meaning to these bits, which in turn forms a symbolic system composed of the hardware and the program. This provides two main advantages for programmers: abstraction, which allows them to work with higher-level concepts like a \"string\" instead of an \"array of bytes\" and define interfaces between subsystems; and documentation, where expressive types can clarify the programmer's intent.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0004",
+          "typesystem_f0474783_c0005",
+          "typesystem_f0474783_c0006",
+          "typesystem_f0474783_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0007",
+          "typesystem_f0474783_c0005",
+          "typesystem_f0474783_c0006",
+          "typesystem_f0474783_c0004"
+        ]
+      },
+      {
+        "question": "How do type errors, such as providing a string for a division operation, differ from errors like division by zero in terms of when they are typically detected?",
+        "answer": "A type error occurs when an operation receives an incorrect data type, like a string instead of an integer for division, and this is an error that a type system is designed to detect. In contrast, an error like division by zero, while unsafe, is typically not caught by a type checker at compile time in most languages and would instead surface as a runtime error.",
+        "related_chunk_ids": [
+          "typesystem_f0474783_c0009",
+          "typesystem_f0474783_c0010"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "typesystem_f0474783_c0010",
+          "typesystem_f0474783_c0009"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:32.844Z",
+    "content_format": "markdown",
+    "total_chunks": 49,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

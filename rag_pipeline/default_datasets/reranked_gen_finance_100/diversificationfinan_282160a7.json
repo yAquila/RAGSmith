@@ -1,0 +1,478 @@
+{
+  "article": {
+    "id": "diversificationfinan_282160a7",
+    "title": "Diversification (finance)",
+    "url": "https://en.wikipedia.org/wiki/Diversification_(finance)",
+    "lang": "en",
+    "created_at": "2025-07-30T14:08:00.049044",
+    "content": "---\nid: diversificationfinan_282160a7\nurl: https://en.wikipedia.org/wiki/Diversification_(finance)\ntitle: Diversification (finance)\nlang: en\ncreated_at: '2025-07-30T14:01:48.449408'\nchecksum: 47c98dbf8c2fb38dc9b9357bc9cfb654460990d815d9d7c91268f56a5a9cf2ca\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3119\n  char_count: 18495\n  num_chunks: 25\n  original_chunks: 29\n  filtered_out: 4\n  num_sections: 0\n---\nIn finance, diversification is the process of allocating capital in a way that reduces the exposure to any one particular asset or risk. A common path towards diversification is to reduce risk or volatility by investing in a variety of assets. If asset prices do not change in perfect synchrony, a diversified portfolio will have less variance than the weighted average variance of its constituent assets, and often less volatility than the least volatile of its constituents. Diversification is one of two general techniques for reducing investment risk. The other is hedging. == Examples == The simplest example of diversification is provided by the proverb \"Don't put all your eggs in one basket\". Dropping the basket will break all the eggs. Placing each egg in a different basket is more diversified. There is more risk of losing one egg, but less risk of losing all of them. On the other hand, having a lot of baskets may increase costs. In finance, an example of an undiversified portfolio is to hold only one stock. This is risky; it is not unusual for a single stock to go down 50% in one year. It is less common for a portfolio of 20 stocks to go down that much, especially if they are selected at random. If the stocks are selected from a variety of industries, company sizes and asset types it is even less likely to experience a 50% drop since it will mitigate any trends in that industry, company class, or asset type. Since the mid-1970s, it has also been argued that geographic diversification would generate superior risk-adjusted returns for large institutional investors by reducing overall portfolio risk while capturing some of the higher rates of return offered by the emerging markets of Asia and Latin America. == Return expectations while diversifying == If the prior expectations of the returns on all assets in the portfolio are identical, the expected return on a diversified portfolio will be identical to that on an undiversified portfolio. Some assets will do better than others; but since one does not know in advance which assets will perform better, this fact cannot be exploited in advance. The return on a diversified portfolio can never exceed that of the top-performing investment, and indeed will always be lower than the highest return (unless all returns are identical). Conversely, the diversified portfolio's return will always be higher than that of the worst-performing investment. So by diversifying, one loses the chance of having invested solely in the single asset that comes out best, but one also avoids having invested solely in the asset that comes out worst. That is the role of diversification: it narrows the range of possible outcomes. Diversification need not either help or hurt expected returns, unless the alternative non-diversified portfolio has a higher expected return. == Amount of diversification == There is no magic number of stocks that is diversified versus not. Sometimes quoted is 30, although it can be as low as 10 provided they are carefully chosen. A 1985 book reported that most value from diversification comes from the first 15 or 20 different stocks in a portfolio. More stocks give lower price volatility. Given the advantages of diversification, many experts recommend maximum diversification, also known as \"buying the market portfolio\". Identifying that portfolio is not straightforward. The earliest definition comes from the capital asset pricing model which argues the maximum diversification comes from buying a pro rata share of all available assets. This is the idea underlying index funds. Diversification has no maximum so long as more assets are available. Every equally weighted, uncorrelated asset added to a portfolio can add to that portfolio's measured diversification. When assets are not uniformly uncorrelated, a weighting approach that puts assets in proportion to their relative correlation can maximize the available diversification. \"Risk parity\" is an alternative idea. This weights assets in inverse proportion to risk, so the portfolio has equal risk in all asset classes. This is justified both on theoretical grounds, and with the pragmatic argument that future risk is much easier to forecast than either future market price or future economic footprint. \"Correlation parity\" is an extension of risk parity, and is the solution whereby each asset in a portfolio has an equal correlation with the portfolio, and is therefore the \"most diversified portfolio\". Risk parity is the special case of correlation parity when all pair-wise correlations are equal. == Effect of diversification on variance == One simple measure of financial risk is variance of the return on the portfolio. Diversification can lower the variance of a portfolio's return below what it would be if the entire portfolio were invested in the asset with the lowest variance of return, even if the assets' returns are uncorrelated. For example, let asset X have stochastic return x {\\displaystyle x} and asset Y have stochastic return y {\\displaystyle y} , with respective return variances σ x 2 {\\displaystyle \\sigma _{x}^{2}} and σ y 2 {\\displaystyle \\sigma _{y}^{2}} . If the fraction q {\\displaystyle q} of a one-unit (e.g. one-million-dollar) portfolio is placed in asset X and the fraction 1 − q {\\displaystyle 1-q} is placed in Y, the stochastic portfolio return is q x + ( 1 − q ) y {\\displaystyle qx+(1-q)y} . If x {\\displaystyle x} and y {\\displaystyle y} are uncorrelated, the variance of portfolio return is var ( q x + ( 1 − q ) y ) = q 2 σ x 2 + ( 1 − q ) 2 σ y 2 {\\displaystyle {\\text{var}}(qx+(1-q)y)=q^{2}\\sigma _{x}^{2}+(1-q)^{2}\\sigma _{y}^{2}} . The variance-minimizing value of q {\\displaystyle q} is q = σ y 2 / [ σ x 2 + σ y 2 ] {\\displaystyle q=\\sigma _{y}^{2}/[\\sigma _{x}^{2}+\\sigma _{y}^{2}]} , which is strictly between 0 {\\displaystyle 0} and 1 {\\displaystyle 1} . Using this value of q {\\displaystyle q} in the expression for the variance of portfolio return gives the latter as σ x 2 σ y 2 / [ σ x 2 + σ y 2 ] {\\displaystyle \\sigma _{x}^{2}\\sigma _{y}^{2}/[\\sigma _{x}^{2}+\\sigma _{y}^{2}]} , which is less than what it would be at either of the undiversified values q = 1 {\\displaystyle q=1} and q = 0 {\\displaystyle q=0} (which respectively give portfolio return variance of σ x 2 {\\displaystyle \\sigma _{x}^{2}} and σ y 2 {\\displaystyle \\sigma _{y}^{2}} ). Note that the favorable effect of diversification on portfolio variance would be enhanced if x {\\displaystyle x} and y {\\displaystyle y} were negatively correlated but diminished (though not eliminated) if they were positively correlated. In general, the presence of more assets in a portfolio leads to greater diversification benefits, as can be seen by considering portfolio variance as a function of n {\\displaystyle n} , the number of assets. For example, if all assets' returns are mutually uncorrelated and have identical variances σ x 2 {\\displaystyle \\sigma _{x}^{2}} , portfolio variance is minimized by holding all assets in the equal proportions 1 / n {\\displaystyle 1/n} . Then the portfolio return's variance equals var [ ( 1 / n ) x 1 + ( 1 / n ) x 2 + . . . + ( 1 / n ) x n ] {\\displaystyle {\\text{var}}[(1/n)x_{1}+(1/n)x_{2}+...+(1/n)x_{n}]} = n ( 1 / n 2 ) σ x 2 {\\displaystyle n(1/n^{2})\\sigma _{x}^{2}} = σ x 2 / n {\\displaystyle \\sigma _{x}^{2}/n} , which is monotonically decreasing in n {\\displaystyle n} . The latter analysis can be adapted to show why adding uncorrelated volatile assets to a portfolio, thereby increasing the portfolio's size, is not diversification, which involves subdividing the portfolio among many smaller investments. In the case of adding investments, the portfolio's return is x 1 + x 2 + ⋯ + x n {\\displaystyle x_{1}+x_{2}+\\dots +x_{n}} instead of ( 1 / n ) x 1 + ( 1 / n ) x 2 + . . . + ( 1 / n ) x n , {\\displaystyle (1/n)x_{1}+(1/n)x_{2}+...+(1/n)x_{n},} and the variance of the portfolio return if the assets are uncorrelated is var [ x 1 + x 2 + ⋯ + x n ] = σ x 2 + σ x 2 + ⋯ + σ x 2 = n σ x 2 , {\\displaystyle {\\text{var}}[x_{1}+x_{2}+\\dots +x_{n}]=\\sigma _{x}^{2}+\\sigma _{x}^{2}+\\dots +\\sigma _{x}^{2}=n\\sigma _{x}^{2},} which is increasing in n rather than decreasing. Thus, for example, when an insurance company adds more and more uncorrelated policies to its portfolio, this expansion does not itself represent diversification—the diversification occurs in the spreading of the insurance company's risks over a large number of part-owners of the company. == Diversification with correlated returns via an equally weighted portfolio == The expected return on a portfolio is a weighted average of the expected returns on each individual asset: E [ R P ] = ∑ i = 1 n x i E [ R i ] {\\displaystyle \\mathbb {E} [R_{P}]=\\sum _{i=1}^{n}x_{i}\\mathbb {E} [R_{i}]} where x i {\\displaystyle x_{i}} is the proportion of the investor's total invested wealth in asset i {\\displaystyle i} . The variance of the portfolio return is given by: Var ( R P ) ⏟ ≡ σ P 2 = E [ R P − E [ R P ] ] 2 . {\\displaystyle \\underbrace {{\\text{Var}}(R_{P})} _{\\equiv \\sigma _{P}^{2}}=\\mathbb {E} [R_{P}-\\mathbb {E} [R_{P}]]^{2}.} Inserting in the expression for E [ R P ] {\\displaystyle \\mathbb {E} [R_{P}]} : σ P 2 = E [ ∑ i = 1 n x i R i − ∑ i = 1 n x i E [ R i ] ] 2 . {\\displaystyle \\sigma _{P}^{2}=\\mathbb {E} \\left[\\sum _{i=1}^{n}x_{i}R_{i}-\\sum _{i=1}^{n}x_{i}\\mathbb {E} [R_{i}]\\right]^{2}.} Rearranging: σ P 2 = E [ ∑ i = 1 n x i ( R i − E [ R i ] ) ] 2 {\\displaystyle \\sigma _{P}^{2}=\\mathbb {E} \\left[\\sum _{i=1}^{n}x_{i}(R_{i}-\\mathbb {E} [R_{i}])\\right]^{2}} σ P 2 = E [ ∑ i = 1 n ∑ j = 1 n x i x j ( R i − E [ R i ] ) ( R j − E [ R j ] ) ] {\\displaystyle \\sigma _{P}^{2}=\\mathbb {E} \\left[\\sum _{i=1}^{n}\\sum _{j=1}^{n}x_{i}x_{j}(R_{i}-\\mathbb {E} [R_{i}])(R_{j}-\\mathbb {E} [R_{j}])\\right]} σ P 2 = E [ ∑ i = 1 n x i 2 ( R i − E [ R i ] ) 2 + ∑ i = 1 n ∑ j = 1 , i ≠ j n x i x j ( R i − E [ R i ] ) ( R j − E [ R j ] ) ] {\\displaystyle \\sigma _{P}^{2}=\\mathbb {E} \\left[\\sum _{i=1}^{n}x_{i}^{2}(R_{i}-\\mathbb {E} [R_{i}])^{2}+\\sum _{i=1}^{n}\\sum _{j=1,i\\neq j}^{n}x_{i}x_{j}(R_{i}-\\mathbb {E} [R_{i}])(R_{j}-\\mathbb {E} [R_{j}])\\right]} σ P 2 = ∑ i = 1 n x i 2 E [ R i − E [ R i ] ] 2 ⏟ ≡ σ i 2 + ∑ i = 1 n ∑ j = 1 , i ≠ j n x i x j E [ ( R i − E [ R i ] ) ( R j − E [ R j ] ) ] ⏟ ≡ σ i j {\\displaystyle \\sigma _{P}^{2}=\\sum _{i=1}^{n}x_{i}^{2}\\underbrace {\\mathbb {E} \\left[R_{i}-\\mathbb {E} [R_{i}]\\right]^{2}} _{\\equiv \\sigma _{i}^{2}}+\\sum _{i=1}^{n}\\sum _{j=1,i\\neq j}^{n}x_{i}x_{j}\\underbrace {\\mathbb {E} \\left[(R_{i}-\\mathbb {E} [R_{i}])(R_{j}-\\mathbb {E} [R_{j}])\\right]} _{\\equiv \\sigma _{ij}}} σ P 2 = ∑ i = 1 n x i 2 σ i 2 + ∑ i = 1 n ∑ j = 1 , i ≠ j n x i x j σ i j {\\displaystyle \\sigma _{P}^{2}=\\sum _{i=1}^{n}x_{i}^{2}\\sigma _{i}^{2}+\\sum _{i=1}^{n}\\sum _{j=1,i\\neq j}^{n}x_{i}x_{j}\\sigma _{ij}} where σ i 2 {\\displaystyle \\sigma _{i}^{2}} is the variance on asset i {\\displaystyle i} and σ i j {\\displaystyle \\sigma _{ij}} is the covariance between assets i {\\displaystyle i} and j {\\displaystyle j} . In an equally weighted portfolio, x i = x j = 1 n , ∀ i , j {\\displaystyle x_{i}=x_{j}={\\frac {1}{n}},\\forall i,j} . The portfolio variance then becomes: σ P 2 = 1 n 2 n σ ¯ i 2 + n ( n − 1 ) 1 n 1 n σ ¯ i j {\\displaystyle \\sigma _{P}^{2}={\\frac {1}{n^{2}}}\\ {n}{\\bar {\\sigma }}_{i}^{2}+n(n-1){\\frac {1}{n}}{\\frac {1}{n}}{\\bar {\\sigma }}_{ij}} where σ ¯ i j {\\displaystyle {\\bar {\\sigma }}_{ij}} is the average of the covariances σ i j {\\displaystyle \\sigma _{ij}} for i ≠ j {\\displaystyle i\\neq j} and σ ¯ i 2 {\\displaystyle {\\bar {\\sigma }}_{i}^{2}} is the average of the variances. Simplifying, we obtain σ P 2 = 1 n σ ¯ i 2 + n − 1 n σ ¯ i j . {\\displaystyle \\sigma _{P}^{2}={\\frac {1}{n}}{\\bar {\\sigma }}_{i}^{2}+{\\frac {n-1}{n}}{\\bar {\\sigma }}_{ij}.} As the number of assets grows we get the asymptotic formula: lim n → ∞ σ P 2 = σ ¯ i j . {\\displaystyle \\lim _{n\\rightarrow \\infty }\\sigma _{P}^{2}={\\bar {\\sigma }}_{ij}.} Thus, in an equally weighted portfolio, the portfolio variance tends to the average of covariances between securities as the number of securities becomes arbitrarily large. == Diversifiable and non-diversifiable risk == The capital asset pricing model introduced the concepts of diversifiable and non-diversifiable risk. Synonyms for diversifiable risk are idiosyncratic risk, unsystematic risk, and security-specific risk. Synonyms for non-diversifiable risk are systematic risk, beta risk and market risk. If one buys all the stocks in the S&P 500 one is obviously exposed only to movements in that index. If one buys a single stock in the S&P 500, one is exposed both to index movements and movements in the stock based on its underlying company. The first risk is called \"non-diversifiable\", because it exists however many S&P 500 stocks are bought. The second risk is called \"diversifiable\", because it can be reduced by diversifying among stocks. In the presence of per-asset investment fees, there is also the possibility of overdiversifying to the point that the portfolio's performance will suffer because the fees outweigh the gains from diversification. The capital asset pricing model argues that investors should only be compensated for non-diversifiable risk. Other financial models allow for multiple sources of non-diversifiable risk, but also insist that diversifiable risk should not carry any extra expected return. Still other models do not accept this contention. == An empirical example relating diversification to risk reduction == In 1977 Edwin Elton and Martin Gruber worked out an empirical example of the gains from diversification. Their approach was to consider a population of 3,290 securities available for possible inclusion in a portfolio, and to consider the average risk over all possible randomly chosen n-asset portfolios with equal amounts held in each included asset, for various values of n. Their results are summarized in the following table. The result for n=30 is close to n=1,000, and even four stocks provide most of the reduction in risk compared with one stock. == Corporate diversification strategies == In corporate portfolio models, diversification is thought of as being vertical or horizontal. Horizontal diversification is thought of as expanding a product line or acquiring related companies. Vertical diversification is synonymous with integrating the supply chain or amalgamating distributions channels. Non-incremental diversification is a strategy followed by conglomerates, where the individual business lines have little to do with one another, yet the company is attaining diversification from exogenous risk factors to stabilize and provide opportunity for active management of diverse resources. == Fallacy of time diversification == The argument is often made that time reduces variance in a portfolio: a \"time diversification\". A common belief is younger investors should avoid bonds and emphasize stocks, due to the belief investors will have time to recover from any downturns. Yet this belief has flaws, as John Norstad explains: This kind of statement makes the implicit assumption that given enough time good returns will cancel out any possible bad returns. While the basic argument that the standard deviations of the annualized returns decrease as the time horizon increases is true, it is also misleading, and it fatally misses the point, because for an investor concerned with the value of his portfolio at the end of a period of time, it is the total return that matters, not the annualized return. Because of the effects of compounding, the standard deviation of the total return actually increases with time horizon. Thus, if we use the traditional measure of uncertainty as the standard deviation of return over the time period in question, uncertainty increases with time. Three notable contributions to the literature on the fallacy of time diversification have been from Paul Samuelson, Zvi Bodie, and Mark Kritzman. == History == Diversification is mentioned in the Bible, in the book of Ecclesiastes which was written in approximately 935 B.C.: But divide your investments among many places, for you do not know what risks might lie ahead. Diversification is also mentioned in the Talmud. The formula given there is to split one's assets into thirds: one third in business (buying and selling things), one third kept liquid (e.g. gold coins), and one third in land (real estate). This strategy of splitting wealth equally among available options is now known as \"naive diversification\", \"Talmudic diversification\" or \"1/n diversification\", a concept which has earned renewed attention since the year 2000 due to research showing it may offer advantages in some scenarios. Diversification is mentioned in Shakespeare's Merchant of Venice (ca. 1599): My ventures are not in one bottom trusted, Nor to one place; nor is my whole estate Upon the fortune of this present year: Therefore, my merchandise makes me not sad. Modern understanding of diversification dates back to the influential work of economist Harry Markowitz in the 1950s, whose work pioneered modern portfolio theory (see Markowitz model). An earlier precedent for diversification was economist John Maynard Keynes, who managed the endowment of King's College, Cambridge from the 1920s to his 1946 death with a stock-selection strategy similar to what was later called value investing. While diversification in the modern sense was \"not easily available in Keynes's day\" and Keynes typically held a small number of assets compared to later investment theories, he nonetheless is recognized as a pioneer of financial diversification. Keynes came to recognize the importance, \"if possible\", he wrote, of holding assets with \"opposed risks [...] since they are likely to move in opposite directions when there are general fluctuations\" Keynes was a pioneer of \"international diversification\" due to substantial holdings in non-U.K. stocks, up to 75%, and avoiding home bias at a time when university endowments in the U.S. and U.K. were invested almost entirely in domestic assets. == See also == Central limit theorem Coherent risk measure Dollar cost averaging Equity repositioning Financial correlation Outline of finance Modern portfolio theory Systematic risk == References == == Further reading == == External links == Macro-Investment Analysis, Prof. William F. Sharpe, Stanford University An Introduction to Investment Theory, Prof. William N. Goetzmann, Yale School of Management"
+  },
+  "chunks": [
+    {
+      "id": "diversificationfinan_282160a7_c0000",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 578,
+      "content": "In finance, diversification is the process of allocating capital in a way that reduces the exposure to any one particular asset or risk. A common path towards diversification is to reduce risk or volatility by investing in a variety of assets. If asset prices do not change in perfect synchrony, a diversified portfolio will have less variance than the weighted average variance of its constituent assets, and often less volatility than the least volatile of its constituents. Diversification is one of two general techniques for reducing investment risk. The other is hedging.",
+      "char_count": 577,
+      "token_estimate": 144,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0001",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 592,
+      "end_char": 1447,
+      "content": "== Examples == The simplest example of diversification is provided by the proverb \"Don't put all your eggs in one basket\". Dropping the basket will break all the eggs. Placing each egg in a different basket is more diversified. There is more risk of losing one egg, but less risk of losing all of them. On the other hand, having a lot of baskets may increase costs. In finance, an example of an undiversified portfolio is to hold only one stock. This is risky; it is not unusual for a single stock to go down 50% in one year. It is less common for a portfolio of 20 stocks to go down that much, especially if they are selected at random. If the stocks are selected from a variety of industries, company sizes and asset types it is even less likely to experience a 50% drop since it will mitigate any trends in that industry, company class, or asset type.",
+      "char_count": 854,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0002",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 1447,
+      "end_char": 1748,
+      "content": "Since the mid-1970s, it has also been argued that geographic diversification would generate superior risk-adjusted returns for large institutional investors by reducing overall portfolio risk while capturing some of the higher rates of return offered by the emerging markets of Asia and Latin America.",
+      "char_count": 301,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0003",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Return expectations while diversifying ==",
+      "heading_path": "== Return expectations while diversifying ==",
+      "start_char": 1779,
+      "end_char": 2657,
+      "content": "== Return expectations while diversifying == If the prior expectations of the returns on all assets in the portfolio are identical, the expected return on a diversified portfolio will be identical to that on an undiversified portfolio. Some assets will do better than others; but since one does not know in advance which assets will perform better, this fact cannot be exploited in advance. The return on a diversified portfolio can never exceed that of the top-performing investment, and indeed will always be lower than the highest return (unless all returns are identical). Conversely, the diversified portfolio's return will always be higher than that of the worst-performing investment. So by diversifying, one loses the chance of having invested solely in the single asset that comes out best, but one also avoids having invested solely in the asset that comes out worst.",
+      "char_count": 877,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0004",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Return expectations while diversifying ==",
+      "heading_path": "== Return expectations while diversifying ==",
+      "start_char": 2657,
+      "end_char": 2878,
+      "content": "That is the role of diversification: it narrows the range of possible outcomes. Diversification need not either help or hurt expected returns, unless the alternative non-diversified portfolio has a higher expected return.",
+      "char_count": 221,
+      "token_estimate": 55,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0005",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Amount of diversification ==",
+      "heading_path": "== Amount of diversification ==",
+      "start_char": 2866,
+      "end_char": 3800,
+      "content": "== Amount of diversification == There is no magic number of stocks that is diversified versus not. Sometimes quoted is 30, although it can be as low as 10 provided they are carefully chosen. A 1985 book reported that most value from diversification comes from the first 15 or 20 different stocks in a portfolio. More stocks give lower price volatility. Given the advantages of diversification, many experts recommend maximum diversification, also known as \"buying the market portfolio\". Identifying that portfolio is not straightforward. The earliest definition comes from the capital asset pricing model which argues the maximum diversification comes from buying a pro rata share of all available assets. This is the idea underlying index funds. Diversification has no maximum so long as more assets are available. Every equally weighted, uncorrelated asset added to a portfolio can add to that portfolio's measured diversification.",
+      "char_count": 933,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0006",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Amount of diversification ==",
+      "heading_path": "== Amount of diversification ==",
+      "start_char": 3800,
+      "end_char": 4597,
+      "content": "When assets are not uniformly uncorrelated, a weighting approach that puts assets in proportion to their relative correlation can maximize the available diversification. \"Risk parity\" is an alternative idea. This weights assets in inverse proportion to risk, so the portfolio has equal risk in all asset classes. This is justified both on theoretical grounds, and with the pragmatic argument that future risk is much easier to forecast than either future market price or future economic footprint. \"Correlation parity\" is an extension of risk parity, and is the solution whereby each asset in a portfolio has an equal correlation with the portfolio, and is therefore the \"most diversified portfolio\". Risk parity is the special case of correlation parity when all pair-wise correlations are equal.",
+      "char_count": 797,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0007",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Effect of diversification on variance ==",
+      "heading_path": "== Effect of diversification on variance ==",
+      "start_char": 4610,
+      "end_char": 5441,
+      "content": "== Effect of diversification on variance == One simple measure of financial risk is variance of the return on the portfolio. Diversification can lower the variance of a portfolio's return below what it would be if the entire portfolio were invested in the asset with the lowest variance of return, even if the assets' returns are uncorrelated. For example, let asset X have stochastic return x {\\displaystyle x} and asset Y have stochastic return y {\\displaystyle y} , with respective return variances σ x 2 {\\displaystyle \\sigma _{x}^{2}} and σ y 2 {\\displaystyle \\sigma _{y}^{2}} . If the fraction q {\\displaystyle q} of a one-unit (e.g. one-million-dollar) portfolio is placed in asset X and the fraction 1 − q {\\displaystyle 1-q} is placed in Y, the stochastic portfolio return is q x + ( 1 − q ) y {\\displaystyle qx+(1-q)y} .",
+      "char_count": 830,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0008",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Effect of diversification on variance ==",
+      "heading_path": "== Effect of diversification on variance ==",
+      "start_char": 5441,
+      "end_char": 6412,
+      "content": "If x {\\displaystyle x} and y {\\displaystyle y} are uncorrelated, the variance of portfolio return is var ( q x + ( 1 − q ) y ) = q 2 σ x 2 + ( 1 − q ) 2 σ y 2 {\\displaystyle {\\text{var}}(qx+(1-q)y)=q^{2}\\sigma _{x}^{2}+(1-q)^{2}\\sigma _{y}^{2}} . The variance-minimizing value of q {\\displaystyle q} is q = σ y 2 / [ σ x 2 + σ y 2 ] {\\displaystyle q=\\sigma _{y}^{2}/[\\sigma _{x}^{2}+\\sigma _{y}^{2}]} , which is strictly between 0 {\\displaystyle 0} and 1 {\\displaystyle 1} . Using this value of q {\\displaystyle q} in the expression for the variance of portfolio return gives the latter as σ x 2 σ y 2 / [ σ x 2 + σ y 2 ] {\\displaystyle \\sigma _{x}^{2}\\sigma _{y}^{2}/[\\sigma _{x}^{2}+\\sigma _{y}^{2}]} , which is less than what it would be at either of the undiversified values q = 1 {\\displaystyle q=1} and q = 0 {\\displaystyle q=0} (which respectively give portfolio return variance of σ x 2 {\\displaystyle \\sigma _{x}^{2}} and σ y 2 {\\displaystyle \\sigma _{y}^{2}} ).",
+      "char_count": 971,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0009",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Effect of diversification on variance ==",
+      "heading_path": "== Effect of diversification on variance ==",
+      "start_char": 6413,
+      "end_char": 7185,
+      "content": "Note that the favorable effect of diversification on portfolio variance would be enhanced if x {\\displaystyle x} and y {\\displaystyle y} were negatively correlated but diminished (though not eliminated) if they were positively correlated. In general, the presence of more assets in a portfolio leads to greater diversification benefits, as can be seen by considering portfolio variance as a function of n {\\displaystyle n} , the number of assets. For example, if all assets' returns are mutually uncorrelated and have identical variances σ x 2 {\\displaystyle \\sigma _{x}^{2}} , portfolio variance is minimized by holding all assets in the equal proportions 1 / n {\\displaystyle 1/n} . Then the portfolio return's variance equals var [ ( 1 / n ) x 1 + ( 1 / n ) x 2 + . . .",
+      "char_count": 772,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0010",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Effect of diversification on variance ==",
+      "heading_path": "== Effect of diversification on variance ==",
+      "start_char": 7186,
+      "end_char": 7849,
+      "content": "+ ( 1 / n ) x n ] {\\displaystyle {\\text{var}}[(1/n)x_{1}+(1/n)x_{2}+...+(1/n)x_{n}]} = n ( 1 / n 2 ) σ x 2 {\\displaystyle n(1/n^{2})\\sigma _{x}^{2}} = σ x 2 / n {\\displaystyle \\sigma _{x}^{2}/n} , which is monotonically decreasing in n {\\displaystyle n} . The latter analysis can be adapted to show why adding uncorrelated volatile assets to a portfolio, thereby increasing the portfolio's size, is not diversification, which involves subdividing the portfolio among many smaller investments. In the case of adding investments, the portfolio's return is x 1 + x 2 + ⋯ + x n {\\displaystyle x_{1}+x_{2}+\\dots +x_{n}} instead of ( 1 / n ) x 1 + ( 1 / n ) x 2 + . . .",
+      "char_count": 663,
+      "token_estimate": 165,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0011",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Effect of diversification on variance ==",
+      "heading_path": "== Effect of diversification on variance ==",
+      "start_char": 7850,
+      "end_char": 8530,
+      "content": "+ ( 1 / n ) x n , {\\displaystyle (1/n)x_{1}+(1/n)x_{2}+...+(1/n)x_{n},} and the variance of the portfolio return if the assets are uncorrelated is var [ x 1 + x 2 + ⋯ + x n ] = σ x 2 + σ x 2 + ⋯ + σ x 2 = n σ x 2 , {\\displaystyle {\\text{var}}[x_{1}+x_{2}+\\dots +x_{n}]=\\sigma _{x}^{2}+\\sigma _{x}^{2}+\\dots +\\sigma _{x}^{2}=n\\sigma _{x}^{2},} which is increasing in n rather than decreasing. Thus, for example, when an insurance company adds more and more uncorrelated policies to its portfolio, this expansion does not itself represent diversification—the diversification occurs in the spreading of the insurance company's risks over a large number of part-owners of the company.",
+      "char_count": 680,
+      "token_estimate": 170,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0012",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Diversification with correlated returns via an equally weighted portfolio ==",
+      "heading_path": "== Diversification with correlated returns via an equally weighted portfolio ==",
+      "start_char": 8567,
+      "end_char": 9350,
+      "content": "== Diversification with correlated returns via an equally weighted portfolio == The expected return on a portfolio is a weighted average of the expected returns on each individual asset: E [ R P ] = ∑ i = 1 n x i E [ R i ] {\\displaystyle \\mathbb {E} [R_{P}]=\\sum _{i=1}^{n}x_{i}\\mathbb {E} [R_{i}]} where x i {\\displaystyle x_{i}} is the proportion of the investor's total invested wealth in asset i {\\displaystyle i} . The variance of the portfolio return is given by: Var ( R P ) ⏟ ≡ σ P 2 = E [ R P − E [ R P ] ] 2 . {\\displaystyle \\underbrace {{\\text{Var}}(R_{P})} _{\\equiv \\sigma _{P}^{2}}=\\mathbb {E} [R_{P}-\\mathbb {E} [R_{P}]]^{2}.} Inserting in the expression for E [ R P ] {\\displaystyle \\mathbb {E} [R_{P}]} : σ P 2 = E [ ∑ i = 1 n x i R i − ∑ i = 1 n x i E [ R i ] ] 2 .",
+      "char_count": 782,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0013",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Diversification with correlated returns via an equally weighted portfolio ==",
+      "heading_path": "== Diversification with correlated returns via an equally weighted portfolio ==",
+      "start_char": 9350,
+      "end_char": 10309,
+      "content": "{\\displaystyle \\sigma _{P}^{2}=\\mathbb {E} \\left[\\sum _{i=1}^{n}x_{i}R_{i}-\\sum _{i=1}^{n}x_{i}\\mathbb {E} [R_{i}]\\right]^{2}.} Rearranging: σ P 2 = E [ ∑ i = 1 n x i ( R i − E [ R i ] ) ] 2 {\\displaystyle \\sigma _{P}^{2}=\\mathbb {E} \\left[\\sum _{i=1}^{n}x_{i}(R_{i}-\\mathbb {E} [R_{i}])\\right]^{2}} σ P 2 = E [ ∑ i = 1 n ∑ j = 1 n x i x j ( R i − E [ R i ] ) ( R j − E [ R j ] ) ] {\\displaystyle \\sigma _{P}^{2}=\\mathbb {E} \\left[\\sum _{i=1}^{n}\\sum _{j=1}^{n}x_{i}x_{j}(R_{i}-\\mathbb {E} [R_{i}])(R_{j}-\\mathbb {E} [R_{j}])\\right]} σ P 2 = E [ ∑ i = 1 n x i 2 ( R i − E [ R i ] ) 2 + ∑ i = 1 n ∑ j = 1 , i ≠ j n x i x j ( R i − E [ R i ] ) ( R j − E [ R j ] ) ] {\\displaystyle \\sigma _{P}^{2}=\\mathbb {E} \\left[\\sum _{i=1}^{n}x_{i}^{2}(R_{i}-\\mathbb {E} [R_{i}])^{2}+\\sum _{i=1}^{n}\\sum _{j=1,i\\neq j}^{n}x_{i}x_{j}(R_{i}-\\mathbb {E} [R_{i}])(R_{j}-\\mathbb {E} [R_{j}])\\right]} σ P 2 = ∑ i = 1 n x i 2 E [ R i − E [ R i ] ] 2 ⏟ ≡ σ i 2 + ∑ i = 1 n ∑ j = 1 ,",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0014",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Diversification with correlated returns via an equally weighted portfolio ==",
+      "heading_path": "== Diversification with correlated returns via an equally weighted portfolio ==",
+      "start_char": 10310,
+      "end_char": 11228,
+      "content": "i ≠ j n x i x j E [ ( R i − E [ R i ] ) ( R j − E [ R j ] ) ] ⏟ ≡ σ i j {\\displaystyle \\sigma _{P}^{2}=\\sum _{i=1}^{n}x_{i}^{2}\\underbrace {\\mathbb {E} \\left[R_{i}-\\mathbb {E} [R_{i}]\\right]^{2}} _{\\equiv \\sigma _{i}^{2}}+\\sum _{i=1}^{n}\\sum _{j=1,i\\neq j}^{n}x_{i}x_{j}\\underbrace {\\mathbb {E} \\left[(R_{i}-\\mathbb {E} [R_{i}])(R_{j}-\\mathbb {E} [R_{j}])\\right]} _{\\equiv \\sigma _{ij}}} σ P 2 = ∑ i = 1 n x i 2 σ i 2 + ∑ i = 1 n ∑ j = 1 , i ≠ j n x i x j σ i j {\\displaystyle \\sigma _{P}^{2}=\\sum _{i=1}^{n}x_{i}^{2}\\sigma _{i}^{2}+\\sum _{i=1}^{n}\\sum _{j=1,i\\neq j}^{n}x_{i}x_{j}\\sigma _{ij}} where σ i 2 {\\displaystyle \\sigma _{i}^{2}} is the variance on asset i {\\displaystyle i} and σ i j {\\displaystyle \\sigma _{ij}} is the covariance between assets i {\\displaystyle i} and j {\\displaystyle j} . In an equally weighted portfolio, x i = x j = 1 n , ∀ i , j {\\displaystyle x_{i}=x_{j}={\\frac {1}{n}},\\forall i,j} .",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0015",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Diversification with correlated returns via an equally weighted portfolio ==",
+      "heading_path": "== Diversification with correlated returns via an equally weighted portfolio ==",
+      "start_char": 11229,
+      "end_char": 12214,
+      "content": "The portfolio variance then becomes: σ P 2 = 1 n 2 n σ ¯ i 2 + n ( n − 1 ) 1 n 1 n σ ¯ i j {\\displaystyle \\sigma _{P}^{2}={\\frac {1}{n^{2}}}\\ {n}{\\bar {\\sigma }}_{i}^{2}+n(n-1){\\frac {1}{n}}{\\frac {1}{n}}{\\bar {\\sigma }}_{ij}} where σ ¯ i j {\\displaystyle {\\bar {\\sigma }}_{ij}} is the average of the covariances σ i j {\\displaystyle \\sigma _{ij}} for i ≠ j {\\displaystyle i\\neq j} and σ ¯ i 2 {\\displaystyle {\\bar {\\sigma }}_{i}^{2}} is the average of the variances. Simplifying, we obtain σ P 2 = 1 n σ ¯ i 2 + n − 1 n σ ¯ i j . {\\displaystyle \\sigma _{P}^{2}={\\frac {1}{n}}{\\bar {\\sigma }}_{i}^{2}+{\\frac {n-1}{n}}{\\bar {\\sigma }}_{ij}.} As the number of assets grows we get the asymptotic formula: lim n → ∞ σ P 2 = σ ¯ i j . {\\displaystyle \\lim _{n\\rightarrow \\infty }\\sigma _{P}^{2}={\\bar {\\sigma }}_{ij}.} Thus, in an equally weighted portfolio, the portfolio variance tends to the average of covariances between securities as the number of securities becomes arbitrarily large.",
+      "char_count": 985,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0016",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Diversifiable and non-diversifiable risk ==",
+      "heading_path": "== Diversifiable and non-diversifiable risk ==",
+      "start_char": 12182,
+      "end_char": 12962,
+      "content": "== Diversifiable and non-diversifiable risk == The capital asset pricing model introduced the concepts of diversifiable and non-diversifiable risk. Synonyms for diversifiable risk are idiosyncratic risk, unsystematic risk, and security-specific risk. Synonyms for non-diversifiable risk are systematic risk, beta risk and market risk. If one buys all the stocks in the S&P 500 one is obviously exposed only to movements in that index. If one buys a single stock in the S&P 500, one is exposed both to index movements and movements in the stock based on its underlying company. The first risk is called \"non-diversifiable\", because it exists however many S&P 500 stocks are bought. The second risk is called \"diversifiable\", because it can be reduced by diversifying among stocks.",
+      "char_count": 779,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0017",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Diversifiable and non-diversifiable risk ==",
+      "heading_path": "== Diversifiable and non-diversifiable risk ==",
+      "start_char": 12962,
+      "end_char": 13493,
+      "content": "In the presence of per-asset investment fees, there is also the possibility of overdiversifying to the point that the portfolio's performance will suffer because the fees outweigh the gains from diversification. The capital asset pricing model argues that investors should only be compensated for non-diversifiable risk. Other financial models allow for multiple sources of non-diversifiable risk, but also insist that diversifiable risk should not carry any extra expected return. Still other models do not accept this contention.",
+      "char_count": 531,
+      "token_estimate": 132,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0018",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== An empirical example relating diversification to risk reduction ==",
+      "heading_path": "== An empirical example relating diversification to risk reduction ==",
+      "start_char": 13517,
+      "end_char": 14073,
+      "content": "== An empirical example relating diversification to risk reduction == In 1977 Edwin Elton and Martin Gruber worked out an empirical example of the gains from diversification. Their approach was to consider a population of 3,290 securities available for possible inclusion in a portfolio, and to consider the average risk over all possible randomly chosen n-asset portfolios with equal amounts held in each included asset, for various values of n. Their results are summarized in the following table. The result for n=30 is close to n=1,000, and even four stocks provide most of the reduction in risk compared with one stock.",
+      "char_count": 624,
+      "token_estimate": 156,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0019",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Corporate diversification strategies ==",
+      "heading_path": "== Corporate diversification strategies ==",
+      "start_char": 14115,
+      "end_char": 14723,
+      "content": "== Corporate diversification strategies == In corporate portfolio models, diversification is thought of as being vertical or horizontal. Horizontal diversification is thought of as expanding a product line or acquiring related companies. Vertical diversification is synonymous with integrating the supply chain or amalgamating distributions channels. Non-incremental diversification is a strategy followed by conglomerates, where the individual business lines have little to do with one another, yet the company is attaining diversification from exogenous risk factors to stabilize and provide opportunity for active management of diverse resources.",
+      "char_count": 649,
+      "token_estimate": 162,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0020",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Fallacy of time diversification ==",
+      "heading_path": "== Fallacy of time diversification ==",
+      "start_char": 14760,
+      "end_char": 15696,
+      "content": "== Fallacy of time diversification == The argument is often made that time reduces variance in a portfolio: a \"time diversification\". A common belief is younger investors should avoid bonds and emphasize stocks, due to the belief investors will have time to recover from any downturns. Yet this belief has flaws, as John Norstad explains: This kind of statement makes the implicit assumption that given enough time good returns will cancel out any possible bad returns. While the basic argument that the standard deviations of the annualized returns decrease as the time horizon increases is true, it is also misleading, and it fatally misses the point, because for an investor concerned with the value of his portfolio at the end of a period of time, it is the total return that matters, not the annualized return. Because of the effects of compounding, the standard deviation of the total return actually increases with time horizon.",
+      "char_count": 935,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0021",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== Fallacy of time diversification ==",
+      "heading_path": "== Fallacy of time diversification ==",
+      "start_char": 15696,
+      "end_char": 15999,
+      "content": "Thus, if we use the traditional measure of uncertainty as the standard deviation of return over the time period in question, uncertainty increases with time. Three notable contributions to the literature on the fallacy of time diversification have been from Paul Samuelson, Zvi Bodie, and Mark Kritzman.",
+      "char_count": 303,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0022",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 15976,
+      "end_char": 16803,
+      "content": "== History == Diversification is mentioned in the Bible, in the book of Ecclesiastes which was written in approximately 935 B.C.: But divide your investments among many places, for you do not know what risks might lie ahead. Diversification is also mentioned in the Talmud. The formula given there is to split one's assets into thirds: one third in business (buying and selling things), one third kept liquid (e.g. gold coins), and one third in land (real estate). This strategy of splitting wealth equally among available options is now known as \"naive diversification\", \"Talmudic diversification\" or \"1/n diversification\", a concept which has earned renewed attention since the year 2000 due to research showing it may offer advantages in some scenarios. Diversification is mentioned in Shakespeare's Merchant of Venice (ca.",
+      "char_count": 826,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0023",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 16803,
+      "end_char": 17655,
+      "content": "1599): My ventures are not in one bottom trusted, Nor to one place; nor is my whole estate Upon the fortune of this present year: Therefore, my merchandise makes me not sad. Modern understanding of diversification dates back to the influential work of economist Harry Markowitz in the 1950s, whose work pioneered modern portfolio theory (see Markowitz model). An earlier precedent for diversification was economist John Maynard Keynes, who managed the endowment of King's College, Cambridge from the 1920s to his 1946 death with a stock-selection strategy similar to what was later called value investing. While diversification in the modern sense was \"not easily available in Keynes's day\" and Keynes typically held a small number of assets compared to later investment theories, he nonetheless is recognized as a pioneer of financial diversification.",
+      "char_count": 852,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "diversificationfinan_282160a7_c0024",
+      "article_id": "diversificationfinan_282160a7",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 17656,
+      "end_char": 18101,
+      "content": "Keynes came to recognize the importance, \"if possible\", he wrote, of holding assets with \"opposed risks [...] since they are likely to move in opposite directions when there are general fluctuations\" Keynes was a pioneer of \"international diversification\" due to substantial holdings in non-U.K. stocks, up to 75%, and avoiding home bias at a time when university endowments in the U.S. and U.K. were invested almost entirely in domestic assets.",
+      "char_count": 445,
+      "token_estimate": 111,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "In an equally weighted portfolio, what does the portfolio variance approach as the number of securities becomes arbitrarily large?",
+        "answer": "As the number of securities in an equally weighted portfolio becomes arbitrarily large, the portfolio variance tends to the average of the covariances between the securities.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0015"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0015"
+        ]
+      },
+      {
+        "question": "For a portfolio with two uncorrelated assets, x and y, what is the formula for the variance-minimizing value of the proportion q?",
+        "answer": "The variance-minimizing value of q is q = σ_y^2 / [σ_x^2 + σ_y^2].",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0008"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0008"
+        ]
+      },
+      {
+        "question": "According to John Norstad, why is the argument that the standard deviation of annualized returns decreases over time misleading for an investor?",
+        "answer": "The argument is misleading because an investor is primarily concerned with the total return and value of their portfolio at the end of a period, not the annualized return. Due to the effects of compounding, the standard deviation of the total return actually increases with the time horizon.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0020"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0020"
+        ]
+      },
+      {
+        "question": "How does the example of holding a portfolio of 20 stocks, instead of just one, illustrate the financial principle of diversification?",
+        "answer": "Holding a single stock represents an undiversified portfolio with high exposure to the risk of one particular asset. In contrast, a portfolio of 20 stocks, especially if selected from various industries, demonstrates diversification by allocating capital across a variety of assets. This reduces overall risk and volatility because the asset prices are unlikely to change in perfect synchrony, making it less common for the entire portfolio to suffer a large loss compared to a single stock.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0000",
+          "diversificationfinan_282160a7_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0001",
+          "diversificationfinan_282160a7_c0000"
+        ]
+      },
+      {
+        "question": "How does the argument for geographic diversification into emerging markets reconcile with the general principle that a diversified portfolio's return will be lower than the top-performing investment?",
+        "answer": "The general principle of diversification states that a portfolio's return will be lower than the single best-performing asset, as it averages out returns. However, the specific argument for geographic diversification since the mid-1970s suggests that by including assets from high-growth emerging markets in Asia and Latin America, investors could generate superior risk-adjusted returns. This is achieved by reducing overall portfolio risk while simultaneously capturing some of the higher rates of return offered by these specific markets, thus enhancing the portfolio's performance beyond a simple average of assets with identical return expectations.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0002",
+          "diversificationfinan_282160a7_c0003"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0003",
+          "diversificationfinan_282160a7_c0002"
+        ]
+      },
+      {
+        "question": "What is the primary role of diversification, and what are some strategies mentioned for achieving maximum diversification?",
+        "answer": "The primary role of diversification is to narrow the range of possible outcomes for a portfolio, though it doesn't necessarily impact expected returns. One strategy for maximum diversification is \"buying the market portfolio,\" which involves purchasing a pro rata share of all available assets, an idea that underlies index funds. When assets are not uniformly uncorrelated, alternative strategies include \"risk parity,\" which weights assets in inverse proportion to their risk, and \"correlation parity,\" where each asset has an equal correlation with the portfolio.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0004",
+          "diversificationfinan_282160a7_c0005",
+          "diversificationfinan_282160a7_c0006"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0004",
+          "diversificationfinan_282160a7_c0005",
+          "diversificationfinan_282160a7_c0006"
+        ]
+      },
+      {
+        "question": "What are the different financial diversification strategies discussed, including considerations for asset type and geography?",
+        "answer": "One strategy for financial diversification is to hold a portfolio of multiple stocks, ideally selected from a variety of industries, company sizes, and asset types to mitigate risks associated with any single category. Another strategy that has been used since the mid-1970s is geographic diversification, which involves investing in emerging markets like those in Asia and Latin America to reduce overall portfolio risk while also capturing higher potential rates of return.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0001",
+          "diversificationfinan_282160a7_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0001",
+          "diversificationfinan_282160a7_c0002"
+        ]
+      },
+      {
+        "question": "How does diversification achieve its primary role of narrowing the range of possible outcomes?",
+        "answer": "Diversification narrows the range of possible outcomes by ensuring the portfolio's return will always be higher than that of the worst-performing investment and lower than that of the top-performing one. By doing this, an investor loses the chance of having invested solely in the single best asset, but also avoids the risk of having invested only in the worst-performing asset.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0003",
+          "diversificationfinan_282160a7_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0004",
+          "diversificationfinan_282160a7_c0003"
+        ]
+      },
+      {
+        "question": "What are the different approaches described for achieving maximum portfolio diversification?",
+        "answer": "One approach for maximum diversification is to \"buy the market portfolio,\" which involves purchasing a pro rata share of all available assets, a concept that forms the basis for index funds. An alternative approach is \"Correlation parity,\" which creates the \"most diversified portfolio\" by ensuring each asset has an equal correlation with the portfolio. A related strategy, \"Risk parity,\" weights assets in inverse proportion to their risk.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0005",
+          "diversificationfinan_282160a7_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0006",
+          "diversificationfinan_282160a7_c0005"
+        ]
+      },
+      {
+        "question": "Explain how diversification reduces portfolio variance in both a two-asset portfolio with uncorrelated returns and a multi-asset portfolio with 'n' identical, uncorrelated assets.",
+        "answer": "Diversification reduces portfolio variance by combining assets. In a two-asset portfolio with uncorrelated returns (X and Y), variance can be minimized by holding a specific fraction 'q' of asset X and '1-q' of asset Y. This optimal allocation results in a portfolio variance lower than the variance of either individual asset held alone. The principle is enhanced with more assets; for a portfolio of 'n' mutually uncorrelated assets with identical variances, holding each in an equal proportion (1/n) minimizes variance. The resulting portfolio variance is the individual asset variance divided by 'n' (σ_x^2 / n), which shows that the portfolio's variance decreases as the number of assets increases.",
+        "related_chunk_ids": [
+          "diversificationfinan_282160a7_c0007",
+          "diversificationfinan_282160a7_c0008",
+          "diversificationfinan_282160a7_c0009",
+          "diversificationfinan_282160a7_c0010"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "diversificationfinan_282160a7_c0009",
+          "diversificationfinan_282160a7_c0007",
+          "diversificationfinan_282160a7_c0008",
+          "diversificationfinan_282160a7_c0010"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:24.752Z",
+    "content_format": "markdown",
+    "total_chunks": 25,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

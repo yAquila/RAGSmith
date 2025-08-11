@@ -1,0 +1,326 @@
+{
+  "article": {
+    "id": "queueabstractdatatyp_7f3d9f3f",
+    "title": "Queue (abstract data type)",
+    "url": "https://en.wikipedia.org/wiki/Queue_(abstract_data_type)",
+    "lang": "en",
+    "created_at": "2025-07-30T10:21:06.472169",
+    "content": "---\nid: queueabstractdatatyp_7f3d9f3f\nurl: https://en.wikipedia.org/wiki/Queue_(abstract_data_type)\ntitle: Queue (abstract data type)\nlang: en\ncreated_at: '2025-07-30T10:17:51.240448'\nchecksum: fdffb0a0f116a50f3a4d2bd79300ad8f41d1980a3ad4103a0d40a34c312dd3ce\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2174\n  char_count: 12219\n  num_chunks: 15\n  original_chunks: 21\n  filtered_out: 6\n  num_sections: 0\n---\nIn computer science, a queue is a collection of entities that are maintained in a sequence and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end of the sequence. By convention, the end of the sequence at which elements are added is called the back, tail, or rear of the queue, and the end at which elements are removed is called the head or front of the queue, analogously to the words used when people line up to wait for goods or services. The operation of adding an element to the rear of the queue is known as enqueue, and the operation of removing an element from the front is known as dequeue. Other operations may also be allowed, often including a peek or front operation that returns the value of the next element to be dequeued without dequeuing it. The operations of a queue make it a first-in-first-out (FIFO) data structure. In a FIFO data structure, the first element added to the queue will be the first one to be removed. This is equivalent to the requirement that once a new element is added, all elements that were added before have to be removed before the new element can be removed. A queue is an example of a linear data structure, or more abstractly a sequential collection. Queues are common in computer programs, where they are implemented as data structures coupled with access routines, as an abstract data structure or in object-oriented languages as classes. A queue has two ends, the top, which is the only position at which the push operation may occur, and the bottom, which is the only position at which the pop operation may occur. A queue may be implemented as circular buffers and linked lists, or by using both the stack pointer and the base pointer. Queues provide services in computer science, transport, and operations research where various entities such as data, objects, persons, or events are stored and held to be processed later. In these contexts, the queue performs the function of a buffer. Another usage of queues is in the implementation of breadth-first search. == Queue implementation == Theoretically, one characteristic of a queue is that it does not have a specific capacity. Regardless of how many elements are already contained, a new element can always be added. It can also be empty, at which point removing an element will be impossible until a new element has been added again. Fixed-length arrays are limited in capacity, but it is not true that items need to be copied towards the head of the queue. The simple trick of turning the array into a closed circle and letting the head and tail drift around endlessly in that circle makes it unnecessary to ever move items stored in the array. If n is the size of the array, then computing indices modulo n will turn the array into a circle. This is still the conceptually simplest way to construct a queue in a high-level language, but it does admittedly slow things down a little, because the array indices must be compared to zero and the array size, which is comparable to the time taken to check whether an array index is out of bounds, which some languages do, but this will certainly be the method of choice for a quick and dirty implementation, or for any high-level language that does not have pointer syntax. The array size must be declared ahead of time, but some implementations simply double the declared array size when overflow occurs. Most modern languages with objects or pointers can implement or come with libraries for dynamic lists. Such data structures may have not specified a fixed capacity limit besides memory constraints. Queue overflow results from trying to add an element onto a full queue and queue underflow happens when trying to remove an element from an empty queue. A bounded queue is a queue limited to a fixed number of items. There are several efficient implementations of FIFO queues. An efficient implementation is one that can perform the operations—en-queuing and de-queuing—in O(1) time. Linked list A doubly linked list has O(1) insertion and deletion at both ends, so it is a natural choice for queues. A regular singly linked list only has efficient insertion and deletion at one end. However, a small modification—keeping a pointer to the last node in addition to the first one—will enable it to implement an efficient queue. A deque implemented using a modified dynamic array === Queues and programming languages === Queues may be implemented as a separate data type, or maybe considered a special case of a double-ended queue (deque) and not implemented separately. For example, Perl and Ruby allow pushing and popping an array from both ends, so one can use push and shift functions to enqueue and dequeue a list (or, in reverse, one can use unshift and pop), although in some cases these operations are not efficient. C++'s Standard Template Library provides a \"queue\" templated class which is restricted to only push/pop operations. Since J2SE5.0, Java's library contains a Queue interface that specifies queue operations; implementing classes include LinkedList and (since J2SE 1.6) ArrayDeque. PHP has an SplQueue class and third-party libraries like beanstalk'd and Gearman. === Example === A simple queue implemented in JavaScript: == Purely functional implementation == Queues can also be implemented as a purely functional data structure. There are two implementations. The first one only achieves O ( 1 ) {\\displaystyle O(1)} per operation on average. That is, the amortized time is O ( 1 ) {\\displaystyle O(1)} , but individual operations can take O ( n ) {\\displaystyle O(n)} where n is the number of elements in the queue. The second implementation is called a real-time queue and it allows the queue to be persistent with operations in O(1) worst-case time. It is a more complex implementation and requires lazy lists with memoization. === Amortized queue === This queue's data is stored in two singly-linked lists named f {\\displaystyle f} and r {\\displaystyle r} . The list f {\\displaystyle f} holds the front part of the queue. The list r {\\displaystyle r} holds the remaining elements (a.k.a., the rear of the queue) in reverse order. It is easy to insert into the front of the queue by adding a node at the head of f {\\displaystyle f} . And, if r {\\displaystyle r} is not empty, it is easy to remove from the end of the queue by removing the node at the head of r {\\displaystyle r} . When r {\\displaystyle r} is empty, the list f {\\displaystyle f} is reversed and assigned to r {\\displaystyle r} and then the head of r {\\displaystyle r} is removed. The insert (\"enqueue\") always takes O ( 1 ) {\\displaystyle O(1)} time. The removal (\"dequeue\") takes O ( 1 ) {\\displaystyle O(1)} when the list r {\\displaystyle r} is not empty. When r {\\displaystyle r} is empty, the reverse takes O ( n ) {\\displaystyle O(n)} where n {\\displaystyle n} is the number of elements in f {\\displaystyle f} . But, we can say it is O ( 1 ) {\\displaystyle O(1)} amortized time, because every element in f {\\displaystyle f} had to be inserted and we can assign a constant cost for each element in the reverse to when it was inserted. === Real-time queue === The real-time queue achieves O ( 1 ) {\\displaystyle O(1)} time for all operations, without amortization. This discussion will be technical, so recall that, for l {\\displaystyle l} a list, | l | {\\displaystyle |l|} denotes its length, that NIL represents an empty list and CONS ⁡ ( h , t ) {\\displaystyle \\operatorname {CONS} (h,t)} represents the list whose head is h and whose tail is t. The data structure used to implement our queues consists of three singly-linked lists ( f , r , s ) {\\displaystyle (f,r,s)} where f is the front of the queue and r is the rear of the queue in reverse order. The invariant of the structure is that s is the rear of f without its | r | {\\displaystyle |r|} first elements, that is | s | = | f | − | r | {\\displaystyle |s|=|f|-|r|} . The tail of the queue ( CONS ⁡ ( x , f ) , r , s ) {\\displaystyle (\\operatorname {CONS} (x,f),r,s)} is then almost ( f , r , s ) {\\displaystyle (f,r,s)} and inserting an element x to ( f , r , s ) {\\displaystyle (f,r,s)} is almost ( f , CONS ⁡ ( x , r ) , s ) {\\displaystyle (f,\\operatorname {CONS} (x,r),s)} . It is said almost, because in both of those results, | s | = | f | − | r | + 1 {\\displaystyle |s|=|f|-|r|+1} . An auxiliary function a u x {\\displaystyle aux} must then be called for the invariant to be satisfied. Two cases must be considered, depending on whether s {\\displaystyle s} is the empty list, in which case | r | = | f | + 1 {\\displaystyle |r|=|f|+1} , or not. The formal definition is aux ⁡ ( f , r , Cons ⁡ ( _ , s ) ) = ( f , r , s ) {\\displaystyle \\operatorname {aux} (f,r,\\operatorname {Cons} (\\_,s))=(f,r,s)} and aux ⁡ ( f , r , NIL ) = ( f ′ , NIL , f ′ ) {\\displaystyle \\operatorname {aux} (f,r,{\\text{NIL}})=(f',{\\text{NIL}},f')} where f ′ {\\displaystyle f'} is f followed by r reversed. Let us call reverse ⁡ ( f , r ) {\\displaystyle \\operatorname {reverse} (f,r)} the function which returns f followed by r reversed. Let us furthermore assume that | r | = | f | + 1 {\\displaystyle |r|=|f|+1} , since it is the case when this function is called. More precisely, we define a lazy function rotate ⁡ ( f , r , a ) {\\displaystyle \\operatorname {rotate} (f,r,a)} which takes as input three lists such that | r | = | f | + 1 {\\displaystyle |r|=|f|+1} , and return the concatenation of f, of r reversed and of a. Then reverse ⁡ ( f , r ) = rotate ⁡ ( f , r , NIL ) {\\displaystyle \\operatorname {reverse} (f,r)=\\operatorname {rotate} (f,r,{\\text{NIL}})} . The inductive definition of rotate is rotate ⁡ ( NIL , Cons ⁡ ( y , NIL ) , a ) = Cons ⁡ ( y , a ) {\\displaystyle \\operatorname {rotate} ({\\text{NIL}},\\operatorname {Cons} (y,{\\text{NIL}}),a)=\\operatorname {Cons} (y,a)} and rotate ⁡ ( CONS ⁡ ( x , f ) , CONS ⁡ ( y , r ) , a ) = Cons ⁡ ( x , rotate ⁡ ( f , r , CONS ⁡ ( y , a ) ) ) {\\displaystyle \\operatorname {rotate} (\\operatorname {CONS} (x,f),\\operatorname {CONS} (y,r),a)=\\operatorname {Cons} (x,\\operatorname {rotate} (f,r,\\operatorname {CONS} (y,a)))} . Its running time is O ( r ) {\\displaystyle O(r)} , but, since lazy evaluation is used, the computation is delayed until the results are forced by the computation. The list s in the data structure has two purposes. This list serves as a counter for | f | − | r | {\\displaystyle |f|-|r|} , indeed, | f | = | r | {\\displaystyle |f|=|r|} if and only if s is the empty list. This counter allows us to ensure that the rear is never longer than the front list. Furthermore, using s, which is a tail of f, forces the computation of a part of the (lazy) list f during each tail and insert operation. Therefore, when | f | = | r | {\\displaystyle |f|=|r|} , the list f is totally forced. If it was not the case, the internal representation of f could be some append of append of... of append, and forcing would not be a constant time operation anymore. == See also == Event loop - events are stored in a queue Message queue Priority queue Queuing theory Stack (abstract data type) – the \"opposite\" of a queue: LIFO (Last In First Out) == References == === General references === This article incorporates public domain material from Paul E. Black. \"Bounded queue\". Dictionary of Algorithms and Data Structures. NIST. == Further reading == Donald Knuth. The Art of Computer Programming, Volume 1: Fundamental Algorithms, Third Edition. Addison-Wesley, 1997. ISBN 0-201-89683-4. Section 2.2.1: Stacks, Queues, and Dequeues, pp. 238–243. Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. Introduction to Algorithms, Second Edition. MIT Press and McGraw-Hill, 2001. ISBN 0-262-03293-7. Section 10.1: Stacks and queues, pp. 200–204. William Ford, William Topp. Data Structures with C++ and STL, Second Edition. Prentice Hall, 2002. ISBN 0-13-085850-1. Chapter 8: Queues and Priority Queues, pp. 386–390. Adam Drozdek. Data Structures and Algorithms in C++, Third Edition. Thomson Course Technology, 2005. ISBN 0-534--0. Chapter 4: Stacks and Queues, pp. 137–169. == External links == STL Quick Reference VBScript implementation of stack, queue, deque, and Red-Black Tree"
+  },
+  "chunks": [
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0000",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 906,
+      "content": "In computer science, a queue is a collection of entities that are maintained in a sequence and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end of the sequence. By convention, the end of the sequence at which elements are added is called the back, tail, or rear of the queue, and the end at which elements are removed is called the head or front of the queue, analogously to the words used when people line up to wait for goods or services. The operation of adding an element to the rear of the queue is known as enqueue, and the operation of removing an element from the front is known as dequeue. Other operations may also be allowed, often including a peek or front operation that returns the value of the next element to be dequeued without dequeuing it. The operations of a queue make it a first-in-first-out (FIFO) data structure.",
+      "char_count": 905,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0001",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 906,
+      "end_char": 1755,
+      "content": "In a FIFO data structure, the first element added to the queue will be the first one to be removed. This is equivalent to the requirement that once a new element is added, all elements that were added before have to be removed before the new element can be removed. A queue is an example of a linear data structure, or more abstractly a sequential collection. Queues are common in computer programs, where they are implemented as data structures coupled with access routines, as an abstract data structure or in object-oriented languages as classes. A queue has two ends, the top, which is the only position at which the push operation may occur, and the bottom, which is the only position at which the pop operation may occur. A queue may be implemented as circular buffers and linked lists, or by using both the stack pointer and the base pointer.",
+      "char_count": 849,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0002",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1756,
+      "end_char": 2081,
+      "content": "Queues provide services in computer science, transport, and operations research where various entities such as data, objects, persons, or events are stored and held to be processed later. In these contexts, the queue performs the function of a buffer. Another usage of queues is in the implementation of breadth-first search.",
+      "char_count": 325,
+      "token_estimate": 81,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0003",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== Queue implementation ==",
+      "heading_path": "== Queue implementation ==",
+      "start_char": 2108,
+      "end_char": 2844,
+      "content": "== Queue implementation == Theoretically, one characteristic of a queue is that it does not have a specific capacity. Regardless of how many elements are already contained, a new element can always be added. It can also be empty, at which point removing an element will be impossible until a new element has been added again. Fixed-length arrays are limited in capacity, but it is not true that items need to be copied towards the head of the queue. The simple trick of turning the array into a closed circle and letting the head and tail drift around endlessly in that circle makes it unnecessary to ever move items stored in the array. If n is the size of the array, then computing indices modulo n will turn the array into a circle.",
+      "char_count": 735,
+      "token_estimate": 183,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0004",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== Queue implementation ==",
+      "heading_path": "== Queue implementation ==",
+      "start_char": 2844,
+      "end_char": 3803,
+      "content": "This is still the conceptually simplest way to construct a queue in a high-level language, but it does admittedly slow things down a little, because the array indices must be compared to zero and the array size, which is comparable to the time taken to check whether an array index is out of bounds, which some languages do, but this will certainly be the method of choice for a quick and dirty implementation, or for any high-level language that does not have pointer syntax. The array size must be declared ahead of time, but some implementations simply double the declared array size when overflow occurs. Most modern languages with objects or pointers can implement or come with libraries for dynamic lists. Such data structures may have not specified a fixed capacity limit besides memory constraints. Queue overflow results from trying to add an element onto a full queue and queue underflow happens when trying to remove an element from an empty queue.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0005",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== Queue implementation ==",
+      "heading_path": "== Queue implementation ==",
+      "start_char": 3804,
+      "end_char": 4426,
+      "content": "A bounded queue is a queue limited to a fixed number of items. There are several efficient implementations of FIFO queues. An efficient implementation is one that can perform the operations—en-queuing and de-queuing—in O(1) time. Linked list A doubly linked list has O(1) insertion and deletion at both ends, so it is a natural choice for queues. A regular singly linked list only has efficient insertion and deletion at one end. However, a small modification—keeping a pointer to the last node in addition to the first one—will enable it to implement an efficient queue. A deque implemented using a modified dynamic array",
+      "char_count": 622,
+      "token_estimate": 155,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0006",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== = Queues and programming languages ==",
+      "heading_path": "== = Queues and programming languages ==",
+      "start_char": 4441,
+      "end_char": 5208,
+      "content": "== = Queues and programming languages === Queues may be implemented as a separate data type, or maybe considered a special case of a double-ended queue (deque) and not implemented separately. For example, Perl and Ruby allow pushing and popping an array from both ends, so one can use push and shift functions to enqueue and dequeue a list (or, in reverse, one can use unshift and pop), although in some cases these operations are not efficient. C++'s Standard Template Library provides a \"queue\" templated class which is restricted to only push/pop operations. Since J2SE5.0, Java's library contains a Queue interface that specifies queue operations; implementing classes include LinkedList and (since J2SE 1.6) ArrayDeque. PHP has an SplQueue class and third-party libraries like beanstalk'd and Gearman.",
+      "char_count": 806,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0007",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== Purely functional implementation ==",
+      "heading_path": "== Purely functional implementation ==",
+      "start_char": 5305,
+      "end_char": 5878,
+      "content": "== Purely functional implementation == Queues can also be implemented as a purely functional data structure. There are two implementations. The first one only achieves O ( 1 ) {\\displaystyle O(1)} per operation on average. That is, the amortized time is O ( 1 ) {\\displaystyle O(1)} , but individual operations can take O ( n ) {\\displaystyle O(n)} where n is the number of elements in the queue. The second implementation is called a real-time queue and it allows the queue to be persistent with operations in O(1) worst-case time. It is a more complex implementation and requires lazy lists with memoization.",
+      "char_count": 610,
+      "token_estimate": 152,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0008",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== = Amortized queue ==",
+      "heading_path": "== = Amortized queue ==",
+      "start_char": 5901,
+      "end_char": 6798,
+      "content": "== = Amortized queue === This queue's data is stored in two singly-linked lists named f {\\displaystyle f} and r {\\displaystyle r} . The list f {\\displaystyle f} holds the front part of the queue. The list r {\\displaystyle r} holds the remaining elements (a.k.a., the rear of the queue) in reverse order. It is easy to insert into the front of the queue by adding a node at the head of f {\\displaystyle f} . And, if r {\\displaystyle r} is not empty, it is easy to remove from the end of the queue by removing the node at the head of r {\\displaystyle r} . When r {\\displaystyle r} is empty, the list f {\\displaystyle f} is reversed and assigned to r {\\displaystyle r} and then the head of r {\\displaystyle r} is removed. The insert (\"enqueue\") always takes O ( 1 ) {\\displaystyle O(1)} time. The removal (\"dequeue\") takes O ( 1 ) {\\displaystyle O(1)} when the list r {\\displaystyle r} is not empty.",
+      "char_count": 896,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0009",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== = Amortized queue ==",
+      "heading_path": "== = Amortized queue ==",
+      "start_char": 6798,
+      "end_char": 7178,
+      "content": "When r {\\displaystyle r} is empty, the reverse takes O ( n ) {\\displaystyle O(n)} where n {\\displaystyle n} is the number of elements in f {\\displaystyle f} . But, we can say it is O ( 1 ) {\\displaystyle O(1)} amortized time, because every element in f {\\displaystyle f} had to be inserted and we can assign a constant cost for each element in the reverse to when it was inserted.",
+      "char_count": 380,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0010",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== = Real-time queue ==",
+      "heading_path": "== = Real-time queue ==",
+      "start_char": 7179,
+      "end_char": 7972,
+      "content": "== = Real-time queue === The real-time queue achieves O ( 1 ) {\\displaystyle O(1)} time for all operations, without amortization. This discussion will be technical, so recall that, for l {\\displaystyle l} a list, | l | {\\displaystyle |l|} denotes its length, that NIL represents an empty list and CONS ⁡ ( h , t ) {\\displaystyle \\operatorname {CONS} (h,t)} represents the list whose head is h and whose tail is t. The data structure used to implement our queues consists of three singly-linked lists ( f , r , s ) {\\displaystyle (f,r,s)} where f is the front of the queue and r is the rear of the queue in reverse order. The invariant of the structure is that s is the rear of f without its | r | {\\displaystyle |r|} first elements, that is | s | = | f | − | r | {\\displaystyle |s|=|f|-|r|} .",
+      "char_count": 792,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0011",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== = Real-time queue ==",
+      "heading_path": "== = Real-time queue ==",
+      "start_char": 7972,
+      "end_char": 8654,
+      "content": "The tail of the queue ( CONS ⁡ ( x , f ) , r , s ) {\\displaystyle (\\operatorname {CONS} (x,f),r,s)} is then almost ( f , r , s ) {\\displaystyle (f,r,s)} and inserting an element x to ( f , r , s ) {\\displaystyle (f,r,s)} is almost ( f , CONS ⁡ ( x , r ) , s ) {\\displaystyle (f,\\operatorname {CONS} (x,r),s)} . It is said almost, because in both of those results, | s | = | f | − | r | + 1 {\\displaystyle |s|=|f|-|r|+1} . An auxiliary function a u x {\\displaystyle aux} must then be called for the invariant to be satisfied. Two cases must be considered, depending on whether s {\\displaystyle s} is the empty list, in which case | r | = | f | + 1 {\\displaystyle |r|=|f|+1} , or not.",
+      "char_count": 682,
+      "token_estimate": 170,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0012",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== = Real-time queue ==",
+      "heading_path": "== = Real-time queue ==",
+      "start_char": 8655,
+      "end_char": 9651,
+      "content": "The formal definition is aux ⁡ ( f , r , Cons ⁡ ( _ , s ) ) = ( f , r , s ) {\\displaystyle \\operatorname {aux} (f,r,\\operatorname {Cons} (\\_,s))=(f,r,s)} and aux ⁡ ( f , r , NIL ) = ( f ′ , NIL , f ′ ) {\\displaystyle \\operatorname {aux} (f,r,{\\text{NIL}})=(f',{\\text{NIL}},f')} where f ′ {\\displaystyle f'} is f followed by r reversed. Let us call reverse ⁡ ( f , r ) {\\displaystyle \\operatorname {reverse} (f,r)} the function which returns f followed by r reversed. Let us furthermore assume that | r | = | f | + 1 {\\displaystyle |r|=|f|+1} , since it is the case when this function is called. More precisely, we define a lazy function rotate ⁡ ( f , r , a ) {\\displaystyle \\operatorname {rotate} (f,r,a)} which takes as input three lists such that | r | = | f | + 1 {\\displaystyle |r|=|f|+1} , and return the concatenation of f, of r reversed and of a. Then reverse ⁡ ( f , r ) = rotate ⁡ ( f , r , NIL ) {\\displaystyle \\operatorname {reverse} (f,r)=\\operatorname {rotate} (f,r,{\\text{NIL}})} .",
+      "char_count": 996,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0013",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== = Real-time queue ==",
+      "heading_path": "== = Real-time queue ==",
+      "start_char": 9652,
+      "end_char": 10617,
+      "content": "The inductive definition of rotate is rotate ⁡ ( NIL , Cons ⁡ ( y , NIL ) , a ) = Cons ⁡ ( y , a ) {\\displaystyle \\operatorname {rotate} ({\\text{NIL}},\\operatorname {Cons} (y,{\\text{NIL}}),a)=\\operatorname {Cons} (y,a)} and rotate ⁡ ( CONS ⁡ ( x , f ) , CONS ⁡ ( y , r ) , a ) = Cons ⁡ ( x , rotate ⁡ ( f , r , CONS ⁡ ( y , a ) ) ) {\\displaystyle \\operatorname {rotate} (\\operatorname {CONS} (x,f),\\operatorname {CONS} (y,r),a)=\\operatorname {Cons} (x,\\operatorname {rotate} (f,r,\\operatorname {CONS} (y,a)))} . Its running time is O ( r ) {\\displaystyle O(r)} , but, since lazy evaluation is used, the computation is delayed until the results are forced by the computation. The list s in the data structure has two purposes. This list serves as a counter for | f | − | r | {\\displaystyle |f|-|r|} , indeed, | f | = | r | {\\displaystyle |f|=|r|} if and only if s is the empty list. This counter allows us to ensure that the rear is never longer than the front list.",
+      "char_count": 965,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "queueabstractdatatyp_7f3d9f3f_c0014",
+      "article_id": "queueabstractdatatyp_7f3d9f3f",
+      "section": "== = Real-time queue ==",
+      "heading_path": "== = Real-time queue ==",
+      "start_char": 10618,
+      "end_char": 11005,
+      "content": "Furthermore, using s, which is a tail of f, forces the computation of a part of the (lazy) list f during each tail and insert operation. Therefore, when | f | = | r | {\\displaystyle |f|=|r|} , the list f is totally forced. If it was not the case, the internal representation of f could be some append of append of... of append, and forcing would not be a constant time operation anymore.",
+      "char_count": 387,
+      "token_estimate": 96,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 8,
+    "items": [
+      {
+        "question": "What is the definition of queue overflow?",
+        "answer": "Queue overflow results from trying to add an element onto a full queue.",
+        "related_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0004"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0004"
+        ]
+      },
+      {
+        "question": "What type of data structure is a queue, based on its operational principles?",
+        "answer": "A queue is a first-in-first-out (FIFO) data structure.",
+        "related_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0000"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0000"
+        ]
+      },
+      {
+        "question": "Explain how the operations of a queue result in it being a First-In-First-Out (FIFO) data structure.",
+        "answer": "A queue functions as a First-In-First-Out (FIFO) data structure because of its specific operations. New entities are added to one end of the sequence, known as the rear or tail (enqueue), while entities are removed from the opposite end, the head or front (dequeue). This mechanism ensures that the first element added to the queue will be the first one to be removed, as all previously added elements must be dequeued before a newer element can be accessed.",
+        "related_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0000",
+          "queueabstractdatatyp_7f3d9f3f_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0000",
+          "queueabstractdatatyp_7f3d9f3f_c0001"
+        ]
+      },
+      {
+        "question": "What is the difference between the theoretical concept of a queue's capacity and its practical implementation using a fixed-length array, and what techniques are used to manage this limitation?",
+        "answer": "Theoretically, a queue does not have a specific capacity, meaning a new element can always be added regardless of how many elements are already contained. In contrast, a practical implementation using a fixed-length array has a limited capacity that must be declared ahead of time. To manage this limitation, one technique is to treat the array as a closed circle using modulo arithmetic, which prevents having to move items. To handle queue overflow (adding an element to a full queue), some implementations will automatically double the declared array size.",
+        "related_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0002",
+          "queueabstractdatatyp_7f3d9f3f_c0003",
+          "queueabstractdatatyp_7f3d9f3f_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0003",
+          "queueabstractdatatyp_7f3d9f3f_c0004",
+          "queueabstractdatatyp_7f3d9f3f_c0002"
+        ]
+      },
+      {
+        "question": "Summarize the different approaches to implementing a queue, including imperative, functional, and language-specific methods, and discuss their performance characteristics.",
+        "answer": "Queues can be implemented in several ways with the goal of achieving O(1) time complexity for en-queuing and de-queuing operations. Imperative implementations often use a doubly linked list, which has O(1) insertion and deletion at both ends, or a modified singly linked list with a pointer to the last node. Purely functional implementations also exist; one type offers O(1) amortized time, while a more complex 'real-time queue' provides O(1) worst-case time. In programming languages, queues might be a distinct data type or a special case of a deque. For example, C++'s Standard Template Library provides a 'queue' class, and Java has a 'Queue' interface implemented by classes like 'LinkedList' and 'ArrayDeque'.",
+        "related_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0005",
+          "queueabstractdatatyp_7f3d9f3f_c0006",
+          "queueabstractdatatyp_7f3d9f3f_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0007",
+          "queueabstractdatatyp_7f3d9f3f_c0006",
+          "queueabstractdatatyp_7f3d9f3f_c0005"
+        ]
+      },
+      {
+        "question": "Provide a comprehensive overview of the queue data structure, including its defining principle, primary operations, and applications.",
+        "answer": "A queue is a linear data structure that operates on a First-In-First-Out (FIFO) principle, meaning the first entity added is the first one removed. The primary operations are 'enqueue', which adds an element to the rear (or tail) of the queue, and 'dequeue', which removes an element from the front (or head). Queues are used in computer science and other fields to act as a buffer, storing items like data or events for later processing, and are also utilized in the implementation of breadth-first search algorithms.",
+        "related_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0000",
+          "queueabstractdatatyp_7f3d9f3f_c0001",
+          "queueabstractdatatyp_7f3d9f3f_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0000",
+          "queueabstractdatatyp_7f3d9f3f_c0001",
+          "queueabstractdatatyp_7f3d9f3f_c0002"
+        ]
+      },
+      {
+        "question": "How do theoretical queues and practical, array-based queue implementations differ regarding capacity, and what strategies are described for managing these capacity limitations?",
+        "answer": "Theoretically, a queue has no specific capacity and can always have new elements added. In contrast, practical implementations using fixed-length arrays are inherently limited in capacity, creating what is known as a bounded queue. To manage these limitations, one strategy is to treat the array as a closed circle using modulo arithmetic, which avoids having to move elements but does not solve the capacity limit itself. Another strategy is to double the declared array size when an overflow occurs. Alternatively, modern languages offer dynamic lists or linked lists, which do not have a specified fixed capacity limit beyond memory constraints, aligning more closely with the theoretical concept.",
+        "related_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0003",
+          "queueabstractdatatyp_7f3d9f3f_c0004",
+          "queueabstractdatatyp_7f3d9f3f_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0003",
+          "queueabstractdatatyp_7f3d9f3f_c0004",
+          "queueabstractdatatyp_7f3d9f3f_c0005"
+        ]
+      },
+      {
+        "question": "Explain the process and time complexity of a dequeue operation in an amortized queue when the rear list `r` is empty, including the justification for its amortized cost.",
+        "answer": "When the rear list `r` is empty, a dequeue operation involves reversing the front list `f` and assigning it to `r` before removing the head element. This reversal process takes O(n) time, where `n` is the number of elements in `f`. Despite this, the operation is considered to have an O(1) amortized time because the cost of the reversal can be distributed across the constant-time insertion operations that originally added each element to the queue.",
+        "related_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0008",
+          "queueabstractdatatyp_7f3d9f3f_c0009"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "queueabstractdatatyp_7f3d9f3f_c0008",
+          "queueabstractdatatyp_7f3d9f3f_c0009"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:32.320Z",
+    "content_format": "markdown",
+    "total_chunks": 15,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,698 @@
+{
+  "article": {
+    "id": "partialdifferentiale_c7d1e3e4",
+    "title": "Partial differential equation",
+    "url": "https://en.wikipedia.org/wiki/Partial_differential_equation",
+    "lang": "en",
+    "created_at": "2025-07-31T06:31:55.626694",
+    "content": "---\nid: partialdifferentiale_c7d1e3e4\nurl: https://en.wikipedia.org/wiki/Partial_differential_equation\ntitle: Partial differential equation\nlang: en\ncreated_at: '2025-07-31T06:25:59.051659'\nchecksum: 0501f0d1b588cfdefd51c26dc6ee9caedf6a0bfacca691c382dba919d8952f77\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 5812\n  char_count: 34753\n  num_chunks: 41\n  original_chunks: 53\n  filtered_out: 12\n  num_sections: 0\n---\nIn mathematics, a partial differential equation (PDE) is an equation which involves a multivariable function and one or more of its partial derivatives. The function is often thought of as an \"unknown\" that solves the equation, similar to how x is thought of as an unknown number solving, e.g., an algebraic equation like x2 − 3x + 2 = 0. However, it is usually impossible to write down explicit formulae for solutions of partial differential equations. There is correspondingly a vast amount of modern mathematical and scientific research on methods to numerically approximate solutions of certain partial differential equations using computers. Partial differential equations also occupy a large sector of pure mathematical research, in which the usual questions are, broadly speaking, on the identification of general qualitative features of solutions of various partial differential equations, such as existence, uniqueness, regularity and stability. Among the many open questions are the existence and smoothness of solutions to the Navier–Stokes equations, named as one of the Millennium Prize Problems in 2000. Partial differential equations are ubiquitous in mathematically oriented scientific fields, such as physics and engineering. For instance, they are foundational in the modern scientific understanding of sound, heat, diffusion, electrostatics, electrodynamics, thermodynamics, fluid dynamics, elasticity, general relativity, and quantum mechanics (Schrödinger equation, Pauli equation etc.). They also arise from many purely mathematical considerations, such as differential geometry and the calculus of variations; among other notable applications, they are the fundamental tool in the proof of the Poincaré conjecture from geometric topology. Partly due to this variety of sources, there is a wide spectrum of different types of partial differential equations, where the meaning of a solution depends on the context of the problem, and methods have been developed for dealing with many of the individual equations which arise. As such, it is usually acknowledged that there is no \"universal theory\" of partial differential equations, with specialist knowledge being somewhat divided between several essentially distinct subfields. Ordinary differential equations can be viewed as a subclass of partial differential equations, corresponding to functions of a single variable. Stochastic partial differential equations and nonlocal equations are, as of 2020, particularly widely studied extensions of the \"PDE\" notion. More classical topics, on which there is still much active research, include elliptic and parabolic partial differential equations, fluid mechanics, Boltzmann equations, and dispersive partial differential equations. == Introduction == A function u(x, y, z) of three variables is \"harmonic\" or \"a solution of the Laplace equation\" if it satisfies the condition ∂ 2 u ∂ x 2 + ∂ 2 u ∂ y 2 + ∂ 2 u ∂ z 2 = 0. {\\displaystyle {\\frac {\\partial ^{2}u}{\\partial x^{2}}}+{\\frac {\\partial ^{2}u}{\\partial y^{2}}}+{\\frac {\\partial ^{2}u}{\\partial z^{2}}}=0.} Such functions were widely studied in the 19th century due to their relevance for classical mechanics, for example the equilibrium temperature distribution of a homogeneous solid is a harmonic function. If explicitly given a function, it is usually a matter of straightforward computation to check whether or not it is harmonic. For instance u ( x , y , z ) = 1 x 2 − 2 x + y 2 + z 2 + 1 {\\displaystyle u(x,y,z)={\\frac {1}{\\sqrt {x^{2}-2x+y^{2}+z^{2}+1}}}} and u ( x , y , z ) = 2 x 2 − y 2 − z 2 {\\displaystyle u(x,y,z)=2x^{2}-y^{2}-z^{2}} are both harmonic while u ( x , y , z ) = sin ⁡ ( x y ) + z {\\displaystyle u(x,y,z)=\\sin(xy)+z} is not. It may be surprising that the two examples of harmonic functions are of such strikingly different form. This is a reflection of the fact that they are not, in any immediate way, special cases of a \"general solution formula\" of the Laplace equation. This is in striking contrast to the case of ordinary differential equations (ODEs) roughly similar to the Laplace equation, with the aim of many introductory textbooks being to find algorithms leading to general solution formulas. For the Laplace equation, as for a large number of partial differential equations, such solution formulas fail to exist. The nature of this failure can be seen more concretely in the case of the following PDE: for a function v(x, y) of two variables, consider the equation ∂ 2 v ∂ x ∂ y = 0. {\\displaystyle {\\frac {\\partial ^{2}v}{\\partial x\\partial y}}=0.} It can be directly checked that any function v of the form v(x, y) = f(x) + g(y), for any single-variable functions f and g whatsoever, will satisfy this condition. This is far beyond the choices available in ODE solution formulas, which typically allow the free choice of some numbers. In the study of PDEs, one generally has the free choice of functions. The nature of this choice varies from PDE to PDE. To understand it for any given equation, existence and uniqueness theorems are usually important organizational principles. In many introductory textbooks, the role of existence and uniqueness theorems for ODE can be somewhat opaque; the existence half is usually unnecessary, since one can directly check any proposed solution formula, while the uniqueness half is often only present in the background in order to ensure that a proposed solution formula is as general as possible. By contrast, for PDE, existence and uniqueness theorems are often the only means by which one can navigate through the plethora of different solutions at hand. For this reason, they are also fundamental when carrying out a purely numerical simulation, as one must have an understanding of what data is to be prescribed by the user and what is to be left to the computer to calculate. To discuss such existence and uniqueness theorems, it is necessary to be precise about the domain of the \"unknown function\". Otherwise, speaking only in terms such as \"a function of two variables\", it is impossible to meaningfully formulate the results. That is, the domain of the unknown function must be regarded as part of the structure of the PDE itself. The following provides two classic examples of such existence and uniqueness theorems. Even though the two PDE in question are so similar, there is a striking difference in behavior: for the first PDE, one has the free prescription of a single function, while for the second PDE, one has the free prescription of two functions. Let B denote the unit-radius disk around the origin in the plane. For any continuous function U on the unit circle, there is exactly one function u on B such that ∂ 2 u ∂ x 2 + ∂ 2 u ∂ y 2 = 0 {\\displaystyle {\\frac {\\partial ^{2}u}{\\partial x^{2}}}+{\\frac {\\partial ^{2}u}{\\partial y^{2}}}=0} and whose restriction to the unit circle is given by U. For any functions f and g on the real line R, there is exactly one function u on R × (−1, 1) such that ∂ 2 u ∂ x 2 − ∂ 2 u ∂ y 2 = 0 {\\displaystyle {\\frac {\\partial ^{2}u}{\\partial x^{2}}}-{\\frac {\\partial ^{2}u}{\\partial y^{2}}}=0} and with u(x, 0) = f(x) and ⁠∂u/∂y⁠(x, 0) = g(x) for all values of x. Even more phenomena are possible. For instance, the following PDE, arising naturally in the field of differential geometry, illustrates an example where there is a simple and completely explicit solution formula, but with the free choice of only three numbers and not even one function. If u is a function on R2 with ∂ ∂ x ∂ u ∂ x 1 + ( ∂ u ∂ x ) 2 + ( ∂ u ∂ y ) 2 + ∂ ∂ y ∂ u ∂ y 1 + ( ∂ u ∂ x ) 2 + ( ∂ u ∂ y ) 2 = 0 , {\\displaystyle {\\frac {\\partial }{\\partial x}}{\\frac {\\frac {\\partial u}{\\partial x}}{\\sqrt {1+\\left({\\frac {\\partial u}{\\partial x}}\\right)^{2}+\\left({\\frac {\\partial u}{\\partial y}}\\right)^{2}}}}+{\\frac {\\partial }{\\partial y}}{\\frac {\\frac {\\partial u}{\\partial y}}{\\sqrt {1+\\left({\\frac {\\partial u}{\\partial x}}\\right)^{2}+\\left({\\frac {\\partial u}{\\partial y}}\\right)^{2}}}}=0,} then there are numbers a, b, and c with u(x, y) = ax + by + c. In contrast to the earlier examples, this PDE is nonlinear, owing to the square roots and the squares. A linear PDE is one such that, if it is homogeneous, the sum of any two solutions is also a solution, and any constant multiple of any solution is also a solution. == Definition == A partial differential equation is an equation that involves an unknown function of n ≥ 2 {\\displaystyle n\\geq 2} variables and (some of) its partial derivatives. That is, for the unknown function u : U → R , {\\displaystyle u:U\\rightarrow \\mathbb {R} ,} of variables x = ( x 1 , … , x n ) {\\displaystyle x=(x_{1},\\dots ,x_{n})} belonging to the open subset U {\\displaystyle U} of R n {\\displaystyle \\mathbb {R} ^{n}} , the k t h {\\displaystyle k^{th}} -order partial differential equation is defined as F [ D k u , D k − 1 u , … , D u , u , x ] = 0 , {\\displaystyle F[D^{k}u,D^{k-1}u,\\dots ,Du,u,x]=0,} where F : R n k × R n k − 1 ⋯ × R n × R × U → R , {\\displaystyle F:\\mathbb {R} ^{n^{k}}\\times \\mathbb {R} ^{n^{k-1}}\\dots \\times \\mathbb {R} ^{n}\\times \\mathbb {R} \\times U\\rightarrow \\mathbb {R} ,} and D {\\displaystyle D} is the partial derivative operator. === Notation === When writing PDEs, it is common to denote partial derivatives using subscripts. For example: u x = ∂ u ∂ x , u x x = ∂ 2 u ∂ x 2 , u x y = ∂ 2 u ∂ y ∂ x = ∂ ∂ y ( ∂ u ∂ x ) . {\\displaystyle u_{x}={\\frac {\\partial u}{\\partial x}},\\quad u_{xx}={\\frac {\\partial ^{2}u}{\\partial x^{2}}},\\quad u_{xy}={\\frac {\\partial ^{2}u}{\\partial y\\,\\partial x}}={\\frac {\\partial }{\\partial y}}\\left({\\frac {\\partial u}{\\partial x}}\\right).} In the general situation that u is a function of n variables, then ui denotes the first partial derivative relative to the i-th input, uij denotes the second partial derivative relative to the i-th and j-th inputs, and so on. The Greek letter Δ denotes the Laplace operator; if u is a function of n variables, then Δ u = u 11 + u 22 + ⋯ + u n n . {\\displaystyle \\Delta u=u_{11}+u_{22}+\\cdots +u_{nn}.} In the physics literature, the Laplace operator is often denoted by ∇2; in the mathematics literature, ∇2u may also denote the Hessian matrix of u. == Classification == === Linear and nonlinear equations === A PDE is called linear if it is linear in the unknown and its derivatives. For example, for a function u of x and y, a second order linear PDE is of the form a 1 ( x , y ) u x x + a 2 ( x , y ) u x y + a 3 ( x , y ) u y x + a 4 ( x , y ) u y y + a 5 ( x , y ) u x + a 6 ( x , y ) u y + a 7 ( x , y ) u = f ( x , y ) {\\displaystyle a_{1}(x,y)u_{xx}+a_{2}(x,y)u_{xy}+a_{3}(x,y)u_{yx}+a_{4}(x,y)u_{yy}+a_{5}(x,y)u_{x}+a_{6}(x,y)u_{y}+a_{7}(x,y)u=f(x,y)} where ai and f are functions of the independent variables x and y only. (Often the mixed-partial derivatives uxy and uyx will be equated, but this is not required for the discussion of linearity.) If the ai are constants (independent of x and y) then the PDE is called linear with constant coefficients. If f is zero everywhere then the linear PDE is homogeneous, otherwise it is inhomogeneous. (This is separate from asymptotic homogenization, which studies the effects of high-frequency oscillations in the coefficients upon solutions to PDEs.) Nearest to linear PDEs are semi-linear PDEs, where only the highest order derivatives appear as linear terms, with coefficients that are functions of the independent variables. The lower order derivatives and the unknown function may appear arbitrarily. For example, a general second order semi-linear PDE in two variables is a 1 ( x , y ) u x x + a 2 ( x , y ) u x y + a 3 ( x , y ) u y x + a 4 ( x , y ) u y y + f ( u x , u y , u , x , y ) = 0 {\\displaystyle a_{1}(x,y)u_{xx}+a_{2}(x,y)u_{xy}+a_{3}(x,y)u_{yx}+a_{4}(x,y)u_{yy}+f(u_{x},u_{y},u,x,y)=0} In a quasilinear PDE the highest order derivatives likewise appear only as linear terms, but with coefficients possibly functions of the unknown and lower-order derivatives: a 1 ( u x , u y , u , x , y ) u x x + a 2 ( u x , u y , u , x , y ) u x y + a 3 ( u x , u y , u , x , y ) u y x + a 4 ( u x , u y , u , x , y ) u y y + f ( u x , u y , u , x , y ) = 0 {\\displaystyle a_{1}(u_{x},u_{y},u,x,y)u_{xx}+a_{2}(u_{x},u_{y},u,x,y)u_{xy}+a_{3}(u_{x},u_{y},u,x,y)u_{yx}+a_{4}(u_{x},u_{y},u,x,y)u_{yy}+f(u_{x},u_{y},u,x,y)=0} Many of the fundamental PDEs in physics are quasilinear, such as the Einstein equations of general relativity and the Navier–Stokes equations describing fluid motion. A PDE without any linearity properties is called fully nonlinear, and possesses nonlinearities on one or more of the highest-order derivatives. An example is the Monge–Ampère equation, which arises in differential geometry. === Second order equations === The elliptic/parabolic/hyperbolic classification provides a guide to appropriate initial- and boundary conditions and to the smoothness of the solutions. Assuming uxy = uyx, the general linear second-order PDE in two independent variables has the form A u x x + 2 B u x y + C u y y + ⋯ (lower order terms) = 0 , {\\displaystyle Au_{xx}+2Bu_{xy}+Cu_{yy}+\\cdots {\\mbox{(lower order terms)}}=0,} where the coefficients A, B, C... may depend upon x and y. If A2 + B2 + C2 > 0 over a region of the xy-plane, the PDE is second-order in that region. This form is analogous to the equation for a conic section: A x 2 + 2 B x y + C y 2 + ⋯ = 0. {\\displaystyle Ax^{2}+2Bxy+Cy^{2}+\\cdots =0.} More precisely, replacing ∂x by X, and likewise for other variables (formally this is done by a Fourier transform), converts a constant-coefficient PDE into a polynomial of the same degree, with the terms of the highest degree (a homogeneous polynomial, here a quadratic form) being most significant for the classification. Just as one classifies conic sections and quadratic forms into parabolic, hyperbolic, and elliptic based on the discriminant B2 − 4AC, the same can be done for a second-order PDE at a given point. However, the discriminant in a PDE is given by B2 − AC due to the convention of the xy term being 2B rather than B; formally, the discriminant (of the associated quadratic form) is (2B)2 − 4AC = 4(B2 − AC), with the factor of 4 dropped for simplicity. B2 − AC < 0 (elliptic partial differential equation): Solutions of elliptic PDEs are as smooth as the coefficients allow, within the interior of the region where the equation and solutions are defined. For example, solutions of Laplace's equation are analytic within the domain where they are defined, but solutions may assume boundary values that are not smooth. The motion of a fluid at subsonic speeds can be approximated with elliptic PDEs, and the Euler–Tricomi equation is elliptic where x < 0. By change of variables, the equation can always be expressed in the form: u x x + u y y + ⋯ = 0 , {\\displaystyle u_{xx}+u_{yy}+\\cdots =0,} where x and y correspond to changed variables. This justifies Laplace equation as an example of this type. B2 − AC = 0 (parabolic partial differential equation): Equations that are parabolic at every point can be transformed into a form analogous to the heat equation by a change of independent variables. Solutions smooth out as the transformed time variable increases. The Euler–Tricomi equation has parabolic type on the line where x = 0. By change of variables, the equation can always be expressed in the form: u x x + ⋯ = 0 , {\\displaystyle u_{xx}+\\cdots =0,} where x correspond to changed variables. This justifies heat equation, which are of form u t − u x x + ⋯ = 0 {\\textstyle u_{t}-u_{xx}+\\cdots =0} , as an example of this type. B2 − AC > 0 (hyperbolic partial differential equation): hyperbolic equations retain any discontinuities of functions or derivatives in the initial data. An example is the wave equation. The motion of a fluid at supersonic speeds can be approximated with hyperbolic PDEs, and the Euler–Tricomi equation is hyperbolic where x > 0. By change of variables, the equation can always be expressed in the form: u x x − u y y + ⋯ = 0 , {\\displaystyle u_{xx}-u_{yy}+\\cdots =0,} where x and y correspond to changed variables. This justifies wave equation as an example of this type. If there are n independent variables x1, x2 , …, xn, a general linear partial differential equation of second order has the form L u = ∑ i = 1 n ∑ j = 1 n a i , j ∂ 2 u ∂ x i ∂ x j + lower-order terms = 0. {\\displaystyle Lu=\\sum _{i=1}^{n}\\sum _{j=1}^{n}a_{i,j}{\\frac {\\partial ^{2}u}{\\partial x_{i}\\partial x_{j}}}\\quad +{\\text{lower-order terms}}=0.} The classification depends upon the signature of the eigenvalues of the coefficient matrix ai,j. Elliptic: the eigenvalues are all positive or all negative. Parabolic: the eigenvalues are all positive or all negative, except one that is zero. Hyperbolic: there is only one negative eigenvalue and all the rest are positive, or there is only one positive eigenvalue and all the rest are negative. Ultrahyperbolic: there is more than one positive eigenvalue and more than one negative eigenvalue, and there are no zero eigenvalues. The theory of elliptic, parabolic, and hyperbolic equations have been studied for centuries, largely centered around or based upon the standard examples of the Laplace equation, the heat equation, and the wave equation. However, the classification only depends on linearity of the second-order terms and is therefore applicable to semi- and quasilinear PDEs as well. The basic types also extend to hybrids such as the Euler–Tricomi equation; varying from elliptic to hyperbolic for different regions of the domain, as well as higher-order PDEs, but such knowledge is more specialized. === Systems of first-order equations and characteristic surfaces === The classification of partial differential equations can be extended to systems of first-order equations, where the unknown u is now a vector with m components, and the coefficient matrices Aν are m by m matrices for ν = 1, 2, …, n. The partial differential equation takes the form L u = ∑ ν = 1 n A ν ∂ u ∂ x ν + B = 0 , {\\displaystyle Lu=\\sum _{\\nu =1}^{n}A_{\\nu }{\\frac {\\partial u}{\\partial x_{\\nu }}}+B=0,} where the coefficient matrices Aν and the vector B may depend upon x and u. If a hypersurface S is given in the implicit form φ ( x 1 , x 2 , … , x n ) = 0 , {\\displaystyle \\varphi (x_{1},x_{2},\\ldots ,x_{n})=0,} where φ has a non-zero gradient, then S is a characteristic surface for the operator L at a given point if the characteristic form vanishes: Q ( ∂ φ ∂ x 1 , … , ∂ φ ∂ x n ) = det [ ∑ ν = 1 n A ν ∂ φ ∂ x ν ] = 0. {\\displaystyle Q\\left({\\frac {\\partial \\varphi }{\\partial x_{1}}},\\ldots ,{\\frac {\\partial \\varphi }{\\partial x_{n}}}\\right)=\\det \\left[\\sum _{\\nu =1}^{n}A_{\\nu }{\\frac {\\partial \\varphi }{\\partial x_{\\nu }}}\\right]=0.} The geometric interpretation of this condition is as follows: if data for u are prescribed on the surface S, then it may be possible to determine the normal derivative of u on S from the differential equation. If the data on S and the differential equation determine the normal derivative of u on S, then S is non-characteristic. If the data on S and the differential equation do not determine the normal derivative of u on S, then the surface is characteristic, and the differential equation restricts the data on S: the differential equation is internal to S. A first-order system Lu = 0 is elliptic if no surface is characteristic for L: the values of u on S and the differential equation always determine the normal derivative of u on S. A first-order system is hyperbolic at a point if there is a spacelike surface S with normal ξ at that point. This means that, given any non-trivial vector η orthogonal to ξ, and a scalar multiplier λ, the equation Q(λξ + η) = 0 has m real roots λ1, λ2, …, λm. The system is strictly hyperbolic if these roots are always distinct. The geometrical interpretation of this condition is as follows: the characteristic form Q(ζ) = 0 defines a cone (the normal cone) with homogeneous coordinates ζ. In the hyperbolic case, this cone has nm sheets, and the axis ζ = λξ runs inside these sheets: it does not intersect any of them. But when displaced from the origin by η, this axis intersects every sheet. In the elliptic case, the normal cone has no real sheets. == Analytical solutions == === Separation of variables === Linear PDEs can be reduced to systems of ordinary differential equations by the important technique of separation of variables. This technique rests on a feature of solutions to differential equations: if one can find any solution that solves the equation and satisfies the boundary conditions, then it is the solution (this also applies to ODEs). We assume as an ansatz that the dependence of a solution on the parameters space and time can be written as a product of terms that each depend on a single parameter, and then see if this can be made to solve the problem. In the method of separation of variables, one reduces a PDE to a PDE in fewer variables, which is an ordinary differential equation if in one variable – these are in turn easier to solve. This is possible for simple PDEs, which are called separable partial differential equations, and the domain is generally a rectangle (a product of intervals). Separable PDEs correspond to diagonal matrices – thinking of \"the value for fixed x\" as a coordinate, each coordinate can be understood separately. This generalizes to the method of characteristics, and is also used in integral transforms. === Method of characteristics === The characteristic surface in n = 2-dimensional space is called a characteristic curve. In special cases, one can find characteristic curves on which the first-order PDE reduces to an ODE – changing coordinates in the domain to straighten these curves allows separation of variables, and is called the method of characteristics. More generally, applying the method to first-order PDEs in higher dimensions, one may find characteristic surfaces. === Integral transform === An integral transform may transform the PDE to a simpler one, in particular, a separable PDE. This corresponds to diagonalizing an operator. An important example of this is Fourier analysis, which diagonalizes the heat equation using the eigenbasis of sinusoidal waves. If the domain is finite or periodic, an infinite sum of solutions such as a Fourier series is appropriate, but an integral of solutions such as a Fourier integral is generally required for infinite domains. The solution for a point source for the heat equation given above is an example of the use of a Fourier integral. === Change of variables === Often a PDE can be reduced to a simpler form with a known solution by a suitable change of variables. For example, the Black–Scholes equation ∂ V ∂ t + 1 2 σ 2 S 2 ∂ 2 V ∂ S 2 + r S ∂ V ∂ S − r V = 0 {\\displaystyle {\\frac {\\partial V}{\\partial t}}+{\\tfrac {1}{2}}\\sigma ^{2}S^{2}{\\frac {\\partial ^{2}V}{\\partial S^{2}}}+rS{\\frac {\\partial V}{\\partial S}}-rV=0} is reducible to the heat equation ∂ u ∂ τ = ∂ 2 u ∂ x 2 {\\displaystyle {\\frac {\\partial u}{\\partial \\tau }}={\\frac {\\partial ^{2}u}{\\partial x^{2}}}} by the change of variables V ( S , t ) = v ( x , τ ) , x = ln ⁡ ( S ) , τ = 1 2 σ 2 ( T − t ) , v ( x , τ ) = e − α x − β τ u ( x , τ ) . {\\displaystyle {\\begin{aligned}V(S,t)&=v(x,\\tau ),\\\\[5px]x&=\\ln \\left(S\\right),\\\\[5px]\\tau &={\\tfrac {1}{2}}\\sigma ^{2}(T-t),\\\\[5px]v(x,\\tau )&=e^{-\\alpha x-\\beta \\tau }u(x,\\tau ).\\end{aligned}}} === Fundamental solution === Inhomogeneous equations can often be solved (for constant coefficient PDEs, always be solved) by finding the fundamental solution (the solution for a point source P ( D ) u = δ {\\displaystyle P(D)u=\\delta } ), then taking the convolution with the boundary conditions to get the solution. This is analogous in signal processing to understanding a filter by its impulse response. === Superposition principle === The superposition principle applies to any linear system, including linear systems of PDEs. A common visualization of this concept is the interaction of two waves in phase being combined to result in a greater amplitude, for example sin x + sin x = 2 sin x. The same principle can be observed in PDEs where the solutions may be real or complex and additive. If u1 and u2 are solutions of linear PDE in some function space R, then u = c1u1 + c2u2 with any constants c1 and c2 are also a solution of that PDE in the same function space. === Methods for non-linear equations === There are no generally applicable analytical methods to solve nonlinear PDEs. Still, existence and uniqueness results (such as the Cauchy–Kowalevski theorem) are often possible, as are proofs of important qualitative and quantitative properties of solutions (getting these results is a major part of analysis). Nevertheless, some techniques can be used for several types of equations. The h-principle is the most powerful method to solve underdetermined equations. The Riquier–Janet theory is an effective method for obtaining information about many analytic overdetermined systems. The method of characteristics can be used in some very special cases to solve nonlinear partial differential equations. In some cases, a PDE can be solved via perturbation analysis in which the solution is considered to be a correction to an equation with a known solution. Alternatives are numerical analysis techniques from simple finite difference schemes to the more mature multigrid and finite element methods. Many interesting problems in science and engineering are solved in this way using computers, sometimes high performance supercomputers. === Lie group method === From 1870 Sophus Lie's work put the theory of differential equations on a more satisfactory foundation. He showed that the integration theories of the older mathematicians can, by the introduction of what are now called Lie groups, be referred, to a common source; and that ordinary differential equations which admit the same infinitesimal transformations present comparable difficulties of integration. He also emphasized the subject of transformations of contact. A general approach to solving PDEs uses the symmetry property of differential equations, the continuous infinitesimal transformations of solutions to solutions (Lie theory). Continuous group theory, Lie algebras and differential geometry are used to understand the structure of linear and nonlinear partial differential equations for generating integrable equations, to find its Lax pairs, recursion operators, Bäcklund transform and finally finding exact analytic solutions to the PDE. Symmetry methods have been recognized to study differential equations arising in mathematics, physics, engineering, and many other disciplines. === Semi-analytical methods === The Adomian decomposition method, the Lyapunov artificial small parameter method, and his homotopy perturbation method are all special cases of the more general homotopy analysis method. These are series expansion methods, and except for the Lyapunov method, are independent of small physical parameters as compared to the well known perturbation theory, thus giving these methods greater flexibility and solution generality. == Numerical solutions == The three most widely used numerical methods to solve PDEs are the finite element method (FEM), finite volume methods (FVM) and finite difference methods (FDM), as well other kind of methods called meshfree methods, which were made to solve problems where the aforementioned methods are limited. The FEM has a prominent position among these methods and especially its exceptionally efficient higher-order version hp-FEM. Other hybrid versions of FEM and Meshfree methods include the generalized finite element method (GFEM), extended finite element method (XFEM), spectral finite element method (SFEM), meshfree finite element method, discontinuous Galerkin finite element method (DGFEM), element-free Galerkin method (EFGM), interpolating element-free Galerkin method (IEFGM), etc. === Finite element method === The finite element method (FEM) (its practical application often known as finite element analysis (FEA)) is a numerical technique for approximating solutions of partial differential equations (PDE) as well as of integral equations using a finite set of functions. The solution approach is based either on eliminating the differential equation completely (steady state problems), or rendering the PDE into an approximating system of ordinary differential equations, which are then numerically integrated using standard techniques such as Euler's method, Runge–Kutta, etc. === Finite difference method === Finite-difference methods are numerical methods for approximating the solutions to differential equations using finite difference equations to approximate derivatives. === Finite volume method === Similar to the finite difference method or finite element method, values are calculated at discrete places on a meshed geometry. \"Finite volume\" refers to the small volume surrounding each node point on a mesh. In the finite volume method, surface integrals in a partial differential equation that contain a divergence term are converted to volume integrals, using the divergence theorem. These terms are then evaluated as fluxes at the surfaces of each finite volume. Because the flux entering a given volume is identical to that leaving the adjacent volume, these methods conserve mass by design. === Neural networks === == Weak solutions == Weak solutions are functions that satisfy the PDE, yet in other meanings than regular sense. The meaning for this term may differ with context, and one of the most commonly used definitions is based on the notion of distributions. An example for the definition of a weak solution is as follows: Consider the boundary-value problem given by: L u = f in U , u = 0 on ∂ U , {\\displaystyle {\\begin{aligned}Lu&=f\\quad {\\text{in }}U,\\\\u&=0\\quad {\\text{on }}\\partial U,\\end{aligned}}} where L u = − ∑ i , j ∂ j ( a i j ∂ i u ) + ∑ i b i ∂ i u + c u {\\displaystyle Lu=-\\sum _{i,j}\\partial _{j}(a^{ij}\\partial _{i}u)+\\sum _{i}b^{i}\\partial _{i}u+cu} denotes a second-order partial differential operator in divergence form. We say a u ∈ H 0 1 ( U ) {\\displaystyle u\\in H_{0}^{1}(U)} is a weak solution if ∫ U [ ∑ i , j a i j ( ∂ i u ) ( ∂ j v ) + ∑ i b i ( ∂ i u ) v + c u v ] d x = ∫ U f v d x {\\displaystyle \\int _{U}[\\sum _{i,j}a^{ij}(\\partial _{i}u)(\\partial _{j}v)+\\sum _{i}b^{i}(\\partial _{i}u)v+cuv]dx=\\int _{U}fvdx} for every v ∈ H 0 1 ( U ) {\\displaystyle v\\in H_{0}^{1}(U)} , which can be derived by a formal integral by parts. An example for a weak solution is as follows: ϕ ( x ) = 1 4 π 1 | x | {\\displaystyle \\phi (x)={\\frac {1}{4\\pi }}{\\frac {1}{|x|}}} is a weak solution satisfying ∇ 2 ϕ = δ in R 3 {\\displaystyle \\nabla ^{2}\\phi =\\delta {\\text{ in }}R^{3}} in distributional sense, as formally, ∫ R 3 ∇ 2 ϕ ( x ) ψ ( x ) d x = ∫ R 3 ϕ ( x ) ∇ 2 ψ ( x ) d x = ψ ( 0 ) for ψ ∈ C c ∞ ( R 3 ) . {\\displaystyle \\int _{R^{3}}\\nabla ^{2}\\phi (x)\\psi (x)dx=\\int _{R^{3}}\\phi (x)\\nabla ^{2}\\psi (x)dx=\\psi (0){\\text{ for }}\\psi \\in C_{c}^{\\infty }(R^{3}).} == Theoretical Studies == As a branch of pure mathematics, the theoretical studies of PDEs focus on the criteria for a solution to exist, the properties of a solution, and finding its formula is often secondary. === Well-posedness === Well-posedness refers to a common schematic package of information about a PDE. To say that a PDE is well-posed, one must have: an existence and uniqueness theorem, asserting that by the prescription of some freely chosen functions, one can single out one specific solution of the PDE by continuously changing the free choices, one continuously changes the corresponding solution This is, by the necessity of being applicable to several different PDE, somewhat vague. The requirement of \"continuity\", in particular, is ambiguous, since there are usually many inequivalent means by which it can be rigorously defined. It is, however, somewhat unusual to study a PDE without specifying a way in which it is well-posed. === Regularity === Regularity refers to the integrability and differentiability of weak solutions, which can often be represented by Sobolev spaces. This problem arise due to the difficulty in searching for classical solutions. Researchers often tend to find weak solutions at first and then find out whether it is smooth enough to be qualified as a classical solution. Results from functional analysis are often used in this field of study. == See also == Some common PDEs Acoustic wave equation Burgers' equation Continuity equation Heat equation Helmholtz equation Klein–Gordon equation Jacobi equation Lagrange equation Lorenz equation Laplace's equation Maxwell's equations Navier-Stokes equation Poisson's equation Reaction–diffusion system Schrödinger equation Wave equation Types of boundary conditions Dirichlet boundary condition Neumann boundary condition Robin boundary condition Cauchy problem Various topics Jet bundle Laplace transform applied to differential equations List of dynamical systems and differential equations topics Matrix differential equation Numerical partial differential equations Partial differential algebraic equation Recurrence relation Stochastic processes and boundary value problems == Notes == == References == == Further reading == Cajori, Florian (1928). \"The Early History of Partial Differential Equations and of Partial Differentiation and Integration\" (PDF). The American Mathematical Monthly. 35 (9): 459–467. doi:10.2307/2298771. JSTOR 2298771. Archived from the original (PDF) on 2018-11-23. Retrieved 2016-05-15. Nirenberg, Louis (1994). \"Partial differential equations in the first half of the century.\" Development of mathematics 1900–1950 (Luxembourg, 1992), 479–515, Birkhäuser, Basel. Brezis, Haïm; Browder, Felix (1998). \"Partial Differential Equations in the 20th Century\". Advances in Mathematics. 135 (1): 76–144. doi:10.1006/aima.1997.1713. == External links == \"Differential equation, partial\", Encyclopedia of Mathematics, EMS Press, 2001  Partial Differential Equations: Exact Solutions at EqWorld: The World of Mathematical Equations. Partial Differential Equations: Index at EqWorld: The World of Mathematical Equations. Partial Differential Equations: Methods at EqWorld: The World of Mathematical Equations. Example problems with solutions at exampleproblems.com Partial Differential Equations at mathworld.wolfram.com Partial Differential Equations with Mathematica Partial Differential Equations in Cleve Moler: Numerical Computing with MATLAB Partial Differential Equations at nag.com Sanderson, Grant (April 21, 2019). \"But what is a partial differential equation?\". 3Blue1Brown. Archived from the original on 2021-11-02 – via YouTube."
+  },
+  "chunks": [
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0000",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 955,
+      "content": "In mathematics, a partial differential equation (PDE) is an equation which involves a multivariable function and one or more of its partial derivatives. The function is often thought of as an \"unknown\" that solves the equation, similar to how x is thought of as an unknown number solving, e.g., an algebraic equation like x2 − 3x + 2 = 0. However, it is usually impossible to write down explicit formulae for solutions of partial differential equations. There is correspondingly a vast amount of modern mathematical and scientific research on methods to numerically approximate solutions of certain partial differential equations using computers. Partial differential equations also occupy a large sector of pure mathematical research, in which the usual questions are, broadly speaking, on the identification of general qualitative features of solutions of various partial differential equations, such as existence, uniqueness, regularity and stability.",
+      "char_count": 954,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0001",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 955,
+      "end_char": 1761,
+      "content": "Among the many open questions are the existence and smoothness of solutions to the Navier–Stokes equations, named as one of the Millennium Prize Problems in 2000. Partial differential equations are ubiquitous in mathematically oriented scientific fields, such as physics and engineering. For instance, they are foundational in the modern scientific understanding of sound, heat, diffusion, electrostatics, electrodynamics, thermodynamics, fluid dynamics, elasticity, general relativity, and quantum mechanics (Schrödinger equation, Pauli equation etc.). They also arise from many purely mathematical considerations, such as differential geometry and the calculus of variations; among other notable applications, they are the fundamental tool in the proof of the Poincaré conjecture from geometric topology.",
+      "char_count": 806,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0002",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1762,
+      "end_char": 2752,
+      "content": "Partly due to this variety of sources, there is a wide spectrum of different types of partial differential equations, where the meaning of a solution depends on the context of the problem, and methods have been developed for dealing with many of the individual equations which arise. As such, it is usually acknowledged that there is no \"universal theory\" of partial differential equations, with specialist knowledge being somewhat divided between several essentially distinct subfields. Ordinary differential equations can be viewed as a subclass of partial differential equations, corresponding to functions of a single variable. Stochastic partial differential equations and nonlocal equations are, as of 2020, particularly widely studied extensions of the \"PDE\" notion. More classical topics, on which there is still much active research, include elliptic and parabolic partial differential equations, fluid mechanics, Boltzmann equations, and dispersive partial differential equations.",
+      "char_count": 990,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0003",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 2771,
+      "end_char": 3747,
+      "content": "== Introduction == A function u(x, y, z) of three variables is \"harmonic\" or \"a solution of the Laplace equation\" if it satisfies the condition ∂ 2 u ∂ x 2 + ∂ 2 u ∂ y 2 + ∂ 2 u ∂ z 2 = 0. {\\displaystyle {\\frac {\\partial ^{2}u}{\\partial x^{2}}}+{\\frac {\\partial ^{2}u}{\\partial y^{2}}}+{\\frac {\\partial ^{2}u}{\\partial z^{2}}}=0.} Such functions were widely studied in the 19th century due to their relevance for classical mechanics, for example the equilibrium temperature distribution of a homogeneous solid is a harmonic function. If explicitly given a function, it is usually a matter of straightforward computation to check whether or not it is harmonic. For instance u ( x , y , z ) = 1 x 2 − 2 x + y 2 + z 2 + 1 {\\displaystyle u(x,y,z)={\\frac {1}{\\sqrt {x^{2}-2x+y^{2}+z^{2}+1}}}} and u ( x , y , z ) = 2 x 2 − y 2 − z 2 {\\displaystyle u(x,y,z)=2x^{2}-y^{2}-z^{2}} are both harmonic while u ( x , y , z ) = sin ⁡ ( x y ) + z {\\displaystyle u(x,y,z)=\\sin(xy)+z} is not.",
+      "char_count": 975,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0004",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 3747,
+      "end_char": 4518,
+      "content": "It may be surprising that the two examples of harmonic functions are of such strikingly different form. This is a reflection of the fact that they are not, in any immediate way, special cases of a \"general solution formula\" of the Laplace equation. This is in striking contrast to the case of ordinary differential equations (ODEs) roughly similar to the Laplace equation, with the aim of many introductory textbooks being to find algorithms leading to general solution formulas. For the Laplace equation, as for a large number of partial differential equations, such solution formulas fail to exist. The nature of this failure can be seen more concretely in the case of the following PDE: for a function v(x, y) of two variables, consider the equation ∂ 2 v ∂ x ∂ y = 0.",
+      "char_count": 771,
+      "token_estimate": 192,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0005",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 4519,
+      "end_char": 5473,
+      "content": "{\\displaystyle {\\frac {\\partial ^{2}v}{\\partial x\\partial y}}=0.} It can be directly checked that any function v of the form v(x, y) = f(x) + g(y), for any single-variable functions f and g whatsoever, will satisfy this condition. This is far beyond the choices available in ODE solution formulas, which typically allow the free choice of some numbers. In the study of PDEs, one generally has the free choice of functions. The nature of this choice varies from PDE to PDE. To understand it for any given equation, existence and uniqueness theorems are usually important organizational principles. In many introductory textbooks, the role of existence and uniqueness theorems for ODE can be somewhat opaque; the existence half is usually unnecessary, since one can directly check any proposed solution formula, while the uniqueness half is often only present in the background in order to ensure that a proposed solution formula is as general as possible.",
+      "char_count": 954,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0006",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 5474,
+      "end_char": 6303,
+      "content": "By contrast, for PDE, existence and uniqueness theorems are often the only means by which one can navigate through the plethora of different solutions at hand. For this reason, they are also fundamental when carrying out a purely numerical simulation, as one must have an understanding of what data is to be prescribed by the user and what is to be left to the computer to calculate. To discuss such existence and uniqueness theorems, it is necessary to be precise about the domain of the \"unknown function\". Otherwise, speaking only in terms such as \"a function of two variables\", it is impossible to meaningfully formulate the results. That is, the domain of the unknown function must be regarded as part of the structure of the PDE itself. The following provides two classic examples of such existence and uniqueness theorems.",
+      "char_count": 829,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0007",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 6304,
+      "end_char": 7230,
+      "content": "Even though the two PDE in question are so similar, there is a striking difference in behavior: for the first PDE, one has the free prescription of a single function, while for the second PDE, one has the free prescription of two functions. Let B denote the unit-radius disk around the origin in the plane. For any continuous function U on the unit circle, there is exactly one function u on B such that ∂ 2 u ∂ x 2 + ∂ 2 u ∂ y 2 = 0 {\\displaystyle {\\frac {\\partial ^{2}u}{\\partial x^{2}}}+{\\frac {\\partial ^{2}u}{\\partial y^{2}}}=0} and whose restriction to the unit circle is given by U. For any functions f and g on the real line R, there is exactly one function u on R × (−1, 1) such that ∂ 2 u ∂ x 2 − ∂ 2 u ∂ y 2 = 0 {\\displaystyle {\\frac {\\partial ^{2}u}{\\partial x^{2}}}-{\\frac {\\partial ^{2}u}{\\partial y^{2}}}=0} and with u(x, 0) = f(x) and ⁠∂u/∂y⁠(x, 0) = g(x) for all values of x. Even more phenomena are possible.",
+      "char_count": 926,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0008",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 7231,
+      "end_char": 8168,
+      "content": "For instance, the following PDE, arising naturally in the field of differential geometry, illustrates an example where there is a simple and completely explicit solution formula, but with the free choice of only three numbers and not even one function. If u is a function on R2 with ∂ ∂ x ∂ u ∂ x 1 + ( ∂ u ∂ x ) 2 + ( ∂ u ∂ y ) 2 + ∂ ∂ y ∂ u ∂ y 1 + ( ∂ u ∂ x ) 2 + ( ∂ u ∂ y ) 2 = 0 , {\\displaystyle {\\frac {\\partial }{\\partial x}}{\\frac {\\frac {\\partial u}{\\partial x}}{\\sqrt {1+\\left({\\frac {\\partial u}{\\partial x}}\\right)^{2}+\\left({\\frac {\\partial u}{\\partial y}}\\right)^{2}}}}+{\\frac {\\partial }{\\partial y}}{\\frac {\\frac {\\partial u}{\\partial y}}{\\sqrt {1+\\left({\\frac {\\partial u}{\\partial x}}\\right)^{2}+\\left({\\frac {\\partial u}{\\partial y}}\\right)^{2}}}}=0,} then there are numbers a, b, and c with u(x, y) = ax + by + c. In contrast to the earlier examples, this PDE is nonlinear, owing to the square roots and the squares.",
+      "char_count": 937,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0009",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Introduction ==",
+      "heading_path": "== Introduction ==",
+      "start_char": 8169,
+      "end_char": 8332,
+      "content": "A linear PDE is one such that, if it is homogeneous, the sum of any two solutions is also a solution, and any constant multiple of any solution is also a solution.",
+      "char_count": 163,
+      "token_estimate": 40,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0010",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Definition ==",
+      "heading_path": "== Definition ==",
+      "start_char": 8331,
+      "end_char": 9194,
+      "content": "== Definition == A partial differential equation is an equation that involves an unknown function of n ≥ 2 {\\displaystyle n\\geq 2} variables and (some of) its partial derivatives. That is, for the unknown function u : U → R , {\\displaystyle u:U\\rightarrow \\mathbb {R} ,} of variables x = ( x 1 , … , x n ) {\\displaystyle x=(x_{1},\\dots ,x_{n})} belonging to the open subset U {\\displaystyle U} of R n {\\displaystyle \\mathbb {R} ^{n}} , the k t h {\\displaystyle k^{th}} -order partial differential equation is defined as F [ D k u , D k − 1 u , … , D u , u , x ] = 0 , {\\displaystyle F[D^{k}u,D^{k-1}u,\\dots ,Du,u,x]=0,} where F : R n k × R n k − 1 ⋯ × R n × R × U → R , {\\displaystyle F:\\mathbb {R} ^{n^{k}}\\times \\mathbb {R} ^{n^{k-1}}\\dots \\times \\mathbb {R} ^{n}\\times \\mathbb {R} \\times U\\rightarrow \\mathbb {R} ,} and D {\\displaystyle D} is the partial derivative operator.",
+      "char_count": 878,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0011",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Notation ==",
+      "heading_path": "== = Notation ==",
+      "start_char": 9210,
+      "end_char": 10186,
+      "content": "== = Notation === When writing PDEs, it is common to denote partial derivatives using subscripts. For example: u x = ∂ u ∂ x , u x x = ∂ 2 u ∂ x 2 , u x y = ∂ 2 u ∂ y ∂ x = ∂ ∂ y ( ∂ u ∂ x ) . {\\displaystyle u_{x}={\\frac {\\partial u}{\\partial x}},\\quad u_{xx}={\\frac {\\partial ^{2}u}{\\partial x^{2}}},\\quad u_{xy}={\\frac {\\partial ^{2}u}{\\partial y\\,\\partial x}}={\\frac {\\partial }{\\partial y}}\\left({\\frac {\\partial u}{\\partial x}}\\right).} In the general situation that u is a function of n variables, then ui denotes the first partial derivative relative to the i-th input, uij denotes the second partial derivative relative to the i-th and j-th inputs, and so on. The Greek letter Δ denotes the Laplace operator; if u is a function of n variables, then Δ u = u 11 + u 22 + ⋯ + u n n . {\\displaystyle \\Delta u=u_{11}+u_{22}+\\cdots +u_{nn}.} In the physics literature, the Laplace operator is often denoted by ∇2; in the mathematics literature, ∇2u may also denote the Hessian matrix of u.",
+      "char_count": 991,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0012",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Second order equations ==",
+      "heading_path": "== = Second order equations ==",
+      "start_char": 12740,
+      "end_char": 13407,
+      "content": "== = Second order equations === The elliptic/parabolic/hyperbolic classification provides a guide to appropriate initial- and boundary conditions and to the smoothness of the solutions. Assuming uxy = uyx, the general linear second-order PDE in two independent variables has the form A u x x + 2 B u x y + C u y y + ⋯ (lower order terms) = 0 , {\\displaystyle Au_{xx}+2Bu_{xy}+Cu_{yy}+\\cdots {\\mbox{(lower order terms)}}=0,} where the coefficients A, B, C... may depend upon x and y. If A2 + B2 + C2 > 0 over a region of the xy-plane, the PDE is second-order in that region. This form is analogous to the equation for a conic section: A x 2 + 2 B x y + C y 2 + ⋯ = 0.",
+      "char_count": 666,
+      "token_estimate": 166,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0013",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Second order equations ==",
+      "heading_path": "== = Second order equations ==",
+      "start_char": 13407,
+      "end_char": 14225,
+      "content": "{\\displaystyle Ax^{2}+2Bxy+Cy^{2}+\\cdots =0.} More precisely, replacing ∂x by X, and likewise for other variables (formally this is done by a Fourier transform), converts a constant-coefficient PDE into a polynomial of the same degree, with the terms of the highest degree (a homogeneous polynomial, here a quadratic form) being most significant for the classification. Just as one classifies conic sections and quadratic forms into parabolic, hyperbolic, and elliptic based on the discriminant B2 − 4AC, the same can be done for a second-order PDE at a given point. However, the discriminant in a PDE is given by B2 − AC due to the convention of the xy term being 2B rather than B; formally, the discriminant (of the associated quadratic form) is (2B)2 − 4AC = 4(B2 − AC), with the factor of 4 dropped for simplicity.",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0014",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Second order equations ==",
+      "heading_path": "== = Second order equations ==",
+      "start_char": 14226,
+      "end_char": 15171,
+      "content": "B2 − AC < 0 (elliptic partial differential equation): Solutions of elliptic PDEs are as smooth as the coefficients allow, within the interior of the region where the equation and solutions are defined. For example, solutions of Laplace's equation are analytic within the domain where they are defined, but solutions may assume boundary values that are not smooth. The motion of a fluid at subsonic speeds can be approximated with elliptic PDEs, and the Euler–Tricomi equation is elliptic where x < 0. By change of variables, the equation can always be expressed in the form: u x x + u y y + ⋯ = 0 , {\\displaystyle u_{xx}+u_{yy}+\\cdots =0,} where x and y correspond to changed variables. This justifies Laplace equation as an example of this type. B2 − AC = 0 (parabolic partial differential equation): Equations that are parabolic at every point can be transformed into a form analogous to the heat equation by a change of independent variables.",
+      "char_count": 945,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0015",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Second order equations ==",
+      "heading_path": "== = Second order equations ==",
+      "start_char": 15172,
+      "end_char": 16121,
+      "content": "Solutions smooth out as the transformed time variable increases. The Euler–Tricomi equation has parabolic type on the line where x = 0. By change of variables, the equation can always be expressed in the form: u x x + ⋯ = 0 , {\\displaystyle u_{xx}+\\cdots =0,} where x correspond to changed variables. This justifies heat equation, which are of form u t − u x x + ⋯ = 0 {\\textstyle u_{t}-u_{xx}+\\cdots =0} , as an example of this type. B2 − AC > 0 (hyperbolic partial differential equation): hyperbolic equations retain any discontinuities of functions or derivatives in the initial data. An example is the wave equation. The motion of a fluid at supersonic speeds can be approximated with hyperbolic PDEs, and the Euler–Tricomi equation is hyperbolic where x > 0. By change of variables, the equation can always be expressed in the form: u x x − u y y + ⋯ = 0 , {\\displaystyle u_{xx}-u_{yy}+\\cdots =0,} where x and y correspond to changed variables.",
+      "char_count": 949,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0016",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Second order equations ==",
+      "heading_path": "== = Second order equations ==",
+      "start_char": 16122,
+      "end_char": 17061,
+      "content": "This justifies wave equation as an example of this type. If there are n independent variables x1, x2 , …, xn, a general linear partial differential equation of second order has the form L u = ∑ i = 1 n ∑ j = 1 n a i , j ∂ 2 u ∂ x i ∂ x j + lower-order terms = 0. {\\displaystyle Lu=\\sum _{i=1}^{n}\\sum _{j=1}^{n}a_{i,j}{\\frac {\\partial ^{2}u}{\\partial x_{i}\\partial x_{j}}}\\quad +{\\text{lower-order terms}}=0.} The classification depends upon the signature of the eigenvalues of the coefficient matrix ai,j. Elliptic: the eigenvalues are all positive or all negative. Parabolic: the eigenvalues are all positive or all negative, except one that is zero. Hyperbolic: there is only one negative eigenvalue and all the rest are positive, or there is only one positive eigenvalue and all the rest are negative. Ultrahyperbolic: there is more than one positive eigenvalue and more than one negative eigenvalue, and there are no zero eigenvalues.",
+      "char_count": 939,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0017",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Second order equations ==",
+      "heading_path": "== = Second order equations ==",
+      "start_char": 17062,
+      "end_char": 17646,
+      "content": "The theory of elliptic, parabolic, and hyperbolic equations have been studied for centuries, largely centered around or based upon the standard examples of the Laplace equation, the heat equation, and the wave equation. However, the classification only depends on linearity of the second-order terms and is therefore applicable to semi- and quasilinear PDEs as well. The basic types also extend to hybrids such as the Euler–Tricomi equation; varying from elliptic to hyperbolic for different regions of the domain, as well as higher-order PDEs, but such knowledge is more specialized.",
+      "char_count": 584,
+      "token_estimate": 146,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0018",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Systems of first-order equations and characteristic surfaces ==",
+      "heading_path": "== = Systems of first-order equations and characteristic surfaces ==",
+      "start_char": 17685,
+      "end_char": 18592,
+      "content": "== = Systems of first-order equations and characteristic surfaces === The classification of partial differential equations can be extended to systems of first-order equations, where the unknown u is now a vector with m components, and the coefficient matrices Aν are m by m matrices for ν = 1, 2, …, n. The partial differential equation takes the form L u = ∑ ν = 1 n A ν ∂ u ∂ x ν + B = 0 , {\\displaystyle Lu=\\sum _{\\nu =1}^{n}A_{\\nu }{\\frac {\\partial u}{\\partial x_{\\nu }}}+B=0,} where the coefficient matrices Aν and the vector B may depend upon x and u. If a hypersurface S is given in the implicit form φ ( x 1 , x 2 , … , x n ) = 0 , {\\displaystyle \\varphi (x_{1},x_{2},\\ldots ,x_{n})=0,} where φ has a non-zero gradient, then S is a characteristic surface for the operator L at a given point if the characteristic form vanishes: Q ( ∂ φ ∂ x 1 , … , ∂ φ ∂ x n ) = det [ ∑ ν = 1 n A ν ∂ φ ∂ x ν ] = 0.",
+      "char_count": 906,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0019",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Systems of first-order equations and characteristic surfaces ==",
+      "heading_path": "== = Systems of first-order equations and characteristic surfaces ==",
+      "start_char": 18592,
+      "end_char": 19553,
+      "content": "{\\displaystyle Q\\left({\\frac {\\partial \\varphi }{\\partial x_{1}}},\\ldots ,{\\frac {\\partial \\varphi }{\\partial x_{n}}}\\right)=\\det \\left[\\sum _{\\nu =1}^{n}A_{\\nu }{\\frac {\\partial \\varphi }{\\partial x_{\\nu }}}\\right]=0.} The geometric interpretation of this condition is as follows: if data for u are prescribed on the surface S, then it may be possible to determine the normal derivative of u on S from the differential equation. If the data on S and the differential equation determine the normal derivative of u on S, then S is non-characteristic. If the data on S and the differential equation do not determine the normal derivative of u on S, then the surface is characteristic, and the differential equation restricts the data on S: the differential equation is internal to S. A first-order system Lu = 0 is elliptic if no surface is characteristic for L: the values of u on S and the differential equation always determine the normal derivative of u on S.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0020",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Systems of first-order equations and characteristic surfaces ==",
+      "heading_path": "== = Systems of first-order equations and characteristic surfaces ==",
+      "start_char": 19554,
+      "end_char": 20308,
+      "content": "A first-order system is hyperbolic at a point if there is a spacelike surface S with normal ξ at that point. This means that, given any non-trivial vector η orthogonal to ξ, and a scalar multiplier λ, the equation Q(λξ + η) = 0 has m real roots λ1, λ2, …, λm. The system is strictly hyperbolic if these roots are always distinct. The geometrical interpretation of this condition is as follows: the characteristic form Q(ζ) = 0 defines a cone (the normal cone) with homogeneous coordinates ζ. In the hyperbolic case, this cone has nm sheets, and the axis ζ = λξ runs inside these sheets: it does not intersect any of them. But when displaced from the origin by η, this axis intersects every sheet. In the elliptic case, the normal cone has no real sheets.",
+      "char_count": 754,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0021",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Separation of variables ==",
+      "heading_path": "== = Separation of variables ==",
+      "start_char": 20299,
+      "end_char": 21249,
+      "content": "== = Separation of variables === Linear PDEs can be reduced to systems of ordinary differential equations by the important technique of separation of variables. This technique rests on a feature of solutions to differential equations: if one can find any solution that solves the equation and satisfies the boundary conditions, then it is the solution (this also applies to ODEs). We assume as an ansatz that the dependence of a solution on the parameters space and time can be written as a product of terms that each depend on a single parameter, and then see if this can be made to solve the problem. In the method of separation of variables, one reduces a PDE to a PDE in fewer variables, which is an ordinary differential equation if in one variable – these are in turn easier to solve. This is possible for simple PDEs, which are called separable partial differential equations, and the domain is generally a rectangle (a product of intervals).",
+      "char_count": 949,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0022",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Separation of variables ==",
+      "heading_path": "== = Separation of variables ==",
+      "start_char": 21249,
+      "end_char": 21488,
+      "content": "Separable PDEs correspond to diagonal matrices – thinking of \"the value for fixed x\" as a coordinate, each coordinate can be understood separately. This generalizes to the method of characteristics, and is also used in integral transforms.",
+      "char_count": 239,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0023",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Method of characteristics ==",
+      "heading_path": "== = Method of characteristics ==",
+      "start_char": 21491,
+      "end_char": 21938,
+      "content": "== = Method of characteristics === The characteristic surface in n = 2-dimensional space is called a characteristic curve. In special cases, one can find characteristic curves on which the first-order PDE reduces to an ODE – changing coordinates in the domain to straighten these curves allows separation of variables, and is called the method of characteristics. More generally, applying the method to first-order PDEs in higher dimensions, one may find characteristic surfaces.",
+      "char_count": 479,
+      "token_estimate": 119,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0024",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Integral transform ==",
+      "heading_path": "== = Integral transform ==",
+      "start_char": 21964,
+      "end_char": 22557,
+      "content": "== = Integral transform === An integral transform may transform the PDE to a simpler one, in particular, a separable PDE. This corresponds to diagonalizing an operator. An important example of this is Fourier analysis, which diagonalizes the heat equation using the eigenbasis of sinusoidal waves. If the domain is finite or periodic, an infinite sum of solutions such as a Fourier series is appropriate, but an integral of solutions such as a Fourier integral is generally required for infinite domains. The solution for a point source for the heat equation given above is an example of the use of a Fourier integral.",
+      "char_count": 618,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0025",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Change of variables ==",
+      "heading_path": "== = Change of variables ==",
+      "start_char": 22584,
+      "end_char": 23431,
+      "content": "== = Change of variables === Often a PDE can be reduced to a simpler form with a known solution by a suitable change of variables. For example, the Black–Scholes equation ∂ V ∂ t + 1 2 σ 2 S 2 ∂ 2 V ∂ S 2 + r S ∂ V ∂ S − r V = 0 {\\displaystyle {\\frac {\\partial V}{\\partial t}}+{\\tfrac {1}{2}}\\sigma ^{2}S^{2}{\\frac {\\partial ^{2}V}{\\partial S^{2}}}+rS{\\frac {\\partial V}{\\partial S}}-rV=0} is reducible to the heat equation ∂ u ∂ τ = ∂ 2 u ∂ x 2 {\\displaystyle {\\frac {\\partial u}{\\partial \\tau }}={\\frac {\\partial ^{2}u}{\\partial x^{2}}}} by the change of variables V ( S , t ) = v ( x , τ ) , x = ln ⁡ ( S ) , τ = 1 2 σ 2 ( T − t ) , v ( x , τ ) = e − α x − β τ u ( x , τ ) . {\\displaystyle {\\begin{aligned}V(S,t)&=v(x,\\tau ),\\\\[5px]x&=\\ln \\left(S\\right),\\\\[5px]\\tau &={\\tfrac {1}{2}}\\sigma ^{2}(T-t),\\\\[5px]v(x,\\tau )&=e^{-\\alpha x-\\beta \\tau }u(x,\\tau ).\\end{aligned}}}",
+      "char_count": 873,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0026",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Fundamental solution ==",
+      "heading_path": "== = Fundamental solution ==",
+      "start_char": 23459,
+      "end_char": 23839,
+      "content": "== = Fundamental solution === Inhomogeneous equations can often be solved (for constant coefficient PDEs, always be solved) by finding the fundamental solution (the solution for a point source P ( D ) u = δ {\\displaystyle P(D)u=\\delta } ), then taking the convolution with the boundary conditions to get the solution. This is analogous in signal processing to understanding a filter by its impulse response.",
+      "char_count": 407,
+      "token_estimate": 101,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0027",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Superposition principle ==",
+      "heading_path": "== = Superposition principle ==",
+      "start_char": 23870,
+      "end_char": 24407,
+      "content": "== = Superposition principle === The superposition principle applies to any linear system, including linear systems of PDEs. A common visualization of this concept is the interaction of two waves in phase being combined to result in a greater amplitude, for example sin x + sin x = 2 sin x. The same principle can be observed in PDEs where the solutions may be real or complex and additive. If u1 and u2 are solutions of linear PDE in some function space R, then u = c1u1 + c2u2 with any constants c1 and c2 are also a solution of that PDE in the same function space.",
+      "char_count": 567,
+      "token_estimate": 141,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0028",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Methods for non-linear equations ==",
+      "heading_path": "== = Methods for non-linear equations ==",
+      "start_char": 24447,
+      "end_char": 25346,
+      "content": "== = Methods for non-linear equations === There are no generally applicable analytical methods to solve nonlinear PDEs. Still, existence and uniqueness results (such as the Cauchy–Kowalevski theorem) are often possible, as are proofs of important qualitative and quantitative properties of solutions (getting these results is a major part of analysis). Nevertheless, some techniques can be used for several types of equations. The h-principle is the most powerful method to solve underdetermined equations. The Riquier–Janet theory is an effective method for obtaining information about many analytic overdetermined systems. The method of characteristics can be used in some very special cases to solve nonlinear partial differential equations. In some cases, a PDE can be solved via perturbation analysis in which the solution is considered to be a correction to an equation with a known solution.",
+      "char_count": 898,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0029",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Methods for non-linear equations ==",
+      "heading_path": "== = Methods for non-linear equations ==",
+      "start_char": 25346,
+      "end_char": 25623,
+      "content": "Alternatives are numerical analysis techniques from simple finite difference schemes to the more mature multigrid and finite element methods. Many interesting problems in science and engineering are solved in this way using computers, sometimes high performance supercomputers.",
+      "char_count": 277,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0030",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Lie group method ==",
+      "heading_path": "== = Lie group method ==",
+      "start_char": 25608,
+      "end_char": 26275,
+      "content": "== = Lie group method === From 1870 Sophus Lie's work put the theory of differential equations on a more satisfactory foundation. He showed that the integration theories of the older mathematicians can, by the introduction of what are now called Lie groups, be referred, to a common source; and that ordinary differential equations which admit the same infinitesimal transformations present comparable difficulties of integration. He also emphasized the subject of transformations of contact. A general approach to solving PDEs uses the symmetry property of differential equations, the continuous infinitesimal transformations of solutions to solutions (Lie theory).",
+      "char_count": 666,
+      "token_estimate": 166,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0031",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Lie group method ==",
+      "heading_path": "== = Lie group method ==",
+      "start_char": 26275,
+      "end_char": 26731,
+      "content": "Continuous group theory, Lie algebras and differential geometry are used to understand the structure of linear and nonlinear partial differential equations for generating integrable equations, to find its Lax pairs, recursion operators, Bäcklund transform and finally finding exact analytic solutions to the PDE. Symmetry methods have been recognized to study differential equations arising in mathematics, physics, engineering, and many other disciplines.",
+      "char_count": 456,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0032",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Semi-analytical methods ==",
+      "heading_path": "== = Semi-analytical methods ==",
+      "start_char": 26739,
+      "end_char": 27167,
+      "content": "== = Semi-analytical methods === The Adomian decomposition method, the Lyapunov artificial small parameter method, and his homotopy perturbation method are all special cases of the more general homotopy analysis method. These are series expansion methods, and except for the Lyapunov method, are independent of small physical parameters as compared to the well known perturbation theory, thus giving these methods greater flexibility and solution generality.",
+      "char_count": 458,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0033",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Numerical solutions ==",
+      "heading_path": "== Numerical solutions ==",
+      "start_char": 27192,
+      "end_char": 27976,
+      "content": "== Numerical solutions == The three most widely used numerical methods to solve PDEs are the finite element method (FEM), finite volume methods (FVM) and finite difference methods (FDM), as well other kind of methods called meshfree methods, which were made to solve problems where the aforementioned methods are limited. The FEM has a prominent position among these methods and especially its exceptionally efficient higher-order version hp-FEM. Other hybrid versions of FEM and Meshfree methods include the generalized finite element method (GFEM), extended finite element method (XFEM), spectral finite element method (SFEM), meshfree finite element method, discontinuous Galerkin finite element method (DGFEM), element-free Galerkin method (EFGM), interpolating element-free Galerkin method (IEFGM), etc.",
+      "char_count": 808,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0034",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Finite element method ==",
+      "heading_path": "== = Finite element method ==",
+      "start_char": 28005,
+      "end_char": 28578,
+      "content": "== = Finite element method === The finite element method (FEM) (its practical application often known as finite element analysis (FEA)) is a numerical technique for approximating solutions of partial differential equations (PDE) as well as of integral equations using a finite set of functions. The solution approach is based either on eliminating the differential equation completely (steady state problems), or rendering the PDE into an approximating system of ordinary differential equations, which are then numerically integrated using standard techniques such as Euler's method, Runge–Kutta, etc.",
+      "char_count": 601,
+      "token_estimate": 150,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0035",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Finite volume method ==",
+      "heading_path": "== = Finite volume method ==",
+      "start_char": 28808,
+      "end_char": 29409,
+      "content": "== = Finite volume method === Similar to the finite difference method or finite element method, values are calculated at discrete places on a meshed geometry. \"Finite volume\" refers to the small volume surrounding each node point on a mesh. In the finite volume method, surface integrals in a partial differential equation that contain a divergence term are converted to volume integrals, using the divergence theorem. These terms are then evaluated as fluxes at the surfaces of each finite volume. Because the flux entering a given volume is identical to that leaving the adjacent volume, these methods conserve mass by design.",
+      "char_count": 628,
+      "token_estimate": 157,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0036",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Weak solutions ==",
+      "heading_path": "== Weak solutions ==",
+      "start_char": 29454,
+      "end_char": 30189,
+      "content": "== Weak solutions == Weak solutions are functions that satisfy the PDE, yet in other meanings than regular sense. The meaning for this term may differ with context, and one of the most commonly used definitions is based on the notion of distributions. An example for the definition of a weak solution is as follows: Consider the boundary-value problem given by: L u = f in U , u = 0 on ∂ U , {\\displaystyle {\\begin{aligned}Lu&=f\\quad {\\text{in }}U,\\\\u&=0\\quad {\\text{on }}\\partial U,\\end{aligned}}} where L u = − ∑ i , j ∂ j ( a i j ∂ i u ) + ∑ i b i ∂ i u + c u {\\displaystyle Lu=-\\sum _{i,j}\\partial _{j}(a^{ij}\\partial _{i}u)+\\sum _{i}b^{i}\\partial _{i}u+cu} denotes a second-order partial differential operator in divergence form.",
+      "char_count": 734,
+      "token_estimate": 183,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0037",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Weak solutions ==",
+      "heading_path": "== Weak solutions ==",
+      "start_char": 30189,
+      "end_char": 31129,
+      "content": "We say a u ∈ H 0 1 ( U ) {\\displaystyle u\\in H_{0}^{1}(U)} is a weak solution if ∫ U [ ∑ i , j a i j ( ∂ i u ) ( ∂ j v ) + ∑ i b i ( ∂ i u ) v + c u v ] d x = ∫ U f v d x {\\displaystyle \\int _{U}[\\sum _{i,j}a^{ij}(\\partial _{i}u)(\\partial _{j}v)+\\sum _{i}b^{i}(\\partial _{i}u)v+cuv]dx=\\int _{U}fvdx} for every v ∈ H 0 1 ( U ) {\\displaystyle v\\in H_{0}^{1}(U)} , which can be derived by a formal integral by parts. An example for a weak solution is as follows: ϕ ( x ) = 1 4 π 1 | x | {\\displaystyle \\phi (x)={\\frac {1}{4\\pi }}{\\frac {1}{|x|}}} is a weak solution satisfying ∇ 2 ϕ = δ in R 3 {\\displaystyle \\nabla ^{2}\\phi =\\delta {\\text{ in }}R^{3}} in distributional sense, as formally, ∫ R 3 ∇ 2 ϕ ( x ) ψ ( x ) d x = ∫ R 3 ϕ ( x ) ∇ 2 ψ ( x ) d x = ψ ( 0 ) for ψ ∈ C c ∞ ( R 3 ) . {\\displaystyle \\int _{R^{3}}\\nabla ^{2}\\phi (x)\\psi (x)dx=\\int _{R^{3}}\\phi (x)\\nabla ^{2}\\psi (x)dx=\\psi (0){\\text{ for }}\\psi \\in C_{c}^{\\infty }(R^{3}).}",
+      "char_count": 940,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0038",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== Theoretical Studies ==",
+      "heading_path": "== Theoretical Studies ==",
+      "start_char": 31135,
+      "end_char": 31322,
+      "content": "== Theoretical Studies == As a branch of pure mathematics, the theoretical studies of PDEs focus on the criteria for a solution to exist, the properties of a solution, and finding its formula is often secondary.",
+      "char_count": 211,
+      "token_estimate": 52,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0039",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Well-posedness ==",
+      "heading_path": "== = Well-posedness ==",
+      "start_char": 31344,
+      "end_char": 32063,
+      "content": "== = Well-posedness === Well-posedness refers to a common schematic package of information about a PDE. To say that a PDE is well-posed, one must have: an existence and uniqueness theorem, asserting that by the prescription of some freely chosen functions, one can single out one specific solution of the PDE by continuously changing the free choices, one continuously changes the corresponding solution This is, by the necessity of being applicable to several different PDE, somewhat vague. The requirement of \"continuity\", in particular, is ambiguous, since there are usually many inequivalent means by which it can be rigorously defined. It is, however, somewhat unusual to study a PDE without specifying a way in which it is well-posed.",
+      "char_count": 740,
+      "token_estimate": 185,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "partialdifferentiale_c7d1e3e4_c0040",
+      "article_id": "partialdifferentiale_c7d1e3e4",
+      "section": "== = Regularity ==",
+      "heading_path": "== = Regularity ==",
+      "start_char": 32081,
+      "end_char": 32506,
+      "content": "== = Regularity === Regularity refers to the integrability and differentiability of weak solutions, which can often be represented by Sobolev spaces. This problem arise due to the difficulty in searching for classical solutions. Researchers often tend to find weak solutions at first and then find out whether it is smooth enough to be qualified as a classical solution. Results from functional analysis are often used in this field of study.",
+      "char_count": 442,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "In the context of Partial Differential Equations (PDEs), what does the Greek letter Δ denote?",
+        "answer": "The Greek letter Δ denotes the Laplace operator. If u is a function of n variables, then the Laplace operator is defined as Δu = u₁₁ + u₂₂ + ⋯ + uₙₙ.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0011"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0011"
+        ]
+      },
+      {
+        "question": "As of 2020, what were two particularly widely studied extensions of the \"PDE\" notion?",
+        "answer": "As of 2020, stochastic partial differential equations and nonlocal equations were particularly widely studied extensions of the \"PDE\" notion.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0002"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0002"
+        ]
+      },
+      {
+        "question": "What mathematical condition must a function u(x, y, z) of three variables satisfy to be considered \"harmonic\"?",
+        "answer": "A function u(x, y, z) of three variables is considered \"harmonic\" or \"a solution of the Laplace equation\" if it satisfies the condition ∂²u/∂x² + ∂²u/∂y² + ∂²u/∂z² = 0.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0003"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0003"
+        ]
+      },
+      {
+        "question": "What are the primary areas and key questions driving research in the field of partial differential equations?",
+        "answer": "Research in partial differential equations is extensive and can be broadly categorized. One major area is the development of numerical methods to approximate solutions using computers, as explicit formulas are often impossible to find. Another large sector is pure mathematical research focusing on the qualitative features of solutions, such as their existence, uniqueness, regularity, and stability. A significant open problem driving research is proving the existence and smoothness of solutions to the Navier–Stokes equations. Furthermore, active research continues in classical topics like elliptic and parabolic PDEs, fluid mechanics, Boltzmann equations, and dispersive PDEs, as well as in modern extensions like stochastic and nonlocal equations.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0000",
+          "partialdifferentiale_c7d1e3e4_c0001",
+          "partialdifferentiale_c7d1e3e4_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0001",
+          "partialdifferentiale_c7d1e3e4_c0000",
+          "partialdifferentiale_c7d1e3e4_c0002"
+        ]
+      },
+      {
+        "question": "How does finding solutions for the Laplace equation differ from the approach used for many ordinary differential equations (ODEs)?",
+        "answer": "Unlike many ordinary differential equations (ODEs), for which general solution formulas can often be found, the Laplace equation lacks such a formula. This is reflected in the fact that solutions to the Laplace equation can have strikingly different forms. The solutions for partial differential equations (PDEs) like the Laplace equation often involve the free choice of arbitrary functions, whereas ODE solutions typically only allow for the free choice of specific numbers.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0003",
+          "partialdifferentiale_c7d1e3e4_c0004",
+          "partialdifferentiale_c7d1e3e4_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0004",
+          "partialdifferentiale_c7d1e3e4_c0003",
+          "partialdifferentiale_c7d1e3e4_c0005"
+        ]
+      },
+      {
+        "question": "How does the nature of the information required to define a unique solution differ across the three partial differential equation examples provided?",
+        "answer": "The information required to specify a unique solution varies significantly between the different PDE examples. For the first PDE (∂²u/∂x² + ∂²u/∂y² = 0), a single continuous function on the unit circle must be prescribed. For the second, similar-looking PDE (∂²u/∂x² - ∂²u/∂y² = 0), two functions on the real line are required. In contrast, the third, nonlinear PDE example has a solution formula that only depends on the free choice of three numbers (a, b, and c), and not any functions.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0006",
+          "partialdifferentiale_c7d1e3e4_c0007",
+          "partialdifferentiale_c7d1e3e4_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0006",
+          "partialdifferentiale_c7d1e3e4_c0008",
+          "partialdifferentiale_c7d1e3e4_c0007"
+        ]
+      },
+      {
+        "question": "Why is the field of partial differential equations considered to be a broad area of study without a single \"universal theory\"?",
+        "answer": "The study of partial differential equations is broad and lacks a \"universal theory\" because of their diverse origins and inherent complexity. PDEs are foundational to a wide variety of scientific fields, including physics and engineering, as well as purely mathematical areas like differential geometry. This variety of sources has led to a wide spectrum of different PDE types. Coupled with the fact that it is often impossible to find explicit formulas for their solutions, this has resulted in the development of specialized methods for individual equations and the division of the field into several distinct subfields rather than being governed by one overarching theory.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0000",
+          "partialdifferentiale_c7d1e3e4_c0001",
+          "partialdifferentiale_c7d1e3e4_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0002",
+          "partialdifferentiale_c7d1e3e4_c0001",
+          "partialdifferentiale_c7d1e3e4_c0000"
+        ]
+      },
+      {
+        "question": "What is the fundamental difference between the nature of solutions for ordinary differential equations (ODEs) and partial differential equations (PDEs) like the Laplace equation, and what tools are essential for navigating PDE solutions as a result?",
+        "answer": "Unlike many ODEs, which often have general solution formulas, PDEs such as the Laplace equation typically do not. The key difference lies in the scope of choice for solutions: ODE solutions generally allow for the free choice of numbers, whereas PDE solutions permit the free choice of entire functions. Because this leads to a plethora of possible solutions, existence and uniqueness theorems are fundamental tools for understanding, navigating, and managing the solutions for a given PDE.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0003",
+          "partialdifferentiale_c7d1e3e4_c0004",
+          "partialdifferentiale_c7d1e3e4_c0005",
+          "partialdifferentiale_c7d1e3e4_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0006",
+          "partialdifferentiale_c7d1e3e4_c0004",
+          "partialdifferentiale_c7d1e3e4_c0005",
+          "partialdifferentiale_c7d1e3e4_c0003"
+        ]
+      },
+      {
+        "question": "How is the classification of a general linear second-order partial differential equation analogous to classifying a conic section, and what are the three resulting classifications based on the discriminant?",
+        "answer": "The general linear second-order PDE, Au_xx + 2Bu_xy + Cu_yy + ... = 0, is analogous to the equation for a conic section, Ax^2 + 2Bxy + Cy^2 + ... = 0. Just as conic sections are classified based on the discriminant B^2 - 4AC, a second-order PDE is classified using a simplified discriminant, B^2 - AC. The three classifications are: 1. Elliptic, when B^2 - AC < 0. 2. Parabolic, when B^2 - AC = 0. 3. Hyperbolic, when B^2 - AC > 0.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0012",
+          "partialdifferentiale_c7d1e3e4_c0013",
+          "partialdifferentiale_c7d1e3e4_c0014",
+          "partialdifferentiale_c7d1e3e4_c0015"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0012",
+          "partialdifferentiale_c7d1e3e4_c0013",
+          "partialdifferentiale_c7d1e3e4_c0014",
+          "partialdifferentiale_c7d1e3e4_c0015"
+        ]
+      },
+      {
+        "question": "What is the fundamental difference between an elliptic and a hyperbolic first-order system in terms of their characteristic surfaces and the behavior of the characteristic form Q?",
+        "answer": "The fundamental difference lies in the existence of characteristic surfaces. For an elliptic system, no surface is characteristic, which means the characteristic form, Q, never vanishes for any real surface, and its corresponding normal cone has no real sheets. In contrast, a hyperbolic system at a point possesses a spacelike surface, and its characteristic form Q(ζ) = 0 defines a normal cone with real sheets, indicating that characteristic surfaces do exist.",
+        "related_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0018",
+          "partialdifferentiale_c7d1e3e4_c0019",
+          "partialdifferentiale_c7d1e3e4_c0020"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "partialdifferentiale_c7d1e3e4_c0020",
+          "partialdifferentiale_c7d1e3e4_c0019",
+          "partialdifferentiale_c7d1e3e4_c0018"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:50.212Z",
+    "content_format": "markdown",
+    "total_chunks": 41,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}
