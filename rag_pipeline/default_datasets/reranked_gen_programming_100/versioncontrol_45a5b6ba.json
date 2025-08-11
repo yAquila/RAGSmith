@@ -1,0 +1,798 @@
+{
+  "article": {
+    "id": "versioncontrol_45a5b6ba",
+    "title": "Version control",
+    "url": "https://en.wikipedia.org/wiki/Version_control",
+    "lang": "en",
+    "created_at": "2025-07-30T08:49:13.622812",
+    "content": "---\nid: versioncontrol_45a5b6ba\nurl: https://en.wikipedia.org/wiki/Version_control\ntitle: Version control\nlang: en\ncreated_at: '2025-07-30T08:45:44.009744'\nchecksum: f7c7d7f1aa5113ac587d4d19224368c086097338b90db7da96fb366c7318106c\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4663\n  char_count: 28611\n  num_chunks: 49\n  original_chunks: 73\n  filtered_out: 24\n  num_sections: 0\n---\nVersion control (also known as revision control, source control, and source code management) is the software engineering practice of controlling, organizing, and tracking different versions in history of computer files; primarily source code text files, but generally any type of file. Version control is a component of software configuration management. A version control system is a software tool that automates version control. Alternatively, version control is embedded as a feature of some systems such as word processors, spreadsheets, collaborative web docs, and content management systems, such as Wikipedia's page history. Version control includes options to view old versions and to revert a file to a previous version. == Overview == As teams develop software, it is common to deploy multiple versions of the same software, and for different developers to work on one or more different versions simultaneously. Bugs or features of the software are often only present in certain versions (because of the fixing of some problems and the introduction of others as the program develops). Therefore, for the purposes of locating and fixing bugs, it is vitally important to be able to retrieve and run different versions of the software to determine in which version(s) the problem occurs. It may also be necessary to develop two versions of the software concurrently: for instance, where one version has bugs fixed, but no new features (branch), while the other version is where new features are worked on (trunk). At the simplest level, developers could simply retain multiple copies of the different versions of the program, and label them appropriately. This simple approach has been used in many large software projects. While this method can work, it is inefficient as many near-identical copies of the program have to be maintained. This requires a lot of self-discipline on the part of developers and often leads to mistakes. Since the code base is the same, it also requires granting read-write-execute permission to a set of developers, and this adds the pressure of someone managing permissions so that the code base is not compromised, which adds more complexity. Consequently, systems to automate some or all of the revision control process have been developed. This abstracts most operational steps (hides them from ordinary users). Moreover, in software development, legal and business practice, and other environments, it has become increasingly common for a single document or snippet of code to be edited by a team, the members of which may be geographically dispersed and may pursue different and even contrary interests. Sophisticated revision control that tracks and accounts for ownership of changes to documents and code may be extremely helpful or even indispensable in such situations. Revision control may also track changes to configuration files, such as those typically stored in /etc or /usr/local/etc on Unix systems. This gives system administrators another way to easily track changes made and a way to roll back to earlier versions should the need arise. Many version control systems identify the version of a file as a number or letter, called the version number, version, revision number, revision, or revision level. For example, the first version of a file might be version 1. When the file is changed the next version is 2. Each version is associated with a timestamp and the person making the change. Revisions can be compared, restored, and, with some types of files, merged. == History == IBM's OS/360 IEBUPDTE software update tool dates back to 1962, arguably a precursor to version control system tools. Two source management and version control packages that were heavily used by IBM 360/370 installations were The Librarian and Panvalet. A full system designed for source code control was started in 1972: the Source Code Control System (SCCS), again for the OS/360. SCCS's user manual, especially the introduction, which was published on December 4, 1975, implied that it was the first deliberate revision control system. The Revision Control System (RCS) followed in 1982 and, later, Concurrent Versions System (CVS) added network and concurrent development features to RCS. After CVS, a dominant successor was Subversion, followed by the rise of distributed version control tools such as Git. == Structure == Revision control manages changes to a set of data over time. These changes can be structured in various ways. Often the data is thought of as a collection of many individual items, such as files or documents, and changes to individual files are tracked. This is in line with the notion of keeping files separate but causes problems when identity changes, which happens when files are renamed, split or merged. Accordingly, some systems such as Git, consider changes to the data as a whole instead, which is less intuitive for simple changes but simplifies more complex changes. When data that is under revision control is modified, after being retrieved by checking out, this is not in general immediately reflected in the revision control system (in the repository), but must instead be checked in or committed. A copy outside of revision control is known as a \"working copy\". As a simple example, when editing a computer file, the data stored in memory by the editing program is the working copy, which is committed by saving the file. Concretely, one may print out a document, edit it by hand, and only later manually input the changes into a computer and save it. For source code control, the working copy is instead a copy of all files in a particular revision, generally stored locally on the developer's computer; in this case saving the file only changes the working copy, and checking into the repository is a separate step. If multiple people are working on a single data set or document, they are implicitly creating branches of the data (in their working copies), and thus issues of merging arise, as discussed below. For simple collaborative document editing, this can be prevented by using file locking or simply avoiding working on the same document that someone else is working on. Revision control systems are often centralized, with a single authoritative data store, the repository, and check-outs and check-ins done with reference to this central repository. Alternatively, in distributed revision control, no single repository is authoritative, and data can be checked out and checked into any repository. When checking into a different repository, this is interpreted as a merge or patch. === Graph structure === In terms of graph theory, revisions are generally thought of as a line of development (the trunk) with branches off of this, forming a directed tree, visualized as one or more parallel lines of development (the \"mainlines\" of the branches) branching off a trunk. In reality the structure is more complicated, forming a directed acyclic graph, but for many purposes \"tree with merges\" is an adequate approximation. Revisions occur in sequence over time, and thus can be arranged in order, either by revision number or timestamp. Revisions are based on past revisions, though it is possible to largely or completely replace an earlier revision, such as \"delete all existing text, insert new text\". In the simplest case, with no branching or undoing, each revision is based on its immediate predecessor alone, and they form a simple line, with a single latest version, the \"HEAD\" revision or tip. In graph theory terms, drawing each revision as a point and each \"derived revision\" relationship as an arrow (conventionally pointing from older to newer, in the same direction as time), this is a linear graph. If there is branching, so multiple future revisions are based on a past revision, or undoing, so a revision can depend on a revision older than its immediate predecessor, then the resulting graph is instead a directed tree (each node can have more than one child), and has multiple tips, corresponding to the revisions without children (\"latest revision on each branch\"). In principle the resulting tree need not have a preferred tip (\"main\" latest revision) – just various different revisions – but in practice one tip is generally identified as HEAD. When a new revision is based on HEAD, it is either identified as the new HEAD, or considered a new branch. The list of revisions from the start to HEAD (in graph theory terms, the unique path in the tree, which forms a linear graph as before) is the trunk or mainline. Conversely, when a revision can be based on more than one previous revision (when a node can have more than one parent), the resulting process is called a merge, and is one of the most complex aspects of revision control. This most often occurs when changes occur in multiple branches (most often two, but more are possible), which are then merged into a single branch incorporating both changes. If these changes overlap, it may be difficult or impossible to merge, and require manual intervention or rewriting. In the presence of merges, the resulting graph is no longer a tree, as nodes can have multiple parents, but is instead a rooted directed acyclic graph (DAG). The graph is acyclic since parents are always backwards in time, and rooted because there is an oldest version. Assuming there is a trunk, merges from branches can be considered as \"external\" to the tree – the changes in the branch are packaged up as a patch, which is applied to HEAD (of the trunk), creating a new revision without any explicit reference to the branch, and preserving the tree structure. Thus, while the actual relations between versions form a DAG, this can be considered a tree plus merges, and the trunk itself is a line. In distributed revision control, in the presence of multiple repositories these may be based on a single original version (a root of the tree), but there need not be an original root - instead there can be a separate root (oldest revision) for each repository. This can happen, for example, if two people start working on a project separately. Similarly, in the presence of multiple data sets (multiple projects) that exchange data or merge, there is no single root, though for simplicity one may think of one project as primary and the other as secondary, merged into the first with or without its own revision history. == Specialized strategies == Engineering revision control developed from formalized processes based on tracking revisions of early blueprints or bluelines. This system of control implicitly allowed returning to an earlier state of the design, for cases in which an engineering dead-end was reached in the development of the design. A revision table was used to keep track of the changes made. Additionally, the modified areas of the drawing were highlighted using revision clouds. === In business and law === Version control is widespread in business and law. Indeed, \"contract redline\" and \"legal blackline\" are some of the earliest forms of revision control, and are still employed in business and law with varying degrees of sophistication. The most sophisticated techniques are beginning to be used for the electronic tracking of changes to CAD files (see product data management), supplanting the \"manual\" electronic implementation of traditional revision control. == Source-management models == Traditional revision control systems use a centralized model where all the revision control functions take place on a shared server. If two developers try to change the same file at the same time, without some method of managing access the developers may end up overwriting each other's work. Centralized revision control systems solve this problem in one of two different \"source management models\": file locking and version merging. === Atomic operations === An operation is atomic if the system is left in a consistent state even if the operation is interrupted. The commit operation is usually the most critical in this sense. Commits tell the revision control system to make a group of changes final, and available to all users. Not all revision control systems have atomic commits; Concurrent Versions System lacks this feature. === File locking === The simplest method of preventing \"concurrent access\" problems involves locking files so that only one developer at a time has write access to the central \"repository\" copies of those files. Once one developer \"checks out\" a file, others can read that file, but no one else may change that file until that developer \"checks in\" the updated version (or cancels the checkout). File locking has both merits and drawbacks. It can provide some protection against difficult merge conflicts when a user is making radical changes to many sections of a large file (or group of files). If the files are left exclusively locked for too long, other developers may be tempted to bypass the revision control software and change the files locally, forcing a difficult manual merge when the other changes are finally checked in. In a large organization, files can be left \"checked out\" and locked and forgotten about as developers move between projects - these tools may or may not make it easy to see who has a file checked out. === Version merging === Most version control systems allow multiple developers to edit the same file at the same time. The first developer to \"check in\" changes to the central repository always succeeds. The system may provide facilities to merge further changes into the central repository, and preserve the changes from the first developer when other developers check in. Merging two files can be a very delicate operation, and usually possible only if the data structure is simple, as in text files. The result of a merge of two image files might not result in an image file at all. The second developer checking in files will need to take care with the merge, to make sure that the changes are compatible and that the merge operation does not introduce its own logic errors within the files. These problems limit the availability of automatic or semi-automatic merge operations mainly to simple text-based documents, unless a specific merge plugin is available for the file types. The concept of a reserved edit can provide an optional means to explicitly lock a file for exclusive write access, even when a merging capability exists. === Baselines, labels and tags === Most revision control tools will use only one of these similar terms (baseline, label, tag) to refer to the action of identifying a snapshot (\"label the project\") or the record of the snapshot (\"try it with baseline X\"). Typically only one of the terms baseline, label, or tag is used in documentation or discussion; they can be considered synonyms. In most projects, some snapshots are more significant than others, such as those used to indicate published releases, branches, or milestones. When both the term baseline and either of label or tag are used together in the same context, label and tag usually refer to the mechanism within the tool of identifying or making the record of the snapshot, and baseline indicates the increased significance of any given label or tag. Most formal discussion of configuration management uses the term baseline. == Distributed revision control == Distributed revision control systems (DRCS) take a peer-to-peer approach, as opposed to the client–server approach of centralized systems. Rather than a single, central repository on which clients synchronize, each peer's working copy of the codebase is a bona-fide repository. Distributed revision control conducts synchronization by exchanging patches (change-sets) from peer to peer. This results in some important differences from a centralized system: No canonical, reference copy of the codebase exists by default; only working copies. Common operations (such as commits, viewing history, and reverting changes) are fast, because there is no need to communicate with a central server. Rather, communication is only necessary when pushing or pulling changes to or from other peers. Each working copy effectively functions as a remote backup of the codebase and of its change-history, providing inherent protection against data loss. == Best practices == Following best practices is necessary to obtain the full benefits of version control. Best practice may vary by version control tool and the field to which version control is applied. The generally accepted best practices in software development include: making small/incremental changes; making commits which involve only one task or fix -- a corollary to this is to commit only code which works and does not knowingly break existing functionality; using branching to complete functionality before release; writing clear and descriptive commit messages, make what why and how clear in either the commit description or the code; and using a consistent branching strategy. Other best software development practices such as code review and automated regression testing may assist in the following of version control best practices. == Costs and benefits == Costs and benefits will vary dependent upon the version control tool chosen and the field in which it is applied. This section speaks to the field of software development, where version control is widely applied. === Costs === In addition to the costs of licensing the version control software, using version control requires time and effort. The concepts underlying version control must be understood and the technical particulars required to operate the version control software chosen must be learned. Version control best practices must be learned and integrated into the organization's existing software development practices. Management effort may be required to maintain the discipline needed to follow best practices in order to obtain useful benefit. === Benefits === ==== Allows for reverting changes ==== A core benefit is the ability to keep history and revert changes, allowing the developer to easily undo changes. This gives the developer more opportunity to experiment, eliminating the fear of breaking existing code. ==== Branching simplifies deployment, maintenance and development ==== Branching assists with deployment. Branching and merging, the production, packaging, and labeling of source code patches and the easy application of patches to code bases, simplifies the maintenance and concurrent development of the multiple code bases associated with the various stages of the deployment process; development, testing, staging, production, etc. ==== Damage mitigation, accountability and process and design improvement ==== There can be damage mitigation, accountability, process and design improvement, and other benefits associated with the record keeping provided by version control, the tracking of who did what, when, why, and how. When bugs arise, knowing what was done when helps with damage mitigation and recovery by assisting in the identification of what problems exist, how long they have existed, and determining problem scope and solutions. Previous versions can be installed and tested to verify conclusions reached by examination of code and commit messages. ==== Simplifies debugging ==== Version control can greatly simplify debugging. The application of a test case to multiple versions can quickly identify the change which introduced a bug. The developer need not be familiar with the entire code base and can focus instead on the code that introduced the problem. ==== Improves collaboration and communication ==== Version control enhances collaboration in multiple ways. Since version control can identify conflicting changes, i.e. incompatible changes made to the same lines of code, there is less need for coordination among developers. The packaging of commits, branches, and all the associated commit messages and version labels, improves communication between developers, both in the moment and over time. Better communication, whether instant or deferred, can improve the code review process, the testing process, and other critical aspects of the software development process. == Integration == Some of the more advanced revision-control tools offer many other facilities, allowing deeper integration with other tools and software-engineering processes. === Integrated development environment === Plugins are often available for IDEs such as Oracle JDeveloper, IntelliJ IDEA, Eclipse, Visual Studio, Delphi, NetBeans IDE, Xcode, and GNU Emacs (via vc.el). Advanced research prototypes generate appropriate commit messages. == Common terminology == Terminology can vary from system to system, but some terms in common usage include: === Baseline === An approved revision of a document or source file to which subsequent changes can be made. See baselines, labels and tags. === Blame === A search for the author and revision that last modified a particular line. === Branch === A set of files under version control may be branched or forked at a point in time so that, from that time forward, two copies of those files may develop at different speeds or in different ways independently of each other. === Change === A change (or diff, or delta) represents a specific modification to a document under version control. The granularity of the modification considered a change varies between version control systems. === Change list === On many version control systems with atomic multi-change commits, a change list (or CL), change set, update, or patch identifies the set of changes made in a single commit. This can also represent a sequential view of the source code, allowing the examination of source as of any particular changelist ID. === Checkout === To check out (or co) is to create a local working copy from the repository. A user may specify a specific revision or obtain the latest. The term 'checkout' can also be used as a noun to describe the working copy. When a file has been checked out from a shared file server, it cannot be edited by other users. Think of it like a hotel, when you check out, you no longer have access to its amenities. === Clone === Cloning means creating a repository containing the revisions from another repository. This is equivalent to pushing or pulling into an empty (newly initialized) repository. As a noun, two repositories can be said to be clones if they are kept synchronized, and contain the same revisions. === Commit (noun) === === Commit (verb) === To commit (check in, ci or, more rarely, install, submit or record) is to write or merge the changes made in the working copy back to the repository. A commit contains metadata, typically the author information and a commit message that describes the change. === Commit message === A short note, written by the developer, stored with the commit, which describes the commit. Ideally, it records why the modification was made, a description of the modification's effect or purpose, and non-obvious aspects of how the change works. === Conflict === A conflict occurs when different parties make changes to the same document, and the system is unable to reconcile the changes. A user must resolve the conflict by combining the changes, or by selecting one change in favour of the other. === Delta compression === Most revision control software uses delta compression, which retains only the differences between successive versions of files. This allows for more efficient storage of many different versions of files. === Dynamic stream === A stream in which some or all file versions are mirrors of the parent stream's versions. === Export === Exporting is the act of obtaining the files from the repository. It is similar to checking out except that it creates a clean directory tree without the version-control metadata used in a working copy. This is often used prior to publishing the contents, for example. === Fetch === See pull. === Forward integration === The process of merging changes made in the main trunk into a development (feature or team) branch. === Head === Also sometimes called tip, this refers to the most recent commit, either to the trunk or to a branch. The trunk and each branch have their own head, though HEAD is sometimes loosely used to refer to the trunk. === Import === Importing is the act of copying a local directory tree (that is not currently a working copy) into the repository for the first time. === Initialize === To create a new, empty repository. === Interleaved deltas === Some revision control software uses Interleaved deltas, a method that allows storing the history of text based files in a more efficient way than by using Delta compression. === Label === See tag. === Locking === When a developer locks a file, no one else can update that file until it is unlocked. Locking can be supported by the version control system, or via informal communications between developers (aka social locking). === Mainline === Similar to trunk, but there can be a mainline for each branch. === Merge === A merge or integration is an operation in which two sets of changes are applied to a file or set of files. Some sample scenarios are as follows: A user, working on a set of files, updates or syncs their working copy with changes made, and checked into the repository, by other users. A user tries to check in files that have been updated by others since the files were checked out, and the revision control software automatically merges the files (typically, after prompting the user if it should proceed with the automatic merge, and in some cases only doing so if the merge can be clearly and reasonably resolved). A branch is created, the code in the files is independently edited, and the updated branch is later incorporated into a single, unified trunk. A set of files is branched, a problem that existed before the branching is fixed in one branch, and the fix is then merged into the other branch. (This type of selective merge is sometimes known as a cherry pick to distinguish it from the complete merge in the previous case.) === Promote === The act of copying file content from a less controlled location into a more controlled location. For example, from a user's workspace into a repository, or from a stream to its parent. === Pull, push === Copy revisions from one repository into another. Pull is initiated by the receiving repository, while push is initiated by the source. Fetch is sometimes used as a synonym for pull, or to mean a pull followed by an update. === Pull request === === Repository === === Resolve === The act of user intervention to address a conflict between different changes to the same document. === Reverse integration === The process of merging different team branches into the main trunk of the versioning system. === Revision and version === A version is any change in form. In SVK, a Revision is the state at a point in time of the entire tree in the repository. === Share === The act of making one file or folder available in multiple branches at the same time. When a shared file is changed in one branch, it is changed in other branches. === Stream === A container for branched files that has a known relationship to other such containers. Streams form a hierarchy; each stream can inherit various properties (like versions, namespace, workflow rules, subscribers, etc.) from its parent stream. === Tag === A tag or label refers to an important snapshot in time, consistent across many files. These files at that point may all be tagged with a user-friendly, meaningful name or revision number. See baselines, labels and tags. === Trunk === The trunk is the unique line of development that is not a branch (sometimes also called Baseline, Mainline or Master) === Update === An update (or sync, but sync can also mean a combined push and pull) merges changes made in the repository (by other people, for example) into the local working copy. Update is also the term used by some CM tools (CM+, PLS, SMS) for the change package concept (see changelist). Synonymous with checkout in revision control systems that require each repository to have exactly one working copy (common in distributed systems) === Unlocking === Releasing a lock. === Working copy === The working copy is the local copy of files from a repository, at a specific time or revision. All work done to the files in a repository is initially done on a working copy, hence the name. Conceptually, it is a sandbox. == See also == == Notes == == References == == External links == \"Visual Guide to Version Control\", Better explained. Sink, Eric, \"Source Control\", SCM (how-to). The basics of version control."
+  },
+  "chunks": [
+    {
+      "id": "versioncontrol_45a5b6ba_c0000",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 730,
+      "content": "Version control (also known as revision control, source control, and source code management) is the software engineering practice of controlling, organizing, and tracking different versions in history of computer files; primarily source code text files, but generally any type of file. Version control is a component of software configuration management. A version control system is a software tool that automates version control. Alternatively, version control is embedded as a feature of some systems such as word processors, spreadsheets, collaborative web docs, and content management systems, such as Wikipedia's page history. Version control includes options to view old versions and to revert a file to a previous version.",
+      "char_count": 729,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0001",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 744,
+      "end_char": 1677,
+      "content": "== Overview == As teams develop software, it is common to deploy multiple versions of the same software, and for different developers to work on one or more different versions simultaneously. Bugs or features of the software are often only present in certain versions (because of the fixing of some problems and the introduction of others as the program develops). Therefore, for the purposes of locating and fixing bugs, it is vitally important to be able to retrieve and run different versions of the software to determine in which version(s) the problem occurs. It may also be necessary to develop two versions of the software concurrently: for instance, where one version has bugs fixed, but no new features (branch), while the other version is where new features are worked on (trunk). At the simplest level, developers could simply retain multiple copies of the different versions of the program, and label them appropriately.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0002",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 1677,
+      "end_char": 2659,
+      "content": "This simple approach has been used in many large software projects. While this method can work, it is inefficient as many near-identical copies of the program have to be maintained. This requires a lot of self-discipline on the part of developers and often leads to mistakes. Since the code base is the same, it also requires granting read-write-execute permission to a set of developers, and this adds the pressure of someone managing permissions so that the code base is not compromised, which adds more complexity. Consequently, systems to automate some or all of the revision control process have been developed. This abstracts most operational steps (hides them from ordinary users). Moreover, in software development, legal and business practice, and other environments, it has become increasingly common for a single document or snippet of code to be edited by a team, the members of which may be geographically dispersed and may pursue different and even contrary interests.",
+      "char_count": 982,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0003",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 2660,
+      "end_char": 3535,
+      "content": "Sophisticated revision control that tracks and accounts for ownership of changes to documents and code may be extremely helpful or even indispensable in such situations. Revision control may also track changes to configuration files, such as those typically stored in /etc or /usr/local/etc on Unix systems. This gives system administrators another way to easily track changes made and a way to roll back to earlier versions should the need arise. Many version control systems identify the version of a file as a number or letter, called the version number, version, revision number, revision, or revision level. For example, the first version of a file might be version 1. When the file is changed the next version is 2. Each version is associated with a timestamp and the person making the change. Revisions can be compared, restored, and, with some types of files, merged.",
+      "char_count": 875,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0004",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3535,
+      "end_char": 4347,
+      "content": "== History == IBM's OS/360 IEBUPDTE software update tool dates back to 1962, arguably a precursor to version control system tools. Two source management and version control packages that were heavily used by IBM 360/370 installations were The Librarian and Panvalet. A full system designed for source code control was started in 1972: the Source Code Control System (SCCS), again for the OS/360. SCCS's user manual, especially the introduction, which was published on December 4, 1975, implied that it was the first deliberate revision control system. The Revision Control System (RCS) followed in 1982 and, later, Concurrent Versions System (CVS) added network and concurrent development features to RCS. After CVS, a dominant successor was Subversion, followed by the rise of distributed version control tools such as Git.",
+      "char_count": 824,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0005",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Structure ==",
+      "heading_path": "== Structure ==",
+      "start_char": 4362,
+      "end_char": 5256,
+      "content": "== Structure == Revision control manages changes to a set of data over time. These changes can be structured in various ways. Often the data is thought of as a collection of many individual items, such as files or documents, and changes to individual files are tracked. This is in line with the notion of keeping files separate but causes problems when identity changes, which happens when files are renamed, split or merged. Accordingly, some systems such as Git, consider changes to the data as a whole instead, which is less intuitive for simple changes but simplifies more complex changes. When data that is under revision control is modified, after being retrieved by checking out, this is not in general immediately reflected in the revision control system (in the repository), but must instead be checked in or committed. A copy outside of revision control is known as a \"working copy\".",
+      "char_count": 893,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0006",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Structure ==",
+      "heading_path": "== Structure ==",
+      "start_char": 5256,
+      "end_char": 6175,
+      "content": "As a simple example, when editing a computer file, the data stored in memory by the editing program is the working copy, which is committed by saving the file. Concretely, one may print out a document, edit it by hand, and only later manually input the changes into a computer and save it. For source code control, the working copy is instead a copy of all files in a particular revision, generally stored locally on the developer's computer; in this case saving the file only changes the working copy, and checking into the repository is a separate step. If multiple people are working on a single data set or document, they are implicitly creating branches of the data (in their working copies), and thus issues of merging arise, as discussed below. For simple collaborative document editing, this can be prevented by using file locking or simply avoiding working on the same document that someone else is working on.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0007",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Structure ==",
+      "heading_path": "== Structure ==",
+      "start_char": 6176,
+      "end_char": 6588,
+      "content": "Revision control systems are often centralized, with a single authoritative data store, the repository, and check-outs and check-ins done with reference to this central repository. Alternatively, in distributed revision control, no single repository is authoritative, and data can be checked out and checked into any repository. When checking into a different repository, this is interpreted as a merge or patch.",
+      "char_count": 412,
+      "token_estimate": 103,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0008",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Graph structure ==",
+      "heading_path": "== = Graph structure ==",
+      "start_char": 6597,
+      "end_char": 7516,
+      "content": "== = Graph structure === In terms of graph theory, revisions are generally thought of as a line of development (the trunk) with branches off of this, forming a directed tree, visualized as one or more parallel lines of development (the \"mainlines\" of the branches) branching off a trunk. In reality the structure is more complicated, forming a directed acyclic graph, but for many purposes \"tree with merges\" is an adequate approximation. Revisions occur in sequence over time, and thus can be arranged in order, either by revision number or timestamp. Revisions are based on past revisions, though it is possible to largely or completely replace an earlier revision, such as \"delete all existing text, insert new text\". In the simplest case, with no branching or undoing, each revision is based on its immediate predecessor alone, and they form a simple line, with a single latest version, the \"HEAD\" revision or tip.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0009",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Graph structure ==",
+      "heading_path": "== = Graph structure ==",
+      "start_char": 7516,
+      "end_char": 8386,
+      "content": "In graph theory terms, drawing each revision as a point and each \"derived revision\" relationship as an arrow (conventionally pointing from older to newer, in the same direction as time), this is a linear graph. If there is branching, so multiple future revisions are based on a past revision, or undoing, so a revision can depend on a revision older than its immediate predecessor, then the resulting graph is instead a directed tree (each node can have more than one child), and has multiple tips, corresponding to the revisions without children (\"latest revision on each branch\"). In principle the resulting tree need not have a preferred tip (\"main\" latest revision) – just various different revisions – but in practice one tip is generally identified as HEAD. When a new revision is based on HEAD, it is either identified as the new HEAD, or considered a new branch.",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0010",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Graph structure ==",
+      "heading_path": "== = Graph structure ==",
+      "start_char": 8387,
+      "end_char": 9331,
+      "content": "The list of revisions from the start to HEAD (in graph theory terms, the unique path in the tree, which forms a linear graph as before) is the trunk or mainline. Conversely, when a revision can be based on more than one previous revision (when a node can have more than one parent), the resulting process is called a merge, and is one of the most complex aspects of revision control. This most often occurs when changes occur in multiple branches (most often two, but more are possible), which are then merged into a single branch incorporating both changes. If these changes overlap, it may be difficult or impossible to merge, and require manual intervention or rewriting. In the presence of merges, the resulting graph is no longer a tree, as nodes can have multiple parents, but is instead a rooted directed acyclic graph (DAG). The graph is acyclic since parents are always backwards in time, and rooted because there is an oldest version.",
+      "char_count": 944,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0011",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Graph structure ==",
+      "heading_path": "== = Graph structure ==",
+      "start_char": 9332,
+      "end_char": 10106,
+      "content": "Assuming there is a trunk, merges from branches can be considered as \"external\" to the tree – the changes in the branch are packaged up as a patch, which is applied to HEAD (of the trunk), creating a new revision without any explicit reference to the branch, and preserving the tree structure. Thus, while the actual relations between versions form a DAG, this can be considered a tree plus merges, and the trunk itself is a line. In distributed revision control, in the presence of multiple repositories these may be based on a single original version (a root of the tree), but there need not be an original root - instead there can be a separate root (oldest revision) for each repository. This can happen, for example, if two people start working on a project separately.",
+      "char_count": 774,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0012",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Graph structure ==",
+      "heading_path": "== = Graph structure ==",
+      "start_char": 10107,
+      "end_char": 10383,
+      "content": "Similarly, in the presence of multiple data sets (multiple projects) that exchange data or merge, there is no single root, though for simplicity one may think of one project as primary and the other as secondary, merged into the first with or without its own revision history.",
+      "char_count": 276,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0013",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Specialized strategies ==",
+      "heading_path": "== Specialized strategies ==",
+      "start_char": 10389,
+      "end_char": 10842,
+      "content": "== Specialized strategies == Engineering revision control developed from formalized processes based on tracking revisions of early blueprints or bluelines. This system of control implicitly allowed returning to an earlier state of the design, for cases in which an engineering dead-end was reached in the development of the design. A revision table was used to keep track of the changes made. Additionally, the modified areas of the drawing were highlighted using revision clouds.",
+      "char_count": 480,
+      "token_estimate": 120,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0014",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = In business and law ==",
+      "heading_path": "== = In business and law ==",
+      "start_char": 10869,
+      "end_char": 11332,
+      "content": "== = In business and law === Version control is widespread in business and law. Indeed, \"contract redline\" and \"legal blackline\" are some of the earliest forms of revision control, and are still employed in business and law with varying degrees of sophistication. The most sophisticated techniques are beginning to be used for the electronic tracking of changes to CAD files (see product data management), supplanting the \"manual\" electronic implementation of traditional revision control.",
+      "char_count": 489,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0015",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Source-management models ==",
+      "heading_path": "== Source-management models ==",
+      "start_char": 11362,
+      "end_char": 11798,
+      "content": "== Source-management models == Traditional revision control systems use a centralized model where all the revision control functions take place on a shared server. If two developers try to change the same file at the same time, without some method of managing access the developers may end up overwriting each other's work. Centralized revision control systems solve this problem in one of two different \"source management models\": file locking and version merging.",
+      "char_count": 465,
+      "token_estimate": 116,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0016",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Atomic operations ==",
+      "heading_path": "== = Atomic operations ==",
+      "start_char": 11823,
+      "end_char": 12199,
+      "content": "== = Atomic operations === An operation is atomic if the system is left in a consistent state even if the operation is interrupted. The commit operation is usually the most critical in this sense. Commits tell the revision control system to make a group of changes final, and available to all users. Not all revision control systems have atomic commits; Concurrent Versions System lacks this feature.",
+      "char_count": 400,
+      "token_estimate": 100,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0017",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = File locking ==",
+      "heading_path": "== = File locking ==",
+      "start_char": 12219,
+      "end_char": 13054,
+      "content": "== = File locking === The simplest method of preventing \"concurrent access\" problems involves locking files so that only one developer at a time has write access to the central \"repository\" copies of those files. Once one developer \"checks out\" a file, others can read that file, but no one else may change that file until that developer \"checks in\" the updated version (or cancels the checkout). File locking has both merits and drawbacks. It can provide some protection against difficult merge conflicts when a user is making radical changes to many sections of a large file (or group of files). If the files are left exclusively locked for too long, other developers may be tempted to bypass the revision control software and change the files locally, forcing a difficult manual merge when the other changes are finally checked in.",
+      "char_count": 834,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0018",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = File locking ==",
+      "heading_path": "== = File locking ==",
+      "start_char": 13054,
+      "end_char": 13254,
+      "content": "In a large organization, files can be left \"checked out\" and locked and forgotten about as developers move between projects - these tools may or may not make it easy to see who has a file checked out.",
+      "char_count": 200,
+      "token_estimate": 50,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0019",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Version merging ==",
+      "heading_path": "== = Version merging ==",
+      "start_char": 13258,
+      "end_char": 14055,
+      "content": "== = Version merging === Most version control systems allow multiple developers to edit the same file at the same time. The first developer to \"check in\" changes to the central repository always succeeds. The system may provide facilities to merge further changes into the central repository, and preserve the changes from the first developer when other developers check in. Merging two files can be a very delicate operation, and usually possible only if the data structure is simple, as in text files. The result of a merge of two image files might not result in an image file at all. The second developer checking in files will need to take care with the merge, to make sure that the changes are compatible and that the merge operation does not introduce its own logic errors within the files.",
+      "char_count": 796,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0020",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Version merging ==",
+      "heading_path": "== = Version merging ==",
+      "start_char": 14055,
+      "end_char": 14397,
+      "content": "These problems limit the availability of automatic or semi-automatic merge operations mainly to simple text-based documents, unless a specific merge plugin is available for the file types. The concept of a reserved edit can provide an optional means to explicitly lock a file for exclusive write access, even when a merging capability exists.",
+      "char_count": 342,
+      "token_estimate": 85,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0021",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Baselines, labels and tags ==",
+      "heading_path": "== = Baselines, labels and tags ==",
+      "start_char": 14409,
+      "end_char": 15264,
+      "content": "== = Baselines, labels and tags === Most revision control tools will use only one of these similar terms (baseline, label, tag) to refer to the action of identifying a snapshot (\"label the project\") or the record of the snapshot (\"try it with baseline X\"). Typically only one of the terms baseline, label, or tag is used in documentation or discussion; they can be considered synonyms. In most projects, some snapshots are more significant than others, such as those used to indicate published releases, branches, or milestones. When both the term baseline and either of label or tag are used together in the same context, label and tag usually refer to the mechanism within the tool of identifying or making the record of the snapshot, and baseline indicates the increased significance of any given label or tag. Most formal discussion of configuration management uses the term baseline.",
+      "char_count": 888,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0022",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Distributed revision control ==",
+      "heading_path": "== Distributed revision control ==",
+      "start_char": 15298,
+      "end_char": 16237,
+      "content": "== Distributed revision control == Distributed revision control systems (DRCS) take a peer-to-peer approach, as opposed to the client–server approach of centralized systems. Rather than a single, central repository on which clients synchronize, each peer's working copy of the codebase is a bona-fide repository. Distributed revision control conducts synchronization by exchanging patches (change-sets) from peer to peer. This results in some important differences from a centralized system: No canonical, reference copy of the codebase exists by default; only working copies. Common operations (such as commits, viewing history, and reverting changes) are fast, because there is no need to communicate with a central server. Rather, communication is only necessary when pushing or pulling changes to or from other peers. Each working copy effectively functions as a remote backup of the codebase and of its change-history, providing inherent protection against data loss.",
+      "char_count": 972,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0023",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Best practices ==",
+      "heading_path": "== Best practices ==",
+      "start_char": 16257,
+      "end_char": 17088,
+      "content": "== Best practices == Following best practices is necessary to obtain the full benefits of version control. Best practice may vary by version control tool and the field to which version control is applied. The generally accepted best practices in software development include: making small/incremental changes; making commits which involve only one task or fix -- a corollary to this is to commit only code which works and does not knowingly break existing functionality; using branching to complete functionality before release; writing clear and descriptive commit messages, make what why and how clear in either the commit description or the code; and using a consistent branching strategy. Other best software development practices such as code review and automated regression testing may assist in the following of version control best practices.",
+      "char_count": 850,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0024",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== Costs and benefits ==",
+      "heading_path": "== Costs and benefits ==",
+      "start_char": 17112,
+      "end_char": 17326,
+      "content": "== Costs and benefits == Costs and benefits will vary dependent upon the version control tool chosen and the field in which it is applied. This section speaks to the field of software development, where version control is widely applied.",
+      "char_count": 237,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0025",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Costs ==",
+      "heading_path": "== = Costs ==",
+      "start_char": 17339,
+      "end_char": 17874,
+      "content": "== = Costs === In addition to the costs of licensing the version control software, using version control requires time and effort. The concepts underlying version control must be understood and the technical particulars required to operate the version control software chosen must be learned. Version control best practices must be learned and integrated into the organization's existing software development practices. Management effort may be required to maintain the discipline needed to follow best practices in order to obtain useful benefit.",
+      "char_count": 547,
+      "token_estimate": 136,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0026",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Integrated development environment ==",
+      "heading_path": "== = Integrated development environment ==",
+      "start_char": 18111,
+      "end_char": 18339,
+      "content": "== = Integrated development environment === Plugins are often available for IDEs such as Oracle JDeveloper, IntelliJ IDEA, Eclipse, Visual Studio, Delphi, NetBeans IDE, Xcode, and GNU Emacs (via vc.el). Advanced research prototypes generate appropriate commit messages.",
+      "char_count": 269,
+      "token_estimate": 67,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0027",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Branch ==",
+      "heading_path": "== = Branch ==",
+      "start_char": 18693,
+      "end_char": 18918,
+      "content": "== = Branch === A set of files under version control may be branched or forked at a point in time so that, from that time forward, two copies of those files may develop at different speeds or in different ways independently of each other.",
+      "char_count": 238,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0028",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Change ==",
+      "heading_path": "== = Change ==",
+      "start_char": 18932,
+      "end_char": 19131,
+      "content": "== = Change === A change (or diff, or delta) represents a specific modification to a document under version control. The granularity of the modification considered a change varies between version control systems.",
+      "char_count": 212,
+      "token_estimate": 53,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0029",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Change list ==",
+      "heading_path": "== = Change list ==",
+      "start_char": 19150,
+      "end_char": 19458,
+      "content": "== = Change list === On many version control systems with atomic multi-change commits, a change list (or CL), change set, update, or patch identifies the set of changes made in a single commit. This can also represent a sequential view of the source code, allowing the examination of source as of any particular changelist ID.",
+      "char_count": 326,
+      "token_estimate": 81,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0030",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Checkout ==",
+      "heading_path": "== = Checkout ==",
+      "start_char": 19474,
+      "end_char": 19876,
+      "content": "== = Checkout === To check out (or co) is to create a local working copy from the repository. A user may specify a specific revision or obtain the latest. The term 'checkout' can also be used as a noun to describe the working copy. When a file has been checked out from a shared file server, it cannot be edited by other users. Think of it like a hotel, when you check out, you no longer have access to its amenities.",
+      "char_count": 417,
+      "token_estimate": 104,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0031",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Clone ==",
+      "heading_path": "== = Clone ==",
+      "start_char": 19889,
+      "end_char": 20180,
+      "content": "== = Clone === Cloning means creating a repository containing the revisions from another repository. This is equivalent to pushing or pulling into an empty (newly initialized) repository. As a noun, two repositories can be said to be clones if they are kept synchronized, and contain the same revisions.",
+      "char_count": 303,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0032",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Commit (verb) ==",
+      "heading_path": "== = Commit (verb) ==",
+      "start_char": 20224,
+      "end_char": 20485,
+      "content": "== = Commit (verb) === To commit (check in, ci or, more rarely, install, submit or record) is to write or merge the changes made in the working copy back to the repository. A commit contains metadata, typically the author information and a commit message that describes the change.",
+      "char_count": 281,
+      "token_estimate": 70,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0033",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Commit message ==",
+      "heading_path": "== = Commit message ==",
+      "start_char": 20507,
+      "end_char": 20756,
+      "content": "== = Commit message === A short note, written by the developer, stored with the commit, which describes the commit. Ideally, it records why the modification was made, a description of the modification's effect or purpose, and non-obvious aspects of how the change works.",
+      "char_count": 270,
+      "token_estimate": 67,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0034",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Conflict ==",
+      "heading_path": "== = Conflict ==",
+      "start_char": 20772,
+      "end_char": 21011,
+      "content": "== = Conflict === A conflict occurs when different parties make changes to the same document, and the system is unable to reconcile the changes. A user must resolve the conflict by combining the changes, or by selecting one change in favour of the other.",
+      "char_count": 254,
+      "token_estimate": 63,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0035",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Delta compression ==",
+      "heading_path": "== = Delta compression ==",
+      "start_char": 21036,
+      "end_char": 21242,
+      "content": "== = Delta compression === Most revision control software uses delta compression, which retains only the differences between successive versions of files. This allows for more efficient storage of many different versions of files.",
+      "char_count": 230,
+      "token_estimate": 57,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0036",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Export ==",
+      "heading_path": "== = Export ==",
+      "start_char": 21369,
+      "end_char": 21639,
+      "content": "== = Export === Exporting is the act of obtaining the files from the repository. It is similar to checking out except that it creates a clean directory tree without the version-control metadata used in a working copy. This is often used prior to publishing the contents, for example.",
+      "char_count": 283,
+      "token_estimate": 70,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0037",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Head ==",
+      "heading_path": "== = Head ==",
+      "start_char": 21804,
+      "end_char": 22016,
+      "content": "== = Head === Also sometimes called tip, this refers to the most recent commit, either to the trunk or to a branch. The trunk and each branch have their own head, though HEAD is sometimes loosely used to refer to the trunk.",
+      "char_count": 223,
+      "token_estimate": 55,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0038",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Interleaved deltas ==",
+      "heading_path": "== = Interleaved deltas ==",
+      "start_char": 22247,
+      "end_char": 22423,
+      "content": "== = Interleaved deltas === Some revision control software uses Interleaved deltas, a method that allows storing the history of text based files in a more efficient way than by using Delta compression.",
+      "char_count": 201,
+      "token_estimate": 50,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0039",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Locking ==",
+      "heading_path": "== = Locking ==",
+      "start_char": 22462,
+      "end_char": 22678,
+      "content": "== = Locking === When a developer locks a file, no one else can update that file until it is unlocked. Locking can be supported by the version control system, or via informal communications between developers (aka social locking).",
+      "char_count": 230,
+      "token_estimate": 57,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0040",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Merge ==",
+      "heading_path": "== = Merge ==",
+      "start_char": 22772,
+      "end_char": 23693,
+      "content": "== = Merge === A merge or integration is an operation in which two sets of changes are applied to a file or set of files. Some sample scenarios are as follows: A user, working on a set of files, updates or syncs their working copy with changes made, and checked into the repository, by other users. A user tries to check in files that have been updated by others since the files were checked out, and the revision control software automatically merges the files (typically, after prompting the user if it should proceed with the automatic merge, and in some cases only doing so if the merge can be clearly and reasonably resolved). A branch is created, the code in the files is independently edited, and the updated branch is later incorporated into a single, unified trunk. A set of files is branched, a problem that existed before the branching is fixed in one branch, and the fix is then merged into the other branch.",
+      "char_count": 920,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0041",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Promote ==",
+      "heading_path": "== = Promote ==",
+      "start_char": 23826,
+      "end_char": 24013,
+      "content": "== = Promote === The act of copying file content from a less controlled location into a more controlled location. For example, from a user's workspace into a repository, or from a stream to its parent.",
+      "char_count": 201,
+      "token_estimate": 50,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0042",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Pull, push ==",
+      "heading_path": "== = Pull, push ==",
+      "start_char": 24031,
+      "end_char": 24256,
+      "content": "== = Pull, push === Copy revisions from one repository into another. Pull is initiated by the receiving repository, while push is initiated by the source. Fetch is sometimes used as a synonym for pull, or to mean a pull followed by an update.",
+      "char_count": 242,
+      "token_estimate": 60,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0043",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Revision and version ==",
+      "heading_path": "== = Revision and version ==",
+      "start_char": 24564,
+      "end_char": 24688,
+      "content": "== = Revision and version === A version is any change in form. In SVK, a Revision is the state at a point in time of the entire tree in the repository.",
+      "char_count": 151,
+      "token_estimate": 37,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0044",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Share ==",
+      "heading_path": "== = Share ==",
+      "start_char": 24701,
+      "end_char": 24867,
+      "content": "== = Share === The act of making one file or folder available in multiple branches at the same time. When a shared file is changed in one branch, it is changed in other branches.",
+      "char_count": 178,
+      "token_estimate": 44,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0045",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Stream ==",
+      "heading_path": "== = Stream ==",
+      "start_char": 24881,
+      "end_char": 25125,
+      "content": "== = Stream === A container for branched files that has a known relationship to other such containers. Streams form a hierarchy; each stream can inherit various properties (like versions, namespace, workflow rules, subscribers, etc.) from its parent stream.",
+      "char_count": 257,
+      "token_estimate": 64,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0046",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Tag ==",
+      "heading_path": "== = Tag ==",
+      "start_char": 25136,
+      "end_char": 25358,
+      "content": "== = Tag === A tag or label refers to an important snapshot in time, consistent across many files. These files at that point may all be tagged with a user-friendly, meaningful name or revision number. See baselines, labels and tags.",
+      "char_count": 232,
+      "token_estimate": 58,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0047",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Update ==",
+      "heading_path": "== = Update ==",
+      "start_char": 25505,
+      "end_char": 25932,
+      "content": "== = Update === An update (or sync, but sync can also mean a combined push and pull) merges changes made in the repository (by other people, for example) into the local working copy. Update is also the term used by some CM tools (CM+, PLS, SMS) for the change package concept (see changelist). Synonymous with checkout in revision control systems that require each repository to have exactly one working copy (common in distributed systems)",
+      "char_count": 440,
+      "token_estimate": 110,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "versioncontrol_45a5b6ba_c0048",
+      "article_id": "versioncontrol_45a5b6ba",
+      "section": "== = Working copy ==",
+      "heading_path": "== = Working copy ==",
+      "start_char": 25989,
+      "end_char": 26213,
+      "content": "== = Working copy === The working copy is the local copy of files from a repository, at a specific time or revision. All work done to the files in a repository is initially done on a working copy, hence the name. Conceptually, it is a sandbox.",
+      "char_count": 243,
+      "token_estimate": 60,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What are the primary drawbacks of using a simple, manual approach to managing software versions?",
+        "answer": "The simple, manual approach is inefficient because it requires maintaining many near-identical copies of the program. It also demands a high level of self-discipline from developers, frequently leads to mistakes, and adds complexity by necessitating the management of read-write-execute permissions to protect the code base.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0002"
+        ]
+      },
+      {
+        "question": "Why are common operations like commits and viewing history fast in a distributed revision control system?",
+        "answer": "Common operations such as commits, viewing history, and reverting changes are fast in a distributed revision control system because there is no need to communicate with a central server. These actions are performed on the local repository, and communication is only required when pushing or pulling changes to or from other peers.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0022"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0022"
+        ]
+      },
+      {
+        "question": "What type of graph structure is formed in revision control when merges are present, and why is it described this way?",
+        "answer": "When merges are present, the resulting graph is a rooted directed acyclic graph (DAG). It is no longer a tree because nodes can have multiple parents. The graph is described as acyclic because parents are always backwards in time, and it is rooted because there is an oldest version.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0010"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0010"
+        ]
+      },
+      {
+        "question": "How do automated version control systems address the inefficiencies and complexities of manually managing multiple copies of software projects?",
+        "answer": "Manually keeping multiple copies of a program to manage different versions is inefficient, requires significant self-discipline, and often leads to mistakes. It also introduces complexities with managing permissions to prevent the code base from being compromised. Automated version control systems were developed to solve these problems. As a software engineering practice, they automate the process of controlling, organizing, and tracking file versions, which abstracts away many operational steps and reduces the chance for human error. This is particularly useful for geographically dispersed teams where multiple members edit the same code.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0000",
+          "versioncontrol_45a5b6ba_c0001",
+          "versioncontrol_45a5b6ba_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0002",
+          "versioncontrol_45a5b6ba_c0000",
+          "versioncontrol_45a5b6ba_c0001"
+        ]
+      },
+      {
+        "question": "How does the structural approach of a modern version control system like Git differ from the more traditional approach?",
+        "answer": "Traditionally, version control systems managed changes by tracking individual items like files. This approach, however, creates problems when files are renamed, split, or merged. In contrast, modern systems like Git, which emerged after predecessors like CVS and Subversion, consider changes to the data as a whole. This method simplifies more complex changes, though it may be less intuitive for simple ones.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0003",
+          "versioncontrol_45a5b6ba_c0004",
+          "versioncontrol_45a5b6ba_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0005",
+          "versioncontrol_45a5b6ba_c0003",
+          "versioncontrol_45a5b6ba_c0004"
+        ]
+      },
+      {
+        "question": "How do the concepts of a developer's 'working copy' and the system's 'graph structure' relate to each other in version control?",
+        "answer": "When multiple developers work on a project, each maintains a local 'working copy' of the files. This parallel work implicitly creates 'branches' of the data. These branches form the basis of the system's graph structure, which is visualized as a 'trunk' (the main line of development) with these branches diverging from it, creating a directed tree or a more complex directed acyclic graph.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0006",
+          "versioncontrol_45a5b6ba_c0007",
+          "versioncontrol_45a5b6ba_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0006",
+          "versioncontrol_45a5b6ba_c0008",
+          "versioncontrol_45a5b6ba_c0007"
+        ]
+      },
+      {
+        "question": "What are the primary drawbacks of managing software versions by simply keeping multiple copies, and what features of automated revision control systems address these challenges?",
+        "answer": "The simple approach of keeping multiple copies of a program is inefficient because many near-identical copies must be maintained. This method is also prone to mistakes as it relies on developer self-discipline and adds complexity by requiring permission management to protect the code base. Automated revision control systems overcome these issues by automating the process. They offer sophisticated tracking of change ownership, which is crucial for dispersed teams. These systems identify each version with a number or letter, associate it with a timestamp and the person who made the change, and allow versions to be compared, restored, and merged, providing a more robust and manageable solution.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0001",
+          "versioncontrol_45a5b6ba_c0002",
+          "versioncontrol_45a5b6ba_c0003"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0002",
+          "versioncontrol_45a5b6ba_c0003",
+          "versioncontrol_45a5b6ba_c0001"
+        ]
+      },
+      {
+        "question": "Explain the complete process for a developer to modify a file and record that change in a centralized revision control system, incorporating the concepts of a working copy and a repository.",
+        "answer": "A developer begins by creating a 'working copy,' which is a local copy of all files from a particular revision stored on their computer. When the developer edits and saves a file, this action only modifies the local working copy. To have the change reflected in the revision control system, the developer must explicitly 'check in' or 'commit' the changes. In a centralized system, this check-in is performed with reference to a single, authoritative central repository where the authoritative data is stored.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0005",
+          "versioncontrol_45a5b6ba_c0006",
+          "versioncontrol_45a5b6ba_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0006",
+          "versioncontrol_45a5b6ba_c0005",
+          "versioncontrol_45a5b6ba_c0007"
+        ]
+      },
+      {
+        "question": "How does the graph structure of a version control system evolve in complexity from a simple linear model to a directed acyclic graph (DAG)?",
+        "answer": "Initially, a simple sequence of revisions without branching forms a linear graph. When branching is introduced, where multiple revisions are based on a single past revision, the structure becomes a directed tree. The graph evolves into its most complex form, a rooted directed acyclic graph (DAG), when merges occur. A merge creates a revision that is based on more than one previous revision (i.e., a node with multiple parents), which is a characteristic of a DAG but not a tree.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0008",
+          "versioncontrol_45a5b6ba_c0009",
+          "versioncontrol_45a5b6ba_c0010",
+          "versioncontrol_45a5b6ba_c0011"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0010",
+          "versioncontrol_45a5b6ba_c0008",
+          "versioncontrol_45a5b6ba_c0009",
+          "versioncontrol_45a5b6ba_c0011"
+        ]
+      },
+      {
+        "question": "What are some potential drawbacks of file locking, especially in a large organizational setting?",
+        "answer": "If files are left exclusively locked for too long, other developers may be tempted to bypass the version control software and change files locally, which forces a difficult manual merge later. This problem can be compounded in large organizations where developers might move between projects and forget they have files checked out, leaving them locked. The tools themselves may also make it difficult to see who has a file checked out.",
+        "related_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0017",
+          "versioncontrol_45a5b6ba_c0018"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "versioncontrol_45a5b6ba_c0017",
+          "versioncontrol_45a5b6ba_c0018"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:34.107Z",
+    "content_format": "markdown",
+    "total_chunks": 49,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

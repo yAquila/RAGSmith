@@ -1,0 +1,746 @@
+{
+  "article": {
+    "id": "centrallimittheorem_2f8e4a0f",
+    "title": "Central limit theorem",
+    "url": "https://en.wikipedia.org/wiki/Central_limit_theorem",
+    "lang": "en",
+    "created_at": "2025-07-31T06:35:42.308271",
+    "content": "---\nid: centrallimittheorem_2f8e4a0f\nurl: https://en.wikipedia.org/wiki/Central_limit_theorem\ntitle: Central limit theorem\nlang: en\ncreated_at: '2025-07-31T06:27:07.497299'\nchecksum: 9ea6b71fb51cf8e4a908f11e555c762a303765cc1f7fd209b417dd61d128d2d8\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 6343\n  char_count: 38652\n  num_chunks: 46\n  original_chunks: 63\n  filtered_out: 17\n  num_sections: 0\n---\nIn probability theory, the central limit theorem (CLT) states that, under appropriate conditions, the distribution of a normalized version of the sample mean converges to a standard normal distribution. This holds even if the original variables themselves are not normally distributed. There are several versions of the CLT, each applying in the context of different conditions. The theorem is a key concept in probability theory because it implies that probabilistic and statistical methods that work for normal distributions can be applicable to many problems involving other types of distributions. This theorem has seen many changes during the formal development of probability theory. Previous versions of the theorem date back to 1811, but in its modern form it was only precisely stated as late as 1920. In statistics, the CLT can be stated as: let X 1 , X 2 , … , X n {\\displaystyle X_{1},X_{2},\\dots ,X_{n}} denote a statistical sample of size n {\\displaystyle n} from a population with expected value (average) μ {\\displaystyle \\mu } and finite positive variance σ 2 {\\displaystyle \\sigma ^{2}} , and let X ¯ n {\\displaystyle {\\bar {X}}_{n}} denote the sample mean (which is itself a random variable). Then the limit as n → ∞ {\\displaystyle n\\to \\infty } of the distribution of ( X ¯ n − μ ) n {\\displaystyle ({\\bar {X}}_{n}-\\mu ){\\sqrt {n}}} is a normal distribution with mean 0 {\\displaystyle 0} and variance σ 2 {\\displaystyle \\sigma ^{2}} . In other words, suppose that a large sample of observations is obtained, each observation being randomly produced in a way that does not depend on the values of the other observations, and the average (arithmetic mean) of the observed values is computed. If this procedure is performed many times, resulting in a collection of observed averages, the central limit theorem says that if the sample size is large enough, the probability distribution of these averages will closely approximate a normal distribution. The central limit theorem has several variants. In its common form, the random variables must be independent and identically distributed (i.i.d.). This requirement can be weakened; convergence of the mean to the normal distribution also occurs for non-identical distributions or for non-independent observations if they comply with certain conditions. The earliest version of this theorem, that the normal distribution may be used as an approximation to the binomial distribution, is the de Moivre–Laplace theorem. == Independent sequences == === Classical CLT === Let { X 1 , … , X n } {\\displaystyle \\{X_{1},\\ldots ,X_{n}}\\} be a sequence of i.i.d. random variables having a distribution with expected value given by μ {\\displaystyle \\mu } and finite variance given by σ 2 . {\\displaystyle \\sigma ^{2}.} Suppose we are interested in the sample average X ¯ n ≡ X 1 + ⋯ + X n n . {\\displaystyle {\\bar {X}}_{n}\\equiv {\\frac {X_{1}+\\cdots +X_{n}}{n}}.} By the law of large numbers, the sample average converges almost surely (and therefore also converges in probability) to the expected value μ {\\displaystyle \\mu } as n → ∞ . {\\displaystyle n\\to \\infty .} The classical central limit theorem describes the size and the distributional form of the stochastic fluctuations around the deterministic number μ {\\displaystyle \\mu } during this convergence. More precisely, it states that as n {\\displaystyle n} gets larger, the distribution of the normalized mean n ( X ¯ n − μ ) {\\displaystyle {\\sqrt {n}}({\\bar {X}}_{n}-\\mu )} , i.e. the difference between the sample average X ¯ n {\\displaystyle {\\bar {X}}_{n}} and its limit μ , {\\displaystyle \\mu ,} scaled by the factor n {\\displaystyle {\\sqrt {n}}} , approaches the normal distribution with mean 0 {\\displaystyle 0} and variance σ 2 . {\\displaystyle \\sigma ^{2}.} For large enough n , {\\displaystyle n,} the distribution of X ¯ n {\\displaystyle {\\bar {X}}_{n}} gets arbitrarily close to the normal distribution with mean μ {\\displaystyle \\mu } and variance σ 2 / n . {\\displaystyle \\sigma ^{2}/n.} The usefulness of the theorem is that the distribution of n ( X ¯ n − μ ) {\\displaystyle {\\sqrt {n}}({\\bar {X}}_{n}-\\mu )} approaches normality regardless of the shape of the distribution of the individual X i . {\\displaystyle X_{i}.} Formally, the theorem can be stated as follows: In the case σ > 0 , {\\displaystyle \\sigma >0,} convergence in distribution means that the cumulative distribution functions of n ( X ¯ n − μ ) {\\displaystyle {\\sqrt {n}}({\\bar {X}}_{n}-\\mu )} converge pointwise to the cdf of the N ( 0 , σ 2 ) {\\displaystyle {\\mathcal {N}}(0,\\sigma ^{2})} distribution: for every real number z , {\\displaystyle z,} lim n → ∞ P [ n ( X ¯ n − μ ) ≤ z ] = lim n → ∞ P [ n ( X ¯ n − μ ) σ ≤ z σ ] = Φ ( z σ ) , {\\displaystyle \\lim _{n\\to \\infty }\\mathbb {P} \\left[{\\sqrt {n}}({\\bar {X}}_{n}-\\mu )\\leq z\\right]=\\lim _{n\\to \\infty }\\mathbb {P} \\left[{\\frac {{\\sqrt {n}}({\\bar {X}}_{n}-\\mu )}{\\sigma }}\\leq {\\frac {z}{\\sigma }}\\right]=\\Phi \\left({\\frac {z}{\\sigma }}\\right),} where Φ ( z ) {\\displaystyle \\Phi (z)} is the standard normal cdf evaluated at z . {\\displaystyle z.} The convergence is uniform in z {\\displaystyle z} in the sense that lim n → ∞ sup z ∈ R | P [ n ( X ¯ n − μ ) ≤ z ] − Φ ( z σ ) | = 0 , {\\displaystyle \\lim _{n\\to \\infty }\\;\\sup _{z\\in \\mathbb {R} }\\;\\left|\\mathbb {P} \\left[{\\sqrt {n}}({\\bar {X}}_{n}-\\mu )\\leq z\\right]-\\Phi \\left({\\frac {z}{\\sigma }}\\right)\\right|=0~,} where sup {\\displaystyle \\sup } denotes the least upper bound (or supremum) of the set. === Lyapunov CLT === In this variant of the central limit theorem the random variables X i {\\textstyle X_{i}} have to be independent, but not necessarily identically distributed. The theorem also requires that random variables | X i | {\\textstyle \\left|X_{i}\\right|} have moments of some order ( 2 + δ ) {\\textstyle (2+\\delta )} , and that the rate of growth of these moments is limited by the Lyapunov condition given below. In practice it is usually easiest to check Lyapunov's condition for δ = 1 {\\textstyle \\delta =1} . If a sequence of random variables satisfies Lyapunov's condition, then it also satisfies Lindeberg's condition. The converse implication, however, does not hold. === Lindeberg (-Feller) CLT === In the same setting and with the same notation as above, the Lyapunov condition can be replaced with the following weaker one (from Lindeberg in 1920). Suppose that for every ε > 0 {\\textstyle \\varepsilon >0} , lim n → ∞ 1 s n 2 ∑ i = 1 n E ⁡ [ ( X i − μ i ) 2 ⋅ 1 { | X i − μ i | > ε s n } ] = 0 {\\displaystyle \\lim _{n\\to \\infty }{\\frac {1}{s_{n}^{2}}}\\sum _{i=1}^{n}\\operatorname {E} \\left[(X_{i}-\\mu _{i})^{2}\\cdot \\mathbf {1} _{\\left\\{\\left|X_{i}-\\mu _{i}\\right|>\\varepsilon s_{n}\\right\\}}\\right]=0} where 1 { … } {\\textstyle \\mathbf {1} _{\\{\\ldots \\}}} is the indicator function. Then the distribution of the standardized sums 1 s n ∑ i = 1 n ( X i − μ i ) {\\displaystyle {\\frac {1}{s_{n}}}\\sum _{i=1}^{n}\\left(X_{i}-\\mu _{i}\\right)} converges towards the standard normal distribution N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} . === CLT for the sum of a random number of random variables === Rather than summing an integer number n {\\displaystyle n} of random variables and taking n → ∞ {\\displaystyle n\\to \\infty } , the sum can be of a random number N {\\displaystyle N} of random variables, with conditions on N {\\displaystyle N} . For example, the following theorem is Corollary 4 of Robbins (1948). It assumes that N {\\displaystyle N} is asymptotically normal (Robbins also developed other conditions that lead to the same result). === Multidimensional CLT === Proofs that use characteristic functions can be extended to cases where each individual X i {\\textstyle \\mathbf {X} _{i}} is a random vector in R k {\\textstyle \\mathbb {R} ^{k}} , with mean vector μ = E ⁡ [ X i ] {\\textstyle {\\boldsymbol {\\mu }}=\\operatorname {E} [\\mathbf {X} _{i}]} and covariance matrix Σ {\\textstyle \\mathbf {\\Sigma } } (among the components of the vector), and these random vectors are independent and identically distributed. The multidimensional central limit theorem states that when scaled, sums converge to a multivariate normal distribution. Summation of these vectors is done component-wise. For i = 1 , 2 , 3 , … , {\\displaystyle i=1,2,3,\\ldots ,} let X i = [ X i ( 1 ) ⋮ X i ( k ) ] {\\displaystyle \\mathbf {X} _{i}={\\begin{bmatrix}X_{i}^{(1)}\\\\\\vdots \\\\X_{i}^{(k)}\\end{bmatrix}}} be independent random vectors. The sum of the random vectors X 1 , … , X n {\\displaystyle \\mathbf {X} _{1},\\ldots ,\\mathbf {X} _{n}} is ∑ i = 1 n X i = [ X 1 ( 1 ) ⋮ X 1 ( k ) ] + [ X 2 ( 1 ) ⋮ X 2 ( k ) ] + ⋯ + [ X n ( 1 ) ⋮ X n ( k ) ] = [ ∑ i = 1 n X i ( 1 ) ⋮ ∑ i = 1 n X i ( k ) ] {\\displaystyle \\sum _{i=1}^{n}\\mathbf {X} _{i}={\\begin{bmatrix}X_{1}^{(1)}\\\\\\vdots \\\\X_{1}^{(k)}\\end{bmatrix}}+{\\begin{bmatrix}X_{2}^{(1)}\\\\\\vdots \\\\X_{2}^{(k)}\\end{bmatrix}}+\\cdots +{\\begin{bmatrix}X_{n}^{(1)}\\\\\\vdots \\\\X_{n}^{(k)}\\end{bmatrix}}={\\begin{bmatrix}\\sum _{i=1}^{n}X_{i}^{(1)}\\\\\\vdots \\\\\\sum _{i=1}^{n}X_{i}^{(k)}\\end{bmatrix}}} and their average is X ¯ n = [ X ¯ i ( 1 ) ⋮ X ¯ i ( k ) ] = 1 n ∑ i = 1 n X i . {\\displaystyle \\mathbf {{\\bar {X}}_{n}} ={\\begin{bmatrix}{\\bar {X}}_{i}^{(1)}\\\\\\vdots \\\\{\\bar {X}}_{i}^{(k)}\\end{bmatrix}}={\\frac {1}{n}}\\sum _{i=1}^{n}\\mathbf {X} _{i}.} Therefore, 1 n ∑ i = 1 n [ X i − E ⁡ ( X i ) ] = 1 n ∑ i = 1 n ( X i − μ ) = n ( X ¯ n − μ ) . {\\displaystyle {\\frac {1}{\\sqrt {n}}}\\sum _{i=1}^{n}\\left[\\mathbf {X} _{i}-\\operatorname {E} \\left(\\mathbf {X} _{i}\\right)\\right]={\\frac {1}{\\sqrt {n}}}\\sum _{i=1}^{n}(\\mathbf {X} _{i}-{\\boldsymbol {\\mu }})={\\sqrt {n}}\\left({\\overline {\\mathbf {X} }}_{n}-{\\boldsymbol {\\mu }}\\right).} The multivariate central limit theorem states that n ( X ¯ n − μ ) ⟶ d N k ( 0 , Σ ) , {\\displaystyle {\\sqrt {n}}\\left({\\overline {\\mathbf {X} }}_{n}-{\\boldsymbol {\\mu }}\\right)\\mathrel {\\overset {d}{\\longrightarrow }} {\\mathcal {N}}_{k}(0,{\\boldsymbol {\\Sigma }}),} where the covariance matrix Σ {\\displaystyle {\\boldsymbol {\\Sigma }}} is equal to Σ = [ Var ⁡ ( X 1 ( 1 ) ) Cov ⁡ ( X 1 ( 1 ) , X 1 ( 2 ) ) Cov ⁡ ( X 1 ( 1 ) , X 1 ( 3 ) ) ⋯ Cov ⁡ ( X 1 ( 1 ) , X 1 ( k ) ) Cov ⁡ ( X 1 ( 2 ) , X 1 ( 1 ) ) Var ⁡ ( X 1 ( 2 ) ) Cov ⁡ ( X 1 ( 2 ) , X 1 ( 3 ) ) ⋯ Cov ⁡ ( X 1 ( 2 ) , X 1 ( k ) ) Cov ⁡ ( X 1 ( 3 ) , X 1 ( 1 ) ) Cov ⁡ ( X 1 ( 3 ) , X 1 ( 2 ) ) Var ⁡ ( X 1 ( 3 ) ) ⋯ Cov ⁡ ( X 1 ( 3 ) , X 1 ( k ) ) ⋮ ⋮ ⋮ ⋱ ⋮ Cov ⁡ ( X 1 ( k ) , X 1 ( 1 ) ) Cov ⁡ ( X 1 ( k ) , X 1 ( 2 ) ) Cov ⁡ ( X 1 ( k ) , X 1 ( 3 ) ) ⋯ Var ⁡ ( X 1 ( k ) ) ] . {\\displaystyle {\\boldsymbol {\\Sigma }}={\\begin{bmatrix}{\\operatorname {Var} \\left(X_{1}^{(1)}\\right)}&\\operatorname {Cov} \\left(X_{1}^{(1)},X_{1}^{(2)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(1)},X_{1}^{(3)}\\right)&\\cdots &\\operatorname {Cov} \\left(X_{1}^{(1)},X_{1}^{(k)}\\right)\\\\\\operatorname {Cov} \\left(X_{1}^{(2)},X_{1}^{(1)}\\right)&\\operatorname {Var} \\left(X_{1}^{(2)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(2)},X_{1}^{(3)}\\right)&\\cdots &\\operatorname {Cov} \\left(X_{1}^{(2)},X_{1}^{(k)}\\right)\\\\\\operatorname {Cov} \\left(X_{1}^{(3)},X_{1}^{(1)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(3)},X_{1}^{(2)}\\right)&\\operatorname {Var} \\left(X_{1}^{(3)}\\right)&\\cdots &\\operatorname {Cov} \\left(X_{1}^{(3)},X_{1}^{(k)}\\right)\\\\\\vdots &\\vdots &\\vdots &\\ddots &\\vdots \\\\\\operatorname {Cov} \\left(X_{1}^{(k)},X_{1}^{(1)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(k)},X_{1}^{(2)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(k)},X_{1}^{(3)}\\right)&\\cdots &\\operatorname {Var} \\left(X_{1}^{(k)}\\right)\\\\\\end{bmatrix}}~.} The multivariate central limit theorem can be proved using the Cramér–Wold theorem. The rate of convergence is given by the following Berry–Esseen type result: It is unknown whether the factor d 1 / 4 {\\textstyle d^{1/4}} is necessary. == The generalized central limit theorem == The generalized central limit theorem (GCLT) was an effort of multiple mathematicians (Bernstein, Lindeberg, Lévy, Feller, Kolmogorov, and others) over the period from 1920 to 1937. The first published complete proof of the GCLT was in 1937 by Paul Lévy in French. An English language version of the complete proof of the GCLT is available in the translation of Gnedenko and Kolmogorov's 1954 book. The statement of the GCLT is as follows: A non-degenerate random variable Z is α-stable for some 0 < α ≤ 2 if and only if there is an independent, identically distributed sequence of random variables X1, X2, X3, ... and constants an > 0, bn ∈ ℝ with an (X1 + ... + Xn) − bn → Z. Here → means the sequence of random variable sums converges in distribution; i.e., the corresponding distributions satisfy Fn(y) → F(y) at all continuity points of F. In other words, if sums of independent, identically distributed random variables converge in distribution to some Z, then Z must be a stable distribution. == Dependent processes == === CLT under weak dependence === A useful generalization of a sequence of independent, identically distributed random variables is a mixing random process in discrete time; \"mixing\" means, roughly, that random variables temporally far apart from one another are nearly independent. Several kinds of mixing are used in ergodic theory and probability theory. See especially strong mixing (also called α-mixing) defined by α ( n ) → 0 {\\textstyle \\alpha (n)\\to 0} where α ( n ) {\\textstyle \\alpha (n)} is so-called strong mixing coefficient. A simplified formulation of the central limit theorem under strong mixing is: In fact, σ 2 = E ⁡ ( X 1 2 ) + 2 ∑ k = 1 ∞ E ⁡ ( X 1 X 1 + k ) , {\\displaystyle \\sigma ^{2}=\\operatorname {E} \\left(X_{1}^{2}\\right)+2\\sum _{k=1}^{\\infty }\\operatorname {E} \\left(X_{1}X_{1+k}\\right),} where the series converges absolutely. The assumption σ ≠ 0 {\\textstyle \\sigma \\neq 0} cannot be omitted, since the asymptotic normality fails for X n = Y n − Y n − 1 {\\textstyle X_{n}=Y_{n}-Y_{n-1}} where Y n {\\textstyle Y_{n}} are another stationary sequence. There is a stronger version of the theorem: the assumption E ⁡ [ X n 12 ] < ∞ {\\textstyle \\operatorname {E} \\left[X_{n}^{12}\\right]<\\infty } is replaced with E ⁡ [ | X n | 2 + δ ] < ∞ {\\textstyle \\operatorname {E} \\left[{\\left|X_{n}\\right|}^{2+\\delta }\\right]<\\infty } , and the assumption α n = O ( n − 5 ) {\\textstyle \\alpha _{n}=O\\left(n^{-5}\\right)} is replaced with ∑ n α n δ 2 ( 2 + δ ) < ∞ . {\\displaystyle \\sum _{n}\\alpha _{n}^{\\frac {\\delta }{2(2+\\delta )}}<\\infty .} Existence of such δ > 0 {\\textstyle \\delta >0} ensures the conclusion. For encyclopedic treatment of limit theorems under mixing conditions see (Bradley 2007). === Martingale difference CLT === == Remarks == === Proof of classical CLT === The central limit theorem has a proof using characteristic functions. It is similar to the proof of the (weak) law of large numbers. Assume { X 1 , … , X n , … } {\\textstyle \\{X_{1},\\ldots ,X_{n},\\ldots \\}} are independent and identically distributed random variables, each with mean μ {\\textstyle \\mu } and finite variance σ 2 {\\textstyle \\sigma ^{2}} . The sum X 1 + ⋯ + X n {\\textstyle X_{1}+\\cdots +X_{n}} has mean n μ {\\textstyle n\\mu } and variance n σ 2 {\\textstyle n\\sigma ^{2}} . Consider the random variable Z n = X 1 + ⋯ + X n − n μ n σ 2 = ∑ i = 1 n X i − μ n σ 2 = ∑ i = 1 n 1 n Y i , {\\displaystyle Z_{n}={\\frac {X_{1}+\\cdots +X_{n}-n\\mu }{\\sqrt {n\\sigma ^{2}}}}=\\sum _{i=1}^{n}{\\frac {X_{i}-\\mu }{\\sqrt {n\\sigma ^{2}}}}=\\sum _{i=1}^{n}{\\frac {1}{\\sqrt {n}}}Y_{i},} where in the last step we defined the new random variables Y i = X i − μ σ {\\textstyle Y_{i}={\\frac {X_{i}-\\mu }{\\sigma }}} , each with zero mean and unit variance ( var ⁡ ( Y ) = 1 {\\textstyle \\operatorname {var} (Y)=1} ). The characteristic function of Z n {\\textstyle Z_{n}} is given by φ Z n ( t ) = φ ∑ i = 1 n 1 n Y i ( t ) = φ Y 1 ( t n ) φ Y 2 ( t n ) ⋯ φ Y n ( t n ) = [ φ Y 1 ( t n ) ] n , {\\displaystyle \\varphi _{Z_{n}}\\!(t)=\\varphi _{\\sum _{i=1}^{n}{{\\frac {1}{\\sqrt {n}}}Y_{i}}}\\!(t)\\ =\\ \\varphi _{Y_{1}}\\!\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)\\varphi _{Y_{2}}\\!\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)\\cdots \\varphi _{Y_{n}}\\!\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)\\ =\\ \\left[\\varphi _{Y_{1}}\\!\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)\\right]^{n},} where in the last step we used the fact that all of the Y i {\\textstyle Y_{i}} are identically distributed. The characteristic function of Y 1 {\\textstyle Y_{1}} is, by Taylor's theorem, φ Y 1 ( t n ) = 1 − t 2 2 n + o ( t 2 n ) , ( t n ) → 0 {\\displaystyle \\varphi _{Y_{1}}\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)=1-{\\frac {t^{2}}{2n}}+o\\!\\left({\\frac {t^{2}}{n}}\\right),\\quad \\left({\\frac {t}{\\sqrt {n}}}\\right)\\to 0} where o ( t 2 / n ) {\\textstyle o(t^{2}/n)} is \"little o notation\" for some function of t {\\textstyle t} that goes to zero more rapidly than t 2 / n {\\textstyle t^{2}/n} . By the limit of the exponential function ( e x = lim n → ∞ ( 1 + x n ) n {\\textstyle e^{x}=\\lim _{n\\to \\infty }\\left(1+{\\frac {x}{n}}\\right)^{n}} ), the characteristic function of Z n {\\displaystyle Z_{n}} equals φ Z n ( t ) = ( 1 − t 2 2 n + o ( t 2 n ) ) n → e − 1 2 t 2 , n → ∞ . {\\displaystyle \\varphi _{Z_{n}}(t)=\\left(1-{\\frac {t^{2}}{2n}}+o\\left({\\frac {t^{2}}{n}}\\right)\\right)^{n}\\rightarrow e^{-{\\frac {1}{2}}t^{2}},\\quad n\\to \\infty .} All of the higher order terms vanish in the limit n → ∞ {\\textstyle n\\to \\infty } . The right hand side equals the characteristic function of a standard normal distribution N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} , which implies through Lévy's continuity theorem that the distribution of Z n {\\textstyle Z_{n}} will approach N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} as n → ∞ {\\textstyle n\\to \\infty } . Therefore, the sample average X ¯ n = X 1 + ⋯ + X n n {\\displaystyle {\\bar {X}}_{n}={\\frac {X_{1}+\\cdots +X_{n}}{n}}} is such that n σ ( X ¯ n − μ ) = Z n {\\displaystyle {\\frac {\\sqrt {n}}{\\sigma }}({\\bar {X}}_{n}-\\mu )=Z_{n}} converges to the normal distribution N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} , from which the central limit theorem follows. === Convergence to the limit === The central limit theorem gives only an asymptotic distribution. As an approximation for a finite number of observations, it provides a reasonable approximation only when close to the peak of the normal distribution; it requires a very large number of observations to stretch into the tails. The convergence in the central limit theorem is uniform because the limiting cumulative distribution function is continuous. If the third central moment E ⁡ [ ( X 1 − μ ) 3 ] {\\textstyle \\operatorname {E} \\left[(X_{1}-\\mu )^{3}\\right]} exists and is finite, then the speed of convergence is at least on the order of 1 / n {\\textstyle 1/{\\sqrt {n}}} (see Berry–Esseen theorem). Stein's method can be used not only to prove the central limit theorem, but also to provide bounds on the rates of convergence for selected metrics. The convergence to the normal distribution is monotonic, in the sense that the entropy of Z n {\\textstyle Z_{n}} increases monotonically to that of the normal distribution. The central limit theorem applies in particular to sums of independent and identically distributed discrete random variables. A sum of discrete random variables is still a discrete random variable, so that we are confronted with a sequence of discrete random variables whose cumulative probability distribution function converges towards a cumulative probability distribution function corresponding to a continuous variable (namely that of the normal distribution). This means that if we build a histogram of the realizations of the sum of n independent identical discrete variables, the piecewise-linear curve that joins the centers of the upper faces of the rectangles forming the histogram converges toward a Gaussian curve as n approaches infinity; this relation is known as de Moivre–Laplace theorem. The binomial distribution article details such an application of the central limit theorem in the simple case of a discrete variable taking only two possible values. === Common misconceptions === Studies have shown that the central limit theorem is subject to several common but serious misconceptions, some of which appear in widely used textbooks. These include: The misconceived belief that the theorem applies to random sampling of any variable, rather than to the mean values (or sums) of iid random variables extracted from a population by repeated sampling. That is, the theorem assumes the random sampling produces a sampling distribution formed from different values of means (or sums) of such random variables. The misconceived belief that the theorem ensures that random sampling leads to the emergence of a normal distribution for sufficiently large samples of any random variable, regardless of the population distribution. In reality, such sampling asymptotically reproduces the properties of the population, an intuitive result underpinned by the Glivenko–Cantelli theorem. The misconceived belief that the theorem leads to a good approximation of a normal distribution for sample sizes greater than around 30, allowing reliable inferences regardless of the nature of the population. In reality, this empirical rule of thumb has no valid justification, and can lead to seriously flawed inferences. See Z-test for where the approximation holds. === Relation to the law of large numbers === The law of large numbers as well as the central limit theorem are partial solutions to a general problem: \"What is the limiting behavior of Sn as n approaches infinity?\" In mathematical analysis, asymptotic series are one of the most popular tools employed to approach such questions. Suppose we have an asymptotic expansion of f ( n ) {\\textstyle f(n)} : f ( n ) = a 1 φ 1 ( n ) + a 2 φ 2 ( n ) + O ( φ 3 ( n ) ) ( n → ∞ ) . {\\displaystyle f(n)=a_{1}\\varphi _{1}(n)+a_{2}\\varphi _{2}(n)+O{\\big (}\\varphi _{3}(n){\\big )}\\qquad (n\\to \\infty ).} Dividing both parts by φ1(n) and taking the limit will produce a1, the coefficient of the highest-order term in the expansion, which represents the rate at which f(n) changes in its leading term. lim n → ∞ f ( n ) φ 1 ( n ) = a 1 . {\\displaystyle \\lim _{n\\to \\infty }{\\frac {f(n)}{\\varphi _{1}(n)}}=a_{1}.} Informally, one can say: \"f(n) grows approximately as a1φ1(n)\". Taking the difference between f(n) and its approximation and then dividing by the next term in the expansion, we arrive at a more refined statement about f(n): lim n → ∞ f ( n ) − a 1 φ 1 ( n ) φ 2 ( n ) = a 2 . {\\displaystyle \\lim _{n\\to \\infty }{\\frac {f(n)-a_{1}\\varphi _{1}(n)}{\\varphi _{2}(n)}}=a_{2}.} Here one can say that the difference between the function and its approximation grows approximately as a2φ2(n). The idea is that dividing the function by appropriate normalizing functions, and looking at the limiting behavior of the result, can tell us much about the limiting behavior of the original function itself. Informally, something along these lines happens when the sum, Sn, of independent identically distributed random variables, X1, ..., Xn, is studied in classical probability theory. If each Xi has finite mean μ, then by the law of large numbers, ⁠Sn/n⁠ → μ. If in addition each Xi has finite variance σ2, then by the central limit theorem, S n − n μ n → ξ , {\\displaystyle {\\frac {S_{n}-n\\mu }{\\sqrt {n}}}\\to \\xi ,} where ξ is distributed as N(0,σ2). This provides values of the first two constants in the informal expansion S n ≈ μ n + ξ n . {\\displaystyle S_{n}\\approx \\mu n+\\xi {\\sqrt {n}}.} In the case where the Xi do not have finite mean or variance, convergence of the shifted and rescaled sum can also occur with different centering and scaling factors: S n − a n b n → Ξ , {\\displaystyle {\\frac {S_{n}-a_{n}}{b_{n}}}\\rightarrow \\Xi ,} or informally S n ≈ a n + Ξ b n . {\\displaystyle S_{n}\\approx a_{n}+\\Xi b_{n}.} Distributions Ξ which can arise in this way are called stable. Clearly, the normal distribution is stable, but there are also other stable distributions, such as the Cauchy distribution, for which the mean or variance are not defined. The scaling factor bn may be proportional to nc, for any c ≥ ⁠1/2⁠; it may also be multiplied by a slowly varying function of n. The law of the iterated logarithm specifies what is happening \"in between\" the law of large numbers and the central limit theorem. Specifically it says that the normalizing function √n log log n, intermediate in size between n of the law of large numbers and √n of the central limit theorem, provides a non-trivial limiting behavior. === Alternative statements of the theorem === ==== Density functions ==== The density of the sum of two or more independent variables is the convolution of their densities (if these densities exist). Thus the central limit theorem can be interpreted as a statement about the properties of density functions under convolution: the convolution of a number of density functions tends to the normal density as the number of density functions increases without bound. These theorems require stronger hypotheses than the forms of the central limit theorem given above. Theorems of this type are often called local limit theorems. See Petrov for a particular local limit theorem for sums of independent and identically distributed random variables. ==== Characteristic functions ==== Since the characteristic function of a convolution is the product of the characteristic functions of the densities involved, the central limit theorem has yet another restatement: the product of the characteristic functions of a number of density functions becomes close to the characteristic function of the normal density as the number of density functions increases without bound, under the conditions stated above. Specifically, an appropriate scaling factor needs to be applied to the argument of the characteristic function. An equivalent statement can be made about Fourier transforms, since the characteristic function is essentially a Fourier transform. === Calculating the variance === Let Sn be the sum of n random variables. Many central limit theorems provide conditions such that Sn/√Var(Sn) converges in distribution to N(0,1) (the normal distribution with mean 0, variance 1) as n → ∞. In some cases, it is possible to find a constant σ2 and function f(n) such that Sn/(σ√n⋅f(n)) converges in distribution to N(0,1) as n→ ∞. == Extensions == === Products of positive random variables === The logarithm of a product is simply the sum of the logarithms of the factors. Therefore, when the logarithm of a product of random variables that take only positive values approaches a normal distribution, the product itself approaches a log-normal distribution. Many physical quantities (especially mass or length, which are a matter of scale and cannot be negative) are the products of different random factors, so they follow a log-normal distribution. This multiplicative version of the central limit theorem is sometimes called Gibrat's law. Whereas the central limit theorem for sums of random variables requires the condition of finite variance, the corresponding theorem for products requires the corresponding condition that the density function be square-integrable. == Beyond the classical framework == Asymptotic normality, that is, convergence to the normal distribution after appropriate shift and rescaling, is a phenomenon much more general than the classical framework treated above, namely, sums of independent random variables (or vectors). New frameworks are revealed from time to time; no single unifying framework is available for now. === Convex body === These two εn-close distributions have densities (in fact, log-concave densities), thus, the total variance distance between them is the integral of the absolute value of the difference between the densities. Convergence in total variation is stronger than weak convergence. An important example of a log-concave density is a function constant inside a given convex body and vanishing outside; it corresponds to the uniform distribution on the convex body, which explains the term \"central limit theorem for convex bodies\". Another example: f(x1, ..., xn) = const · exp(−(|x1|α + ⋯ + |xn|α)β) where α > 1 and αβ > 1. If β = 1 then f(x1, ..., xn) factorizes into const · exp (−|x1|α) … exp(−|xn|α), which means X1, ..., Xn are independent. In general, however, they are dependent. The condition f(x1, ..., xn) = f(|x1|, ..., |xn|) ensures that X1, ..., Xn are of zero mean and uncorrelated; still, they need not be independent, nor even pairwise independent. By the way, pairwise independence cannot replace independence in the classical central limit theorem. Here is a Berry–Esseen type result. The distribution of ⁠X1 + ⋯ + Xn/√n⁠ need not be approximately normal (in fact, it can be uniform). However, the distribution of c1X1 + ⋯ + cnXn is close to N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} (in the total variation distance) for most vectors (c1, ..., cn) according to the uniform distribution on the sphere c21 + ⋯ + c2n = 1. === Lacunary trigonometric series === === Gaussian polytopes === The same also holds in all dimensions greater than 2. The polytope Kn is called a Gaussian random polytope. A similar result holds for the number of vertices (of the Gaussian polytope), the number of edges, and in fact, faces of all dimensions. === Linear functions of orthogonal matrices === A linear function of a matrix M is a linear combination of its elements (with given coefficients), M ↦ tr(AM) where A is the matrix of the coefficients; see Trace (linear algebra)#Inner product. A random orthogonal matrix is said to be distributed uniformly, if its distribution is the normalized Haar measure on the orthogonal group O(n,R); see Rotation matrix#Uniform random rotation matrices. === Subsequences === === Random walk on a crystal lattice === The central limit theorem may be established for the simple random walk on a crystal lattice (an infinite-fold abelian covering graph over a finite graph), and is used for design of crystal structures. == Applications and examples == A simple example of the central limit theorem is rolling many identical, unbiased dice. The distribution of the sum (or average) of the rolled numbers will be well approximated by a normal distribution. Since real-world quantities are often the balanced sum of many unobserved random events, the central limit theorem also provides a partial explanation for the prevalence of the normal probability distribution. It also justifies the approximation of large-sample statistics to the normal distribution in controlled experiments. === Regression === Regression analysis, and in particular ordinary least squares, specifies that a dependent variable depends according to some function upon one or more independent variables, with an additive error term. Various types of statistical inference on the regression assume that the error term is normally distributed. This assumption can be justified by assuming that the error term is actually the sum of many independent error terms; even if the individual error terms are not normally distributed, by the central limit theorem their sum can be well approximated by a normal distribution. === Other illustrations === Given its importance to statistics, a number of papers and computer packages are available that demonstrate the convergence involved in the central limit theorem. == History == Dutch mathematician Henk Tijms writes: The central limit theorem has an interesting history. The first version of this theorem was postulated by the French-born mathematician Abraham de Moivre who, in a remarkable article published in 1733, used the normal distribution to approximate the distribution of the number of heads resulting from many tosses of a fair coin. This finding was far ahead of its time, and was nearly forgotten until the famous French mathematician Pierre-Simon Laplace rescued it from obscurity in his monumental work Théorie analytique des probabilités, which was published in 1812. Laplace expanded De Moivre's finding by approximating the binomial distribution with the normal distribution. But as with De Moivre, Laplace's finding received little attention in his own time. It was not until the nineteenth century was at an end that the importance of the central limit theorem was discerned, when, in 1901, Russian mathematician Aleksandr Lyapunov defined it in general terms and proved precisely how it worked mathematically. Nowadays, the central limit theorem is considered to be the unofficial sovereign of probability theory. Sir Francis Galton described the Central Limit Theorem in this way: I know of scarcely anything so apt to impress the imagination as the wonderful form of cosmic order expressed by the \"Law of Frequency of Error\". The law would have been personified by the Greeks and deified, if they had known of it. It reigns with serenity and in complete self-effacement, amidst the wildest confusion. The huger the mob, and the greater the apparent anarchy, the more perfect is its sway. It is the supreme law of Unreason. Whenever a large sample of chaotic elements are taken in hand and marshalled in the order of their magnitude, an unsuspected and most beautiful form of regularity proves to have been latent all along. The actual term \"central limit theorem\" (in German: \"zentraler Grenzwertsatz\") was first used by George Pólya in 1920 in the title of a paper. Pólya referred to the theorem as \"central\" due to its importance in probability theory. According to Le Cam, the French school of probability interprets the word central in the sense that \"it describes the behaviour of the centre of the distribution as opposed to its tails\". The abstract of the paper On the central limit theorem of calculus of probability and the problem of moments by Pólya in 1920 translates as follows. The occurrence of the Gaussian probability density 1 = e−x2 in repeated experiments, in errors of measurements, which result in the combination of very many and very small elementary errors, in diffusion processes etc., can be explained, as is well-known, by the very same limit theorem, which plays a central role in the calculus of probability. The actual discoverer of this limit theorem is to be named Laplace; it is likely that its rigorous proof was first given by Tschebyscheff and its sharpest formulation can be found, as far as I am aware of, in an article by Liapounoff. ... A thorough account of the theorem's history, detailing Laplace's foundational work, as well as Cauchy's, Bessel's and Poisson's contributions, is provided by Hald. Two historical accounts, one covering the development from Laplace to Cauchy, the second the contributions by von Mises, Pólya, Lindeberg, Lévy, and Cramér during the 1920s, are given by Hans Fischer. Le Cam describes a period around 1935. Bernstein presents a historical discussion focusing on the work of Pafnuty Chebyshev and his students Andrey Markov and Aleksandr Lyapunov that led to the first proofs of the CLT in a general setting. A curious footnote to the history of the Central Limit Theorem is that a proof of a result similar to the 1922 Lindeberg CLT was the subject of Alan Turing's 1934 Fellowship Dissertation for King's College at the University of Cambridge. Only after submitting the work did Turing learn it had already been proved. Consequently, Turing's dissertation was not published. == See also == Asymptotic equipartition property Asymptotic distribution Bates distribution Benford's law – result of extension of CLT to product of random variables. Berry–Esseen theorem Central limit theorem for directional statistics – Central limit theorem applied to the case of directional statistics Delta method – to compute the limit distribution of a function of a random variable. Erdős–Kac theorem – connects the number of prime factors of an integer with the normal probability distribution Fisher–Tippett–Gnedenko theorem – limit theorem for extremum values (such as max{Xn}) Irwin–Hall distribution Markov chain central limit theorem Normal distribution Tweedie convergence theorem – a theorem that can be considered to bridge between the central limit theorem and the Poisson convergence theorem Donsker's theorem == Notes == == References == Bárány, Imre; Vu, Van (2007). \"Central limit theorems for Gaussian polytopes\". Annals of Probability. 35 (4). Institute of Mathematical Statistics: 1593–1621. arXiv:math/0610192. doi:10.1214/009117906000000791. S2CID 9128253. Bauer, Heinz (2001). Measure and Integration Theory. Berlin: de Gruyter. ISBN 3110167190. Billingsley, Patrick (1995). Probability and Measure (3rd ed.). John Wiley & Sons. ISBN 0-471-00710-2. Bradley, Richard (2005). \"Basic Properties of Strong Mixing Conditions. A Survey and Some Open Questions\". Probability Surveys. 2: 107–144. arXiv:math/0511078. Bibcode:2005math.....11078B. doi:10.1214/154957805100000104. S2CID 8395267. Bradley, Richard (2007). Introduction to Strong Mixing Conditions (1st ed.). Heber City, UT: Kendrick Press. ISBN 978-0-9740427-9-4. Dinov, Ivo; Christou, Nicolas; Sanchez, Juana (2008). \"Central Limit Theorem: New SOCR Applet and Demonstration Activity\". Journal of Statistics Education. 16 (2). ASA: 1–15. doi:10.1080/10691898.2008.11889560. PMC 3152447. PMID 21833159. Archived from the original on 2016-03-03. Retrieved 2008-08-23. Durrett, Richard (2004). Probability: theory and examples (3rd ed.). Cambridge University Press. ISBN 0521765390. Fischer, Hans (2011). A History of the Central Limit Theorem: From Classical to Modern Probability Theory (PDF). Sources and Studies in the History of Mathematics and Physical Sciences. New York: Springer. doi:10.1007/978-0-387-87857-7. ISBN 978-0-387-87856-0. MR 2743162. Zbl 1226.60004. Archived (PDF) from the original on 2017-10-31. Gaposhkin, V. F. (1966). \"Lacunary series and independent functions\". Russian Mathematical Surveys. 21 (6): 1–82. Bibcode:1966RuMaS..21....1G. doi:10.1070/RM1966v021n06ABEH001196. S2CID 250833638.. Klartag, Bo'az (2007). \"A central limit theorem for convex sets\". Inventiones Mathematicae. 168 (1): 91–131. arXiv:math/0605014. Bibcode:2007InMat.168...91K. doi:10.1007/s00222-006-0028-8. S2CID 119169773. Klartag, Bo'az (2008). \"A Berry–Esseen type inequality for convex bodies with an unconditional basis\". Probability Theory and Related Fields. 145 (1–2): 1–33. arXiv:0705.0832. doi:10.1007/s00440-008-0158-6. S2CID 10163322. == External links == Central Limit Theorem at Khan Academy \"Central limit theorem\". Encyclopedia of Mathematics. EMS Press. 2001 . Weisstein, Eric W. \"Central Limit Theorem\". MathWorld. A music video demonstrating the central limit theorem with a Galton board by Carl McTague"
+  },
+  "chunks": [
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0000",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 811,
+      "content": "In probability theory, the central limit theorem (CLT) states that, under appropriate conditions, the distribution of a normalized version of the sample mean converges to a standard normal distribution. This holds even if the original variables themselves are not normally distributed. There are several versions of the CLT, each applying in the context of different conditions. The theorem is a key concept in probability theory because it implies that probabilistic and statistical methods that work for normal distributions can be applicable to many problems involving other types of distributions. This theorem has seen many changes during the formal development of probability theory. Previous versions of the theorem date back to 1811, but in its modern form it was only precisely stated as late as 1920.",
+      "char_count": 810,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0001",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 811,
+      "end_char": 1709,
+      "content": "In statistics, the CLT can be stated as: let X 1 , X 2 , … , X n {\\displaystyle X_{1},X_{2},\\dots ,X_{n}} denote a statistical sample of size n {\\displaystyle n} from a population with expected value (average) μ {\\displaystyle \\mu } and finite positive variance σ 2 {\\displaystyle \\sigma ^{2}} , and let X ¯ n {\\displaystyle {\\bar {X}}_{n}} denote the sample mean (which is itself a random variable). Then the limit as n → ∞ {\\displaystyle n\\to \\infty } of the distribution of ( X ¯ n − μ ) n {\\displaystyle ({\\bar {X}}_{n}-\\mu ){\\sqrt {n}}} is a normal distribution with mean 0 {\\displaystyle 0} and variance σ 2 {\\displaystyle \\sigma ^{2}} . In other words, suppose that a large sample of observations is obtained, each observation being randomly produced in a way that does not depend on the values of the other observations, and the average (arithmetic mean) of the observed values is computed.",
+      "char_count": 898,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0002",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1710,
+      "end_char": 2482,
+      "content": "If this procedure is performed many times, resulting in a collection of observed averages, the central limit theorem says that if the sample size is large enough, the probability distribution of these averages will closely approximate a normal distribution. The central limit theorem has several variants. In its common form, the random variables must be independent and identically distributed (i.i.d.). This requirement can be weakened; convergence of the mean to the normal distribution also occurs for non-identical distributions or for non-independent observations if they comply with certain conditions. The earliest version of this theorem, that the normal distribution may be used as an approximation to the binomial distribution, is the de Moivre–Laplace theorem.",
+      "char_count": 772,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0003",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Classical CLT ==",
+      "heading_path": "== = Classical CLT ==",
+      "start_char": 2532,
+      "end_char": 3339,
+      "content": "== = Classical CLT === Let { X 1 , … , X n } {\\displaystyle \\{X_{1},\\ldots ,X_{n}}\\} be a sequence of i.i.d. random variables having a distribution with expected value given by μ {\\displaystyle \\mu } and finite variance given by σ 2 . {\\displaystyle \\sigma ^{2}.} Suppose we are interested in the sample average X ¯ n ≡ X 1 + ⋯ + X n n . {\\displaystyle {\\bar {X}}_{n}\\equiv {\\frac {X_{1}+\\cdots +X_{n}}{n}}.} By the law of large numbers, the sample average converges almost surely (and therefore also converges in probability) to the expected value μ {\\displaystyle \\mu } as n → ∞ . {\\displaystyle n\\to \\infty .} The classical central limit theorem describes the size and the distributional form of the stochastic fluctuations around the deterministic number μ {\\displaystyle \\mu } during this convergence.",
+      "char_count": 806,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0004",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Classical CLT ==",
+      "heading_path": "== = Classical CLT ==",
+      "start_char": 3339,
+      "end_char": 4248,
+      "content": "More precisely, it states that as n {\\displaystyle n} gets larger, the distribution of the normalized mean n ( X ¯ n − μ ) {\\displaystyle {\\sqrt {n}}({\\bar {X}}_{n}-\\mu )} , i.e. the difference between the sample average X ¯ n {\\displaystyle {\\bar {X}}_{n}} and its limit μ , {\\displaystyle \\mu ,} scaled by the factor n {\\displaystyle {\\sqrt {n}}} , approaches the normal distribution with mean 0 {\\displaystyle 0} and variance σ 2 . {\\displaystyle \\sigma ^{2}.} For large enough n , {\\displaystyle n,} the distribution of X ¯ n {\\displaystyle {\\bar {X}}_{n}} gets arbitrarily close to the normal distribution with mean μ {\\displaystyle \\mu } and variance σ 2 / n . {\\displaystyle \\sigma ^{2}/n.} The usefulness of the theorem is that the distribution of n ( X ¯ n − μ ) {\\displaystyle {\\sqrt {n}}({\\bar {X}}_{n}-\\mu )} approaches normality regardless of the shape of the distribution of the individual X i .",
+      "char_count": 909,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0005",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Classical CLT ==",
+      "heading_path": "== = Classical CLT ==",
+      "start_char": 4249,
+      "end_char": 5104,
+      "content": "{\\displaystyle X_{i}.} Formally, the theorem can be stated as follows: In the case σ > 0 , {\\displaystyle \\sigma >0,} convergence in distribution means that the cumulative distribution functions of n ( X ¯ n − μ ) {\\displaystyle {\\sqrt {n}}({\\bar {X}}_{n}-\\mu )} converge pointwise to the cdf of the N ( 0 , σ 2 ) {\\displaystyle {\\mathcal {N}}(0,\\sigma ^{2})} distribution: for every real number z , {\\displaystyle z,} lim n → ∞ P [ n ( X ¯ n − μ ) ≤ z ] = lim n → ∞ P [ n ( X ¯ n − μ ) σ ≤ z σ ] = Φ ( z σ ) , {\\displaystyle \\lim _{n\\to \\infty }\\mathbb {P} \\left[{\\sqrt {n}}({\\bar {X}}_{n}-\\mu )\\leq z\\right]=\\lim _{n\\to \\infty }\\mathbb {P} \\left[{\\frac {{\\sqrt {n}}({\\bar {X}}_{n}-\\mu )}{\\sigma }}\\leq {\\frac {z}{\\sigma }}\\right]=\\Phi \\left({\\frac {z}{\\sigma }}\\right),} where Φ ( z ) {\\displaystyle \\Phi (z)} is the standard normal cdf evaluated at z .",
+      "char_count": 855,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0006",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Classical CLT ==",
+      "heading_path": "== = Classical CLT ==",
+      "start_char": 5105,
+      "end_char": 5532,
+      "content": "{\\displaystyle z.} The convergence is uniform in z {\\displaystyle z} in the sense that lim n → ∞ sup z ∈ R | P [ n ( X ¯ n − μ ) ≤ z ] − Φ ( z σ ) | = 0 , {\\displaystyle \\lim _{n\\to \\infty }\\;\\sup _{z\\in \\mathbb {R} }\\;\\left|\\mathbb {P} \\left[{\\sqrt {n}}({\\bar {X}}_{n}-\\mu )\\leq z\\right]-\\Phi \\left({\\frac {z}{\\sigma }}\\right)\\right|=0~,} where sup {\\displaystyle \\sup } denotes the least upper bound (or supremum) of the set.",
+      "char_count": 427,
+      "token_estimate": 106,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0007",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Lyapunov CLT ==",
+      "heading_path": "== = Lyapunov CLT ==",
+      "start_char": 5532,
+      "end_char": 6200,
+      "content": "== = Lyapunov CLT === In this variant of the central limit theorem the random variables X i {\\textstyle X_{i}} have to be independent, but not necessarily identically distributed. The theorem also requires that random variables | X i | {\\textstyle \\left|X_{i}\\right|} have moments of some order ( 2 + δ ) {\\textstyle (2+\\delta )} , and that the rate of growth of these moments is limited by the Lyapunov condition given below. In practice it is usually easiest to check Lyapunov's condition for δ = 1 {\\textstyle \\delta =1} . If a sequence of random variables satisfies Lyapunov's condition, then it also satisfies Lindeberg's condition. The converse implication, however, does not hold.",
+      "char_count": 687,
+      "token_estimate": 171,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0008",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Lindeberg (-Feller) CLT ==",
+      "heading_path": "== = Lindeberg (-Feller) CLT ==",
+      "start_char": 6231,
+      "end_char": 7071,
+      "content": "== = Lindeberg (-Feller) CLT === In the same setting and with the same notation as above, the Lyapunov condition can be replaced with the following weaker one (from Lindeberg in 1920). Suppose that for every ε > 0 {\\textstyle \\varepsilon >0} , lim n → ∞ 1 s n 2 ∑ i = 1 n E ⁡ [ ( X i − μ i ) 2 ⋅ 1 { | X i − μ i | > ε s n } ] = 0 {\\displaystyle \\lim _{n\\to \\infty }{\\frac {1}{s_{n}^{2}}}\\sum _{i=1}^{n}\\operatorname {E} \\left[(X_{i}-\\mu _{i})^{2}\\cdot \\mathbf {1} _{\\left\\{\\left|X_{i}-\\mu _{i}\\right|>\\varepsilon s_{n}\\right\\}}\\right]=0} where 1 { … } {\\textstyle \\mathbf {1} _{\\{\\ldots \\}}} is the indicator function. Then the distribution of the standardized sums 1 s n ∑ i = 1 n ( X i − μ i ) {\\displaystyle {\\frac {1}{s_{n}}}\\sum _{i=1}^{n}\\left(X_{i}-\\mu _{i}\\right)} converges towards the standard normal distribution N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} .",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0009",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = CLT for the sum of a random number of random variables ==",
+      "heading_path": "== = CLT for the sum of a random number of random variables ==",
+      "start_char": 7133,
+      "end_char": 7579,
+      "content": "== = CLT for the sum of a random number of random variables === Rather than summing an integer number n {\\displaystyle n} of random variables and taking n → ∞ {\\displaystyle n\\to \\infty } , the sum can be of a random number N {\\displaystyle N} of random variables, with conditions on N {\\displaystyle N} . For example, the following theorem is Corollary 4 of Robbins (1948). It assumes that N {\\displaystyle N} is asymptotically normal (Robbins also developed other conditions that lead to the same result).",
+      "char_count": 507,
+      "token_estimate": 126,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0010",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Multidimensional CLT ==",
+      "heading_path": "== = Multidimensional CLT ==",
+      "start_char": 7607,
+      "end_char": 8478,
+      "content": "== = Multidimensional CLT === Proofs that use characteristic functions can be extended to cases where each individual X i {\\textstyle \\mathbf {X} _{i}} is a random vector in R k {\\textstyle \\mathbb {R} ^{k}} , with mean vector μ = E ⁡ [ X i ] {\\textstyle {\\boldsymbol {\\mu }}=\\operatorname {E} [\\mathbf {X} _{i}]} and covariance matrix Σ {\\textstyle \\mathbf {\\Sigma } } (among the components of the vector), and these random vectors are independent and identically distributed. The multidimensional central limit theorem states that when scaled, sums converge to a multivariate normal distribution. Summation of these vectors is done component-wise. For i = 1 , 2 , 3 , … , {\\displaystyle i=1,2,3,\\ldots ,} let X i = [ X i ( 1 ) ⋮ X i ( k ) ] {\\displaystyle \\mathbf {X} _{i}={\\begin{bmatrix}X_{i}^{(1)}\\\\\\vdots \\\\X_{i}^{(k)}\\end{bmatrix}}} be independent random vectors.",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0011",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Multidimensional CLT ==",
+      "heading_path": "== = Multidimensional CLT ==",
+      "start_char": 8478,
+      "end_char": 9421,
+      "content": "The sum of the random vectors X 1 , … , X n {\\displaystyle \\mathbf {X} _{1},\\ldots ,\\mathbf {X} _{n}} is ∑ i = 1 n X i = [ X 1 ( 1 ) ⋮ X 1 ( k ) ] + [ X 2 ( 1 ) ⋮ X 2 ( k ) ] + ⋯ + [ X n ( 1 ) ⋮ X n ( k ) ] = [ ∑ i = 1 n X i ( 1 ) ⋮ ∑ i = 1 n X i ( k ) ] {\\displaystyle \\sum _{i=1}^{n}\\mathbf {X} _{i}={\\begin{bmatrix}X_{1}^{(1)}\\\\\\vdots \\\\X_{1}^{(k)}\\end{bmatrix}}+{\\begin{bmatrix}X_{2}^{(1)}\\\\\\vdots \\\\X_{2}^{(k)}\\end{bmatrix}}+\\cdots +{\\begin{bmatrix}X_{n}^{(1)}\\\\\\vdots \\\\X_{n}^{(k)}\\end{bmatrix}}={\\begin{bmatrix}\\sum _{i=1}^{n}X_{i}^{(1)}\\\\\\vdots \\\\\\sum _{i=1}^{n}X_{i}^{(k)}\\end{bmatrix}}} and their average is X ¯ n = [ X ¯ i ( 1 ) ⋮ X ¯ i ( k ) ] = 1 n ∑ i = 1 n X i . {\\displaystyle \\mathbf {{\\bar {X}}_{n}} ={\\begin{bmatrix}{\\bar {X}}_{i}^{(1)}\\\\\\vdots \\\\{\\bar {X}}_{i}^{(k)}\\end{bmatrix}}={\\frac {1}{n}}\\sum _{i=1}^{n}\\mathbf {X} _{i}.} Therefore, 1 n ∑ i = 1 n [ X i − E ⁡ ( X i ) ] = 1 n ∑ i = 1 n ( X i − μ ) = n ( X ¯ n − μ ) .",
+      "char_count": 943,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0012",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Multidimensional CLT ==",
+      "heading_path": "== = Multidimensional CLT ==",
+      "start_char": 9422,
+      "end_char": 10403,
+      "content": "{\\displaystyle {\\frac {1}{\\sqrt {n}}}\\sum _{i=1}^{n}\\left[\\mathbf {X} _{i}-\\operatorname {E} \\left(\\mathbf {X} _{i}\\right)\\right]={\\frac {1}{\\sqrt {n}}}\\sum _{i=1}^{n}(\\mathbf {X} _{i}-{\\boldsymbol {\\mu }})={\\sqrt {n}}\\left({\\overline {\\mathbf {X} }}_{n}-{\\boldsymbol {\\mu }}\\right).} The multivariate central limit theorem states that n ( X ¯ n − μ ) ⟶ d N k ( 0 , Σ ) , {\\displaystyle {\\sqrt {n}}\\left({\\overline {\\mathbf {X} }}_{n}-{\\boldsymbol {\\mu }}\\right)\\mathrel {\\overset {d}{\\longrightarrow }} {\\mathcal {N}}_{k}(0,{\\boldsymbol {\\Sigma }}),} where the covariance matrix Σ {\\displaystyle {\\boldsymbol {\\Sigma }}} is equal to Σ = [ Var ⁡ ( X 1 ( 1 ) ) Cov ⁡ ( X 1 ( 1 ) , X 1 ( 2 ) ) Cov ⁡ ( X 1 ( 1 ) , X 1 ( 3 ) ) ⋯ Cov ⁡ ( X 1 ( 1 ) , X 1 ( k ) ) Cov ⁡ ( X 1 ( 2 ) , X 1 ( 1 ) ) Var ⁡ ( X 1 ( 2 ) ) Cov ⁡ ( X 1 ( 2 ) , X 1 ( 3 ) ) ⋯ Cov ⁡ ( X 1 ( 2 ) , X 1 ( k ) ) Cov ⁡ ( X 1 ( 3 ) , X 1 ( 1 ) ) Cov ⁡ ( X 1 ( 3 ) , X 1 ( 2 ) ) Var ⁡ ( X 1 ( 3 ) ) ⋯ Cov ⁡ ( X 1 ( 3 ) ,",
+      "char_count": 981,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0013",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Multidimensional CLT ==",
+      "heading_path": "== = Multidimensional CLT ==",
+      "start_char": 10404,
+      "end_char": 11397,
+      "content": "X 1 ( k ) ) ⋮ ⋮ ⋮ ⋱ ⋮ Cov ⁡ ( X 1 ( k ) , X 1 ( 1 ) ) Cov ⁡ ( X 1 ( k ) , X 1 ( 2 ) ) Cov ⁡ ( X 1 ( k ) , X 1 ( 3 ) ) ⋯ Var ⁡ ( X 1 ( k ) ) ] . {\\displaystyle {\\boldsymbol {\\Sigma }}={\\begin{bmatrix}{\\operatorname {Var} \\left(X_{1}^{(1)}\\right)}&\\operatorname {Cov} \\left(X_{1}^{(1)},X_{1}^{(2)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(1)},X_{1}^{(3)}\\right)&\\cdots &\\operatorname {Cov} \\left(X_{1}^{(1)},X_{1}^{(k)}\\right)\\\\\\operatorname {Cov} \\left(X_{1}^{(2)},X_{1}^{(1)}\\right)&\\operatorname {Var} \\left(X_{1}^{(2)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(2)},X_{1}^{(3)}\\right)&\\cdots &\\operatorname {Cov} \\left(X_{1}^{(2)},X_{1}^{(k)}\\right)\\\\\\operatorname {Cov} \\left(X_{1}^{(3)},X_{1}^{(1)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(3)},X_{1}^{(2)}\\right)&\\operatorname {Var} \\left(X_{1}^{(3)}\\right)&\\cdots &\\operatorname {Cov} \\left(X_{1}^{(3)},X_{1}^{(k)}\\right)\\\\\\vdots &\\vdots &\\vdots &\\ddots &\\vdots \\\\\\operatorname {Cov} \\left(X_{1}^{(k)},X_{1}^{(1)}\\right)&\\operatorname {Cov}",
+      "char_count": 993,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0014",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Multidimensional CLT ==",
+      "heading_path": "== = Multidimensional CLT ==",
+      "start_char": 11398,
+      "end_char": 11799,
+      "content": "\\left(X_{1}^{(k)},X_{1}^{(2)}\\right)&\\operatorname {Cov} \\left(X_{1}^{(k)},X_{1}^{(3)}\\right)&\\cdots &\\operatorname {Var} \\left(X_{1}^{(k)}\\right)\\\\\\end{bmatrix}}~.} The multivariate central limit theorem can be proved using the Cramér–Wold theorem. The rate of convergence is given by the following Berry–Esseen type result: It is unknown whether the factor d 1 / 4 {\\textstyle d^{1/4}} is necessary.",
+      "char_count": 401,
+      "token_estimate": 100,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0015",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== The generalized central limit theorem ==",
+      "heading_path": "== The generalized central limit theorem ==",
+      "start_char": 11815,
+      "end_char": 12704,
+      "content": "== The generalized central limit theorem == The generalized central limit theorem (GCLT) was an effort of multiple mathematicians (Bernstein, Lindeberg, Lévy, Feller, Kolmogorov, and others) over the period from 1920 to 1937. The first published complete proof of the GCLT was in 1937 by Paul Lévy in French. An English language version of the complete proof of the GCLT is available in the translation of Gnedenko and Kolmogorov's 1954 book. The statement of the GCLT is as follows: A non-degenerate random variable Z is α-stable for some 0 < α ≤ 2 if and only if there is an independent, identically distributed sequence of random variables X1, X2, X3, ... and constants an > 0, bn ∈ ℝ with an (X1 + ... + Xn) − bn → Z. Here → means the sequence of random variable sums converges in distribution; i.e., the corresponding distributions satisfy Fn(y) → F(y) at all continuity points of F.",
+      "char_count": 888,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0016",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = CLT under weak dependence ==",
+      "heading_path": "== = CLT under weak dependence ==",
+      "start_char": 12875,
+      "end_char": 13734,
+      "content": "== = CLT under weak dependence === A useful generalization of a sequence of independent, identically distributed random variables is a mixing random process in discrete time; \"mixing\" means, roughly, that random variables temporally far apart from one another are nearly independent. Several kinds of mixing are used in ergodic theory and probability theory. See especially strong mixing (also called α-mixing) defined by α ( n ) → 0 {\\textstyle \\alpha (n)\\to 0} where α ( n ) {\\textstyle \\alpha (n)} is so-called strong mixing coefficient. A simplified formulation of the central limit theorem under strong mixing is: In fact, σ 2 = E ⁡ ( X 1 2 ) + 2 ∑ k = 1 ∞ E ⁡ ( X 1 X 1 + k ) , {\\displaystyle \\sigma ^{2}=\\operatorname {E} \\left(X_{1}^{2}\\right)+2\\sum _{k=1}^{\\infty }\\operatorname {E} \\left(X_{1}X_{1+k}\\right),} where the series converges absolutely.",
+      "char_count": 858,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0017",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = CLT under weak dependence ==",
+      "heading_path": "== = CLT under weak dependence ==",
+      "start_char": 13734,
+      "end_char": 14593,
+      "content": "The assumption σ ≠ 0 {\\textstyle \\sigma \\neq 0} cannot be omitted, since the asymptotic normality fails for X n = Y n − Y n − 1 {\\textstyle X_{n}=Y_{n}-Y_{n-1}} where Y n {\\textstyle Y_{n}} are another stationary sequence. There is a stronger version of the theorem: the assumption E ⁡ [ X n 12 ] < ∞ {\\textstyle \\operatorname {E} \\left[X_{n}^{12}\\right]<\\infty } is replaced with E ⁡ [ | X n | 2 + δ ] < ∞ {\\textstyle \\operatorname {E} \\left[{\\left|X_{n}\\right|}^{2+\\delta }\\right]<\\infty } , and the assumption α n = O ( n − 5 ) {\\textstyle \\alpha _{n}=O\\left(n^{-5}\\right)} is replaced with ∑ n α n δ 2 ( 2 + δ ) < ∞ . {\\displaystyle \\sum _{n}\\alpha _{n}^{\\frac {\\delta }{2(2+\\delta )}}<\\infty .} Existence of such δ > 0 {\\textstyle \\delta >0} ensures the conclusion. For encyclopedic treatment of limit theorems under mixing conditions see (Bradley 2007).",
+      "char_count": 859,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0018",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Proof of classical CLT ==",
+      "heading_path": "== = Proof of classical CLT ==",
+      "start_char": 14640,
+      "end_char": 15161,
+      "content": "== = Proof of classical CLT === The central limit theorem has a proof using characteristic functions. It is similar to the proof of the (weak) law of large numbers. Assume { X 1 , … , X n , … } {\\textstyle \\{X_{1},\\ldots ,X_{n},\\ldots \\}} are independent and identically distributed random variables, each with mean μ {\\textstyle \\mu } and finite variance σ 2 {\\textstyle \\sigma ^{2}} . The sum X 1 + ⋯ + X n {\\textstyle X_{1}+\\cdots +X_{n}} has mean n μ {\\textstyle n\\mu } and variance n σ 2 {\\textstyle n\\sigma ^{2}} .",
+      "char_count": 520,
+      "token_estimate": 130,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0019",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Proof of classical CLT ==",
+      "heading_path": "== = Proof of classical CLT ==",
+      "start_char": 15161,
+      "end_char": 15675,
+      "content": "Consider the random variable Z n = X 1 + ⋯ + X n − n μ n σ 2 = ∑ i = 1 n X i − μ n σ 2 = ∑ i = 1 n 1 n Y i , {\\displaystyle Z_{n}={\\frac {X_{1}+\\cdots +X_{n}-n\\mu }{\\sqrt {n\\sigma ^{2}}}}=\\sum _{i=1}^{n}{\\frac {X_{i}-\\mu }{\\sqrt {n\\sigma ^{2}}}}=\\sum _{i=1}^{n}{\\frac {1}{\\sqrt {n}}}Y_{i},} where in the last step we defined the new random variables Y i = X i − μ σ {\\textstyle Y_{i}={\\frac {X_{i}-\\mu }{\\sigma }}} , each with zero mean and unit variance ( var ⁡ ( Y ) = 1 {\\textstyle \\operatorname {var} (Y)=1} ).",
+      "char_count": 514,
+      "token_estimate": 128,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0020",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Proof of classical CLT ==",
+      "heading_path": "== = Proof of classical CLT ==",
+      "start_char": 15676,
+      "end_char": 16313,
+      "content": "The characteristic function of Z n {\\textstyle Z_{n}} is given by φ Z n ( t ) = φ ∑ i = 1 n 1 n Y i ( t ) = φ Y 1 ( t n ) φ Y 2 ( t n ) ⋯ φ Y n ( t n ) = [ φ Y 1 ( t n ) ] n , {\\displaystyle \\varphi _{Z_{n}}\\!(t)=\\varphi _{\\sum _{i=1}^{n}{{\\frac {1}{\\sqrt {n}}}Y_{i}}}\\!(t)\\ =\\ \\varphi _{Y_{1}}\\!\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)\\varphi _{Y_{2}}\\!\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)\\cdots \\varphi _{Y_{n}}\\!\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)\\ =\\ \\left[\\varphi _{Y_{1}}\\!\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)\\right]^{n},} where in the last step we used the fact that all of the Y i {\\textstyle Y_{i}} are identically distributed.",
+      "char_count": 637,
+      "token_estimate": 159,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0021",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Proof of classical CLT ==",
+      "heading_path": "== = Proof of classical CLT ==",
+      "start_char": 16314,
+      "end_char": 17077,
+      "content": "The characteristic function of Y 1 {\\textstyle Y_{1}} is, by Taylor's theorem, φ Y 1 ( t n ) = 1 − t 2 2 n + o ( t 2 n ) , ( t n ) → 0 {\\displaystyle \\varphi _{Y_{1}}\\!\\left({\\frac {t}{\\sqrt {n}}}\\right)=1-{\\frac {t^{2}}{2n}}+o\\!\\left({\\frac {t^{2}}{n}}\\right),\\quad \\left({\\frac {t}{\\sqrt {n}}}\\right)\\to 0} where o ( t 2 / n ) {\\textstyle o(t^{2}/n)} is \"little o notation\" for some function of t {\\textstyle t} that goes to zero more rapidly than t 2 / n {\\textstyle t^{2}/n} . By the limit of the exponential function ( e x = lim n → ∞ ( 1 + x n ) n {\\textstyle e^{x}=\\lim _{n\\to \\infty }\\left(1+{\\frac {x}{n}}\\right)^{n}} ), the characteristic function of Z n {\\displaystyle Z_{n}} equals φ Z n ( t ) = ( 1 − t 2 2 n + o ( t 2 n ) ) n → e − 1 2 t 2 , n → ∞ .",
+      "char_count": 763,
+      "token_estimate": 190,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0022",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Proof of classical CLT ==",
+      "heading_path": "== = Proof of classical CLT ==",
+      "start_char": 17078,
+      "end_char": 18010,
+      "content": "{\\displaystyle \\varphi _{Z_{n}}(t)=\\left(1-{\\frac {t^{2}}{2n}}+o\\left({\\frac {t^{2}}{n}}\\right)\\right)^{n}\\rightarrow e^{-{\\frac {1}{2}}t^{2}},\\quad n\\to \\infty .} All of the higher order terms vanish in the limit n → ∞ {\\textstyle n\\to \\infty } . The right hand side equals the characteristic function of a standard normal distribution N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} , which implies through Lévy's continuity theorem that the distribution of Z n {\\textstyle Z_{n}} will approach N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} as n → ∞ {\\textstyle n\\to \\infty } . Therefore, the sample average X ¯ n = X 1 + ⋯ + X n n {\\displaystyle {\\bar {X}}_{n}={\\frac {X_{1}+\\cdots +X_{n}}{n}}} is such that n σ ( X ¯ n − μ ) = Z n {\\displaystyle {\\frac {\\sqrt {n}}{\\sigma }}({\\bar {X}}_{n}-\\mu )=Z_{n}} converges to the normal distribution N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} , from which the central limit theorem follows.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0023",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Convergence to the limit ==",
+      "heading_path": "== = Convergence to the limit ==",
+      "start_char": 18013,
+      "end_char": 18865,
+      "content": "== = Convergence to the limit === The central limit theorem gives only an asymptotic distribution. As an approximation for a finite number of observations, it provides a reasonable approximation only when close to the peak of the normal distribution; it requires a very large number of observations to stretch into the tails. The convergence in the central limit theorem is uniform because the limiting cumulative distribution function is continuous. If the third central moment E ⁡ [ ( X 1 − μ ) 3 ] {\\textstyle \\operatorname {E} \\left[(X_{1}-\\mu )^{3}\\right]} exists and is finite, then the speed of convergence is at least on the order of 1 / n {\\textstyle 1/{\\sqrt {n}}} (see Berry–Esseen theorem). Stein's method can be used not only to prove the central limit theorem, but also to provide bounds on the rates of convergence for selected metrics.",
+      "char_count": 851,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0024",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Convergence to the limit ==",
+      "heading_path": "== = Convergence to the limit ==",
+      "start_char": 18865,
+      "end_char": 19843,
+      "content": "The convergence to the normal distribution is monotonic, in the sense that the entropy of Z n {\\textstyle Z_{n}} increases monotonically to that of the normal distribution. The central limit theorem applies in particular to sums of independent and identically distributed discrete random variables. A sum of discrete random variables is still a discrete random variable, so that we are confronted with a sequence of discrete random variables whose cumulative probability distribution function converges towards a cumulative probability distribution function corresponding to a continuous variable (namely that of the normal distribution). This means that if we build a histogram of the realizations of the sum of n independent identical discrete variables, the piecewise-linear curve that joins the centers of the upper faces of the rectangles forming the histogram converges toward a Gaussian curve as n approaches infinity; this relation is known as de Moivre–Laplace theorem.",
+      "char_count": 978,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0025",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Common misconceptions ==",
+      "heading_path": "== = Common misconceptions ==",
+      "start_char": 20007,
+      "end_char": 20931,
+      "content": "== = Common misconceptions === Studies have shown that the central limit theorem is subject to several common but serious misconceptions, some of which appear in widely used textbooks. These include: The misconceived belief that the theorem applies to random sampling of any variable, rather than to the mean values (or sums) of iid random variables extracted from a population by repeated sampling. That is, the theorem assumes the random sampling produces a sampling distribution formed from different values of means (or sums) of such random variables. The misconceived belief that the theorem ensures that random sampling leads to the emergence of a normal distribution for sufficiently large samples of any random variable, regardless of the population distribution. In reality, such sampling asymptotically reproduces the properties of the population, an intuitive result underpinned by the Glivenko–Cantelli theorem.",
+      "char_count": 923,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0026",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Common misconceptions ==",
+      "heading_path": "== = Common misconceptions ==",
+      "start_char": 20931,
+      "end_char": 21300,
+      "content": "The misconceived belief that the theorem leads to a good approximation of a normal distribution for sample sizes greater than around 30, allowing reliable inferences regardless of the nature of the population. In reality, this empirical rule of thumb has no valid justification, and can lead to seriously flawed inferences. See Z-test for where the approximation holds.",
+      "char_count": 369,
+      "token_estimate": 92,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0027",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Relation to the law of large numbers ==",
+      "heading_path": "== = Relation to the law of large numbers ==",
+      "start_char": 21316,
+      "end_char": 22138,
+      "content": "== = Relation to the law of large numbers === The law of large numbers as well as the central limit theorem are partial solutions to a general problem: \"What is the limiting behavior of Sn as n approaches infinity?\" In mathematical analysis, asymptotic series are one of the most popular tools employed to approach such questions. Suppose we have an asymptotic expansion of f ( n ) {\\textstyle f(n)} : f ( n ) = a 1 φ 1 ( n ) + a 2 φ 2 ( n ) + O ( φ 3 ( n ) ) ( n → ∞ ) . {\\displaystyle f(n)=a_{1}\\varphi _{1}(n)+a_{2}\\varphi _{2}(n)+O{\\big (}\\varphi _{3}(n){\\big )}\\qquad (n\\to \\infty ).} Dividing both parts by φ1(n) and taking the limit will produce a1, the coefficient of the highest-order term in the expansion, which represents the rate at which f(n) changes in its leading term. lim n → ∞ f ( n ) φ 1 ( n ) = a 1 .",
+      "char_count": 821,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0028",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Relation to the law of large numbers ==",
+      "heading_path": "== = Relation to the law of large numbers ==",
+      "start_char": 22138,
+      "end_char": 23083,
+      "content": "{\\displaystyle \\lim _{n\\to \\infty }{\\frac {f(n)}{\\varphi _{1}(n)}}=a_{1}.} Informally, one can say: \"f(n) grows approximately as a1φ1(n)\". Taking the difference between f(n) and its approximation and then dividing by the next term in the expansion, we arrive at a more refined statement about f(n): lim n → ∞ f ( n ) − a 1 φ 1 ( n ) φ 2 ( n ) = a 2 . {\\displaystyle \\lim _{n\\to \\infty }{\\frac {f(n)-a_{1}\\varphi _{1}(n)}{\\varphi _{2}(n)}}=a_{2}.} Here one can say that the difference between the function and its approximation grows approximately as a2φ2(n). The idea is that dividing the function by appropriate normalizing functions, and looking at the limiting behavior of the result, can tell us much about the limiting behavior of the original function itself. Informally, something along these lines happens when the sum, Sn, of independent identically distributed random variables, X1, ..., Xn, is studied in classical probability theory.",
+      "char_count": 945,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0029",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Relation to the law of large numbers ==",
+      "heading_path": "== = Relation to the law of large numbers ==",
+      "start_char": 23084,
+      "end_char": 24060,
+      "content": "If each Xi has finite mean μ, then by the law of large numbers, ⁠Sn/n⁠ → μ. If in addition each Xi has finite variance σ2, then by the central limit theorem, S n − n μ n → ξ , {\\displaystyle {\\frac {S_{n}-n\\mu }{\\sqrt {n}}}\\to \\xi ,} where ξ is distributed as N(0,σ2). This provides values of the first two constants in the informal expansion S n ≈ μ n + ξ n . {\\displaystyle S_{n}\\approx \\mu n+\\xi {\\sqrt {n}}.} In the case where the Xi do not have finite mean or variance, convergence of the shifted and rescaled sum can also occur with different centering and scaling factors: S n − a n b n → Ξ , {\\displaystyle {\\frac {S_{n}-a_{n}}{b_{n}}}\\rightarrow \\Xi ,} or informally S n ≈ a n + Ξ b n . {\\displaystyle S_{n}\\approx a_{n}+\\Xi b_{n}.} Distributions Ξ which can arise in this way are called stable. Clearly, the normal distribution is stable, but there are also other stable distributions, such as the Cauchy distribution, for which the mean or variance are not defined.",
+      "char_count": 976,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0030",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Relation to the law of large numbers ==",
+      "heading_path": "== = Relation to the law of large numbers ==",
+      "start_char": 24061,
+      "end_char": 24523,
+      "content": "The scaling factor bn may be proportional to nc, for any c ≥ ⁠1/2⁠; it may also be multiplied by a slowly varying function of n. The law of the iterated logarithm specifies what is happening \"in between\" the law of large numbers and the central limit theorem. Specifically it says that the normalizing function √n log log n, intermediate in size between n of the law of large numbers and √n of the central limit theorem, provides a non-trivial limiting behavior.",
+      "char_count": 462,
+      "token_estimate": 115,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0031",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Calculating the variance ==",
+      "heading_path": "== = Calculating the variance ==",
+      "start_char": 24559,
+      "end_char": 24906,
+      "content": "== = Calculating the variance === Let Sn be the sum of n random variables. Many central limit theorems provide conditions such that Sn/√Var(Sn) converges in distribution to N(0,1) (the normal distribution with mean 0, variance 1) as n → ∞. In some cases, it is possible to find a constant σ2 and function f(n) such that Sn/(σ√n⋅f(n)) converges in distribution to N(0,1) as n→ ∞.",
+      "char_count": 378,
+      "token_estimate": 94,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0032",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Products of positive random variables ==",
+      "heading_path": "== = Products of positive random variables ==",
+      "start_char": 24968,
+      "end_char": 25748,
+      "content": "== = Products of positive random variables === The logarithm of a product is simply the sum of the logarithms of the factors. Therefore, when the logarithm of a product of random variables that take only positive values approaches a normal distribution, the product itself approaches a log-normal distribution. Many physical quantities (especially mass or length, which are a matter of scale and cannot be negative) are the products of different random factors, so they follow a log-normal distribution. This multiplicative version of the central limit theorem is sometimes called Gibrat's law. Whereas the central limit theorem for sums of random variables requires the condition of finite variance, the corresponding theorem for products requires the corresponding condition that the density function be square-integrable.",
+      "char_count": 824,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0033",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== Beyond the classical framework ==",
+      "heading_path": "== Beyond the classical framework ==",
+      "start_char": 25784,
+      "end_char": 26129,
+      "content": "== Beyond the classical framework == Asymptotic normality, that is, convergence to the normal distribution after appropriate shift and rescaling, is a phenomenon much more general than the classical framework treated above, namely, sums of independent random variables (or vectors). New frameworks are revealed from time to time; no single unifying framework is available for now.",
+      "char_count": 380,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0034",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Convex body ==",
+      "heading_path": "== = Convex body ==",
+      "start_char": 26148,
+      "end_char": 27126,
+      "content": "== = Convex body === These two εn-close distributions have densities (in fact, log-concave densities), thus, the total variance distance between them is the integral of the absolute value of the difference between the densities. Convergence in total variation is stronger than weak convergence. An important example of a log-concave density is a function constant inside a given convex body and vanishing outside; it corresponds to the uniform distribution on the convex body, which explains the term \"central limit theorem for convex bodies\". Another example: f(x1, ..., xn) = const · exp(−(|x1|α + ⋯ + |xn|α)β) where α > 1 and αβ > 1. If β = 1 then f(x1, ..., xn) factorizes into const · exp (−|x1|α) … exp(−|xn|α), which means X1, ..., Xn are independent. In general, however, they are dependent. The condition f(x1, ..., xn) = f(|x1|, ..., |xn|) ensures that X1, ..., Xn are of zero mean and uncorrelated; still, they need not be independent, nor even pairwise independent.",
+      "char_count": 977,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0035",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Convex body ==",
+      "heading_path": "== = Convex body ==",
+      "start_char": 27126,
+      "end_char": 27601,
+      "content": "By the way, pairwise independence cannot replace independence in the classical central limit theorem. Here is a Berry–Esseen type result. The distribution of ⁠X1 + ⋯ + Xn/√n⁠ need not be approximately normal (in fact, it can be uniform). However, the distribution of c1X1 + ⋯ + cnXn is close to N ( 0 , 1 ) {\\textstyle {\\mathcal {N}}(0,1)} (in the total variation distance) for most vectors (c1, ..., cn) according to the uniform distribution on the sphere c21 + ⋯ + c2n = 1.",
+      "char_count": 475,
+      "token_estimate": 118,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0036",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Gaussian polytopes ==",
+      "heading_path": "== = Gaussian polytopes ==",
+      "start_char": 27648,
+      "end_char": 27895,
+      "content": "== = Gaussian polytopes === The same also holds in all dimensions greater than 2. The polytope Kn is called a Gaussian random polytope. A similar result holds for the number of vertices (of the Gaussian polytope), the number of edges, and in fact, faces of all dimensions.",
+      "char_count": 272,
+      "token_estimate": 68,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0037",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Linear functions of orthogonal matrices ==",
+      "heading_path": "== = Linear functions of orthogonal matrices ==",
+      "start_char": 27942,
+      "end_char": 28340,
+      "content": "== = Linear functions of orthogonal matrices === A linear function of a matrix M is a linear combination of its elements (with given coefficients), M ↦ tr(AM) where A is the matrix of the coefficients; see Trace (linear algebra)#Inner product. A random orthogonal matrix is said to be distributed uniformly, if its distribution is the normalized Haar measure on the orthogonal group O(n,R); see Rotation matrix#Uniform random rotation matrices.",
+      "char_count": 444,
+      "token_estimate": 111,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0038",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Random walk on a crystal lattice ==",
+      "heading_path": "== = Random walk on a crystal lattice ==",
+      "start_char": 28402,
+      "end_char": 28606,
+      "content": "== = Random walk on a crystal lattice === The central limit theorem may be established for the simple random walk on a crystal lattice (an infinite-fold abelian covering graph over a finite graph), and is used for design of crystal structures.",
+      "char_count": 243,
+      "token_estimate": 60,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0039",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== Applications and examples ==",
+      "heading_path": "== Applications and examples ==",
+      "start_char": 28637,
+      "end_char": 29168,
+      "content": "== Applications and examples == A simple example of the central limit theorem is rolling many identical, unbiased dice. The distribution of the sum (or average) of the rolled numbers will be well approximated by a normal distribution. Since real-world quantities are often the balanced sum of many unobserved random events, the central limit theorem also provides a partial explanation for the prevalence of the normal probability distribution. It also justifies the approximation of large-sample statistics to the normal distribution in controlled experiments.",
+      "char_count": 561,
+      "token_estimate": 140,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0040",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== = Regression ==",
+      "heading_path": "== = Regression ==",
+      "start_char": 29186,
+      "end_char": 29773,
+      "content": "== = Regression === Regression analysis, and in particular ordinary least squares, specifies that a dependent variable depends according to some function upon one or more independent variables, with an additive error term. Various types of statistical inference on the regression assume that the error term is normally distributed. This assumption can be justified by assuming that the error term is actually the sum of many independent error terms; even if the individual error terms are not normally distributed, by the central limit theorem their sum can be well approximated by a normal distribution.",
+      "char_count": 604,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0041",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 29978,
+      "end_char": 30793,
+      "content": "== History == Dutch mathematician Henk Tijms writes: The central limit theorem has an interesting history. The first version of this theorem was postulated by the French-born mathematician Abraham de Moivre who, in a remarkable article published in 1733, used the normal distribution to approximate the distribution of the number of heads resulting from many tosses of a fair coin. This finding was far ahead of its time, and was nearly forgotten until the famous French mathematician Pierre-Simon Laplace rescued it from obscurity in his monumental work Théorie analytique des probabilités, which was published in 1812. Laplace expanded De Moivre's finding by approximating the binomial distribution with the normal distribution. But as with De Moivre, Laplace's finding received little attention in his own time.",
+      "char_count": 814,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0042",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 30793,
+      "end_char": 31660,
+      "content": "It was not until the nineteenth century was at an end that the importance of the central limit theorem was discerned, when, in 1901, Russian mathematician Aleksandr Lyapunov defined it in general terms and proved precisely how it worked mathematically. Nowadays, the central limit theorem is considered to be the unofficial sovereign of probability theory. Sir Francis Galton described the Central Limit Theorem in this way: I know of scarcely anything so apt to impress the imagination as the wonderful form of cosmic order expressed by the \"Law of Frequency of Error\". The law would have been personified by the Greeks and deified, if they had known of it. It reigns with serenity and in complete self-effacement, amidst the wildest confusion. The huger the mob, and the greater the apparent anarchy, the more perfect is its sway. It is the supreme law of Unreason.",
+      "char_count": 867,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0043",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 31661,
+      "end_char": 32429,
+      "content": "Whenever a large sample of chaotic elements are taken in hand and marshalled in the order of their magnitude, an unsuspected and most beautiful form of regularity proves to have been latent all along. The actual term \"central limit theorem\" (in German: \"zentraler Grenzwertsatz\") was first used by George Pólya in 1920 in the title of a paper. Pólya referred to the theorem as \"central\" due to its importance in probability theory. According to Le Cam, the French school of probability interprets the word central in the sense that \"it describes the behaviour of the centre of the distribution as opposed to its tails\". The abstract of the paper On the central limit theorem of calculus of probability and the problem of moments by Pólya in 1920 translates as follows.",
+      "char_count": 768,
+      "token_estimate": 192,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0044",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 32430,
+      "end_char": 33419,
+      "content": "The occurrence of the Gaussian probability density 1 = e−x2 in repeated experiments, in errors of measurements, which result in the combination of very many and very small elementary errors, in diffusion processes etc., can be explained, as is well-known, by the very same limit theorem, which plays a central role in the calculus of probability. The actual discoverer of this limit theorem is to be named Laplace; it is likely that its rigorous proof was first given by Tschebyscheff and its sharpest formulation can be found, as far as I am aware of, in an article by Liapounoff. ... A thorough account of the theorem's history, detailing Laplace's foundational work, as well as Cauchy's, Bessel's and Poisson's contributions, is provided by Hald. Two historical accounts, one covering the development from Laplace to Cauchy, the second the contributions by von Mises, Pólya, Lindeberg, Lévy, and Cramér during the 1920s, are given by Hans Fischer. Le Cam describes a period around 1935.",
+      "char_count": 989,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "centrallimittheorem_2f8e4a0f_c0045",
+      "article_id": "centrallimittheorem_2f8e4a0f",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 33420,
+      "end_char": 33989,
+      "content": "Bernstein presents a historical discussion focusing on the work of Pafnuty Chebyshev and his students Andrey Markov and Aleksandr Lyapunov that led to the first proofs of the CLT in a general setting. A curious footnote to the history of the Central Limit Theorem is that a proof of a result similar to the 1922 Lindeberg CLT was the subject of Alan Turing's 1934 Fellowship Dissertation for King's College at the University of Cambridge. Only after submitting the work did Turing learn it had already been proved. Consequently, Turing's dissertation was not published.",
+      "char_count": 569,
+      "token_estimate": 142,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 9,
+    "items": [
+      {
+        "question": "In the provided representation of the covariance matrix Σ, what do the elements on the main diagonal represent?",
+        "answer": "The elements on the main diagonal of the covariance matrix Σ represent the variance of the individual random variables, specifically Var(X₁⁽¹⁾), Var(X₁⁽²⁾), Var(X₁⁽³⁾), and so on up to Var(X₁⁽ᵏ⁾).",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0013"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0013"
+        ]
+      },
+      {
+        "question": "Who is named as the actual discoverer of the central limit theorem?",
+        "answer": "Laplace is named as the actual discoverer of the limit theorem.",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0044"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0044"
+        ]
+      },
+      {
+        "question": "What is the name of the theorem that describes how the histogram of the sum of n independent identical discrete variables converges toward a Gaussian curve?",
+        "answer": "The de Moivre–Laplace theorem describes the relation where the histogram of the realizations of the sum of n independent identical discrete variables converges toward a Gaussian curve as n approaches infinity.",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0024"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0024"
+        ]
+      },
+      {
+        "question": "According to the Central Limit Theorem, what is the relationship between the distribution of a population and the distribution of its sample means, and what conditions are generally required for this relationship to hold?",
+        "answer": "The Central Limit Theorem (CLT) states that even if a population's variables are not normally distributed, the probability distribution of the means from large samples taken from that population will approximate a normal distribution. This is significant because it allows statistical methods for normal distributions to be applied to many other types of distributions. For the common form of the CLT to apply, the population must have a finite positive variance, and the random variables in the sample must be independent and identically distributed (i.i.d.).",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0000",
+          "centrallimittheorem_2f8e4a0f_c0001",
+          "centrallimittheorem_2f8e4a0f_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0000",
+          "centrallimittheorem_2f8e4a0f_c0002",
+          "centrallimittheorem_2f8e4a0f_c0001"
+        ]
+      },
+      {
+        "question": "Provide a comprehensive explanation of the classical central limit theorem, including the necessary conditions for the random variables and what the theorem states about the distribution of the normalized sample mean.",
+        "answer": "The classical central limit theorem applies to a sequence of independent and identically distributed (i.i.d.) random variables, {X1, ..., Xn}, which must have a defined expected value (μ) and a finite variance (σ^2). The theorem describes the distribution of the stochastic fluctuations of the sample average (X̄n) around its expected value μ as the sample size (n) increases. Specifically, it states that as n gets larger, the distribution of the normalized mean, √n(X̄n - μ), approaches a normal distribution with a mean of 0 and variance of σ^2. This convergence to a normal distribution occurs regardless of the shape of the distribution for the individual variables Xi. Formally, this is expressed as convergence in distribution, where the cumulative distribution function (CDF) of √n(X̄n - μ) converges pointwise to the CDF of the N(0, σ^2) distribution.",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0003",
+          "centrallimittheorem_2f8e4a0f_c0004",
+          "centrallimittheorem_2f8e4a0f_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0004",
+          "centrallimittheorem_2f8e4a0f_c0003",
+          "centrallimittheorem_2f8e4a0f_c0005"
+        ]
+      },
+      {
+        "question": "What is the relationship between the Lyapunov and Lindeberg conditions in the context of the Central Limit Theorem?",
+        "answer": "The Lindeberg condition is a weaker, more general condition than the Lyapunov condition. Both are used for variants of the Central Limit Theorem where random variables are independent but not necessarily identically distributed. If a sequence of random variables satisfies the Lyapunov condition, it will also satisfy the Lindeberg condition; however, the reverse is not true.",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0007",
+          "centrallimittheorem_2f8e4a0f_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0007",
+          "centrallimittheorem_2f8e4a0f_c0008"
+        ]
+      },
+      {
+        "question": "Provide a comprehensive explanation of the Central Limit Theorem, including its general statement, its statistical formulation, and the common conditions for its application.",
+        "answer": "The Central Limit Theorem (CLT) states that under appropriate conditions, the distribution of a normalized sample mean converges to a standard normal distribution, even if the original variables are not normally distributed. In statistical terms, for a random sample of size 'n' taken from a population with a mean (μ) and finite positive variance (σ²), the distribution of the sample mean (X̄n) approaches a normal distribution as 'n' becomes large. Specifically, the distribution of (X̄n - μ)√n converges to a normal distribution with a mean of 0 and variance of σ². In its common form, the theorem requires that the random variables in the sample are independent and identically distributed (i.i.d.), though this condition can be weakened in some variants.",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0000",
+          "centrallimittheorem_2f8e4a0f_c0001",
+          "centrallimittheorem_2f8e4a0f_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0000",
+          "centrallimittheorem_2f8e4a0f_c0002",
+          "centrallimittheorem_2f8e4a0f_c0001"
+        ]
+      },
+      {
+        "question": "How does the classical Central Limit Theorem describe the convergence of a sample average, and what are the formal conditions defining this convergence?",
+        "answer": "The classical Central Limit Theorem describes the distributional form of the stochastic fluctuations of the sample average (X̄n) as it converges to the expected value (μ). Specifically, as the sample size (n) increases, the distribution of the normalized mean, √n(X̄n - μ), approaches a normal distribution with a mean of 0 and variance of σ², regardless of the original distribution's shape. Formally, this is defined as convergence in distribution, where the cumulative distribution functions (CDFs) of √n(X̄n - μ) converge pointwise to the CDF of the N(0, σ²) distribution. This convergence is also uniform, meaning the maximum difference between the two CDFs across all values approaches zero as n approaches infinity.",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0003",
+          "centrallimittheorem_2f8e4a0f_c0004",
+          "centrallimittheorem_2f8e4a0f_c0005",
+          "centrallimittheorem_2f8e4a0f_c0006"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0003",
+          "centrallimittheorem_2f8e4a0f_c0005",
+          "centrallimittheorem_2f8e4a0f_c0006",
+          "centrallimittheorem_2f8e4a0f_c0004"
+        ]
+      },
+      {
+        "question": "Provide a comprehensive description of the multidimensional central limit theorem, including the initial conditions for the random vectors, the specific quantity that converges, and the characteristics of the resulting distribution.",
+        "answer": "The multidimensional central limit theorem applies to a set of independent and identically distributed (i.i.d.) random vectors, X_i, in R^k, each having a mean vector μ and a covariance matrix Σ. The theorem states that the scaled average of these vectors, specifically the quantity sqrt(n) * (X_bar_n - μ), converges in distribution to a multivariate normal distribution. This resulting distribution is N_k(0, Σ), meaning it has a mean of 0 and a covariance matrix Σ. This covariance matrix Σ is composed of the variances of the components of a single vector X_1 on its diagonal and the covariances between the components of X_1 on its off-diagonal elements.",
+        "related_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0010",
+          "centrallimittheorem_2f8e4a0f_c0011",
+          "centrallimittheorem_2f8e4a0f_c0012",
+          "centrallimittheorem_2f8e4a0f_c0013"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "centrallimittheorem_2f8e4a0f_c0010",
+          "centrallimittheorem_2f8e4a0f_c0012",
+          "centrallimittheorem_2f8e4a0f_c0011",
+          "centrallimittheorem_2f8e4a0f_c0013"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:46.008Z",
+    "content_format": "markdown",
+    "total_chunks": 46,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

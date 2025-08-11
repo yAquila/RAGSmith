@@ -1,0 +1,456 @@
+{
+  "article": {
+    "id": "unmannedcombataerial_7f092dc3",
+    "title": "Unmanned combat aerial vehicle",
+    "url": "https://en.wikipedia.org/wiki/Unmanned_combat_aerial_vehicle",
+    "lang": "en",
+    "created_at": "2025-07-31T08:51:00.501532",
+    "content": "---\nid: unmannedcombataerial_7f092dc3\nurl: https://en.wikipedia.org/wiki/Unmanned_combat_aerial_vehicle\ntitle: Unmanned combat aerial vehicle\nlang: en\ncreated_at: '2025-07-31T08:44:34.748712'\nchecksum: 3b7a27aec075c350b653dfd1d2d8539603c56b7232c0ebcf76020249f84efd75\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4269\n  char_count: 26924\n  num_chunks: 23\n  original_chunks: 36\n  filtered_out: 13\n  num_sections: 0\n---\nAn unmanned combat aerial vehicle (UCAV), also known as a combat drone, fighter drone or battlefield UAV, is an unmanned aerial vehicle (UAV) that is used for intelligence, surveillance, target acquisition, and reconnaissance and carries aircraft ordnance such as missiles, anti-tank guided missiles (ATGMs), and/or bombs in hardpoints for drone strikes. These drones are usually under real-time human control, with varying levels of autonomy. UCAVs are used for reconnaissance, attacking targets and returning to base; unlike kamikaze drones which are only made to explode on impact, or surveillance drones which are only for gathering intelligence. Aircraft of this type have no onboard human pilot. As the operator runs the vehicle from a remote terminal, equipment necessary for a human pilot is not needed, resulting in a lower weight and a smaller size than a manned aircraft. Many countries have operational domestic UCAVs, and many more have imported fighter drones or are in the process of developing them. == History == One of the earliest explorations of the concept of the combat drone was by Lee de Forest, an early inventor of radio devices, and U. A. Sanabria, a TV engineer. They presented their idea in an article in a 1940 publication of Popular Mechanics. The modern military drone was the brainchild of John Stuart Foster Jr., a nuclear physicist of Lawrence Livermore Laboratory. In 1971, Foster was a model airplane hobbyist and had the idea this hobby could be applied to building weapons. He drew up plans and by 1973 DARPA (Defense Advanced Research Projects Agency) built two prototypes called \"Prairie\" and \"Calera\". They were powered by a modified lawn-mower engine and could stay aloft for two hours while carrying a 28-pound (13 kg) load. In the 1973 Yom Kippur War, Israel used unarmed U.S. Ryan Firebee target drones to spur Egypt into firing its entire arsenal of anti-aircraft missiles. This mission was accomplished with no injuries to Israeli pilots, who soon exploited the depleted Egyptian defences. In the late 1970s and 80s, Israel developed the Scout and the Pioneer, which represented a shift toward the modern lighter, glider-type model of UAV. Israel pioneered the use of unmanned aerial vehicles (UAVs) for real-time surveillance, electronic warfare, and decoys. The images and radar decoying provided by these UAVs helped Israel to completely neutralize the Syrian air defenses in Operation Mole Cricket 19 at the start of the 1982 Lebanon War, resulting in no pilots downed. In the late 1980s, Iran deployed a drone armed with six RPG-7 rounds in the Iran–Iraq War. Impressed by Israel's success, the US quickly acquired a number of UAVs, and its Hunter and Pioneer systems are direct derivatives of Israeli models. The first 'UAV war' was the first Persian Gulf War: according to a May 1991 Department of the Navy report: \"At least one UAV was airborne at all times during Desert Storm.\" After the Persian Gulf War successfully demonstrated its utility, global militaries invested widely in the domestic development of combat UAVs. The first \"kill\" by an American UAV was on October 7, 2001, in Kandahar. In recent years, the U.S. has increased its use of drone strikes against targets in Pakistan and elsewhere as part of the War on Terror. In January 2014, it was estimated that 2,400 people had died from U.S. drone strikes in five years. In June 2015, the total death toll of U.S. drone strikes was estimated to exceed 6,000. In 2020, Turkey became the first country to use UCAVs in a large, coordinated attack on a conventional battlefield when they attacked forces in Syria. They were used to attack enemy positions, to provide cover for ground forces and to scout for artillery. Drones were used extensively in the 2020 Nagorno-Karabakh war between Azerbaijan and Armenia. Azerbaijan's use of cheaper Turkish TB2 drones was seen as crucial to their victory against the Armenian forces. Drones were also used extensively during the 2022 Russian invasion of Ukraine. Usage of drones offers a cost advantage: \"People are taking small drones, like the ones you can buy at JB Hi-Fi for $2000, putting a grenade on them and flying them over a crowd or a tank and releasing the grenade. You can basically build a $3000 machine to destroy a $5 million piece of equipment that your enemy has.\" == Current == Below are a list of some current dedicated armed UAV's: Some reconnaissance drones that have armed capability include the CASC CH-92, IAI Eitan and the Ababil-3, Ababil-5, Hamaseh. Some commercial drones such as DJI Mavic and Phantom have been modified to carry light explosives for combat missions in recent wars. === Future === Below is a table of some technology demonstrators and projects in development: === Israel === ==== Elbit Hermes 450 ==== The Israeli Air Force, which operates a squadron of Hermes 450s out of Palmachim Airbase south of Tel Aviv, has adapted the Hermes 450 for use as an assault UAV, reportedly equipping it with two Hellfire missiles or, according to various sources, two Rafael-made missiles. According to Israeli, Palestinian, Lebanese, and independent reports, the Israeli assault UAV has been used in the Gaza Strip and was used intensively in the Second Lebanon War. Israel has not denied this capability, but to date, its policy has been to not officially confirm it either. === Turkey === ==== TAI Aksungur ==== TAI Aksungur is a built by Turkish Aerospace Industries (TAI) for the Turkish Armed Forces. Using existing technology from the TAI Anka series of drones, it is the manufacturer's largest drone, with payload capacity for mission-specific equipment. It is intended to be used for long-term surveillance, signals intelligence, maritime patrol missions, or as an UCAV. The first unit was delivered to the Turkish Naval Forces on 20 October 2021. ==== Bayraktar Kizilelma ==== Bayraktar Kızılelma is a proposed jet-powered, single-engine, low-observable, supersonic, carrier-capable unmanned combat aircraft in development by Baykar, famous for its Bayraktar TB2. On 12 March 2022, Selçuk Bayraktar, CTO of Baykar announced that the first prototype of the Bayraktar Kızılelma has entered the production line. ==== TAI Anka-3 ==== TAI Anka 3 is the code-name for the new single engine UCAV being developed by TAI. It will have a flying wing form, and will feature low-observable stealth technology. The role of the aircraft will be suppression of enemy air defenses (SEAD), penetration and bomber. === United Kingdom === ==== BAE Systems Taranis ==== Taranis is a British demonstrator program for unmanned combat air vehicle (UCAV) technology. It is part of the UK's Strategic Unmanned Air Vehicle (Experimental) (SUAV[E]) program. BAE describes Taranis's role in this context as following: \"This £124m, four -year programme is part of the UK Government's Strategic Unmanned Air Vehicle Experiment (SUAVE) and will result in a UCAV demonstrator with fully integrated autonomous systems and low observable features.\" The Taranis demonstrator will have an MTOW (Maximum Takeoff Weight) of about 8000 kilograms and be of comparable size to the BAE Hawk – making it one of the world's largest UAVs. It will be stealthy, fast, and able to deploy a range of munitions over a number of targets, as well as being capable of defending itself against manned and other unmanned enemy aircraft. The first steel was cut in September 2007 and ground testing started in early 2009. The first flight of the Taranis took place in August 2013 in Woomera, Australia. The demonstrator will have two internal weapons bays. With the inclusion of \"full autonomy\" the intention is thus for this platform to be able to \"think for itself\" for a large part of the mission. === United States === ==== J-UCAS ==== Boeing X-45 UCAV (TD) Northrop-Grumman X-47 Pegasus Joint Unmanned Combat Air Systems, or J-UCAS, was the name for the joint U.S. Navy/U.S. Air Force unmanned combat air vehicle procurement project. J-UCAS was managed by DARPA, the Defense Advanced Research Projects Agency. In the 2006 Quadrennial Defense Review, the J-UCAS program was terminated. The program would have used stealth technologies and allowed UCAVs to be armed with precision-guided weapons such as Joint Direct Attack Munition (JDAM) or precision miniature munitions, such as the Small-Diameter Bomb, which are used to suppress enemy air defenses. Controllers could have used real-time data sources, including satellites, to plan for and respond to changes on and around the battlefield. The program was later revitalized into UCAS-D, a United States Navy program designed to develop a carrier-based unmanned aircraft. ==== N-UCAS ==== UCAS-D and Northrop Grumman X-47B are the U.S. Navy-only successors to the J-UCAS, which was canceled in 2006. Boeing is also working on the X-45N in this sector. In a New Year 2011 editorial titled \"China's Naval Ambitions\", The New York Times editorial board argued that \"[t]he Pentagon must accelerate efforts to make American naval forces in Asia less vulnerable to Chinese missile threats by giving them the means to project their deterrent power from further offshore. Cutting back purchases of the Navy's DDG-1000 destroyer (with its deficient missile defense system) was a first step. A bigger one would be to reduce the Navy's reliance on short-range manned strike aircraft like the F-18 and the F-35, in favor of the carrier-launched N-UCAS ....\" On 6 January 2011, the DOD announced that this would be one area of additional investment in the 2012 budget request. ==== USAF Hunter-Killer ==== Scaled Composites Model 395 Scaled Composites Model 396 General Atomics MQ-9 Reaper (originally the Predator B) Aurora Flight Sciences/Israel Aircraft Industries Eagle/Heron 2 Unnamed Lockheed Martin entry The United States Air Force has shifted its UCAV program from medium-range tactical strike aircraft to long-range strategic bombers. The technology of the Long Range Strike program is based on the Lockheed Martin Polecat demonstrator. === Multinational === EADS Surveyor: The EADS \"Surveyor\" is still in preliminary investigation phase. It will be a fixed-wing, jet-powered UAV and is being positioned as a replacement for the CL-289. EADS is currently working on a demonstrator, the \"Carapas\", modified from an Italian Mirach 100 drone. The production Surveyor would be a stealthy machine with a top speed of 850 km/h (530 mph), an endurance of up to three hours, and capable of carrying a sophisticated sensor payload, including SIGINT gear. It would also be able to carry external loads, such as air-dropped sensors or light munitions. == Non-state actors == In the mid-2010s, the Islamic State terrorist group began attaching explosives to commercially available quadcopters such as the Chinese-made DJI Phantom to bomb military targets in Iraq and Syria. During the 2016–17 battle of Mosul, the Islamic State reportedly used drones as surveillance and weapons delivery platforms, using improvised cradles to drop grenades and other explosives. An Islamic State drone facility was notably targeted by Royal Air Force strike aircraft during the battle. Militant groups during the Syrian civil war have also reportedly used UAVs in attacks, one example being a swarm of drones armed with bombs attacking Russian bases in western Syria in early January 2018. Starting in the 2020s, Mexican drug cartels began dropping reportedly hundreds of drone-carried bombs targeting both security forces and enemy gangs during turf wars. == Counter drone tactics == There has been widespread use of drones in the Russo-Ukrainian War. Ukrainian soldiers use GPS signals to guide a drone to find Russian artillery and to guide Ukrainian artillery. Jamming these drone GPS signals cause drones to operate less effectively, as the operators of drones have to rely on pre-programmed routes through areas of jamming until communications can be restored. Other systems supplied by the West rely on automation. Systems like the AeroVironment Switchblade can find targets autonomously, requiring human permission only to engage found targets. In October 2022 a video appeared on the web showing two drones colliding and one being rendered unflyable as a result. It was claimed that the filming drone was Ukrainian and the one destroyed was Russian. If this is the case it would be the first recorded case of drone on drone combat. On 27 December 2022 North Korea sent five drones over its border with South Korea. One reaching Seoul, all five returned to the North, despite a five-hour chase involving fighter jets and attack helicopters with some 100 rounds being fired. A South Korean KAI KT-1 Woongbi crashed although both crew survived. The Joint Chiefs of Staff (South Korea) released a statement in which it said that while it can stop attack drones, its ability to stop smaller spy drones is \"limited\". A senior official, Kang Shin-chul, said: \"Our military's lack of preparedness has caused a lot of concern to the people…actively employ detection devices to spot the enemy's drone from an early stage and aggressively deploy strike assets\". The South Korean President Yoon Suk-yeol has indicated that South Korea will invest in stealthy drones that could penetrate North Korea, with the creation of a new military unit. The South Korean Defence Ministry announced a new series of anti-drone measures, planning to spend some 560 billion won over the next five years. The money will go towards four new initiatives. One is an airborne laser that will be used to destroy larger drones whilst a jammer would be used on smaller drones. A new counter drone unit, made up of two squadrons, would also be created. The laser is already in the test phase and is expected to become operational in 2027. The jamming system has been described as \"soft kill\". == Error in target selection == There are only estimates of the magnitude of the errors in target selection. However, they do occur and some of them become known. One fatal \"error\" happened in December 2023, when the Nigerian army accidentally hit a village in northwestern Nigeria killing 85 civilians celebrating a Muslim festival. The army said they thought the people were rebels. == Ethics and laws == === Civilian casualties === ==== Israel ==== In March 2009, The Guardian reported allegations that Israeli UAVs armed with missiles killed 48 Palestinian civilians in the Gaza Strip, including two small children in a field and a group of women and girls in an otherwise empty street. In June, Human Rights Watch investigated six UAV attacks that were reported to have resulted in civilian casualties and alleged that Israeli forces either failed to take all feasible precautions to verify that the targets were combatants or failed to distinguish between combatants and civilians. ==== United States ==== Collateral damage of civilians still takes place with drone combat, although some (like John O. Brennan) have argued that it greatly reduces the likelihood. Although drones enable advanced tactical surveillance and up-to-the-minute data, flaws can become apparent. The U.S. drone program in Pakistan has killed several dozen civilians accidentally. An example is the operation in February 2010 near Khod, in Uruzgan Province, Afghanistan. Over ten civilians in a three-vehicle convoy travelling from Daykundi Province were accidentally killed after a drone crew misidentified the civilians as hostile threats. A force of Bell OH-58 Kiowa helicopters, who were attempting to protect ground troops fighting several kilometers away, fired AGM-114 Hellfire missiles at the vehicles. In 2009, the Brookings Institution reported that in the US-led drone attacks in Pakistan, ten civilians died for every militant killed. A former ambassador of Pakistan said that American UAV attacks were turning Pakistani opinion against the United States. The website PakistanBodyCount.Org reported 1,065 civilian deaths between 2004 and 2010. According to a 2010 analysis by the New America Foundation 114 UAV-based missile strikes in northwest Pakistan from 2004 killed between 830 and 1,210 individuals, around 550 to 850 of whom were militants. In October 2013, the Pakistani government revealed that since 2008 317 drone strikes had killed 2,160 Islamic militants and 67 civilians – far less than previous government and independent organization calculations. In July 2013, former Pentagon lawyer Jeh Johnson said, on a panel at the Aspen Institute's Security Forum, that he felt an emotional reaction upon reading Nasser al-Awlaki's account of how his 16-year-old grandson was killed by a U.S. drone. In December 2013, a U.S. drone strike in Radda, capital of Yemen's Bayda province, killed members of a wedding party. The following February, Human Rights Watch published a 28-page report reviewing the strike and its legality, among other things. Titled \"A Wedding That Became A Funeral\", the report concludes that some (but not necessarily all) of the casualties were civilians, not the intended regional Al-Qaeda targets. The organization demanded US and Yemeni investigations into the attack. In its research, HRW \"found no evidence that the individuals taking part in the wedding procession posed an imminent threat to life. In the absence of an armed conflict, killing them would be a violation of international human rights law.\" === Political effects === As a new weapon, drones are having unforeseen political effects. Some scholars have argued that the extensive use of drones will undermine the popular legitimacy of local governments, which are blamed for permitting the strikes. On August 6, 2020, U.S. Senators Rand Paul (R-KY), Mike Lee (R-UT), Chris Murphy (D-CT), Chris Coons (D-DE), and Bernie Sanders (I-VT) introduced a bill to ban sales, transfers, and exports of large armed drones to countries outside of NATO amid concerns that civilians were killed with American-made weapons used by Saudi Arabia and the UAE during the Saudi Arabian-led intervention in Yemen. Congress had previously passed a similar measure with bipartisan support, but failed to overcome President Donald Trump's veto. === Psychological effects === Controllers can also experience psychological stress from the combat they are involved in. A few may even experience posttraumatic stress disorder (PTSD). There are some reports of drone pilots struggling with post traumatic stress disorder after they have killed civilians, especially children. Unlike bomber pilots, moreover, drone operators linger long after the explosives strike and see its effects on human bodies in stark detail. The intense training that US drone operators undergo \"works to dehumanise the 'enemy' people below whilst glorifying and celebrating the killing process.\" Professor Shannon E. French, the director of the Center for Ethics and Excellence at Case Western Reserve University and a former professor at the U.S. Naval Academy, wonders if the PTSD may be rooted in a suspicion that something else was at stake. According to Professor French, the author of the 2003 book The Code of the Warrior: If [I'm] in the field risking and taking a life, there's a sense that I'm putting skin in the game ... I'm taking a risk so it feels more honorable. Someone who kills at a distance—it can make them doubt. Am I truly honorable?The Missile Technology Control Regime applies to UCAVs. On 28 October 2009, United Nations Special Rapporteur on extrajudicial, summary or arbitrary executions, Philip Alston, presented a report to the Third Committee (social, humanitarian and cultural) of the General Assembly arguing that the use of unmanned combat air vehicles for targeted killings should be regarded as a breach of international law unless the United States can demonstrate appropriate precautions and accountability mechanisms are in place. In June 2015 forty-five former US military personnel issued a joint appeal to pilots of aerial drones operating in Afghanistan, Iraq, Syria, Pakistan and elsewhere urging them to refuse to fly and indicated that their missions \"profoundly violate domestic and international laws.\" They noted that these drone attacks also undermine principles of human rights. Some leaders worry about the effect drone warfare will have on soldiers' psychology. Keith Shurtleff, an army chaplain at Fort Jackson, South Carolina, worries \"that as war becomes safer and easier, as soldiers are removed from the horrors of war and see the enemy not as humans but as blips on a screen, there is very real danger of losing the deterrent that such horrors provide\". Similar worries surfaced when \"smart\" bombs began to be used extensively in the First Gulf War. Stanford's ‘Living Under Drones’ researchers, meanwhile, have shown that civilians in Pakistan and Afghanistan are reluctant to help those hit by the first strikes because rescuers themselves have often been killed by follow-on drone strikes. Injured relatives in the rubble of the first strike have been known to tell their relatives not to help rescue them because of the frequency of these so-called ‘double-tap’ strikes. People also avoid gathering in groups in visible places. Many children are permanently kept indoors and often no longer attend school. Writer Mark Bowden has disputed this viewpoint saying in his The Atlantic article, \"But flying a drone, [the pilot] sees the carnage close-up, in real time—the blood and severed body parts, the arrival of emergency responders, the anguish of friends and family. Often he’s been watching the people he kills for a long time before pulling the trigger. Drone pilots become familiar with their victims. They see them in the ordinary rhythms of their lives—with their wives and friends, with their children. War by remote control turns out to be intimate and disturbing. Pilots are sometimes shaken.\" This assessment is corroborated by a sensor operator's account: The smoke clears, and there’s pieces of the two guys around the crater. And there’s this guy over here, and he’s missing his right leg above his knee. He’s holding it, and he’s rolling around, and the blood is squirting out of his leg … It took him a long time to die. I just watched him. Back in the United States, a combination of \"lower-class\" status in the military, overwork, and psychological trauma may be taking a mental toll on drone pilots. These psychological, cultural and career issues appear to have led to a shortfall in USAF drone operators, which is seen as a \"dead end job\". === Stand-off attacks === The \"unmanned\" aspect of armed UAVs has raised moral concerns about their use in combat and law enforcement contexts. Attacking humans with remote-controlled machines is even more abstract than the use of other \"stand-off\" weaponry, such as missiles, artillery and aerial bombardment, possibly depersonalizing the decision to attack. By contrast, UAVs and other stand-off systems reduce casualties among the attackers. === Autonomous attacks === The picture is further complicated if the UAV can initiate an attack autonomously, without direct human involvement. Such UAVs could possibly react more quickly and without bias, but would lack human sensibility. Heather Roff replies that lethal autonomous robots (LARs) may not be appropriate for complex conflicts and targeted populations would likely react angrily against them. Will McCants argues that the public would be more outraged by machine failures than human error, making LARs politically implausible. According to Mark Gubrud, claims that drones can be hacked are overblown and misleading and moreover, drones are more likely to be hacked if they're autonomous, because otherwise the human operator would take control: \"Giving weapon systems autonomous capabilities is a good way to lose control of them, either due to a programming error, unanticipated circumstances, malfunction, or hack and then not be able to regain control short of blowing them up, hopefully before they've blown up too many other things and people.\" Others have argued that the technological possibility of autonomy should not obscure the continuing moral responsibilities humans have at every stage. There is an ongoing debate as to whether the attribution of moral responsibility can be apportioned appropriately under existing international humanitarian law, which is based on four principles: military necessity, distinction between military and civilian objects, prohibition of unnecessary suffering, and proportionality. == Public opinion == In 2013, a Fairleigh Dickinson University poll asked registered voters whether they \"approve or disapprove of the U.S. military using drones to carry out attacks abroad on people and other targets deemed a threat to the U.S.?\" The results showed that three in every four voters (75%) approved of the U.S. military using drones to carry out attacks, while (13%) disapproved. A poll conducted by the Huffington Post in 2013 also showed a majority supporting targeted killings using drones, though by a smaller margin. A 2015 poll showed Republicans and men are more likely to support U.S. drone strikes, while Democrats, independents, women, young people, and minorities are less supportive. Outside America, there is widespread opposition to US drone killings. A July 2014 report found a majority or plurality of respondents in 39 of 44 countries surveyed opposed U.S. drone strikes in countries such as Pakistan, Yemen, and Somalia. The U.S., Kenya, and Israel were the only countries where at least half the population supported drone strikes. Venezuela was found to be the most anti-drone country, where 92% of respondents disagreed with U.S. drone strikes, followed closely by Jordan, where 90% disagreed; Israel was shown as the most pro-drone, with 65% in favor of U.S. drone strikes and 27% opposed. The drone strikes conducted by the Malian army have had devastating consequences on the civilian population in the Azawad region. In March 2024, attacks killed 13 civilians, including seven children, in Amasrakad, Gao region, sparking outrage and calls for justice from organizations like Amnesty International. These incidents highlighted the lack of transparency and accountability in drone use, exacerbating local and international tensions.’ == Users == Countries with known operational armed drones: == See also == Loyal wingman using AI Drone carrier Civilian casualties from US drone strikes History of unmanned aerial vehicles History of unmanned combat aerial vehicles List of unmanned aerial vehicles UAVs in the U.S. military == Further reading == Horowitz M, Schwartz JA, Fuhrmann M. 2020. \"Who’s prone to drone? A global time-series analysis of armed uninhabited aerial vehicle proliferation.\" Conflict Management and Peace Science. == References == == External links == Media related to Unmanned combat aerial vehicles at Wikimedia Commons Unmanned Aerial Vehicles by Greg Goebel (in the public domain)"
+  },
+  "chunks": [
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0000",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 883,
+      "content": "An unmanned combat aerial vehicle (UCAV), also known as a combat drone, fighter drone or battlefield UAV, is an unmanned aerial vehicle (UAV) that is used for intelligence, surveillance, target acquisition, and reconnaissance and carries aircraft ordnance such as missiles, anti-tank guided missiles (ATGMs), and/or bombs in hardpoints for drone strikes. These drones are usually under real-time human control, with varying levels of autonomy. UCAVs are used for reconnaissance, attacking targets and returning to base; unlike kamikaze drones which are only made to explode on impact, or surveillance drones which are only for gathering intelligence. Aircraft of this type have no onboard human pilot. As the operator runs the vehicle from a remote terminal, equipment necessary for a human pilot is not needed, resulting in a lower weight and a smaller size than a manned aircraft.",
+      "char_count": 882,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0001",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1029,
+      "end_char": 1934,
+      "content": "== History == One of the earliest explorations of the concept of the combat drone was by Lee de Forest, an early inventor of radio devices, and U. A. Sanabria, a TV engineer. They presented their idea in an article in a 1940 publication of Popular Mechanics. The modern military drone was the brainchild of John Stuart Foster Jr., a nuclear physicist of Lawrence Livermore Laboratory. In 1971, Foster was a model airplane hobbyist and had the idea this hobby could be applied to building weapons. He drew up plans and by 1973 DARPA (Defense Advanced Research Projects Agency) built two prototypes called \"Prairie\" and \"Calera\". They were powered by a modified lawn-mower engine and could stay aloft for two hours while carrying a 28-pound (13 kg) load. In the 1973 Yom Kippur War, Israel used unarmed U.S. Ryan Firebee target drones to spur Egypt into firing its entire arsenal of anti-aircraft missiles.",
+      "char_count": 904,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0002",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1934,
+      "end_char": 2775,
+      "content": "This mission was accomplished with no injuries to Israeli pilots, who soon exploited the depleted Egyptian defences. In the late 1970s and 80s, Israel developed the Scout and the Pioneer, which represented a shift toward the modern lighter, glider-type model of UAV. Israel pioneered the use of unmanned aerial vehicles (UAVs) for real-time surveillance, electronic warfare, and decoys. The images and radar decoying provided by these UAVs helped Israel to completely neutralize the Syrian air defenses in Operation Mole Cricket 19 at the start of the 1982 Lebanon War, resulting in no pilots downed. In the late 1980s, Iran deployed a drone armed with six RPG-7 rounds in the Iran–Iraq War. Impressed by Israel's success, the US quickly acquired a number of UAVs, and its Hunter and Pioneer systems are direct derivatives of Israeli models.",
+      "char_count": 841,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0003",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2776,
+      "end_char": 3746,
+      "content": "The first 'UAV war' was the first Persian Gulf War: according to a May 1991 Department of the Navy report: \"At least one UAV was airborne at all times during Desert Storm.\" After the Persian Gulf War successfully demonstrated its utility, global militaries invested widely in the domestic development of combat UAVs. The first \"kill\" by an American UAV was on October 7, 2001, in Kandahar. In recent years, the U.S. has increased its use of drone strikes against targets in Pakistan and elsewhere as part of the War on Terror. In January 2014, it was estimated that 2,400 people had died from U.S. drone strikes in five years. In June 2015, the total death toll of U.S. drone strikes was estimated to exceed 6,000. In 2020, Turkey became the first country to use UCAVs in a large, coordinated attack on a conventional battlefield when they attacked forces in Syria. They were used to attack enemy positions, to provide cover for ground forces and to scout for artillery.",
+      "char_count": 970,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0004",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3747,
+      "end_char": 4352,
+      "content": "Drones were used extensively in the 2020 Nagorno-Karabakh war between Azerbaijan and Armenia. Azerbaijan's use of cheaper Turkish TB2 drones was seen as crucial to their victory against the Armenian forces. Drones were also used extensively during the 2022 Russian invasion of Ukraine. Usage of drones offers a cost advantage: \"People are taking small drones, like the ones you can buy at JB Hi-Fi for $2000, putting a grenade on them and flying them over a crowd or a tank and releasing the grenade. You can basically build a $3000 machine to destroy a $5 million piece of equipment that your enemy has.\"",
+      "char_count": 605,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0005",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== Current ==",
+      "heading_path": "== Current ==",
+      "start_char": 4353,
+      "end_char": 4669,
+      "content": "== Current == Below are a list of some current dedicated armed UAV's: Some reconnaissance drones that have armed capability include the CASC CH-92, IAI Eitan and the Ababil-3, Ababil-5, Hamaseh. Some commercial drones such as DJI Mavic and Phantom have been modified to carry light explosives for combat missions in recent wars.",
+      "char_count": 328,
+      "token_estimate": 82,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0006",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Multinational ==",
+      "heading_path": "== = Multinational ==",
+      "start_char": 4864,
+      "end_char": 5448,
+      "content": "== = Multinational === EADS Surveyor: The EADS \"Surveyor\" is still in preliminary investigation phase. It will be a fixed-wing, jet-powered UAV and is being positioned as a replacement for the CL-289. EADS is currently working on a demonstrator, the \"Carapas\", modified from an Italian Mirach 100 drone. The production Surveyor would be a stealthy machine with a top speed of 850 km/h (530 mph), an endurance of up to three hours, and capable of carrying a sophisticated sensor payload, including SIGINT gear. It would also be able to carry external loads, such as air-dropped sensors or light munitions.",
+      "char_count": 604,
+      "token_estimate": 151,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0007",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== Non-state actors ==",
+      "heading_path": "== Non-state actors ==",
+      "start_char": 5470,
+      "end_char": 6336,
+      "content": "== Non-state actors == In the mid-2010s, the Islamic State terrorist group began attaching explosives to commercially available quadcopters such as the Chinese-made DJI Phantom to bomb military targets in Iraq and Syria. During the 2016–17 battle of Mosul, the Islamic State reportedly used drones as surveillance and weapons delivery platforms, using improvised cradles to drop grenades and other explosives. An Islamic State drone facility was notably targeted by Royal Air Force strike aircraft during the battle. Militant groups during the Syrian civil war have also reportedly used UAVs in attacks, one example being a swarm of drones armed with bombs attacking Russian bases in western Syria in early January 2018. Starting in the 2020s, Mexican drug cartels began dropping reportedly hundreds of drone-carried bombs targeting both security forces and enemy gangs during turf wars.",
+      "char_count": 887,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0008",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== Counter drone tactics ==",
+      "heading_path": "== Counter drone tactics ==",
+      "start_char": 6363,
+      "end_char": 7330,
+      "content": "== Counter drone tactics == There has been widespread use of drones in the Russo-Ukrainian War. Ukrainian soldiers use GPS signals to guide a drone to find Russian artillery and to guide Ukrainian artillery. Jamming these drone GPS signals cause drones to operate less effectively, as the operators of drones have to rely on pre-programmed routes through areas of jamming until communications can be restored. Other systems supplied by the West rely on automation. Systems like the AeroVironment Switchblade can find targets autonomously, requiring human permission only to engage found targets. In October 2022 a video appeared on the web showing two drones colliding and one being rendered unflyable as a result. It was claimed that the filming drone was Ukrainian and the one destroyed was Russian. If this is the case it would be the first recorded case of drone on drone combat. On 27 December 2022 North Korea sent five drones over its border with South Korea.",
+      "char_count": 966,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0009",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== Counter drone tactics ==",
+      "heading_path": "== Counter drone tactics ==",
+      "start_char": 7330,
+      "end_char": 8290,
+      "content": "One reaching Seoul, all five returned to the North, despite a five-hour chase involving fighter jets and attack helicopters with some 100 rounds being fired. A South Korean KAI KT-1 Woongbi crashed although both crew survived. The Joint Chiefs of Staff (South Korea) released a statement in which it said that while it can stop attack drones, its ability to stop smaller spy drones is \"limited\". A senior official, Kang Shin-chul, said: \"Our military's lack of preparedness has caused a lot of concern to the people…actively employ detection devices to spot the enemy's drone from an early stage and aggressively deploy strike assets\". The South Korean President Yoon Suk-yeol has indicated that South Korea will invest in stealthy drones that could penetrate North Korea, with the creation of a new military unit. The South Korean Defence Ministry announced a new series of anti-drone measures, planning to spend some 560 billion won over the next five years.",
+      "char_count": 960,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0010",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== Counter drone tactics ==",
+      "heading_path": "== Counter drone tactics ==",
+      "start_char": 8291,
+      "end_char": 8670,
+      "content": "The money will go towards four new initiatives. One is an airborne laser that will be used to destroy larger drones whilst a jammer would be used on smaller drones. A new counter drone unit, made up of two squadrons, would also be created. The laser is already in the test phase and is expected to become operational in 2027. The jamming system has been described as \"soft kill\".",
+      "char_count": 379,
+      "token_estimate": 94,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0011",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== Error in target selection ==",
+      "heading_path": "== Error in target selection ==",
+      "start_char": 8675,
+      "end_char": 9029,
+      "content": "== Error in target selection == There are only estimates of the magnitude of the errors in target selection. However, they do occur and some of them become known. One fatal \"error\" happened in December 2023, when the Nigerian army accidentally hit a village in northwestern Nigeria killing 85 civilians celebrating a Muslim festival. The army said they thought the people were rebels.",
+      "char_count": 384,
+      "token_estimate": 96,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0012",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Political effects ==",
+      "heading_path": "== = Political effects ==",
+      "start_char": 9105,
+      "end_char": 9858,
+      "content": "== = Political effects === As a new weapon, drones are having unforeseen political effects. Some scholars have argued that the extensive use of drones will undermine the popular legitimacy of local governments, which are blamed for permitting the strikes. On August 6, 2020, U.S. Senators Rand Paul (R-KY), Mike Lee (R-UT), Chris Murphy (D-CT), Chris Coons (D-DE), and Bernie Sanders (I-VT) introduced a bill to ban sales, transfers, and exports of large armed drones to countries outside of NATO amid concerns that civilians were killed with American-made weapons used by Saudi Arabia and the UAE during the Saudi Arabian-led intervention in Yemen. Congress had previously passed a similar measure with bipartisan support, but failed to overcome President Donald Trump's veto.",
+      "char_count": 777,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0013",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Psychological effects ==",
+      "heading_path": "== = Psychological effects ==",
+      "start_char": 9887,
+      "end_char": 10760,
+      "content": "== = Psychological effects === Controllers can also experience psychological stress from the combat they are involved in. A few may even experience posttraumatic stress disorder (PTSD). There are some reports of drone pilots struggling with post traumatic stress disorder after they have killed civilians, especially children. Unlike bomber pilots, moreover, drone operators linger long after the explosives strike and see its effects on human bodies in stark detail. The intense training that US drone operators undergo \"works to dehumanise the 'enemy' people below whilst glorifying and celebrating the killing process.\" Professor Shannon E. French, the director of the Center for Ethics and Excellence at Case Western Reserve University and a former professor at the U.S. Naval Academy, wonders if the PTSD may be rooted in a suspicion that something else was at stake.",
+      "char_count": 872,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0014",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Psychological effects ==",
+      "heading_path": "== = Psychological effects ==",
+      "start_char": 10760,
+      "end_char": 11583,
+      "content": "According to Professor French, the author of the 2003 book The Code of the Warrior: If [I'm] in the field risking and taking a life, there's a sense that I'm putting skin in the game ... I'm taking a risk so it feels more honorable. Someone who kills at a distance—it can make them doubt. Am I truly honorable?The Missile Technology Control Regime applies to UCAVs. On 28 October 2009, United Nations Special Rapporteur on extrajudicial, summary or arbitrary executions, Philip Alston, presented a report to the Third Committee (social, humanitarian and cultural) of the General Assembly arguing that the use of unmanned combat air vehicles for targeted killings should be regarded as a breach of international law unless the United States can demonstrate appropriate precautions and accountability mechanisms are in place.",
+      "char_count": 823,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0015",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Psychological effects ==",
+      "heading_path": "== = Psychological effects ==",
+      "start_char": 11584,
+      "end_char": 12422,
+      "content": "In June 2015 forty-five former US military personnel issued a joint appeal to pilots of aerial drones operating in Afghanistan, Iraq, Syria, Pakistan and elsewhere urging them to refuse to fly and indicated that their missions \"profoundly violate domestic and international laws.\" They noted that these drone attacks also undermine principles of human rights. Some leaders worry about the effect drone warfare will have on soldiers' psychology. Keith Shurtleff, an army chaplain at Fort Jackson, South Carolina, worries \"that as war becomes safer and easier, as soldiers are removed from the horrors of war and see the enemy not as humans but as blips on a screen, there is very real danger of losing the deterrent that such horrors provide\". Similar worries surfaced when \"smart\" bombs began to be used extensively in the First Gulf War.",
+      "char_count": 838,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0016",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Psychological effects ==",
+      "heading_path": "== = Psychological effects ==",
+      "start_char": 12423,
+      "end_char": 13382,
+      "content": "Stanford's ‘Living Under Drones’ researchers, meanwhile, have shown that civilians in Pakistan and Afghanistan are reluctant to help those hit by the first strikes because rescuers themselves have often been killed by follow-on drone strikes. Injured relatives in the rubble of the first strike have been known to tell their relatives not to help rescue them because of the frequency of these so-called ‘double-tap’ strikes. People also avoid gathering in groups in visible places. Many children are permanently kept indoors and often no longer attend school. Writer Mark Bowden has disputed this viewpoint saying in his The Atlantic article, \"But flying a drone, [the pilot] sees the carnage close-up, in real time—the blood and severed body parts, the arrival of emergency responders, the anguish of friends and family. Often he’s been watching the people he kills for a long time before pulling the trigger. Drone pilots become familiar with their victims.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0017",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Psychological effects ==",
+      "heading_path": "== = Psychological effects ==",
+      "start_char": 13383,
+      "end_char": 14236,
+      "content": "They see them in the ordinary rhythms of their lives—with their wives and friends, with their children. War by remote control turns out to be intimate and disturbing. Pilots are sometimes shaken.\" This assessment is corroborated by a sensor operator's account: The smoke clears, and there’s pieces of the two guys around the crater. And there’s this guy over here, and he’s missing his right leg above his knee. He’s holding it, and he’s rolling around, and the blood is squirting out of his leg … It took him a long time to die. I just watched him. Back in the United States, a combination of \"lower-class\" status in the military, overwork, and psychological trauma may be taking a mental toll on drone pilots. These psychological, cultural and career issues appear to have led to a shortfall in USAF drone operators, which is seen as a \"dead end job\".",
+      "char_count": 853,
+      "token_estimate": 213,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0018",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Stand-off attacks ==",
+      "heading_path": "== = Stand-off attacks ==",
+      "start_char": 14233,
+      "end_char": 14654,
+      "content": "== = Stand-off attacks === The \"unmanned\" aspect of armed UAVs has raised moral concerns about their use in combat and law enforcement contexts. Attacking humans with remote-controlled machines is even more abstract than the use of other \"stand-off\" weaponry, such as missiles, artillery and aerial bombardment, possibly depersonalizing the decision to attack. By contrast, UAVs and other stand-off systems reduce casualties among the attackers.",
+      "char_count": 445,
+      "token_estimate": 111,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0019",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Autonomous attacks ==",
+      "heading_path": "== = Autonomous attacks ==",
+      "start_char": 14680,
+      "end_char": 15224,
+      "content": "== = Autonomous attacks === The picture is further complicated if the UAV can initiate an attack autonomously, without direct human involvement. Such UAVs could possibly react more quickly and without bias, but would lack human sensibility. Heather Roff replies that lethal autonomous robots (LARs) may not be appropriate for complex conflicts and targeted populations would likely react angrily against them. Will McCants argues that the public would be more outraged by machine failures than human error, making LARs politically implausible.",
+      "char_count": 543,
+      "token_estimate": 135,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0020",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== = Autonomous attacks ==",
+      "heading_path": "== = Autonomous attacks ==",
+      "start_char": 15224,
+      "end_char": 16223,
+      "content": "According to Mark Gubrud, claims that drones can be hacked are overblown and misleading and moreover, drones are more likely to be hacked if they're autonomous, because otherwise the human operator would take control: \"Giving weapon systems autonomous capabilities is a good way to lose control of them, either due to a programming error, unanticipated circumstances, malfunction, or hack and then not be able to regain control short of blowing them up, hopefully before they've blown up too many other things and people.\" Others have argued that the technological possibility of autonomy should not obscure the continuing moral responsibilities humans have at every stage. There is an ongoing debate as to whether the attribution of moral responsibility can be apportioned appropriately under existing international humanitarian law, which is based on four principles: military necessity, distinction between military and civilian objects, prohibition of unnecessary suffering, and proportionality.",
+      "char_count": 999,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0021",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== Public opinion ==",
+      "heading_path": "== Public opinion ==",
+      "start_char": 16218,
+      "end_char": 17172,
+      "content": "== Public opinion == In 2013, a Fairleigh Dickinson University poll asked registered voters whether they \"approve or disapprove of the U.S. military using drones to carry out attacks abroad on people and other targets deemed a threat to the U.S.?\" The results showed that three in every four voters (75%) approved of the U.S. military using drones to carry out attacks, while (13%) disapproved. A poll conducted by the Huffington Post in 2013 also showed a majority supporting targeted killings using drones, though by a smaller margin. A 2015 poll showed Republicans and men are more likely to support U.S. drone strikes, while Democrats, independents, women, young people, and minorities are less supportive. Outside America, there is widespread opposition to US drone killings. A July 2014 report found a majority or plurality of respondents in 39 of 44 countries surveyed opposed U.S. drone strikes in countries such as Pakistan, Yemen, and Somalia.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "unmannedcombataerial_7f092dc3_c0022",
+      "article_id": "unmannedcombataerial_7f092dc3",
+      "section": "== Public opinion ==",
+      "heading_path": "== Public opinion ==",
+      "start_char": 17172,
+      "end_char": 17990,
+      "content": "The U.S., Kenya, and Israel were the only countries where at least half the population supported drone strikes. Venezuela was found to be the most anti-drone country, where 92% of respondents disagreed with U.S. drone strikes, followed closely by Jordan, where 90% disagreed; Israel was shown as the most pro-drone, with 65% in favor of U.S. drone strikes and 27% opposed. The drone strikes conducted by the Malian army have had devastating consequences on the civilian population in the Azawad region. In March 2024, attacks killed 13 civilians, including seven children, in Amasrakad, Gao region, sparking outrage and calls for justice from organizations like Amnesty International. These incidents highlighted the lack of transparency and accountability in drone use, exacerbating local and international tensions.’",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What four principles form the basis of existing international humanitarian law mentioned in the text?",
+        "answer": "The four principles that form the basis of existing international humanitarian law are: military necessity, distinction between military and civilian objects, prohibition of unnecessary suffering, and proportionality.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0020"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0020"
+        ]
+      },
+      {
+        "question": "What information is provided about == History ==?",
+        "answer": "The text provides information about == History == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0003"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0003"
+        ]
+      },
+      {
+        "question": "What is the effect of jamming a drone's GPS signal?",
+        "answer": "Jamming a drone's GPS signal causes it to operate less effectively, as its operators must then rely on pre-programmed routes through the jammed areas until communications can be re-established.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0008"
+        ]
+      },
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0000",
+          "unmannedcombataerial_7f092dc3_c0001",
+          "unmannedcombataerial_7f092dc3_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0000",
+          "unmannedcombataerial_7f092dc3_c0002",
+          "unmannedcombataerial_7f092dc3_c0001"
+        ]
+      },
+      {
+        "question": "What role did Turkey play in the advancement and use of combat drones in conflicts during 2020?",
+        "answer": "In 2020, Turkey became the first country to use UCAVs in a large, coordinated attack on a conventional battlefield during its operations in Syria. In the same year, Azerbaijan's use of cheaper Turkish TB2 drones was considered a crucial factor in its victory over Armenian forces in the Nagorno-Karabakh war.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0003",
+          "unmannedcombataerial_7f092dc3_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0004",
+          "unmannedcombataerial_7f092dc3_c0003"
+        ]
+      },
+      {
+        "question": "Contrast the types of armed drones used by non-state actors like the Islamic State with purpose-built multinational military UCAVs like the EADS Surveyor.",
+        "answer": "Non-state actors, such as the Islamic State and Mexican drug cartels, use commercially available drones like the DJI Phantom, which they modify to carry and drop explosives like grenades. In contrast, the EADS Surveyor is a purpose-built, multinational military UCAV that is a stealthy, jet-powered machine with a top speed of 850 km/h, capable of carrying sophisticated sensor payloads and light munitions.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0005",
+          "unmannedcombataerial_7f092dc3_c0006",
+          "unmannedcombataerial_7f092dc3_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0006",
+          "unmannedcombataerial_7f092dc3_c0007",
+          "unmannedcombataerial_7f092dc3_c0005"
+        ]
+      },
+      {
+        "question": "Trace the evolution of the military role of drones, from their initial use as decoys to their deployment in large-scale coordinated attacks.",
+        "answer": "The military application of drones evolved significantly over several decades. In the 1973 Yom Kippur War, Israel used unarmed drones as decoys to deplete Egypt's anti-aircraft missile arsenal. By the 1980s, Israel was using its own UAVs for surveillance and electronic warfare, which proved highly effective in the 1982 Lebanon War. The first known offensive use was by Iran, which deployed a drone armed with RPG rounds in the late 1980s. The United States achieved its first UAV \"kill\" on October 7, 2001, and greatly expanded the use of drone strikes in the following years. A major shift occurred in 2020 when Turkey became the first country to use UCAVs in a large, coordinated attack on a conventional battlefield, attacking enemy positions and providing cover for ground forces in Syria.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0001",
+          "unmannedcombataerial_7f092dc3_c0002",
+          "unmannedcombataerial_7f092dc3_c0003"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0001",
+          "unmannedcombataerial_7f092dc3_c0002",
+          "unmannedcombataerial_7f092dc3_c0003"
+        ]
+      },
+      {
+        "question": "Following the failure to intercept North Korean drones in December 2022, what new counter-drone measures did South Korea announce, and how does one of these planned systems compare to tactics used in the Russo-Ukrainian War?",
+        "answer": "After five North Korean drones successfully evaded South Korean fighter jets and helicopters in December 2022, the South Korean Defence Ministry announced it would spend 560 billion won on new anti-drone measures. These initiatives include developing an airborne laser to destroy larger drones, creating a new counter-drone unit, and deploying a 'soft kill' jamming system for smaller drones. This use of jammers is a tactic also employed in the Russo-Ukrainian War, where jamming GPS signals causes enemy drones to operate less effectively.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0008",
+          "unmannedcombataerial_7f092dc3_c0009",
+          "unmannedcombataerial_7f092dc3_c0010"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0008",
+          "unmannedcombataerial_7f092dc3_c0009",
+          "unmannedcombataerial_7f092dc3_c0010"
+        ]
+      },
+      {
+        "question": "What are the contrasting views presented regarding the dehumanization of the enemy in drone warfare?",
+        "answer": "There are conflicting perspectives on this issue. One view is that the intense training for US drone operators is designed to dehumanize the enemy, and there is a related concern that the physical distance of drone warfare could lead soldiers to see their targets as mere \"blips on a screen\" rather than as humans. Conversely, writer Mark Bowden argues that drone pilots actually have a more intimate view of the conflict, seeing the carnage close-up in real-time and often becoming familiar with their victims before a strike, which contradicts the idea of dehumanization.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0013",
+          "unmannedcombataerial_7f092dc3_c0015",
+          "unmannedcombataerial_7f092dc3_c0016"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0015",
+          "unmannedcombataerial_7f092dc3_c0013",
+          "unmannedcombataerial_7f092dc3_c0016"
+        ]
+      },
+      {
+        "question": "What are the various arguments and concerns raised against the use of lethal autonomous robots (LARs)?",
+        "answer": "Arguments against lethal autonomous robots span social, political, technical, and moral domains. Socially, it is argued that targeted populations would react angrily to them, and the public would be more outraged by machine failures than human errors, making them politically implausible. They are also considered to lack human sensibility and may be inappropriate for complex conflicts. Technically, autonomous systems are believed to be more vulnerable to hacking because a human operator cannot intervene to regain control, leading to a risk of losing control due to errors, malfunctions, or unexpected situations. Finally, there is a significant moral and legal debate on whether responsibility for their actions can be appropriately assigned under existing international humanitarian law.",
+        "related_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0019",
+          "unmannedcombataerial_7f092dc3_c0020"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "unmannedcombataerial_7f092dc3_c0019",
+          "unmannedcombataerial_7f092dc3_c0020"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T10:54:58.088Z",
+    "content_format": "markdown",
+    "total_chunks": 23,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

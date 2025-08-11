@@ -1,0 +1,257 @@
+{
+  "article": {
+    "id": "retirementplanning_57d73065",
+    "title": "Retirement planning",
+    "url": "https://en.wikipedia.org/wiki/Retirement_planning",
+    "lang": "en",
+    "created_at": "2025-07-30T14:07:25.018991",
+    "content": "---\nid: retirementplanning_57d73065\nurl: https://en.wikipedia.org/wiki/Retirement_planning\ntitle: Retirement planning\nlang: en\ncreated_at: '2025-07-30T14:02:02.912071'\nchecksum: 25c0aceb413b4a509d51580ea54dff8961e6569d1a244e548de45be44228b487\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1080\n  char_count: 7464\n  num_chunks: 9\n  original_chunks: 12\n  filtered_out: 3\n  num_sections: 0\n---\nRetirement planning, in a financial context, refers to the allocation of savings or revenue for retirement. The goal of retirement planning is to achieve financial independence. The process of retirement planning aims to: Assess readiness-to-retire given a desired retirement age and lifestyle, i.e., whether one has enough money to retire Identify actions to improve readiness-to-retire Acquire financial planning knowledge Encourage saving practices == Obtaining a financial plan == Producers such as a financial planner or financial adviser can help clients develop retirement plans, where compensation is either fee-based or commissioned contingent on product sale; see Professional certification in financial services. Such an arrangement is sometimes viewed as in conflict with a consumer's interest, and that the advice rendered cannot be without bias, or at a cost that justifies its value. Consumers can now elect a do it yourself (DIY) approach. For example, retirement web-tools in the form of a calculator, mathematical model or decision support system are available online. A web-based tool that allows client to fully plan, without human intervention, might be considered a producer. Key motivations of the DIY trend are many of the same arguments for lean manufacturing, a constructive alteration of the relationship between producer and consumer. A good retirement plan should consider: Financial Panning Savings and Investments: Enough savings and a well-thought-out investment plan are crucial. This includes retirement accounts like 401(k)s, IRAs, and other investment vehicles. Income Streams: Consideration of various income streams in retirement, such as Social Security benefits, pensions, annuities, and earnings from investments. Budget and Expenses: A realistic budget that accounts for daily living expenses, leisure activities, and unforeseen costs. Inflation and Tax Planning: Strategies to mitigate the impact of inflation and optimize tax liabilities. Healthcare Planning Medicare and Supplemental Insurance: Understanding Medicare coverage and whether supplemental insurance is needed. Long-term Care Insurance: Considering the potential need for long-term care and how to finance it. Health Savings Account (HSA): Utilizing an HSA for future healthcare expenses, if available. What lifestyle the person seeks to achieve in retirement: their needs and wants A projection of all significant assets, liabilities, incomes and spending at the household level (including social security pensions) The person's ability to save for retirement while working, and an assessment of whether this will indeed be enough to cover their needs All issues that will have a material impact on future outcomes - to allow informed decisions to be made e.g. the person's chosen retirement age The potential variability of future unknowns such as investment returns, inflation rates and the lifespan of each spouse The link between health, lifestyle factors and life expectancy. Lifespan assessments should be appropriate for the retiree and allow for longevity improvement trends == Modeling and limitations == Retirement finances touch upon distinct subject areas or financial domains of client importance, including: investments (i.e., stocks, bonds, mutual funds); real estate; debt; taxes; cash flow (income and expense) analysis; insurance; defined benefits (e.g., social security, traditional pensions). There is often a complex interaction between the things that the person can control over time (like their investment mix, saving level while working, spending level in retirement and, to an extent, the timing of retirement and part time work undertaken) and things that are outside their control (like market performance, inflation, tax and social security rules and the length of their lifespan). From an analytic perspective, each domain can be formally characterized and modeled using a different class representation, as defined by a domain's unique set of attributes and behaviors. Domain models require definition only at a level of abstraction necessary for decision analysis. Since planning is about the future, domains need to extend beyond current state description and address uncertainty, volatility, change dynamics (i.e., constancy or determinism is not assumed). Together, these factors raise significant challenges to any current producer claim of model predictability or certainty. Volatility in investment markets raises questions for everyone, participants, and fiduciaries alike. With the growth of 401(k) and other individual account retirement plans, many participants are responsible for investing their retirement savings. == Stochastic modelling == Retirees often face significant financial risk in retirement (unless they have guaranteed products like defined benefit pensions or lifetime annuities). Each individual doesn’t know how long they will live or what sequence of market returns they will experience in retirement. Ideally, retirement models should calculate the probability of achieving the person’s required living standard for as long as they live, and calculate the probability of achieving various other goals. Quantitative specialists and actuaries will fit a statistical distribution to key random variables that impact results - such as market returns, human lifespans and inflation rates. These can be used to generate probability weighted scenarios of what a retiree could experience over the decades in retirement. The Monte Carlo method is a common form of a mathematical model that is applied to predict long-term investment behavior for a client's retirement planning. Its use helps to identify adequacy of client's investment to attain retirement readiness and to clarify strategic choices and actions. It's important to note the investment domain is only a financial domain and therefore is incomplete on its own. Depending on client context, the investment domain may have very little importance in relation to a client's other domains—e.g., a client who receives a guaranteed annuity or social security pension. Modern retirement models are starting to applying similar techniques at household level too – projecting all significant assets, liabilities, and incomes of the household and stress testing a full range of market sequences and lifespan scenarios (for each spouse). The approach can deal with the complex interdependencies between subject areas (domains) mentioned above as well as tax and legislative provisions. == Other models == Contemporary retirement planning models have yet to be validated in the sense that the models purport to project a future that has yet to manifest itself. The criticism with contemporary models are some of the same levied against Neoclassical economics. The critic argues that contemporary models may only have proven validity retrospectively, whereas it is the indeterminate future that needs solution. A more moderate school believes that retirement planning methods must further evolve by adopting a more robust and integrated set of tools from the field of complexity science. Recent research has explored the effects of the elimination of capital income taxes on saving-for-retirement opportunities and its impact on government debt. == See also == Individual retirement account Retirement plans in the United States == References == == External links == http://www.investopedia.com/university/retirement/ https://www.forbes.com/retirement/"
+  },
+  "chunks": [
+    {
+      "id": "retirementplanning_57d73065_c0000",
+      "article_id": "retirementplanning_57d73065",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 452,
+      "content": "Retirement planning, in a financial context, refers to the allocation of savings or revenue for retirement. The goal of retirement planning is to achieve financial independence. The process of retirement planning aims to: Assess readiness-to-retire given a desired retirement age and lifestyle, i.e., whether one has enough money to retire Identify actions to improve readiness-to-retire Acquire financial planning knowledge Encourage saving practices",
+      "char_count": 451,
+      "token_estimate": 112,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "retirementplanning_57d73065_c0001",
+      "article_id": "retirementplanning_57d73065",
+      "section": "== Obtaining a financial plan ==",
+      "heading_path": "== Obtaining a financial plan ==",
+      "start_char": 484,
+      "end_char": 1395,
+      "content": "== Obtaining a financial plan == Producers such as a financial planner or financial adviser can help clients develop retirement plans, where compensation is either fee-based or commissioned contingent on product sale; see Professional certification in financial services. Such an arrangement is sometimes viewed as in conflict with a consumer's interest, and that the advice rendered cannot be without bias, or at a cost that justifies its value. Consumers can now elect a do it yourself (DIY) approach. For example, retirement web-tools in the form of a calculator, mathematical model or decision support system are available online. A web-based tool that allows client to fully plan, without human intervention, might be considered a producer. Key motivations of the DIY trend are many of the same arguments for lean manufacturing, a constructive alteration of the relationship between producer and consumer.",
+      "char_count": 910,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "retirementplanning_57d73065_c0002",
+      "article_id": "retirementplanning_57d73065",
+      "section": "== Obtaining a financial plan ==",
+      "heading_path": "== Obtaining a financial plan ==",
+      "start_char": 1395,
+      "end_char": 2341,
+      "content": "A good retirement plan should consider: Financial Panning Savings and Investments: Enough savings and a well-thought-out investment plan are crucial. This includes retirement accounts like 401(k)s, IRAs, and other investment vehicles. Income Streams: Consideration of various income streams in retirement, such as Social Security benefits, pensions, annuities, and earnings from investments. Budget and Expenses: A realistic budget that accounts for daily living expenses, leisure activities, and unforeseen costs. Inflation and Tax Planning: Strategies to mitigate the impact of inflation and optimize tax liabilities. Healthcare Planning Medicare and Supplemental Insurance: Understanding Medicare coverage and whether supplemental insurance is needed. Long-term Care Insurance: Considering the potential need for long-term care and how to finance it. Health Savings Account (HSA): Utilizing an HSA for future healthcare expenses, if available.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "retirementplanning_57d73065_c0003",
+      "article_id": "retirementplanning_57d73065",
+      "section": "== Obtaining a financial plan ==",
+      "heading_path": "== Obtaining a financial plan ==",
+      "start_char": 2342,
+      "end_char": 3122,
+      "content": "What lifestyle the person seeks to achieve in retirement: their needs and wants A projection of all significant assets, liabilities, incomes and spending at the household level (including social security pensions) The person's ability to save for retirement while working, and an assessment of whether this will indeed be enough to cover their needs All issues that will have a material impact on future outcomes - to allow informed decisions to be made e.g. the person's chosen retirement age The potential variability of future unknowns such as investment returns, inflation rates and the lifespan of each spouse The link between health, lifestyle factors and life expectancy. Lifespan assessments should be appropriate for the retiree and allow for longevity improvement trends",
+      "char_count": 780,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "retirementplanning_57d73065_c0004",
+      "article_id": "retirementplanning_57d73065",
+      "section": "== Modeling and limitations ==",
+      "heading_path": "== Modeling and limitations ==",
+      "start_char": 3121,
+      "end_char": 4038,
+      "content": "== Modeling and limitations == Retirement finances touch upon distinct subject areas or financial domains of client importance, including: investments (i.e., stocks, bonds, mutual funds); real estate; debt; taxes; cash flow (income and expense) analysis; insurance; defined benefits (e.g., social security, traditional pensions). There is often a complex interaction between the things that the person can control over time (like their investment mix, saving level while working, spending level in retirement and, to an extent, the timing of retirement and part time work undertaken) and things that are outside their control (like market performance, inflation, tax and social security rules and the length of their lifespan). From an analytic perspective, each domain can be formally characterized and modeled using a different class representation, as defined by a domain's unique set of attributes and behaviors.",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "retirementplanning_57d73065_c0005",
+      "article_id": "retirementplanning_57d73065",
+      "section": "== Modeling and limitations ==",
+      "heading_path": "== Modeling and limitations ==",
+      "start_char": 4038,
+      "end_char": 4697,
+      "content": "Domain models require definition only at a level of abstraction necessary for decision analysis. Since planning is about the future, domains need to extend beyond current state description and address uncertainty, volatility, change dynamics (i.e., constancy or determinism is not assumed). Together, these factors raise significant challenges to any current producer claim of model predictability or certainty. Volatility in investment markets raises questions for everyone, participants, and fiduciaries alike. With the growth of 401(k) and other individual account retirement plans, many participants are responsible for investing their retirement savings.",
+      "char_count": 659,
+      "token_estimate": 164,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "retirementplanning_57d73065_c0006",
+      "article_id": "retirementplanning_57d73065",
+      "section": "== Stochastic modelling ==",
+      "heading_path": "== Stochastic modelling ==",
+      "start_char": 4694,
+      "end_char": 5666,
+      "content": "== Stochastic modelling == Retirees often face significant financial risk in retirement (unless they have guaranteed products like defined benefit pensions or lifetime annuities). Each individual doesn’t know how long they will live or what sequence of market returns they will experience in retirement. Ideally, retirement models should calculate the probability of achieving the person’s required living standard for as long as they live, and calculate the probability of achieving various other goals. Quantitative specialists and actuaries will fit a statistical distribution to key random variables that impact results - such as market returns, human lifespans and inflation rates. These can be used to generate probability weighted scenarios of what a retiree could experience over the decades in retirement. The Monte Carlo method is a common form of a mathematical model that is applied to predict long-term investment behavior for a client's retirement planning.",
+      "char_count": 971,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "retirementplanning_57d73065_c0007",
+      "article_id": "retirementplanning_57d73065",
+      "section": "== Stochastic modelling ==",
+      "heading_path": "== Stochastic modelling ==",
+      "start_char": 5666,
+      "end_char": 6525,
+      "content": "Its use helps to identify adequacy of client's investment to attain retirement readiness and to clarify strategic choices and actions. It's important to note the investment domain is only a financial domain and therefore is incomplete on its own. Depending on client context, the investment domain may have very little importance in relation to a client's other domains—e.g., a client who receives a guaranteed annuity or social security pension. Modern retirement models are starting to applying similar techniques at household level too – projecting all significant assets, liabilities, and incomes of the household and stress testing a full range of market sequences and lifespan scenarios (for each spouse). The approach can deal with the complex interdependencies between subject areas (domains) mentioned above as well as tax and legislative provisions.",
+      "char_count": 859,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "retirementplanning_57d73065_c0008",
+      "article_id": "retirementplanning_57d73065",
+      "section": "== Other models ==",
+      "heading_path": "== Other models ==",
+      "start_char": 6518,
+      "end_char": 7258,
+      "content": "== Other models == Contemporary retirement planning models have yet to be validated in the sense that the models purport to project a future that has yet to manifest itself. The criticism with contemporary models are some of the same levied against Neoclassical economics. The critic argues that contemporary models may only have proven validity retrospectively, whereas it is the indeterminate future that needs solution. A more moderate school believes that retirement planning methods must further evolve by adopting a more robust and integrated set of tools from the field of complexity science. Recent research has explored the effects of the elimination of capital income taxes on saving-for-retirement opportunities and its impact on government debt.",
+      "char_count": 757,
+      "token_estimate": 189,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 9,
+    "items": [
+      {
+        "question": "What is a common mathematical model used to predict long-term investment behavior for retirement planning?",
+        "answer": "The Monte Carlo method is a common form of a mathematical model applied to predict long-term investment behavior for a client's retirement planning.",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0006"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0006"
+        ]
+      },
+      {
+        "question": "What are the key financial and healthcare components that a good retirement plan should consider?",
+        "answer": "A good retirement plan should consider several components. For financial planning, it should include sufficient savings and a well-thought-out investment plan with accounts like 401(k)s and IRAs, various income streams such as Social Security and pensions, a realistic budget, and strategies for inflation and tax planning. For healthcare planning, it should address Medicare and supplemental insurance, the potential need for long-term care insurance, and the use of a Health Savings Account (HSA).",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0002"
+        ]
+      },
+      {
+        "question": "What are some factors in retirement planning that are outside a person's control?",
+        "answer": "Factors that are outside a person's control in retirement planning include market performance, inflation, tax and social security rules, and the length of their lifespan.",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0004"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0004"
+        ]
+      },
+      {
+        "question": "What methods are available for creating a retirement plan to achieve financial independence, and what key financial and healthcare components should a comprehensive plan include?",
+        "answer": "To create a retirement plan with the goal of achieving financial independence, an individual can either hire a professional financial planner or use a do-it-yourself (DIY) approach with online tools. A good plan should address several key areas. Financially, it must consider savings and investments (like 401(k)s and IRAs), various income streams (such as Social Security and pensions), a realistic budget, and strategies for inflation and taxes. For healthcare, the plan should account for Medicare, potential supplemental insurance, and the financing of long-term care, possibly through a Health Savings Account (HSA).",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0000",
+          "retirementplanning_57d73065_c0001",
+          "retirementplanning_57d73065_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0002",
+          "retirementplanning_57d73065_c0000",
+          "retirementplanning_57d73065_c0001"
+        ]
+      },
+      {
+        "question": "What are some key future uncertainties that individuals cannot control but must be considered in retirement planning models?",
+        "answer": "Key uncertainties outside an individual's control that must be factored into retirement planning include the variability of investment returns (market performance), inflation rates, tax and social security rules, and the length of their lifespan.",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0003",
+          "retirementplanning_57d73065_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0004",
+          "retirementplanning_57d73065_c0003"
+        ]
+      },
+      {
+        "question": "Describe the function and limitations of contemporary stochastic models used in retirement planning.",
+        "answer": "Stochastic models in retirement planning, such as the Monte Carlo method, function by calculating the probability of a person achieving their financial goals throughout their lifespan. They do this by fitting statistical distributions to key random variables like market returns, human lifespans, and inflation to generate probability-weighted scenarios. Modern versions of these models are applied at the household level, projecting all significant assets, liabilities, and incomes while accounting for complex interdependencies like tax and legislative provisions. However, a primary limitation and criticism of these contemporary models is that they have not been validated for the future they purport to project, meaning their validity may only be proven retrospectively.",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0006",
+          "retirementplanning_57d73065_c0007",
+          "retirementplanning_57d73065_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0006",
+          "retirementplanning_57d73065_c0008",
+          "retirementplanning_57d73065_c0007"
+        ]
+      },
+      {
+        "question": "What are the essential components and personal considerations for creating a comprehensive retirement plan, regardless of whether it's developed with a professional or through a DIY method?",
+        "answer": "Whether a retirement plan is obtained through a professional financial planner or a do-it-yourself (DIY) web-tool, it must address several key areas. These include financial components like savings and investments (401(k)s, IRAs), various income streams (Social Security, pensions), a realistic budget, and strategies for inflation and taxes. Healthcare planning is also vital, covering Medicare, supplemental insurance, and long-term care. Additionally, the plan must be personalized by considering the desired retirement lifestyle, projecting all assets and liabilities, assessing the ability to save, determining a retirement age, and accounting for future variables like investment returns, inflation, and life expectancy.",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0001",
+          "retirementplanning_57d73065_c0002",
+          "retirementplanning_57d73065_c0003"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0002",
+          "retirementplanning_57d73065_c0001",
+          "retirementplanning_57d73065_c0003"
+        ]
+      },
+      {
+        "question": "How do the challenges of modeling for retirement planning, particularly regarding uncertainty and volatility, relate to the specific financial domain of investments?",
+        "answer": "Retirement planning involves modeling various financial domains, including investments, where market performance is a factor outside an individual's control. A significant challenge for these models is accounting for future uncertainty and volatility, which undermines claims of predictability. This is especially true for the investment domain, where market volatility creates challenges for individuals responsible for investing their own retirement savings in plans like 401(k)s.",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0004",
+          "retirementplanning_57d73065_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0005",
+          "retirementplanning_57d73065_c0004"
+        ]
+      },
+      {
+        "question": "How do modern stochastic retirement models expand upon the traditional Monte Carlo method to provide a more comprehensive financial projection?",
+        "answer": "While the traditional Monte Carlo method models key random variables like market returns, human lifespans, and inflation to predict long-term investment behavior, modern retirement models apply these techniques more broadly at the household level. They go beyond just the investment domain to project all significant assets, liabilities, and incomes of a household. This comprehensive approach allows them to stress test a full range of market and lifespan scenarios while also accounting for complex interdependencies between financial domains, tax implications, and legislative provisions.",
+        "related_chunk_ids": [
+          "retirementplanning_57d73065_c0006",
+          "retirementplanning_57d73065_c0007"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "retirementplanning_57d73065_c0006",
+          "retirementplanning_57d73065_c0007"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:25.618Z",
+    "content_format": "markdown",
+    "total_chunks": 9,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

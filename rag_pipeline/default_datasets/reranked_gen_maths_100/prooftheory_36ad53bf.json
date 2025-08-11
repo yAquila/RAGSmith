@@ -1,0 +1,404 @@
+{
+  "article": {
+    "id": "prooftheory_36ad53bf",
+    "title": "Proof theory",
+    "url": "https://en.wikipedia.org/wiki/Proof_theory",
+    "lang": "en",
+    "created_at": "2025-07-31T06:33:44.906167",
+    "content": "---\nid: prooftheory_36ad53bf\nurl: https://en.wikipedia.org/wiki/Proof_theory\ntitle: Proof theory\nlang: en\ncreated_at: '2025-07-31T06:27:25.130917'\nchecksum: 8b8ea89725c32eba37d56b8f14c7543c2cf10f60ae8fcd8569324445b04b8d05\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2557\n  char_count: 17081\n  num_chunks: 19\n  original_chunks: 26\n  filtered_out: 7\n  num_sections: 0\n---\nProof theory is a major branch of mathematical logic and theoretical computer science within which proofs are treated as formal mathematical objects, facilitating their analysis by mathematical techniques. Proofs are typically presented as inductively defined data structures such as lists, boxed lists, or trees, which are constructed according to the axioms and rules of inference of a given logical system. Consequently, proof theory is syntactic in nature, in contrast to model theory, which is semantic in nature. Some of the major areas of proof theory include structural proof theory, ordinal analysis, provability logic, proof-theoretic semantics, reverse mathematics, proof mining, automated theorem proving, and proof complexity. Much research also focuses on applications in computer science, linguistics, and philosophy. == History == Although the formalisation of logic was much advanced by the work of such figures as Gottlob Frege, Giuseppe Peano, Bertrand Russell, and Richard Dedekind, the story of modern proof theory is often seen as being established by David Hilbert, who initiated what is called Hilbert's program in the Foundations of Mathematics. The central idea of this program was that if we could give finitary proofs of consistency for all the sophisticated formal theories needed by mathematicians, then we could ground these theories by means of a metamathematical argument, which shows that all of their purely universal assertions (more technically their provable Π 1 0 {\\displaystyle \\Pi _{1}^{0}} sentences) are finitarily true; once so grounded we do not care about the non-finitary meaning of their existential theorems, regarding these as pseudo-meaningful stipulations of the existence of ideal entities. The failure of the program was induced by Kurt Gödel's incompleteness theorems, which showed that any ω-consistent theory that is sufficiently strong to express certain simple arithmetic truths, cannot prove its own consistency, which on Gödel's formulation is a Π 1 0 {\\displaystyle \\Pi _{1}^{0}} sentence. However, modified versions of Hilbert's program emerged and research has been carried out on related topics. This has led, in particular, to: Refinement of Gödel's result, particularly J. Barkley Rosser's refinement, weakening the above requirement of ω-consistency to simple consistency; Axiomatisation of the core of Gödel's result in terms of a modal language, provability logic; Transfinite iteration of theories, due to Alan Turing and Solomon Feferman; The discovery of self-verifying theories, systems strong enough to talk about themselves, but too weak to carry out the diagonal argument that is the key to Gödel's unprovability argument. In parallel to the rise and fall of Hilbert's program, the foundations of structural proof theory were being founded. Jan Łukasiewicz suggested in 1926 that one could improve on Hilbert systems as a basis for the axiomatic presentation of logic if one allowed the drawing of conclusions from assumptions in the inference rules of the logic. In response to this, Stanisław Jaśkowski (1929) and Gerhard Gentzen (1934) independently provided such systems, called calculi of natural deduction, with Gentzen's approach introducing the idea of symmetry between the grounds for asserting propositions, expressed in introduction rules, and the consequences of accepting propositions in the elimination rules, an idea that has proved very important in proof theory. Gentzen (1934) further introduced the idea of the sequent calculus, a calculus advanced in a similar spirit that better expressed the duality of the logical connectives, and went on to make fundamental advances in the formalisation of intuitionistic logic, and provide the first combinatorial proof of the consistency of Peano arithmetic. Together, the presentation of natural deduction and the sequent calculus introduced the fundamental idea of analytic proof to proof theory. == Structural proof theory == Structural proof theory is the subdiscipline of proof theory that studies the specifics of proof calculi. The three most well-known styles of proof calculi are: The Hilbert calculi The natural deduction calculi The sequent calculi Each of these can give a complete and axiomatic formalization of propositional or predicate logic of either the classical or intuitionistic flavour, almost any modal logic, and many substructural logics, such as relevance logic or linear logic. Indeed, it is unusual to find a logic that resists being represented in one of these calculi. Proof theorists are typically interested in proof calculi that support a notion of analytic proof. The notion of analytic proof was introduced by Gentzen for the sequent calculus; there the analytic proofs are those that are cut-free. Much of the interest in cut-free proofs comes from the subformula property: every formula in the end sequent of a cut-free proof is a subformula of one of the premises. This allows one to show consistency of the sequent calculus easily; if the empty sequent were derivable it would have to be a subformula of some premise, which it is not. Gentzen's midsequent theorem, the Craig interpolation theorem, and Herbrand's theorem also follow as corollaries of the cut-elimination theorem. Gentzen's natural deduction calculus also supports a notion of analytic proof, as shown by Dag Prawitz. The definition is slightly more complex: we say the analytic proofs are the normal forms, which are related to the notion of normal form in term rewriting. More exotic proof calculi such as Jean-Yves Girard's proof nets also support a notion of analytic proof. A particular family of analytic proofs arising in reductive logic are focused proofs which characterise a large family of goal-directed proof-search procedures. The ability to transform a proof system into a focused form is a good indication of its syntactic quality, in a manner similar to how admissibility of cut shows that a proof system is syntactically consistent. Structural proof theory is connected to type theory by means of the Curry–Howard correspondence, which observes a structural analogy between the process of normalisation in the natural deduction calculus and beta reduction in the typed lambda calculus. This provides the foundation for the intuitionistic type theory developed by Per Martin-Löf, and is often extended to a three way correspondence, the third leg of which are the cartesian closed categories. Other research topics in structural theory include analytic tableau, which apply the central idea of analytic proof from structural proof theory to provide decision procedures and semi-decision procedures for a wide range of logics, and the proof theory of substructural logics. == Ordinal analysis == Ordinal analysis is a powerful technique for providing combinatorial consistency proofs for subsystems of arithmetic, analysis, and set theory. Gödel's second incompleteness theorem is often interpreted as demonstrating that finitistic consistency proofs are impossible for theories of sufficient strength. Ordinal analysis allows one to measure precisely the infinitary content of the consistency of theories. For a consistent recursively axiomatized theory T, one can prove in finitistic arithmetic that the well-foundedness of a certain transfinite ordinal implies the consistency of T. Gödel's second incompleteness theorem implies that the well-foundedness of such an ordinal cannot be proved in the theory T. Consequences of ordinal analysis include (1) consistency of subsystems of classical second order arithmetic and set theory relative to constructive theories, (2) combinatorial independence results, and (3) classifications of provably total recursive functions and provably well-founded ordinals. Ordinal analysis was originated by Gentzen, who proved the consistency of Peano Arithmetic using transfinite induction up to ordinal ε0. Ordinal analysis has been extended to many fragments of first and second order arithmetic and set theory. One major challenge has been the ordinal analysis of impredicative theories. The first breakthrough in this direction was Takeuti's proof of the consistency of Π11-CA0 using the method of ordinal diagrams. == Provability logic == Provability logic is a modal logic, in which the box operator is interpreted as 'it is provable that'. The point is to capture the notion of a proof predicate of a reasonably rich formal theory. As basic axioms of the provability logic GL (Gödel-Löb), which captures provable in Peano Arithmetic, one takes modal analogues of the Hilbert-Bernays derivability conditions and Löb's theorem (if it is provable that the provability of A implies A, then A is provable). Some of the basic results concerning the incompleteness of Peano Arithmetic and related theories have analogues in provability logic. For example, it is a theorem in GL that if a contradiction is not provable then it is not provable that a contradiction is not provable (Gödel's second incompleteness theorem). There are also modal analogues of the fixed-point theorem. Robert Solovay proved that the modal logic GL is complete with respect to Peano Arithmetic. That is, the propositional theory of provability in Peano Arithmetic is completely represented by the modal logic GL. This straightforwardly implies that propositional reasoning about provability in Peano Arithmetic is complete and decidable. Other research in provability logic has focused on first-order provability logic, polymodal provability logic (with one modality representing provability in the object theory and another representing provability in the meta-theory), and interpretability logics intended to capture the interaction between provability and interpretability. Some very recent research has involved applications of graded provability algebras to the ordinal analysis of arithmetical theories. == Reverse mathematics == Reverse mathematics is a program in mathematical logic that seeks to determine which axioms are required to prove theorems of mathematics. The field was founded by Harvey Friedman. Its defining method can be described as \"going backwards from the theorems to the axioms\", in contrast to the ordinary mathematical practice of deriving theorems from axioms. The reverse mathematics program was foreshadowed by results in set theory such as the classical theorem that the axiom of choice and Zorn's lemma are equivalent over ZF set theory. The goal of reverse mathematics, however, is to study possible axioms of ordinary theorems of mathematics rather than possible axioms for set theory. In reverse mathematics, one starts with a framework language and a base theory—a core axiom system—that is too weak to prove most of the theorems one might be interested in, but still powerful enough to develop the definitions necessary to state these theorems. For example, to study the theorem \"Every bounded sequence of real numbers has a supremum\" it is necessary to use a base system that can speak of real numbers and sequences of real numbers. For each theorem that can be stated in the base system but is not provable in the base system, the goal is to determine the particular axiom system (stronger than the base system) that is necessary to prove that theorem. To show that a system S is required to prove a theorem T, two proofs are required. The first proof shows T is provable from S; this is an ordinary mathematical proof along with a justification that it can be carried out in the system S. The second proof, known as a reversal, shows that T itself implies S; this proof is carried out in the base system. The reversal establishes that no axiom system S′ that extends the base system can be weaker than S while still proving T. One striking phenomenon in reverse mathematics is the robustness of the Big Five axiom systems. In order of increasing strength, these systems are named by the initialisms RCA0, WKL0, ACA0, ATR0, and Π11-CA0. Nearly every theorem of ordinary mathematics that has been reverse mathematically analyzed has been proven equivalent to one of these five systems. Much recent research has focused on combinatorial principles that do not fit neatly into this framework, like RT22 (Ramsey's theorem for pairs). Research in reverse mathematics often incorporates methods and techniques from recursion theory as well as proof theory. == Functional interpretations == Functional interpretations are interpretations of non-constructive theories in functional ones. Functional interpretations usually proceed in two stages. First, one \"reduces\" a classical theory C to an intuitionistic one I. That is, one provides a constructive mapping that translates the theorems of C to the theorems of I. Second, one reduces the intuitionistic theory I to a quantifier free theory of functionals F. These interpretations contribute to a form of Hilbert's program, since they prove the consistency of classical theories relative to constructive ones. Successful functional interpretations have yielded reductions of infinitary theories to finitary theories and impredicative theories to predicative ones. Functional interpretations also provide a way to extract constructive information from proofs in the reduced theory. As a direct consequence of the interpretation one usually obtains the result that any recursive function whose totality can be proven either in I or in C is represented by a term of F. If one can provide an additional interpretation of F in I, which is sometimes possible, this characterization is in fact usually shown to be exact. It often turns out that the terms of F coincide with a natural class of functions, such as the primitive recursive or polynomial-time computable functions. Functional interpretations have also been used to provide ordinal analyses of theories and classify their provably recursive functions. The study of functional interpretations began with Kurt Gödel's interpretation of intuitionistic arithmetic in a quantifier-free theory of functionals of finite type. This interpretation is commonly known as the Dialectica interpretation. Together with the double-negation interpretation of classical logic in intuitionistic logic, it provides a reduction of classical arithmetic to intuitionistic arithmetic. == Formal and informal proof == The informal proofs of everyday mathematical practice are unlike the formal proofs of proof theory. They are rather like high-level sketches that would allow an expert to reconstruct a formal proof at least in principle, given enough time and patience. For most mathematicians, writing a fully formal proof is too pedantic and long-winded to be in common use. Formal proofs are constructed with the help of computers in interactive theorem proving. Significantly, these proofs can be checked automatically, also by computer. Checking formal proofs is usually simple, whereas finding proofs (automated theorem proving) is generally hard. An informal proof in the mathematics literature, by contrast, requires weeks of peer review to be checked, and may still contain errors. == Proof-theoretic semantics == In linguistics, type-logical grammar, categorial grammar and Montague grammar apply formalisms based on structural proof theory to give a formal natural language semantics. == See also == Intermediate logic Model theory Proof (truth) Proof techniques Sequent calculus == Notes == == References == J. Avigad and E.H. Reck (2001). \"'Clarifying the nature of the infinite': the development of metamathematics and proof theory\". Carnegie-Mellon Technical Report CMU-PHIL-120. Barwise, Jon (1977). Handbook of Mathematical Logic. Studies in Logic and the Foundations of Mathematics. Vol. 90. North-Holland Publishing Company. ISBN 072042285X. LCCN 76026032. OCLC 2347202. (accessible to patrons with print disabilities) S. Buss, ed. (1998) Handbook of Proof Theory. Elsevier. G. Gentzen (1935/1969). \"Investigations into logical deduction\". In M. E. Szabo, ed. Collected Papers of Gerhard Gentzen. North-Holland. Translated by Szabo from \"Untersuchungen über das logische Schliessen\", Mathematisches Zeitschrift v. 39, pp. 176–210, 405 431. Girard, J.-Y.; Taylor, P.; Lafont, Y. (2003) . Proofs and Types (PDF). Cambridge University Press. ISBN 0521371813. Prawitz, Dag (1965). Natural Deduction: A Proof-Theoretic Study. Acta Universitatis Stockholmiensis; Stockholm Studies in Philosophy, 3. Stockholm, Göteborg, Uppsala: Almqvist & Wiksell. OCLC 912927896. Simpson, S. G. (2010). Subsystems of Second-order Arithmetic. Perspectives in logic (2 ed.). Cambridge University Press. ISBN 9780521150149. OCLC 528432422. A. S. Troelstra and H. Schwichtenberg (1996). Basic Proof Theory, Cambridge Tracts in Theoretical Computer Science, Cambridge University Press, ISBN 0-521-77911-1. Wang, Hao (1981). Popular Lectures on Mathematical Logic. Van Nostrand Reinhold Company. ISBN 9780442231095. OCLC 6087107. == External links == \"Proof theory\", Encyclopedia of Mathematics, EMS Press, 2001  J. von Plato (2008). The Development of Proof Theory. Stanford Encyclopedia of Philosophy."
+  },
+  "chunks": [
+    {
+      "id": "prooftheory_36ad53bf_c0000",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 833,
+      "content": "Proof theory is a major branch of mathematical logic and theoretical computer science within which proofs are treated as formal mathematical objects, facilitating their analysis by mathematical techniques. Proofs are typically presented as inductively defined data structures such as lists, boxed lists, or trees, which are constructed according to the axioms and rules of inference of a given logical system. Consequently, proof theory is syntactic in nature, in contrast to model theory, which is semantic in nature. Some of the major areas of proof theory include structural proof theory, ordinal analysis, provability logic, proof-theoretic semantics, reverse mathematics, proof mining, automated theorem proving, and proof complexity. Much research also focuses on applications in computer science, linguistics, and philosophy.",
+      "char_count": 832,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0001",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 846,
+      "end_char": 1757,
+      "content": "== History == Although the formalisation of logic was much advanced by the work of such figures as Gottlob Frege, Giuseppe Peano, Bertrand Russell, and Richard Dedekind, the story of modern proof theory is often seen as being established by David Hilbert, who initiated what is called Hilbert's program in the Foundations of Mathematics. The central idea of this program was that if we could give finitary proofs of consistency for all the sophisticated formal theories needed by mathematicians, then we could ground these theories by means of a metamathematical argument, which shows that all of their purely universal assertions (more technically their provable Π 1 0 {\\displaystyle \\Pi _{1}^{0}} sentences) are finitarily true; once so grounded we do not care about the non-finitary meaning of their existential theorems, regarding these as pseudo-meaningful stipulations of the existence of ideal entities.",
+      "char_count": 910,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0002",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1757,
+      "end_char": 2712,
+      "content": "The failure of the program was induced by Kurt Gödel's incompleteness theorems, which showed that any ω-consistent theory that is sufficiently strong to express certain simple arithmetic truths, cannot prove its own consistency, which on Gödel's formulation is a Π 1 0 {\\displaystyle \\Pi _{1}^{0}} sentence. However, modified versions of Hilbert's program emerged and research has been carried out on related topics. This has led, in particular, to: Refinement of Gödel's result, particularly J. Barkley Rosser's refinement, weakening the above requirement of ω-consistency to simple consistency; Axiomatisation of the core of Gödel's result in terms of a modal language, provability logic; Transfinite iteration of theories, due to Alan Turing and Solomon Feferman; The discovery of self-verifying theories, systems strong enough to talk about themselves, but too weak to carry out the diagonal argument that is the key to Gödel's unprovability argument.",
+      "char_count": 955,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0003",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2713,
+      "end_char": 3469,
+      "content": "In parallel to the rise and fall of Hilbert's program, the foundations of structural proof theory were being founded. Jan Łukasiewicz suggested in 1926 that one could improve on Hilbert systems as a basis for the axiomatic presentation of logic if one allowed the drawing of conclusions from assumptions in the inference rules of the logic. In response to this, Stanisław Jaśkowski (1929) and Gerhard Gentzen (1934) independently provided such systems, called calculi of natural deduction, with Gentzen's approach introducing the idea of symmetry between the grounds for asserting propositions, expressed in introduction rules, and the consequences of accepting propositions in the elimination rules, an idea that has proved very important in proof theory.",
+      "char_count": 756,
+      "token_estimate": 189,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0004",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3470,
+      "end_char": 3948,
+      "content": "Gentzen (1934) further introduced the idea of the sequent calculus, a calculus advanced in a similar spirit that better expressed the duality of the logical connectives, and went on to make fundamental advances in the formalisation of intuitionistic logic, and provide the first combinatorial proof of the consistency of Peano arithmetic. Together, the presentation of natural deduction and the sequent calculus introduced the fundamental idea of analytic proof to proof theory.",
+      "char_count": 478,
+      "token_estimate": 119,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0005",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Structural proof theory ==",
+      "heading_path": "== Structural proof theory ==",
+      "start_char": 3965,
+      "end_char": 4800,
+      "content": "== Structural proof theory == Structural proof theory is the subdiscipline of proof theory that studies the specifics of proof calculi. The three most well-known styles of proof calculi are: The Hilbert calculi The natural deduction calculi The sequent calculi Each of these can give a complete and axiomatic formalization of propositional or predicate logic of either the classical or intuitionistic flavour, almost any modal logic, and many substructural logics, such as relevance logic or linear logic. Indeed, it is unusual to find a logic that resists being represented in one of these calculi. Proof theorists are typically interested in proof calculi that support a notion of analytic proof. The notion of analytic proof was introduced by Gentzen for the sequent calculus; there the analytic proofs are those that are cut-free.",
+      "char_count": 834,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0006",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Structural proof theory ==",
+      "heading_path": "== Structural proof theory ==",
+      "start_char": 4800,
+      "end_char": 5649,
+      "content": "Much of the interest in cut-free proofs comes from the subformula property: every formula in the end sequent of a cut-free proof is a subformula of one of the premises. This allows one to show consistency of the sequent calculus easily; if the empty sequent were derivable it would have to be a subformula of some premise, which it is not. Gentzen's midsequent theorem, the Craig interpolation theorem, and Herbrand's theorem also follow as corollaries of the cut-elimination theorem. Gentzen's natural deduction calculus also supports a notion of analytic proof, as shown by Dag Prawitz. The definition is slightly more complex: we say the analytic proofs are the normal forms, which are related to the notion of normal form in term rewriting. More exotic proof calculi such as Jean-Yves Girard's proof nets also support a notion of analytic proof.",
+      "char_count": 849,
+      "token_estimate": 212,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0007",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Structural proof theory ==",
+      "heading_path": "== Structural proof theory ==",
+      "start_char": 5650,
+      "end_char": 6479,
+      "content": "A particular family of analytic proofs arising in reductive logic are focused proofs which characterise a large family of goal-directed proof-search procedures. The ability to transform a proof system into a focused form is a good indication of its syntactic quality, in a manner similar to how admissibility of cut shows that a proof system is syntactically consistent. Structural proof theory is connected to type theory by means of the Curry–Howard correspondence, which observes a structural analogy between the process of normalisation in the natural deduction calculus and beta reduction in the typed lambda calculus. This provides the foundation for the intuitionistic type theory developed by Per Martin-Löf, and is often extended to a three way correspondence, the third leg of which are the cartesian closed categories.",
+      "char_count": 829,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0008",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Structural proof theory ==",
+      "heading_path": "== Structural proof theory ==",
+      "start_char": 6480,
+      "end_char": 6758,
+      "content": "Other research topics in structural theory include analytic tableau, which apply the central idea of analytic proof from structural proof theory to provide decision procedures and semi-decision procedures for a wide range of logics, and the proof theory of substructural logics.",
+      "char_count": 278,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0009",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Ordinal analysis ==",
+      "heading_path": "== Ordinal analysis ==",
+      "start_char": 6752,
+      "end_char": 7490,
+      "content": "== Ordinal analysis == Ordinal analysis is a powerful technique for providing combinatorial consistency proofs for subsystems of arithmetic, analysis, and set theory. Gödel's second incompleteness theorem is often interpreted as demonstrating that finitistic consistency proofs are impossible for theories of sufficient strength. Ordinal analysis allows one to measure precisely the infinitary content of the consistency of theories. For a consistent recursively axiomatized theory T, one can prove in finitistic arithmetic that the well-foundedness of a certain transfinite ordinal implies the consistency of T. Gödel's second incompleteness theorem implies that the well-foundedness of such an ordinal cannot be proved in the theory T.",
+      "char_count": 737,
+      "token_estimate": 184,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0010",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Ordinal analysis ==",
+      "heading_path": "== Ordinal analysis ==",
+      "start_char": 7490,
+      "end_char": 8234,
+      "content": "Consequences of ordinal analysis include (1) consistency of subsystems of classical second order arithmetic and set theory relative to constructive theories, (2) combinatorial independence results, and (3) classifications of provably total recursive functions and provably well-founded ordinals. Ordinal analysis was originated by Gentzen, who proved the consistency of Peano Arithmetic using transfinite induction up to ordinal ε0. Ordinal analysis has been extended to many fragments of first and second order arithmetic and set theory. One major challenge has been the ordinal analysis of impredicative theories. The first breakthrough in this direction was Takeuti's proof of the consistency of Π11-CA0 using the method of ordinal diagrams.",
+      "char_count": 744,
+      "token_estimate": 186,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0011",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Provability logic ==",
+      "heading_path": "== Provability logic ==",
+      "start_char": 8236,
+      "end_char": 9187,
+      "content": "== Provability logic == Provability logic is a modal logic, in which the box operator is interpreted as 'it is provable that'. The point is to capture the notion of a proof predicate of a reasonably rich formal theory. As basic axioms of the provability logic GL (Gödel-Löb), which captures provable in Peano Arithmetic, one takes modal analogues of the Hilbert-Bernays derivability conditions and Löb's theorem (if it is provable that the provability of A implies A, then A is provable). Some of the basic results concerning the incompleteness of Peano Arithmetic and related theories have analogues in provability logic. For example, it is a theorem in GL that if a contradiction is not provable then it is not provable that a contradiction is not provable (Gödel's second incompleteness theorem). There are also modal analogues of the fixed-point theorem. Robert Solovay proved that the modal logic GL is complete with respect to Peano Arithmetic.",
+      "char_count": 950,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0012",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Provability logic ==",
+      "heading_path": "== Provability logic ==",
+      "start_char": 9187,
+      "end_char": 9901,
+      "content": "That is, the propositional theory of provability in Peano Arithmetic is completely represented by the modal logic GL. This straightforwardly implies that propositional reasoning about provability in Peano Arithmetic is complete and decidable. Other research in provability logic has focused on first-order provability logic, polymodal provability logic (with one modality representing provability in the object theory and another representing provability in the meta-theory), and interpretability logics intended to capture the interaction between provability and interpretability. Some very recent research has involved applications of graded provability algebras to the ordinal analysis of arithmetical theories.",
+      "char_count": 714,
+      "token_estimate": 178,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0013",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Reverse mathematics ==",
+      "heading_path": "== Reverse mathematics ==",
+      "start_char": 9904,
+      "end_char": 10617,
+      "content": "== Reverse mathematics == Reverse mathematics is a program in mathematical logic that seeks to determine which axioms are required to prove theorems of mathematics. The field was founded by Harvey Friedman. Its defining method can be described as \"going backwards from the theorems to the axioms\", in contrast to the ordinary mathematical practice of deriving theorems from axioms. The reverse mathematics program was foreshadowed by results in set theory such as the classical theorem that the axiom of choice and Zorn's lemma are equivalent over ZF set theory. The goal of reverse mathematics, however, is to study possible axioms of ordinary theorems of mathematics rather than possible axioms for set theory.",
+      "char_count": 712,
+      "token_estimate": 178,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0014",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Reverse mathematics ==",
+      "heading_path": "== Reverse mathematics ==",
+      "start_char": 10617,
+      "end_char": 11525,
+      "content": "In reverse mathematics, one starts with a framework language and a base theory—a core axiom system—that is too weak to prove most of the theorems one might be interested in, but still powerful enough to develop the definitions necessary to state these theorems. For example, to study the theorem \"Every bounded sequence of real numbers has a supremum\" it is necessary to use a base system that can speak of real numbers and sequences of real numbers. For each theorem that can be stated in the base system but is not provable in the base system, the goal is to determine the particular axiom system (stronger than the base system) that is necessary to prove that theorem. To show that a system S is required to prove a theorem T, two proofs are required. The first proof shows T is provable from S; this is an ordinary mathematical proof along with a justification that it can be carried out in the system S.",
+      "char_count": 908,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0015",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Reverse mathematics ==",
+      "heading_path": "== Reverse mathematics ==",
+      "start_char": 11526,
+      "end_char": 12386,
+      "content": "The second proof, known as a reversal, shows that T itself implies S; this proof is carried out in the base system. The reversal establishes that no axiom system S′ that extends the base system can be weaker than S while still proving T. One striking phenomenon in reverse mathematics is the robustness of the Big Five axiom systems. In order of increasing strength, these systems are named by the initialisms RCA0, WKL0, ACA0, ATR0, and Π11-CA0. Nearly every theorem of ordinary mathematics that has been reverse mathematically analyzed has been proven equivalent to one of these five systems. Much recent research has focused on combinatorial principles that do not fit neatly into this framework, like RT22 (Ramsey's theorem for pairs). Research in reverse mathematics often incorporates methods and techniques from recursion theory as well as proof theory.",
+      "char_count": 860,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0016",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Functional interpretations ==",
+      "heading_path": "== Functional interpretations ==",
+      "start_char": 12394,
+      "end_char": 13268,
+      "content": "== Functional interpretations == Functional interpretations are interpretations of non-constructive theories in functional ones. Functional interpretations usually proceed in two stages. First, one \"reduces\" a classical theory C to an intuitionistic one I. That is, one provides a constructive mapping that translates the theorems of C to the theorems of I. Second, one reduces the intuitionistic theory I to a quantifier free theory of functionals F. These interpretations contribute to a form of Hilbert's program, since they prove the consistency of classical theories relative to constructive ones. Successful functional interpretations have yielded reductions of infinitary theories to finitary theories and impredicative theories to predicative ones. Functional interpretations also provide a way to extract constructive information from proofs in the reduced theory.",
+      "char_count": 873,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0017",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Functional interpretations ==",
+      "heading_path": "== Functional interpretations ==",
+      "start_char": 13268,
+      "end_char": 14131,
+      "content": "As a direct consequence of the interpretation one usually obtains the result that any recursive function whose totality can be proven either in I or in C is represented by a term of F. If one can provide an additional interpretation of F in I, which is sometimes possible, this characterization is in fact usually shown to be exact. It often turns out that the terms of F coincide with a natural class of functions, such as the primitive recursive or polynomial-time computable functions. Functional interpretations have also been used to provide ordinal analyses of theories and classify their provably recursive functions. The study of functional interpretations began with Kurt Gödel's interpretation of intuitionistic arithmetic in a quantifier-free theory of functionals of finite type. This interpretation is commonly known as the Dialectica interpretation.",
+      "char_count": 863,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "prooftheory_36ad53bf_c0018",
+      "article_id": "prooftheory_36ad53bf",
+      "section": "== Formal and informal proof ==",
+      "heading_path": "== Formal and informal proof ==",
+      "start_char": 14302,
+      "end_char": 15077,
+      "content": "== Formal and informal proof == The informal proofs of everyday mathematical practice are unlike the formal proofs of proof theory. They are rather like high-level sketches that would allow an expert to reconstruct a formal proof at least in principle, given enough time and patience. For most mathematicians, writing a fully formal proof is too pedantic and long-winded to be in common use. Formal proofs are constructed with the help of computers in interactive theorem proving. Significantly, these proofs can be checked automatically, also by computer. Checking formal proofs is usually simple, whereas finding proofs (automated theorem proving) is generally hard. An informal proof in the mathematics literature, by contrast, requires weeks of peer review to be checked, and may still contain errors.",
+      "char_count": 805,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Who refined Gödel's result by weakening the requirement of ω-consistency to simple consistency?",
+        "answer": "J. Barkley Rosser refined Gödel's result by weakening the requirement of ω-consistency to simple consistency.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0002"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0002"
+        ]
+      },
+      {
+        "question": "Who proved that the modal logic GL is complete with respect to Peano Arithmetic?",
+        "answer": "Robert Solovay proved that the modal logic GL is complete with respect to Peano Arithmetic.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0011"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0011"
+        ]
+      },
+      {
+        "question": "In reverse mathematics, what is the goal for a theorem that can be stated but not proven within the base system?",
+        "answer": "The goal is to determine the specific axiom system, which is stronger than the base system, that is necessary to prove that theorem.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0014"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0014"
+        ]
+      },
+      {
+        "question": "What was the objective of Hilbert's program, and how did its failure shape subsequent research in proof theory?",
+        "answer": "The objective of Hilbert's program, initiated by David Hilbert, was to provide finitary proofs of consistency for all sophisticated formal theories needed by mathematicians. The program's failure was caused by Kurt Gödel's incompleteness theorems, which showed that any sufficiently strong theory cannot prove its own consistency. This failure led to the emergence of modified versions of the program and new research topics, including the refinement of Gödel's result, the development of provability logic, transfinite iteration of theories, and the discovery of self-verifying theories.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0001",
+          "prooftheory_36ad53bf_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0002",
+          "prooftheory_36ad53bf_c0001"
+        ]
+      },
+      {
+        "question": "What were Gerhard Gentzen's main contributions to the development of structural proof theory?",
+        "answer": "Gerhard Gentzen made several fundamental contributions to structural proof theory. In 1934, he independently developed a system of natural deduction, introducing the significant idea of symmetry between introduction and elimination rules. In the same year, he also introduced the sequent calculus. His work on these two systems introduced the fundamental concept of analytic proof, which is a central interest for proof theorists. Additionally, Gentzen made key advances in the formalization of intuitionistic logic and provided the first combinatorial proof for the consistency of Peano arithmetic.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0003",
+          "prooftheory_36ad53bf_c0004",
+          "prooftheory_36ad53bf_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0003",
+          "prooftheory_36ad53bf_c0005",
+          "prooftheory_36ad53bf_c0004"
+        ]
+      },
+      {
+        "question": "How are the analytic proofs of natural deduction calculus connected to type theory?",
+        "answer": "The analytic proofs in natural deduction calculus are known as normal forms. The process of reaching these forms, called normalisation, is structurally analogous to beta reduction in the typed lambda calculus. This connection, known as the Curry–Howard correspondence, links structural proof theory to type theory and provides the foundation for intuitionistic type theory.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0006",
+          "prooftheory_36ad53bf_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0007",
+          "prooftheory_36ad53bf_c0006"
+        ]
+      },
+      {
+        "question": "What were the two main, parallel tracks of development in modern proof theory described in its history?",
+        "answer": "The history of modern proof theory involved two major, parallel developments. The first was Hilbert's program, initiated by David Hilbert, which aimed to ground sophisticated formal theories by providing finitary proofs of their consistency. This program ultimately failed due to Kurt Gödel's incompleteness theorems. In parallel with the rise and fall of Hilbert's program, the foundations of structural proof theory were established. This second track, advanced by figures like Stanisław Jaśkowski and Gerhard Gentzen, led to the creation of systems like the calculi of natural deduction and the sequent calculus, introducing the fundamental idea of analytic proof.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0001",
+          "prooftheory_36ad53bf_c0002",
+          "prooftheory_36ad53bf_c0003",
+          "prooftheory_36ad53bf_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0001",
+          "prooftheory_36ad53bf_c0003",
+          "prooftheory_36ad53bf_c0004",
+          "prooftheory_36ad53bf_c0002"
+        ]
+      },
+      {
+        "question": "What are the different forms that analytic proofs take in various proof calculi, and what is their significance?",
+        "answer": "Analytic proofs take several forms depending on the proof calculus. For the sequent calculus, analytic proofs are those that are \"cut-free.\" The interest in these comes from the subformula property, which has consequences like the Craig interpolation theorem and Herbrand's theorem. For the natural deduction calculus, analytic proofs are called \"normal forms.\" A third type is \"focused proofs,\" a family of analytic proofs from reductive logic that characterize goal-directed proof-search procedures. The central idea of analytic proof is also applied in analytic tableau to provide decision procedures for various logics.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0005",
+          "prooftheory_36ad53bf_c0006",
+          "prooftheory_36ad53bf_c0007",
+          "prooftheory_36ad53bf_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0006",
+          "prooftheory_36ad53bf_c0005",
+          "prooftheory_36ad53bf_c0007",
+          "prooftheory_36ad53bf_c0008"
+        ]
+      },
+      {
+        "question": "Based on the principles of ordinal analysis and Gödel's second incompleteness theorem, what is the relationship between Peano Arithmetic and the ordinal ε₀?",
+        "answer": "Gentzen's work in ordinal analysis demonstrated the consistency of Peano Arithmetic by using transfinite induction up to the ordinal ε₀. However, Gödel's second incompleteness theorem implies that Peano Arithmetic itself cannot prove the well-foundedness of this specific ordinal, ε₀.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0009",
+          "prooftheory_36ad53bf_c0010"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0010",
+          "prooftheory_36ad53bf_c0009"
+        ]
+      },
+      {
+        "question": "What is the significance of the modal logic GL in relation to Peano Arithmetic, and what are some other areas of research in provability logic?",
+        "answer": "The modal logic GL is significant because it captures the concept of provability within Peano Arithmetic. Robert Solovay proved that GL is complete with respect to Peano Arithmetic, meaning the propositional theory of provability in that system is fully represented by GL. This implies that propositional reasoning about provability in Peano Arithmetic is both complete and decidable. Other research areas in the field include first-order provability logic, polymodal provability logic, and interpretability logics.",
+        "related_chunk_ids": [
+          "prooftheory_36ad53bf_c0011",
+          "prooftheory_36ad53bf_c0012"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "prooftheory_36ad53bf_c0012",
+          "prooftheory_36ad53bf_c0011"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:48.745Z",
+    "content_format": "markdown",
+    "total_chunks": 19,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

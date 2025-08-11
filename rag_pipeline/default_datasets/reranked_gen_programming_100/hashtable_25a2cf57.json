@@ -1,0 +1,346 @@
+{
+  "article": {
+    "id": "hashtable_25a2cf57",
+    "title": "Hash table",
+    "url": "https://en.wikipedia.org/wiki/Hash_table",
+    "lang": "en",
+    "created_at": "2025-07-30T10:20:54.579350",
+    "content": "---\nid: hashtable_25a2cf57\nurl: https://en.wikipedia.org/wiki/Hash_table\ntitle: Hash table\nlang: en\ncreated_at: '2025-07-30T10:17:51.305145'\nchecksum: 69cdf2d85abe6f359a292f1b285c04bf53df1cd0b0f9b05b3da6955f4f24cfc8\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1872\n  char_count: 11142\n  num_chunks: 15\n  original_chunks: 23\n  filtered_out: 8\n  num_sections: 0\n---\nIn computer science, a hash table is a data structure that implements an associative array, also called a dictionary or simply map; an associative array is an abstract data type that maps keys to values. A hash table uses a hash function to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored. A map implemented by a hash table is called a hash map. Most hash table designs employ an imperfect hash function. Hash collisions, where the hash function generates the same index for more than one key, therefore typically must be accommodated in some way. In a well-dimensioned hash table, the average time complexity for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key–value pairs, at amortized constant average cost per operation. Hashing is an example of a space-time tradeoff. If memory is infinite, the entire key can be used directly as an index to locate its value with a single memory access. On the other hand, if infinite time is available, values can be stored without regard for their keys, and a binary search or linear search can be used to retrieve the element. In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. For this reason, they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets. == History == The idea of hashing arose independently in different places. In January 1953, Hans Peter Luhn wrote an internal IBM memorandum that used hashing with chaining. The first example of open addressing was proposed by A. D. Linh, building on Luhn's memorandum. Around the same time, Gene Amdahl, Elaine M. McGraw, Nathaniel Rochester, and Arthur Samuel of IBM Research implemented hashing for the IBM 701 assembler. Open addressing with linear probing is credited to Amdahl, although Andrey Ershov independently had the same idea. The term \"open addressing\" was coined by W. Wesley Peterson in his article which discusses the problem of search in large files. The first published work on hashing with chaining is credited to Arnold Dumey, who discussed the idea of using remainder modulo a prime as a hash function. The word \"hashing\" was first published in an article by Robert Morris. A theoretical analysis of linear probing was submitted originally by Konheim and Weiss. == Overview == An associative array stores a set of (key, value) pairs and allows insertion, deletion, and lookup (search), with the constraint of unique keys. In the hash table implementation of associative arrays, an array A {\\displaystyle A} of length m {\\displaystyle m} is partially filled with n {\\displaystyle n} elements, where m ≥ n {\\displaystyle m\\geq n} . A key x {\\displaystyle x} is hashed using a hash function h {\\displaystyle h} to compute an index location A [ h ( x ) ] {\\displaystyle A[h(x)]} in the hash table, where h ( x ) < m {\\displaystyle h(x) T [ j ] . psl {\\displaystyle x{.}{\\text{psl}}\\ >\\ T[j]{.}{\\text{psl}}} : insert the item x {\\displaystyle x} into the bucket j {\\displaystyle j} ; swap x {\\displaystyle x} with T [ j ] {\\displaystyle T[j]} —let it be x ′ {\\displaystyle x'} ; continue the probe from the ( j + 1 ) {\\displaystyle (j+1)} th bucket to insert x ′ {\\displaystyle x'} ; repeat the procedure until every element is inserted. == Dynamic resizing == Repeated insertions cause the number of entries in a hash table to grow, which consequently increases the load factor; to maintain the amortized O ( 1 ) {\\displaystyle O(1)} performance of the lookup and insertion operations, a hash table is dynamically resized and the items of the tables are rehashed into the buckets of the new hash table, since the items cannot be copied over as varying table sizes results in different hash value due to modulo operation. If a hash table becomes \"too empty\" after deleting some elements, resizing may be performed to avoid excessive memory usage. === Resizing by moving all entries === Generally, a new hash table with a size double that of the original hash table gets allocated privately and every item in the original hash table gets moved to the newly allocated one by computing the hash values of the items followed by the insertion operation. Rehashing is simple, but computationally expensive. === Alternatives to all-at-once rehashing === Some hash table implementations, notably in real-time systems, cannot pay the price of enlarging the hash table all at once, because it may interrupt time-critical operations. If one cannot avoid dynamic resizing, a solution is to perform the resizing gradually to avoid storage blip—typically at 50% of new table's size—during rehashing and to avoid memory fragmentation that triggers heap compaction due to deallocation of large memory blocks caused by the old hash table. In such case, the rehashing operation is done incrementally through extending prior memory block allocated for the old hash table such that the buckets of the hash table remain unaltered. A common approach for amortized rehashing involves maintaining two hash functions h old {\\displaystyle h_{\\text{old}}} and h new {\\displaystyle h_{\\text{new}}} . The process of rehashing a bucket's items in accordance with the new hash function is termed as cleaning, which is implemented through command pattern by encapsulating the operations such as A d d ( k e y ) {\\displaystyle \\mathrm {Add} (\\mathrm {key} )} , G e t ( k e y ) {\\displaystyle \\mathrm {Get} (\\mathrm {key} )} and D e l e t e ( k e y ) {\\displaystyle \\mathrm {Delete} (\\mathrm {key} )} through a L o o k u p ( k e y , command ) {\\displaystyle \\mathrm {Lookup} (\\mathrm {key} ,{\\text{command}})} wrapper such that each element in the bucket gets rehashed and its procedure involve as follows: Clean T a b l e [ h old ( k e y ) ] {\\displaystyle \\mathrm {Table} [h_{\\text{old}}(\\mathrm {key} )]} bucket. Clean T a b l e [ h new ( k e y ) ] {\\displaystyle \\mathrm {Table} [h_{\\text{new}}(\\mathrm {key} )]} bucket. The command gets executed. ==== Linear hashing ==== Linear hashing is an implementation of the hash table which enables dynamic growths or shrinks of the table one bucket at a time. == Performance == The performance of a hash table is dependent on the hash function's ability in generating quasi-random numbers ( σ {\\displaystyle \\sigma } ) for entries in the hash table where K {\\displaystyle K} , n {\\displaystyle n} and h ( x ) {\\displaystyle h(x)} denotes the key, number of buckets and the hash function such that σ = h ( K ) % n {\\displaystyle \\sigma \\ =\\ h(K)\\ \\%\\ n} . If the hash function generates the same σ {\\displaystyle \\sigma } for distinct keys ( K 1 ≠ K 2 , h ( K 1 ) = h ( K 2 ) {\\displaystyle K_{1}\\neq K_{2},\\ h(K_{1})\\ =\\ h(K_{2})} ), this results in collision, which is dealt with in a variety of ways. The constant time complexity ( O ( 1 ) {\\displaystyle O(1)} ) of the operation in a hash table is presupposed on the condition that the hash function doesn't generate colliding indices; thus, the performance of the hash table is directly proportional to the chosen hash function's ability to disperse the indices. However, construction of such a hash function is practically infeasible, that being so, implementations depend on case-specific collision resolution techniques in achieving higher performance. The best performance is obtained in the case that the hash function distributes the elements of the universe uniformaly, and the elements stored at the table are drawn at random from the universe. In this case, in hashing with chaining, the expected time for a successful search is 1 + α 2 + Θ ( 1 m ) {\\displaystyle 1+{\\frac {\\alpha }{2}}+\\Theta ({\\frac {1}{m}})} , and the expected time for an unsuccessful search is e − α + α + Θ ( 1 m ) {\\displaystyle e^{-\\alpha }+\\alpha +\\Theta ({\\frac {1}{m}})} . == Applications == === Associative arrays === Hash tables are commonly used to implement many types of in-memory tables. They are used to implement associative arrays. === Database indexing === Hash tables may also be used as disk-based data structures and database indices (such as in dbm) although B-trees are more popular in these applications. === Caches === Hash tables can be used to implement caches, auxiliary data tables that are used to speed up the access to data that is primarily stored in slower media. In this application, hash collisions can be handled by discarding one of the two colliding entries—usually erasing the old item that is currently stored in the table and overwriting it with the new item, so every item in the table has a unique hash value. === Sets === Hash tables can be used in the implementation of set data structure, which can store unique values without any particular order; set is typically used in testing the membership of a value in the collection, rather than element retrieval. === Transposition table === A transposition table to a complex Hash Table which stores information about each section that has been searched. == Implementations == Many programming languages provide hash table functionality, either as built-in associative arrays or as standard library modules. In JavaScript, an \"object\" is a mutable collection of key-value pairs (called \"properties\"), where each key is either a string or a guaranteed-unique \"symbol\"; any other value, when used as a key, is first coerced to a string. Aside from the seven \"primitive\" data types, every value in JavaScript is an object. ECMAScript 2015 also added the Map data structure, which accepts arbitrary values as keys. C++11 includes unordered_map in its standard library for storing keys and values of arbitrary types. Go's built-in map implements a hash table in the form of a type. Java programming language includes the HashSet, HashMap, LinkedHashSet, and LinkedHashMap generic collections. Python's built-in dict implements a hash table in the form of a type. Ruby's built-in Hash uses the open addressing model from Ruby 2.4 onwards. Rust programming language includes HashMap, HashSet as part of the Rust Standard Library. The .NET standard library includes HashSet and Dictionary, so it can be used from languages such as C# and VB.NET. == See also == == Notes == == References == == Further reading == Tamassia, Roberto; Goodrich, Michael T. (2006). \"Chapter Nine: Maps and Dictionaries\". Data structures and algorithms in Java : [updated for Java 5.0] (4th ed.). Hoboken, NJ: Wiley. pp. 369–418. ISBN 978-0-471-73884-8. McKenzie, B. J.; Harries, R.; Bell, T. (February 1990). \"Selecting a hashing algorithm\". Software: Practice and Experience. 20 (2): 209–224. doi:10.1002/spe.4380200207. hdl:10092/9691. S2CID 12854386. == External links == NIST entry on hash tables Open Data Structures – Chapter 5 – Hash Tables, Pat Morin MIT's Introduction to Algorithms: Hashing 1 MIT OCW lecture Video MIT's Introduction to Algorithms: Hashing 2 MIT OCW lecture Video"
+  },
+  "chunks": [
+    {
+      "id": "hashtable_25a2cf57_c0000",
+      "article_id": "hashtable_25a2cf57",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 867,
+      "content": "In computer science, a hash table is a data structure that implements an associative array, also called a dictionary or simply map; an associative array is an abstract data type that maps keys to values. A hash table uses a hash function to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored. A map implemented by a hash table is called a hash map. Most hash table designs employ an imperfect hash function. Hash collisions, where the hash function generates the same index for more than one key, therefore typically must be accommodated in some way. In a well-dimensioned hash table, the average time complexity for each lookup is independent of the number of elements stored in the table.",
+      "char_count": 866,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0001",
+      "article_id": "hashtable_25a2cf57",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 867,
+      "end_char": 1626,
+      "content": "Many hash table designs also allow arbitrary insertions and deletions of key–value pairs, at amortized constant average cost per operation. Hashing is an example of a space-time tradeoff. If memory is infinite, the entire key can be used directly as an index to locate its value with a single memory access. On the other hand, if infinite time is available, values can be stored without regard for their keys, and a binary search or linear search can be used to retrieve the element. In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. For this reason, they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets.",
+      "char_count": 759,
+      "token_estimate": 189,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0002",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1640,
+      "end_char": 2611,
+      "content": "== History == The idea of hashing arose independently in different places. In January 1953, Hans Peter Luhn wrote an internal IBM memorandum that used hashing with chaining. The first example of open addressing was proposed by A. D. Linh, building on Luhn's memorandum. Around the same time, Gene Amdahl, Elaine M. McGraw, Nathaniel Rochester, and Arthur Samuel of IBM Research implemented hashing for the IBM 701 assembler. Open addressing with linear probing is credited to Amdahl, although Andrey Ershov independently had the same idea. The term \"open addressing\" was coined by W. Wesley Peterson in his article which discusses the problem of search in large files. The first published work on hashing with chaining is credited to Arnold Dumey, who discussed the idea of using remainder modulo a prime as a hash function. The word \"hashing\" was first published in an article by Robert Morris. A theoretical analysis of linear probing was submitted originally by Konheim and Weiss.",
+      "char_count": 983,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0003",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 2625,
+      "end_char": 3582,
+      "content": "== Overview == An associative array stores a set of (key, value) pairs and allows insertion, deletion, and lookup (search), with the constraint of unique keys. In the hash table implementation of associative arrays, an array A {\\displaystyle A} of length m {\\displaystyle m} is partially filled with n {\\displaystyle n} elements, where m ≥ n {\\displaystyle m\\geq n} . A key x {\\displaystyle x} is hashed using a hash function h {\\displaystyle h} to compute an index location A [ h ( x ) ] {\\displaystyle A[h(x)]} in the hash table, where h ( x ) < m {\\displaystyle h(x) T [ j ] . psl {\\displaystyle x{.}{\\text{psl}}\\ >\\ T[j]{.}{\\text{psl}}} : insert the item x {\\displaystyle x} into the bucket j {\\displaystyle j} ; swap x {\\displaystyle x} with T [ j ] {\\displaystyle T[j]} —let it be x ′ {\\displaystyle x'} ; continue the probe from the ( j + 1 ) {\\displaystyle (j+1)} th bucket to insert x ′ {\\displaystyle x'} ; repeat the procedure until every element is inserted.",
+      "char_count": 970,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0004",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== Dynamic resizing ==",
+      "heading_path": "== Dynamic resizing ==",
+      "start_char": 3604,
+      "end_char": 4191,
+      "content": "== Dynamic resizing == Repeated insertions cause the number of entries in a hash table to grow, which consequently increases the load factor; to maintain the amortized O ( 1 ) {\\displaystyle O(1)} performance of the lookup and insertion operations, a hash table is dynamically resized and the items of the tables are rehashed into the buckets of the new hash table, since the items cannot be copied over as varying table sizes results in different hash value due to modulo operation. If a hash table becomes \"too empty\" after deleting some elements, resizing may be performed to avoid excessive memory usage.",
+      "char_count": 608,
+      "token_estimate": 152,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0005",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== = Resizing by moving all entries ==",
+      "heading_path": "== = Resizing by moving all entries ==",
+      "start_char": 4229,
+      "end_char": 4546,
+      "content": "== = Resizing by moving all entries === Generally, a new hash table with a size double that of the original hash table gets allocated privately and every item in the original hash table gets moved to the newly allocated one by computing the hash values of the items followed by the insertion operation. Rehashing is simple, but computationally expensive.",
+      "char_count": 354,
+      "token_estimate": 88,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0006",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== = Alternatives to all-at-once rehashing ==",
+      "heading_path": "== = Alternatives to all-at-once rehashing ==",
+      "start_char": 4591,
+      "end_char": 5463,
+      "content": "== = Alternatives to all-at-once rehashing === Some hash table implementations, notably in real-time systems, cannot pay the price of enlarging the hash table all at once, because it may interrupt time-critical operations. If one cannot avoid dynamic resizing, a solution is to perform the resizing gradually to avoid storage blip—typically at 50% of new table's size—during rehashing and to avoid memory fragmentation that triggers heap compaction due to deallocation of large memory blocks caused by the old hash table. In such case, the rehashing operation is done incrementally through extending prior memory block allocated for the old hash table such that the buckets of the hash table remain unaltered. A common approach for amortized rehashing involves maintaining two hash functions h old {\\displaystyle h_{\\text{old}}} and h new {\\displaystyle h_{\\text{new}}} .",
+      "char_count": 871,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0007",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== = Alternatives to all-at-once rehashing ==",
+      "heading_path": "== = Alternatives to all-at-once rehashing ==",
+      "start_char": 5463,
+      "end_char": 6308,
+      "content": "The process of rehashing a bucket's items in accordance with the new hash function is termed as cleaning, which is implemented through command pattern by encapsulating the operations such as A d d ( k e y ) {\\displaystyle \\mathrm {Add} (\\mathrm {key} )} , G e t ( k e y ) {\\displaystyle \\mathrm {Get} (\\mathrm {key} )} and D e l e t e ( k e y ) {\\displaystyle \\mathrm {Delete} (\\mathrm {key} )} through a L o o k u p ( k e y , command ) {\\displaystyle \\mathrm {Lookup} (\\mathrm {key} ,{\\text{command}})} wrapper such that each element in the bucket gets rehashed and its procedure involve as follows: Clean T a b l e [ h old ( k e y ) ] {\\displaystyle \\mathrm {Table} [h_{\\text{old}}(\\mathrm {key} )]} bucket. Clean T a b l e [ h new ( k e y ) ] {\\displaystyle \\mathrm {Table} [h_{\\text{new}}(\\mathrm {key} )]} bucket. The command gets executed.",
+      "char_count": 845,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0008",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== Performance ==",
+      "heading_path": "== Performance ==",
+      "start_char": 6281,
+      "end_char": 7238,
+      "content": "== Performance == The performance of a hash table is dependent on the hash function's ability in generating quasi-random numbers ( σ {\\displaystyle \\sigma } ) for entries in the hash table where K {\\displaystyle K} , n {\\displaystyle n} and h ( x ) {\\displaystyle h(x)} denotes the key, number of buckets and the hash function such that σ = h ( K ) % n {\\displaystyle \\sigma \\ =\\ h(K)\\ \\%\\ n} . If the hash function generates the same σ {\\displaystyle \\sigma } for distinct keys ( K 1 ≠ K 2 , h ( K 1 ) = h ( K 2 ) {\\displaystyle K_{1}\\neq K_{2},\\ h(K_{1})\\ =\\ h(K_{2})} ), this results in collision, which is dealt with in a variety of ways. The constant time complexity ( O ( 1 ) {\\displaystyle O(1)} ) of the operation in a hash table is presupposed on the condition that the hash function doesn't generate colliding indices; thus, the performance of the hash table is directly proportional to the chosen hash function's ability to disperse the indices.",
+      "char_count": 956,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0009",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== Performance ==",
+      "heading_path": "== Performance ==",
+      "start_char": 7238,
+      "end_char": 7934,
+      "content": "However, construction of such a hash function is practically infeasible, that being so, implementations depend on case-specific collision resolution techniques in achieving higher performance. The best performance is obtained in the case that the hash function distributes the elements of the universe uniformaly, and the elements stored at the table are drawn at random from the universe. In this case, in hashing with chaining, the expected time for a successful search is 1 + α 2 + Θ ( 1 m ) {\\displaystyle 1+{\\frac {\\alpha }{2}}+\\Theta ({\\frac {1}{m}})} , and the expected time for an unsuccessful search is e − α + α + Θ ( 1 m ) {\\displaystyle e^{-\\alpha }+\\alpha +\\Theta ({\\frac {1}{m}})} .",
+      "char_count": 696,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0010",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== = Database indexing ==",
+      "heading_path": "== = Database indexing ==",
+      "start_char": 8112,
+      "end_char": 8268,
+      "content": "== = Database indexing === Hash tables may also be used as disk-based data structures and database indices (such as in dbm) although B-trees are more popular in these applications.",
+      "char_count": 180,
+      "token_estimate": 45,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0011",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== = Caches ==",
+      "heading_path": "== = Caches ==",
+      "start_char": 8282,
+      "end_char": 8694,
+      "content": "== = Caches === Hash tables can be used to implement caches, auxiliary data tables that are used to speed up the access to data that is primarily stored in slower media. In this application, hash collisions can be handled by discarding one of the two colliding entries—usually erasing the old item that is currently stored in the table and overwriting it with the new item, so every item in the table has a unique hash value.",
+      "char_count": 425,
+      "token_estimate": 106,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0012",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== = Sets ==",
+      "heading_path": "== = Sets ==",
+      "start_char": 8706,
+      "end_char": 8946,
+      "content": "== = Sets === Hash tables can be used in the implementation of set data structure, which can store unique values without any particular order; set is typically used in testing the membership of a value in the collection, rather than element retrieval.",
+      "char_count": 251,
+      "token_estimate": 62,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0013",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== Implementations ==",
+      "heading_path": "== Implementations ==",
+      "start_char": 9110,
+      "end_char": 10013,
+      "content": "== Implementations == Many programming languages provide hash table functionality, either as built-in associative arrays or as standard library modules. In JavaScript, an \"object\" is a mutable collection of key-value pairs (called \"properties\"), where each key is either a string or a guaranteed-unique \"symbol\"; any other value, when used as a key, is first coerced to a string. Aside from the seven \"primitive\" data types, every value in JavaScript is an object. ECMAScript 2015 also added the Map data structure, which accepts arbitrary values as keys. C++11 includes unordered_map in its standard library for storing keys and values of arbitrary types. Go's built-in map implements a hash table in the form of a type. Java programming language includes the HashSet, HashMap, LinkedHashSet, and LinkedHashMap generic collections. Python's built-in dict implements a hash table in the form of a type.",
+      "char_count": 902,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "hashtable_25a2cf57_c0014",
+      "article_id": "hashtable_25a2cf57",
+      "section": "== Implementations ==",
+      "heading_path": "== Implementations ==",
+      "start_char": 10013,
+      "end_char": 10292,
+      "content": "Ruby's built-in Hash uses the open addressing model from Ruby 2.4 onwards. Rust programming language includes HashMap, HashSet as part of the Rust Standard Library. The .NET standard library includes HashSet and Dictionary, so it can be used from languages such as C# and VB.NET.",
+      "char_count": 279,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Who is credited with the first published work on hashing with chaining?",
+        "answer": "The first published work on hashing with chaining is credited to Arnold Dumey, who also discussed using the remainder modulo a prime as a hash function.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0002"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0002"
+        ]
+      },
+      {
+        "question": "What is the fundamental constraint regarding keys in an associative array?",
+        "answer": "The fundamental constraint is that all keys must be unique.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0003"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0003"
+        ]
+      },
+      {
+        "question": "What is the time complexity of a hash table operation, assuming the hash function does not generate colliding indices?",
+        "answer": "The time complexity of a hash table operation is constant time (O(1)) on the condition that the hash function does not generate colliding indices.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0008"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0008"
+        ]
+      },
+      {
+        "question": "Provide a comprehensive overview of the hash table, including its fundamental mechanism, its performance characteristics, and the key historical developments and figures associated with its creation.",
+        "answer": "A hash table is a data structure that implements an associative array by using a hash function to compute an index for storing and retrieving key-value pairs. A primary challenge in its design is handling hash collisions, where multiple keys map to the same index. Historically, pioneers addressed this with methods like chaining (Hans Peter Luhn, Arnold Dumey) and open addressing (A. D. Linh, Gene Amdahl, W. Wesley Peterson). In terms of performance, a well-dimensioned hash table offers an average lookup time that is independent of the number of elements, and it allows for insertions and deletions at an amortized constant average cost. Because of this efficiency, hash tables are often more effective than search trees and are widely used in applications such as associative arrays, database indexing, caches, and sets.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0000",
+          "hashtable_25a2cf57_c0001",
+          "hashtable_25a2cf57_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0000",
+          "hashtable_25a2cf57_c0001",
+          "hashtable_25a2cf57_c0002"
+        ]
+      },
+      {
+        "question": "How does an increase in the number of entries in a hash table impact its load factor, and what procedure is necessary to maintain its performance?",
+        "answer": "An increase in the number of entries (n) causes the load factor (α = n/m) to grow. To maintain the amortized O(1) performance for lookup and insertion operations, the hash table must be dynamically resized. This procedure involves rehashing all the items into the buckets of the new, larger table, as the change in table size alters the hash values.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0003",
+          "hashtable_25a2cf57_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0004",
+          "hashtable_25a2cf57_c0003"
+        ]
+      },
+      {
+        "question": "Contrast the all-at-once rehashing method with the gradual resizing alternative, explaining the problem the latter solves and how it works.",
+        "answer": "The all-at-once rehashing method is computationally expensive as it requires allocating a new, larger hash table and moving every item from the original table at one time. This can interrupt time-critical operations, making it unsuitable for systems like real-time systems. The alternative, gradual resizing, addresses this by performing the rehashing incrementally. This method uses two hash functions, an old and a new one, and rehashes items in a bucket—a process called \"cleaning\"—as operations like Add, Get, or Delete are performed, thus avoiding the large, disruptive cost of resizing the entire table at once.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0005",
+          "hashtable_25a2cf57_c0006",
+          "hashtable_25a2cf57_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0006",
+          "hashtable_25a2cf57_c0005",
+          "hashtable_25a2cf57_c0007"
+        ]
+      },
+      {
+        "question": "Explain why hash tables are considered an efficient data structure, referencing both their operational mechanism and performance characteristics for various operations.",
+        "answer": "Hash tables are considered efficient due to their core mechanism and performance. They use a hash function to compute an index from a key, which allows for lookups with an average time complexity that is independent of the number of elements stored. This makes them an effective space-time tradeoff. Furthermore, many hash table designs also permit insertions and deletions of key-value pairs at an amortized constant average cost per operation, making them more efficient on average than structures like search trees for many applications.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0000",
+          "hashtable_25a2cf57_c0001"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0001",
+          "hashtable_25a2cf57_c0000"
+        ]
+      },
+      {
+        "question": "How is the gradual rehashing process, which uses two hash functions, triggered and executed during operations like Add, Get, or Delete?",
+        "answer": "In gradual rehashing, two hash functions, h_old and h_new, are maintained. When an operation like Add, Get, or Delete is performed, it is encapsulated in a `Lookup(key, command)` wrapper. This triggers a process called \"cleaning,\" where items are rehashed. The procedure involves first cleaning the bucket at the old hash location (`Table[h_old(key)]`), then cleaning the bucket at the new hash location (`Table[h_new(key)]`), and finally executing the original command.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0006",
+          "hashtable_25a2cf57_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0007",
+          "hashtable_25a2cf57_c0006"
+        ]
+      },
+      {
+        "question": "Why is the ideal constant time complexity, O(1), for hash table operations not practically achievable, and what approach is used to manage this limitation?",
+        "answer": "The constant time complexity, O(1), for hash table operations is based on the condition that the hash function does not generate colliding indices for distinct keys. However, constructing such a perfect hash function is practically infeasible. To manage this, implementations rely on case-specific collision resolution techniques to achieve higher performance.",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0008",
+          "hashtable_25a2cf57_c0009"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0008",
+          "hashtable_25a2cf57_c0009"
+        ]
+      },
+      {
+        "question": "Provide a comprehensive list of the programming languages and their specific hash table implementations mentioned.",
+        "answer": "Several programming languages provide hash table functionality. These include JavaScript (using \"objects\" or the Map data structure), C++11 (with `unordered_map`), Go (with its built-in `map` type), Java (with `HashSet`, `HashMap`, `LinkedHashSet`, and `LinkedHashMap`), Python (with its built-in `dict` type), Ruby (with its built-in `Hash` class), Rust (with `HashMap` and `HashSet`), and .NET languages like C# and VB.NET (using `HashSet` and `Dictionary`).",
+        "related_chunk_ids": [
+          "hashtable_25a2cf57_c0013",
+          "hashtable_25a2cf57_c0014"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "hashtable_25a2cf57_c0013",
+          "hashtable_25a2cf57_c0014"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:32.535Z",
+    "content_format": "markdown",
+    "total_chunks": 15,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

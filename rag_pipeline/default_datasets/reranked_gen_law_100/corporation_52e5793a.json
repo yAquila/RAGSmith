@@ -1,0 +1,467 @@
+{
+  "article": {
+    "id": "corporation_52e5793a",
+    "title": "Corporation",
+    "url": "https://en.wikipedia.org/wiki/Corporation",
+    "lang": "en",
+    "created_at": "2025-07-30T12:43:51.944420",
+    "content": "---\nid: corporation_52e5793a\nurl: https://en.wikipedia.org/wiki/Corporation\ntitle: Corporation\nlang: en\ncreated_at: '2025-07-30T12:36:37.442239'\nchecksum: 9da4af14ce10622bbf7f7f39dba3ee7554236b72d27a8fda0c3241cefba52fb6\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4605\n  char_count: 29592\n  num_chunks: 24\n  original_chunks: 33\n  filtered_out: 9\n  num_sections: 0\n---\nA corporation or body corporate is an individual or a group of people, such as an association or company, that has been authorized by the state to act as a single entity (a legal entity recognized by private and public law as \"born out of statute\"; a legal person in a legal context) and recognized as such in law for certain purposes. Early incorporated entities were established by charter (i.e., by an ad hoc act granted by a monarch or passed by a parliament or legislature). Most jurisdictions now allow the creation of new corporations through registration. Corporations come in many different types but are usually divided by the law of the jurisdiction where they are chartered based on two aspects: whether they can issue stock, or whether they are formed to make a profit. Depending on the number of owners, a corporation can be classified as aggregate (the subject of this article) or sole (a legal entity consisting of a single incorporated office occupied by a single natural person). Registered corporations have legal personality recognized by local authorities and their shares are owned by shareholders, whose liability is generally limited to their investment. One of the attractive early advantages business corporations offered to their investors, compared to earlier business entities like sole proprietorships and joint partnerships, was limited liability. Limited liability separates control of a company from ownership and means that a passive shareholder in a corporation will not be personally liable either for contractually agreed obligations of the corporation, or for torts (involuntary harms) committed by the corporation against a third party (acts done by the controllers of the corporation). Where local law distinguishes corporations by their ability to issue stock, corporations allowed to do so are referred to as stock corporations; one type of investment in the corporation is through stock, and owners of stock are referred to as stockholders or shareholders. Corporations not allowed to issue stock are referred to as non-stock corporations; i.e. those who are considered the owners of a non-stock corporation are persons (or other entities) who have obtained membership in the corporation and are referred to as a member of the corporation. Corporations chartered in regions where they are distinguished by whether they are allowed to be for-profit are referred to as for-profit and not-for-profit corporations, respectively. Shareholders do not typically actively manage a corporation; shareholders instead elect or appoint a board of directors to control the corporation in a fiduciary capacity. In most circumstances, a shareholder may also serve as a director or officer of a corporation. Countries with co-determination employ the practice of workers of an enterprise having the right to vote for representatives on the board of directors in a company. == History == The word \"corporation\" derives from corpus, the Latin word for body, or a \"body of people\". By the time of Justinian (reigned 527–565), Roman law recognized a range of corporate entities under the names Universitas, corpus or collegium. Following the passage of the Lex Julia during the reign of Julius Caesar as Consul and Dictator of the Roman Republic (49–44 BC), and their reaffirmation during the reign of Caesar Augustus as Princeps senatus and Imperator of the Roman Army (27 BC–14 AD), collegia required the approval of the Roman Senate or the Emperor in order to be authorized as legal bodies. These included the state itself (the Populus Romanus), municipalities, and such private associations as sponsors of a religious cult, burial clubs, political groups, and guilds of craftsmen or traders. Such bodies commonly had the right to own property and make contracts, to receive gifts and legacies, to sue and be sued, and, in general, to perform legal acts through representatives. Private associations were granted designated privileges and liberties by the emperor. The concept of the corporation was revived in the Middle Ages with the recovery and annotation of Justinian's Corpus Juris Civilis by the glossators and their successors the commentators in the 11th–14th centuries. Particularly important in this respect were the Italian jurists Bartolus de Saxoferrato and Baldus de Ubaldis, the latter of whom connected the corporation to the metaphor of the body politic to describe the state. Early entities which carried on business and were the subjects of legal rights included the collegium of ancient Rome and the sreni of the Maurya Empire in ancient India. In medieval Europe, churches became incorporated, as did local governments, such as the City of London Corporation. The point was that the incorporation would survive longer than the lives of any particular member, existing in perpetuity. The alleged oldest commercial corporation in the world, the Stora Kopparberg mining community in Falun, Sweden, obtained a charter from King Magnus Eriksson in 1347. In medieval times, traders would do business through common law constructs, such as partnerships. Whenever people acted together with a view to profit, the law deemed that a partnership arose. Early guilds and livery companies were also often involved in the regulation of competition between traders. === Mercantilism === Dutch and English chartered companies, such as the Dutch East India Company (also known by its Dutch initials: VOC) and the Hudson's Bay Company, were created to lead the colonial ventures of European nations in the 17th century. Acting under a charter sanctioned by the Dutch government, the Dutch East India Company defeated Portuguese forces and established itself in the Moluccan Islands in order to profit from the European demand for spices. Investors in the VOC were issued paper certificates as proof of share ownership, and were able to trade their shares on the original Amsterdam Stock Exchange. Shareholders were also explicitly granted limited liability in the company's royal charter. In England, the government created corporations under a royal charter or an Act of Parliament with the grant of a monopoly over a specified territory. The best-known example, established in 1600, was the East India Company of London. Queen Elizabeth I granted it the exclusive right to trade with all countries to the east of the Cape of Good Hope. Some corporations at this time would act on the government's behalf, bringing in revenue from its exploits abroad. Subsequently, the company became increasingly integrated with English and later British military and colonial policy, just as most corporations were essentially dependent on the Royal Navy's ability to control trade routes. Labeled by both contemporaries and historians as \"the grandest society of merchants in the universe\", the English East India Company would come to symbolize the dazzlingly rich potential of the corporation, as well as new methods of business that could be both brutal and exploitative. On 31 December 1600, Queen Elizabeth I granted the company a 15-year monopoly on trade to and from the East Indies and Africa. By 1711, shareholders in the East India Company were earning a return on their investment of almost 150 per cent. Subsequent stock offerings demonstrated just how lucrative the company had become. Its first stock offering in 1713–1716 raised £418,000, its second in 1717–1722 raised £1.6 million. A similar chartered company, the South Sea Company, was established in 1711 to trade in the Spanish South American colonies, but met with less success. The South Sea Company's monopoly rights were supposedly backed by the Treaty of Utrecht, signed in 1713 as a settlement following the War of the Spanish Succession, which gave Great Britain an asiento to trade in the region for thirty years. In fact, the Spanish remained hostile and let only one ship a year enter. Unaware of the problems, investors in Britain, enticed by extravagant promises of profit from company promoters bought thousands of shares. By 1717, the South Sea Company was so wealthy (still having done no real business) that it assumed the public debt of the British government. This accelerated the inflation of the share price further, as did the Bubble Act 1720, which (possibly with the motive of protecting the South Sea Company from competition) prohibited the establishment of any companies without a royal charter. The share price rose so rapidly that people began buying shares merely in order to sell them at a higher price, which in turn led to higher share prices. This was the first speculative bubble the country had seen, but by the end of 1720, the bubble had \"burst\", and the share price sank from £1,000 to under £100. As bankruptcies and recriminations ricocheted through government and high society, the mood against corporations and errant directors was bitter. In the late 18th century, Stewart Kyd, the author of the first treatise on corporate law in English, defined a corporation as: a collection of many individuals united into one body, under a special denomination, having perpetual succession under an artificial form, and vested, by the policy of the law, with the capacity of acting, in several respects, as an individual, particularly of taking and granting property, of contracting obligations, and of suing and being sued, of enjoying privileges and immunities in common, and of exercising a variety of political rights, more or less extensive, according to the design of its institution, or the powers conferred upon it, either at the time of its creation or at any subsequent period of its existence. === Development of modern company law === Due to the late 18th century abandonment of mercantilist economic theory and the rise of classical liberalism and laissez-faire economic theory due to a revolution in economics led by Adam Smith and other economists, corporations transitioned from being government or guild affiliated entities to being public and private economic entities free of governmental directions. Smith wrote in his 1776 work The Wealth of Nations that mass corporate activity could not match private entrepreneurship, because people in charge of others' money would not exercise as much care as they would with their own. ==== Deregulation ==== The British Bubble Act 1720's prohibition on establishing companies remained in force until its repeal in 1825. By this point, the Industrial Revolution had gathered pace, pressing for legal change to facilitate business activity. The repeal was the beginning of a gradual lifting on restrictions, though business ventures (such as those chronicled by Charles Dickens in Martin Chuzzlewit) under primitive companies legislation were often scams. Without cohesive regulation, proverbial operations like the \"Anglo-Bengalee Disinterested Loan and Life Assurance Company\" were undercapitalized ventures promising no hope of success except for richly paid promoters. The process of incorporation was possible only through a royal charter or a private act and was limited, owing to Parliament's jealous protection of the privileges and advantages thereby granted. As a result, many businesses came to be operated as unincorporated associations with possibly thousands of members. Any consequent litigation had to be carried out in the joint names of all the members and was almost impossibly cumbersome. Though Parliament would sometimes grant a private act to allow an individual to represent the whole in legal proceedings, this was a narrow and necessarily costly expedient, allowed only to established companies. Then, in 1843, William Gladstone became the chairman of a Parliamentary Committee on Joint Stock Companies, which led to the Joint Stock Companies Act 1844, regarded as the first modern piece of company law. The Act created the Registrar of Joint Stock Companies, empowered to register companies by a two-stage process. The first, provisional, stage cost £5 and did not confer corporate status, which arose after completing the second stage for another £5. For the first time in history, it was possible for ordinary people through a simple registration procedure to incorporate. The advantage of establishing a company as a separate legal person was mainly administrative, as a unified entity under which the rights and duties of all investors and managers could be channeled. ==== Limited liability ==== However, there was still no limited liability and company members could still be held responsible for unlimited losses by the company. The next, crucial development, then, was the Limited Liability Act 1855, passed at the behest of the then Vice President of the Board of Trade, Robert Lowe. This allowed investors to limit their liability in the event of business failure to the amount they invested in the company – shareholders were still liable directly to creditors, but just for the unpaid portion of their shares. (The principle that shareholders are liable to the corporation had been introduced in the Joint Stock Companies Act 1844). The 1855 Act allowed limited liability to companies of more than 25 members (shareholders). Insurance companies were excluded from the act, though it was standard practice for insurance contracts to exclude action against individual members. Limited liability for insurance companies was allowed by the Companies Act 1862. This prompted the English periodical The Economist to write in 1855 that \"never, perhaps, was a change so vehemently and generally demanded, of which the importance was so much overrated.\" The major error of this judgment was recognised by the same magazine more than 70 years later, when it claimed that, \"[t]he economic historian of the future... may be inclined to assign to the nameless inventor of the principle of limited liability, as applied to trade corporations, a place of honour with Watt and Stephenson, and other pioneers of the Industrial Revolution. \" These two features – a simple registration procedure and limited liability – were subsequently codified into the landmark 1856 Joint Stock Companies Act. This was subsequently consolidated with a number of other statutes in the Companies Act 1862, which remained in force for the rest of the century, up to and including the time of the decision in Salomon v A Salomon & Co Ltd. The legislation quickly led to a railway boom, resulting in a surge in the formation of companies. However, in the later nineteenth century, a period of depression set in, causing many of these companies to collapse and become insolvent. Strong academic, legislative, and judicial opinions emerged, opposing the notion that businessmen could escape accountability for their role in the failing businesses. ==== Further developments ==== In 1892, Germany introduced the Gesellschaft mit beschränkter Haftung with a separate legal personality and limited liability even if all the shares of the company were held by only one person. This inspired other countries to introduce corporations of this kind. The last significant development in the history of companies was the 1897 decision of the House of Lords in Salomon v. Salomon & Co., where the House of Lords confirmed the separate legal personality of the company, and that the liabilities of the company were separate and distinct from those of its owners. In the United States, forming a corporation usually required an act of legislation until the late 19th century. Many private firms, such as Carnegie's steel company and Rockefeller's Standard Oil, avoided the corporate model for this reason (as a trust). State governments began to adopt more permissive corporate laws from the early 19th century, although these were all restrictive in design, often with the intention of preventing corporations from gaining too much wealth and power. In 1896, New Jersey was the first state to adopt an \"enabling\" corporate law, with the goal of attracting more business to the state. In 1899, Delaware followed New Jersey's lead by enacting an enabling corporate statute. However, Delaware only emerged as the leading corporate state after the enabling provisions of the 1896 New Jersey corporate law were repealed in 1913. The end of the 19th century saw the emergence of holding companies and corporate mergers creating larger corporations with dispersed shareholders. Countries began enacting antitrust laws to prevent anti-competitive practices and corporations were granted more legal rights and protections. The 20th century witnessed a proliferation of laws allowing for the creation of corporations through registration worldwide. These laws played a significant role in driving economic booms in many countries both before and after World War I. Another major post World War I shift was toward the development of conglomerates, in which large corporations purchased smaller corporations to expand their industrial base. Starting in the 1980s, many countries with large state-owned corporations began moving toward privatization, which involved selling publicly owned (or 'nationalized') services and enterprises to corporations. Deregulation aimed at reducing the regulation of corporate activity, often accompanied privatization as part of a laissez-faire policy. == Ownership and control == A corporation is, at least in theory, owned and controlled by its members. In a joint-stock company, the members are known as shareholders, and each of their shares in the ownership, control, and profits of the corporation is determined by the portion of shares in the company that they own. Thus, a person who owns a quarter of the shares of a joint-stock company owns a quarter of the company, is entitled to a quarter of the profit (or at least a quarter of the profit given to shareholders as dividends) and has a quarter of the votes capable of being cast at general meetings. In another kind of corporation, the legal document which established the corporation or which contains its current rules will determine the requirements for membership in the corporation. What these requirements are depends on the kind of corporation involved. In a worker cooperative, the members are people who work for the cooperative. In a credit union, the members are people who have accounts with the credit union. The day-to-day activities of a corporation are typically controlled by individuals appointed by the members. In some cases, this will be a single individual but more commonly corporations are controlled by a committee or by committees. Broadly speaking, there are two kinds of committee structure. A single committee known as a board of directors is the method favored in most common law countries. Under this model, the board of directors is composed of both executive and non-executive directors, the latter being meant to supervise the former's management of the company. A two-tiered committee structure with a supervisory board and a managing board is common in civil law countries. In countries with co-determination (such as in Germany), workers elect a fixed fraction of the corporation's board. === Formation === Historically, corporations were created by a charter granted by the government. As explained above, such charters were often enacted as private bills. Today, a corporation is formed, or incorporated, by registering with the state, province, or national government and regulated by the laws enacted by that government. Registration is the main prerequisite to the corporation's assumption of limited liability. The law sometimes requires the corporation to designate its principal address, as well as a registered agent (a person or company designated to receive legal service of process). It may also be required to designate an agent or other legal representatives of the corporation. Generally, a corporation files articles of incorporation with the government, laying out the general nature of the corporation, the amount of stock it is authorized to issue, and the names and addresses of directors. Once the articles are approved, the corporation's directors meet to create bylaws that govern the internal functions of the corporation, such as meeting procedures and officer positions. In theory, a corporation cannot own its own stock. An exception is treasury stock, where the company essentially buys back stock from its shareholders, which reduces its outstanding shares. This essentially becomes the equivalent of unissued capital, where it is not classified as an asset on the balance sheet (passive capital). Under the internal affairs doctrine, the law of the jurisdiction in which a corporation is incorporated will govern its internal activities—that is, conflicts between shareholders and managers such as the board of directors and corporate officers. If a corporation operates outside its home state, it is usually required to register with other governments as a foreign corporation and must formally appoint a registered agent to accept service of process within such other jurisdictions. A foreign corporation is almost always subject to the laws of its host state pertaining to external affairs such as employment, crimes, contracts, civil actions, and the like. === Naming === Corporations generally have a distinct name. Historically, some corporations were named after the members of their boards of directors: for example, the \"President and Fellows of Harvard College\" is the name of one of the two governing boards of Harvard University, but it is also the exact name under which Harvard was legally incorporated. Nowadays, corporations in most jurisdictions have a distinct name that does not need to make reference to the members of their boards. In Canada, this possibility is taken to its logical extreme: many smaller Canadian corporations have no names at all, merely numbers based on a registration number (for example, \"12345678 Ontario Limited\"), which is assigned by the provincial or territorial government where the corporation incorporates. In most countries, corporate names include a term or an abbreviation that denotes the corporate status of the entity (for example, \"Incorporated\" or \"Inc.\" in the United States) or the limited liability of its members (for example, \"Limited\", \"Ltd.\", or \"LLC\"). These terms vary by jurisdiction and language. In some jurisdictions, they are mandatory, and in others, such as California, they are not. Their use puts everybody on constructive notice that they are dealing with an entity whose liability is limited: one can only collect from whatever assets the entity still controls when one obtains a judgment against it. Corporate names are supposed to be unique to the jurisdiction in which the corporation is registered. Governments will not allow another corporation or any other kind of legal entity to register a name that is too similar to the name of an existing corporation. However, since \"different states may register entities with the same names, a corporate name is a unique identifier only when combined with the name of the state of incorporation\". This explains why lawyers in legal papers often expressly refer to a corporation's state of incorporation after the first mention of its name. Some jurisdictions do not allow the use of the word \"company\" alone to denote corporate status, since the word \"company\" may refer to a partnership or some other form of collective ownership (in the United States it can be used by a sole proprietorship but this is not generally the case elsewhere). == Personhood == Despite not being human beings, corporations have been ruled legal persons in a few countries, and have many of the same rights as natural persons do. For example, a corporation can own property, and can sue or be sued for as long as it exists. Corporations can exercise human rights against real individuals and the state, and they can themselves be responsible for human rights violations. Corporations can be \"dissolved\" either by statutory operation, the order of the court, or voluntary action on the part of shareholders. Insolvency may result in a form of corporate failure, when creditors force the liquidation and dissolution of the corporation under court order, but it most often results in a restructuring of corporate holdings. Corporations can even be convicted of special criminal offenses in the UK, such as fraud and corporate manslaughter. However, corporations are not considered living entities in the way that humans are. Legal scholars and others, such as Joel Bakan, have observed that a business corporation created as a \"legal person\" has a psychopathic personality because it is required to elevate its own interests above those of others even when this inflicts major risks and grave harms on the public or on other third-parties. Such critics note that the legal mandate of the corporation to focus exclusively on corporate profits and self-interest often victimizes employees, customers, the public at large, and/or the natural resources. The political theorist David Runciman notes that corporate personhood forms a fundamental part of the 21st century conception state, and believes the idea of the corporation as legal persons can help to clarify the role of citizens as political stakeholders, and to break down the sharp conceptual dichotomy between the state and the people or the individual, a distinction that, on his account, is \"increasingly unable to meet the demands placed on the state in the modern world\". == See also == == Notes == == References == == Further reading == Barnet, Richard; Muller, Ronald E. (1974). Global Reach: The Power of the Multinational Corporation. New York: Simon & Schuster. Bakan, Joel. The New Corporation: How \"Good\" Corporations Are Bad for Democracy. (2020) Blackstone, W. Commentaries on the Laws of England (1765) 455–473 Blumberg, Phillip I., The Multinational Challenge to Corporation Law: The Search for a New Corporate Personality, (1993) Blumberg, PI, The Multinational Challenge to Corporation Law (1993) Bromberg, Alan R. Crane and Bromberg on Partnership. 1968. Brown, Bruce. The History of the Corporation (2003) Cadman, John William. The Corporation in New Jersey: Business and Politics (1949) Conard, Alfred F. Corporations in Perspective. 1976. Cooke, C.A., Corporation, Trust and Company: A Legal History, (1950) Davies, PL, and LCB Gower, Principles of Modern Company Law (6th ed., Sweet and Maxwell, 1997), chapters 2–4 Davis, John P. Corporations Archived 2011-06-11 at the Wayback Machine (1904) Davis, Joseph S. Essays in the Earlier History of American Corporations Archived 2011-06-10 at the Wayback Machine (1917) Dignam, Alan and John Lowry (2020), Company Law, Oxford University Press ISBN 978-0-19-928936-3 Dodd, Edwin Merrick. American Business Corporations Until 1860, with Special Reference to Massachusetts (1954) DuBois, A. B. The English Business Company after the Bubble Act (1938) Formoy, RR, The Historical Foundations of Company Law (Sweet and Maxwell 1923) 21 Freedman, Charles. Joint-stock Enterprise in France: From Privileged Company to Modern Corporation (1979) Frentrop, P, A History of Corporate Governance 1602–2002 (Brussels et al., 2003) Freund, Ernst. The Legal Nature of the Corporation (1897), MCMaster.ca Hallis, Frederick. Corporate Personality: A Study in Jurisprudence (1930) Hessen, Robert. In Defense of the Corporation. Hoover Institute. 1979. Hunt, Bishop. The Development of the Business Corporation in England (1936) Klein and Coffee. Business Organization and Finance: Legal and Economic Principles. Foundation. 2002. Kocaoglu, Kagan (Cahn Kojaolu) A Comparative Bibliography: Regulatory Competition on Corporate Law Kyd, S, A Treatise on the Law of Corporations (1793–1794) Mahoney, PG, \"Contract or Concession? An Essay on the History of Corporate Law\" (2000) 34 Ga. Law Review 873 Majumdar, Ramesh Chandra. Corporate Life in Ancient India Archived 2011-07-06 at the Wayback Machine, (1920) Means, Robert Charles. Underdevelopment and the Development of Law: Corporations and Corporation Law in Nineteenth-century Colombia, (1980) Micklethwait, John and Wooldridge, Adrian. The Company: A Short History of a Revolutionary Idea. New York: Modern Library. 2003. Provost, Claire; Kennard, Matt (2023). Silent Coup: How Corporations Overthrew Democracy. Bloomsbury Academic. ISBN 978-1350269989. Owen, Thomas. The Corporation Under Russian Law: A Study in Tsarist Economic Policy (1991) Rungta, Radhe Shyam. The Rise of the Business Corporation in India, 1851–1900 (1970) Scott, W. R. Constitution and Finance of English, Scottish and Irish Joint-Stock Companies to 1720 Archived 2011-07-06 at the Wayback Machine (1912) Sobel, Robert. The Age of Giant Corporations: A Microeconomic History of American Business. (1984) Tooze, Adam, \"Democracy and Its Discontents\", The New York Review of Books, vol. LXVI, no. 10 (6 June 2019), pp. 52–53, 56–57. \"Democracy has no clear answer for the mindless operation of bureaucratic and technological power. We may indeed be witnessing its extension in the form of artificial intelligence and robotics. Likewise, after decades of dire warning, the environmental problem remains fundamentally unaddressed.... Bureaucratic overreach and environmental catastrophe are precisely the kinds of slow-moving existential challenges that democracies deal with very badly.... Finally, there is the threat du jour: corporations and the technologies they promote.\" (pp. 56–57.) == External links == US Corporate Law at Wikibooks an Audio from a talk about the history of corporations and the English Law by Barrister Daniel Bennett"
+  },
+  "chunks": [
+    {
+      "id": "corporation_52e5793a_c0000",
+      "article_id": "corporation_52e5793a",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 783,
+      "content": "A corporation or body corporate is an individual or a group of people, such as an association or company, that has been authorized by the state to act as a single entity (a legal entity recognized by private and public law as \"born out of statute\"; a legal person in a legal context) and recognized as such in law for certain purposes. Early incorporated entities were established by charter (i.e., by an ad hoc act granted by a monarch or passed by a parliament or legislature). Most jurisdictions now allow the creation of new corporations through registration. Corporations come in many different types but are usually divided by the law of the jurisdiction where they are chartered based on two aspects: whether they can issue stock, or whether they are formed to make a profit.",
+      "char_count": 782,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0001",
+      "article_id": "corporation_52e5793a",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 783,
+      "end_char": 1725,
+      "content": "Depending on the number of owners, a corporation can be classified as aggregate (the subject of this article) or sole (a legal entity consisting of a single incorporated office occupied by a single natural person). Registered corporations have legal personality recognized by local authorities and their shares are owned by shareholders, whose liability is generally limited to their investment. One of the attractive early advantages business corporations offered to their investors, compared to earlier business entities like sole proprietorships and joint partnerships, was limited liability. Limited liability separates control of a company from ownership and means that a passive shareholder in a corporation will not be personally liable either for contractually agreed obligations of the corporation, or for torts (involuntary harms) committed by the corporation against a third party (acts done by the controllers of the corporation).",
+      "char_count": 942,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0002",
+      "article_id": "corporation_52e5793a",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1726,
+      "end_char": 2639,
+      "content": "Where local law distinguishes corporations by their ability to issue stock, corporations allowed to do so are referred to as stock corporations; one type of investment in the corporation is through stock, and owners of stock are referred to as stockholders or shareholders. Corporations not allowed to issue stock are referred to as non-stock corporations; i.e. those who are considered the owners of a non-stock corporation are persons (or other entities) who have obtained membership in the corporation and are referred to as a member of the corporation. Corporations chartered in regions where they are distinguished by whether they are allowed to be for-profit are referred to as for-profit and not-for-profit corporations, respectively. Shareholders do not typically actively manage a corporation; shareholders instead elect or appoint a board of directors to control the corporation in a fiduciary capacity.",
+      "char_count": 913,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0003",
+      "article_id": "corporation_52e5793a",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 2640,
+      "end_char": 2899,
+      "content": "In most circumstances, a shareholder may also serve as a director or officer of a corporation. Countries with co-determination employ the practice of workers of an enterprise having the right to vote for representatives on the board of directors in a company.",
+      "char_count": 259,
+      "token_estimate": 64,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0004",
+      "article_id": "corporation_52e5793a",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2913,
+      "end_char": 3732,
+      "content": "== History == The word \"corporation\" derives from corpus, the Latin word for body, or a \"body of people\". By the time of Justinian (reigned 527–565), Roman law recognized a range of corporate entities under the names Universitas, corpus or collegium. Following the passage of the Lex Julia during the reign of Julius Caesar as Consul and Dictator of the Roman Republic (49–44 BC), and their reaffirmation during the reign of Caesar Augustus as Princeps senatus and Imperator of the Roman Army (27 BC–14 AD), collegia required the approval of the Roman Senate or the Emperor in order to be authorized as legal bodies. These included the state itself (the Populus Romanus), municipalities, and such private associations as sponsors of a religious cult, burial clubs, political groups, and guilds of craftsmen or traders.",
+      "char_count": 818,
+      "token_estimate": 204,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0005",
+      "article_id": "corporation_52e5793a",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3732,
+      "end_char": 4720,
+      "content": "Such bodies commonly had the right to own property and make contracts, to receive gifts and legacies, to sue and be sued, and, in general, to perform legal acts through representatives. Private associations were granted designated privileges and liberties by the emperor. The concept of the corporation was revived in the Middle Ages with the recovery and annotation of Justinian's Corpus Juris Civilis by the glossators and their successors the commentators in the 11th–14th centuries. Particularly important in this respect were the Italian jurists Bartolus de Saxoferrato and Baldus de Ubaldis, the latter of whom connected the corporation to the metaphor of the body politic to describe the state. Early entities which carried on business and were the subjects of legal rights included the collegium of ancient Rome and the sreni of the Maurya Empire in ancient India. In medieval Europe, churches became incorporated, as did local governments, such as the City of London Corporation.",
+      "char_count": 988,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0006",
+      "article_id": "corporation_52e5793a",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 4721,
+      "end_char": 5311,
+      "content": "The point was that the incorporation would survive longer than the lives of any particular member, existing in perpetuity. The alleged oldest commercial corporation in the world, the Stora Kopparberg mining community in Falun, Sweden, obtained a charter from King Magnus Eriksson in 1347. In medieval times, traders would do business through common law constructs, such as partnerships. Whenever people acted together with a view to profit, the law deemed that a partnership arose. Early guilds and livery companies were also often involved in the regulation of competition between traders.",
+      "char_count": 590,
+      "token_estimate": 147,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0007",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Mercantilism ==",
+      "heading_path": "== = Mercantilism ==",
+      "start_char": 5319,
+      "end_char": 6274,
+      "content": "== = Mercantilism === Dutch and English chartered companies, such as the Dutch East India Company (also known by its Dutch initials: VOC) and the Hudson's Bay Company, were created to lead the colonial ventures of European nations in the 17th century. Acting under a charter sanctioned by the Dutch government, the Dutch East India Company defeated Portuguese forces and established itself in the Moluccan Islands in order to profit from the European demand for spices. Investors in the VOC were issued paper certificates as proof of share ownership, and were able to trade their shares on the original Amsterdam Stock Exchange. Shareholders were also explicitly granted limited liability in the company's royal charter. In England, the government created corporations under a royal charter or an Act of Parliament with the grant of a monopoly over a specified territory. The best-known example, established in 1600, was the East India Company of London.",
+      "char_count": 954,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0008",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Mercantilism ==",
+      "heading_path": "== = Mercantilism ==",
+      "start_char": 6274,
+      "end_char": 7254,
+      "content": "Queen Elizabeth I granted it the exclusive right to trade with all countries to the east of the Cape of Good Hope. Some corporations at this time would act on the government's behalf, bringing in revenue from its exploits abroad. Subsequently, the company became increasingly integrated with English and later British military and colonial policy, just as most corporations were essentially dependent on the Royal Navy's ability to control trade routes. Labeled by both contemporaries and historians as \"the grandest society of merchants in the universe\", the English East India Company would come to symbolize the dazzlingly rich potential of the corporation, as well as new methods of business that could be both brutal and exploitative. On 31 December 1600, Queen Elizabeth I granted the company a 15-year monopoly on trade to and from the East Indies and Africa. By 1711, shareholders in the East India Company were earning a return on their investment of almost 150 per cent.",
+      "char_count": 980,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0009",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Mercantilism ==",
+      "heading_path": "== = Mercantilism ==",
+      "start_char": 7255,
+      "end_char": 8187,
+      "content": "Subsequent stock offerings demonstrated just how lucrative the company had become. Its first stock offering in 1713–1716 raised £418,000, its second in 1717–1722 raised £1.6 million. A similar chartered company, the South Sea Company, was established in 1711 to trade in the Spanish South American colonies, but met with less success. The South Sea Company's monopoly rights were supposedly backed by the Treaty of Utrecht, signed in 1713 as a settlement following the War of the Spanish Succession, which gave Great Britain an asiento to trade in the region for thirty years. In fact, the Spanish remained hostile and let only one ship a year enter. Unaware of the problems, investors in Britain, enticed by extravagant promises of profit from company promoters bought thousands of shares. By 1717, the South Sea Company was so wealthy (still having done no real business) that it assumed the public debt of the British government.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0010",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Mercantilism ==",
+      "heading_path": "== = Mercantilism ==",
+      "start_char": 8188,
+      "end_char": 8891,
+      "content": "This accelerated the inflation of the share price further, as did the Bubble Act 1720, which (possibly with the motive of protecting the South Sea Company from competition) prohibited the establishment of any companies without a royal charter. The share price rose so rapidly that people began buying shares merely in order to sell them at a higher price, which in turn led to higher share prices. This was the first speculative bubble the country had seen, but by the end of 1720, the bubble had \"burst\", and the share price sank from £1,000 to under £100. As bankruptcies and recriminations ricocheted through government and high society, the mood against corporations and errant directors was bitter.",
+      "char_count": 703,
+      "token_estimate": 175,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0011",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Mercantilism ==",
+      "heading_path": "== = Mercantilism ==",
+      "start_char": 8892,
+      "end_char": 9646,
+      "content": "In the late 18th century, Stewart Kyd, the author of the first treatise on corporate law in English, defined a corporation as: a collection of many individuals united into one body, under a special denomination, having perpetual succession under an artificial form, and vested, by the policy of the law, with the capacity of acting, in several respects, as an individual, particularly of taking and granting property, of contracting obligations, and of suing and being sued, of enjoying privileges and immunities in common, and of exercising a variety of political rights, more or less extensive, according to the design of its institution, or the powers conferred upon it, either at the time of its creation or at any subsequent period of its existence.",
+      "char_count": 754,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0012",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Development of modern company law ==",
+      "heading_path": "== = Development of modern company law ==",
+      "start_char": 9668,
+      "end_char": 10269,
+      "content": "== = Development of modern company law === Due to the late 18th century abandonment of mercantilist economic theory and the rise of classical liberalism and laissez-faire economic theory due to a revolution in economics led by Adam Smith and other economists, corporations transitioned from being government or guild affiliated entities to being public and private economic entities free of governmental directions. Smith wrote in his 1776 work The Wealth of Nations that mass corporate activity could not match private entrepreneurship, because people in charge of others' money would not exercise as much care as they would with their own.",
+      "char_count": 641,
+      "token_estimate": 160,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0013",
+      "article_id": "corporation_52e5793a",
+      "section": "== Ownership and control ==",
+      "heading_path": "== Ownership and control ==",
+      "start_char": 10296,
+      "end_char": 11245,
+      "content": "== Ownership and control == A corporation is, at least in theory, owned and controlled by its members. In a joint-stock company, the members are known as shareholders, and each of their shares in the ownership, control, and profits of the corporation is determined by the portion of shares in the company that they own. Thus, a person who owns a quarter of the shares of a joint-stock company owns a quarter of the company, is entitled to a quarter of the profit (or at least a quarter of the profit given to shareholders as dividends) and has a quarter of the votes capable of being cast at general meetings. In another kind of corporation, the legal document which established the corporation or which contains its current rules will determine the requirements for membership in the corporation. What these requirements are depends on the kind of corporation involved. In a worker cooperative, the members are people who work for the cooperative.",
+      "char_count": 948,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0014",
+      "article_id": "corporation_52e5793a",
+      "section": "== Ownership and control ==",
+      "heading_path": "== Ownership and control ==",
+      "start_char": 11245,
+      "end_char": 12131,
+      "content": "In a credit union, the members are people who have accounts with the credit union. The day-to-day activities of a corporation are typically controlled by individuals appointed by the members. In some cases, this will be a single individual but more commonly corporations are controlled by a committee or by committees. Broadly speaking, there are two kinds of committee structure. A single committee known as a board of directors is the method favored in most common law countries. Under this model, the board of directors is composed of both executive and non-executive directors, the latter being meant to supervise the former's management of the company. A two-tiered committee structure with a supervisory board and a managing board is common in civil law countries. In countries with co-determination (such as in Germany), workers elect a fixed fraction of the corporation's board.",
+      "char_count": 886,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0015",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Formation ==",
+      "heading_path": "== = Formation ==",
+      "start_char": 12122,
+      "end_char": 13044,
+      "content": "== = Formation === Historically, corporations were created by a charter granted by the government. As explained above, such charters were often enacted as private bills. Today, a corporation is formed, or incorporated, by registering with the state, province, or national government and regulated by the laws enacted by that government. Registration is the main prerequisite to the corporation's assumption of limited liability. The law sometimes requires the corporation to designate its principal address, as well as a registered agent (a person or company designated to receive legal service of process). It may also be required to designate an agent or other legal representatives of the corporation. Generally, a corporation files articles of incorporation with the government, laying out the general nature of the corporation, the amount of stock it is authorized to issue, and the names and addresses of directors.",
+      "char_count": 921,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0016",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Formation ==",
+      "heading_path": "== = Formation ==",
+      "start_char": 13044,
+      "end_char": 13808,
+      "content": "Once the articles are approved, the corporation's directors meet to create bylaws that govern the internal functions of the corporation, such as meeting procedures and officer positions. In theory, a corporation cannot own its own stock. An exception is treasury stock, where the company essentially buys back stock from its shareholders, which reduces its outstanding shares. This essentially becomes the equivalent of unissued capital, where it is not classified as an asset on the balance sheet (passive capital). Under the internal affairs doctrine, the law of the jurisdiction in which a corporation is incorporated will govern its internal activities—that is, conflicts between shareholders and managers such as the board of directors and corporate officers.",
+      "char_count": 764,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0017",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Formation ==",
+      "heading_path": "== = Formation ==",
+      "start_char": 13809,
+      "end_char": 14224,
+      "content": "If a corporation operates outside its home state, it is usually required to register with other governments as a foreign corporation and must formally appoint a registered agent to accept service of process within such other jurisdictions. A foreign corporation is almost always subject to the laws of its host state pertaining to external affairs such as employment, crimes, contracts, civil actions, and the like.",
+      "char_count": 415,
+      "token_estimate": 103,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0018",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Naming ==",
+      "heading_path": "== = Naming ==",
+      "start_char": 14222,
+      "end_char": 15020,
+      "content": "== = Naming === Corporations generally have a distinct name. Historically, some corporations were named after the members of their boards of directors: for example, the \"President and Fellows of Harvard College\" is the name of one of the two governing boards of Harvard University, but it is also the exact name under which Harvard was legally incorporated. Nowadays, corporations in most jurisdictions have a distinct name that does not need to make reference to the members of their boards. In Canada, this possibility is taken to its logical extreme: many smaller Canadian corporations have no names at all, merely numbers based on a registration number (for example, \"12345678 Ontario Limited\"), which is assigned by the provincial or territorial government where the corporation incorporates.",
+      "char_count": 797,
+      "token_estimate": 199,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0019",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Naming ==",
+      "heading_path": "== = Naming ==",
+      "start_char": 15020,
+      "end_char": 15903,
+      "content": "In most countries, corporate names include a term or an abbreviation that denotes the corporate status of the entity (for example, \"Incorporated\" or \"Inc.\" in the United States) or the limited liability of its members (for example, \"Limited\", \"Ltd.\", or \"LLC\"). These terms vary by jurisdiction and language. In some jurisdictions, they are mandatory, and in others, such as California, they are not. Their use puts everybody on constructive notice that they are dealing with an entity whose liability is limited: one can only collect from whatever assets the entity still controls when one obtains a judgment against it. Corporate names are supposed to be unique to the jurisdiction in which the corporation is registered. Governments will not allow another corporation or any other kind of legal entity to register a name that is too similar to the name of an existing corporation.",
+      "char_count": 883,
+      "token_estimate": 220,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0020",
+      "article_id": "corporation_52e5793a",
+      "section": "== = Naming ==",
+      "heading_path": "== = Naming ==",
+      "start_char": 15904,
+      "end_char": 16527,
+      "content": "However, since \"different states may register entities with the same names, a corporate name is a unique identifier only when combined with the name of the state of incorporation\". This explains why lawyers in legal papers often expressly refer to a corporation's state of incorporation after the first mention of its name. Some jurisdictions do not allow the use of the word \"company\" alone to denote corporate status, since the word \"company\" may refer to a partnership or some other form of collective ownership (in the United States it can be used by a sole proprietorship but this is not generally the case elsewhere).",
+      "char_count": 623,
+      "token_estimate": 155,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0021",
+      "article_id": "corporation_52e5793a",
+      "section": "== Personhood ==",
+      "heading_path": "== Personhood ==",
+      "start_char": 16530,
+      "end_char": 17490,
+      "content": "== Personhood == Despite not being human beings, corporations have been ruled legal persons in a few countries, and have many of the same rights as natural persons do. For example, a corporation can own property, and can sue or be sued for as long as it exists. Corporations can exercise human rights against real individuals and the state, and they can themselves be responsible for human rights violations. Corporations can be \"dissolved\" either by statutory operation, the order of the court, or voluntary action on the part of shareholders. Insolvency may result in a form of corporate failure, when creditors force the liquidation and dissolution of the corporation under court order, but it most often results in a restructuring of corporate holdings. Corporations can even be convicted of special criminal offenses in the UK, such as fraud and corporate manslaughter. However, corporations are not considered living entities in the way that humans are.",
+      "char_count": 959,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0022",
+      "article_id": "corporation_52e5793a",
+      "section": "== Personhood ==",
+      "heading_path": "== Personhood ==",
+      "start_char": 17490,
+      "end_char": 18014,
+      "content": "Legal scholars and others, such as Joel Bakan, have observed that a business corporation created as a \"legal person\" has a psychopathic personality because it is required to elevate its own interests above those of others even when this inflicts major risks and grave harms on the public or on other third-parties. Such critics note that the legal mandate of the corporation to focus exclusively on corporate profits and self-interest often victimizes employees, customers, the public at large, and/or the natural resources.",
+      "char_count": 524,
+      "token_estimate": 131,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "corporation_52e5793a_c0023",
+      "article_id": "corporation_52e5793a",
+      "section": "== Personhood ==",
+      "heading_path": "== Personhood ==",
+      "start_char": 18015,
+      "end_char": 18496,
+      "content": "The political theorist David Runciman notes that corporate personhood forms a fundamental part of the 21st century conception state, and believes the idea of the corporation as legal persons can help to clarify the role of citizens as political stakeholders, and to break down the sharp conceptual dichotomy between the state and the people or the individual, a distinction that, on his account, is \"increasingly unable to meet the demands placed on the state in the modern world\".",
+      "char_count": 481,
+      "token_estimate": 120,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Which two Italian jurists were particularly important in reviving the concept of the corporation during the Middle Ages?",
+        "answer": "The two Italian jurists who were particularly important in the revival of the corporation concept were Bartolus de Saxoferrato and Baldus de Ubaldis.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0005"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0005"
+        ]
+      },
+      {
+        "question": "On what date did Queen Elizabeth I grant the East India Company a 15-year monopoly on trade with the East Indies and Africa?",
+        "answer": "Queen Elizabeth I granted the company a 15-year monopoly on trade to and from the East Indies and Africa on December 31, 1600.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0008"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0008"
+        ]
+      },
+      {
+        "question": "In the UK, what are some specific criminal offenses for which a corporation can be convicted?",
+        "answer": "Corporations can be convicted of special criminal offenses in the UK, such as fraud and corporate manslaughter.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0021"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0021"
+        ]
+      },
+      {
+        "question": "What is the relationship between ownership, control, and liability in a typical stock corporation?",
+        "answer": "In a stock corporation, ownership is held by shareholders who own stock, but they do not typically manage the corporation directly. Instead, they elect a board of directors to control the company. This separation of ownership and control provides the key advantage of limited liability, which means a shareholder's personal liability is generally limited to their investment and they are not personally responsible for the corporation's debts or torts.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0000",
+          "corporation_52e5793a_c0001",
+          "corporation_52e5793a_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0001",
+          "corporation_52e5793a_c0002",
+          "corporation_52e5793a_c0000"
+        ]
+      },
+      {
+        "question": "How does the historical origin of the word \"corporation\" relate to the modern practice of co-determination?",
+        "answer": "The word \"corporation\" is derived from the Latin word \"corpus,\" which means \"body\" or a \"body of people.\" This concept is reflected in ancient Roman entities like \"collegia,\" which were associations of people such as guilds or political groups. The modern practice of co-determination, where workers can vote for representatives on a company's board of directors, echoes this original idea by formally including a key part of the enterprise's \"body of people\" in its governance.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0003",
+          "corporation_52e5793a_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0004",
+          "corporation_52e5793a_c0003"
+        ]
+      },
+      {
+        "question": "How did the purpose and structure of corporations in the 17th-century mercantilist period differ from earlier medieval corporations?",
+        "answer": "While early medieval corporations, like the Stora Kopparberg mining community chartered in 1347, were primarily characterized by their perpetuity, 17th-century mercantilist corporations had a more complex purpose and structure integrated with the state. Companies such as the Dutch and English East India Companies were created by government charter to lead colonial ventures and were granted trade monopolies. Structurally, they introduced financial innovations like tradable shares and limited liability for shareholders. They also became deeply intertwined with national military and colonial policy, acting on the government's behalf to generate revenue from overseas.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0006",
+          "corporation_52e5793a_c0007",
+          "corporation_52e5793a_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0007",
+          "corporation_52e5793a_c0006",
+          "corporation_52e5793a_c0008"
+        ]
+      },
+      {
+        "question": "How is the ownership of a stock corporation typically separated from its control, and what is the primary legal advantage this offers to its owners?",
+        "answer": "In a stock corporation, ownership is held by shareholders, but they do not typically manage the corporation directly. Instead, they elect a board of directors to control the company. The primary legal advantage this separation offers to shareholders is limited liability, which means they are not personally responsible for the corporation's contractual obligations or for torts committed by the corporation.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0001",
+          "corporation_52e5793a_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0001",
+          "corporation_52e5793a_c0002"
+        ]
+      },
+      {
+        "question": "Trace the development of corporate entities from ancient Rome through the Middle Ages, including their legal status and key characteristics.",
+        "answer": "The concept of a corporation originates from the Latin word \"corpus,\" meaning body. In ancient Rome, entities like the \"collegium\" required approval from the Senate or Emperor to be recognized as legal bodies. These entities had the right to own property, make contracts, and sue or be sued. The Roman concept was revived in the Middle Ages (11th-14th centuries) through the study of Justinian's law by Italian jurists. In this period, churches and local governments became incorporated, with a key feature being perpetuity—the ability to exist beyond the lives of individual members. An early commercial example is the Stora Kopparberg mining community, which received a charter in 1347.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0004",
+          "corporation_52e5793a_c0005",
+          "corporation_52e5793a_c0006"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0005",
+          "corporation_52e5793a_c0004",
+          "corporation_52e5793a_c0006"
+        ]
+      },
+      {
+        "question": "Compare the business success and ultimate financial outcomes of the English East India Company and the South Sea Company in the early 18th century.",
+        "answer": "The English East India Company was highly successful, earning the title \"the grandest society of merchants in the universe.\" By 1711, its shareholders were receiving returns of almost 150%, and its stock offerings in the following years raised millions of pounds. In contrast, the South Sea Company, established in 1711, had little success in its actual trading operations with Spanish South American colonies due to Spanish hostility. Despite doing no real business, its value soared due to a speculative bubble, fueled by extravagant promises and the Bubble Act of 1720. This bubble burst by the end of 1720, causing its share price to collapse from £1,000 to under £100, leading to bankruptcies and a bitter public mood against corporations.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0008",
+          "corporation_52e5793a_c0009",
+          "corporation_52e5793a_c0010"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0008",
+          "corporation_52e5793a_c0009",
+          "corporation_52e5793a_c0010"
+        ]
+      },
+      {
+        "question": "How do the members of a corporation, such as shareholders or workers, typically exercise control over its day-to-day activities?",
+        "answer": "The members of a corporation, which can include shareholders in a joint-stock company or workers in a worker cooperative, exercise control over daily activities by appointing individuals to manage them. This is typically done through a committee structure, such as a single board of directors in common law countries or a two-tiered system with a supervisory and managing board in civil law countries.",
+        "related_chunk_ids": [
+          "corporation_52e5793a_c0013",
+          "corporation_52e5793a_c0014"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "corporation_52e5793a_c0014",
+          "corporation_52e5793a_c0013"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T13:32:47.804Z",
+    "content_format": "markdown",
+    "total_chunks": 24,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

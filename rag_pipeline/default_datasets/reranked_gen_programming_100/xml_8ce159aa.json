@@ -1,0 +1,205 @@
+{
+  "article": {
+    "id": "xml_8ce159aa",
+    "title": "XML",
+    "url": "https://en.wikipedia.org/wiki/XML",
+    "lang": "en",
+    "created_at": "2025-07-30T10:33:16.159161",
+    "content": "---\nid: xml_8ce159aa\nurl: https://en.wikipedia.org/wiki/XML\ntitle: XML\nlang: en\ncreated_at: '2025-07-30T10:30:58.470023'\nchecksum: 8c4741866b3be147e302ea5876c1329e9d4ea321d6f62c0c93a4aae212f46782\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 974\n  char_count: 6109\n  num_chunks: 7\n  original_chunks: 7\n  filtered_out: 0\n  num_sections: 0\n---\nExtensible Markup Language (XML) is a markup language and file format for storing, transmitting, and reconstructing data. It defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The World Wide Web Consortium's XML 1.0 Specification of 1998 and several other related specifications—all of them free open standards—define XML. The design goals of XML emphasize simplicity, generality, and usability across the Internet. It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures, such as those used in web services. Several schema systems exist to aid in the definition of XML-based languages, while programmers have developed many application programming interfaces (APIs) to aid the processing of XML data. == Overview == The main purpose of XML is serialization, i.e. storing, transmitting, and reconstructing arbitrary data. For two disparate systems to exchange information, they need to agree upon a file format. XML standardizes this process. It is therefore analogous to a lingua franca for representing information. As a markup language, XML labels, categorizes, and structurally organizes information. XML tags represent the data structure and contain metadata. What is within the tags is data, encoded in the way the XML standard specifies. An additional XML schema (XSD) defines the necessary metadata for interpreting and validating XML. (This is also referred to as the canonical schema.) An XML document that adheres to basic XML rules is \"well-formed\"; one that adheres to its schema is \"valid\". IETF RFC 7303 (which supersedes the older RFC 3023), provides rules for the construction of media types for use in XML message. It defines three media types: application/xml (text/xml is an alias), application/xml-external-parsed-entity (text/xml-external-parsed-entity is an alias) and application/xml-dtd. They are used for transmitting raw XML files without exposing their internal semantics. RFC 7303 further recommends that XML-based languages be given media types ending in +xml, for example, image/svg+xml for SVG. Further guidelines for the use of XML in a networked context appear in RFC 3470, also known as IETF BCP 70, a document covering many aspects of designing and deploying an XML-based language. == Applications == XML has come into common use for the interchange of data over the Internet. Hundreds of document formats using XML syntax have been developed, including RSS, Atom, Office Open XML, OpenDocument, SVG, COLLADA, and XHTML. XML also provides the base language for communication protocols such as SOAP and XMPP. It is one of the message exchange formats used in the Asynchronous JavaScript and XML (AJAX) programming technique. Many industry data standards, such as Health Level 7, OpenTravel Alliance, FpML, MISMO, and the National Information Exchange Model are based on XML and the rich features of the XML schema specification. In publishing, Darwin Information Typing Architecture is an XML industry data standard. XML is used extensively to underpin various publishing formats. One of the applications of XML in science is the representation of operational meteorology information based on IWXXM standards. == Key terminology == The material in this section is based on the XML Specification. This is not an exhaustive list of all the constructs that appear in XML; it provides an introduction to the key constructs most often encountered in day-to-day use. Character An XML document is a string of characters. Every legal Unicode character (except Null) may appear in an (1.1) XML document (while some are discouraged). Processor and application The processor analyzes the markup and passes structured information to an application. The specification places requirements on what an XML processor must do and not do, but the application is outside its scope. The processor (as the specification calls it) is often referred to colloquially as an XML parser. Markup and content The characters making up an XML document are divided into markup and content, which may be distinguished by the application of simple syntactic rules. Generally, strings that constitute markup either begin with the character < and end with a >, or they begin with the character & and end with a ;. Strings of characters that are not markup are content. However, in a CDATA section, the delimiters are classified as markup, while the text between them is classified as content. In addition, whitespace before and after the outermost element is classified as markup. Tag A tag is a markup construct that begins with < and ends with >. There are three types of tag: start-tag, such as ; end-tag, such as ; empty-element tag, such as . Element An element is a logical document component that either begins with a start-tag and ends with a matching end-tag or consists only of an empty-element tag. The characters between the start-tag and end-tag, if any, are the element's content, and may contain markup, including other elements, which are called child elements. An example is Hello, world! . Another is . Attribute An attribute is a markup construct consisting of a name–value pair that exists within a start-tag or empty-element tag. An example is , where the names of the attributes are \"src\" and \"alt\", and their values are \"madonna.jpg\" and \"Madonna\" respectively. Another example is Connect A to B. , where the name of the attribute is \"number\" and its value is \"3\". An XML attribute can only have a single value and each attribute can appear at most once on each element. In the common situation where a list of multiple values is desired, this must be done by encoding the list into a well-formed XML attribute with some format beyond what XML defines itself. Usually this is either a comma or semi-colon delimited list or, if the individual values are known not to contain spaces, a space-delimited list can be used. An example with space as a delimiter is\n\nWelcome!"
+  },
+  "chunks": [
+    {
+      "id": "xml_8ce159aa_c0000",
+      "article_id": "xml_8ce159aa",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 923,
+      "content": "Extensible Markup Language (XML) is a markup language and file format for storing, transmitting, and reconstructing data. It defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The World Wide Web Consortium's XML 1.0 Specification of 1998 and several other related specifications—all of them free open standards—define XML. The design goals of XML emphasize simplicity, generality, and usability across the Internet. It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures, such as those used in web services. Several schema systems exist to aid in the definition of XML-based languages, while programmers have developed many application programming interfaces (APIs) to aid the processing of XML data.",
+      "char_count": 922,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "xml_8ce159aa_c0001",
+      "article_id": "xml_8ce159aa",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 937,
+      "end_char": 1868,
+      "content": "== Overview == The main purpose of XML is serialization, i.e. storing, transmitting, and reconstructing arbitrary data. For two disparate systems to exchange information, they need to agree upon a file format. XML standardizes this process. It is therefore analogous to a lingua franca for representing information. As a markup language, XML labels, categorizes, and structurally organizes information. XML tags represent the data structure and contain metadata. What is within the tags is data, encoded in the way the XML standard specifies. An additional XML schema (XSD) defines the necessary metadata for interpreting and validating XML. (This is also referred to as the canonical schema.) An XML document that adheres to basic XML rules is \"well-formed\"; one that adheres to its schema is \"valid\". IETF RFC 7303 (which supersedes the older RFC 3023), provides rules for the construction of media types for use in XML message.",
+      "char_count": 930,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "xml_8ce159aa_c0002",
+      "article_id": "xml_8ce159aa",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 1868,
+      "end_char": 2452,
+      "content": "It defines three media types: application/xml (text/xml is an alias), application/xml-external-parsed-entity (text/xml-external-parsed-entity is an alias) and application/xml-dtd. They are used for transmitting raw XML files without exposing their internal semantics. RFC 7303 further recommends that XML-based languages be given media types ending in +xml, for example, image/svg+xml for SVG. Further guidelines for the use of XML in a networked context appear in RFC 3470, also known as IETF BCP 70, a document covering many aspects of designing and deploying an XML-based language.",
+      "char_count": 584,
+      "token_estimate": 146,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "xml_8ce159aa_c0003",
+      "article_id": "xml_8ce159aa",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 2457,
+      "end_char": 3366,
+      "content": "== Applications == XML has come into common use for the interchange of data over the Internet. Hundreds of document formats using XML syntax have been developed, including RSS, Atom, Office Open XML, OpenDocument, SVG, COLLADA, and XHTML. XML also provides the base language for communication protocols such as SOAP and XMPP. It is one of the message exchange formats used in the Asynchronous JavaScript and XML (AJAX) programming technique. Many industry data standards, such as Health Level 7, OpenTravel Alliance, FpML, MISMO, and the National Information Exchange Model are based on XML and the rich features of the XML schema specification. In publishing, Darwin Information Typing Architecture is an XML industry data standard. XML is used extensively to underpin various publishing formats. One of the applications of XML in science is the representation of operational meteorology information based on IWXXM standards.",
+      "char_count": 926,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "xml_8ce159aa_c0004",
+      "article_id": "xml_8ce159aa",
+      "section": "== Key terminology ==",
+      "heading_path": "== Key terminology ==",
+      "start_char": 3387,
+      "end_char": 4307,
+      "content": "== Key terminology == The material in this section is based on the XML Specification. This is not an exhaustive list of all the constructs that appear in XML; it provides an introduction to the key constructs most often encountered in day-to-day use. Character An XML document is a string of characters. Every legal Unicode character (except Null) may appear in an (1.1) XML document (while some are discouraged). Processor and application The processor analyzes the markup and passes structured information to an application. The specification places requirements on what an XML processor must do and not do, but the application is outside its scope. The processor (as the specification calls it) is often referred to colloquially as an XML parser. Markup and content The characters making up an XML document are divided into markup and content, which may be distinguished by the application of simple syntactic rules.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "xml_8ce159aa_c0005",
+      "article_id": "xml_8ce159aa",
+      "section": "== Key terminology ==",
+      "heading_path": "== Key terminology ==",
+      "start_char": 4307,
+      "end_char": 5260,
+      "content": "Generally, strings that constitute markup either begin with the character < and end with a >, or they begin with the character & and end with a ;. Strings of characters that are not markup are content. However, in a CDATA section, the delimiters are classified as markup, while the text between them is classified as content. In addition, whitespace before and after the outermost element is classified as markup. Tag A tag is a markup construct that begins with < and ends with >. There are three types of tag: start-tag, such as ; end-tag, such as ; empty-element tag, such as . Element An element is a logical document component that either begins with a start-tag and ends with a matching end-tag or consists only of an empty-element tag. The characters between the start-tag and end-tag, if any, are the element's content, and may contain markup, including other elements, which are called child elements. An example is Hello, world! . Another is .",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "xml_8ce159aa_c0006",
+      "article_id": "xml_8ce159aa",
+      "section": "== Key terminology ==",
+      "heading_path": "== Key terminology ==",
+      "start_char": 5261,
+      "end_char": 6130,
+      "content": "Attribute An attribute is a markup construct consisting of a name–value pair that exists within a start-tag or empty-element tag. An example is , where the names of the attributes are \"src\" and \"alt\", and their values are \"madonna.jpg\" and \"Madonna\" respectively. Another example is Connect A to B. , where the name of the attribute is \"number\" and its value is \"3\". An XML attribute can only have a single value and each attribute can appear at most once on each element. In the common situation where a list of multiple values is desired, this must be done by encoding the list into a well-formed XML attribute with some format beyond what XML defines itself. Usually this is either a comma or semi-colon delimited list or, if the individual values are known not to contain spaces, a space-delimited list can be used. An example with space as a delimiter is\n\nWelcome!",
+      "char_count": 869,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 7,
+    "items": [
+      {
+        "question": "What are the three types of tags defined as markup constructs?",
+        "answer": "The three types of tags are: start-tag, end-tag, and empty-element tag.",
+        "related_chunk_ids": [
+          "xml_8ce159aa_c0005"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "xml_8ce159aa_c0005"
+        ]
+      },
+      {
+        "question": "What is the difference between a \"well-formed\" and a \"valid\" XML document?",
+        "answer": "A \"well-formed\" XML document is one that adheres to basic XML rules, while a \"valid\" XML document is one that adheres to its schema.",
+        "related_chunk_ids": [
+          "xml_8ce159aa_c0001"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "xml_8ce159aa_c0001"
+        ]
+      },
+      {
+        "question": "Which communication protocols are mentioned as using XML for their base language?",
+        "answer": "The communication protocols SOAP and XMPP use XML as their base language.",
+        "related_chunk_ids": [
+          "xml_8ce159aa_c0003"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "xml_8ce159aa_c0003"
+        ]
+      },
+      {
+        "question": "How is XML designed and standardized for use over the internet, including the relevant specifications and recommendations?",
+        "answer": "XML's design goals emphasize usability across the Internet, with a primary purpose of transmitting data between systems. To facilitate this, IETF RFC 7303 defines specific media types for transmitting XML files, such as `application/xml`. This RFC also recommends that XML-based languages be given media types ending in `+xml`. For more comprehensive guidance on using XML in a networked context, RFC 3470 (also known as IETF BCP 70) provides rules for designing and deploying XML-based languages.",
+        "related_chunk_ids": [
+          "xml_8ce159aa_c0000",
+          "xml_8ce159aa_c0001",
+          "xml_8ce159aa_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "xml_8ce159aa_c0000",
+          "xml_8ce159aa_c0002",
+          "xml_8ce159aa_c0001"
+        ]
+      },
+      {
+        "question": "How are the various XML-based document formats and communication protocols, such as RSS and SOAP, fundamentally structured according to XML's key terminology?",
+        "answer": "XML-based formats and protocols like RSS and SOAP are fundamentally structured as XML documents, which are strings of characters divided into markup and content. The markup consists of tags (constructs that begin with '<' and end with '>') which define logical components called elements. These elements, which can be nested, contain the actual data or content, creating a structured format for data interchange.",
+        "related_chunk_ids": [
+          "xml_8ce159aa_c0003",
+          "xml_8ce159aa_c0004",
+          "xml_8ce159aa_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "xml_8ce159aa_c0003",
+          "xml_8ce159aa_c0004",
+          "xml_8ce159aa_c0005"
+        ]
+      },
+      {
+        "question": "How does IETF RFC 7303 support the main purpose of XML for transmitting data between systems?",
+        "answer": "The main purpose of XML is to transmit and exchange arbitrary data between different systems. IETF RFC 7303 supports this by providing standardized rules for constructing media types for XML messages. It defines specific media types like `application/xml` for transmitting raw XML files and recommends that XML-based languages use a `+xml` suffix in their media types. These standards help ensure that data transmitted via XML can be correctly identified and handled in a networked context, facilitating its role as a lingua franca for information exchange.",
+        "related_chunk_ids": [
+          "xml_8ce159aa_c0001",
+          "xml_8ce159aa_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "xml_8ce159aa_c0001",
+          "xml_8ce159aa_c0002"
+        ]
+      },
+      {
+        "question": "Explain the relationship between the core XML concepts of markup, tags, elements, and attributes.",
+        "answer": "Markup and content are the two primary divisions of characters in an XML document. A tag is a specific type of markup construct that begins with '<' and ends with '>'. An element is a logical document component defined by these tags, either consisting of a start-tag and a matching end-tag or a single empty-element tag. Finally, an attribute is another markup construct, specifically a name-value pair that exists within an element's start-tag or empty-element tag.",
+        "related_chunk_ids": [
+          "xml_8ce159aa_c0004",
+          "xml_8ce159aa_c0005",
+          "xml_8ce159aa_c0006"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "xml_8ce159aa_c0005",
+          "xml_8ce159aa_c0004",
+          "xml_8ce159aa_c0006"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:30.938Z",
+    "content_format": "markdown",
+    "total_chunks": 7,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

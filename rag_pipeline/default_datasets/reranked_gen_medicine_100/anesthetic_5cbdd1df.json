@@ -1,0 +1,352 @@
+{
+  "article": {
+    "id": "anesthetic_5cbdd1df",
+    "title": "Anesthetic",
+    "url": "https://en.wikipedia.org/wiki/Anesthetic",
+    "lang": "en",
+    "created_at": "2025-07-31T07:11:49.220985",
+    "content": "---\nid: anesthetic_5cbdd1df\nurl: https://en.wikipedia.org/wiki/Anesthetic\ntitle: Anesthetic\nlang: en\ncreated_at: '2025-07-31T07:05:18.485165'\nchecksum: 4ff312c2218166d4885f55c6fb508748f706029c744e42ee145a554ed90e7ce2\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1826\n  char_count: 12949\n  num_chunks: 15\n  original_chunks: 21\n  filtered_out: 6\n  num_sections: 0\n---\nAn anesthetic (American English) or anaesthetic (British English; see spelling differences) is a drug used to induce anesthesia ⁠— ⁠in other words, to result in a temporary loss of sensation or awareness. They may be divided into two broad classes: general anesthetics, which result in a reversible loss of consciousness, and local anesthetics, which cause a reversible loss of sensation for a limited region of the body without necessarily affecting consciousness. A wide variety of drugs are used in modern anesthetic practice. Many are rarely used outside anesthesiology, but others are used commonly in various fields of healthcare. Combinations of anesthetics are sometimes used for their synergistic and additive therapeutic effects. Adverse effects, however, may also be increased. Anesthetics are distinct from analgesics, which block only sensation of painful stimuli. Analgesics are typically used in conjunction with anesthetics to control pre-, intra-, and postoperative pain. == Local anesthetics == === Ester-based === Benzocaine Cocaine (rarely used medically) Procaine Tetracaine (sometimes called Amethocaine) === Amide-Based === Bupivacaine Cinchocaine(INN/BAN)/Dibucaine(USAN) Etidocaine Levobupivacaine Lidocaine Mepivacaine Prilocaine Ropivacaine Local anesthetic agents prevent the transmission of nerve impulses without causing unconsciousness. They act by reversibly binding to fast sodium channels from within nerve fibers, thereby preventing sodium from entering the fibres, stabilising the cell membrane and preventing action potential propagation. Each of the local anesthetics has the suffix \"–caine\" in their names. Local anesthetics can be either ester- or amide-based. Ester local anesthetics are generally unstable in solution and fast-acting, are rapidly metabolised by cholinesterases in the blood plasma and liver, and more commonly induce allergic reactions. Amide local anesthetics are generally heat-stable, with a long shelf life (around two years). Amides have a slower onset and longer half-life than ester anesthetics, and are usually racemic mixtures, with the exception of levobupivacaine (which is S(-) -bupivacaine) and ropivacaine (S(-)-ropivacaine). Although general rules exist for onset and duration of anesthesia between ester- or amide-based local anesthetics, these are properties are ultimately dependent on myriad factors including the lipid solubility of the agent, the concentration of the solution, and the pKa. Amides are generally used within regional and epidural or spinal techniques, due to their longer duration of action, which provides adequate analgesia for surgery, labor, and symptomatic relief. Some esters, such as benzocaine and tetracaine, are found in topical formulations to be absorbed through the skin. Only preservative-free local anesthetic agents may be injected intrathecally. Pethidine also has local anesthetic properties, in addition to its opioid effects. == General anesthetics == === Inhaled agents === Desflurane (common) Enflurane (largely discontinued) Halothane (inexpensive, discontinued) Isoflurane (common) Methoxyflurane Nitrous oxide Sevoflurane (common) Xenon (rarely used) Volatile agents are typically organic liquids that evaporate readily. They are given by inhalation for induction or maintenance of general anesthesia. Nitrous oxide and xenon are gases, so they are not considered volatile agents. The ideal volatile anesthetic should be non-flammable, non-explosive, and lipid-soluble. It should possess low blood gas solubility, have no end-organ (heart, liver, kidney) toxicity or side-effects, should not be metabolized, and should not irritate the respiratory pathways. No anaesthetic agent currently in use meets all these requirements, nor can any anaesthetic agent be considered completely safe. There are inherent risks and drug interactions that are specific to each and every patient. The agents in widespread current use are isoflurane, desflurane, sevoflurane, and nitrous oxide. Nitrous oxide is a common adjuvant gas, making it one of the most long-lived drugs still in current use. Because of its low potency, it cannot produce anesthesia on its own but is frequently combined with other agents. Halothane, an agent introduced in the 1950s, has been almost completely replaced in modern anesthesia practice by newer agents because of its shortcomings. Partly because of its side effects, enflurane never gained widespread popularity. In theory, any inhaled anesthetic agent can be used for induction of general anesthesia. However, most of the halogenated anesthetics are irritating to the airway, perhaps leading to coughing, laryngospasm and overall difficult inductions. If induction needs to be conducted with an inhaled anesthetic agent, sevoflurane is often used due to a relatively low pungency, rapid increase in alveolar concentration, and a higher blood solubility than other agents. These properties allow for a less irritating and quicker induction as well as a rapid emergence from anesthesia compared to other inhaled agents. All of the volatile agents can be used alone or in combination with other medications to maintain anesthesia (nitrous oxide is not potent enough to be used as a sole agent). Volatile agents are frequently compared in terms of potency, which is inversely proportional to the minimum alveolar concentration. Potency is directly related to lipid solubility. This is known as the Meyer-Overton hypothesis. However, certain pharmacokinetic properties of volatile agents have become another point of comparison. Most important of those properties is known as the blood/gas partition coefficient. This concept refers to the relative solubility of a given agent in blood. Those agents with a lower blood solubility (i.e., a lower blood–gas partition coefficient; e.g., desflurane) give the anesthesia provider greater rapidity in titrating the depth of anesthesia, and permit a more rapid emergence from the anesthetic state upon discontinuing their administration. In fact, newer volatile agents (e.g., sevoflurane, desflurane) have been popular not due to their potency (minimum alveolar concentration), but due to their versatility for a faster emergence from anesthesia, thanks to their lower blood–gas partition coefficient. === Intravenous agents (non-opioid) === While there are many drugs that can be used intravenously to produce anesthesia or sedation, the most common are: Barbiturates Amobarbital (trade name: Amytal) Methohexital (trade name: Brevital) Thiamylal (trade name: Surital) Thiopental (trade name: Penthothal, referred to as thiopentone in the UK) Benzodiazepines Diazepam Lorazepam Midazolam Etomidate Ketamine Propofol Among the barbiturates mentioned above, thiopental and methohexital are ultra-short-acting and are used to induce and maintain anesthesia. However, though they produce unconsciousness, they provide no analgesia (pain relief) and must be used with other agents. Benzodiazepines can be used for sedation before or after surgery and can be used to induce and maintain general anesthesia. When benzodiazepines are used to induce general anesthesia, midazolam is preferred. Benzodiazepines are also used for sedation during procedures that do not require general anesthesia. Like barbiturates, benzodiazepines have no pain-relieving properties. Etomidate is one of the most commonly used intravenous drugs employed to induce and maintain general anesthesia. It can also be used for sedation during procedures or in the ICU. Like the other agents mentioned above, it renders patients unconscious without producing pain relief. Compared to other IV agents, etomidate causes minimal depression of the cardiopulmonary system. Additionally, etomidate results in a reduction in intracranial pressure and cerebral blood flow. Because of these favorable physiological effects, was a favored agent in the ICU. However, etomidate has since been shown to produce adrenocortical suppression, resulting in decreased use to avoid an increased mortality rate in severely ill patients. Ketamine is infrequently used in anesthesia because of the unpleasant experiences that sometimes occur on emergence from anesthesia, which include \"vivid dreaming, extracorporeal experiences, and illusions.\" When it is used, it is often paired with a benzodiazepine such as midazolam for amnesia and sedation. However, like etomidate it is frequently used in emergency settings and with sick patients because it produces fewer adverse physiological effects. Unlike the intravenous anesthetic drugs previously mentioned, ketamine produces profound pain relief, even in doses lower than those that induce general anesthesia. Also unlike the other anesthetic agents in this section, patients who receive ketamine alone appear to be in a cataleptic state, unlike other states of anesthesia that resemble normal sleep. Ketamine-anesthetized patients have profound analgesia but keep their eyes open and maintain many reflexes. == Intravenous opioid analgesic agents == While opioids can produce unconsciousness, they do so unreliably and with significant side effects. So, while they are rarely used to induce anesthesia, they are frequently used along with other agents such as intravenous non-opioid anesthetics or inhalational anesthetics. Furthermore, they are used to relieve pain of patients before, during, or after surgery. The following opioids have short onset and duration of action and are frequently used during general anesthesia: Alfentanil Fentanyl Remifentanil Sufentanil, which is not available in Australia. The following agents have longer onset and duration of action and are frequently used for post-operative pain relief: Buprenorphine Butorphanol Diamorphine, also known as heroin, not available for use as an analgesic in any country but the UK. Hydromorphone Levorphanol Pethidine, also called meperidine in North America. Methadone Morphine Codeine Nalbuphine Oxycodone, not available intravenously in U.S. Oxymorphone Pentazocine == Muscle relaxants == Muscle relaxants do not render patients unconscious or relieve pain. Instead, they are sometimes used after a patient is rendered unconscious (induction of anesthesia) to facilitate intubation or surgery by paralyzing skeletal muscle.These agents fall into two categories: depolarizing agents, which depolarize the motor end plate to prevent further stimulation, and non-depolarizing agents, which prevent acetylcholine receptor activation through competitive inhibition. Depolarizing muscle relaxants Succinylcholine (also known as suxamethonium in the UK, New Zealand, Australia and other countries, \"Celokurin\" or \"celo\" for short in Europe) Decamethonium Non-depolarizing muscle relaxants Short acting Mivacurium Rapacuronium Intermediate acting Atracurium Cisatracurium Rocuronium Vecuronium Long acting Alcuronium Doxacurium Gallamine Metocurine Pancuronium Pipecuronium Tubocurarine A potential complication where neuromuscular blockade is employed is 'anesthesia awareness'. In this situation, patients paralyzed may awaken during their anesthesia, due to an inappropriate decrease in the level of drugs providing sedation or pain relief. If this is missed by the anesthesia provider, the patient may be aware of their surroundings, but be incapable of moving or communicating that fact. Neurological monitors are increasingly available that may help decrease the incidence of awareness. Most of these monitors use proprietary algorithms monitoring brain activity via evoked potentials. Additionally, anesthesia providers often have steps they follow to help prevent awareness, such as ensuring all equipment is working properly, monitoring that drugs are being delivered during surgery, and asking a series of questions (the Brice questions) to help detect awareness after surgery. If there is any suspicion of patient awareness, close follow-up and mental health professionals can help manage or avoid any traumatic stress associated with the awareness. Certain procedures, such as endoscopies or colonoscopies, are managed a technique called conscious sedation or monitored anesthesia care. These cases are performed with regional anesthetics and a \"twilight sleep\" achieved through sedation with propofol and analgesics, and patients may remember perioperative events. When this technique is used, patients should be advised that this is management is distinct from general anesthesia to help combat any belief or fear that they were \"awake\" during anesthesia. == Intravenous reversal agents == Flumazenil, reverses the effects of benzodiazepines Naloxone, reverses the effects of opioids Neostigmine, helps to reverse the effects of non-depolarizing muscle relaxants Sugammadex, helps to reverse the effects of non-depolarizing muscle relaxants == References == == External links == Anaesthetics, BBC Radio 4 discussion with David Wilkinson, Stephanie Snow & Anne Hardy (In Our Time, Mar. 29, 2007)"
+  },
+  "chunks": [
+    {
+      "id": "anesthetic_5cbdd1df_c0000",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 989,
+      "content": "An anesthetic (American English) or anaesthetic (British English; see spelling differences) is a drug used to induce anesthesia ⁠— ⁠in other words, to result in a temporary loss of sensation or awareness. They may be divided into two broad classes: general anesthetics, which result in a reversible loss of consciousness, and local anesthetics, which cause a reversible loss of sensation for a limited region of the body without necessarily affecting consciousness. A wide variety of drugs are used in modern anesthetic practice. Many are rarely used outside anesthesiology, but others are used commonly in various fields of healthcare. Combinations of anesthetics are sometimes used for their synergistic and additive therapeutic effects. Adverse effects, however, may also be increased. Anesthetics are distinct from analgesics, which block only sensation of painful stimuli. Analgesics are typically used in conjunction with anesthetics to control pre-, intra-, and postoperative pain.",
+      "char_count": 988,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0001",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Amide-Based ==",
+      "heading_path": "== = Amide-Based ==",
+      "start_char": 1147,
+      "end_char": 2011,
+      "content": "== = Amide-Based === Bupivacaine Cinchocaine(INN/BAN)/Dibucaine(USAN) Etidocaine Levobupivacaine Lidocaine Mepivacaine Prilocaine Ropivacaine Local anesthetic agents prevent the transmission of nerve impulses without causing unconsciousness. They act by reversibly binding to fast sodium channels from within nerve fibers, thereby preventing sodium from entering the fibres, stabilising the cell membrane and preventing action potential propagation. Each of the local anesthetics has the suffix \"–caine\" in their names. Local anesthetics can be either ester- or amide-based. Ester local anesthetics are generally unstable in solution and fast-acting, are rapidly metabolised by cholinesterases in the blood plasma and liver, and more commonly induce allergic reactions. Amide local anesthetics are generally heat-stable, with a long shelf life (around two years).",
+      "char_count": 863,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0002",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Amide-Based ==",
+      "heading_path": "== = Amide-Based ==",
+      "start_char": 2011,
+      "end_char": 2962,
+      "content": "Amides have a slower onset and longer half-life than ester anesthetics, and are usually racemic mixtures, with the exception of levobupivacaine (which is S(-) -bupivacaine) and ropivacaine (S(-)-ropivacaine). Although general rules exist for onset and duration of anesthesia between ester- or amide-based local anesthetics, these are properties are ultimately dependent on myriad factors including the lipid solubility of the agent, the concentration of the solution, and the pKa. Amides are generally used within regional and epidural or spinal techniques, due to their longer duration of action, which provides adequate analgesia for surgery, labor, and symptomatic relief. Some esters, such as benzocaine and tetracaine, are found in topical formulations to be absorbed through the skin. Only preservative-free local anesthetic agents may be injected intrathecally. Pethidine also has local anesthetic properties, in addition to its opioid effects.",
+      "char_count": 951,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0003",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Inhaled agents ==",
+      "heading_path": "== = Inhaled agents ==",
+      "start_char": 2992,
+      "end_char": 3925,
+      "content": "== = Inhaled agents === Desflurane (common) Enflurane (largely discontinued) Halothane (inexpensive, discontinued) Isoflurane (common) Methoxyflurane Nitrous oxide Sevoflurane (common) Xenon (rarely used) Volatile agents are typically organic liquids that evaporate readily. They are given by inhalation for induction or maintenance of general anesthesia. Nitrous oxide and xenon are gases, so they are not considered volatile agents. The ideal volatile anesthetic should be non-flammable, non-explosive, and lipid-soluble. It should possess low blood gas solubility, have no end-organ (heart, liver, kidney) toxicity or side-effects, should not be metabolized, and should not irritate the respiratory pathways. No anaesthetic agent currently in use meets all these requirements, nor can any anaesthetic agent be considered completely safe. There are inherent risks and drug interactions that are specific to each and every patient.",
+      "char_count": 932,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0004",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Inhaled agents ==",
+      "heading_path": "== = Inhaled agents ==",
+      "start_char": 3925,
+      "end_char": 4718,
+      "content": "The agents in widespread current use are isoflurane, desflurane, sevoflurane, and nitrous oxide. Nitrous oxide is a common adjuvant gas, making it one of the most long-lived drugs still in current use. Because of its low potency, it cannot produce anesthesia on its own but is frequently combined with other agents. Halothane, an agent introduced in the 1950s, has been almost completely replaced in modern anesthesia practice by newer agents because of its shortcomings. Partly because of its side effects, enflurane never gained widespread popularity. In theory, any inhaled anesthetic agent can be used for induction of general anesthesia. However, most of the halogenated anesthetics are irritating to the airway, perhaps leading to coughing, laryngospasm and overall difficult inductions.",
+      "char_count": 793,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0005",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Inhaled agents ==",
+      "heading_path": "== = Inhaled agents ==",
+      "start_char": 4719,
+      "end_char": 5674,
+      "content": "If induction needs to be conducted with an inhaled anesthetic agent, sevoflurane is often used due to a relatively low pungency, rapid increase in alveolar concentration, and a higher blood solubility than other agents. These properties allow for a less irritating and quicker induction as well as a rapid emergence from anesthesia compared to other inhaled agents. All of the volatile agents can be used alone or in combination with other medications to maintain anesthesia (nitrous oxide is not potent enough to be used as a sole agent). Volatile agents are frequently compared in terms of potency, which is inversely proportional to the minimum alveolar concentration. Potency is directly related to lipid solubility. This is known as the Meyer-Overton hypothesis. However, certain pharmacokinetic properties of volatile agents have become another point of comparison. Most important of those properties is known as the blood/gas partition coefficient.",
+      "char_count": 955,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0006",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Inhaled agents ==",
+      "heading_path": "== = Inhaled agents ==",
+      "start_char": 5675,
+      "end_char": 6306,
+      "content": "This concept refers to the relative solubility of a given agent in blood. Those agents with a lower blood solubility (i.e., a lower blood–gas partition coefficient; e.g., desflurane) give the anesthesia provider greater rapidity in titrating the depth of anesthesia, and permit a more rapid emergence from the anesthetic state upon discontinuing their administration. In fact, newer volatile agents (e.g., sevoflurane, desflurane) have been popular not due to their potency (minimum alveolar concentration), but due to their versatility for a faster emergence from anesthesia, thanks to their lower blood–gas partition coefficient.",
+      "char_count": 631,
+      "token_estimate": 157,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0007",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Intravenous agents (non-opioid) ==",
+      "heading_path": "== = Intravenous agents (non-opioid) ==",
+      "start_char": 6324,
+      "end_char": 7209,
+      "content": "== = Intravenous agents (non-opioid) === While there are many drugs that can be used intravenously to produce anesthesia or sedation, the most common are: Barbiturates Amobarbital (trade name: Amytal) Methohexital (trade name: Brevital) Thiamylal (trade name: Surital) Thiopental (trade name: Penthothal, referred to as thiopentone in the UK) Benzodiazepines Diazepam Lorazepam Midazolam Etomidate Ketamine Propofol Among the barbiturates mentioned above, thiopental and methohexital are ultra-short-acting and are used to induce and maintain anesthesia. However, though they produce unconsciousness, they provide no analgesia (pain relief) and must be used with other agents. Benzodiazepines can be used for sedation before or after surgery and can be used to induce and maintain general anesthesia. When benzodiazepines are used to induce general anesthesia, midazolam is preferred.",
+      "char_count": 884,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0008",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Intravenous agents (non-opioid) ==",
+      "heading_path": "== = Intravenous agents (non-opioid) ==",
+      "start_char": 7209,
+      "end_char": 8104,
+      "content": "Benzodiazepines are also used for sedation during procedures that do not require general anesthesia. Like barbiturates, benzodiazepines have no pain-relieving properties. Etomidate is one of the most commonly used intravenous drugs employed to induce and maintain general anesthesia. It can also be used for sedation during procedures or in the ICU. Like the other agents mentioned above, it renders patients unconscious without producing pain relief. Compared to other IV agents, etomidate causes minimal depression of the cardiopulmonary system. Additionally, etomidate results in a reduction in intracranial pressure and cerebral blood flow. Because of these favorable physiological effects, was a favored agent in the ICU. However, etomidate has since been shown to produce adrenocortical suppression, resulting in decreased use to avoid an increased mortality rate in severely ill patients.",
+      "char_count": 895,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0009",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== = Intravenous agents (non-opioid) ==",
+      "heading_path": "== = Intravenous agents (non-opioid) ==",
+      "start_char": 8105,
+      "end_char": 9026,
+      "content": "Ketamine is infrequently used in anesthesia because of the unpleasant experiences that sometimes occur on emergence from anesthesia, which include \"vivid dreaming, extracorporeal experiences, and illusions.\" When it is used, it is often paired with a benzodiazepine such as midazolam for amnesia and sedation. However, like etomidate it is frequently used in emergency settings and with sick patients because it produces fewer adverse physiological effects. Unlike the intravenous anesthetic drugs previously mentioned, ketamine produces profound pain relief, even in doses lower than those that induce general anesthesia. Also unlike the other anesthetic agents in this section, patients who receive ketamine alone appear to be in a cataleptic state, unlike other states of anesthesia that resemble normal sleep. Ketamine-anesthetized patients have profound analgesia but keep their eyes open and maintain many reflexes.",
+      "char_count": 921,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0010",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== Intravenous opioid analgesic agents ==",
+      "heading_path": "== Intravenous opioid analgesic agents ==",
+      "start_char": 9029,
+      "end_char": 9951,
+      "content": "== Intravenous opioid analgesic agents == While opioids can produce unconsciousness, they do so unreliably and with significant side effects. So, while they are rarely used to induce anesthesia, they are frequently used along with other agents such as intravenous non-opioid anesthetics or inhalational anesthetics. Furthermore, they are used to relieve pain of patients before, during, or after surgery. The following opioids have short onset and duration of action and are frequently used during general anesthesia: Alfentanil Fentanyl Remifentanil Sufentanil, which is not available in Australia. The following agents have longer onset and duration of action and are frequently used for post-operative pain relief: Buprenorphine Butorphanol Diamorphine, also known as heroin, not available for use as an analgesic in any country but the UK. Hydromorphone Levorphanol Pethidine, also called meperidine in North America.",
+      "char_count": 921,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0011",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== Muscle relaxants ==",
+      "heading_path": "== Muscle relaxants ==",
+      "start_char": 10041,
+      "end_char": 10666,
+      "content": "== Muscle relaxants == Muscle relaxants do not render patients unconscious or relieve pain. Instead, they are sometimes used after a patient is rendered unconscious (induction of anesthesia) to facilitate intubation or surgery by paralyzing skeletal muscle.These agents fall into two categories: depolarizing agents, which depolarize the motor end plate to prevent further stimulation, and non-depolarizing agents, which prevent acetylcholine receptor activation through competitive inhibition. Depolarizing muscle relaxants Succinylcholine (also known as suxamethonium in the UK, New Zealand, Australia and other countries,",
+      "char_count": 624,
+      "token_estimate": 156,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0012",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== Muscle relaxants ==",
+      "heading_path": "== Muscle relaxants ==",
+      "start_char": 10666,
+      "end_char": 11558,
+      "content": "\"Celokurin\" or \"celo\" for short in Europe) Decamethonium Non-depolarizing muscle relaxants Short acting Mivacurium Rapacuronium Intermediate acting Atracurium Cisatracurium Rocuronium Vecuronium Long acting Alcuronium Doxacurium Gallamine Metocurine Pancuronium Pipecuronium Tubocurarine A potential complication where neuromuscular blockade is employed is 'anesthesia awareness'. In this situation, patients paralyzed may awaken during their anesthesia, due to an inappropriate decrease in the level of drugs providing sedation or pain relief. If this is missed by the anesthesia provider, the patient may be aware of their surroundings, but be incapable of moving or communicating that fact. Neurological monitors are increasingly available that may help decrease the incidence of awareness. Most of these monitors use proprietary algorithms monitoring brain activity via evoked potentials.",
+      "char_count": 892,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0013",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== Muscle relaxants ==",
+      "heading_path": "== Muscle relaxants ==",
+      "start_char": 11559,
+      "end_char": 12536,
+      "content": "Additionally, anesthesia providers often have steps they follow to help prevent awareness, such as ensuring all equipment is working properly, monitoring that drugs are being delivered during surgery, and asking a series of questions (the Brice questions) to help detect awareness after surgery. If there is any suspicion of patient awareness, close follow-up and mental health professionals can help manage or avoid any traumatic stress associated with the awareness. Certain procedures, such as endoscopies or colonoscopies, are managed a technique called conscious sedation or monitored anesthesia care. These cases are performed with regional anesthetics and a \"twilight sleep\" achieved through sedation with propofol and analgesics, and patients may remember perioperative events. When this technique is used, patients should be advised that this is management is distinct from general anesthesia to help combat any belief or fear that they were \"awake\" during anesthesia.",
+      "char_count": 977,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "anesthetic_5cbdd1df_c0014",
+      "article_id": "anesthetic_5cbdd1df",
+      "section": "== Intravenous reversal agents ==",
+      "heading_path": "== Intravenous reversal agents ==",
+      "start_char": 12548,
+      "end_char": 12800,
+      "content": "== Intravenous reversal agents == Flumazenil, reverses the effects of benzodiazepines Naloxone, reverses the effects of opioids Neostigmine, helps to reverse the effects of non-depolarizing muscle relaxants Sugammadex, helps to reverse the effects of non-depolarizing muscle relaxants",
+      "char_count": 284,
+      "token_estimate": 71,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What information is provided about Lead?",
+        "answer": "The text provides information about Lead as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0000"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0000"
+        ]
+      },
+      {
+        "question": "What is the name of the series of questions asked after surgery to help detect patient awareness?",
+        "answer": "The Brice questions are a series of questions asked after surgery to help detect patient awareness.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0013"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0013"
+        ]
+      },
+      {
+        "question": "According to the Meyer-Overton hypothesis, what is the relationship between the potency of a volatile agent and its lipid solubility?",
+        "answer": "The Meyer-Overton hypothesis states that the potency of a volatile agent is directly related to its lipid solubility.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0005"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0005"
+        ]
+      },
+      {
+        "question": "What is the mechanism by which amide-based local anesthetics, such as lidocaine and bupivacaine, produce a temporary and reversible loss of sensation in a specific body region?",
+        "answer": "Amide-based local anesthetics, like lidocaine and bupivacaine, cause a temporary, reversible loss of sensation in a limited body region by preventing the transmission of nerve impulses. They achieve this by reversibly binding to fast sodium channels from within nerve fibers, which stops sodium from entering the fibers. This action stabilizes the cell membrane and prevents the propagation of action potentials.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0000",
+          "anesthetic_5cbdd1df_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0001",
+          "anesthetic_5cbdd1df_c0000"
+        ]
+      },
+      {
+        "question": "What information is provided about == = Inhaled agents ==?",
+        "answer": "The text provides information about == = Inhaled agents == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0003",
+          "anesthetic_5cbdd1df_c0004",
+          "anesthetic_5cbdd1df_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0003",
+          "anesthetic_5cbdd1df_c0004",
+          "anesthetic_5cbdd1df_c0005"
+        ]
+      },
+      {
+        "question": "What is a key advantage of newer volatile anesthetics like sevoflurane compared to a shared limitation of intravenous agents such as barbiturates, benzodiazepines, and etomidate?",
+        "answer": "A key advantage of newer volatile anesthetics like sevoflurane and desflurane is their versatility for a faster emergence from anesthesia, which is attributed to their lower blood–gas partition coefficient. In contrast, a shared limitation of intravenous agents like barbiturates, benzodiazepines, and etomidate is that while they induce unconsciousness, they do not provide any analgesia (pain relief).",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0006",
+          "anesthetic_5cbdd1df_c0007",
+          "anesthetic_5cbdd1df_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0008",
+          "anesthetic_5cbdd1df_c0006",
+          "anesthetic_5cbdd1df_c0007"
+        ]
+      },
+      {
+        "question": "What information is provided about == = Amide-Based ==?",
+        "answer": "The text provides information about == = Amide-Based == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0001",
+          "anesthetic_5cbdd1df_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0001",
+          "anesthetic_5cbdd1df_c0002"
+        ]
+      },
+      {
+        "question": "Why are newer volatile agents like sevoflurane and desflurane considered popular, and how does the primary reason for their popularity compare to the metric of potency?",
+        "answer": "Newer volatile agents like sevoflurane and desflurane are popular not primarily for their potency, but for their versatility which allows for a faster emergence from anesthesia. This is due to their low blood-gas partition coefficient, indicating low solubility in blood, which gives the provider greater speed in titrating the depth of anesthesia and allows for a more rapid recovery. While potency, which is inversely proportional to the minimum alveolar concentration, is a point of comparison, the versatility for rapid emergence is the key reason for the popularity of these newer agents.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0004",
+          "anesthetic_5cbdd1df_c0005",
+          "anesthetic_5cbdd1df_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0006",
+          "anesthetic_5cbdd1df_c0005",
+          "anesthetic_5cbdd1df_c0004"
+        ]
+      },
+      {
+        "question": "Among the intravenous agents discussed—barbiturates, benzodiazepines, etomidate, and ketamine—which ones provide analgesia and which do not?",
+        "answer": "Of the agents discussed, only ketamine provides profound pain relief. Barbiturates, benzodiazepines, and etomidate all produce unconsciousness but have no analgesic (pain-relieving) properties.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0007",
+          "anesthetic_5cbdd1df_c0008",
+          "anesthetic_5cbdd1df_c0009"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0007",
+          "anesthetic_5cbdd1df_c0008",
+          "anesthetic_5cbdd1df_c0009"
+        ]
+      },
+      {
+        "question": "What information is provided about == Muscle relaxants ==?",
+        "answer": "The text provides information about == Muscle relaxants == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "anesthetic_5cbdd1df_c0011",
+          "anesthetic_5cbdd1df_c0012",
+          "anesthetic_5cbdd1df_c0013"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "anesthetic_5cbdd1df_c0011",
+          "anesthetic_5cbdd1df_c0012",
+          "anesthetic_5cbdd1df_c0013"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T08:34:18.048Z",
+    "content_format": "markdown",
+    "total_chunks": 15,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

@@ -1,0 +1,610 @@
+{
+  "article": {
+    "id": "noneuclideangeometry_af58c5e3",
+    "title": "Non-Euclidean geometry",
+    "url": "https://en.wikipedia.org/wiki/Non-Euclidean_geometry",
+    "lang": "en",
+    "created_at": "2025-07-31T06:35:19.536485",
+    "content": "---\nid: noneuclideangeometry_af58c5e3\nurl: https://en.wikipedia.org/wiki/Non-Euclidean_geometry\ntitle: Non-Euclidean geometry\nlang: en\ncreated_at: '2025-07-31T06:27:24.536003'\nchecksum: fee089753ebd05be96bc79263e5ed9c0b1453b8ca4609528509e8ac828934cee\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4680\n  char_count: 30193\n  num_chunks: 35\n  original_chunks: 44\n  filtered_out: 9\n  num_sections: 0\n---\nIn mathematics, non-Euclidean geometry consists of two geometries based on axioms closely related to those that specify Euclidean geometry. As Euclidean geometry lies at the intersection of metric geometry and affine geometry, non-Euclidean geometry arises by either replacing the parallel postulate with an alternative, or relaxing the metric requirement. In the former case, one obtains hyperbolic geometry and elliptic geometry, the traditional non-Euclidean geometries. When the metric requirement is relaxed, then there are affine planes associated with the planar algebras, which give rise to kinematic geometries that have also been called non-Euclidean geometry. == Principles == The essential difference between the metric geometries is the nature of parallel lines. Euclid's fifth postulate, the parallel postulate, is equivalent to Playfair's postulate, which states that, within a two-dimensional plane, for any given line l and a point A, which is not on l, there is exactly one line through A that does not intersect l. In hyperbolic geometry, by contrast, there are infinitely many lines through A not intersecting l, while in elliptic geometry, any line through A intersects l. Another way to describe the differences between these geometries is to consider two straight lines indefinitely extended in a two-dimensional plane that are both perpendicular to a third line (in the same plane): In Euclidean geometry, the lines remain at a constant distance from each other (meaning that a line drawn perpendicular to one line at any point will intersect the other line and the length of the line segment joining the points of intersection remains constant) and are known as parallels. In hyperbolic geometry, they diverge from each other, increasing in distance as one moves further from the points of intersection with the common perpendicular; these lines are often called ultraparallels. In elliptic geometry, the lines converge toward each other and intersect. == History == === Background === Euclidean geometry, named after the Greek mathematician Euclid, includes some of the oldest known mathematics, and geometries that deviated from this were not widely accepted as legitimate until the 19th century. The debate that eventually led to the discovery of the non-Euclidean geometries began almost as soon as Euclid wrote Elements. In the Elements, Euclid begins with a limited number of assumptions (23 definitions, five common notions, and five postulates) and seeks to prove all the other results (propositions) in the work. The most notorious of the postulates is often referred to as \"Euclid's Fifth Postulate\", or simply the parallel postulate, which in Euclid's original formulation is: If a straight line falls on two straight lines in such a manner that the interior angles on the same side are together less than two right angles, then the straight lines, if produced indefinitely, meet on that side on which are the angles less than the two right angles. Other mathematicians have devised simpler forms of this property. Regardless of the form of the postulate, however, it consistently appears more complicated than Euclid's other postulates: To draw a straight line from any point to any point. To produce [extend] a finite straight line continuously in a straight line. To describe a circle with any centre and distance [radius]. That all right angles are equal to one another. For at least a thousand years, geometers were troubled by the disparate complexity of the fifth postulate, and believed it could be proved as a theorem from the other four. Many attempted to find a proof by contradiction, including Ibn al-Haytham (Alhazen, 11th century), Omar Khayyám (12th century), Nasīr al-Dīn al-Tūsī (13th century), and Giovanni Girolamo Saccheri (18th century). The theorems of Ibn al-Haytham, Khayyam and al-Tusi on quadrilaterals, including the Lambert quadrilateral and Saccheri quadrilateral, were \"the first few theorems of the hyperbolic and the elliptic geometries\". These theorems along with their alternative postulates, such as Playfair's axiom, played an important role in the later development of non-Euclidean geometry. These early attempts at challenging the fifth postulate had a considerable influence on its development among later European geometers, including Witelo, Levi ben Gerson, Alfonso, John Wallis and Saccheri. All of these early attempts made at trying to formulate non-Euclidean geometry, however, provided flawed proofs of the parallel postulate, depending on assumptions that are now recognized as essentially equivalent to the parallel postulate. These early attempts did, however, provide some early properties of the hyperbolic and elliptic geometries. Khayyam, for example, tried to derive it from an equivalent postulate he formulated from \"the principles of the Philosopher\" (Aristotle): \"Two convergent straight lines intersect and it is impossible for two convergent straight lines to diverge in the direction in which they converge.\" Khayyam then considered the three cases right, obtuse, and acute that the summit angles of a Saccheri quadrilateral can take and after proving a number of theorems about them, he correctly refuted the obtuse and acute cases based on his postulate and hence derived the classic postulate of Euclid, which he didn't realize was equivalent to his own postulate. Another example is al-Tusi's son, Sadr al-Din (sometimes known as \"Pseudo-Tusi\"), who wrote a book on the subject in 1298, based on al-Tusi's later thoughts, which presented another hypothesis equivalent to the parallel postulate. \"He essentially revised both the Euclidean system of axioms and postulates and the proofs of many propositions from the Elements.\" His work was published in Rome in 1594 and was studied by European geometers, including Saccheri who criticised this work as well as that of Wallis. Giordano Vitale, in his book Euclide restituo (1680, 1686), used the Saccheri quadrilateral to prove that if three points are equidistant on the base AB and the summit CD, then AB and CD are everywhere equidistant. In a work titled Euclides ab Omni Naevo Vindicatus (Euclid Freed from All Flaws), published in 1733, Saccheri quickly discarded elliptic geometry as a possibility (some others of Euclid's axioms must be modified for elliptic geometry to work) and set to work proving a great number of results in hyperbolic geometry. He finally reached a point where he believed that his results demonstrated the impossibility of hyperbolic geometry. His claim seems to have been based on Euclidean presuppositions, because no logical contradiction was present. In this attempt to prove Euclidean geometry he instead unintentionally discovered a new viable geometry, but did not realize it. In 1766 Johann Lambert wrote, but did not publish, Theorie der Parallellinien in which he attempted, as Saccheri did, to prove the fifth postulate. He worked with a figure now known as a Lambert quadrilateral, a quadrilateral with three right angles (can be considered half of a Saccheri quadrilateral). He quickly eliminated the possibility that the fourth angle is obtuse, as had Saccheri and Khayyam, and then proceeded to prove many theorems under the assumption of an acute angle. Unlike Saccheri, he never felt that he had reached a contradiction with this assumption. He had proved the non-Euclidean result that the sum of the angles in a triangle increases as the area of the triangle decreases, and this led him to speculate on the possibility of a model of the acute case on a sphere of imaginary radius. He did not carry this idea any further. At this time it was widely believed that the universe worked according to the principles of Euclidean geometry. === Development of non-Euclidean geometry === The beginning of the 19th century would finally witness decisive steps in the creation of non-Euclidean geometry. Circa 1813, Carl Friedrich Gauss and independently around 1818, the German professor of law Ferdinand Karl Schweikart had the germinal ideas of non-Euclidean geometry worked out, but neither published any results. Schweikart's nephew Franz Taurinus did publish important results of hyperbolic trigonometry in two papers in 1825 and 1826, yet while admitting the internal consistency of hyperbolic geometry, he still believed in the special role of Euclidean geometry. Then, in 1829–1830 the Russian mathematician Nikolai Ivanovich Lobachevsky and in 1832 the Hungarian mathematician János Bolyai separately and independently published treatises on hyperbolic geometry. Consequently, hyperbolic geometry is called Lobachevskian or Bolyai-Lobachevskian geometry, as both mathematicians, independent of each other, are the basic authors of non-Euclidean geometry. Gauss mentioned to Bolyai's father, when shown the younger Bolyai's work, that he had developed such a geometry several years before, though he did not publish. While Lobachevsky created a non-Euclidean geometry by negating the parallel postulate, Bolyai worked out a geometry where both the Euclidean and the hyperbolic geometry are possible depending on a parameter k. Bolyai ends his work by mentioning that it is not possible to decide through mathematical reasoning alone if the geometry of the physical universe is Euclidean or non-Euclidean; this is a task for the physical sciences. Bernhard Riemann, in a famous lecture in 1854, founded the field of Riemannian geometry, discussing in particular the ideas now called manifolds, Riemannian metric, and curvature. He constructed an infinite family of non-Euclidean geometries by giving a formula for a family of Riemannian metrics on the unit ball in Euclidean space. The simplest of these is called elliptic geometry and it is considered a non-Euclidean geometry due to its lack of parallel lines. By formulating the geometry in terms of a curvature tensor, Riemann allowed non-Euclidean geometry to apply to higher dimensions. Beltrami (1868) was the first to apply Riemann's geometry to spaces of negative curvature. === Terminology === It was Gauss who coined the term \"non-Euclidean geometry\". He was referring to his own work, which today we call hyperbolic geometry or Lobachevskian geometry. Several modern authors still use the generic term non-Euclidean geometry to mean hyperbolic geometry. Arthur Cayley noted that distance between points inside a conic could be defined in terms of logarithm and the projective cross-ratio function. The method has become called the Cayley–Klein metric because Felix Klein exploited it to describe the non-Euclidean geometries in articles in 1871 and 1873 and later in book form. The Cayley–Klein metrics provided working models of hyperbolic and elliptic metric geometries, as well as Euclidean geometry. Klein is responsible for the terms \"hyperbolic\" and \"elliptic\" (in his system he called Euclidean geometry parabolic, a term that generally fell out of use). His influence has led to the current usage of the term \"non-Euclidean geometry\" to mean either \"hyperbolic\" or \"elliptic\" geometry. There are some mathematicians who would extend the list of geometries that should be called \"non-Euclidean\" in various ways. There are many kinds of geometry that are quite different from Euclidean geometry but are also not necessarily included in the conventional meaning of \"non-Euclidean geometry\", such as more general instances of Riemannian geometry. == Axiomatic basis of non-Euclidean geometry == Euclidean geometry can be axiomatically described in several ways. However, Euclid's original system of five postulates (axioms) is not one of these, as his proofs relied on several unstated assumptions that should also have been taken as axioms. Hilbert's system consisting of 20 axioms most closely follows the approach of Euclid and provides the justification for all of Euclid's proofs. Other systems, using different sets of undefined terms obtain the same geometry by different paths. All approaches, however, have an axiom that is logically equivalent to Euclid's fifth postulate, the parallel postulate. Hilbert uses the Playfair axiom form, while Birkhoff, for instance, uses the axiom that says that, \"There exists a pair of similar but not congruent triangles.\" In any of these systems, removal of the one axiom equivalent to the parallel postulate, in whatever form it takes, and leaving all the other axioms intact, produces absolute geometry. As the first 28 propositions of Euclid (in The Elements) do not require the use of the parallel postulate or anything equivalent to it, they are all true statements in absolute geometry. To obtain a non-Euclidean geometry, the parallel postulate (or its equivalent) must be replaced by its negation. Negating the Playfair's axiom form, since it is a compound statement (... there exists one and only one ...), can be done in two ways: either there will exist more than one line through the point parallel to the given line or there will exist no lines through the point parallel to the given line. In the first case, replacing the parallel postulate (or its equivalent) with the statement \"In a plane, given a point P and a line l not passing through P, there exist two lines through P, which do not meet l\" and keeping all the other axioms, yields hyperbolic geometry. The second case is not dealt with as easily. Simply replacing the parallel postulate with the statement, \"In a plane, given a point P and a line l not passing through P, all the lines through P meet l\", does not give a consistent set of axioms. This follows since parallel lines exist in absolute geometry, but this statement says that there are no parallel lines. This problem was known (in a different guise) to Khayyam, Saccheri and Lambert and was the basis for their rejecting what was known as the \"obtuse angle case\". To obtain a consistent set of axioms that includes this axiom about having no parallel lines, some other axioms must be tweaked. These adjustments depend upon the axiom system used. Among others, these tweaks have the effect of modifying Euclid's second postulate from the statement that line segments can be extended indefinitely to the statement that lines are unbounded. Riemann's elliptic geometry emerges as the most natural geometry satisfying this axiom. == Models == Models of non-Euclidean geometry are mathematical models of geometries that are non-Euclidean in the sense that it is not the case that exactly one line can be drawn parallel to a given line l through a point that is not on l. In hyperbolic geometric models, by contrast, there are infinitely many lines through A parallel to l, and in elliptic geometric models, parallel lines do not exist. (See the entries on hyperbolic geometry and elliptic geometry for more information.) Euclidean geometry is modelled by our notion of a \"flat plane.\" The simplest model for elliptic geometry is a sphere, where lines are \"great circles\" (such as the equator or the meridians on a globe), and points opposite each other are identified (considered to be the same). The pseudosphere has the appropriate curvature to model hyperbolic geometry. === Elliptic geometry === The simplest model for elliptic geometry is a sphere, where lines are \"great circles\" (such as the equator or the meridians on a globe), and points opposite each other (called antipodal points) are identified (considered the same). This is also one of the standard models of the real projective plane. The difference is that as a model of elliptic geometry a metric is introduced permitting the measurement of lengths and angles, while as a model of the projective plane there is no such metric. In the elliptic model, for any given line l and a point A, which is not on l, all lines through A will intersect l. === Hyperbolic geometry === Even after the work of Lobachevsky, Gauss, and Bolyai, the question remained: \"Does such a model exist for hyperbolic geometry?\". The model for hyperbolic geometry was answered by Eugenio Beltrami, in 1868, who first showed that a surface called the pseudosphere has the appropriate curvature to model a portion of hyperbolic space and in a second paper in the same year, defined the Klein model, which models the entirety of hyperbolic space, and used this to show that Euclidean geometry and hyperbolic geometry were equiconsistent so that hyperbolic geometry was logically consistent if and only if Euclidean geometry was. (The reverse implication follows from the horosphere model of Euclidean geometry.) In the hyperbolic model, within a two-dimensional plane, for any given line l and a point A, which is not on l, there are infinitely many lines through A that do not intersect l. In these models, the concepts of non-Euclidean geometries are represented by Euclidean objects in a Euclidean setting. This introduces a perceptual distortion wherein the straight lines of the non-Euclidean geometry are represented by Euclidean curves that visually bend. This \"bending\" is not a property of the non-Euclidean lines, only an artifice of the way they are represented. === Three-dimensional non-Euclidean geometry === In three dimensions, there are eight models of geometries. There are Euclidean, elliptic, and hyperbolic geometries, as in the two-dimensional case; mixed geometries that are partially Euclidean and partially hyperbolic or spherical; twisted versions of the mixed geometries; and one unusual geometry that is completely anisotropic (i.e. every direction behaves differently). == Uncommon properties == Euclidean and non-Euclidean geometries naturally have many similar properties, namely those that do not depend upon the nature of parallelism. This commonality is the subject of absolute geometry (also called neutral geometry). However, the properties that distinguish one geometry from others have historically received the most attention. Besides the behavior of lines with respect to a common perpendicular, mentioned in the introduction, we also have the following: A Lambert quadrilateral is a quadrilateral with three right angles. The fourth angle of a Lambert quadrilateral is acute if the geometry is hyperbolic, a right angle if the geometry is Euclidean or obtuse if the geometry is elliptic. Consequently, rectangles exist (a statement equivalent to the parallel postulate) only in Euclidean geometry. A Saccheri quadrilateral is a quadrilateral with two sides of equal length, both perpendicular to a side called the base. The other two angles of a Saccheri quadrilateral are called the summit angles and they have equal measure. The summit angles of a Saccheri quadrilateral are acute if the geometry is hyperbolic, right angles if the geometry is Euclidean and obtuse angles if the geometry is elliptic. The sum of the measures of the angles of any triangle is less than 180° if the geometry is hyperbolic, equal to 180° if the geometry is Euclidean, and greater than 180° if the geometry is elliptic. The defect of a triangle is the numerical value (180° − the sum of the measures of the angles of the triangle). This result may also be stated as: the defect of triangles in hyperbolic geometry is positive, the defect of triangles in Euclidean geometry is zero, and the defect of triangles in elliptic geometry is negative. == Importance == Before the models of a non-Euclidean plane were presented by Beltrami, Klein, and Poincaré, Euclidean geometry stood unchallenged as the mathematical model of space. Furthermore, since the substance of the subject in synthetic geometry was a chief exhibit of rationality, the Euclidean point of view represented absolute authority. The discovery of the non-Euclidean geometries had a ripple effect which went far beyond the boundaries of mathematics and science. The philosopher Immanuel Kant's treatment of human knowledge had a special role for geometry. It was his prime example of synthetic a priori knowledge; not derived from the senses nor deduced through logic — our knowledge of space was a truth that we were born with. Unfortunately for Kant, his concept of this unalterably true geometry was Euclidean. Theology was also affected by the change from absolute truth to relative truth in the way that mathematics is related to the world around it, that was a result of this paradigm shift. Non-Euclidean geometry is an example of a scientific revolution in the history of science, in which mathematicians and scientists changed the way they viewed their subjects. Some geometers called Lobachevsky the \"Copernicus of Geometry\" due to the revolutionary character of his work. The existence of non-Euclidean geometries impacted the intellectual life of Victorian England in many ways and in particular was one of the leading factors that caused a re-examination of the teaching of geometry based on Euclid's Elements. This curriculum issue was hotly debated at the time and was even the subject of a book, Euclid and his Modern Rivals, written by Charles Lutwidge Dodgson (1832–1898) better known as Lewis Carroll, the author of Alice in Wonderland. == Planar algebras == In analytic geometry a plane is described with Cartesian coordinates: C = { ( x , y ) : x , y ∈ R } {\\displaystyle C=\\{(x,y):x,y\\in \\mathbb {R} \\}} The points are sometimes identified with generalized complex numbers z = x + y ε where ε2 ∈ { –1, 0, 1 }. The Euclidean plane corresponds to the case ε2 = −1, an imaginary unit. Since the modulus of z is given by z z ∗ = ( x + y ϵ ) ( x − y ϵ ) = x 2 + y 2 , {\\displaystyle zz^{\\ast }=(x+y\\epsilon )(x-y\\epsilon )=x^{2}+y^{2},} this quantity is the square of the Euclidean distance between z and the origin. For instance, {z | z z* = 1} is the unit circle. For planar algebra, non-Euclidean geometry arises in the other cases. When ε2 = +1, a hyperbolic unit. Then z is a split-complex number and conventionally j replaces epsilon. Then z z ∗ = ( x + y j ) ( x − y j ) = x 2 − y 2 {\\displaystyle zz^{\\ast }=(x+y\\mathbf {j} )(x-y\\mathbf {j} )=x^{2}-y^{2}\\!} and {z | z z* = 1} is the unit hyperbola. When ε2 = 0, then z is a dual number. This approach to non-Euclidean geometry explains the non-Euclidean angles: the parameters of slope in the dual number plane and hyperbolic angle in the split-complex plane correspond to angle in Euclidean geometry. Indeed, they each arise in polar decomposition of a complex number z. == Kinematic geometries == Hyperbolic geometry found an application in kinematics with the physical cosmology introduced by Hermann Minkowski in 1908. Minkowski introduced terms like worldline and proper time into mathematical physics. He realized that the submanifold, of events one moment of proper time into the future, could be considered a hyperbolic space of three dimensions. Already in the 1890s Alexander Macfarlane was charting this submanifold through his Algebra of Physics and hyperbolic quaternions, though Macfarlane did not use cosmological language as Minkowski did in 1908. The relevant structure is now called the hyperboloid model of hyperbolic geometry. The non-Euclidean planar algebras support kinematic geometries in the plane. For instance, the split-complex number z = eaj can represent a spacetime event one moment into the future of a frame of reference of rapidity a. Furthermore, multiplication by z amounts to a Lorentz boost mapping the frame with rapidity zero to that with rapidity a. Kinematic study makes use of the dual numbers z = x + y ϵ , ϵ 2 = 0 , {\\displaystyle z=x+y\\epsilon ,\\quad \\epsilon ^{2}=0,} to represent the classical description of motion in absolute time and space: The equations x ′ = x + v t , t ′ = t {\\displaystyle x^{\\prime }=x+vt,\\quad t^{\\prime }=t} are equivalent to a shear mapping in linear algebra: ( x ′ t ′ ) = ( 1 v 0 1 ) ( x t ) . {\\displaystyle {\\begin{pmatrix}x'\\\\t'\\end{pmatrix}}={\\begin{pmatrix}1&v\\\\0&1\\end{pmatrix}}{\\begin{pmatrix}x\\\\t\\end{pmatrix}}.} With dual numbers the mapping is t ′ + x ′ ϵ = ( 1 + v ϵ ) ( t + x ϵ ) = t + ( x + v t ) ϵ . {\\displaystyle t^{\\prime }+x^{\\prime }\\epsilon =(1+v\\epsilon )(t+x\\epsilon )=t+(x+vt)\\epsilon .} Another view of special relativity as a non-Euclidean geometry was advanced by E. B. Wilson and Gilbert Lewis in Proceedings of the American Academy of Arts and Sciences in 1912. They revamped the analytic geometry implicit in the split-complex number algebra into synthetic geometry of premises and deductions. == Fiction == Non-Euclidean geometry often makes appearances in works of science fiction and fantasy. In 1895, H. G. Wells published the short story \"The Remarkable Case of Davidson's Eyes\". To appreciate this story one should know how antipodal points on a sphere are identified in a model of the elliptic plane. In the story, in the midst of a thunderstorm, Sidney Davidson sees \"Waves and a remarkably neat schooner\" while working in an electrical laboratory at Harlow Technical College. At the story's close, Davidson proves to have witnessed H.M.S. Fulmar off Antipodes Island. Non-Euclidean geometry is sometimes connected with the influence of the 20th-century horror fiction writer H. P. Lovecraft. In his works, many unnatural things follow their own unique laws of geometry: in Lovecraft's Cthulhu Mythos, the sunken city of R'lyeh is characterized by its non-Euclidean geometry. It is heavily implied this is achieved as a side effect of not following the natural laws of this universe rather than simply using an alternate geometric model, as the sheer innate wrongness of it is said to be capable of driving those who look upon it insane. The main character in Robert Pirsig's Zen and the Art of Motorcycle Maintenance mentioned Riemannian geometry on multiple occasions. In The Brothers Karamazov, Dostoevsky discusses non-Euclidean geometry through his character Ivan. Christopher Priest's novel Inverted World describes the struggle of living on a planet with the form of a rotating pseudosphere. Robert Heinlein's The Number of the Beast utilizes non-Euclidean geometry to explain instantaneous transport through space and time and between parallel and fictional universes. Zeno Rogue's HyperRogue is a roguelike game set on the hyperbolic plane, allowing the player to experience many properties of this geometry. Many mechanics, quests, and locations are strongly dependent on the features of hyperbolic geometry. In the Renegade Legion science fiction setting for FASA's wargame, role-playing-game and fiction, faster-than-light travel and communications is possible through the use of Hsieh Ho's Polydimensional Non-Euclidean Geometry, published sometime in the middle of the 22nd century. In Ian Stewart's Flatterland the protagonist Victoria Line visits all kinds of non-Euclidean worlds. == See also == Euclidean space § Other geometric spaces Hyperbolic space Lénárt sphere Projective geometry Non-Euclidean surface growth Parallel (geometry) § In non-Euclidean geometry Spherical geometry § Relation to similar geometries == Notes == == References == A'Campo, Norbert; Papadopoulos, Athanase (2012), \"Notes on non-Euclidean geometry\", Strasbourg Master Class on Geometry, Zürich, Switzerland: European Mathematical Society, pp. 1–182, doi:10.4171/105-1/1, ISBN 978-3-03719-105-7, OCLC 776505866 Anderson, James W. (1999), Hyperbolic Geometry, London: Springer, ISBN 978-1-85233-156-6 Beltrami, Eugenio (1868), \"Teoria fondamentale degli spazii di curvatura costante\" , Annali di Matematica, 2 (1): 232–255, doi:10.1007/BF02419615 Blumenthal, Leonard M. (1980), A Modern View of Geometry, Mineola, NY: Dover, ISBN 978-0-486-63962-8 Carrol, Lewis (1879), Euclid and His Modern Rivals, London: MacMillan Coxeter, H. S. M. (1961) , Non-Euclidean Geometry (4th ed.), Toronto: University of Toronto Press Faber, Richard L. (1983), Foundations of Euclidean and Non-Euclidean Geometry, New York: Dekker, ISBN 978-0-8247-1748-3 Gray, Jeremy (1989) , Ideas of Space: Euclidean, Non-Euclidean, and Relativistic (2nd ed.), Oxford: Clarendon Press, ISBN 978-0-19-853935-3 Greenberg, Marvin J. (2008), Euclidean and Non-Euclidean Geometries: Development and History (4th ed.), New York: W.H. Freeman, ISBN 978-0-7167-9948-1 Kline, Morris (1972), Mathematical Thought from Ancient to Modern Times, New York: Oxford University Press, p. 861-81, ISBN 978-0-19-501496-9 Lavenda, Bernard H., ed. (2012), A New Perspective on Relativity: An Odyssey in Non-Euclidean Geometries, Singapore: World Scientific, Bibcode:2012npro.book.....L, doi:10.1142/9789814340496_0001, ISBN 978-981-4340-49-6 Lobačevskij, Nikolaj I. (2010), Pangeometry, translated by Papadopoulos, Athanase, Zürich: European Mathematical Society, ISBN 978-3-03719-087-6 Manning, Henry Parker (1901), Non-Euclidean Geometry Meschkowski, Herbert (1964), Noneuclidean Geometry, translated by Shenitzer, A., New York: Academic Press Milnor, John W. (1982), \"Hyperbolic geometry: The first 150 years\", Bulletin of the American Mathematical Society, 6 (1): 9–24, doi:10.1090/S0273-0979-1982-14958-8 Richards, Joan L. (1988), Mathematical Visions: The Pursuit of Geometry in Victorian England, Boston: Academic Press, ISBN 978-0-12-587445-8 Smart, James R. (1997), Modern Geometries (5. ed.), Pacific Grove, CA: Brooks/Cole, ISBN 978-0-534-35188-5 Stewart, Ian (2001), Flatterland: Like Flatland, Only More So, Cambridge, MA: Perseus Books, ISBN 978-0-7382-0675-2 Stillwell, John (1996), Sources of Hyperbolic Geometry, Providence, RI: American Mathematical Society, ISBN 978-0-8218-0529-9 Trudeau, Richard J. (2001) , The Non-Euclidean Revolution, Boston: Birkhäuser, ISBN 978-1-4612-2102-9 Lambert, Johann Heinrich (2014), Papadopoulos, Athanase; Théret, Guillaume (eds.), La théorie des lignes parallèles de Johann Heinrich Lambert, Paris: Librairie Albert Blanchard, ISBN 978-2-85367-266-5 == External links == Media related to Non-Euclidean geometry at Wikimedia Commons Roberto Bonola (1912) Non-Euclidean Geometry, Open Court, Chicago. O'Connor, John J.; Robertson, Edmund F., \"Non-Euclidean Geometry\", MacTutor History of Mathematics Archive, University of St Andrews \"Non-Euclidean geometries\" from Encyclopedia of Math of European Mathematical Society and Springer Synthetic Spacetime, a digest of the axioms used, and theorems proved, by Wilson and Lewis. Archived by WebCite."
+  },
+  "chunks": [
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0000",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 671,
+      "content": "In mathematics, non-Euclidean geometry consists of two geometries based on axioms closely related to those that specify Euclidean geometry. As Euclidean geometry lies at the intersection of metric geometry and affine geometry, non-Euclidean geometry arises by either replacing the parallel postulate with an alternative, or relaxing the metric requirement. In the former case, one obtains hyperbolic geometry and elliptic geometry, the traditional non-Euclidean geometries. When the metric requirement is relaxed, then there are affine planes associated with the planar algebras, which give rise to kinematic geometries that have also been called non-Euclidean geometry.",
+      "char_count": 670,
+      "token_estimate": 167,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0001",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Principles ==",
+      "heading_path": "== Principles ==",
+      "start_char": 687,
+      "end_char": 1210,
+      "content": "== Principles == The essential difference between the metric geometries is the nature of parallel lines. Euclid's fifth postulate, the parallel postulate, is equivalent to Playfair's postulate, which states that, within a two-dimensional plane, for any given line l and a point A, which is not on l, there is exactly one line through A that does not intersect l. In hyperbolic geometry, by contrast, there are infinitely many lines through A not intersecting l, while in elliptic geometry, any line through A intersects l.",
+      "char_count": 522,
+      "token_estimate": 130,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0002",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Principles ==",
+      "heading_path": "== Principles ==",
+      "start_char": 1210,
+      "end_char": 1993,
+      "content": "Another way to describe the differences between these geometries is to consider two straight lines indefinitely extended in a two-dimensional plane that are both perpendicular to a third line (in the same plane): In Euclidean geometry, the lines remain at a constant distance from each other (meaning that a line drawn perpendicular to one line at any point will intersect the other line and the length of the line segment joining the points of intersection remains constant) and are known as parallels. In hyperbolic geometry, they diverge from each other, increasing in distance as one moves further from the points of intersection with the common perpendicular; these lines are often called ultraparallels. In elliptic geometry, the lines converge toward each other and intersect.",
+      "char_count": 783,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0003",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Background ==",
+      "heading_path": "== = Background ==",
+      "start_char": 2010,
+      "end_char": 2566,
+      "content": "== = Background === Euclidean geometry, named after the Greek mathematician Euclid, includes some of the oldest known mathematics, and geometries that deviated from this were not widely accepted as legitimate until the 19th century. The debate that eventually led to the discovery of the non-Euclidean geometries began almost as soon as Euclid wrote Elements. In the Elements, Euclid begins with a limited number of assumptions (23 definitions, five common notions, and five postulates) and seeks to prove all the other results (propositions) in the work.",
+      "char_count": 555,
+      "token_estimate": 138,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0004",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Background ==",
+      "heading_path": "== = Background ==",
+      "start_char": 2566,
+      "end_char": 3429,
+      "content": "The most notorious of the postulates is often referred to as \"Euclid's Fifth Postulate\", or simply the parallel postulate, which in Euclid's original formulation is: If a straight line falls on two straight lines in such a manner that the interior angles on the same side are together less than two right angles, then the straight lines, if produced indefinitely, meet on that side on which are the angles less than the two right angles. Other mathematicians have devised simpler forms of this property. Regardless of the form of the postulate, however, it consistently appears more complicated than Euclid's other postulates: To draw a straight line from any point to any point. To produce [extend] a finite straight line continuously in a straight line. To describe a circle with any centre and distance [radius]. That all right angles are equal to one another.",
+      "char_count": 863,
+      "token_estimate": 215,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0005",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Background ==",
+      "heading_path": "== = Background ==",
+      "start_char": 3430,
+      "end_char": 4391,
+      "content": "For at least a thousand years, geometers were troubled by the disparate complexity of the fifth postulate, and believed it could be proved as a theorem from the other four. Many attempted to find a proof by contradiction, including Ibn al-Haytham (Alhazen, 11th century), Omar Khayyám (12th century), Nasīr al-Dīn al-Tūsī (13th century), and Giovanni Girolamo Saccheri (18th century). The theorems of Ibn al-Haytham, Khayyam and al-Tusi on quadrilaterals, including the Lambert quadrilateral and Saccheri quadrilateral, were \"the first few theorems of the hyperbolic and the elliptic geometries\". These theorems along with their alternative postulates, such as Playfair's axiom, played an important role in the later development of non-Euclidean geometry. These early attempts at challenging the fifth postulate had a considerable influence on its development among later European geometers, including Witelo, Levi ben Gerson, Alfonso, John Wallis and Saccheri.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0006",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Background ==",
+      "heading_path": "== = Background ==",
+      "start_char": 4392,
+      "end_char": 5386,
+      "content": "All of these early attempts made at trying to formulate non-Euclidean geometry, however, provided flawed proofs of the parallel postulate, depending on assumptions that are now recognized as essentially equivalent to the parallel postulate. These early attempts did, however, provide some early properties of the hyperbolic and elliptic geometries. Khayyam, for example, tried to derive it from an equivalent postulate he formulated from \"the principles of the Philosopher\" (Aristotle): \"Two convergent straight lines intersect and it is impossible for two convergent straight lines to diverge in the direction in which they converge.\" Khayyam then considered the three cases right, obtuse, and acute that the summit angles of a Saccheri quadrilateral can take and after proving a number of theorems about them, he correctly refuted the obtuse and acute cases based on his postulate and hence derived the classic postulate of Euclid, which he didn't realize was equivalent to his own postulate.",
+      "char_count": 994,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0007",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Background ==",
+      "heading_path": "== = Background ==",
+      "start_char": 5387,
+      "end_char": 6112,
+      "content": "Another example is al-Tusi's son, Sadr al-Din (sometimes known as \"Pseudo-Tusi\"), who wrote a book on the subject in 1298, based on al-Tusi's later thoughts, which presented another hypothesis equivalent to the parallel postulate. \"He essentially revised both the Euclidean system of axioms and postulates and the proofs of many propositions from the Elements.\" His work was published in Rome in 1594 and was studied by European geometers, including Saccheri who criticised this work as well as that of Wallis. Giordano Vitale, in his book Euclide restituo (1680, 1686), used the Saccheri quadrilateral to prove that if three points are equidistant on the base AB and the summit CD, then AB and CD are everywhere equidistant.",
+      "char_count": 725,
+      "token_estimate": 181,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0008",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Background ==",
+      "heading_path": "== = Background ==",
+      "start_char": 6113,
+      "end_char": 7090,
+      "content": "In a work titled Euclides ab Omni Naevo Vindicatus (Euclid Freed from All Flaws), published in 1733, Saccheri quickly discarded elliptic geometry as a possibility (some others of Euclid's axioms must be modified for elliptic geometry to work) and set to work proving a great number of results in hyperbolic geometry. He finally reached a point where he believed that his results demonstrated the impossibility of hyperbolic geometry. His claim seems to have been based on Euclidean presuppositions, because no logical contradiction was present. In this attempt to prove Euclidean geometry he instead unintentionally discovered a new viable geometry, but did not realize it. In 1766 Johann Lambert wrote, but did not publish, Theorie der Parallellinien in which he attempted, as Saccheri did, to prove the fifth postulate. He worked with a figure now known as a Lambert quadrilateral, a quadrilateral with three right angles (can be considered half of a Saccheri quadrilateral).",
+      "char_count": 977,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0009",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Background ==",
+      "heading_path": "== = Background ==",
+      "start_char": 7091,
+      "end_char": 7753,
+      "content": "He quickly eliminated the possibility that the fourth angle is obtuse, as had Saccheri and Khayyam, and then proceeded to prove many theorems under the assumption of an acute angle. Unlike Saccheri, he never felt that he had reached a contradiction with this assumption. He had proved the non-Euclidean result that the sum of the angles in a triangle increases as the area of the triangle decreases, and this led him to speculate on the possibility of a model of the acute case on a sphere of imaginary radius. He did not carry this idea any further. At this time it was widely believed that the universe worked according to the principles of Euclidean geometry.",
+      "char_count": 662,
+      "token_estimate": 165,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0010",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Development of non-Euclidean geometry ==",
+      "heading_path": "== = Development of non-Euclidean geometry ==",
+      "start_char": 7781,
+      "end_char": 8611,
+      "content": "== = Development of non-Euclidean geometry === The beginning of the 19th century would finally witness decisive steps in the creation of non-Euclidean geometry. Circa 1813, Carl Friedrich Gauss and independently around 1818, the German professor of law Ferdinand Karl Schweikart had the germinal ideas of non-Euclidean geometry worked out, but neither published any results. Schweikart's nephew Franz Taurinus did publish important results of hyperbolic trigonometry in two papers in 1825 and 1826, yet while admitting the internal consistency of hyperbolic geometry, he still believed in the special role of Euclidean geometry. Then, in 1829–1830 the Russian mathematician Nikolai Ivanovich Lobachevsky and in 1832 the Hungarian mathematician János Bolyai separately and independently published treatises on hyperbolic geometry.",
+      "char_count": 829,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0011",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Development of non-Euclidean geometry ==",
+      "heading_path": "== = Development of non-Euclidean geometry ==",
+      "start_char": 8611,
+      "end_char": 9573,
+      "content": "Consequently, hyperbolic geometry is called Lobachevskian or Bolyai-Lobachevskian geometry, as both mathematicians, independent of each other, are the basic authors of non-Euclidean geometry. Gauss mentioned to Bolyai's father, when shown the younger Bolyai's work, that he had developed such a geometry several years before, though he did not publish. While Lobachevsky created a non-Euclidean geometry by negating the parallel postulate, Bolyai worked out a geometry where both the Euclidean and the hyperbolic geometry are possible depending on a parameter k. Bolyai ends his work by mentioning that it is not possible to decide through mathematical reasoning alone if the geometry of the physical universe is Euclidean or non-Euclidean; this is a task for the physical sciences. Bernhard Riemann, in a famous lecture in 1854, founded the field of Riemannian geometry, discussing in particular the ideas now called manifolds, Riemannian metric, and curvature.",
+      "char_count": 962,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0012",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Development of non-Euclidean geometry ==",
+      "heading_path": "== = Development of non-Euclidean geometry ==",
+      "start_char": 9574,
+      "end_char": 10079,
+      "content": "He constructed an infinite family of non-Euclidean geometries by giving a formula for a family of Riemannian metrics on the unit ball in Euclidean space. The simplest of these is called elliptic geometry and it is considered a non-Euclidean geometry due to its lack of parallel lines. By formulating the geometry in terms of a curvature tensor, Riemann allowed non-Euclidean geometry to apply to higher dimensions. Beltrami (1868) was the first to apply Riemann's geometry to spaces of negative curvature.",
+      "char_count": 505,
+      "token_estimate": 126,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0013",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Terminology ==",
+      "heading_path": "== = Terminology ==",
+      "start_char": 10054,
+      "end_char": 10945,
+      "content": "== = Terminology === It was Gauss who coined the term \"non-Euclidean geometry\". He was referring to his own work, which today we call hyperbolic geometry or Lobachevskian geometry. Several modern authors still use the generic term non-Euclidean geometry to mean hyperbolic geometry. Arthur Cayley noted that distance between points inside a conic could be defined in terms of logarithm and the projective cross-ratio function. The method has become called the Cayley–Klein metric because Felix Klein exploited it to describe the non-Euclidean geometries in articles in 1871 and 1873 and later in book form. The Cayley–Klein metrics provided working models of hyperbolic and elliptic metric geometries, as well as Euclidean geometry. Klein is responsible for the terms \"hyperbolic\" and \"elliptic\" (in his system he called Euclidean geometry parabolic, a term that generally fell out of use).",
+      "char_count": 890,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0014",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Terminology ==",
+      "heading_path": "== = Terminology ==",
+      "start_char": 10945,
+      "end_char": 11433,
+      "content": "His influence has led to the current usage of the term \"non-Euclidean geometry\" to mean either \"hyperbolic\" or \"elliptic\" geometry. There are some mathematicians who would extend the list of geometries that should be called \"non-Euclidean\" in various ways. There are many kinds of geometry that are quite different from Euclidean geometry but are also not necessarily included in the conventional meaning of \"non-Euclidean geometry\", such as more general instances of Riemannian geometry.",
+      "char_count": 488,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0015",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Axiomatic basis of non-Euclidean geometry ==",
+      "heading_path": "== Axiomatic basis of non-Euclidean geometry ==",
+      "start_char": 11462,
+      "end_char": 12122,
+      "content": "== Axiomatic basis of non-Euclidean geometry == Euclidean geometry can be axiomatically described in several ways. However, Euclid's original system of five postulates (axioms) is not one of these, as his proofs relied on several unstated assumptions that should also have been taken as axioms. Hilbert's system consisting of 20 axioms most closely follows the approach of Euclid and provides the justification for all of Euclid's proofs. Other systems, using different sets of undefined terms obtain the same geometry by different paths. All approaches, however, have an axiom that is logically equivalent to Euclid's fifth postulate, the parallel postulate.",
+      "char_count": 659,
+      "token_estimate": 164,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0016",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Axiomatic basis of non-Euclidean geometry ==",
+      "heading_path": "== Axiomatic basis of non-Euclidean geometry ==",
+      "start_char": 12122,
+      "end_char": 13064,
+      "content": "Hilbert uses the Playfair axiom form, while Birkhoff, for instance, uses the axiom that says that, \"There exists a pair of similar but not congruent triangles.\" In any of these systems, removal of the one axiom equivalent to the parallel postulate, in whatever form it takes, and leaving all the other axioms intact, produces absolute geometry. As the first 28 propositions of Euclid (in The Elements) do not require the use of the parallel postulate or anything equivalent to it, they are all true statements in absolute geometry. To obtain a non-Euclidean geometry, the parallel postulate (or its equivalent) must be replaced by its negation. Negating the Playfair's axiom form, since it is a compound statement (... there exists one and only one ...), can be done in two ways: either there will exist more than one line through the point parallel to the given line or there will exist no lines through the point parallel to the given line.",
+      "char_count": 942,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0017",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Axiomatic basis of non-Euclidean geometry ==",
+      "heading_path": "== Axiomatic basis of non-Euclidean geometry ==",
+      "start_char": 13065,
+      "end_char": 14043,
+      "content": "In the first case, replacing the parallel postulate (or its equivalent) with the statement \"In a plane, given a point P and a line l not passing through P, there exist two lines through P, which do not meet l\" and keeping all the other axioms, yields hyperbolic geometry. The second case is not dealt with as easily. Simply replacing the parallel postulate with the statement, \"In a plane, given a point P and a line l not passing through P, all the lines through P meet l\", does not give a consistent set of axioms. This follows since parallel lines exist in absolute geometry, but this statement says that there are no parallel lines. This problem was known (in a different guise) to Khayyam, Saccheri and Lambert and was the basis for their rejecting what was known as the \"obtuse angle case\". To obtain a consistent set of axioms that includes this axiom about having no parallel lines, some other axioms must be tweaked. These adjustments depend upon the axiom system used.",
+      "char_count": 978,
+      "token_estimate": 244,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0018",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Axiomatic basis of non-Euclidean geometry ==",
+      "heading_path": "== Axiomatic basis of non-Euclidean geometry ==",
+      "start_char": 14044,
+      "end_char": 14323,
+      "content": "Among others, these tweaks have the effect of modifying Euclid's second postulate from the statement that line segments can be extended indefinitely to the statement that lines are unbounded. Riemann's elliptic geometry emerges as the most natural geometry satisfying this axiom.",
+      "char_count": 279,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0019",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Models ==",
+      "heading_path": "== Models ==",
+      "start_char": 14289,
+      "end_char": 15120,
+      "content": "== Models == Models of non-Euclidean geometry are mathematical models of geometries that are non-Euclidean in the sense that it is not the case that exactly one line can be drawn parallel to a given line l through a point that is not on l. In hyperbolic geometric models, by contrast, there are infinitely many lines through A parallel to l, and in elliptic geometric models, parallel lines do not exist. (See the entries on hyperbolic geometry and elliptic geometry for more information.) Euclidean geometry is modelled by our notion of a \"flat plane.\" The simplest model for elliptic geometry is a sphere, where lines are \"great circles\" (such as the equator or the meridians on a globe), and points opposite each other are identified (considered to be the same). The pseudosphere has the appropriate curvature to model hyperbolic geometry.",
+      "char_count": 842,
+      "token_estimate": 210,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0020",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Elliptic geometry ==",
+      "heading_path": "== = Elliptic geometry ==",
+      "start_char": 15145,
+      "end_char": 15759,
+      "content": "== = Elliptic geometry === The simplest model for elliptic geometry is a sphere, where lines are \"great circles\" (such as the equator or the meridians on a globe), and points opposite each other (called antipodal points) are identified (considered the same). This is also one of the standard models of the real projective plane. The difference is that as a model of elliptic geometry a metric is introduced permitting the measurement of lengths and angles, while as a model of the projective plane there is no such metric. In the elliptic model, for any given line l and a point A, which is not on l, all lines through A will intersect l.",
+      "char_count": 638,
+      "token_estimate": 159,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0021",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Hyperbolic geometry ==",
+      "heading_path": "== = Hyperbolic geometry ==",
+      "start_char": 15786,
+      "end_char": 16703,
+      "content": "== = Hyperbolic geometry === Even after the work of Lobachevsky, Gauss, and Bolyai, the question remained: \"Does such a model exist for hyperbolic geometry?\". The model for hyperbolic geometry was answered by Eugenio Beltrami, in 1868, who first showed that a surface called the pseudosphere has the appropriate curvature to model a portion of hyperbolic space and in a second paper in the same year, defined the Klein model, which models the entirety of hyperbolic space, and used this to show that Euclidean geometry and hyperbolic geometry were equiconsistent so that hyperbolic geometry was logically consistent if and only if Euclidean geometry was. (The reverse implication follows from the horosphere model of Euclidean geometry.) In the hyperbolic model, within a two-dimensional plane, for any given line l and a point A, which is not on l, there are infinitely many lines through A that do not intersect l.",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0022",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Hyperbolic geometry ==",
+      "heading_path": "== = Hyperbolic geometry ==",
+      "start_char": 16703,
+      "end_char": 17085,
+      "content": "In these models, the concepts of non-Euclidean geometries are represented by Euclidean objects in a Euclidean setting. This introduces a perceptual distortion wherein the straight lines of the non-Euclidean geometry are represented by Euclidean curves that visually bend. This \"bending\" is not a property of the non-Euclidean lines, only an artifice of the way they are represented.",
+      "char_count": 382,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0023",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== = Three-dimensional non-Euclidean geometry ==",
+      "heading_path": "== = Three-dimensional non-Euclidean geometry ==",
+      "start_char": 17107,
+      "end_char": 17485,
+      "content": "== = Three-dimensional non-Euclidean geometry === In three dimensions, there are eight models of geometries. There are Euclidean, elliptic, and hyperbolic geometries, as in the two-dimensional case; mixed geometries that are partially Euclidean and partially hyperbolic or spherical; twisted versions of the mixed geometries; and one unusual geometry that is completely anisotropic (i.e. every direction behaves differently).",
+      "char_count": 425,
+      "token_estimate": 106,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0024",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Uncommon properties ==",
+      "heading_path": "== Uncommon properties ==",
+      "start_char": 17510,
+      "end_char": 18472,
+      "content": "== Uncommon properties == Euclidean and non-Euclidean geometries naturally have many similar properties, namely those that do not depend upon the nature of parallelism. This commonality is the subject of absolute geometry (also called neutral geometry). However, the properties that distinguish one geometry from others have historically received the most attention. Besides the behavior of lines with respect to a common perpendicular, mentioned in the introduction, we also have the following: A Lambert quadrilateral is a quadrilateral with three right angles. The fourth angle of a Lambert quadrilateral is acute if the geometry is hyperbolic, a right angle if the geometry is Euclidean or obtuse if the geometry is elliptic. Consequently, rectangles exist (a statement equivalent to the parallel postulate) only in Euclidean geometry. A Saccheri quadrilateral is a quadrilateral with two sides of equal length, both perpendicular to a side called the base.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0025",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Uncommon properties ==",
+      "heading_path": "== Uncommon properties ==",
+      "start_char": 18472,
+      "end_char": 19276,
+      "content": "The other two angles of a Saccheri quadrilateral are called the summit angles and they have equal measure. The summit angles of a Saccheri quadrilateral are acute if the geometry is hyperbolic, right angles if the geometry is Euclidean and obtuse angles if the geometry is elliptic. The sum of the measures of the angles of any triangle is less than 180° if the geometry is hyperbolic, equal to 180° if the geometry is Euclidean, and greater than 180° if the geometry is elliptic. The defect of a triangle is the numerical value (180° − the sum of the measures of the angles of the triangle). This result may also be stated as: the defect of triangles in hyperbolic geometry is positive, the defect of triangles in Euclidean geometry is zero, and the defect of triangles in elliptic geometry is negative.",
+      "char_count": 804,
+      "token_estimate": 201,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0026",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Importance ==",
+      "heading_path": "== Importance ==",
+      "start_char": 19268,
+      "end_char": 20100,
+      "content": "== Importance == Before the models of a non-Euclidean plane were presented by Beltrami, Klein, and Poincaré, Euclidean geometry stood unchallenged as the mathematical model of space. Furthermore, since the substance of the subject in synthetic geometry was a chief exhibit of rationality, the Euclidean point of view represented absolute authority. The discovery of the non-Euclidean geometries had a ripple effect which went far beyond the boundaries of mathematics and science. The philosopher Immanuel Kant's treatment of human knowledge had a special role for geometry. It was his prime example of synthetic a priori knowledge; not derived from the senses nor deduced through logic — our knowledge of space was a truth that we were born with. Unfortunately for Kant, his concept of this unalterably true geometry was Euclidean.",
+      "char_count": 831,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0027",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Importance ==",
+      "heading_path": "== Importance ==",
+      "start_char": 20100,
+      "end_char": 21041,
+      "content": "Theology was also affected by the change from absolute truth to relative truth in the way that mathematics is related to the world around it, that was a result of this paradigm shift. Non-Euclidean geometry is an example of a scientific revolution in the history of science, in which mathematicians and scientists changed the way they viewed their subjects. Some geometers called Lobachevsky the \"Copernicus of Geometry\" due to the revolutionary character of his work. The existence of non-Euclidean geometries impacted the intellectual life of Victorian England in many ways and in particular was one of the leading factors that caused a re-examination of the teaching of geometry based on Euclid's Elements. This curriculum issue was hotly debated at the time and was even the subject of a book, Euclid and his Modern Rivals, written by Charles Lutwidge Dodgson (1832–1898) better known as Lewis Carroll, the author of Alice in Wonderland.",
+      "char_count": 941,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0028",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Planar algebras ==",
+      "heading_path": "== Planar algebras ==",
+      "start_char": 21047,
+      "end_char": 22016,
+      "content": "== Planar algebras == In analytic geometry a plane is described with Cartesian coordinates: C = { ( x , y ) : x , y ∈ R } {\\displaystyle C=\\{(x,y):x,y\\in \\mathbb {R} \\}} The points are sometimes identified with generalized complex numbers z = x + y ε where ε2 ∈ { –1, 0, 1 }. The Euclidean plane corresponds to the case ε2 = −1, an imaginary unit. Since the modulus of z is given by z z ∗ = ( x + y ϵ ) ( x − y ϵ ) = x 2 + y 2 , {\\displaystyle zz^{\\ast }=(x+y\\epsilon )(x-y\\epsilon )=x^{2}+y^{2},} this quantity is the square of the Euclidean distance between z and the origin. For instance, {z | z z* = 1} is the unit circle. For planar algebra, non-Euclidean geometry arises in the other cases. When ε2 = +1, a hyperbolic unit. Then z is a split-complex number and conventionally j replaces epsilon. Then z z ∗ = ( x + y j ) ( x − y j ) = x 2 − y 2 {\\displaystyle zz^{\\ast }=(x+y\\mathbf {j} )(x-y\\mathbf {j} )=x^{2}-y^{2}\\!} and {z | z z* = 1} is the unit hyperbola.",
+      "char_count": 968,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0029",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Planar algebras ==",
+      "heading_path": "== Planar algebras ==",
+      "start_char": 22016,
+      "end_char": 22338,
+      "content": "When ε2 = 0, then z is a dual number. This approach to non-Euclidean geometry explains the non-Euclidean angles: the parameters of slope in the dual number plane and hyperbolic angle in the split-complex plane correspond to angle in Euclidean geometry. Indeed, they each arise in polar decomposition of a complex number z.",
+      "char_count": 322,
+      "token_estimate": 80,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0030",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Kinematic geometries ==",
+      "heading_path": "== Kinematic geometries ==",
+      "start_char": 22344,
+      "end_char": 23241,
+      "content": "== Kinematic geometries == Hyperbolic geometry found an application in kinematics with the physical cosmology introduced by Hermann Minkowski in 1908. Minkowski introduced terms like worldline and proper time into mathematical physics. He realized that the submanifold, of events one moment of proper time into the future, could be considered a hyperbolic space of three dimensions. Already in the 1890s Alexander Macfarlane was charting this submanifold through his Algebra of Physics and hyperbolic quaternions, though Macfarlane did not use cosmological language as Minkowski did in 1908. The relevant structure is now called the hyperboloid model of hyperbolic geometry. The non-Euclidean planar algebras support kinematic geometries in the plane. For instance, the split-complex number z = eaj can represent a spacetime event one moment into the future of a frame of reference of rapidity a.",
+      "char_count": 896,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0031",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Kinematic geometries ==",
+      "heading_path": "== Kinematic geometries ==",
+      "start_char": 23241,
+      "end_char": 24239,
+      "content": "Furthermore, multiplication by z amounts to a Lorentz boost mapping the frame with rapidity zero to that with rapidity a. Kinematic study makes use of the dual numbers z = x + y ϵ , ϵ 2 = 0 , {\\displaystyle z=x+y\\epsilon ,\\quad \\epsilon ^{2}=0,} to represent the classical description of motion in absolute time and space: The equations x ′ = x + v t , t ′ = t {\\displaystyle x^{\\prime }=x+vt,\\quad t^{\\prime }=t} are equivalent to a shear mapping in linear algebra: ( x ′ t ′ ) = ( 1 v 0 1 ) ( x t ) . {\\displaystyle {\\begin{pmatrix}x'\\\\t'\\end{pmatrix}}={\\begin{pmatrix}1&v\\\\0&1\\end{pmatrix}}{\\begin{pmatrix}x\\\\t\\end{pmatrix}}.} With dual numbers the mapping is t ′ + x ′ ϵ = ( 1 + v ϵ ) ( t + x ϵ ) = t + ( x + v t ) ϵ . {\\displaystyle t^{\\prime }+x^{\\prime }\\epsilon =(1+v\\epsilon )(t+x\\epsilon )=t+(x+vt)\\epsilon .} Another view of special relativity as a non-Euclidean geometry was advanced by E. B. Wilson and Gilbert Lewis in Proceedings of the American Academy of Arts and Sciences in 1912.",
+      "char_count": 998,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0032",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Fiction ==",
+      "heading_path": "== Fiction ==",
+      "start_char": 24360,
+      "end_char": 25250,
+      "content": "== Fiction == Non-Euclidean geometry often makes appearances in works of science fiction and fantasy. In 1895, H. G. Wells published the short story \"The Remarkable Case of Davidson's Eyes\". To appreciate this story one should know how antipodal points on a sphere are identified in a model of the elliptic plane. In the story, in the midst of a thunderstorm, Sidney Davidson sees \"Waves and a remarkably neat schooner\" while working in an electrical laboratory at Harlow Technical College. At the story's close, Davidson proves to have witnessed H.M.S. Fulmar off Antipodes Island. Non-Euclidean geometry is sometimes connected with the influence of the 20th-century horror fiction writer H. P. Lovecraft. In his works, many unnatural things follow their own unique laws of geometry: in Lovecraft's Cthulhu Mythos, the sunken city of R'lyeh is characterized by its non-Euclidean geometry.",
+      "char_count": 889,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0033",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Fiction ==",
+      "heading_path": "== Fiction ==",
+      "start_char": 25250,
+      "end_char": 26191,
+      "content": "It is heavily implied this is achieved as a side effect of not following the natural laws of this universe rather than simply using an alternate geometric model, as the sheer innate wrongness of it is said to be capable of driving those who look upon it insane. The main character in Robert Pirsig's Zen and the Art of Motorcycle Maintenance mentioned Riemannian geometry on multiple occasions. In The Brothers Karamazov, Dostoevsky discusses non-Euclidean geometry through his character Ivan. Christopher Priest's novel Inverted World describes the struggle of living on a planet with the form of a rotating pseudosphere. Robert Heinlein's The Number of the Beast utilizes non-Euclidean geometry to explain instantaneous transport through space and time and between parallel and fictional universes. Zeno Rogue's HyperRogue is a roguelike game set on the hyperbolic plane, allowing the player to experience many properties of this geometry.",
+      "char_count": 941,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "noneuclideangeometry_af58c5e3_c0034",
+      "article_id": "noneuclideangeometry_af58c5e3",
+      "section": "== Fiction ==",
+      "heading_path": "== Fiction ==",
+      "start_char": 26192,
+      "end_char": 26671,
+      "content": "Many mechanics, quests, and locations are strongly dependent on the features of hyperbolic geometry. In the Renegade Legion science fiction setting for FASA's wargame, role-playing-game and fiction, faster-than-light travel and communications is possible through the use of Hsieh Ho's Polydimensional Non-Euclidean Geometry, published sometime in the middle of the 22nd century. In Ian Stewart's Flatterland the protagonist Victoria Line visits all kinds of non-Euclidean worlds.",
+      "char_count": 479,
+      "token_estimate": 119,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "Who advanced a view of special relativity as a non-Euclidean geometry in 1912, and where was this view published?",
+        "answer": "In 1912, E. B. Wilson and Gilbert Lewis advanced a view of special relativity as a non-Euclidean geometry in the Proceedings of the American Academy of Arts and Sciences.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0031"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0031"
+        ]
+      },
+      {
+        "question": "What three cases for the summit angles of a Saccheri quadrilateral did Khayyam consider in his attempt to prove the parallel postulate?",
+        "answer": "Khayyam considered the right, obtuse, and acute cases for the summit angles of a Saccheri quadrilateral.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0006"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0006"
+        ]
+      },
+      {
+        "question": "Why does replacing the parallel postulate with the statement \"all the lines through P meet l\" result in an inconsistent set of axioms?",
+        "answer": "This statement creates an inconsistency because it asserts that there are no parallel lines, which contradicts the fact that parallel lines are proven to exist in absolute geometry.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0017"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0017"
+        ]
+      },
+      {
+        "question": "Compare and contrast Euclidean, hyperbolic, and elliptic geometries based on their different principles regarding parallel lines.",
+        "answer": "The essential difference between these three metric geometries lies in their treatment of parallel lines, which stems from alternatives to Euclid's parallel postulate. In Euclidean geometry, for any given line and a point not on it, there is exactly one line through the point that does not intersect the first line. Furthermore, two lines perpendicular to a third line remain at a constant distance from each other. In hyperbolic geometry, there are infinitely many lines through the point that do not intersect the given line; these lines, when perpendicular to a common third line, diverge from each other and are called ultraparallels. In elliptic geometry, any line through the point will intersect the given line, meaning there are no parallel lines. Correspondingly, two lines perpendicular to a third line will converge toward each other and eventually intersect.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0000",
+          "noneuclideangeometry_af58c5e3_c0001",
+          "noneuclideangeometry_af58c5e3_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0001",
+          "noneuclideangeometry_af58c5e3_c0002",
+          "noneuclideangeometry_af58c5e3_c0000"
+        ]
+      },
+      {
+        "question": "What information is provided about == = Background ==?",
+        "answer": "The text provides information about == = Background == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0003",
+          "noneuclideangeometry_af58c5e3_c0004",
+          "noneuclideangeometry_af58c5e3_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0003",
+          "noneuclideangeometry_af58c5e3_c0005",
+          "noneuclideangeometry_af58c5e3_c0004"
+        ]
+      },
+      {
+        "question": "How did the work of geometers Khayyam, Saccheri, and Lambert relate to each other in their attempts to prove Euclid's fifth postulate?",
+        "answer": "Khayyam, Saccheri, and Lambert all attempted to prove the fifth postulate by refuting the obtuse and acute angle hypotheses for a specific type of quadrilateral. Khayyam first used a Saccheri quadrilateral to analyze its summit angles. Centuries later, in 1733, Saccheri also used the Saccheri quadrilateral in a more extensive, though ultimately flawed, attempt to prove the postulate, unintentionally discovering hyperbolic geometry. Following him, in 1766, Johann Lambert used a figure known as a Lambert quadrilateral, which is considered half of a Saccheri quadrilateral, for the same purpose.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0006",
+          "noneuclideangeometry_af58c5e3_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0008",
+          "noneuclideangeometry_af58c5e3_c0006"
+        ]
+      },
+      {
+        "question": "How do the principles of hyperbolic geometry differ from Euclidean geometry regarding parallel lines, considering both the number of parallels through a point and the behavior of lines perpendicular to a common line?",
+        "answer": "In Euclidean geometry, for a given line and a point not on it, there is exactly one line that passes through the point and does not intersect the given line. This corresponds to the principle that two lines perpendicular to a third line will remain at a constant distance from each other. In contrast, hyperbolic geometry allows for infinitely many lines to pass through the point without intersecting the given line. This is reflected in the behavior of two lines perpendicular to a third line, which will diverge from each other, increasing their distance as they extend.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0001",
+          "noneuclideangeometry_af58c5e3_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0002",
+          "noneuclideangeometry_af58c5e3_c0001"
+        ]
+      },
+      {
+        "question": "Why did geometers for over a thousand years attempt to prove Euclid's Fifth Postulate, and what was the fundamental flaw in these early efforts?",
+        "answer": "For at least a thousand years, geometers attempted to prove the Fifth Postulate because its complexity was so disparate compared to Euclid's other four postulates, leading them to believe it could be proven as a theorem from the others. The fundamental flaw in these early attempts was that their proofs relied on assumptions that are now recognized as being essentially equivalent to the parallel postulate itself.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0004",
+          "noneuclideangeometry_af58c5e3_c0005",
+          "noneuclideangeometry_af58c5e3_c0006"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0005",
+          "noneuclideangeometry_af58c5e3_c0006",
+          "noneuclideangeometry_af58c5e3_c0004"
+        ]
+      },
+      {
+        "question": "How did the approaches to developing non-Euclidean geometry differ between early 19th-century mathematicians like Lobachevsky and Bolyai, and the later work of Bernhard Riemann?",
+        "answer": "Early 19th-century mathematicians Nikolai Lobachevsky and János Bolyai developed hyperbolic geometry by directly challenging Euclid's parallel postulate. Lobachevsky created his geometry by negating the postulate, while Bolyai worked out a system where both Euclidean and hyperbolic geometry were possible depending on a parameter. In contrast, Bernhard Riemann's later work in 1854 took a more general approach. He founded Riemannian geometry, introducing concepts like manifolds, Riemannian metric, and curvature. This allowed him to construct an infinite family of non-Euclidean geometries, including elliptic geometry, and to formulate geometry in terms of a curvature tensor, which extended the concepts to higher dimensions.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0010",
+          "noneuclideangeometry_af58c5e3_c0011",
+          "noneuclideangeometry_af58c5e3_c0012"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0011",
+          "noneuclideangeometry_af58c5e3_c0010",
+          "noneuclideangeometry_af58c5e3_c0012"
+        ]
+      },
+      {
+        "question": "How has the meaning of the term \"non-Euclidean geometry\" evolved from its original coining to its current conventional usage?",
+        "answer": "Initially, Gauss coined the term \"non-Euclidean geometry\" to refer specifically to his work on what is now known as hyperbolic geometry. However, due to the influence of Felix Klein, who introduced the terms \"hyperbolic\" and \"elliptic,\" the term \"non-Euclidean geometry\" has evolved and is now conventionally used to refer to either hyperbolic or elliptic geometry.",
+        "related_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0013",
+          "noneuclideangeometry_af58c5e3_c0014"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "noneuclideangeometry_af58c5e3_c0014",
+          "noneuclideangeometry_af58c5e3_c0013"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:47.309Z",
+    "content_format": "markdown",
+    "total_chunks": 35,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

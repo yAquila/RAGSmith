@@ -1,0 +1,619 @@
+{
+  "article": {
+    "id": "lawoflargenumbers_7678dd59",
+    "title": "Law of large numbers",
+    "url": "https://en.wikipedia.org/wiki/Law_of_large_numbers",
+    "lang": "en",
+    "created_at": "2025-07-31T06:35:07.409385",
+    "content": "---\nid: lawoflargenumbers_7678dd59\nurl: https://en.wikipedia.org/wiki/Law_of_large_numbers\ntitle: Law of large numbers\nlang: en\ncreated_at: '2025-07-31T06:27:07.522487'\nchecksum: 7fd648999c1394eda5427cac11f889e8b8e3f561d4816afd320722b017f92d64\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4985\n  char_count: 28047\n  num_chunks: 36\n  original_chunks: 41\n  filtered_out: 5\n  num_sections: 0\n---\nIn probability theory, the law of large numbers is a mathematical law that states that the average of the results obtained from a large number of independent random samples converges to the true value, if it exists. More formally, the law of large numbers states that given a sample of independent and identically distributed values, the sample mean converges to the true mean. The law of large numbers is important because it guarantees stable long-term results for the averages of some random events. For example, while a casino may lose money in a single spin of the roulette wheel, its earnings will tend towards a predictable percentage over a large number of spins. Any winning streak by a player will eventually be overcome by the parameters of the game. Importantly, the law applies (as the name indicates) only when a large number of observations are considered. There is no principle that a small number of observations will coincide with the expected value or that a streak of one value will immediately be \"balanced\" by the others (see the gambler's fallacy). The law of large numbers only applies to the average of the results obtained from repeated trials and claims that this average converges to the expected value; it does not claim that the sum of n results gets close to the expected value times n as n increases. Throughout its history, many mathematicians have refined this law. Today, the law of large numbers is used in many fields including statistics, probability theory, economics, and insurance. == Examples == For example, a single roll of a six-sided dice produces one of the numbers 1, 2, 3, 4, 5, or 6, each with equal probability. Therefore, the expected value of the roll is: 1 + 2 + 3 + 4 + 5 + 6 6 = 3.5 {\\displaystyle {\\frac {1+2+3+4+5+6}{6}}=3.5} According to the law of large numbers, if a large number of six-sided dice are rolled, the average of their values (sometimes called the sample mean) will approach 3.5, with the precision increasing as more dice are rolled. It follows from the law of large numbers that the empirical probability of success in a series of Bernoulli trials will converge to the theoretical probability. For a Bernoulli random variable, the expected value is the theoretical probability of success, and the average of n such variables (assuming they are independent and identically distributed (i.i.d.)) is precisely the relative frequency. For example, a fair coin toss is a Bernoulli trial. When a fair coin is flipped once, the theoretical probability that the outcome will be heads is equal to 1⁄2. Therefore, according to the law of large numbers, the proportion of heads in a \"large\" number of coin flips \"should be\" roughly 1⁄2. In particular, the proportion of heads after n flips will almost surely converge to 1⁄2 as n approaches infinity. Although the proportion of heads (and tails) approaches 1⁄2, almost surely the absolute difference in the number of heads and tails will become large as the number of flips becomes large. That is, the probability that the absolute difference is a small number approaches zero as the number of flips becomes large. Also, almost surely the ratio of the absolute difference to the number of flips will approach zero. Intuitively, the expected difference grows, but at a slower rate than the number of flips. Another good example of the law of large numbers is the Monte Carlo method. These methods are a broad class of computational algorithms that rely on repeated random sampling to obtain numerical results. The larger the number of repetitions, the better the approximation tends to be. The reason that this method is important is mainly that, sometimes, it is difficult or impossible to use other approaches. == Limitation == The average of the results obtained from a large number of trials may fail to converge in some cases. For instance, the average of n results taken from the Cauchy distribution or some Pareto distributions (α<1) will not converge as n becomes larger; the reason is heavy tails. The Cauchy distribution and the Pareto distribution represent two cases: the Cauchy distribution does not have an expectation, whereas the expectation of the Pareto distribution (α<1) is infinite. One way to generate the Cauchy-distributed example is where the random numbers equal the tangent of an angle uniformly distributed between −90° and +90°. The median is zero, but the expected value does not exist, and indeed the average of n such variables have the same distribution as one such variable. It does not converge in probability toward zero (or any other value) as n goes to infinity. If the trials embed a selection bias, typical in human economic/rational behaviour, the law of large numbers does not help in solving the bias, even if the number of trials is increased the selection bias remains. == History == The Italian mathematician Gerolamo Cardano (1501–1576) stated without proof that the accuracies of empirical statistics tend to improve with the number of trials. This was then formalized as a law of large numbers. A special form of the law of large numbers (for a binary random variable) was first proved by Jacob Bernoulli. It took him over 20 years to develop a sufficiently rigorous mathematical proof which was published in his Ars Conjectandi (The Art of Conjecturing) in 1713. He named this his \"golden theorem\" but it became generally known as \"Bernoulli's theorem\". This should not be confused with Bernoulli's principle, named after Jacob Bernoulli's nephew Daniel Bernoulli. In 1837, S. D. Poisson further described it under the name \"la loi des grands nombres\" (\"the law of large numbers\"). Thereafter, it was known under both names, but the \"law of large numbers\" is most frequently used. After Bernoulli and Poisson published their efforts, other mathematicians also contributed to refinement of the law, including Chebyshev, Markov, Borel, Cantelli, Kolmogorov and Khinchin. Markov showed that the law can apply to a random variable that does not have a finite variance under some other weaker assumption, and Khinchin showed in 1929 that if the series consists of independent identically distributed random variables, it suffices that the expected value exists for the weak law of large numbers to be true. These further studies have given rise to two prominent forms of the law of large numbers. One is called the \"weak\" law and the other the \"strong\" law, in reference to two different modes of convergence of the cumulative sample means to the expected value; in particular, as explained below, the strong form implies the weak. == Forms == There are two different versions of the law of large numbers that are described below. They are called the strong law of large numbers and the weak law of large numbers. Stated for the case where X1, X2, ... is an infinite sequence of independent and identically distributed (i.i.d.) Lebesgue integrable random variables with expected value E(X1) = E(X2) = ... = μ, both versions of the law state that the sample average X ¯ n = 1 n ( X 1 + ⋯ + X n ) {\\displaystyle {\\overline {X}}_{n}={\\frac {1}{n}}(X_{1}+\\cdots +X_{n})} converges to the expected value: (Lebesgue integrability of Xj means that the expected value E(Xj) exists according to Lebesgue integration and is finite. It does not mean that the associated probability measure is absolutely continuous with respect to Lebesgue measure.) Introductory probability texts often additionally assume identical finite variance Var ⁡ ( X i ) = σ 2 {\\displaystyle \\operatorname {Var} (X_{i})=\\sigma ^{2}} (for all i {\\displaystyle i} ) and no correlation between random variables. In that case, the variance of the average of n random variables is Var ⁡ ( X ¯ n ) = Var ⁡ ( 1 n ( X 1 + ⋯ + X n ) ) = 1 n 2 Var ⁡ ( X 1 + ⋯ + X n ) = n σ 2 n 2 = σ 2 n . {\\displaystyle \\operatorname {Var} ({\\overline {X}}_{n})=\\operatorname {Var} ({\\tfrac {1}{n}}(X_{1}+\\cdots +X_{n}))={\\frac {1}{n^{2}}}\\operatorname {Var} (X_{1}+\\cdots +X_{n})={\\frac {n\\sigma ^{2}}{n^{2}}}={\\frac {\\sigma ^{2}}{n}}.} which can be used to shorten and simplify the proofs. This assumption of finite variance is not necessary. Large or infinite variance will make the convergence slower, but the law of large numbers holds anyway. Mutual independence of the random variables can be replaced by pairwise independence or exchangeability in both versions of the law. The difference between the strong and the weak version is concerned with the mode of convergence being asserted. For interpretation of these modes, see Convergence of random variables. === Weak law === The weak law of large numbers (also called Khinchin's law) states that given a collection of independent and identically distributed (iid) samples from a random variable with finite mean, the sample mean converges in probability to the expected value That is, for any positive number ε, lim n → ∞ Pr ( | X ¯ n − μ | < ε ) = 1. {\\displaystyle \\lim _{n\\to \\infty }\\Pr \\!\\left(\\,|{\\overline {X}}_{n}-\\mu |<\\varepsilon \\,\\right)=1.} Interpreting this result, the weak law states that for any nonzero margin specified (ε), no matter how small, with a sufficiently large sample there will be a very high probability that the average of the observations will be close to the expected value; that is, within the margin. As mentioned earlier, the weak law applies in the case of i.i.d. random variables, but it also applies in some other cases. For example, the variance may be different for each random variable in the series, keeping the expected value constant. If the variances are bounded, then the law applies, as shown by Chebyshev as early as 1867. (If the expected values change during the series, then we can simply apply the law to the average deviation from the respective expected values. The law then states that this converges in probability to zero.) In fact, Chebyshev's proof works so long as the variance of the average of the first n values goes to zero as n goes to infinity. As an example, assume that each random variable in the series follows a Gaussian distribution (normal distribution) with mean zero, but with variance equal to 2 n / log ⁡ ( n + 1 ) {\\displaystyle 2n/\\log(n+1)} , which is not bounded. At each stage, the average will be normally distributed (as the average of a set of normally distributed variables). The variance of the sum is equal to the sum of the variances, which is asymptotic to n 2 / log ⁡ n {\\displaystyle n^{2}/\\log n} . The variance of the average is therefore asymptotic to 1 / log ⁡ n {\\displaystyle 1/\\log n} and goes to zero. There are also examples of the weak law applying even though the expected value does not exist. === Strong law === The strong law of large numbers (also called Kolmogorov's law) states that the sample average converges almost surely to the expected value That is, Pr ( lim n → ∞ X ¯ n = μ ) = 1. {\\displaystyle \\Pr \\!\\left(\\lim _{n\\to \\infty }{\\overline {X}}_{n}=\\mu \\right)=1.} What this means is that, as the number of trials n goes to infinity, the probability that the average of the observations converges to the expected value, is equal to one. The modern proof of the strong law is more complex than that of the weak law, and relies on passing to an appropriate sub-sequence. The strong law of large numbers can itself be seen as a special case of the pointwise ergodic theorem. This view justifies the intuitive interpretation of the expected value (for Lebesgue integration only) of a random variable when sampled repeatedly as the \"long-term average\". Law 3 is called the strong law because random variables which converge strongly (almost surely) are guaranteed to converge weakly (in probability). However the weak law is known to hold in certain conditions where the strong law does not hold and then the convergence is only weak (in probability). See Differences between the weak law and the strong law. The strong law applies to independent identically distributed random variables having an expected value (like the weak law). This was proved by Kolmogorov in 1930. It can also apply in other cases. Kolmogorov also showed, in 1933, that if the variables are independent and identically distributed, then for the average to converge almost surely on something (this can be considered another statement of the strong law), it is necessary that they have an expected value (and then of course the average will converge almost surely on that). If the summands are independent but not identically distributed, then provided that each Xk has a finite second moment and ∑ k = 1 ∞ 1 k 2 Var ⁡ [ X k ] < ∞ . {\\displaystyle \\sum _{k=1}^{\\infty }{\\frac {1}{k^{2}}}\\operatorname {Var} [X_{k}]<\\infty .} This statement is known as Kolmogorov's strong law, see e.g. Sen & Singer (1993, Theorem 2.3.10). === Differences between the weak law and the strong law === The weak law states that for a specified large n, the average X ¯ n {\\displaystyle {\\overline {X}}_{n}} is likely to be near μ. Thus, it leaves open the possibility that | X ¯ n − μ | > ε {\\displaystyle |{\\overline {X}}_{n}-\\mu |>\\varepsilon } happens an infinite number of times, although at infrequent intervals. (Not necessarily | X ¯ n − μ | ≠ 0 {\\displaystyle |{\\overline {X}}_{n}-\\mu |\\neq 0} for all n). The strong law shows that this almost surely will not occur. I.e., with probability 1 for any ε > 0 the inequality | X ¯ n − μ | < ε {\\displaystyle |{\\overline {X}}_{n}-\\mu |<\\varepsilon } holds for all large enough n. The strong law does not hold in the following cases, but the weak law does. === Uniform laws of large numbers === There are extensions of the law of large numbers to collections of estimators, where the convergence is uniform over the collection; thus the name uniform law of large numbers. Suppose f(x,θ) is some function defined for θ ∈ Θ, and continuous in θ. Then for any fixed θ, the sequence {f(X1,θ), f(X2,θ), ...} will be a sequence of independent and identically distributed random variables, such that the sample mean of this sequence converges in probability to E[f(X,θ)]. This is the pointwise (in θ) convergence. A particular example of a uniform law of large numbers states the conditions under which the convergence happens uniformly in θ. If Θ is compact, f(x,θ) is continuous at each θ ∈ Θ for almost all xs, and measurable function of x at each θ. there exists a dominating function d(x) such that E[d(X)] < ∞, and ‖ f ( x , θ ) ‖ ≤ d ( x ) for all θ ∈ Θ . {\\displaystyle \\left\\|f(x,\\theta )\\right\\|\\leq d(x)\\quad {\\text{for all}}\\ \\theta \\in \\Theta .} Then E[f(X,θ)] is continuous in θ, and sup θ ∈ Θ ‖ 1 n ∑ i = 1 n f ( X i , θ ) − E ⁡ [ f ( X , θ ) ] ‖ → P 0. {\\displaystyle \\sup _{\\theta \\in \\Theta }\\left\\|{\\frac {1}{n}}\\sum _{i=1}^{n}f(X_{i},\\theta )-\\operatorname {E} [f(X,\\theta )]\\right\\|{\\overset {\\mathrm {P} }{\\rightarrow }}\\ 0.} This result is useful to derive consistency of a large class of estimators (see Extremum estimator). === Borel's law of large numbers === Borel's law of large numbers, named after Émile Borel, states that if an experiment is repeated a large number of times, independently under identical conditions, then the proportion of times that any specified event is expected to occur approximately equals the probability of the event's occurrence on any particular trial; the larger the number of repetitions, the better the approximation tends to be. More precisely, if E denotes the event in question, p its probability of occurrence, and Nn(E) the number of times E occurs in the first n trials, then with probability one, N n ( E ) n → p as n → ∞ . {\\displaystyle {\\frac {N_{n}(E)}{n}}\\to p{\\text{ as }}n\\to \\infty .} This theorem makes rigorous the intuitive notion of probability as the expected long-run relative frequency of an event's occurrence. It is a special case of any of several more general laws of large numbers in probability theory. == Proof of the weak law == Given X1, X2, ... an infinite sequence of i.i.d. random variables with finite expected value E ( X 1 ) = E ( X 2 ) = ⋯ = μ < ∞ {\\displaystyle E(X_{1})=E(X_{2})=\\cdots =\\mu <\\infty } , we are interested in the convergence of the sample average X ¯ n = 1 n ( X 1 + ⋯ + X n ) . {\\displaystyle {\\overline {X}}_{n}={\\tfrac {1}{n}}(X_{1}+\\cdots +X_{n}).} The weak law of large numbers states: === Proof using Chebyshev's inequality assuming finite variance === This proof uses the assumption of finite variance Var ⁡ ( X i ) = σ 2 {\\displaystyle \\operatorname {Var} (X_{i})=\\sigma ^{2}} (for all i {\\displaystyle i} ). The independence of the random variables implies no correlation between them, and we have that Var ⁡ ( X ¯ n ) = Var ⁡ ( 1 n ( X 1 + ⋯ + X n ) ) = 1 n 2 Var ⁡ ( X 1 + ⋯ + X n ) = n σ 2 n 2 = σ 2 n . {\\displaystyle \\operatorname {Var} ({\\overline {X}}_{n})=\\operatorname {Var} ({\\tfrac {1}{n}}(X_{1}+\\cdots +X_{n}))={\\frac {1}{n^{2}}}\\operatorname {Var} (X_{1}+\\cdots +X_{n})={\\frac {n\\sigma ^{2}}{n^{2}}}={\\frac {\\sigma ^{2}}{n}}.} The common mean μ of the sequence is the mean of the sample average: E ( X ¯ n ) = μ . {\\displaystyle E({\\overline {X}}_{n})=\\mu .} Using Chebyshev's inequality on X ¯ n {\\displaystyle {\\overline {X}}_{n}} results in P ⁡ ( | X ¯ n − μ | ≥ ε ) ≤ σ 2 n ε 2 . {\\displaystyle \\operatorname {P} (\\left|{\\overline {X}}_{n}-\\mu \\right|\\geq \\varepsilon )\\leq {\\frac {\\sigma ^{2}}{n\\varepsilon ^{2}}}.} This may be used to obtain the following: P ⁡ ( | X ¯ n − μ | < ε ) = 1 − P ⁡ ( | X ¯ n − μ | ≥ ε ) ≥ 1 − σ 2 n ε 2 . {\\displaystyle \\operatorname {P} (\\left|{\\overline {X}}_{n}-\\mu \\right|<\\varepsilon )=1-\\operatorname {P} (\\left|{\\overline {X}}_{n}-\\mu \\right|\\geq \\varepsilon )\\geq 1-{\\frac {\\sigma ^{2}}{n\\varepsilon ^{2}}}.} As n approaches infinity, the expression approaches 1. And by definition of convergence in probability, we have obtained === Proof using convergence of characteristic functions === By Taylor's theorem for complex functions, the characteristic function of any random variable, X, with finite mean μ, can be written as φ X ( t ) = 1 + i t μ + o ( t ) , t → 0. {\\displaystyle \\varphi _{X}(t)=1+it\\mu +o(t),\\quad t\\rightarrow 0.} All X1, X2, ... have the same characteristic function, so we will simply denote this φX. Among the basic properties of characteristic functions there are φ 1 n X ( t ) = φ X ( t n ) and φ X + Y ( t ) = φ X ( t ) φ Y ( t ) {\\displaystyle \\varphi _{{\\frac {1}{n}}X}(t)=\\varphi _{X}({\\tfrac {t}{n}})\\quad {\\text{and}}\\quad \\varphi _{X+Y}(t)=\\varphi _{X}(t)\\varphi _{Y}(t)\\quad } if X and Y are independent. These rules can be used to calculate the characteristic function of X ¯ n {\\displaystyle {\\overline {X}}_{n}} in terms of φX: φ X ¯ n ( t ) = [ φ X ( t n ) ] n = [ 1 + i μ t n + o ( t n ) ] n → e i t μ , as n → ∞ . {\\displaystyle \\varphi _{{\\overline {X}}_{n}}(t)=\\left[\\varphi _{X}\\left({t \\over n}\\right)\\right]^{n}=\\left[1+i\\mu {t \\over n}+o\\left({t \\over n}\\right)\\right]^{n}\\,\\rightarrow \\,e^{it\\mu },\\quad {\\text{as}}\\quad n\\to \\infty .} The limit eitμ is the characteristic function of the constant random variable μ, and hence by the Lévy continuity theorem, X ¯ n {\\displaystyle {\\overline {X}}_{n}} converges in distribution to μ: X ¯ n → D μ for n → ∞ . {\\displaystyle {\\overline {X}}_{n}\\,{\\overset {\\mathcal {D}}{\\rightarrow }}\\,\\mu \\qquad {\\text{for}}\\qquad n\\to \\infty .} μ is a constant, which implies that convergence in distribution to μ and convergence in probability to μ are equivalent (see Convergence of random variables.) Therefore, This shows that the sample mean converges in probability to the derivative of the characteristic function at the origin, as long as the latter exists. == Proof of the strong law == We give a relatively simple proof of the strong law under the assumptions that the X i {\\displaystyle X_{i}} are iid, E [ X i ] =: μ < ∞ {\\displaystyle {\\mathbb {E} }[X_{i}]=:\\mu <\\infty } , Var ⁡ ( X i ) = σ 2 < ∞ {\\displaystyle \\operatorname {Var} (X_{i})=\\sigma ^{2}<\\infty } , and E [ X i 4 ] =: τ < ∞ {\\displaystyle {\\mathbb {E} }[X_{i}^{4}]=:\\tau <\\infty } . Let us first note that without loss of generality we can assume that μ = 0 {\\displaystyle \\mu =0} by centering. In this case, the strong law says that Pr ( lim n → ∞ X ¯ n = 0 ) = 1 , {\\displaystyle \\Pr \\!\\left(\\lim _{n\\to \\infty }{\\overline {X}}_{n}=0\\right)=1,} or Pr ( ω : lim n → ∞ S n ( ω ) n = 0 ) = 1. {\\displaystyle \\Pr \\left(\\omega :\\lim _{n\\to \\infty }{\\frac {S_{n}(\\omega )}{n}}=0\\right)=1.} It is equivalent to show that Pr ( ω : lim n → ∞ S n ( ω ) n ≠ 0 ) = 0 , {\\displaystyle \\Pr \\left(\\omega :\\lim _{n\\to \\infty }{\\frac {S_{n}(\\omega )}{n}}\\neq 0\\right)=0,} Note that lim n → ∞ S n ( ω ) n ≠ 0 ⟺ ∃ ϵ > 0 , | S n ( ω ) n | ≥ ϵ infinitely often , {\\displaystyle \\lim _{n\\to \\infty }{\\frac {S_{n}(\\omega )}{n}}\\neq 0\\iff \\exists \\epsilon >0,\\left|{\\frac {S_{n}(\\omega )}{n}}\\right|\\geq \\epsilon \\ {\\mbox{infinitely often}},} and thus to prove the strong law we need to show that for every ϵ > 0 {\\displaystyle \\epsilon >0} , we have Pr ( ω : | S n ( ω ) | ≥ n ϵ infinitely often ) = 0. {\\displaystyle \\Pr \\left(\\omega :|S_{n}(\\omega )|\\geq n\\epsilon {\\mbox{ infinitely often}}\\right)=0.} Define the events A n = { ω : | S n | ≥ n ϵ } {\\displaystyle A_{n}=\\{\\omega :|S_{n}|\\geq n\\epsilon \\}} , and if we can show that ∑ n = 1 ∞ Pr ( A n ) < ∞ , {\\displaystyle \\sum _{n=1}^{\\infty }\\Pr(A_{n})<\\infty ,} then the Borel-Cantelli Lemma implies the result. So let us estimate Pr ( A n ) {\\displaystyle \\Pr(A_{n})} . We compute E [ S n 4 ] = E [ ( ∑ i = 1 n X i ) 4 ] = E [ ∑ 1 ≤ i , j , k , l ≤ n X i X j X k X l ] . {\\displaystyle {\\mathbb {E} }[S_{n}^{4}]={\\mathbb {E} }\\left[\\left(\\sum _{i=1}^{n}X_{i}\\right)^{4}\\right]={\\mathbb {E} }\\left[\\sum _{1\\leq i,j,k,l\\leq n}X_{i}X_{j}X_{k}X_{l}\\right].} We first claim that every term of the form X i 3 X j , X i 2 X j X k , X i X j X k X l {\\displaystyle X_{i}^{3}X_{j},X_{i}^{2}X_{j}X_{k},X_{i}X_{j}X_{k}X_{l}} where all subscripts are distinct, must have zero expectation. This is because E [ X i 3 X j ] = E [ X i 3 ] E [ X j ] {\\displaystyle {\\mathbb {E} }[X_{i}^{3}X_{j}]={\\mathbb {E} }[X_{i}^{3}]{\\mathbb {E} }[X_{j}]} by independence, and the last term is zero—and similarly for the other terms. Therefore the only terms in the sum with nonzero expectation are E [ X i 4 ] {\\displaystyle {\\mathbb {E} }[X_{i}^{4}]} and E [ X i 2 X j 2 ] {\\displaystyle {\\mathbb {E} }[X_{i}^{2}X_{j}^{2}]} . Since the X i {\\displaystyle X_{i}} are identically distributed, all of these are the same, and moreover E [ X i 2 X j 2 ] = ( E [ X i 2 ] ) 2 {\\displaystyle {\\mathbb {E} }[X_{i}^{2}X_{j}^{2}]=({\\mathbb {E} }[X_{i}^{2}])^{2}} . There are n {\\displaystyle n} terms of the form E [ X i 4 ] {\\displaystyle {\\mathbb {E} }[X_{i}^{4}]} and 3 n ( n − 1 ) {\\displaystyle 3n(n-1)} terms of the form ( E [ X i 2 ] ) 2 {\\displaystyle ({\\mathbb {E} }[X_{i}^{2}])^{2}} , and so E [ S n 4 ] = n τ + 3 n ( n − 1 ) σ 4 . {\\displaystyle {\\mathbb {E} }[S_{n}^{4}]=n\\tau +3n(n-1)\\sigma ^{4}.} Note that the right-hand side is a quadratic polynomial in n {\\displaystyle n} , and as such there exists a C > 0 {\\displaystyle C>0} such that E [ S n 4 ] ≤ C n 2 {\\displaystyle {\\mathbb {E} }[S_{n}^{4}]\\leq Cn^{2}} for n {\\displaystyle n} sufficiently large. By Markov, Pr ( | S n | ≥ n ϵ ) ≤ 1 ( n ϵ ) 4 E [ S n 4 ] ≤ C ϵ 4 n 2 , {\\displaystyle \\Pr(|S_{n}|\\geq n\\epsilon )\\leq {\\frac {1}{(n\\epsilon )^{4}}}{\\mathbb {E} }[S_{n}^{4}]\\leq {\\frac {C}{\\epsilon ^{4}n^{2}}},} for n {\\displaystyle n} sufficiently large, and therefore this series is summable. Since this holds for any ϵ > 0 {\\displaystyle \\epsilon >0} , we have established the strong law of large numbers. The proof can be strengthened immensely by dropping all finiteness assumptions on the second and fourth moments. It can also be extended for example to discuss partial sums of distributions without any finite moments. Such proofs use more intricate arguments to prove the same Borel-Cantelli predicate, a strategy attributed to Kolmogorov to conceptually bring the limit inside the probability parentheses. == Consequences == The law of large numbers provides an expectation of an unknown distribution from a realization of the sequence, but also any feature of the probability distribution. By applying Borel's law of large numbers, one could easily obtain the probability mass function. For each event in the objective probability mass function, one could approximate the probability of the event's occurrence with the proportion of times that any specified event occurs. The larger the number of repetitions, the better the approximation. As for the continuous case: C = ( a − h , a + h ] {\\displaystyle C=(a-h,a+h]} , for small positive h. Thus, for large n: N n ( C ) n ≈ p = P ( X ∈ C ) = ∫ a − h a + h f ( x ) d x ≈ 2 h f ( a ) {\\displaystyle {\\frac {N_{n}(C)}{n}}\\thickapprox p=P(X\\in C)=\\int _{a-h}^{a+h}f(x)\\,dx\\thickapprox 2hf(a)} With this method, one can cover the whole x-axis with a grid (with grid size 2h) and obtain a bar graph which is called a histogram. == Applications == One application of the law of large numbers is an important method of approximation known as the Monte Carlo method, which uses a random sampling of numbers to approximate numerical results. The algorithm to compute an integral of f(x) on an interval [a, b] is as follows: Simulate uniform random variables X1, X2, …, Xn which can be done using a software, and use a random number table that gives U1, U2, …, Un independent and identically distributed (i.i.d.) random variables on [0, 1]. Then let Xi = a + (b - a) Ui for i= 1, 2, …, n. Then X1, X2, …, Xn are independent and identically distributed uniform random variables on [a, b]. Evaluate f(X1), f(X2), …, f(Xn). Take the average of f(X1), f(X2), …, f(Xn) by computing ( b − a ) f ( X 1 ) + f ( X 2 ) + ⋯ + f ( X n ) n {\\displaystyle (b-a){\\tfrac {f(X_{1})+f(X_{2})+\\dots +f(X_{n})}{n}}} , and then by the strong law of large numbers this converges to ( b − a ) E ⁡ ( f ( X 1 ) ) = ( b − a ) ∫ a b f ( x ) 1 b − a d x = ∫ a b f ( x ) d x {\\displaystyle (b-a)\\operatorname {E} (f(X_{1}))=(b-a)\\int _{a}^{b}f(x){\\tfrac {1}{b-a}}\\,dx=\\int _{a}^{b}f(x){dx}} . We can find the integral of f ( x ) = cos 2 ⁡ ( x ) x 3 + 1 {\\displaystyle f(x)=\\cos ^{2}(x){\\sqrt {x^{3}+1}}} on [-1, 2]. Using traditional methods to compute this integral is very difficult, so the Monte Carlo method can be used here. Using the above algorithm, we get ∫ − 1 2 f ( x ) d x = 0.905 {\\displaystyle \\int _{-1}^{2}f(x)\\,dx=0.905} when n = 25 and ∫ − 1 2 f ( x ) d x = 1.028 {\\displaystyle \\int _{-1}^{2}f(x)\\,dx=1.028} when n = 250. We observe that as n increases, the numerical value also increases. When we get the actual results for the integral we get ∫ − 1 2 f ( x ) d x = 1.000194 {\\displaystyle \\int _{-1}^{2}f(x)\\,dx=1.000194} . When the LLN was used, the approximation of the integral was closer to its true value, and thus more accurate. Another example is the integration of f ( x ) = e x − 1 e − 1 {\\displaystyle f(x)={\\frac {e^{x}-1}{e-1}}} over [0, 1]. Using the Monte Carlo method and the LLN, we can see that as the number of samples increases, the numerical value gets ever closer to 0.4180233. == See also == == Notes == == References == == External links == \"Law of large numbers\", Encyclopedia of Mathematics, EMS Press, 2001  Weisstein, Eric W. \"Weak Law of Large Numbers\". MathWorld. Weisstein, Eric W. \"Strong Law of Large Numbers\". MathWorld. Animations for the Law of Large Numbers by Yihui Xie using the R package animation Apple CEO Tim Cook said something that would make statisticians cringe. \"We don't believe in such laws as laws of large numbers. This is sort of, uh, old dogma, I think, that was cooked up by somebody [..]\" said Tim Cook and while: \"However, the law of large numbers has nothing to do with large companies, large revenues, or large growth rates. The law of large numbers is a fundamental concept in probability theory and statistics, tying together theoretical probabilities that we can calculate to the actual outcomes of experiments that we empirically perform. explained Business Insider"
+  },
+  "chunks": [
+    {
+      "id": "lawoflargenumbers_7678dd59_c0000",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 872,
+      "content": "In probability theory, the law of large numbers is a mathematical law that states that the average of the results obtained from a large number of independent random samples converges to the true value, if it exists. More formally, the law of large numbers states that given a sample of independent and identically distributed values, the sample mean converges to the true mean. The law of large numbers is important because it guarantees stable long-term results for the averages of some random events. For example, while a casino may lose money in a single spin of the roulette wheel, its earnings will tend towards a predictable percentage over a large number of spins. Any winning streak by a player will eventually be overcome by the parameters of the game. Importantly, the law applies (as the name indicates) only when a large number of observations are considered.",
+      "char_count": 871,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0001",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 872,
+      "end_char": 1522,
+      "content": "There is no principle that a small number of observations will coincide with the expected value or that a streak of one value will immediately be \"balanced\" by the others (see the gambler's fallacy). The law of large numbers only applies to the average of the results obtained from repeated trials and claims that this average converges to the expected value; it does not claim that the sum of n results gets close to the expected value times n as n increases. Throughout its history, many mathematicians have refined this law. Today, the law of large numbers is used in many fields including statistics, probability theory, economics, and insurance.",
+      "char_count": 650,
+      "token_estimate": 162,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0002",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 1537,
+      "end_char": 2472,
+      "content": "== Examples == For example, a single roll of a six-sided dice produces one of the numbers 1, 2, 3, 4, 5, or 6, each with equal probability. Therefore, the expected value of the roll is: 1 + 2 + 3 + 4 + 5 + 6 6 = 3.5 {\\displaystyle {\\frac {1+2+3+4+5+6}{6}}=3.5} According to the law of large numbers, if a large number of six-sided dice are rolled, the average of their values (sometimes called the sample mean) will approach 3.5, with the precision increasing as more dice are rolled. It follows from the law of large numbers that the empirical probability of success in a series of Bernoulli trials will converge to the theoretical probability. For a Bernoulli random variable, the expected value is the theoretical probability of success, and the average of n such variables (assuming they are independent and identically distributed (i.i.d.)) is precisely the relative frequency. For example, a fair coin toss is a Bernoulli trial.",
+      "char_count": 934,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0003",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 2472,
+      "end_char": 3409,
+      "content": "When a fair coin is flipped once, the theoretical probability that the outcome will be heads is equal to 1⁄2. Therefore, according to the law of large numbers, the proportion of heads in a \"large\" number of coin flips \"should be\" roughly 1⁄2. In particular, the proportion of heads after n flips will almost surely converge to 1⁄2 as n approaches infinity. Although the proportion of heads (and tails) approaches 1⁄2, almost surely the absolute difference in the number of heads and tails will become large as the number of flips becomes large. That is, the probability that the absolute difference is a small number approaches zero as the number of flips becomes large. Also, almost surely the ratio of the absolute difference to the number of flips will approach zero. Intuitively, the expected difference grows, but at a slower rate than the number of flips. Another good example of the law of large numbers is the Monte Carlo method.",
+      "char_count": 937,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0004",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 3410,
+      "end_char": 3739,
+      "content": "These methods are a broad class of computational algorithms that rely on repeated random sampling to obtain numerical results. The larger the number of repetitions, the better the approximation tends to be. The reason that this method is important is mainly that, sometimes, it is difficult or impossible to use other approaches.",
+      "char_count": 329,
+      "token_estimate": 82,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0005",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Limitation ==",
+      "heading_path": "== Limitation ==",
+      "start_char": 3742,
+      "end_char": 4630,
+      "content": "== Limitation == The average of the results obtained from a large number of trials may fail to converge in some cases. For instance, the average of n results taken from the Cauchy distribution or some Pareto distributions (α<1) will not converge as n becomes larger; the reason is heavy tails. The Cauchy distribution and the Pareto distribution represent two cases: the Cauchy distribution does not have an expectation, whereas the expectation of the Pareto distribution (α<1) is infinite. One way to generate the Cauchy-distributed example is where the random numbers equal the tangent of an angle uniformly distributed between −90° and +90°. The median is zero, but the expected value does not exist, and indeed the average of n such variables have the same distribution as one such variable. It does not converge in probability toward zero (or any other value) as n goes to infinity.",
+      "char_count": 887,
+      "token_estimate": 221,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0006",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Limitation ==",
+      "heading_path": "== Limitation ==",
+      "start_char": 4630,
+      "end_char": 4843,
+      "content": "If the trials embed a selection bias, typical in human economic/rational behaviour, the law of large numbers does not help in solving the bias, even if the number of trials is increased the selection bias remains.",
+      "char_count": 213,
+      "token_estimate": 53,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0007",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 4841,
+      "end_char": 5757,
+      "content": "== History == The Italian mathematician Gerolamo Cardano (1501–1576) stated without proof that the accuracies of empirical statistics tend to improve with the number of trials. This was then formalized as a law of large numbers. A special form of the law of large numbers (for a binary random variable) was first proved by Jacob Bernoulli. It took him over 20 years to develop a sufficiently rigorous mathematical proof which was published in his Ars Conjectandi (The Art of Conjecturing) in 1713. He named this his \"golden theorem\" but it became generally known as \"Bernoulli's theorem\". This should not be confused with Bernoulli's principle, named after Jacob Bernoulli's nephew Daniel Bernoulli. In 1837, S. D. Poisson further described it under the name \"la loi des grands nombres\" (\"the law of large numbers\"). Thereafter, it was known under both names, but the \"law of large numbers\" is most frequently used.",
+      "char_count": 915,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0008",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 5757,
+      "end_char": 6602,
+      "content": "After Bernoulli and Poisson published their efforts, other mathematicians also contributed to refinement of the law, including Chebyshev, Markov, Borel, Cantelli, Kolmogorov and Khinchin. Markov showed that the law can apply to a random variable that does not have a finite variance under some other weaker assumption, and Khinchin showed in 1929 that if the series consists of independent identically distributed random variables, it suffices that the expected value exists for the weak law of large numbers to be true. These further studies have given rise to two prominent forms of the law of large numbers. One is called the \"weak\" law and the other the \"strong\" law, in reference to two different modes of convergence of the cumulative sample means to the expected value; in particular, as explained below, the strong form implies the weak.",
+      "char_count": 845,
+      "token_estimate": 211,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0009",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Forms ==",
+      "heading_path": "== Forms ==",
+      "start_char": 6601,
+      "end_char": 7291,
+      "content": "== Forms == There are two different versions of the law of large numbers that are described below. They are called the strong law of large numbers and the weak law of large numbers. Stated for the case where X1, X2, ... is an infinite sequence of independent and identically distributed (i.i.d.) Lebesgue integrable random variables with expected value E(X1) = E(X2) = ... = μ, both versions of the law state that the sample average X ¯ n = 1 n ( X 1 + ⋯ + X n ) {\\displaystyle {\\overline {X}}_{n}={\\frac {1}{n}}(X_{1}+\\cdots +X_{n})} converges to the expected value: (Lebesgue integrability of Xj means that the expected value E(Xj) exists according to Lebesgue integration and is finite.",
+      "char_count": 689,
+      "token_estimate": 172,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0010",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Forms ==",
+      "heading_path": "== Forms ==",
+      "start_char": 7291,
+      "end_char": 8257,
+      "content": "It does not mean that the associated probability measure is absolutely continuous with respect to Lebesgue measure.) Introductory probability texts often additionally assume identical finite variance Var ⁡ ( X i ) = σ 2 {\\displaystyle \\operatorname {Var} (X_{i})=\\sigma ^{2}} (for all i {\\displaystyle i} ) and no correlation between random variables. In that case, the variance of the average of n random variables is Var ⁡ ( X ¯ n ) = Var ⁡ ( 1 n ( X 1 + ⋯ + X n ) ) = 1 n 2 Var ⁡ ( X 1 + ⋯ + X n ) = n σ 2 n 2 = σ 2 n . {\\displaystyle \\operatorname {Var} ({\\overline {X}}_{n})=\\operatorname {Var} ({\\tfrac {1}{n}}(X_{1}+\\cdots +X_{n}))={\\frac {1}{n^{2}}}\\operatorname {Var} (X_{1}+\\cdots +X_{n})={\\frac {n\\sigma ^{2}}{n^{2}}}={\\frac {\\sigma ^{2}}{n}}.} which can be used to shorten and simplify the proofs. This assumption of finite variance is not necessary. Large or infinite variance will make the convergence slower, but the law of large numbers holds anyway.",
+      "char_count": 966,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0011",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Forms ==",
+      "heading_path": "== Forms ==",
+      "start_char": 8258,
+      "end_char": 8575,
+      "content": "Mutual independence of the random variables can be replaced by pairwise independence or exchangeability in both versions of the law. The difference between the strong and the weak version is concerned with the mode of convergence being asserted. For interpretation of these modes, see Convergence of random variables.",
+      "char_count": 317,
+      "token_estimate": 79,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0012",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Weak law ==",
+      "heading_path": "== = Weak law ==",
+      "start_char": 8581,
+      "end_char": 9555,
+      "content": "== = Weak law === The weak law of large numbers (also called Khinchin's law) states that given a collection of independent and identically distributed (iid) samples from a random variable with finite mean, the sample mean converges in probability to the expected value That is, for any positive number ε, lim n → ∞ Pr ( | X ¯ n − μ | < ε ) = 1. {\\displaystyle \\lim _{n\\to \\infty }\\Pr \\!\\left(\\,|{\\overline {X}}_{n}-\\mu |<\\varepsilon \\,\\right)=1.} Interpreting this result, the weak law states that for any nonzero margin specified (ε), no matter how small, with a sufficiently large sample there will be a very high probability that the average of the observations will be close to the expected value; that is, within the margin. As mentioned earlier, the weak law applies in the case of i.i.d. random variables, but it also applies in some other cases. For example, the variance may be different for each random variable in the series, keeping the expected value constant.",
+      "char_count": 973,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0013",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Weak law ==",
+      "heading_path": "== = Weak law ==",
+      "start_char": 9555,
+      "end_char": 10467,
+      "content": "If the variances are bounded, then the law applies, as shown by Chebyshev as early as 1867. (If the expected values change during the series, then we can simply apply the law to the average deviation from the respective expected values. The law then states that this converges in probability to zero.) In fact, Chebyshev's proof works so long as the variance of the average of the first n values goes to zero as n goes to infinity. As an example, assume that each random variable in the series follows a Gaussian distribution (normal distribution) with mean zero, but with variance equal to 2 n / log ⁡ ( n + 1 ) {\\displaystyle 2n/\\log(n+1)} , which is not bounded. At each stage, the average will be normally distributed (as the average of a set of normally distributed variables). The variance of the sum is equal to the sum of the variances, which is asymptotic to n 2 / log ⁡ n {\\displaystyle n^{2}/\\log n} .",
+      "char_count": 912,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0014",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Weak law ==",
+      "heading_path": "== = Weak law ==",
+      "start_char": 10468,
+      "end_char": 10673,
+      "content": "The variance of the average is therefore asymptotic to 1 / log ⁡ n {\\displaystyle 1/\\log n} and goes to zero. There are also examples of the weak law applying even though the expected value does not exist.",
+      "char_count": 205,
+      "token_estimate": 51,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0015",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Strong law ==",
+      "heading_path": "== = Strong law ==",
+      "start_char": 10676,
+      "end_char": 11543,
+      "content": "== = Strong law === The strong law of large numbers (also called Kolmogorov's law) states that the sample average converges almost surely to the expected value That is, Pr ( lim n → ∞ X ¯ n = μ ) = 1. {\\displaystyle \\Pr \\!\\left(\\lim _{n\\to \\infty }{\\overline {X}}_{n}=\\mu \\right)=1.} What this means is that, as the number of trials n goes to infinity, the probability that the average of the observations converges to the expected value, is equal to one. The modern proof of the strong law is more complex than that of the weak law, and relies on passing to an appropriate sub-sequence. The strong law of large numbers can itself be seen as a special case of the pointwise ergodic theorem. This view justifies the intuitive interpretation of the expected value (for Lebesgue integration only) of a random variable when sampled repeatedly as the \"long-term average\".",
+      "char_count": 866,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0016",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Strong law ==",
+      "heading_path": "== = Strong law ==",
+      "start_char": 11543,
+      "end_char": 12437,
+      "content": "Law 3 is called the strong law because random variables which converge strongly (almost surely) are guaranteed to converge weakly (in probability). However the weak law is known to hold in certain conditions where the strong law does not hold and then the convergence is only weak (in probability). See Differences between the weak law and the strong law. The strong law applies to independent identically distributed random variables having an expected value (like the weak law). This was proved by Kolmogorov in 1930. It can also apply in other cases. Kolmogorov also showed, in 1933, that if the variables are independent and identically distributed, then for the average to converge almost surely on something (this can be considered another statement of the strong law), it is necessary that they have an expected value (and then of course the average will converge almost surely on that).",
+      "char_count": 894,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0017",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Strong law ==",
+      "heading_path": "== = Strong law ==",
+      "start_char": 12438,
+      "end_char": 12786,
+      "content": "If the summands are independent but not identically distributed, then provided that each Xk has a finite second moment and ∑ k = 1 ∞ 1 k 2 Var ⁡ [ X k ] < ∞ . {\\displaystyle \\sum _{k=1}^{\\infty }{\\frac {1}{k^{2}}}\\operatorname {Var} [X_{k}]<\\infty .} This statement is known as Kolmogorov's strong law, see e.g. Sen & Singer (1993, Theorem 2.3.10).",
+      "char_count": 348,
+      "token_estimate": 87,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0018",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Differences between the weak law and the strong law ==",
+      "heading_path": "== = Differences between the weak law and the strong law ==",
+      "start_char": 12828,
+      "end_char": 13536,
+      "content": "== = Differences between the weak law and the strong law === The weak law states that for a specified large n, the average X ¯ n {\\displaystyle {\\overline {X}}_{n}} is likely to be near μ. Thus, it leaves open the possibility that | X ¯ n − μ | > ε {\\displaystyle |{\\overline {X}}_{n}-\\mu |>\\varepsilon } happens an infinite number of times, although at infrequent intervals. (Not necessarily | X ¯ n − μ | ≠ 0 {\\displaystyle |{\\overline {X}}_{n}-\\mu |\\neq 0} for all n). The strong law shows that this almost surely will not occur. I.e., with probability 1 for any ε > 0 the inequality | X ¯ n − μ | < ε {\\displaystyle |{\\overline {X}}_{n}-\\mu |<\\varepsilon } holds for all large enough n. The strong law does not hold in the following cases, but the weak law does.",
+      "char_count": 766,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0019",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Uniform laws of large numbers ==",
+      "heading_path": "== = Uniform laws of large numbers ==",
+      "start_char": 13573,
+      "end_char": 14473,
+      "content": "== = Uniform laws of large numbers === There are extensions of the law of large numbers to collections of estimators, where the convergence is uniform over the collection; thus the name uniform law of large numbers. Suppose f(x,θ) is some function defined for θ ∈ Θ, and continuous in θ. Then for any fixed θ, the sequence {f(X1,θ), f(X2,θ), ...} will be a sequence of independent and identically distributed random variables, such that the sample mean of this sequence converges in probability to E[f(X,θ)]. This is the pointwise (in θ) convergence. A particular example of a uniform law of large numbers states the conditions under which the convergence happens uniformly in θ. If Θ is compact, f(x,θ) is continuous at each θ ∈ Θ for almost all xs, and measurable function of x at each θ. there exists a dominating function d(x) such that E[d(X)] < ∞, and ‖ f ( x , θ ) ‖ ≤ d ( x ) for all θ ∈ Θ .",
+      "char_count": 899,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0020",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Uniform laws of large numbers ==",
+      "heading_path": "== = Uniform laws of large numbers ==",
+      "start_char": 14473,
+      "end_char": 14958,
+      "content": "{\\displaystyle \\left\\|f(x,\\theta )\\right\\|\\leq d(x)\\quad {\\text{for all}}\\ \\theta \\in \\Theta .} Then E[f(X,θ)] is continuous in θ, and sup θ ∈ Θ ‖ 1 n ∑ i = 1 n f ( X i , θ ) − E ⁡ [ f ( X , θ ) ] ‖ → P 0. {\\displaystyle \\sup _{\\theta \\in \\Theta }\\left\\|{\\frac {1}{n}}\\sum _{i=1}^{n}f(X_{i},\\theta )-\\operatorname {E} [f(X,\\theta )]\\right\\|{\\overset {\\mathrm {P} }{\\rightarrow }}\\ 0.} This result is useful to derive consistency of a large class of estimators (see Extremum estimator).",
+      "char_count": 485,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0021",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Borel's law of large numbers ==",
+      "heading_path": "== = Borel's law of large numbers ==",
+      "start_char": 14958,
+      "end_char": 15867,
+      "content": "== = Borel's law of large numbers === Borel's law of large numbers, named after Émile Borel, states that if an experiment is repeated a large number of times, independently under identical conditions, then the proportion of times that any specified event is expected to occur approximately equals the probability of the event's occurrence on any particular trial; the larger the number of repetitions, the better the approximation tends to be. More precisely, if E denotes the event in question, p its probability of occurrence, and Nn(E) the number of times E occurs in the first n trials, then with probability one, N n ( E ) n → p as n → ∞ . {\\displaystyle {\\frac {N_{n}(E)}{n}}\\to p{\\text{ as }}n\\to \\infty .} This theorem makes rigorous the intuitive notion of probability as the expected long-run relative frequency of an event's occurrence. It is a special case of any of several more general laws of large numbers in probability theory.",
+      "char_count": 944,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0022",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Proof of the weak law ==",
+      "heading_path": "== Proof of the weak law ==",
+      "start_char": 15894,
+      "end_char": 16282,
+      "content": "== Proof of the weak law == Given X1, X2, ... an infinite sequence of i.i.d. random variables with finite expected value E ( X 1 ) = E ( X 2 ) = ⋯ = μ < ∞ {\\displaystyle E(X_{1})=E(X_{2})=\\cdots =\\mu <\\infty } , we are interested in the convergence of the sample average X ¯ n = 1 n ( X 1 + ⋯ + X n ) . {\\displaystyle {\\overline {X}}_{n}={\\tfrac {1}{n}}(X_{1}+\\cdots +X_{n}).} The weak law of large numbers states:",
+      "char_count": 414,
+      "token_estimate": 103,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0023",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Proof using Chebyshev's inequality assuming finite variance ==",
+      "heading_path": "== = Proof using Chebyshev's inequality assuming finite variance ==",
+      "start_char": 16349,
+      "end_char": 17265,
+      "content": "== = Proof using Chebyshev's inequality assuming finite variance === This proof uses the assumption of finite variance Var ⁡ ( X i ) = σ 2 {\\displaystyle \\operatorname {Var} (X_{i})=\\sigma ^{2}} (for all i {\\displaystyle i} ). The independence of the random variables implies no correlation between them, and we have that Var ⁡ ( X ¯ n ) = Var ⁡ ( 1 n ( X 1 + ⋯ + X n ) ) = 1 n 2 Var ⁡ ( X 1 + ⋯ + X n ) = n σ 2 n 2 = σ 2 n . {\\displaystyle \\operatorname {Var} ({\\overline {X}}_{n})=\\operatorname {Var} ({\\tfrac {1}{n}}(X_{1}+\\cdots +X_{n}))={\\frac {1}{n^{2}}}\\operatorname {Var} (X_{1}+\\cdots +X_{n})={\\frac {n\\sigma ^{2}}{n^{2}}}={\\frac {\\sigma ^{2}}{n}}.} The common mean μ of the sequence is the mean of the sample average: E ( X ¯ n ) = μ . {\\displaystyle E({\\overline {X}}_{n})=\\mu .} Using Chebyshev's inequality on X ¯ n {\\displaystyle {\\overline {X}}_{n}} results in P ⁡ ( | X ¯ n − μ | ≥ ε ) ≤ σ 2 n ε 2 .",
+      "char_count": 915,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0024",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Proof using Chebyshev's inequality assuming finite variance ==",
+      "heading_path": "== = Proof using Chebyshev's inequality assuming finite variance ==",
+      "start_char": 17265,
+      "end_char": 17852,
+      "content": "{\\displaystyle \\operatorname {P} (\\left|{\\overline {X}}_{n}-\\mu \\right|\\geq \\varepsilon )\\leq {\\frac {\\sigma ^{2}}{n\\varepsilon ^{2}}}.} This may be used to obtain the following: P ⁡ ( | X ¯ n − μ | < ε ) = 1 − P ⁡ ( | X ¯ n − μ | ≥ ε ) ≥ 1 − σ 2 n ε 2 . {\\displaystyle \\operatorname {P} (\\left|{\\overline {X}}_{n}-\\mu \\right|<\\varepsilon )=1-\\operatorname {P} (\\left|{\\overline {X}}_{n}-\\mu \\right|\\geq \\varepsilon )\\geq 1-{\\frac {\\sigma ^{2}}{n\\varepsilon ^{2}}}.} As n approaches infinity, the expression approaches 1. And by definition of convergence in probability, we have obtained",
+      "char_count": 587,
+      "token_estimate": 146,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0025",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Proof using convergence of characteristic functions ==",
+      "heading_path": "== = Proof using convergence of characteristic functions ==",
+      "start_char": 17845,
+      "end_char": 18770,
+      "content": "== = Proof using convergence of characteristic functions === By Taylor's theorem for complex functions, the characteristic function of any random variable, X, with finite mean μ, can be written as φ X ( t ) = 1 + i t μ + o ( t ) , t → 0. {\\displaystyle \\varphi _{X}(t)=1+it\\mu +o(t),\\quad t\\rightarrow 0.} All X1, X2, ... have the same characteristic function, so we will simply denote this φX. Among the basic properties of characteristic functions there are φ 1 n X ( t ) = φ X ( t n ) and φ X + Y ( t ) = φ X ( t ) φ Y ( t ) {\\displaystyle \\varphi _{{\\frac {1}{n}}X}(t)=\\varphi _{X}({\\tfrac {t}{n}})\\quad {\\text{and}}\\quad \\varphi _{X+Y}(t)=\\varphi _{X}(t)\\varphi _{Y}(t)\\quad } if X and Y are independent. These rules can be used to calculate the characteristic function of X ¯ n {\\displaystyle {\\overline {X}}_{n}} in terms of φX: φ X ¯ n ( t ) = [ φ X ( t n ) ] n = [ 1 + i μ t n + o ( t n ) ] n → e i t μ , as n → ∞ .",
+      "char_count": 924,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0026",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== = Proof using convergence of characteristic functions ==",
+      "heading_path": "== = Proof using convergence of characteristic functions ==",
+      "start_char": 18770,
+      "end_char": 19662,
+      "content": "{\\displaystyle \\varphi _{{\\overline {X}}_{n}}(t)=\\left[\\varphi _{X}\\left({t \\over n}\\right)\\right]^{n}=\\left[1+i\\mu {t \\over n}+o\\left({t \\over n}\\right)\\right]^{n}\\,\\rightarrow \\,e^{it\\mu },\\quad {\\text{as}}\\quad n\\to \\infty .} The limit eitμ is the characteristic function of the constant random variable μ, and hence by the Lévy continuity theorem, X ¯ n {\\displaystyle {\\overline {X}}_{n}} converges in distribution to μ: X ¯ n → D μ for n → ∞ . {\\displaystyle {\\overline {X}}_{n}\\,{\\overset {\\mathcal {D}}{\\rightarrow }}\\,\\mu \\qquad {\\text{for}}\\qquad n\\to \\infty .} μ is a constant, which implies that convergence in distribution to μ and convergence in probability to μ are equivalent (see Convergence of random variables.) Therefore, This shows that the sample mean converges in probability to the derivative of the characteristic function at the origin, as long as the latter exists.",
+      "char_count": 892,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0027",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Proof of the strong law ==",
+      "heading_path": "== Proof of the strong law ==",
+      "start_char": 19633,
+      "end_char": 20337,
+      "content": "== Proof of the strong law == We give a relatively simple proof of the strong law under the assumptions that the X i {\\displaystyle X_{i}} are iid, E [ X i ] =: μ < ∞ {\\displaystyle {\\mathbb {E} }[X_{i}]=:\\mu <\\infty } , Var ⁡ ( X i ) = σ 2 < ∞ {\\displaystyle \\operatorname {Var} (X_{i})=\\sigma ^{2}<\\infty } , and E [ X i 4 ] =: τ < ∞ {\\displaystyle {\\mathbb {E} }[X_{i}^{4}]=:\\tau <\\infty } . Let us first note that without loss of generality we can assume that μ = 0 {\\displaystyle \\mu =0} by centering. In this case, the strong law says that Pr ( lim n → ∞ X ¯ n = 0 ) = 1 , {\\displaystyle \\Pr \\!\\left(\\lim _{n\\to \\infty }{\\overline {X}}_{n}=0\\right)=1,} or Pr ( ω : lim n → ∞ S n ( ω ) n = 0 ) = 1.",
+      "char_count": 703,
+      "token_estimate": 175,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0028",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Proof of the strong law ==",
+      "heading_path": "== Proof of the strong law ==",
+      "start_char": 20337,
+      "end_char": 21026,
+      "content": "{\\displaystyle \\Pr \\left(\\omega :\\lim _{n\\to \\infty }{\\frac {S_{n}(\\omega )}{n}}=0\\right)=1.} It is equivalent to show that Pr ( ω : lim n → ∞ S n ( ω ) n ≠ 0 ) = 0 , {\\displaystyle \\Pr \\left(\\omega :\\lim _{n\\to \\infty }{\\frac {S_{n}(\\omega )}{n}}\\neq 0\\right)=0,} Note that lim n → ∞ S n ( ω ) n ≠ 0 ⟺ ∃ ϵ > 0 , | S n ( ω ) n | ≥ ϵ infinitely often , {\\displaystyle \\lim _{n\\to \\infty }{\\frac {S_{n}(\\omega )}{n}}\\neq 0\\iff \\exists \\epsilon >0,\\left|{\\frac {S_{n}(\\omega )}{n}}\\right|\\geq \\epsilon \\ {\\mbox{infinitely often}},} and thus to prove the strong law we need to show that for every ϵ > 0 {\\displaystyle \\epsilon >0} , we have Pr ( ω : | S n ( ω ) | ≥ n ϵ infinitely often ) = 0.",
+      "char_count": 689,
+      "token_estimate": 172,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0029",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Proof of the strong law ==",
+      "heading_path": "== Proof of the strong law ==",
+      "start_char": 21027,
+      "end_char": 21956,
+      "content": "{\\displaystyle \\Pr \\left(\\omega :|S_{n}(\\omega )|\\geq n\\epsilon {\\mbox{ infinitely often}}\\right)=0.} Define the events A n = { ω : | S n | ≥ n ϵ } {\\displaystyle A_{n}=\\{\\omega :|S_{n}|\\geq n\\epsilon \\}} , and if we can show that ∑ n = 1 ∞ Pr ( A n ) < ∞ , {\\displaystyle \\sum _{n=1}^{\\infty }\\Pr(A_{n})<\\infty ,} then the Borel-Cantelli Lemma implies the result. So let us estimate Pr ( A n ) {\\displaystyle \\Pr(A_{n})} . We compute E [ S n 4 ] = E [ ( ∑ i = 1 n X i ) 4 ] = E [ ∑ 1 ≤ i , j , k , l ≤ n X i X j X k X l ] . {\\displaystyle {\\mathbb {E} }[S_{n}^{4}]={\\mathbb {E} }\\left[\\left(\\sum _{i=1}^{n}X_{i}\\right)^{4}\\right]={\\mathbb {E} }\\left[\\sum _{1\\leq i,j,k,l\\leq n}X_{i}X_{j}X_{k}X_{l}\\right].} We first claim that every term of the form X i 3 X j , X i 2 X j X k , X i X j X k X l {\\displaystyle X_{i}^{3}X_{j},X_{i}^{2}X_{j}X_{k},X_{i}X_{j}X_{k}X_{l}} where all subscripts are distinct, must have zero expectation.",
+      "char_count": 929,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0030",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Proof of the strong law ==",
+      "heading_path": "== Proof of the strong law ==",
+      "start_char": 21957,
+      "end_char": 22883,
+      "content": "This is because E [ X i 3 X j ] = E [ X i 3 ] E [ X j ] {\\displaystyle {\\mathbb {E} }[X_{i}^{3}X_{j}]={\\mathbb {E} }[X_{i}^{3}]{\\mathbb {E} }[X_{j}]} by independence, and the last term is zero—and similarly for the other terms. Therefore the only terms in the sum with nonzero expectation are E [ X i 4 ] {\\displaystyle {\\mathbb {E} }[X_{i}^{4}]} and E [ X i 2 X j 2 ] {\\displaystyle {\\mathbb {E} }[X_{i}^{2}X_{j}^{2}]} . Since the X i {\\displaystyle X_{i}} are identically distributed, all of these are the same, and moreover E [ X i 2 X j 2 ] = ( E [ X i 2 ] ) 2 {\\displaystyle {\\mathbb {E} }[X_{i}^{2}X_{j}^{2}]=({\\mathbb {E} }[X_{i}^{2}])^{2}} . There are n {\\displaystyle n} terms of the form E [ X i 4 ] {\\displaystyle {\\mathbb {E} }[X_{i}^{4}]} and 3 n ( n − 1 ) {\\displaystyle 3n(n-1)} terms of the form ( E [ X i 2 ] ) 2 {\\displaystyle ({\\mathbb {E} }[X_{i}^{2}])^{2}} , and so E [ S n 4 ] = n τ + 3 n ( n − 1 ) σ 4 .",
+      "char_count": 926,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0031",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Proof of the strong law ==",
+      "heading_path": "== Proof of the strong law ==",
+      "start_char": 22884,
+      "end_char": 23840,
+      "content": "{\\displaystyle {\\mathbb {E} }[S_{n}^{4}]=n\\tau +3n(n-1)\\sigma ^{4}.} Note that the right-hand side is a quadratic polynomial in n {\\displaystyle n} , and as such there exists a C > 0 {\\displaystyle C>0} such that E [ S n 4 ] ≤ C n 2 {\\displaystyle {\\mathbb {E} }[S_{n}^{4}]\\leq Cn^{2}} for n {\\displaystyle n} sufficiently large. By Markov, Pr ( | S n | ≥ n ϵ ) ≤ 1 ( n ϵ ) 4 E [ S n 4 ] ≤ C ϵ 4 n 2 , {\\displaystyle \\Pr(|S_{n}|\\geq n\\epsilon )\\leq {\\frac {1}{(n\\epsilon )^{4}}}{\\mathbb {E} }[S_{n}^{4}]\\leq {\\frac {C}{\\epsilon ^{4}n^{2}}},} for n {\\displaystyle n} sufficiently large, and therefore this series is summable. Since this holds for any ϵ > 0 {\\displaystyle \\epsilon >0} , we have established the strong law of large numbers. The proof can be strengthened immensely by dropping all finiteness assumptions on the second and fourth moments. It can also be extended for example to discuss partial sums of distributions without any finite moments.",
+      "char_count": 956,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0032",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Consequences ==",
+      "heading_path": "== Consequences ==",
+      "start_char": 24019,
+      "end_char": 24969,
+      "content": "== Consequences == The law of large numbers provides an expectation of an unknown distribution from a realization of the sequence, but also any feature of the probability distribution. By applying Borel's law of large numbers, one could easily obtain the probability mass function. For each event in the objective probability mass function, one could approximate the probability of the event's occurrence with the proportion of times that any specified event occurs. The larger the number of repetitions, the better the approximation. As for the continuous case: C = ( a − h , a + h ] {\\displaystyle C=(a-h,a+h]} , for small positive h. Thus, for large n: N n ( C ) n ≈ p = P ( X ∈ C ) = ∫ a − h a + h f ( x ) d x ≈ 2 h f ( a ) {\\displaystyle {\\frac {N_{n}(C)}{n}}\\thickapprox p=P(X\\in C)=\\int _{a-h}^{a+h}f(x)\\,dx\\thickapprox 2hf(a)} With this method, one can cover the whole x-axis with a grid (with grid size 2h) and obtain a bar graph which is called a histogram.",
+      "char_count": 967,
+      "token_estimate": 241,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0033",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 24987,
+      "end_char": 25675,
+      "content": "== Applications == One application of the law of large numbers is an important method of approximation known as the Monte Carlo method, which uses a random sampling of numbers to approximate numerical results. The algorithm to compute an integral of f(x) on an interval [a, b] is as follows: Simulate uniform random variables X1, X2, …, Xn which can be done using a software, and use a random number table that gives U1, U2, …, Un independent and identically distributed (i.i.d.) random variables on [0, 1]. Then let Xi = a + (b - a) Ui for i= 1, 2, …, n. Then X1, X2, …, Xn are independent and identically distributed uniform random variables on [a, b]. Evaluate f(X1), f(X2), …, f(Xn).",
+      "char_count": 687,
+      "token_estimate": 171,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0034",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 25675,
+      "end_char": 26632,
+      "content": "Take the average of f(X1), f(X2), …, f(Xn) by computing ( b − a ) f ( X 1 ) + f ( X 2 ) + ⋯ + f ( X n ) n {\\displaystyle (b-a){\\tfrac {f(X_{1})+f(X_{2})+\\dots +f(X_{n})}{n}}} , and then by the strong law of large numbers this converges to ( b − a ) E ⁡ ( f ( X 1 ) ) = ( b − a ) ∫ a b f ( x ) 1 b − a d x = ∫ a b f ( x ) d x {\\displaystyle (b-a)\\operatorname {E} (f(X_{1}))=(b-a)\\int _{a}^{b}f(x){\\tfrac {1}{b-a}}\\,dx=\\int _{a}^{b}f(x){dx}} . We can find the integral of f ( x ) = cos 2 ⁡ ( x ) x 3 + 1 {\\displaystyle f(x)=\\cos ^{2}(x){\\sqrt {x^{3}+1}}} on [-1, 2]. Using traditional methods to compute this integral is very difficult, so the Monte Carlo method can be used here. Using the above algorithm, we get ∫ − 1 2 f ( x ) d x = 0.905 {\\displaystyle \\int _{-1}^{2}f(x)\\,dx=0.905} when n = 25 and ∫ − 1 2 f ( x ) d x = 1.028 {\\displaystyle \\int _{-1}^{2}f(x)\\,dx=1.028} when n = 250. We observe that as n increases, the numerical value also increases.",
+      "char_count": 957,
+      "token_estimate": 239,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "lawoflargenumbers_7678dd59_c0035",
+      "article_id": "lawoflargenumbers_7678dd59",
+      "section": "== Applications ==",
+      "heading_path": "== Applications ==",
+      "start_char": 26633,
+      "end_char": 27143,
+      "content": "When we get the actual results for the integral we get ∫ − 1 2 f ( x ) d x = 1.000194 {\\displaystyle \\int _{-1}^{2}f(x)\\,dx=1.000194} . When the LLN was used, the approximation of the integral was closer to its true value, and thus more accurate. Another example is the integration of f ( x ) = e x − 1 e − 1 {\\displaystyle f(x)={\\frac {e^{x}-1}{e-1}}} over [0, 1]. Using the Monte Carlo method and the LLN, we can see that as the number of samples increases, the numerical value gets ever closer to 0.4180233.",
+      "char_count": 510,
+      "token_estimate": 127,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is another name for the weak law of large numbers?",
+        "answer": "The weak law of large numbers is also called Khinchin's law.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0012"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0012"
+        ]
+      },
+      {
+        "question": "What is the name for the bar graph obtained by covering the x-axis with a grid to approximate a probability distribution?",
+        "answer": "The bar graph obtained by covering the whole x-axis with a grid (with grid size 2h) to approximate a probability distribution is called a histogram.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0032"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0032"
+        ]
+      },
+      {
+        "question": "Under the assumptions of identical finite variance (σ²) and no correlation between random variables, what is the formula for the variance of the average of n random variables?",
+        "answer": "The variance of the average of n random variables is Var(X̄n) = σ²/n.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0010"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0010"
+        ]
+      },
+      {
+        "question": "How do the examples of a casino's roulette wheel and rolling a six-sided die illustrate the law of large numbers?",
+        "answer": "The law of large numbers states that the average of results from many independent trials converges to a true, expected value. In the case of a casino's roulette wheel, while the casino might lose on a single spin, its earnings will approach a predictable percentage over a large number of spins. Similarly, for a six-sided die, the expected value of a single roll is 3.5. According to the law, as the number of dice rolls becomes very large, the average of their outcomes will get closer and closer to this expected value of 3.5.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0000",
+          "lawoflargenumbers_7678dd59_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0002",
+          "lawoflargenumbers_7678dd59_c0000"
+        ]
+      },
+      {
+        "question": "While the law of large numbers suggests that the proportion of heads in many coin flips will converge to 1/2, what is an example of a distribution where the average of results fails to converge with more trials, and what is the reason for this failure?",
+        "answer": "An example where the average of results fails to converge is the Cauchy distribution. The reason for this failure is that the distribution has heavy tails and does not have an expectation. The average of n results from a Cauchy distribution has the same distribution as a single result and does not converge to a specific value as the number of trials increases.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0003",
+          "lawoflargenumbers_7678dd59_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0005",
+          "lawoflargenumbers_7678dd59_c0003"
+        ]
+      },
+      {
+        "question": "Trace the historical development of the law of large numbers from its early conception to its later refinements, and identify a significant limitation to its application.",
+        "answer": "The concept originated with Italian mathematician Gerolamo Cardano (1501–1576), who stated without proof that the accuracy of empirical statistics improves with more trials. Jacob Bernoulli later formalized and proved a special form of the law for a binary random variable, publishing his work in 1713. In 1837, S. D. Poisson named it \"la loi des grands nombres\" (the law of large numbers). Subsequently, mathematicians like Chebyshev, Markov, and Khinchin refined the law, leading to the development of two prominent forms: the \"weak\" law and the \"strong\" law. Despite these theoretical advancements, a key limitation is that the law does not solve for selection bias; even with an increased number of trials, the bias will remain.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0006",
+          "lawoflargenumbers_7678dd59_c0007",
+          "lawoflargenumbers_7678dd59_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0007",
+          "lawoflargenumbers_7678dd59_c0008",
+          "lawoflargenumbers_7678dd59_c0006"
+        ]
+      },
+      {
+        "question": "Provide a comprehensive explanation of the law of large numbers, including what it states, its practical importance with an example, a common misconception about it, and its areas of application.",
+        "answer": "The law of large numbers is a mathematical principle stating that the average of results from a large number of independent random samples will converge to the true mean. Its importance lies in guaranteeing stable, predictable long-term results for the averages of random events. For example, a casino's earnings will tend towards a predictable percentage over many roulette spins, overcoming any short-term winning streaks by players. A common misconception, related to the gambler's fallacy, is that a small number of observations will balance out or that a streak will be immediately corrected; however, the law only applies to the average over a large number of trials. This principle is widely used in fields like statistics, probability theory, economics, and insurance.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0000",
+          "lawoflargenumbers_7678dd59_c0001"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0000",
+          "lawoflargenumbers_7678dd59_c0001"
+        ]
+      },
+      {
+        "question": "How do the examples of a fair coin toss and the Monte Carlo method illustrate the principle of the law of large numbers?",
+        "answer": "The law of large numbers is illustrated by the fair coin toss example, where the theoretical probability of heads is 1/2. As the number of flips becomes very large, the proportion of heads will almost surely converge to this 1/2 value. Similarly, the Monte Carlo method, a class of computational algorithms, relies on this principle. It uses repeated random sampling to obtain numerical results, and the accuracy of its approximation improves as the number of repetitions increases, which is a direct application of the law of large numbers.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0002",
+          "lawoflargenumbers_7678dd59_c0003",
+          "lawoflargenumbers_7678dd59_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0003",
+          "lawoflargenumbers_7678dd59_c0002",
+          "lawoflargenumbers_7678dd59_c0004"
+        ]
+      },
+      {
+        "question": "What are two distinct types of limitations that can prevent the law of large numbers from applying, even when the number of trials is large?",
+        "answer": "Two distinct limitations can prevent the law of large numbers from applying. First, the average of results may fail to converge if the data is drawn from certain distributions with \"heavy tails,\" like the Cauchy distribution or some Pareto distributions (α<1). For instance, the Cauchy distribution lacks an expectation, and the average of many trials does not converge to a single value. Second, the law does not apply correctly if the trials have an inherent selection bias, which is often seen in human economic behavior. Even with a large number of trials, this selection bias remains and is not resolved by the law.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0005",
+          "lawoflargenumbers_7678dd59_c0006"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0006",
+          "lawoflargenumbers_7678dd59_c0005"
+        ]
+      },
+      {
+        "question": "Who were the key mathematicians involved in the initial formalization and later refinement of the law of large numbers?",
+        "answer": "Jacob Bernoulli first proved a special form of the law, which was published in 1713, and S. D. Poisson named it \"the law of large numbers\" in 1837. Following their work, other mathematicians including Chebyshev, Markov, Borel, Cantelli, Kolmogorov, and Khinchin contributed to refining the law, which led to the development of its \"weak\" and \"strong\" forms.",
+        "related_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0007",
+          "lawoflargenumbers_7678dd59_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "lawoflargenumbers_7678dd59_c0008",
+          "lawoflargenumbers_7678dd59_c0007"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:47.565Z",
+    "content_format": "markdown",
+    "total_chunks": 36,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

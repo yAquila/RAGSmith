@@ -1,0 +1,322 @@
+{
+  "article": {
+    "id": "binarysearchtree_f028bc30",
+    "title": "Binary search tree",
+    "url": "https://en.wikipedia.org/wiki/Binary_search_tree",
+    "lang": "en",
+    "created_at": "2025-07-30T10:20:33.583841",
+    "content": "---\nid: binarysearchtree_f028bc30\nurl: https://en.wikipedia.org/wiki/Binary_search_tree\ntitle: Binary search tree\nlang: en\ncreated_at: '2025-07-30T10:17:53.582309'\nchecksum: 3e4837f53ca7bbb7363c6b85b725103c1ee54f0fbd199cd8c80d9ba20fc0327e\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2239\n  char_count: 13842\n  num_chunks: 16\n  original_chunks: 24\n  filtered_out: 8\n  num_sections: 0\n---\nIn computer science, a binary search tree (BST), also called an ordered or sorted binary tree, is a rooted binary tree data structure with the key of each internal node being greater than all the keys in the respective node's left subtree and less than the ones in its right subtree. The time complexity of operations on the binary search tree is linear with respect to the height of the tree. Binary search trees allow binary search for fast lookup, addition, and removal of data items. Since the nodes in a BST are laid out so that each comparison skips about half of the remaining tree, the lookup performance is proportional to that of binary logarithm. BSTs were devised in the 1960s for the problem of efficient storage of labeled data and are attributed to Conway Berners-Lee and David Wheeler. The performance of a binary search tree is dependent on the order of insertion of the nodes into the tree since arbitrary insertions may lead to degeneracy; several variations of the binary search tree can be built with guaranteed worst-case performance. The basic operations include: search, traversal, insert and delete. BSTs with guaranteed worst-case complexities perform better than an unsorted array, which would require linear search time. The complexity analysis of BST shows that, on average, the insert, delete and search takes O ( log ⁡ n ) {\\displaystyle O(\\log n)} for n {\\displaystyle n} nodes. In the worst case, they degrade to that of a singly linked list: O ( n ) {\\displaystyle O(n)} . To address the boundless increase of the tree height with arbitrary insertions and deletions, self-balancing variants of BSTs are introduced to bound the worst lookup complexity to that of the binary logarithm. AVL trees were the first self-balancing binary search trees, invented in 1962 by Georgy Adelson-Velsky and Evgenii Landis. Binary search trees can be used to implement abstract data types such as dynamic sets, lookup tables and priority queues, and used in sorting algorithms such as tree sort. == History == The binary search tree algorithm was discovered independently by several researchers, including P.F. Windley, Andrew Donald Booth, Andrew Colin, Thomas N. Hibbard. The algorithm is attributed to Conway Berners-Lee and David Wheeler, who used it for storing labeled data in magnetic tapes in 1960. One of the earliest and popular binary search tree algorithm is that of Hibbard. The time complexity of a binary search tree increases boundlessly with the tree height if the nodes are inserted in an arbitrary order, therefore self-balancing binary search trees were introduced to bound the height of the tree to O ( log ⁡ n ) {\\displaystyle O(\\log n)} . Various height-balanced binary search trees were introduced to confine the tree height, such as AVL trees, Treaps, and red–black trees. == Overview == A binary search tree is a rooted binary tree in which nodes are arranged in strict total order in which the nodes with keys greater than any particular node A is stored on the right sub-trees to that node A and the nodes with keys equal to or less than A are stored on the left sub-trees to A, satisfying the binary search property. Binary search trees are also efficacious in sortings and search algorithms. However, the search complexity of a BST depends upon the order in which the nodes are inserted and deleted; since in worst case, successive operations in the binary search tree may lead to degeneracy and form a singly linked list (or \"unbalanced tree\") like structure, thus has the same worst-case complexity as a linked list. Binary search trees are also a fundamental data structure used in construction of abstract data structures such as sets, multisets, and associative arrays. == Operations == === Searching === Searching in a binary search tree for a specific key can be programmed recursively or iteratively. Searching begins by examining the root node. If the tree is nil, the key being searched for does not exist in the tree. Otherwise, if the key equals that of the root, the search is successful and the node is returned. If the key is less than that of the root, the search proceeds by examining the left subtree. Similarly, if the key is greater than that of the root, the search proceeds by examining the right subtree. This process is repeated until the key is found or the remaining subtree is nil {\\displaystyle {\\text{nil}}} . If the searched key is not found after a nil {\\displaystyle {\\text{nil}}} subtree is reached, then the key is not present in the tree. ==== Recursive search ==== The following pseudocode implements the BST search procedure through recursion. The recursive procedure continues until a nil {\\displaystyle {\\text{nil}}} or the key {\\displaystyle {\\text{key}}} being searched for are encountered. ==== Iterative search ==== The recursive version of the search can be \"unrolled\" into a while loop. On most machines, the iterative version is found to be more efficient. Since the search may proceed till some leaf node, the running time complexity of BST search is O ( h ) {\\displaystyle O(h)} where h {\\displaystyle h} is the height of the tree. However, the worst case for BST search is O ( n ) {\\displaystyle O(n)} where n {\\displaystyle n} is the total number of nodes in the BST, because an unbalanced BST may degenerate to a linked list. However, if the BST is height-balanced the height is O ( log ⁡ n ) {\\displaystyle O(\\log n)} . ==== Successor and predecessor ==== For certain operations, given a node x {\\displaystyle {\\text{x}}} , finding the successor or predecessor of x {\\displaystyle {\\text{x}}} is crucial. Assuming all the keys of a BST are distinct, the successor of a node x {\\displaystyle {\\text{x}}} in a BST is the node with the smallest key greater than x {\\displaystyle {\\text{x}}} 's key. On the other hand, the predecessor of a node x {\\displaystyle {\\text{x}}} in a BST is the node with the largest key smaller than x {\\displaystyle {\\text{x}}} 's key. The following pseudocode finds the successor and predecessor of a node x {\\displaystyle {\\text{x}}} in a BST. Operations such as finding a node in a BST whose key is the maximum or minimum are critical in certain operations, such as determining the successor and predecessor of nodes. Following is the pseudocode for the operations. === Insertion === Operations such as insertion and deletion cause the BST representation to change dynamically. The data structure must be modified in such a way that the properties of BST continue to hold. New nodes are inserted as leaf nodes in the BST. Following is an iterative implementation of the insertion operation. The procedure maintains a \"trailing pointer\" y {\\displaystyle {\\text{y}}} as a parent of x {\\displaystyle {\\text{x}}} . After initialization on line 2, the while loop along lines 4-11 causes the pointers to be updated. If y {\\displaystyle {\\text{y}}} is nil {\\displaystyle {\\text{nil}}} , the BST is empty, thus z {\\displaystyle {\\text{z}}} is inserted as the root node of the binary search tree T {\\displaystyle {\\text{T}}} , if it is not nil {\\displaystyle {\\text{nil}}} , insertion proceeds by comparing the keys to that of y {\\displaystyle {\\text{y}}} on the lines 15-19 and the node is inserted accordingly. === Deletion === The deletion of a node, say Z {\\displaystyle {\\text{Z}}} , from the binary search tree BST {\\displaystyle {\\text{BST}}} has three cases: If Z {\\displaystyle {\\text{Z}}} is a leaf node, it is replaced by NIL {\\displaystyle {\\text{NIL}}} as shown in (a). If Z {\\displaystyle {\\text{Z}}} has only one child, the child node of Z {\\displaystyle {\\text{Z}}} gets elevated by modifying the parent node of Z {\\displaystyle {\\text{Z}}} to point to the child node, consequently taking Z {\\displaystyle {\\text{Z}}} 's position in the tree, as shown in (b) and (c). If Z {\\displaystyle {\\text{Z}}} has both left and right children, the in-order successor of Z {\\displaystyle {\\text{Z}}} , say Y {\\displaystyle {\\text{Y}}} , displaces Z {\\displaystyle {\\text{Z}}} by following the two cases: If Y {\\displaystyle {\\text{Y}}} is Z {\\displaystyle {\\text{Z}}} 's right child, as shown in (d), Y {\\displaystyle {\\text{Y}}} displaces Z {\\displaystyle {\\text{Z}}} and Y {\\displaystyle {\\text{Y}}} 's right child remain unchanged. If Y {\\displaystyle {\\text{Y}}} lies within Z {\\displaystyle {\\text{Z}}} 's right subtree but is not Z {\\displaystyle {\\text{Z}}} 's right child, as shown in (e), Y {\\displaystyle {\\text{Y}}} first gets replaced by its own right child, and then it displaces Z {\\displaystyle {\\text{Z}}} 's position in the tree. Alternatively, the in-order predecessor can also be used. The following pseudocode implements the deletion operation in a binary search tree. The BST-Delete {\\displaystyle {\\text{BST-Delete}}} procedure deals with the 3 special cases mentioned above. Lines 2-3 deal with case 1; lines 4-5 deal with case 2 and lines 6-16 for case 3. The helper function Shift-Nodes {\\displaystyle {\\text{Shift-Nodes}}} is used within the deletion algorithm for the purpose of replacing the node u {\\displaystyle {\\text{u}}} with v {\\displaystyle {\\text{v}}} in the binary search tree BST {\\displaystyle {\\text{BST}}} . This procedure handles the deletion (and substitution) of u {\\displaystyle {\\text{u}}} from BST {\\displaystyle {\\text{BST}}} . == Traversal == A BST can be traversed through three basic algorithms: inorder, preorder, and postorder tree walks. Inorder tree walk: Nodes from the left subtree get visited first, followed by the root node and right subtree. Such a traversal visits all the nodes in the order of non-decreasing key sequence. Preorder tree walk: The root node gets visited first, followed by left and right subtrees. Postorder tree walk: Nodes from the left subtree get visited first, followed by the right subtree, and finally, the root. Following is a recursive implementation of the tree walks. == Balanced binary search trees == Without rebalancing, insertions or deletions in a binary search tree may lead to degeneration, resulting in a height n {\\displaystyle n} of the tree (where n {\\displaystyle n} is number of items in a tree), so that the lookup performance is deteriorated to that of a linear search. Keeping the search tree balanced and height bounded by O ( log ⁡ n ) {\\displaystyle O(\\log n)} is a key to the usefulness of the binary search tree. This can be achieved by \"self-balancing\" mechanisms during the updation operations to the tree designed to maintain the tree height to the binary logarithmic complexity. === Height-balanced trees === A tree is height-balanced if the heights of the left sub-tree and right sub-tree are guaranteed to be related by a constant factor. This property was introduced by the AVL tree and continued by the red–black tree. The heights of all the nodes on the path from the root to the modified leaf node have to be observed and possibly corrected on every insert and delete operation to the tree. === Weight-balanced trees === In a weight-balanced tree, the criterion of a balanced tree is the number of leaves of the subtrees. The weights of the left and right subtrees differ at most by 1 {\\displaystyle 1} . However, the difference is bound by a ratio α {\\displaystyle \\alpha } of the weights, since a strong balance condition of 1 {\\displaystyle 1} cannot be maintained with O ( log ⁡ n ) {\\displaystyle O(\\log n)} rebalancing work during insert and delete operations. The α {\\displaystyle \\alpha } -weight-balanced trees gives an entire family of balance conditions, where each left and right subtrees have each at least a fraction of α {\\displaystyle \\alpha } of the total weight of the subtree. === Types === There are several self-balanced binary search trees, including T-tree, treap, red-black tree, B-tree, 2–3 tree, and Splay tree. == Examples of applications == === Sort === Binary search trees are used in sorting algorithms such as tree sort, where all the elements are inserted at once and the tree is traversed at an in-order fashion. BSTs are also used in quicksort. === Priority queue operations === Binary search trees are used in implementing priority queues, using the node's key as priorities. Adding new elements to the queue follows the regular BST insertion operation but the removal operation depends on the type of priority queue: If it is an ascending order priority queue, removal of an element with the lowest priority is done through leftward traversal of the BST. If it is a descending order priority queue, removal of an element with the highest priority is done through rightward traversal of the BST. == See also == == References == == Further reading == This article incorporates public domain material from Paul E. Black. \"Binary Search Tree\". Dictionary of Algorithms and Data Structures. NIST. Cormen, Thomas H.; Leiserson, Charles E.; Rivest, Ronald L.; Stein, Clifford (2001). \"12: Binary search trees, 15.5: Optimal binary search trees\". Introduction to Algorithms (2nd ed.). MIT Press. pp. 253–272, 356–363. ISBN 0-262-03293-7. Jarc, Duane J. (3 December 2005). \"Binary Tree Traversals\". Interactive Data Structure Visualizations. University of Maryland. Archived from the original on 27 February 2014. Retrieved 30 April 2006. Knuth, Donald (1997). \"6.2.2: Binary Tree Searching\". The Art of Computer Programming. Vol. 3: \"Sorting and Searching\" (3rd ed.). Addison-Wesley. pp. 426–458. ISBN 0-201-89685-0. Long, Sean. \"Binary Search Tree\" (PPT). Data Structures and Algorithms Visualization-A PowerPoint Slides Based Approach. SUNY Oneonta. Parlante, Nick (2001). \"Binary Trees\". CS Education Library. Stanford University. Archived from the original on 2022-01-30. == External links == Ben Pfaff: An Introduction to Binary Search Trees and Balanced Trees. (PDF; 1675 kB) 2004. Binary Tree Visualizer (JavaScript animation of various BT-based data structures)"
+  },
+  "chunks": [
+    {
+      "id": "binarysearchtree_f028bc30_c0000",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 802,
+      "content": "In computer science, a binary search tree (BST), also called an ordered or sorted binary tree, is a rooted binary tree data structure with the key of each internal node being greater than all the keys in the respective node's left subtree and less than the ones in its right subtree. The time complexity of operations on the binary search tree is linear with respect to the height of the tree. Binary search trees allow binary search for fast lookup, addition, and removal of data items. Since the nodes in a BST are laid out so that each comparison skips about half of the remaining tree, the lookup performance is proportional to that of binary logarithm. BSTs were devised in the 1960s for the problem of efficient storage of labeled data and are attributed to Conway Berners-Lee and David Wheeler.",
+      "char_count": 801,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0001",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 802,
+      "end_char": 1717,
+      "content": "The performance of a binary search tree is dependent on the order of insertion of the nodes into the tree since arbitrary insertions may lead to degeneracy; several variations of the binary search tree can be built with guaranteed worst-case performance. The basic operations include: search, traversal, insert and delete. BSTs with guaranteed worst-case complexities perform better than an unsorted array, which would require linear search time. The complexity analysis of BST shows that, on average, the insert, delete and search takes O ( log ⁡ n ) {\\displaystyle O(\\log n)} for n {\\displaystyle n} nodes. In the worst case, they degrade to that of a singly linked list: O ( n ) {\\displaystyle O(n)} . To address the boundless increase of the tree height with arbitrary insertions and deletions, self-balancing variants of BSTs are introduced to bound the worst lookup complexity to that of the binary logarithm.",
+      "char_count": 915,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0002",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 1718,
+      "end_char": 2012,
+      "content": "AVL trees were the first self-balancing binary search trees, invented in 1962 by Georgy Adelson-Velsky and Evgenii Landis. Binary search trees can be used to implement abstract data types such as dynamic sets, lookup tables and priority queues, and used in sorting algorithms such as tree sort.",
+      "char_count": 294,
+      "token_estimate": 73,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0003",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2026,
+      "end_char": 2815,
+      "content": "== History == The binary search tree algorithm was discovered independently by several researchers, including P.F. Windley, Andrew Donald Booth, Andrew Colin, Thomas N. Hibbard. The algorithm is attributed to Conway Berners-Lee and David Wheeler, who used it for storing labeled data in magnetic tapes in 1960. One of the earliest and popular binary search tree algorithm is that of Hibbard. The time complexity of a binary search tree increases boundlessly with the tree height if the nodes are inserted in an arbitrary order, therefore self-balancing binary search trees were introduced to bound the height of the tree to O ( log ⁡ n ) {\\displaystyle O(\\log n)} . Various height-balanced binary search trees were introduced to confine the tree height, such as AVL trees, Treaps, and red–black trees.",
+      "char_count": 801,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0004",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== Overview ==",
+      "heading_path": "== Overview ==",
+      "start_char": 2829,
+      "end_char": 3722,
+      "content": "== Overview == A binary search tree is a rooted binary tree in which nodes are arranged in strict total order in which the nodes with keys greater than any particular node A is stored on the right sub-trees to that node A and the nodes with keys equal to or less than A are stored on the left sub-trees to A, satisfying the binary search property. Binary search trees are also efficacious in sortings and search algorithms. However, the search complexity of a BST depends upon the order in which the nodes are inserted and deleted; since in worst case, successive operations in the binary search tree may lead to degeneracy and form a singly linked list (or \"unbalanced tree\") like structure, thus has the same worst-case complexity as a linked list. Binary search trees are also a fundamental data structure used in construction of abstract data structures such as sets, multisets, and associative arrays.",
+      "char_count": 906,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0005",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Searching ==",
+      "heading_path": "== = Searching ==",
+      "start_char": 3756,
+      "end_char": 4522,
+      "content": "== = Searching === Searching in a binary search tree for a specific key can be programmed recursively or iteratively. Searching begins by examining the root node. If the tree is nil, the key being searched for does not exist in the tree. Otherwise, if the key equals that of the root, the search is successful and the node is returned. If the key is less than that of the root, the search proceeds by examining the left subtree. Similarly, if the key is greater than that of the root, the search proceeds by examining the right subtree. This process is repeated until the key is found or the remaining subtree is nil {\\displaystyle {\\text{nil}}} . If the searched key is not found after a nil {\\displaystyle {\\text{nil}}} subtree is reached, then the key is not present in the tree.",
+      "char_count": 782,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0006",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Insertion ==",
+      "heading_path": "== = Insertion ==",
+      "start_char": 4539,
+      "end_char": 5461,
+      "content": "== = Insertion === Operations such as insertion and deletion cause the BST representation to change dynamically. The data structure must be modified in such a way that the properties of BST continue to hold. New nodes are inserted as leaf nodes in the BST. Following is an iterative implementation of the insertion operation. The procedure maintains a \"trailing pointer\" y {\\displaystyle {\\text{y}}} as a parent of x {\\displaystyle {\\text{x}}} . After initialization on line 2, the while loop along lines 4-11 causes the pointers to be updated. If y {\\displaystyle {\\text{y}}} is nil {\\displaystyle {\\text{nil}}} , the BST is empty, thus z {\\displaystyle {\\text{z}}} is inserted as the root node of the binary search tree T {\\displaystyle {\\text{T}}} , if it is not nil {\\displaystyle {\\text{nil}}} , insertion proceeds by comparing the keys to that of y {\\displaystyle {\\text{y}}} on the lines 15-19 and the node is inserted accordingly.",
+      "char_count": 938,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0007",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Deletion ==",
+      "heading_path": "== = Deletion ==",
+      "start_char": 5477,
+      "end_char": 6049,
+      "content": "== = Deletion === The deletion of a node, say Z {\\displaystyle {\\text{Z}}} , from the binary search tree BST {\\displaystyle {\\text{BST}}} has three cases: If Z {\\displaystyle {\\text{Z}}} is a leaf node, it is replaced by NIL {\\displaystyle {\\text{NIL}}} as shown in (a). If Z {\\displaystyle {\\text{Z}}} has only one child, the child node of Z {\\displaystyle {\\text{Z}}} gets elevated by modifying the parent node of Z {\\displaystyle {\\text{Z}}} to point to the child node, consequently taking Z {\\displaystyle {\\text{Z}}} 's position in the tree, as shown in (b) and (c).",
+      "char_count": 571,
+      "token_estimate": 142,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0008",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Deletion ==",
+      "heading_path": "== = Deletion ==",
+      "start_char": 6049,
+      "end_char": 6958,
+      "content": "If Z {\\displaystyle {\\text{Z}}} has both left and right children, the in-order successor of Z {\\displaystyle {\\text{Z}}} , say Y {\\displaystyle {\\text{Y}}} , displaces Z {\\displaystyle {\\text{Z}}} by following the two cases: If Y {\\displaystyle {\\text{Y}}} is Z {\\displaystyle {\\text{Z}}} 's right child, as shown in (d), Y {\\displaystyle {\\text{Y}}} displaces Z {\\displaystyle {\\text{Z}}} and Y {\\displaystyle {\\text{Y}}} 's right child remain unchanged. If Y {\\displaystyle {\\text{Y}}} lies within Z {\\displaystyle {\\text{Z}}} 's right subtree but is not Z {\\displaystyle {\\text{Z}}} 's right child, as shown in (e), Y {\\displaystyle {\\text{Y}}} first gets replaced by its own right child, and then it displaces Z {\\displaystyle {\\text{Z}}} 's position in the tree. Alternatively, the in-order predecessor can also be used. The following pseudocode implements the deletion operation in a binary search tree.",
+      "char_count": 909,
+      "token_estimate": 227,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0009",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Deletion ==",
+      "heading_path": "== = Deletion ==",
+      "start_char": 6959,
+      "end_char": 7545,
+      "content": "The BST-Delete {\\displaystyle {\\text{BST-Delete}}} procedure deals with the 3 special cases mentioned above. Lines 2-3 deal with case 1; lines 4-5 deal with case 2 and lines 6-16 for case 3. The helper function Shift-Nodes {\\displaystyle {\\text{Shift-Nodes}}} is used within the deletion algorithm for the purpose of replacing the node u {\\displaystyle {\\text{u}}} with v {\\displaystyle {\\text{v}}} in the binary search tree BST {\\displaystyle {\\text{BST}}} . This procedure handles the deletion (and substitution) of u {\\displaystyle {\\text{u}}} from BST {\\displaystyle {\\text{BST}}} .",
+      "char_count": 586,
+      "token_estimate": 146,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0010",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== Traversal ==",
+      "heading_path": "== Traversal ==",
+      "start_char": 7545,
+      "end_char": 8112,
+      "content": "== Traversal == A BST can be traversed through three basic algorithms: inorder, preorder, and postorder tree walks. Inorder tree walk: Nodes from the left subtree get visited first, followed by the root node and right subtree. Such a traversal visits all the nodes in the order of non-decreasing key sequence. Preorder tree walk: The root node gets visited first, followed by left and right subtrees. Postorder tree walk: Nodes from the left subtree get visited first, followed by the right subtree, and finally, the root. Following is a recursive implementation of the tree walks.",
+      "char_count": 581,
+      "token_estimate": 145,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0011",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== Balanced binary search trees ==",
+      "heading_path": "== Balanced binary search trees ==",
+      "start_char": 8146,
+      "end_char": 8748,
+      "content": "== Balanced binary search trees == Without rebalancing, insertions or deletions in a binary search tree may lead to degeneration, resulting in a height n {\\displaystyle n} of the tree (where n {\\displaystyle n} is number of items in a tree), so that the lookup performance is deteriorated to that of a linear search. Keeping the search tree balanced and height bounded by O ( log ⁡ n ) {\\displaystyle O(\\log n)} is a key to the usefulness of the binary search tree. This can be achieved by \"self-balancing\" mechanisms during the updation operations to the tree designed to maintain the tree height to the binary logarithmic complexity.",
+      "char_count": 635,
+      "token_estimate": 158,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0012",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Height-balanced trees ==",
+      "heading_path": "== = Height-balanced trees ==",
+      "start_char": 8777,
+      "end_char": 9167,
+      "content": "== = Height-balanced trees === A tree is height-balanced if the heights of the left sub-tree and right sub-tree are guaranteed to be related by a constant factor. This property was introduced by the AVL tree and continued by the red–black tree. The heights of all the nodes on the path from the root to the modified leaf node have to be observed and possibly corrected on every insert and delete operation to the tree.",
+      "char_count": 418,
+      "token_estimate": 104,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0013",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Weight-balanced trees ==",
+      "heading_path": "== = Weight-balanced trees ==",
+      "start_char": 9196,
+      "end_char": 9873,
+      "content": "== = Weight-balanced trees === In a weight-balanced tree, the criterion of a balanced tree is the number of leaves of the subtrees. The weights of the left and right subtrees differ at most by 1 {\\displaystyle 1} . However, the difference is bound by a ratio α {\\displaystyle \\alpha } of the weights, since a strong balance condition of 1 {\\displaystyle 1} cannot be maintained with O ( log ⁡ n ) {\\displaystyle O(\\log n)} rebalancing work during insert and delete operations. The α {\\displaystyle \\alpha } -weight-balanced trees gives an entire family of balance conditions, where each left and right subtrees have each at least a fraction of α {\\displaystyle \\alpha } of the total weight of the subtree.",
+      "char_count": 705,
+      "token_estimate": 176,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0014",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Sort ==",
+      "heading_path": "== = Sort ==",
+      "start_char": 10059,
+      "end_char": 10258,
+      "content": "== = Sort === Binary search trees are used in sorting algorithms such as tree sort, where all the elements are inserted at once and the tree is traversed at an in-order fashion. BSTs are also used in quicksort.",
+      "char_count": 210,
+      "token_estimate": 52,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "binarysearchtree_f028bc30_c0015",
+      "article_id": "binarysearchtree_f028bc30",
+      "section": "== = Priority queue operations ==",
+      "heading_path": "== = Priority queue operations ==",
+      "start_char": 10291,
+      "end_char": 10811,
+      "content": "== = Priority queue operations === Binary search trees are used in implementing priority queues, using the node's key as priorities. Adding new elements to the queue follows the regular BST insertion operation but the removal operation depends on the type of priority queue: If it is an ascending order priority queue, removal of an element with the lowest priority is done through leftward traversal of the BST. If it is a descending order priority queue, removal of an element with the highest priority is done through rightward traversal of the BST.",
+      "char_count": 552,
+      "token_estimate": 138,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 7,
+    "items": [
+      {
+        "question": "Where are new nodes inserted in a Binary Search Tree (BST)?",
+        "answer": "New nodes are inserted as leaf nodes in the BST.",
+        "related_chunk_ids": [
+          "binarysearchtree_f028bc30_c0006"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "binarysearchtree_f028bc30_c0006"
+        ]
+      },
+      {
+        "question": "What is the average time complexity for insert, delete, and search operations in a binary search tree with n nodes?",
+        "answer": "On average, the insert, delete, and search operations in a binary search tree with n nodes take O(log n).",
+        "related_chunk_ids": [
+          "binarysearchtree_f028bc30_c0001"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "binarysearchtree_f028bc30_c0001"
+        ]
+      },
+      {
+        "question": "Describe the process for deleting a node with two children in a binary search tree using its in-order successor.",
+        "answer": "When deleting a node Z that has both left and right children, its in-order successor, Y, is used to displace it. There are two scenarios: If Y is Z's direct right child, Y displaces Z and Y's right child remains unchanged. If Y is located within Z's right subtree but is not the direct right child, Y is first replaced by its own right child, and then it displaces Z's position in the tree. Alternatively, the in-order predecessor can also be used.",
+        "related_chunk_ids": [
+          "binarysearchtree_f028bc30_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "binarysearchtree_f028bc30_c0008"
+        ]
+      },
+      {
+        "question": "What is the difference between the average and worst-case performance of a binary search tree, and what factors contribute to this difference?",
+        "answer": "On average, operations like search, insertion, and deletion on a binary search tree take O(log n) time, as the structure allows for binary search which is proportional to the binary logarithm. However, in the worst case, performance can degrade to O(n), similar to a singly linked list. This discrepancy is caused by the order of node insertion, as arbitrary insertions can lead to a degenerate or unbalanced tree. To mitigate this, self-balancing variants of BSTs are used to guarantee better worst-case performance.",
+        "related_chunk_ids": [
+          "binarysearchtree_f028bc30_c0000",
+          "binarysearchtree_f028bc30_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "binarysearchtree_f028bc30_c0001",
+          "binarysearchtree_f028bc30_c0000"
+        ]
+      },
+      {
+        "question": "What is the primary performance issue with standard binary search trees, and what innovation was introduced to solve this problem?",
+        "answer": "The primary performance issue with a standard binary search tree is that its search complexity is dependent on the order of node insertions and deletions. In a worst-case scenario, the tree can degenerate into an unbalanced, singly linked list-like structure. This led to the introduction of self-balancing binary search trees, which bound the tree's height to O(log n). The first such innovation was the AVL tree, invented in 1962.",
+        "related_chunk_ids": [
+          "binarysearchtree_f028bc30_c0002",
+          "binarysearchtree_f028bc30_c0003",
+          "binarysearchtree_f028bc30_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "binarysearchtree_f028bc30_c0003",
+          "binarysearchtree_f028bc30_c0004",
+          "binarysearchtree_f028bc30_c0002"
+        ]
+      },
+      {
+        "question": "What is the common underlying process used to locate a position or node within a binary search tree for searching, insertion, and deletion operations?",
+        "answer": "All three operations—searching, insertion, and deletion—rely on a similar traversal process that starts at the root. This process involves comparing the target key with the key of the current node. If the target key is less than the current node's key, the traversal continues to the left subtree. If the key is greater, it proceeds to the right subtree. This is repeated until the specific node is found (for searching and deletion) or an appropriate nil position is located for adding a new leaf node (for insertion).",
+        "related_chunk_ids": [
+          "binarysearchtree_f028bc30_c0005",
+          "binarysearchtree_f028bc30_c0006",
+          "binarysearchtree_f028bc30_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "binarysearchtree_f028bc30_c0006",
+          "binarysearchtree_f028bc30_c0005",
+          "binarysearchtree_f028bc30_c0007"
+        ]
+      },
+      {
+        "question": "Summarize the binary search tree, including its fundamental principle, its average and worst-case performance, and the type of innovation created to mitigate its performance limitations.",
+        "answer": "A binary search tree (BST) is a rooted binary tree where each internal node's key is greater than all keys in its left subtree and less than the keys in its right subtree. While the average time complexity for operations like search, insert, and delete is O(log n), its performance is dependent on the order of node insertion. In a worst-case scenario, arbitrary insertions can cause the tree to become degenerate, performing like a singly linked list with a time complexity of O(n). To address this drawback, self-balancing variants were introduced to guarantee better worst-case performance, with the AVL tree being the first of its kind.",
+        "related_chunk_ids": [
+          "binarysearchtree_f028bc30_c0000",
+          "binarysearchtree_f028bc30_c0001",
+          "binarysearchtree_f028bc30_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "binarysearchtree_f028bc30_c0001",
+          "binarysearchtree_f028bc30_c0000",
+          "binarysearchtree_f028bc30_c0002"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:32.685Z",
+    "content_format": "markdown",
+    "total_chunks": 16,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

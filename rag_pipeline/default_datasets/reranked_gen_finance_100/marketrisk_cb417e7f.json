@@ -1,0 +1,229 @@
+{
+  "article": {
+    "id": "marketrisk_cb417e7f",
+    "title": "Market risk",
+    "url": "https://en.wikipedia.org/wiki/Market_risk",
+    "lang": "en",
+    "created_at": "2025-07-30T14:06:58.321758",
+    "content": "---\nid: marketrisk_cb417e7f\nurl: https://en.wikipedia.org/wiki/Market_risk\ntitle: Market risk\nlang: en\ncreated_at: '2025-07-30T14:01:51.369733'\nchecksum: 5e8f09f071a215c26e0a5fe979513e6aa4e33924cc71ea5be8638da75f379d6c\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1067\n  char_count: 7002\n  num_chunks: 9\n  original_chunks: 13\n  filtered_out: 4\n  num_sections: 0\n---\nMarket risk is the risk of losses in positions arising from movements in market variables like prices and volatility. There is no unique classification as each classification may refer to different aspects of market risk. Nevertheless, the most commonly used types of market risk are: Equity risk, the risk that stock or stock indices (e.g. Euro Stoxx 50, etc.) prices or their implied volatility will change. Interest rate risk, the risk that interest rates (e.g. Libor, Euribor, etc.) or their implied volatility will change. Currency risk, the risk that foreign exchange rates (e.g. EUR/USD, EUR/GBP, etc.) or their implied volatility will change. Commodity risk, the risk that commodity prices (e.g. corn, crude oil) or their implied volatility will change. Margining risk results from uncertain future cash outflows due to margin calls covering adverse value changes of a given position. Shape risk Holding period risk Basis risk The capital requirement for market risk is addressed under a revised framework known as \"Fundamental Review of the Trading Book\" (FRTB). == Risk management == All businesses take risks based on two factors: the probability an adverse circumstance will come about and the cost of such adverse circumstance. Risk management is then the study of how to control risks and balance the possibility of gains. For a discussion of the practice of (market) risk management in banks, investment firms, and corporates more generally see Financial risk management § Application. == Measuring the potential loss amount due to market risk == As with other forms of risk, the potential loss amount due to market risk may be measured in several ways or conventions. Traditionally, one convention is to use value at risk (VaR). The conventions of using VaR are well established and accepted in the short-term risk management practice. However, VaR contains a number of limiting assumptions that constrain its accuracy. The first assumption is that the composition of the portfolio measured remains unchanged over the specified period. Over short time horizons, this limiting assumption is often regarded as reasonable. However, over longer time horizons, many of the positions in the portfolio may have been changed. The VaR of the unchanged portfolio is no longer relevant. Other problematic issues with VaR is that it is not sub-additive, and therefore not a coherent risk measure. As a result, other suggestions for measuring market risk is conditional value-at-risk (CVaR) that is coherent for general loss distributions, including discrete distributions and is sub-additive. The variance covariance and historical simulation approach to calculating VaR assumes that historical correlations are stable and will not change in the future or breakdown under times of market stress. However these assumptions are inappropriate as during periods of high volatility and market turbulence, historical correlations tend to break down. Intuitively, this is evident during a financial crisis where all industry sectors experience a significant increase in correlations, as opposed to an upward trending market. This phenomenon is also known as asymmetric correlations or asymmetric dependence. Rather than using the historical simulation, Monte-Carlo simulations with well-specified multivariate models are an excellent alternative. For example, to improve the estimation of the variance-covariance matrix, one can generate a forecast of asset distributions via Monte-Carlo simulation based upon the Gaussian copula and well-specified marginals. Allowing the modelling process to allow for empirical characteristics in stock returns such as auto-regression, asymmetric volatility, skewness, and kurtosis is important. Not accounting for these attributes lead to severe estimation error in the correlation and variance-covariance that have negative biases (as much as 70% of the true values). Estimation of VaR or CVaR for large portfolios of assets using the variance-covariance matrix may be inappropriate if the underlying returns distributions exhibit asymmetric dependence. In such scenarios, vine copulas that allow for asymmetric dependence (e.g., Clayton, Rotated Gumbel) across portfolios of assets are most appropriate in the calculation of tail risk using VaR or CVaR. Besides, care has to be taken regarding the intervening cash flow, embedded options, changes in floating rate interest rates of the financial positions in the portfolio. They cannot be ignored if their impact can be large. == Regulatory views == The Basel Committee set revised minimum capital requirements for market risk in January 2016. These revisions, the \"Fundamental Review of the Trading Book\", address deficiencies relating to the existing Internal models and Standardised approach for the calculation of market-risk capital, and in particular discuss the following: Boundary between the \"Trading book\" and the \"Banking book\" Use of value at risk vs. expected shortfall to measure of risk under stress The risk of market illiquidity == Use in annual reports of U.S. corporations == In the United States, a section on market risk is mandated by the SEC in all annual reports submitted on Form 10-K. The company must detail how its results may depend directly on financial markets. This is designed to show, for example, an investor who believes he is investing in a normal milk company, that the company is also carrying out non-dairy activities such as investing in complex derivatives or foreign exchange futures. == Market risk for physical investments == Physical investments face market risks as well, for example real capital such as real estate can lose market value and cost components such as fuel costs can fluctuate with market prices. On the other hand, some investments in physical capital can reduce risk and the value of the risk reduction can be estimated with financial calculation methods, just as market risk in financial markets is estimated. For example energy efficiency investments, in addition to reducing fuel costs, reduce exposure fuel price risk. As less fuel is consumed, a smaller cost component is susceptible to fluctuations in fuel prices. The value of this risk reduction can be calculated using the Tuominen-Seppänen method and its value has been shown to be approximately 10% compared to direct cost savings for a typical energy efficient building. == See also == Systemic risk Cost risk Demand risk Valuation risk Risk modeling Risk attitude Modern portfolio theory Risk return ratio Financial risk management § Banking Fundamental Review of the Trading Book (FRTB) Internal models approach (market risk) Standardized approach (market risk) == References == Dorfman, Mark S. (1997). Introduction to Risk Management and Insurance (6th ed.). Prentice Hall. ISBN 0-13-752106-5. == External links == Bank Management and Control, Springer Nature – Management for Professionals, 2020 Managing market risks by forwarding pricing How hedge funds limit exposure to market risk"
+  },
+  "chunks": [
+    {
+      "id": "marketrisk_cb417e7f_c0000",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 893,
+      "content": "Market risk is the risk of losses in positions arising from movements in market variables like prices and volatility. There is no unique classification as each classification may refer to different aspects of market risk. Nevertheless, the most commonly used types of market risk are: Equity risk, the risk that stock or stock indices (e.g. Euro Stoxx 50, etc.) prices or their implied volatility will change. Interest rate risk, the risk that interest rates (e.g. Libor, Euribor, etc.) or their implied volatility will change. Currency risk, the risk that foreign exchange rates (e.g. EUR/USD, EUR/GBP, etc.) or their implied volatility will change. Commodity risk, the risk that commodity prices (e.g. corn, crude oil) or their implied volatility will change. Margining risk results from uncertain future cash outflows due to margin calls covering adverse value changes of a given position.",
+      "char_count": 892,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketrisk_cb417e7f_c0001",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "== Risk management ==",
+      "heading_path": "== Risk management ==",
+      "start_char": 1093,
+      "end_char": 1501,
+      "content": "== Risk management == All businesses take risks based on two factors: the probability an adverse circumstance will come about and the cost of such adverse circumstance. Risk management is then the study of how to control risks and balance the possibility of gains. For a discussion of the practice of (market) risk management in banks, investment firms, and corporates more generally see Financial risk management § Application.",
+      "char_count": 428,
+      "token_estimate": 107,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketrisk_cb417e7f_c0002",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "== Measuring the potential loss amount due to market risk ==",
+      "heading_path": "== Measuring the potential loss amount due to market risk ==",
+      "start_char": 1561,
+      "end_char": 2461,
+      "content": "== Measuring the potential loss amount due to market risk == As with other forms of risk, the potential loss amount due to market risk may be measured in several ways or conventions. Traditionally, one convention is to use value at risk (VaR). The conventions of using VaR are well established and accepted in the short-term risk management practice. However, VaR contains a number of limiting assumptions that constrain its accuracy. The first assumption is that the composition of the portfolio measured remains unchanged over the specified period. Over short time horizons, this limiting assumption is often regarded as reasonable. However, over longer time horizons, many of the positions in the portfolio may have been changed. The VaR of the unchanged portfolio is no longer relevant. Other problematic issues with VaR is that it is not sub-additive, and therefore not a coherent risk measure.",
+      "char_count": 899,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketrisk_cb417e7f_c0003",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "== Measuring the potential loss amount due to market risk ==",
+      "heading_path": "== Measuring the potential loss amount due to market risk ==",
+      "start_char": 2461,
+      "end_char": 3403,
+      "content": "As a result, other suggestions for measuring market risk is conditional value-at-risk (CVaR) that is coherent for general loss distributions, including discrete distributions and is sub-additive. The variance covariance and historical simulation approach to calculating VaR assumes that historical correlations are stable and will not change in the future or breakdown under times of market stress. However these assumptions are inappropriate as during periods of high volatility and market turbulence, historical correlations tend to break down. Intuitively, this is evident during a financial crisis where all industry sectors experience a significant increase in correlations, as opposed to an upward trending market. This phenomenon is also known as asymmetric correlations or asymmetric dependence. Rather than using the historical simulation, Monte-Carlo simulations with well-specified multivariate models are an excellent alternative.",
+      "char_count": 942,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketrisk_cb417e7f_c0004",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "== Measuring the potential loss amount due to market risk ==",
+      "heading_path": "== Measuring the potential loss amount due to market risk ==",
+      "start_char": 3404,
+      "end_char": 4349,
+      "content": "For example, to improve the estimation of the variance-covariance matrix, one can generate a forecast of asset distributions via Monte-Carlo simulation based upon the Gaussian copula and well-specified marginals. Allowing the modelling process to allow for empirical characteristics in stock returns such as auto-regression, asymmetric volatility, skewness, and kurtosis is important. Not accounting for these attributes lead to severe estimation error in the correlation and variance-covariance that have negative biases (as much as 70% of the true values). Estimation of VaR or CVaR for large portfolios of assets using the variance-covariance matrix may be inappropriate if the underlying returns distributions exhibit asymmetric dependence. In such scenarios, vine copulas that allow for asymmetric dependence (e.g., Clayton, Rotated Gumbel) across portfolios of assets are most appropriate in the calculation of tail risk using VaR or CVaR.",
+      "char_count": 945,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketrisk_cb417e7f_c0005",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "== Measuring the potential loss amount due to market risk ==",
+      "heading_path": "== Measuring the potential loss amount due to market risk ==",
+      "start_char": 4350,
+      "end_char": 4572,
+      "content": "Besides, care has to be taken regarding the intervening cash flow, embedded options, changes in floating rate interest rates of the financial positions in the portfolio. They cannot be ignored if their impact can be large.",
+      "char_count": 222,
+      "token_estimate": 55,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketrisk_cb417e7f_c0006",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "== Regulatory views ==",
+      "heading_path": "== Regulatory views ==",
+      "start_char": 4535,
+      "end_char": 5032,
+      "content": "== Regulatory views == The Basel Committee set revised minimum capital requirements for market risk in January 2016. These revisions, the \"Fundamental Review of the Trading Book\", address deficiencies relating to the existing Internal models and Standardised approach for the calculation of market-risk capital, and in particular discuss the following: Boundary between the \"Trading book\" and the \"Banking book\" Use of value at risk vs. expected shortfall to measure of risk under stress The risk of market illiquidity",
+      "char_count": 518,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketrisk_cb417e7f_c0007",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "== Use in annual reports of U.S. corporations ==",
+      "heading_path": "== Use in annual reports of U.S. corporations ==",
+      "start_char": 5080,
+      "end_char": 5514,
+      "content": "== Use in annual reports of U.S. corporations == In the United States, a section on market risk is mandated by the SEC in all annual reports submitted on Form 10-K. The company must detail how its results may depend directly on financial markets. This is designed to show, for example, an investor who believes he is investing in a normal milk company, that the company is also carrying out non-dairy activities such as investing in complex derivatives or foreign exchange futures.",
+      "char_count": 481,
+      "token_estimate": 120,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketrisk_cb417e7f_c0008",
+      "article_id": "marketrisk_cb417e7f",
+      "section": "== Market risk for physical investments ==",
+      "heading_path": "== Market risk for physical investments ==",
+      "start_char": 5556,
+      "end_char": 6383,
+      "content": "== Market risk for physical investments == Physical investments face market risks as well, for example real capital such as real estate can lose market value and cost components such as fuel costs can fluctuate with market prices. On the other hand, some investments in physical capital can reduce risk and the value of the risk reduction can be estimated with financial calculation methods, just as market risk in financial markets is estimated. For example energy efficiency investments, in addition to reducing fuel costs, reduce exposure fuel price risk. As less fuel is consumed, a smaller cost component is susceptible to fluctuations in fuel prices. The value of this risk reduction can be calculated using the Tuominen-Seppänen method and its value has been shown to be approximately 10% compared to direct cost savings for a typical energy efficient building.",
+      "char_count": 868,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 7,
+    "items": [
+      {
+        "question": "What is the potential consequence of not accounting for empirical characteristics like auto-regression and skewness in stock returns during modeling?",
+        "answer": "Failing to account for these attributes can lead to severe estimation error in the correlation and variance-covariance, with negative biases that can be as much as 70% of the true values.",
+        "related_chunk_ids": [
+          "marketrisk_cb417e7f_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "marketrisk_cb417e7f_c0004"
+        ]
+      },
+      {
+        "question": "What are the five most commonly used types of market risk described in the text?",
+        "answer": "The five most commonly used types of market risk are: Equity risk (changes in stock prices/volatility), Interest rate risk (changes in interest rates/volatility), Currency risk (changes in foreign exchange rates/volatility), Commodity risk (changes in commodity prices/volatility), and Margining risk (uncertain cash outflows from margin calls).",
+        "related_chunk_ids": [
+          "marketrisk_cb417e7f_c0000"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "marketrisk_cb417e7f_c0000"
+        ]
+      },
+      {
+        "question": "What method can be used to calculate the value of risk reduction from energy efficiency investments?",
+        "answer": "The value of risk reduction from energy efficiency investments can be calculated using the Tuominen-Seppänen method.",
+        "related_chunk_ids": [
+          "marketrisk_cb417e7f_c0008"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "marketrisk_cb417e7f_c0008"
+        ]
+      },
+      {
+        "question": "How do businesses approach the management and measurement of market risk, which arises from movements in variables like stock prices and interest rates?",
+        "answer": "Businesses manage risks by controlling them and balancing the possibility of gains against the probability and cost of adverse circumstances. For market risk—the risk of losses from movements in variables like stock prices, interest rates, currency, or commodities—a traditional method for measuring potential loss is Value at Risk (VaR). However, VaR has significant limitations, such as assuming the portfolio composition remains unchanged and the fact that it is not a coherent risk measure.",
+        "related_chunk_ids": [
+          "marketrisk_cb417e7f_c0000",
+          "marketrisk_cb417e7f_c0001",
+          "marketrisk_cb417e7f_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "marketrisk_cb417e7f_c0000",
+          "marketrisk_cb417e7f_c0002",
+          "marketrisk_cb417e7f_c0001"
+        ]
+      },
+      {
+        "question": "Why is the variance-covariance approach to calculating VaR considered potentially inappropriate, and what specific modeling technique is recommended for scenarios with asymmetric dependence?",
+        "answer": "The variance-covariance approach is considered inappropriate because it assumes historical correlations are stable, but these tend to break down during periods of market stress, a phenomenon known as asymmetric dependence. In scenarios where underlying return distributions exhibit this asymmetric dependence, the most appropriate technique for calculating tail risk (VaR or CVaR) is to use vine copulas, such as Clayton or Rotated Gumbel.",
+        "related_chunk_ids": [
+          "marketrisk_cb417e7f_c0003",
+          "marketrisk_cb417e7f_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "marketrisk_cb417e7f_c0004",
+          "marketrisk_cb417e7f_c0003"
+        ]
+      },
+      {
+        "question": "What are some of the key factors and concerns that must be addressed when managing and calculating capital for market risk, from both a financial position analysis and a regulatory perspective?",
+        "answer": "When managing and calculating capital for market risk, several factors must be considered. From a financial position analysis standpoint, it is important to account for intervening cash flows, embedded options, and changes in floating rate interest rates, particularly if their impact is large. From a regulatory perspective, the Basel Committee's \"Fundamental Review of the Trading Book\" highlights key concerns such as the boundary between the trading and banking books, the use of Value at Risk versus Expected Shortfall for measuring risk under stress, and the risk of market illiquidity.",
+        "related_chunk_ids": [
+          "marketrisk_cb417e7f_c0005",
+          "marketrisk_cb417e7f_c0006"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "marketrisk_cb417e7f_c0006",
+          "marketrisk_cb417e7f_c0005"
+        ]
+      },
+      {
+        "question": "What are the main limitations of Value at Risk (VaR), and what alternative measures and modeling techniques are suggested to overcome these issues?",
+        "answer": "Value at Risk (VaR) has several key limitations: it assumes a static portfolio composition, which is often unrealistic over longer time horizons; it is not sub-additive, making it an incoherent risk measure; and traditional calculation methods like historical simulation falsely assume stable correlations, which break down during market stress (asymmetric dependence). To address these shortcomings, Conditional Value-at-Risk (CVaR) is proposed as a coherent and sub-additive alternative measure. For calculation, Monte-Carlo simulations are suggested as a superior alternative to historical simulation. These simulations can be further improved by using models like the Gaussian copula and accounting for characteristics like skewness and kurtosis. In cases of asymmetric dependence, vine copulas are most appropriate for calculating tail risk.",
+        "related_chunk_ids": [
+          "marketrisk_cb417e7f_c0002",
+          "marketrisk_cb417e7f_c0003",
+          "marketrisk_cb417e7f_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "marketrisk_cb417e7f_c0002",
+          "marketrisk_cb417e7f_c0003",
+          "marketrisk_cb417e7f_c0004"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:26.556Z",
+    "content_format": "markdown",
+    "total_chunks": 9,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

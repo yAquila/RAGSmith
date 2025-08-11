@@ -1,0 +1,149 @@
+{
+  "article": {
+    "id": "marketcapitalization_989147b0",
+    "title": "Market capitalization",
+    "url": "https://en.wikipedia.org/wiki/Market_capitalization",
+    "lang": "en",
+    "created_at": "2025-07-30T14:08:57.378589",
+    "content": "---\nid: marketcapitalization_989147b0\nurl: https://en.wikipedia.org/wiki/Market_capitalization\ntitle: Market capitalization\nlang: en\ncreated_at: '2025-07-30T14:03:10.935003'\nchecksum: 5097affb6c7f4566c0667c6f9ad5fb695bd41740edea286c9e84a75c22900929\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 743\n  char_count: 4614\n  num_chunks: 5\n  original_chunks: 11\n  filtered_out: 6\n  num_sections: 0\n---\nMarket capitalization, sometimes referred to as market cap, is the total value of a publicly traded company's outstanding common shares owned by stockholders. Market capitalization is equal to the market price per common share multiplied by the number of common shares outstanding. == Description == Market capitalization is sometimes used to rank the size of companies. It measures only the equity component of a company's capital structure, and does not reflect management's decision as to how much debt (or leverage) is used to finance the firm. A more comprehensive measure of a firm's size is enterprise value (EV), which gives effect to outstanding debt, preferred stock, and other factors. For insurance firms, a value called the embedded value (EV) has been used. It is also used in ranking the relative size of stock exchanges, being a measure of the sum of the market capitalizations of all companies listed on each stock exchange. The total capitalization of stock markets or economic regions may be compared with other economic indicators (e.g. the Buffett indicator). The approximate total market capitalization of all publicly traded companies was: 2023: US$111 trillion 2024: US$126 trillion February 2025: US$124 trillion === Historical estimates of world market cap === Total market capitalization of all publicly traded companies in the world from 1975 to 2020. == Calculation == Market cap is given by the formula MC = N × P {\\textstyle {\\text{MC}}=N\\times P} , where MC is the market capitalization, N is the number of common shares outstanding, and P is the market price per common share. For example, if a company has 4 million common shares outstanding and the closing price per share is $20, its market capitalization is then $80 million. If the closing price per share rises to $21, the market cap becomes $84 million. If it drops to $19 per share, the market cap falls to $76 million. This is in contrast to mercantile pricing where purchase price, average price and sale price may differ due to transaction costs. Not all of the outstanding shares trade on the open market. The number of shares trading on the open market is called the float. It is equal to or less than N because N includes shares that are restricted from trading. The free-float market cap uses just the floating number of shares in the calculation, generally resulting in a smaller number. == Market cap terms == Traditionally, companies were divided into large-cap, mid-cap, and small-cap. The terms mega-cap and micro-cap have since come into common use, and nano-cap is sometimes heard. Large caps have a slow growth rate as compared to small caps. Different numbers are used by different indexes; there is no official definition of, or full consensus agreement about, the exact cutoff values. The cutoffs may be defined as percentiles rather than in nominal dollars. The definitions expressed in nominal dollars need to be adjusted over decades due to inflation, population change, and overall market valuation (for example, $1 billion was a large market cap in 1950, but it is not very large now), and market caps are likely to be different country to country. === In the United States === FINRA's investor education materials state that the following is a typical (not official) categorization of stocks by market capitalization: The U.S. Securities and Exchange Commission notes that nano-cap stocks, in cases when they're separated from micro-caps, are typically defined as stocks with a market capitalization less than $50 million (as of 2013); which is equivalent to less than $64 million in 2023. S&P Dow Jones Indices defines 3 major US indices segmented by market capitalization. The components of these indices are selected by committee, but in order to be eligible, among other requirements, a stock's market capitalization at the time of addition must be within the respective range in the following table: These market cap eligibility criteria are only for addition to these indices, not for continued membership in an index. As a result, an S&P index constituent that appears to violate criteria for addition to that index is not removed unless ongoing conditions warrant an index change. == See also == Authorised capital List of countries by stock market capitalization List of public corporations by market capitalization Market price Share repurchase Treasury stock == References == \"Global Market Capitalization Tracker\". MarketCap.Company. Retrieved April 1, 2025. == External links == Market capitalization of listed domestic companies (current US$) by country since 1975 – World Bank dataset"
+  },
+  "chunks": [
+    {
+      "id": "marketcapitalization_989147b0_c0000",
+      "article_id": "marketcapitalization_989147b0",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 282,
+      "content": "Market capitalization, sometimes referred to as market cap, is the total value of a publicly traded company's outstanding common shares owned by stockholders. Market capitalization is equal to the market price per common share multiplied by the number of common shares outstanding.",
+      "char_count": 281,
+      "token_estimate": 70,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketcapitalization_989147b0_c0001",
+      "article_id": "marketcapitalization_989147b0",
+      "section": "== Description ==",
+      "heading_path": "== Description ==",
+      "start_char": 299,
+      "end_char": 1238,
+      "content": "== Description == Market capitalization is sometimes used to rank the size of companies. It measures only the equity component of a company's capital structure, and does not reflect management's decision as to how much debt (or leverage) is used to finance the firm. A more comprehensive measure of a firm's size is enterprise value (EV), which gives effect to outstanding debt, preferred stock, and other factors. For insurance firms, a value called the embedded value (EV) has been used. It is also used in ranking the relative size of stock exchanges, being a measure of the sum of the market capitalizations of all companies listed on each stock exchange. The total capitalization of stock markets or economic regions may be compared with other economic indicators (e.g. the Buffett indicator). The approximate total market capitalization of all publicly traded companies was: 2023: US$111 trillion 2024: US$126 trillion February 2025: US$124 trillion",
+      "char_count": 955,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketcapitalization_989147b0_c0002",
+      "article_id": "marketcapitalization_989147b0",
+      "section": "== Calculation ==",
+      "heading_path": "== Calculation ==",
+      "start_char": 1398,
+      "end_char": 2278,
+      "content": "== Calculation == Market cap is given by the formula MC = N × P {\\textstyle {\\text{MC}}=N\\times P} , where MC is the market capitalization, N is the number of common shares outstanding, and P is the market price per common share. For example, if a company has 4 million common shares outstanding and the closing price per share is $20, its market capitalization is then $80 million. If the closing price per share rises to $21, the market cap becomes $84 million. If it drops to $19 per share, the market cap falls to $76 million. This is in contrast to mercantile pricing where purchase price, average price and sale price may differ due to transaction costs. Not all of the outstanding shares trade on the open market. The number of shares trading on the open market is called the float. It is equal to or less than N because N includes shares that are restricted from trading.",
+      "char_count": 879,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketcapitalization_989147b0_c0003",
+      "article_id": "marketcapitalization_989147b0",
+      "section": "== Market cap terms ==",
+      "heading_path": "== Market cap terms ==",
+      "start_char": 2410,
+      "end_char": 3164,
+      "content": "== Market cap terms == Traditionally, companies were divided into large-cap, mid-cap, and small-cap. The terms mega-cap and micro-cap have since come into common use, and nano-cap is sometimes heard. Large caps have a slow growth rate as compared to small caps. Different numbers are used by different indexes; there is no official definition of, or full consensus agreement about, the exact cutoff values. The cutoffs may be defined as percentiles rather than in nominal dollars. The definitions expressed in nominal dollars need to be adjusted over decades due to inflation, population change, and overall market valuation (for example, $1 billion was a large market cap in 1950, but it is not very large now), and market caps are likely to be different country to country.",
+      "char_count": 775,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "marketcapitalization_989147b0_c0004",
+      "article_id": "marketcapitalization_989147b0",
+      "section": "== = In the United States ==",
+      "heading_path": "== = In the United States ==",
+      "start_char": 3192,
+      "end_char": 4070,
+      "content": "== = In the United States === FINRA's investor education materials state that the following is a typical (not official) categorization of stocks by market capitalization: The U.S. Securities and Exchange Commission notes that nano-cap stocks, in cases when they're separated from micro-caps, are typically defined as stocks with a market capitalization less than $50 million (as of 2013); which is equivalent to less than $64 million in 2023. S&P Dow Jones Indices defines 3 major US indices segmented by market capitalization. The components of these indices are selected by committee, but in order to be eligible, among other requirements, a stock's market capitalization at the time of addition must be within the respective range in the following table: These market cap eligibility criteria are only for addition to these indices, not for continued membership in an index.",
+      "char_count": 877,
+      "token_estimate": 219,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 5,
+    "items": [
+      {
+        "question": "What was the approximate total market capitalization of all publicly traded companies in 2024?",
+        "answer": "In 2024, the approximate total market capitalization of all publicly traded companies was US$126 trillion.",
+        "related_chunk_ids": [
+          "marketcapitalization_989147b0_c0001"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "marketcapitalization_989147b0_c0001"
+        ]
+      },
+      {
+        "question": "What is the formula for calculating market capitalization?",
+        "answer": "The formula for market capitalization is MC = N × P, where MC is the market capitalization, N is the number of common shares outstanding, and P is the market price per common share.",
+        "related_chunk_ids": [
+          "marketcapitalization_989147b0_c0002"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "marketcapitalization_989147b0_c0002"
+        ]
+      },
+      {
+        "question": "According to the U.S. Securities and Exchange Commission, what was the market capitalization threshold for a stock to be considered a nano-cap stock as of 2013?",
+        "answer": "As of 2013, the U.S. Securities and Exchange Commission defined nano-cap stocks as those with a market capitalization of less than $50 million.",
+        "related_chunk_ids": [
+          "marketcapitalization_989147b0_c0004"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "marketcapitalization_989147b0_c0004"
+        ]
+      },
+      {
+        "question": "How is market capitalization calculated, and what is a key limitation of using it to measure a company's size?",
+        "answer": "Market capitalization is calculated by multiplying the number of a company's outstanding common shares by the market price per common share (MC = N × P). A key limitation is that it only measures the equity component of a company's capital structure and does not reflect the amount of debt (leverage) used to finance the firm, making enterprise value (EV) a more comprehensive measure.",
+        "related_chunk_ids": [
+          "marketcapitalization_989147b0_c0000",
+          "marketcapitalization_989147b0_c0001",
+          "marketcapitalization_989147b0_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "marketcapitalization_989147b0_c0001",
+          "marketcapitalization_989147b0_c0000",
+          "marketcapitalization_989147b0_c0002"
+        ]
+      },
+      {
+        "question": "Summarize the different approaches to defining market capitalization categories in the United States, and explain why these definitions are not considered official or permanent.",
+        "answer": "In the United States, there are several non-official approaches to categorizing stocks by market capitalization. FINRA provides a typical categorization for investors, the U.S. Securities and Exchange Commission defines nano-cap stocks as those with less than $50 million in capitalization (as of 2013), and S&P Dow Jones Indices uses its own market cap ranges for index eligibility. These definitions are not considered official or permanent because there is no full consensus on the exact cutoff values. Furthermore, any definitions expressed in nominal dollars must be adjusted over time to account for inflation, population changes, and overall market valuation.",
+        "related_chunk_ids": [
+          "marketcapitalization_989147b0_c0003",
+          "marketcapitalization_989147b0_c0004"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "marketcapitalization_989147b0_c0004",
+          "marketcapitalization_989147b0_c0003"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:25.013Z",
+    "content_format": "markdown",
+    "total_chunks": 5,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

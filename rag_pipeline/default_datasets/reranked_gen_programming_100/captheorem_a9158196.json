@@ -1,0 +1,140 @@
+{
+  "article": {
+    "id": "captheorem_a9158196",
+    "title": "CAP theorem",
+    "url": "https://en.wikipedia.org/wiki/CAP_theorem",
+    "lang": "en",
+    "created_at": "2025-07-30T10:37:18.252516",
+    "content": "---\nid: captheorem_a9158196\nurl: https://en.wikipedia.org/wiki/CAP_theorem\ntitle: CAP theorem\nlang: en\ncreated_at: '2025-07-30T10:36:43.666249'\nchecksum: 401a1ae3db7aaad5f94c7abafe2284d7d9b61b0466ad8bef708d248a248212f2\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 2\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 731\n  char_count: 4852\n  num_chunks: 7\n  original_chunks: 9\n  filtered_out: 2\n  num_sections: 0\n---\nIn database theory, the CAP theorem, also named Brewer's theorem after computer scientist Eric Brewer, states that any distributed data store can provide at most two of the following three guarantees: Consistency Every read receives the most recent write or an error. Consistency as defined in the CAP theorem is quite different from the consistency guaranteed in ACID database transactions. Availability Every request received by a non-failing node in the system must result in a response. This is the definition of availability in CAP theorem as defined by Gilbert and Lynch. Availability as defined in CAP theorem is different from high availability in software architecture. Partition tolerance The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes. When a network partition failure happens, it must be decided whether to do one of the following: cancel the operation and thus decrease the availability but ensure consistency proceed with the operation and thus provide availability but risk inconsistency. This does not necessarily mean that system is highly available to its users. Thus, if there is a network partition, one has to choose between consistency or availability. == Explanation == No distributed system is safe from network failures, thus network partitioning generally has to be tolerated. In the presence of a partition, one is then left with two options: consistency or availability. When choosing consistency over availability, the system will return an error or a time out if particular information cannot be guaranteed to be up to date due to network partitioning. When choosing availability over consistency, the system will always process the query and try to return the most recent available version of the information, even if it cannot guarantee it is up to date due to network partitioning. In the absence of a network partition, both availability and consistency can be satisfied. Database systems designed with traditional ACID guarantees in mind such as RDBMS choose consistency over availability, whereas systems designed around the BASE philosophy, common in the NoSQL movement for example, choose availability over consistency. Some cloud services choose strong consistency but use worldwide private fiber networks and GPS clock synchronization to minimize the frequency of network partitions. Finally, consistent shared-nothing architectures may use techniques such as geographic sharding to maintain availability of data owned by the queried node, but without being available for arbitrary requests during a network partition. == History == According to computer scientist Eric Brewer of the University of California, Berkeley, the theorem first appeared in autumn 1998. It was published as the CAP principle in 1999 and presented as a conjecture by Brewer at the 2000 Symposium on Principles of Distributed Computing (PODC). In 2002, Seth Gilbert and Nancy Lynch of MIT published a formal proof of Brewer's conjecture, rendering it a theorem. In 2012, Brewer clarified some of his positions, including why the often-used \"two out of three\" concept can be somewhat misleading because system designers only need to sacrifice consistency or availability in the presence of partitions; partition management and recovery techniques exist. Brewer also noted the different definition of consistency used in the CAP theorem relative to the definition used in ACID. A similar theorem stating the trade-off between consistency and availability in distributed systems had been published by Birman and Friedman in 1996. Birman and Friedman's result had restricted this lower bound to non-commuting operations. The PACELC theorem, introduced in 2010, builds on CAP by stating that even in the absence of partitioning, there is another trade-off between latency and consistency. PACELC means, if partition (P) happens, the trade-off is between availability (A) and consistency (C); Else (E), the trade-off is between latency (L) and consistency (C). Some experts like Marc Brooker argue that the CAP theorem is particularly relevant in intermittently connected environments, such as those related to the Internet of Things (IoT) and mobile applications. In these contexts, devices may become partitioned due to challenging physical conditions, such as power outages or when entering confined spaces like elevators. For distributed systems, such as cloud applications, it is more appropriate to use the PACELC theorem, which is more comprehensive and considers trade-offs such as latency and consistency even in the absence of network partitions. == See also == Fallacies of distributed computing Lambda architecture (solution) PACELC theorem Paxos (computer science) Raft (computer science) Zooko's triangle Inconsistent triad Trilemma == References =="
+  },
+  "chunks": [
+    {
+      "id": "captheorem_a9158196_c0000",
+      "article_id": "captheorem_a9158196",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 828,
+      "content": "In database theory, the CAP theorem, also named Brewer's theorem after computer scientist Eric Brewer, states that any distributed data store can provide at most two of the following three guarantees: Consistency Every read receives the most recent write or an error. Consistency as defined in the CAP theorem is quite different from the consistency guaranteed in ACID database transactions. Availability Every request received by a non-failing node in the system must result in a response. This is the definition of availability in CAP theorem as defined by Gilbert and Lynch. Availability as defined in CAP theorem is different from high availability in software architecture. Partition tolerance The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes.",
+      "char_count": 827,
+      "token_estimate": 206,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "captheorem_a9158196_c0001",
+      "article_id": "captheorem_a9158196",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 828,
+      "end_char": 1255,
+      "content": "When a network partition failure happens, it must be decided whether to do one of the following: cancel the operation and thus decrease the availability but ensure consistency proceed with the operation and thus provide availability but risk inconsistency. This does not necessarily mean that system is highly available to its users. Thus, if there is a network partition, one has to choose between consistency or availability.",
+      "char_count": 427,
+      "token_estimate": 106,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "captheorem_a9158196_c0002",
+      "article_id": "captheorem_a9158196",
+      "section": "== Explanation ==",
+      "heading_path": "== Explanation ==",
+      "start_char": 1273,
+      "end_char": 2004,
+      "content": "== Explanation == No distributed system is safe from network failures, thus network partitioning generally has to be tolerated. In the presence of a partition, one is then left with two options: consistency or availability. When choosing consistency over availability, the system will return an error or a time out if particular information cannot be guaranteed to be up to date due to network partitioning. When choosing availability over consistency, the system will always process the query and try to return the most recent available version of the information, even if it cannot guarantee it is up to date due to network partitioning. In the absence of a network partition, both availability and consistency can be satisfied.",
+      "char_count": 730,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "captheorem_a9158196_c0003",
+      "article_id": "captheorem_a9158196",
+      "section": "== Explanation ==",
+      "heading_path": "== Explanation ==",
+      "start_char": 2004,
+      "end_char": 2656,
+      "content": "Database systems designed with traditional ACID guarantees in mind such as RDBMS choose consistency over availability, whereas systems designed around the BASE philosophy, common in the NoSQL movement for example, choose availability over consistency. Some cloud services choose strong consistency but use worldwide private fiber networks and GPS clock synchronization to minimize the frequency of network partitions. Finally, consistent shared-nothing architectures may use techniques such as geographic sharding to maintain availability of data owned by the queried node, but without being available for arbitrary requests during a network partition.",
+      "char_count": 652,
+      "token_estimate": 163,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "captheorem_a9158196_c0004",
+      "article_id": "captheorem_a9158196",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2653,
+      "end_char": 3635,
+      "content": "== History == According to computer scientist Eric Brewer of the University of California, Berkeley, the theorem first appeared in autumn 1998. It was published as the CAP principle in 1999 and presented as a conjecture by Brewer at the 2000 Symposium on Principles of Distributed Computing (PODC). In 2002, Seth Gilbert and Nancy Lynch of MIT published a formal proof of Brewer's conjecture, rendering it a theorem. In 2012, Brewer clarified some of his positions, including why the often-used \"two out of three\" concept can be somewhat misleading because system designers only need to sacrifice consistency or availability in the presence of partitions; partition management and recovery techniques exist. Brewer also noted the different definition of consistency used in the CAP theorem relative to the definition used in ACID. A similar theorem stating the trade-off between consistency and availability in distributed systems had been published by Birman and Friedman in 1996.",
+      "char_count": 981,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "captheorem_a9158196_c0005",
+      "article_id": "captheorem_a9158196",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3635,
+      "end_char": 4427,
+      "content": "Birman and Friedman's result had restricted this lower bound to non-commuting operations. The PACELC theorem, introduced in 2010, builds on CAP by stating that even in the absence of partitioning, there is another trade-off between latency and consistency. PACELC means, if partition (P) happens, the trade-off is between availability (A) and consistency (C); Else (E), the trade-off is between latency (L) and consistency (C). Some experts like Marc Brooker argue that the CAP theorem is particularly relevant in intermittently connected environments, such as those related to the Internet of Things (IoT) and mobile applications. In these contexts, devices may become partitioned due to challenging physical conditions, such as power outages or when entering confined spaces like elevators.",
+      "char_count": 792,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "captheorem_a9158196_c0006",
+      "article_id": "captheorem_a9158196",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 4428,
+      "end_char": 4658,
+      "content": "For distributed systems, such as cloud applications, it is more appropriate to use the PACELC theorem, which is more comprehensive and considers trade-offs such as latency and consistency even in the absence of network partitions.",
+      "char_count": 230,
+      "token_estimate": 57,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 2,
+    "items": [
+      {
+        "question": "Who published the formal proof of Brewer's conjecture, and in what year did this occur?",
+        "answer": "Seth Gilbert and Nancy Lynch of MIT published a formal proof of Brewer's conjecture in 2002, which established it as a theorem.",
+        "related_chunk_ids": [
+          "captheorem_a9158196_c0004"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "captheorem_a9158196_c0004"
+        ]
+      },
+      {
+        "question": "According to the CAP theorem, what trade-off must a distributed data store make when a network partition occurs, and what are the consequences of each choice?",
+        "answer": "The CAP theorem states that a distributed data store can provide at most two of three guarantees: Consistency, Availability, and Partition tolerance. Since network partitions are generally unavoidable, a system must choose between consistency and availability. Choosing consistency over availability means the system will return an error or time out if it cannot guarantee the information is up-to-date. Choosing availability over consistency means the system will always process a query and return the most recent available version of the information, even if it cannot guarantee it is up-to-date due to the partition.",
+        "related_chunk_ids": [
+          "captheorem_a9158196_c0000",
+          "captheorem_a9158196_c0001",
+          "captheorem_a9158196_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "captheorem_a9158196_c0001",
+          "captheorem_a9158196_c0002",
+          "captheorem_a9158196_c0000"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:30.416Z",
+    "content_format": "markdown",
+    "total_chunks": 7,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

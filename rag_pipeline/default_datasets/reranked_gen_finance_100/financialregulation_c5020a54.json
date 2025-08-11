@@ -1,0 +1,162 @@
+{
+  "article": {
+    "id": "financialregulation_c5020a54",
+    "title": "Financial regulation",
+    "url": "https://en.wikipedia.org/wiki/Financial_regulation",
+    "lang": "en",
+    "created_at": "2025-07-30T14:06:00.463859",
+    "content": "---\nid: financialregulation_c5020a54\nurl: https://en.wikipedia.org/wiki/Financial_regulation\ntitle: Financial regulation\nlang: en\ncreated_at: '2025-07-30T14:02:09.422485'\nchecksum: 76556211a6b4fbbe1692e67ff2fc8e3bd9cca80189ba013ca52462ea96b31811\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 552\n  char_count: 3884\n  num_chunks: 6\n  original_chunks: 11\n  filtered_out: 5\n  num_sections: 0\n---\nFinancial regulation is a broad set of policies that apply to the financial sector in most jurisdictions, justified by two main features of finance: systemic risk, which implies that the failure of financial firms involves public interest considerations; and information asymmetry, which justifies curbs on freedom of contract in selected areas of financial services, particularly those that involve retail clients and/or principal–agent problems. An integral part of financial regulation is the supervision of designated financial firms and markets by specialized authorities such as securities commissions and bank supervisors. In some jurisdictions, certain aspects of financial supervision are delegated to self-regulatory organizations. Financial regulation forms one of three legal categories which constitutes the content of financial law, the other two being market practices and case law. == History == In the early modern period, the Dutch were the pioneers in financial regulation. The first recorded ban (regulation) on short selling was enacted by the Dutch authorities as early as 1610. == Aims of regulation == The objectives of financial regulators are usually: market confidence – to maintain confidence in the financial system financial stability – contributing to the protection and enhancement of stability of the financial system consumer protection – securing the appropriate degree of protection for consumers. reduce financial crime regulate foreign participation == Structure of supervision == Acts empower organizations, government or non-government, to monitor activities and enforce actions. There are various setups and combinations in place for the financial regulatory structure around the globe. === Securities market regulation === Exchange acts ensure that trading on the floor of exchanges is conducted in a proper manner. Most prominent the pricing process, execution and settlement of trades, direct and efficient trade monitoring. Financial regulators ensure that listed companies and market participants comply with various regulations under the trading acts. The trading acts demands that listed companies publish regular financial reports, ad hoc notifications or directors' dealings. Whereas market participants are required to publish major shareholder notifications. The objective of monitoring compliance by listed companies with their disclosure requirements is to ensure that investors have access to essential and adequate information for making an informed assessment of listed companies and their securities. Asset management supervision or investment acts ensures the frictionless operation of those vehicles. === Supervision of banks and financial services providers === Banking acts lay down rules for banks which they have to observe when they are being established and when they are carrying on their business. These rules are designed to prevent unwelcome developments that might disrupt the smooth functioning of the banking system. Thus ensuring a strong and efficient banking system. == Financial regulatory authorities == == See also == == References == == Further reading == Labonte, Marc. (2017). Who Regulates Whom? An Overview of the U.S. Financial Regulatory Framework. Washington, D.C.: Congressional Research Service. Archived 2017-12-05 at the Wayback Machine Reinhart, Carmen; Rogoff, Rogoff (2009), This Time is Different: Eight Centuries of Financial Folly, Princeton U. Pr., ISBN 978-0-691-15264-6 Simpson, D., Meeks, G., Klumpes, P., & Andrews, P. (2000). Some cost-benefit issues in financial regulation. London: Financial Services Authority. == External links == Securities Lawyer's Deskbook from the University of Cincinnati College of Law Ana Carvajal, Jennifer Elliott: IMF Study Points to Gaps in Securities Market Regulation IOSCO: Objectives and Principles of Securities Regulation (PDF-Datei 67 Seiten)"
+  },
+  "chunks": [
+    {
+      "id": "financialregulation_c5020a54_c0000",
+      "article_id": "financialregulation_c5020a54",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 898,
+      "content": "Financial regulation is a broad set of policies that apply to the financial sector in most jurisdictions, justified by two main features of finance: systemic risk, which implies that the failure of financial firms involves public interest considerations; and information asymmetry, which justifies curbs on freedom of contract in selected areas of financial services, particularly those that involve retail clients and/or principal–agent problems. An integral part of financial regulation is the supervision of designated financial firms and markets by specialized authorities such as securities commissions and bank supervisors. In some jurisdictions, certain aspects of financial supervision are delegated to self-regulatory organizations. Financial regulation forms one of three legal categories which constitutes the content of financial law, the other two being market practices and case law.",
+      "char_count": 897,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "financialregulation_c5020a54_c0001",
+      "article_id": "financialregulation_c5020a54",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 911,
+      "end_char": 1101,
+      "content": "== History == In the early modern period, the Dutch were the pioneers in financial regulation. The first recorded ban (regulation) on short selling was enacted by the Dutch authorities as early as 1610.",
+      "char_count": 202,
+      "token_estimate": 50,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "financialregulation_c5020a54_c0002",
+      "article_id": "financialregulation_c5020a54",
+      "section": "== Aims of regulation ==",
+      "heading_path": "== Aims of regulation ==",
+      "start_char": 1125,
+      "end_char": 1488,
+      "content": "== Aims of regulation == The objectives of financial regulators are usually: market confidence – to maintain confidence in the financial system financial stability – contributing to the protection and enhancement of stability of the financial system consumer protection – securing the appropriate degree of protection for consumers. reduce financial crime regulate foreign participation",
+      "char_count": 386,
+      "token_estimate": 96,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "financialregulation_c5020a54_c0003",
+      "article_id": "financialregulation_c5020a54",
+      "section": "== Structure of supervision ==",
+      "heading_path": "== Structure of supervision ==",
+      "start_char": 1518,
+      "end_char": 1728,
+      "content": "== Structure of supervision == Acts empower organizations, government or non-government, to monitor activities and enforce actions. There are various setups and combinations in place for the financial regulatory structure around the globe.",
+      "char_count": 239,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "financialregulation_c5020a54_c0004",
+      "article_id": "financialregulation_c5020a54",
+      "section": "== = Securities market regulation ==",
+      "heading_path": "== = Securities market regulation ==",
+      "start_char": 1764,
+      "end_char": 2662,
+      "content": "== = Securities market regulation === Exchange acts ensure that trading on the floor of exchanges is conducted in a proper manner. Most prominent the pricing process, execution and settlement of trades, direct and efficient trade monitoring. Financial regulators ensure that listed companies and market participants comply with various regulations under the trading acts. The trading acts demands that listed companies publish regular financial reports, ad hoc notifications or directors' dealings. Whereas market participants are required to publish major shareholder notifications. The objective of monitoring compliance by listed companies with their disclosure requirements is to ensure that investors have access to essential and adequate information for making an informed assessment of listed companies and their securities. Asset management supervision or investment acts ensures the frictionless operation of those vehicles.",
+      "char_count": 933,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "financialregulation_c5020a54_c0005",
+      "article_id": "financialregulation_c5020a54",
+      "section": "== = Supervision of banks and financial services providers ==",
+      "heading_path": "== = Supervision of banks and financial services providers ==",
+      "start_char": 2723,
+      "end_char": 3045,
+      "content": "== = Supervision of banks and financial services providers === Banking acts lay down rules for banks which they have to observe when they are being established and when they are carrying on their business. These rules are designed to prevent unwelcome developments that might disrupt the smooth functioning of the banking system. Thus ensuring a strong and efficient banking system.",
+      "char_count": 382,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 5,
+    "items": [
+      {
+        "question": "What is the primary objective of monitoring a listed company's compliance with disclosure requirements?",
+        "answer": "The main goal is to ensure that investors have access to essential and adequate information, enabling them to make an informed assessment of the listed companies and their securities.",
+        "related_chunk_ids": [
+          "financialregulation_c5020a54_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "financialregulation_c5020a54_c0004"
+        ]
+      },
+      {
+        "question": "What are the two main features of finance that justify the implementation of financial regulation?",
+        "answer": "The two main features of finance that justify financial regulation are systemic risk, which means the failure of financial firms involves public interest, and information asymmetry, which justifies limits on freedom of contract in certain financial services.",
+        "related_chunk_ids": [
+          "financialregulation_c5020a54_c0000"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "financialregulation_c5020a54_c0000"
+        ]
+      },
+      {
+        "question": "What are the main objectives of financial regulators?",
+        "answer": "The primary objectives of financial regulators are to maintain confidence in the financial system (market confidence), protect and enhance the stability of the financial system (financial stability), secure appropriate protection for consumers, reduce financial crime, and regulate foreign participation.",
+        "related_chunk_ids": [
+          "financialregulation_c5020a54_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "financialregulation_c5020a54_c0002"
+        ]
+      },
+      {
+        "question": "How does the 1610 Dutch ban on short selling exemplify the concept of financial regulation?",
+        "answer": "The 1610 Dutch ban on short selling is an early historical example of financial regulation because it represents a specific policy applied to the financial sector by an authority. This action aligns with the broader definition of financial regulation as a set of policies that govern financial activities within a jurisdiction.",
+        "related_chunk_ids": [
+          "financialregulation_c5020a54_c0000",
+          "financialregulation_c5020a54_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "financialregulation_c5020a54_c0001",
+          "financialregulation_c5020a54_c0000"
+        ]
+      },
+      {
+        "question": "How do the specific regulations for securities markets, such as disclosure requirements, contribute to achieving the overall aims of financial regulation?",
+        "answer": "Securities market regulations, enforced through acts, mandate that listed companies publish regular financial reports and other notifications. The stated purpose of these disclosures is to ensure investors have access to adequate information for making informed assessments. This directly supports the broader objectives of financial regulation, which include securing consumer protection and maintaining market confidence.",
+        "related_chunk_ids": [
+          "financialregulation_c5020a54_c0002",
+          "financialregulation_c5020a54_c0003",
+          "financialregulation_c5020a54_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "financialregulation_c5020a54_c0004",
+          "financialregulation_c5020a54_c0002",
+          "financialregulation_c5020a54_c0003"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:26.218Z",
+    "content_format": "markdown",
+    "total_chunks": 6,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

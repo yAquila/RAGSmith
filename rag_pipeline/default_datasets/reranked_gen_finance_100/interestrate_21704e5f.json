@@ -1,0 +1,487 @@
+{
+  "article": {
+    "id": "interestrate_21704e5f",
+    "title": "Interest rate",
+    "url": "https://en.wikipedia.org/wiki/Interest_rate",
+    "lang": "en",
+    "created_at": "2025-07-30T14:07:21.047813",
+    "content": "---\nid: interestrate_21704e5f\nurl: https://en.wikipedia.org/wiki/Interest_rate\ntitle: Interest rate\nlang: en\ncreated_at: '2025-07-30T14:01:13.693756'\nchecksum: c8bd976f1727214fa2d789ce228f352fc2015d46a42e1eb7743caa0af4ead2bd\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 3578\n  char_count: 22227\n  num_chunks: 26\n  original_chunks: 34\n  filtered_out: 8\n  num_sections: 0\n---\nAn interest rate is the amount of interest due per period, as a proportion of the amount lent, deposited, or borrowed (called the principal sum). The total interest on an amount lent or borrowed depends on the principal sum, the interest rate, the compounding frequency, and the length of time over which it is lent, deposited, or borrowed. The annual interest rate is the rate over a period of one year. Other interest rates apply over different periods, such as a month or a day, but they are usually annualized. The interest rate has been characterized as \"an index of the preference . . . for a dollar of present [income] over a dollar of future income\". The borrower wants, or needs, to have money sooner, and is willing to pay a fee—the interest rate—for that privilege. == Influencing factors == Interest rates vary according to: the government's directives to the central bank to accomplish the government's goals the currency of the principal sum lent or borrowed the term to maturity of the investment the perceived default probability of the borrower supply and demand in the market the amount of collateral special features like call provisions reserve requirements compensating balance as well as other factors. == Example == A company borrows capital from a bank to buy assets for its business. In return, the bank charges the company interest. (The lender might also require rights over the new assets as collateral.) A bank will use the capital deposited by individuals to make loans to their clients. In return, the bank should pay interest to individuals who have deposited their capital. The amount of interest payment depends on the interest rate and the amount of capital they deposited. == Related terms == Base rate usually refers to the annualized effective interest rate offered on overnight deposits by the central bank or other monetary authority. The annual percentage rate (APR) may refer either to a nominal APR or an effective APR (EAPR). The difference between the two is that the EAPR accounts for fees and compounding, while the nominal APR does not. The annual equivalent rate (AER), also called the effective annual rate, is used to help consumers compare products with different compounding frequencies on a common basis, but does not account for fees. A discount rate is applied to calculate present value. For an interest-bearing security, coupon rate is the ratio of the annual coupon amount (the coupon paid per year) per unit of par value, whereas current yield is the ratio of the annual coupon divided by its current market price. Yield to maturity is a bond's expected internal rate of return, assuming it will be held to maturity, that is, the discount rate which equates all remaining cash flows to the investor (all remaining coupons and repayment of the par value at maturity) with the current market price. Based on the banking business, there are deposit interest rate and loan interest rate. Based on the relationship between supply and demand of market interest rate, there are fixed interest rate and floating interest rate. == Monetary policy == Interest rate targets are a vital tool of monetary policy and are taken into account when dealing with variables like investment, inflation, and unemployment. The central banks of countries generally tend to reduce interest rates when they wish to increase investment and consumption in the country's economy. However, a low interest rate as a macro-economic policy can be risky and may lead to the creation of an economic bubble, in which large amounts of investments are poured into the real-estate market and stock market. In developed economies, interest-rate adjustments are thus made to keep inflation within a target range for the health of economic activities or cap the interest rate concurrently with economic growth to safeguard economic momentum. == History == In the past two centuries, interest rates have been variously set either by national governments or central banks. For example, the Federal Reserve federal funds rate in the United States has varied between about 0.25% and 19% from 1954 to 2008, while the Bank of England base rate varied between 0.5% and 15% from 1989 to 2009, and Germany experienced rates close to 90% in the 1920s down to about 2% in the 2000s. During an attempt to tackle spiraling hyperinflation in 2007, the Central Bank of Zimbabwe increased interest rates for borrowing to 800%. The interest rates on prime credits in the late 1970s and early 1980s were far higher than had been recorded – higher than previous US peaks since 1800, than British peaks since 1700, or than Dutch peaks since 1600; \"since modern capital markets came into existence, there have never been such high long-term rates\" as in this period. Before modern capital markets, there have been accounts that savings deposits could achieve an annual return of at least 25% and up to as high as 50%. == Reasons for changes == Political short-term gain: Lowering interest rates can give the economy a short-run boost. Under normal conditions, most economists think a cut in interest rates will only give a short term gain in economic activity that will soon be offset by inflation. The quick boost can influence elections. Most economists advocate independent central banks to limit the influence of politics on interest rates. Deferred consumption: When money is loaned the lender delays spending the money on consumption goods. Since according to time preference theory people prefer goods now to goods later, in a free market there will be a positive interest rate. Inflationary expectations: Most economies generally exhibit inflation, meaning a given amount of money buys fewer goods in the future than it will now. The borrower needs to compensate the lender for this. Alternative investments: The lender has a choice between using his money in different investments. If he chooses one, he forgoes the returns from all the others. Different investments effectively compete for funds. Risks of investment: There is always a risk that the borrower will go bankrupt, abscond, die, or otherwise default on the loan. This means that a lender generally charges a risk premium to ensure that, across his investments, he is compensated for those that fail. Liquidity preference: People prefer to have their resources available in a form that can immediately be exchanged, rather than a form that takes time to realize. Taxes: Because some of the gains from interest may be subject to taxes, the lender may insist on a higher rate to make up for this loss. Banks: Banks can tend to change the interest rate to either slow down or speed up economy growth. This involves either raising interest rates to slow the economy down, or lowering interest rates to promote economic growth. Economy: Interest rates can fluctuate according to the status of the economy. It will generally be found that if the economy is strong then the interest rates will be high, if the economy is weak the interest rates will be low. == Real versus nominal == The nominal interest rate is the rate of interest with no adjustment for inflation. For example, suppose someone deposits $100 with a bank for one year, and they receive interest of $10 (before tax), so at the end of the year, their balance is $110 (before tax). In this case, regardless of the rate of inflation, the nominal interest rate is 10% per annum (before tax). The real interest rate measures the growth in real value of the loan plus interest, taking inflation into account. The repayment of principal plus interest is measured in real terms compared against the buying power of the amount at the time it was borrowed, lent, deposited or invested. If inflation is 10%, then the $110 in the account at the end of the year has the same purchasing power (that is, buys the same amount) as the $100 had a year ago. The real interest rate is zero in this case. The real interest rate is given by the Fisher equation: r = 1 + i 1 + p − 1 {\\displaystyle r={\\frac {1+i}{1+p}}-1\\,\\!} where p is the inflation rate. For low rates and short periods, the linear approximation applies: r ≈ i − p {\\displaystyle r\\approx i-p\\,\\!} The Fisher equation applies both ex ante and ex post. Ex ante, the rates are projected rates, whereas ex post, the rates are historical. == Market rates == There is a market for investments, including the money market, bond market, stock market, and currency market as well as retail banking. Interest rates reflect: The risk-free cost of capital Expected inflation Risk premium Transaction costs === Inflationary expectations === According to the theory of rational expectations, borrowers and lenders form an expectation of inflation in the future. The acceptable nominal interest rate at which they are willing and able to borrow or lend includes the real interest rate they require to receive, or are willing to pay, plus the rate of inflation they expect. Under behavioral expectations, the formation of expectations deviates from rational expectations due to cognitive limitations and information processing costs. Agents may exhibit myopia (limited attention) to certain economic variables, form expectations based on simplified heuristics, or update their beliefs more gradually than under full rationality. These behavioral frictions can affect monetary policy transmission and optimal policy design. === Risk === The level of risk in investments is taken into consideration. Riskier investments such as shares and junk bonds are normally expected to deliver higher returns than safer ones like government bonds. The additional return above the risk-free nominal interest rate which is expected from a risky investment is the risk premium. The risk premium an investor requires on an investment depends on the risk preferences of the investor. Evidence suggests that most lenders are risk-averse. A maturity risk premium applied to a longer-term investment reflects a higher perceived risk of default. There are four kinds of risk: repricing risk basis risk yield curve risk optionality === Liquidity preference === Most economic agents exhibit a liquidity preference, defined as the propensity to hold cash or highly liquid assets over less fungible investments, reflecting both precautionary and transactional motives. Liquidity preference manifests in the yield differential between assets of varying maturities and convertibility costs, where cash provides immediate transaction capability with zero conversion costs. This preference creates a term structure of required returns, exemplified by the higher yields typically demanded for longer-duration assets. For instance, while a 1-year loan offers relatively rapid convertibility to cash, a 10-year loan commands a greater liquidity premium. However, the existence of deep secondary markets can partially mitigate illiquidity costs, as evidenced by US Treasury bonds, which maintain significant liquidity despite longer maturities due to their unique status as a safe asset and the associated financial sector stability benefits. === A market model === A basic interest rate pricing model for an asset is i n = i r + p e + r p + l p {\\displaystyle i_{n}=i_{r}+p_{e}+r_{p}+l_{p}\\,\\!} where in is the nominal interest rate on a given investment ir is the risk-free return to capital i*n is the nominal interest rate on a short-term risk-free liquid bond (such as U.S. treasury bills). rp is a risk premium reflecting the length of the investment and the likelihood the borrower will default lp is a liquidity premium (reflecting the perceived difficulty of converting the asset into money and thus into goods). pe is the expected inflation rate. Assuming perfect information, pe is the same for all participants in the market, and the interest rate model simplifies to i n = i n ∗ + r p + l p {\\displaystyle i_{n}=i_{n}^{*}+r_{p}+l_{p}\\,\\!} === Spread === The spread of interest rates is the lending rate minus the deposit rate. This spread covers operating costs for banks providing loans and deposits. A negative spread is where a deposit rate is higher than the lending rate. == In macroeconomics == === Output, unemployment and inflation === Interest rates affect economic activity broadly, which is the reason why they are normally the main instrument of the monetary policies conducted by central banks. Changes in interest rates will affect firms' investment behaviour, either raising or lowering the opportunity cost of investing. Interest rate changes also affect asset prices like stock prices and house prices, which again influence households' consumption decisions through a wealth effect. Additionally, international interest rate differentials affect exchange rates and consequently exports and imports. These various channels are collectively known as the monetary transmission mechanism. Consumption, investment and net exports are all important components of aggregate demand. Consequently, by influencing the general interest rate level, monetary policy can affect overall demand for goods and services in the economy and hence output and employment. Changes in employment will over time affect wage setting, which again affects pricing and consequently ultimately inflation. The relation between employment (or unemployment) and inflation is known as the Phillips curve. For economies maintaining a fixed exchange rate system, determining the interest rate is also an important instrument of monetary policy as international capital flows are in part determined by interest rate differentials between countries. === Interest rate setting in the United States === The Federal Reserve (often referred to as 'the Fed') implements monetary policy largely by targeting the federal funds rate (FFR). This is the rate that banks charge each other for overnight loans of federal funds, which are the reserves held by banks at the Fed. Until the 2008 financial crisis, the Fed relied on open market operations, i.e. selling and buying securities in the open market to adjust the supply of reserve balances so as to keep the FFR close to the Fed's target. However, since 2008 the actual conduct of monetary policy implementation has changed considerably, the Fed using instead various administered interest rates (i.e., interest rates that are set directly by the Fed rather than being determined by the market forces of supply and demand) as the primary tools to steer short-term market interest rates towards the Fed's policy target. == Impact on savings and pensions == Financial economists such as World Pensions Council (WPC) researchers have argued that durably low interest rates in most G20 countries will have an adverse impact on the funding positions of pension funds as \"without returns that outstrip inflation, pension investors face the real value of their savings declining rather than ratcheting up over the next few years\". Current interest rates in savings accounts often fail to keep up with the pace of inflation. From 1982 until 2012, most Western economies experienced a period of low inflation combined with relatively high returns on investments across all asset classes including government bonds. This brought a certain sense of complacency amongst some pension actuarial consultants and regulators, making it seem reasonable to use optimistic economic assumptions to calculate the present value of future pension liabilities. == Mathematical note == Because interest and inflation are generally given as percentage increases, the formulae above are (linear) approximations. For instance, i n = i r + p e {\\displaystyle i_{n}=i_{r}+p_{e}\\,\\!} is only approximate. In reality, the relationship is ( 1 + i n ) = ( 1 + i r ) ( 1 + p e ) {\\displaystyle (1+i_{n})=(1+i_{r})(1+p_{e})\\,\\!} so i r = 1 + i n 1 + p e − 1 {\\displaystyle i_{r}={\\frac {1+i_{n}}{1+p_{e}}}-1\\,\\!} The two approximations, eliminating higher order terms, are: ( 1 + x ) ( 1 + y ) = 1 + x + y + x y ≈ 1 + x + y 1 1 + x = 1 − x + x 2 − x 3 + ⋯ ≈ 1 − x {\\displaystyle {\\begin{aligned}(1+x)(1+y)&=1+x+y+xy&&\\approx 1+x+y\\\\{\\frac {1}{1+x}}&=1-x+x^{2}-x^{3}+\\cdots &&\\approx 1-x\\end{aligned}}} The formulae in this article are exact if logarithmic units are used for relative changes, or equivalently if logarithms of indices are used in place of rates, and hold even for large relative changes. == Zero rate policy == A so-called \"zero interest-rate policy\" (ZIRP) is a very low—near-zero—central bank target interest rate. At this zero lower bound the central bank faces difficulties with conventional monetary policy, because it is generally believed that market interest rates cannot realistically be pushed down into negative territory. In the United States, the policy was used in 2008-2015 (2008 financial crisis) and 2020-2022 (COVID-19 pandemic). == Interest-free economy == == Negative nominal or real rates == Nominal interest rates are normally positive, but not always. In contrast, real interest rates can be negative, when nominal interest rates are below inflation. When this is done via government policy (for example, via reserve requirements), this is deemed financial repression, and was practiced by countries such as the United States and United Kingdom following World War II (from 1945) until the late 1970s or early 1980s (during and following the Post–World War II economic expansion). In the late 1970s, United States Treasury securities with negative real interest rates were deemed certificates of confiscation. === On central bank reserves === A so-called \"negative interest rate policy\" (NIRP) is a negative (below zero) central bank target interest rate. ==== Theory ==== Given the alternative of holding cash, and thus earning 0%, rather than lending it out, profit-seeking lenders will not lend below 0%, as that will guarantee a loss, and a bank offering a negative deposit rate will find few takers, as savers will instead hold cash. Negative interest rates have been proposed in the past, notably in the late 19th century by Silvio Gesell. A negative interest rate can be described (as by Gesell) as a \"tax on holding money\"; he proposed it as the Freigeld (free money) component of his Freiwirtschaft (free economy) system. To prevent people from holding cash (and thus earning 0%), Gesell suggested issuing money for a limited duration, after which it must be exchanged for new bills; attempts to hold money thus result in it expiring and becoming worthless. Along similar lines, John Maynard Keynes approvingly cited the idea of a carrying tax on money, (1936, The General Theory of Employment, Interest and Money) but dismissed it due to administrative difficulties. More recently, a carry tax on currency was proposed by a Federal Reserve employee (Marvin Goodfriend) in 1999, to be implemented via magnetic strips on bills, deducting the carry tax upon deposit, the tax being based on how long the bill had been held. It has been proposed that a negative interest rate can in principle be levied on existing paper currency via a serial number lottery, such as randomly choosing a number 0 through 9 and declaring that notes whose serial number end in that digit are worthless, yielding an average 10% loss of paper cash holdings to hoarders; a drawn two-digit number could match the last two digits on the note for a 1% loss. This was proposed by an anonymous student of Greg Mankiw, though more as a thought experiment than a genuine proposal. ==== Practice ==== Both the European Central Bank starting in 2014 and the Bank of Japan starting in early 2016 pursued the policy on top of their earlier and continuing quantitative easing policies. The latter's policy was said at its inception to be trying to \"change Japan's 'deflationary mindset.'\" In 2016 Sweden, Denmark and Switzerland—not directly participants in the Euro currency zone—also had NIRPs in place. Countries such as Sweden and Denmark have set negative interest on reserves—that is to say, they have charged interest on reserves. In July 2009, Sweden's central bank, the Riksbank, set its policy repo rate, the interest rate on its one-week deposit facility, at 0.25%, at the same time as setting its overnight deposit rate at −0.25%. The existence of the negative overnight deposit rate was a technical consequence of the fact that overnight deposit rates are generally set at 0.5% below or 0.75% below the policy rate. The Riksbank studied the impact of these changes and stated in a commentary report that they led to no disruptions in Swedish financial markets. === On government bond yields === During the European debt crisis, government bonds of some countries (Switzerland, Denmark, Germany, Finland, the Netherlands and Austria) have been sold at negative yields. Suggested explanations include desire for safety and protection against the eurozone breaking up (in which case some eurozone countries might redenominate their debt into a stronger currency). === On corporate bond yields === For practical purposes, investors and academics typically view the yields on government or quasi-government bonds guaranteed by a small number of the most creditworthy governments (United Kingdom, United States, Switzerland, EU, Japan) to effectively have negligible default risk. As financial theory would predict, investors and academics typically do not view non-government guaranteed corporate bonds in the same way. Most credit analysts value them at a spread to similar government bonds with similar duration, geographic exposure, and currency exposure. Through 2018 there have only been a few of these corporate bonds that have traded at negative nominal interest rates. The most notable example of this was Nestle, some of whose AAA-rated bonds traded at negative nominal interest rate in 2015. However, some academics and investors believe this may have been influenced by volatility in the currency market during this period. == See also == Forward rate Interest expense List of sovereign states by central bank interest rates Macroeconomics Rate of return Short-rate model Spot rate == Notes == == References == Homer, Sidney; Sylla, Richard Eugene; Sylla, Richard (1996). A History of Interest Rates. Rutgers University Press. ISBN 978-0-8135-2288-3. Retrieved 2008-10-27."
+  },
+  "chunks": [
+    {
+      "id": "interestrate_21704e5f_c0000",
+      "article_id": "interestrate_21704e5f",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 777,
+      "content": "An interest rate is the amount of interest due per period, as a proportion of the amount lent, deposited, or borrowed (called the principal sum). The total interest on an amount lent or borrowed depends on the principal sum, the interest rate, the compounding frequency, and the length of time over which it is lent, deposited, or borrowed. The annual interest rate is the rate over a period of one year. Other interest rates apply over different periods, such as a month or a day, but they are usually annualized. The interest rate has been characterized as \"an index of the preference . . . for a dollar of present [income] over a dollar of future income\". The borrower wants, or needs, to have money sooner, and is willing to pay a fee—the interest rate—for that privilege.",
+      "char_count": 776,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0001",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Influencing factors ==",
+      "heading_path": "== Influencing factors ==",
+      "start_char": 802,
+      "end_char": 1225,
+      "content": "== Influencing factors == Interest rates vary according to: the government's directives to the central bank to accomplish the government's goals the currency of the principal sum lent or borrowed the term to maturity of the investment the perceived default probability of the borrower supply and demand in the market the amount of collateral special features like call provisions reserve requirements compensating balance as well as other factors.",
+      "char_count": 447,
+      "token_estimate": 111,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0002",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Example ==",
+      "heading_path": "== Example ==",
+      "start_char": 1238,
+      "end_char": 1709,
+      "content": "== Example == A company borrows capital from a bank to buy assets for its business. In return, the bank charges the company interest. (The lender might also require rights over the new assets as collateral.) A bank will use the capital deposited by individuals to make loans to their clients. In return, the bank should pay interest to individuals who have deposited their capital. The amount of interest payment depends on the interest rate and the amount of capital they deposited.",
+      "char_count": 483,
+      "token_estimate": 120,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0003",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Related terms ==",
+      "heading_path": "== Related terms ==",
+      "start_char": 1728,
+      "end_char": 2594,
+      "content": "== Related terms == Base rate usually refers to the annualized effective interest rate offered on overnight deposits by the central bank or other monetary authority. The annual percentage rate (APR) may refer either to a nominal APR or an effective APR (EAPR). The difference between the two is that the EAPR accounts for fees and compounding, while the nominal APR does not. The annual equivalent rate (AER), also called the effective annual rate, is used to help consumers compare products with different compounding frequencies on a common basis, but does not account for fees. A discount rate is applied to calculate present value. For an interest-bearing security, coupon rate is the ratio of the annual coupon amount (the coupon paid per year) per unit of par value, whereas current yield is the ratio of the annual coupon divided by its current market price.",
+      "char_count": 865,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0004",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Related terms ==",
+      "heading_path": "== Related terms ==",
+      "start_char": 2594,
+      "end_char": 3097,
+      "content": "Yield to maturity is a bond's expected internal rate of return, assuming it will be held to maturity, that is, the discount rate which equates all remaining cash flows to the investor (all remaining coupons and repayment of the par value at maturity) with the current market price. Based on the banking business, there are deposit interest rate and loan interest rate. Based on the relationship between supply and demand of market interest rate, there are fixed interest rate and floating interest rate.",
+      "char_count": 503,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0005",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Monetary policy ==",
+      "heading_path": "== Monetary policy ==",
+      "start_char": 3100,
+      "end_char": 3860,
+      "content": "== Monetary policy == Interest rate targets are a vital tool of monetary policy and are taken into account when dealing with variables like investment, inflation, and unemployment. The central banks of countries generally tend to reduce interest rates when they wish to increase investment and consumption in the country's economy. However, a low interest rate as a macro-economic policy can be risky and may lead to the creation of an economic bubble, in which large amounts of investments are poured into the real-estate market and stock market. In developed economies, interest-rate adjustments are thus made to keep inflation within a target range for the health of economic activities or cap the interest rate concurrently with economic growth to safeguard economic momentum.",
+      "char_count": 780,
+      "token_estimate": 195,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0006",
+      "article_id": "interestrate_21704e5f",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 3873,
+      "end_char": 4777,
+      "content": "== History == In the past two centuries, interest rates have been variously set either by national governments or central banks. For example, the Federal Reserve federal funds rate in the United States has varied between about 0.25% and 19% from 1954 to 2008, while the Bank of England base rate varied between 0.5% and 15% from 1989 to 2009, and Germany experienced rates close to 90% in the 1920s down to about 2% in the 2000s. During an attempt to tackle spiraling hyperinflation in 2007, the Central Bank of Zimbabwe increased interest rates for borrowing to 800%. The interest rates on prime credits in the late 1970s and early 1980s were far higher than had been recorded – higher than previous US peaks since 1800, than British peaks since 1700, or than Dutch peaks since 1600; \"since modern capital markets came into existence, there have never been such high long-term rates\" as in this period.",
+      "char_count": 903,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0007",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Reasons for changes ==",
+      "heading_path": "== Reasons for changes ==",
+      "start_char": 4940,
+      "end_char": 5913,
+      "content": "== Reasons for changes == Political short-term gain: Lowering interest rates can give the economy a short-run boost. Under normal conditions, most economists think a cut in interest rates will only give a short term gain in economic activity that will soon be offset by inflation. The quick boost can influence elections. Most economists advocate independent central banks to limit the influence of politics on interest rates. Deferred consumption: When money is loaned the lender delays spending the money on consumption goods. Since according to time preference theory people prefer goods now to goods later, in a free market there will be a positive interest rate. Inflationary expectations: Most economies generally exhibit inflation, meaning a given amount of money buys fewer goods in the future than it will now. The borrower needs to compensate the lender for this. Alternative investments: The lender has a choice between using his money in different investments.",
+      "char_count": 972,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0008",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Reasons for changes ==",
+      "heading_path": "== Reasons for changes ==",
+      "start_char": 5913,
+      "end_char": 6893,
+      "content": "If he chooses one, he forgoes the returns from all the others. Different investments effectively compete for funds. Risks of investment: There is always a risk that the borrower will go bankrupt, abscond, die, or otherwise default on the loan. This means that a lender generally charges a risk premium to ensure that, across his investments, he is compensated for those that fail. Liquidity preference: People prefer to have their resources available in a form that can immediately be exchanged, rather than a form that takes time to realize. Taxes: Because some of the gains from interest may be subject to taxes, the lender may insist on a higher rate to make up for this loss. Banks: Banks can tend to change the interest rate to either slow down or speed up economy growth. This involves either raising interest rates to slow the economy down, or lowering interest rates to promote economic growth. Economy: Interest rates can fluctuate according to the status of the economy.",
+      "char_count": 980,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0009",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Real versus nominal ==",
+      "heading_path": "== Real versus nominal ==",
+      "start_char": 7044,
+      "end_char": 7937,
+      "content": "== Real versus nominal == The nominal interest rate is the rate of interest with no adjustment for inflation. For example, suppose someone deposits $100 with a bank for one year, and they receive interest of $10 (before tax), so at the end of the year, their balance is $110 (before tax). In this case, regardless of the rate of inflation, the nominal interest rate is 10% per annum (before tax). The real interest rate measures the growth in real value of the loan plus interest, taking inflation into account. The repayment of principal plus interest is measured in real terms compared against the buying power of the amount at the time it was borrowed, lent, deposited or invested. If inflation is 10%, then the $110 in the account at the end of the year has the same purchasing power (that is, buys the same amount) as the $100 had a year ago. The real interest rate is zero in this case.",
+      "char_count": 892,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0010",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Real versus nominal ==",
+      "heading_path": "== Real versus nominal ==",
+      "start_char": 7937,
+      "end_char": 8333,
+      "content": "The real interest rate is given by the Fisher equation: r = 1 + i 1 + p − 1 {\\displaystyle r={\\frac {1+i}{1+p}}-1\\,\\!} where p is the inflation rate. For low rates and short periods, the linear approximation applies: r ≈ i − p {\\displaystyle r\\approx i-p\\,\\!} The Fisher equation applies both ex ante and ex post. Ex ante, the rates are projected rates, whereas ex post, the rates are historical.",
+      "char_count": 396,
+      "token_estimate": 99,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0011",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Market rates ==",
+      "heading_path": "== Market rates ==",
+      "start_char": 8327,
+      "end_char": 8569,
+      "content": "== Market rates == There is a market for investments, including the money market, bond market, stock market, and currency market as well as retail banking. Interest rates reflect: The risk-free cost of capital Expected inflation Risk premium Transaction costs",
+      "char_count": 259,
+      "token_estimate": 64,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0012",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = Inflationary expectations ==",
+      "heading_path": "== = Inflationary expectations ==",
+      "start_char": 8602,
+      "end_char": 9383,
+      "content": "== = Inflationary expectations === According to the theory of rational expectations, borrowers and lenders form an expectation of inflation in the future. The acceptable nominal interest rate at which they are willing and able to borrow or lend includes the real interest rate they require to receive, or are willing to pay, plus the rate of inflation they expect. Under behavioral expectations, the formation of expectations deviates from rational expectations due to cognitive limitations and information processing costs. Agents may exhibit myopia (limited attention) to certain economic variables, form expectations based on simplified heuristics, or update their beliefs more gradually than under full rationality. These behavioral frictions can affect monetary policy transmission and optimal policy design.",
+      "char_count": 813,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0013",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = Risk ==",
+      "heading_path": "== = Risk ==",
+      "start_char": 9395,
+      "end_char": 10070,
+      "content": "== = Risk === The level of risk in investments is taken into consideration. Riskier investments such as shares and junk bonds are normally expected to deliver higher returns than safer ones like government bonds. The additional return above the risk-free nominal interest rate which is expected from a risky investment is the risk premium. The risk premium an investor requires on an investment depends on the risk preferences of the investor. Evidence suggests that most lenders are risk-averse. A maturity risk premium applied to a longer-term investment reflects a higher perceived risk of default. There are four kinds of risk: repricing risk basis risk yield curve risk optionality",
+      "char_count": 686,
+      "token_estimate": 171,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0014",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = Liquidity preference ==",
+      "heading_path": "== = Liquidity preference ==",
+      "start_char": 10098,
+      "end_char": 11071,
+      "content": "== = Liquidity preference === Most economic agents exhibit a liquidity preference, defined as the propensity to hold cash or highly liquid assets over less fungible investments, reflecting both precautionary and transactional motives. Liquidity preference manifests in the yield differential between assets of varying maturities and convertibility costs, where cash provides immediate transaction capability with zero conversion costs. This preference creates a term structure of required returns, exemplified by the higher yields typically demanded for longer-duration assets. For instance, while a 1-year loan offers relatively rapid convertibility to cash, a 10-year loan commands a greater liquidity premium. However, the existence of deep secondary markets can partially mitigate illiquidity costs, as evidenced by US Treasury bonds, which maintain significant liquidity despite longer maturities due to their unique status as a safe asset and the associated financial sector stability benefits.",
+      "char_count": 1000,
+      "token_estimate": 250,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0015",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = A market model ==",
+      "heading_path": "== = A market model ==",
+      "start_char": 11093,
+      "end_char": 11881,
+      "content": "== = A market model === A basic interest rate pricing model for an asset is i n = i r + p e + r p + l p {\\displaystyle i_{n}=i_{r}+p_{e}+r_{p}+l_{p}\\,\\!} where in is the nominal interest rate on a given investment ir is the risk-free return to capital i*n is the nominal interest rate on a short-term risk-free liquid bond (such as U.S. treasury bills). rp is a risk premium reflecting the length of the investment and the likelihood the borrower will default lp is a liquidity premium (reflecting the perceived difficulty of converting the asset into money and thus into goods). pe is the expected inflation rate. Assuming perfect information, pe is the same for all participants in the market, and the interest rate model simplifies to i n = i n ∗ + r p + l p {\\displaystyle i_{n}=i_{n}^{*}+r_{p}+l_{p}\\,\\!}",
+      "char_count": 809,
+      "token_estimate": 202,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0016",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = Spread ==",
+      "heading_path": "== = Spread ==",
+      "start_char": 11895,
+      "end_char": 12120,
+      "content": "== = Spread === The spread of interest rates is the lending rate minus the deposit rate. This spread covers operating costs for banks providing loans and deposits. A negative spread is where a deposit rate is higher than the lending rate.",
+      "char_count": 238,
+      "token_estimate": 59,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0017",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = Output, unemployment and inflation ==",
+      "heading_path": "== = Output, unemployment and inflation ==",
+      "start_char": 12186,
+      "end_char": 12979,
+      "content": "== = Output, unemployment and inflation === Interest rates affect economic activity broadly, which is the reason why they are normally the main instrument of the monetary policies conducted by central banks. Changes in interest rates will affect firms' investment behaviour, either raising or lowering the opportunity cost of investing. Interest rate changes also affect asset prices like stock prices and house prices, which again influence households' consumption decisions through a wealth effect. Additionally, international interest rate differentials affect exchange rates and consequently exports and imports. These various channels are collectively known as the monetary transmission mechanism. Consumption, investment and net exports are all important components of aggregate demand.",
+      "char_count": 792,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0018",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = Output, unemployment and inflation ==",
+      "heading_path": "== = Output, unemployment and inflation ==",
+      "start_char": 12979,
+      "end_char": 13615,
+      "content": "Consequently, by influencing the general interest rate level, monetary policy can affect overall demand for goods and services in the economy and hence output and employment. Changes in employment will over time affect wage setting, which again affects pricing and consequently ultimately inflation. The relation between employment (or unemployment) and inflation is known as the Phillips curve. For economies maintaining a fixed exchange rate system, determining the interest rate is also an important instrument of monetary policy as international capital flows are in part determined by interest rate differentials between countries.",
+      "char_count": 636,
+      "token_estimate": 159,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0019",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = Interest rate setting in the United States ==",
+      "heading_path": "== = Interest rate setting in the United States ==",
+      "start_char": 13624,
+      "end_char": 14489,
+      "content": "== = Interest rate setting in the United States === The Federal Reserve (often referred to as 'the Fed') implements monetary policy largely by targeting the federal funds rate (FFR). This is the rate that banks charge each other for overnight loans of federal funds, which are the reserves held by banks at the Fed. Until the 2008 financial crisis, the Fed relied on open market operations, i.e. selling and buying securities in the open market to adjust the supply of reserve balances so as to keep the FFR close to the Fed's target. However, since 2008 the actual conduct of monetary policy implementation has changed considerably, the Fed using instead various administered interest rates (i.e., interest rates that are set directly by the Fed rather than being determined by the market forces of supply and demand) as the primary tools to steer short-term market interest rates towards the Fed's policy target.",
+      "char_count": 914,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0020",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Impact on savings and pensions ==",
+      "heading_path": "== Impact on savings and pensions ==",
+      "start_char": 14525,
+      "end_char": 15406,
+      "content": "== Impact on savings and pensions == Financial economists such as World Pensions Council (WPC) researchers have argued that durably low interest rates in most G20 countries will have an adverse impact on the funding positions of pension funds as \"without returns that outstrip inflation, pension investors face the real value of their savings declining rather than ratcheting up over the next few years\". Current interest rates in savings accounts often fail to keep up with the pace of inflation. From 1982 until 2012, most Western economies experienced a period of low inflation combined with relatively high returns on investments across all asset classes including government bonds. This brought a certain sense of complacency amongst some pension actuarial consultants and regulators, making it seem reasonable to use optimistic economic assumptions to calculate the present value of future pension liabilities.",
+      "char_count": 916,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0021",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Mathematical note ==",
+      "heading_path": "== Mathematical note ==",
+      "start_char": 15429,
+      "end_char": 16337,
+      "content": "== Mathematical note == Because interest and inflation are generally given as percentage increases, the formulae above are (linear) approximations. For instance, i n = i r + p e {\\displaystyle i_{n}=i_{r}+p_{e}\\,\\!} is only approximate. In reality, the relationship is ( 1 + i n ) = ( 1 + i r ) ( 1 + p e ) {\\displaystyle (1+i_{n})=(1+i_{r})(1+p_{e})\\,\\!} so i r = 1 + i n 1 + p e − 1 {\\displaystyle i_{r}={\\frac {1+i_{n}}{1+p_{e}}}-1\\,\\!} The two approximations, eliminating higher order terms, are: ( 1 + x ) ( 1 + y ) = 1 + x + y + x y ≈ 1 + x + y 1 1 + x = 1 − x + x 2 − x 3 + ⋯ ≈ 1 − x {\\displaystyle {\\begin{aligned}(1+x)(1+y)&=1+x+y+xy&&\\approx 1+x+y\\\\{\\frac {1}{1+x}}&=1-x+x^{2}-x^{3}+\\cdots &&\\approx 1-x\\end{aligned}}} The formulae in this article are exact if logarithmic units are used for relative changes, or equivalently if logarithms of indices are used in place of rates, and hold even for large relative changes.",
+      "char_count": 930,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0022",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Zero rate policy ==",
+      "heading_path": "== Zero rate policy ==",
+      "start_char": 16359,
+      "end_char": 16797,
+      "content": "== Zero rate policy == A so-called \"zero interest-rate policy\" (ZIRP) is a very low—near-zero—central bank target interest rate. At this zero lower bound the central bank faces difficulties with conventional monetary policy, because it is generally believed that market interest rates cannot realistically be pushed down into negative territory. In the United States, the policy was used in 2008-2015 (2008 financial crisis) and 2020-2022 (COVID-19 pandemic).",
+      "char_count": 459,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0023",
+      "article_id": "interestrate_21704e5f",
+      "section": "== Negative nominal or real rates ==",
+      "heading_path": "== Negative nominal or real rates ==",
+      "start_char": 16861,
+      "end_char": 17482,
+      "content": "== Negative nominal or real rates == Nominal interest rates are normally positive, but not always. In contrast, real interest rates can be negative, when nominal interest rates are below inflation. When this is done via government policy (for example, via reserve requirements), this is deemed financial repression, and was practiced by countries such as the United States and United Kingdom following World War II (from 1945) until the late 1970s or early 1980s (during and following the Post–World War II economic expansion). In the late 1970s, United States Treasury securities with negative real interest rates were deemed certificates of confiscation.",
+      "char_count": 656,
+      "token_estimate": 164,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0024",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = On government bond yields ==",
+      "heading_path": "== = On government bond yields ==",
+      "start_char": 17662,
+      "end_char": 18030,
+      "content": "== = On government bond yields === During the European debt crisis, government bonds of some countries (Switzerland, Denmark, Germany, Finland, the Netherlands and Austria) have been sold at negative yields. Suggested explanations include desire for safety and protection against the eurozone breaking up (in which case some eurozone countries might redenominate their debt into a stronger currency).",
+      "char_count": 400,
+      "token_estimate": 100,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "interestrate_21704e5f_c0025",
+      "article_id": "interestrate_21704e5f",
+      "section": "== = On corporate bond yields ==",
+      "heading_path": "== = On corporate bond yields ==",
+      "start_char": 18062,
+      "end_char": 19000,
+      "content": "== = On corporate bond yields === For practical purposes, investors and academics typically view the yields on government or quasi-government bonds guaranteed by a small number of the most creditworthy governments (United Kingdom, United States, Switzerland, EU, Japan) to effectively have negligible default risk. As financial theory would predict, investors and academics typically do not view non-government guaranteed corporate bonds in the same way. Most credit analysts value them at a spread to similar government bonds with similar duration, geographic exposure, and currency exposure. Through 2018 there have only been a few of these corporate bonds that have traded at negative nominal interest rates. The most notable example of this was Nestle, some of whose AAA-rated bonds traded at negative nominal interest rate in 2015. However, some academics and investors believe this may have been influenced by volatility in the currency market during this period.",
+      "char_count": 969,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What is the definition of liquidity preference?",
+        "answer": "Liquidity preference is defined as the propensity of most economic agents to hold cash or highly liquid assets over less fungible investments, which reflects both precautionary and transactional motives.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0014"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0014"
+        ]
+      },
+      {
+        "question": "According to the text, how can banks influence the speed of economic growth?",
+        "answer": "Banks can slow down the economy by raising interest rates or speed up economic growth by lowering interest rates.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0008"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0008"
+        ]
+      },
+      {
+        "question": "What company is mentioned as a notable example of having its AAA-rated bonds trade at a negative nominal interest rate in 2015?",
+        "answer": "Nestle is a notable example of a company whose AAA-rated bonds traded at a negative nominal interest rate in 2015.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0025"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0025"
+        ]
+      },
+      {
+        "question": "What is the fundamental concept of an interest rate, and what external factors cause it to vary?",
+        "answer": "An interest rate is the fee paid for the privilege of having money sooner, expressed as a proportion of the principal amount. It represents a preference for present income over future income. This rate varies based on several factors, including government directives to the central bank, the currency of the loan, the term to maturity, the borrower's perceived default risk, and market supply and demand.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0000",
+          "interestrate_21704e5f_c0001"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0001",
+          "interestrate_21704e5f_c0000"
+        ]
+      },
+      {
+        "question": "Based on the banking business, what two types of interest rates are demonstrated in the example of a bank taking deposits from individuals and making loans to companies?",
+        "answer": "The two types of interest rates demonstrated are the deposit interest rate and the loan interest rate. The bank pays a deposit interest rate to individuals for their deposited capital, and it charges a loan interest rate to the company that borrows capital.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0002",
+          "interestrate_21704e5f_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0002",
+          "interestrate_21704e5f_c0004"
+        ]
+      },
+      {
+        "question": "Considering the economic purpose of interest rates and their historical volatility, why do many economists advocate for independent central banks?",
+        "answer": "Economists advocate for independent central banks primarily to limit political influence on monetary policy. Interest rates are a vital tool used to manage long-term economic health by influencing investment, inflation, and unemployment. However, lowering rates can also provide a short-term economic boost that is politically tempting to use for influencing elections, even if it is later offset by inflation. Given the historical volatility of interest rates, which have seen extreme fluctuations such as reaching 800% in Zimbabwe, entrusting this powerful tool to an independent body is seen as a way to protect the economy from short-sighted political pressures.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0005",
+          "interestrate_21704e5f_c0006",
+          "interestrate_21704e5f_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0007",
+          "interestrate_21704e5f_c0005",
+          "interestrate_21704e5f_c0006"
+        ]
+      },
+      {
+        "question": "How are the concepts of a discount rate and yield to maturity related?",
+        "answer": "A discount rate is a general term for a rate used to calculate the present value of future cash flows. Yield to maturity is a specific application of a discount rate for a bond; it is the particular discount rate that makes the present value of all the bond's future cash flows (coupons and par value repayment) equal to its current market price.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0003",
+          "interestrate_21704e5f_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0004",
+          "interestrate_21704e5f_c0003"
+        ]
+      },
+      {
+        "question": "What are the various factors and reasons that influence the level of interest rates?",
+        "answer": "Interest rates are influenced by a wide range of factors. These include political motivations for short-term economic boosts, the principle of deferred consumption (time preference theory), and the need to compensate lenders for inflationary expectations. Other considerations are the availability of alternative investments, the risk of borrower default requiring a risk premium, people's preference for liquidity, and the impact of taxes on interest gains. Furthermore, banks can manipulate rates to manage economic growth, and rates can fluctuate based on the general status of the economy.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0007",
+          "interestrate_21704e5f_c0008"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0007",
+          "interestrate_21704e5f_c0008"
+        ]
+      },
+      {
+        "question": "How is the real interest rate, which measures the growth in real value of a loan, mathematically calculated using the nominal interest rate and inflation?",
+        "answer": "The real interest rate (r) is calculated using the Fisher equation, which relates it to the nominal interest rate (i) and the inflation rate (p). The formula is r = (1 + i) / (1 + p) - 1. For low rates and short periods, a linear approximation of r ≈ i - p can be used.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0009",
+          "interestrate_21704e5f_c0010"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0009",
+          "interestrate_21704e5f_c0010"
+        ]
+      },
+      {
+        "question": "Explain the full transmission mechanism through which a central bank's monetary policy, by adjusting interest rates, ultimately influences inflation.",
+        "answer": "A central bank's monetary policy influences inflation through a multi-step process. First, changes in interest rates affect key components of aggregate demand like firm investment, household consumption (via wealth effects on asset prices), and net exports (via exchange rates); this is known as the monetary transmission mechanism. By influencing aggregate demand, monetary policy then affects the economy's output and employment levels. Finally, these changes in employment impact wage setting, which in turn affects pricing and ultimately the rate of inflation, a relationship described by the Phillips curve.",
+        "related_chunk_ids": [
+          "interestrate_21704e5f_c0017",
+          "interestrate_21704e5f_c0018"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "interestrate_21704e5f_c0018",
+          "interestrate_21704e5f_c0017"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:26.286Z",
+    "content_format": "markdown",
+    "total_chunks": 26,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

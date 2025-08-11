@@ -1,0 +1,500 @@
+{
+  "article": {
+    "id": "sineandcosine_942c1204",
+    "title": "Sine and cosine",
+    "url": "https://en.wikipedia.org/wiki/Sine_and_cosine",
+    "lang": "en",
+    "created_at": "2025-07-31T06:31:14.534259",
+    "content": "---\nid: sineandcosine_942c1204\nurl: https://en.wikipedia.org/wiki/Sine_and_cosine\ntitle: Sine and cosine\nlang: en\ncreated_at: '2025-07-31T06:25:51.004055'\nchecksum: 6389146712ea35d68fc0a2cc2b4b8928e4037fde00eb44bafab418d65679f790\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 6215\n  char_count: 35069\n  num_chunks: 30\n  original_chunks: 42\n  filtered_out: 12\n  num_sections: 0\n---\nIn mathematics, sine and cosine are trigonometric functions of an angle. The sine and cosine of an acute angle are defined in the context of a right triangle: for the specified angle, its sine is the ratio of the length of the side opposite that angle to the length of the longest side of the triangle (the hypotenuse), and the cosine is the ratio of the length of the adjacent leg to that of the hypotenuse. For an angle θ {\\displaystyle \\theta } , the sine and cosine functions are denoted as sin ⁡ ( θ ) {\\displaystyle \\sin(\\theta )} and cos ⁡ ( θ ) {\\displaystyle \\cos(\\theta )} . The definitions of sine and cosine have been extended to any real value in terms of the lengths of certain line segments in a unit circle. More modern definitions express the sine and cosine as infinite series, or as the solutions of certain differential equations, allowing their extension to arbitrary positive and negative values and even to complex numbers. The sine and cosine functions are commonly used to model periodic phenomena such as sound and light waves, the position and velocity of harmonic oscillators, sunlight intensity and day length, and average temperature variations throughout the year. They can be traced to the jyā and koṭi-jyā functions used in Indian astronomy during the Gupta period. == Elementary descriptions == === Right-angled triangle definition === To define the sine and cosine of an acute angle α {\\displaystyle \\alpha } , start with a right triangle that contains an angle of measure α {\\displaystyle \\alpha } ; in the accompanying figure, angle α {\\displaystyle \\alpha } in a right triangle A B C {\\displaystyle ABC} is the angle of interest. The three sides of the triangle are named as follows: The opposite side is the side opposite to the angle of interest; in this case, it is a {\\displaystyle a} . The hypotenuse is the side opposite the right angle; in this case, it is h {\\displaystyle h} . The hypotenuse is always the longest side of a right-angled triangle. The adjacent side is the remaining side; in this case, it is b {\\displaystyle b} . It forms a side of (and is adjacent to) both the angle of interest and the right angle. Once such a triangle is chosen, the sine of the angle is equal to the length of the opposite side divided by the length of the hypotenuse, and the cosine of the angle is equal to the length of the adjacent side divided by the length of the hypotenuse: sin ⁡ ( α ) = opposite hypotenuse , cos ⁡ ( α ) = adjacent hypotenuse . {\\displaystyle \\sin(\\alpha )={\\frac {\\text{opposite}}{\\text{hypotenuse}}},\\qquad \\cos(\\alpha )={\\frac {\\text{adjacent}}{\\text{hypotenuse}}}.} The other trigonometric functions of the angle can be defined similarly; for example, the tangent is the ratio between the opposite and adjacent sides or equivalently the ratio between the sine and cosine functions. The reciprocal of sine is cosecant, which gives the ratio of the hypotenuse length to the length of the opposite side. Similarly, the reciprocal of cosine is secant, which gives the ratio of the hypotenuse length to that of the adjacent side. The cotangent function is the ratio between the adjacent and opposite sides, a reciprocal of a tangent function. These functions can be formulated as: tan ⁡ ( θ ) = sin ⁡ ( θ ) cos ⁡ ( θ ) = opposite adjacent , cot ⁡ ( θ ) = 1 tan ⁡ ( θ ) = adjacent opposite , csc ⁡ ( θ ) = 1 sin ⁡ ( θ ) = hypotenuse opposite , sec ⁡ ( θ ) = 1 cos ⁡ ( θ ) = hypotenuse adjacent . {\\displaystyle {\\begin{aligned}\\tan(\\theta )&={\\frac {\\sin(\\theta )}{\\cos(\\theta )}}={\\frac {\\text{opposite}}{\\text{adjacent}}},\\\\\\cot(\\theta )&={\\frac {1}{\\tan(\\theta )}}={\\frac {\\text{adjacent}}{\\text{opposite}}},\\\\\\csc(\\theta )&={\\frac {1}{\\sin(\\theta )}}={\\frac {\\text{hypotenuse}}{\\text{opposite}}},\\\\\\sec(\\theta )&={\\frac {1}{\\cos(\\theta )}}={\\frac {\\textrm {hypotenuse}}{\\textrm {adjacent}}}.\\end{aligned}}} === Special angle measures === As stated, the values sin ⁡ ( α ) {\\displaystyle \\sin(\\alpha )} and cos ⁡ ( α ) {\\displaystyle \\cos(\\alpha )} appear to depend on the choice of a right triangle containing an angle of measure α {\\displaystyle \\alpha } . However, this is not the case as all such triangles are similar, and so the ratios are the same for each of them. For example, each leg of the 45-45-90 right triangle is 1 unit, and its hypotenuse is 2 {\\displaystyle {\\sqrt {2}}} ; therefore, sin ⁡ 45 ∘ = cos ⁡ 45 ∘ = 2 2 {\\textstyle \\sin 45^{\\circ }=\\cos 45^{\\circ }={\\frac {\\sqrt {2}}{2}}} . The following table shows the special value of each input for both sine and cosine with the domain between 0 < α < π 2 {\\textstyle 0<\\alpha <{\\frac {\\pi }{2}}} . The input in this table provides various unit systems such as degree, radian, and so on. The angles other than those five can be obtained by using a calculator. === Laws === The law of sines is useful for computing the lengths of the unknown sides in a triangle if two angles and one side are known. Given a triangle A B C {\\displaystyle ABC} with sides a {\\displaystyle a} , b {\\displaystyle b} , and c {\\displaystyle c} , and angles opposite those sides α {\\displaystyle \\alpha } , β {\\displaystyle \\beta } , and γ {\\displaystyle \\gamma } , the law states, sin ⁡ α a = sin ⁡ β b = sin ⁡ γ c . {\\displaystyle {\\frac {\\sin \\alpha }{a}}={\\frac {\\sin \\beta }{b}}={\\frac {\\sin \\gamma }{c}}.} This is equivalent to the equality of the first three expressions below: a sin ⁡ α = b sin ⁡ β = c sin ⁡ γ = 2 R , {\\displaystyle {\\frac {a}{\\sin \\alpha }}={\\frac {b}{\\sin \\beta }}={\\frac {c}{\\sin \\gamma }}=2R,} where R {\\displaystyle R} is the triangle's circumradius. The law of cosines is useful for computing the length of an unknown side if two other sides and an angle are known. The law states, a 2 + b 2 − 2 a b cos ⁡ ( γ ) = c 2 {\\displaystyle a^{2}+b^{2}-2ab\\cos(\\gamma )=c^{2}} In the case where γ = π / 2 {\\displaystyle \\gamma =\\pi /2} from which cos ⁡ ( γ ) = 0 {\\displaystyle \\cos(\\gamma )=0} , the resulting equation becomes the Pythagorean theorem. === Vector definition === The cross product and dot product are operations on two vectors in Euclidean vector space. The sine and cosine functions can be defined in terms of the cross product and dot product. If a {\\displaystyle \\mathbb {a} } and b {\\displaystyle \\mathbb {b} } are vectors, and θ {\\displaystyle \\theta } is the angle between a {\\displaystyle \\mathbb {a} } and b {\\displaystyle \\mathbb {b} } , then sine and cosine can be defined as: sin ⁡ ( θ ) = | a × b | | a | | b | , cos ⁡ ( θ ) = a ⋅ b | a | | b | . {\\displaystyle {\\begin{aligned}\\sin(\\theta )&={\\frac {|\\mathbb {a} \\times \\mathbb {b} |}{|a||b|}},\\\\\\cos(\\theta )&={\\frac {\\mathbb {a} \\cdot \\mathbb {b} }{|a||b|}}.\\end{aligned}}} == Analytic descriptions == === Unit circle definition === The sine and cosine functions may also be defined in a more general way by using unit circle, a circle of radius one centered at the origin ( 0 , 0 ) {\\displaystyle (0,0)} , formulated as the equation of x 2 + y 2 = 1 {\\displaystyle x^{2}+y^{2}=1} in the Cartesian coordinate system. Let a line through the origin intersect the unit circle, making an angle of θ {\\displaystyle \\theta } with the positive half of the x {\\displaystyle x} -axis. The x {\\displaystyle x} - and y {\\displaystyle y} -coordinates of this point of intersection are equal to cos ⁡ ( θ ) {\\displaystyle \\cos(\\theta )} and sin ⁡ ( θ ) {\\displaystyle \\sin(\\theta )} , respectively; that is, sin ⁡ ( θ ) = y , cos ⁡ ( θ ) = x . {\\displaystyle \\sin(\\theta )=y,\\qquad \\cos(\\theta )=x.} This definition is consistent with the right-angled triangle definition of sine and cosine when 0 < θ < π 2 {\\textstyle 0<\\theta <{\\frac {\\pi }{2}}} because the length of the hypotenuse of the unit circle is always 1; mathematically speaking, the sine of an angle equals the opposite side of the triangle, which is simply the y {\\displaystyle y} -coordinate. A similar argument can be made for the cosine function to show that the cosine of an angle when 0 < θ < π 2 {\\textstyle 0<\\theta <{\\frac {\\pi }{2}}} , even under the new definition using the unit circle. ==== Graph of a function and its elementary properties ==== Using the unit circle definition has the advantage of drawing a graph of sine and cosine functions. This can be done by rotating counterclockwise a point along the circumference of a circle, depending on the input θ > 0 {\\displaystyle \\theta >0} . In a sine function, if the input is θ = π 2 {\\textstyle \\theta ={\\frac {\\pi }{2}}} , the point is rotated counterclockwise and stopped exactly on the y {\\displaystyle y} -axis. If θ = π {\\displaystyle \\theta =\\pi } , the point is at the circle's halfway. If θ = 2 π {\\displaystyle \\theta =2\\pi } , the point returned to its origin. This results that both sine and cosine functions have the range between − 1 ≤ y ≤ 1 {\\displaystyle -1\\leq y\\leq 1} . Extending the angle to any real domain, the point rotated counterclockwise continuously. This can be done similarly for the cosine function as well, although the point is rotated initially from the y {\\displaystyle y} -coordinate. In other words, both sine and cosine functions are periodic, meaning any angle added by the circumference's circle is the angle itself. Mathematically, sin ⁡ ( θ + 2 π ) = sin ⁡ ( θ ) , cos ⁡ ( θ + 2 π ) = cos ⁡ ( θ ) . {\\displaystyle \\sin(\\theta +2\\pi )=\\sin(\\theta ),\\qquad \\cos(\\theta +2\\pi )=\\cos(\\theta ).} A function f {\\displaystyle f} is said to be odd if f ( − x ) = − f ( x ) {\\displaystyle f(-x)=-f(x)} , and is said to be even if f ( − x ) = f ( x ) {\\displaystyle f(-x)=f(x)} . The sine function is odd, whereas the cosine function is even. Both sine and cosine functions are similar, with their difference being shifted by π 2 {\\textstyle {\\frac {\\pi }{2}}} . This phase shift can be expressed as cos⁡(θ)=sin⁡(θ+π/2) or sin⁡(θ)=cos⁡(θ−π/2). This is distinct from the cofunction identities that follow below, which arise from right-triangle geometry and are not phase shifts: sin ⁡ ( θ ) = cos ⁡ ( π 2 − θ ) , cos ⁡ ( θ ) = sin ⁡ ( π 2 − θ ) . {\\displaystyle {\\begin{aligned}\\sin(\\theta )&=\\cos \\left({\\frac {\\pi }{2}}-\\theta \\right),\\\\\\cos(\\theta )&=\\sin \\left({\\frac {\\pi }{2}}-\\theta \\right).\\end{aligned}}} Zero is the only real fixed point of the sine function; in other words the only intersection of the sine function and the identity function is sin ⁡ ( 0 ) = 0 {\\displaystyle \\sin(0)=0} . The only real fixed point of the cosine function is called the Dottie number. The Dottie number is the unique real root of the equation cos ⁡ ( x ) = x {\\displaystyle \\cos(x)=x} . The decimal expansion of the Dottie number is approximately 0.739085. ==== Continuity and differentiation ==== The sine and cosine functions are infinitely differentiable. The derivative of sine is cosine, and the derivative of cosine is negative sine: d d x sin ⁡ ( x ) = cos ⁡ ( x ) , d d x cos ⁡ ( x ) = − sin ⁡ ( x ) . {\\displaystyle {\\frac {d}{dx}}\\sin(x)=\\cos(x),\\qquad {\\frac {d}{dx}}\\cos(x)=-\\sin(x).} Continuing the process in higher-order derivative results in the repeated same functions; the fourth derivative of a sine is the sine itself. These derivatives can be applied to the first derivative test, according to which the monotonicity of a function can be defined as the inequality of function's first derivative greater or less than equal to zero. It can also be applied to second derivative test, according to which the concavity of a function can be defined by applying the inequality of the function's second derivative greater or less than equal to zero. The following table shows that both sine and cosine functions have concavity and monotonicity—the positive sign ( + {\\displaystyle +} ) denotes a graph is increasing (going upward) and the negative sign ( − {\\displaystyle -} ) is decreasing (going downward)—in certain intervals. This information can be represented as a Cartesian coordinates system divided into four quadrants. Both sine and cosine functions can be defined by using differential equations. The pair of ( cos ⁡ θ , sin ⁡ θ ) {\\displaystyle (\\cos \\theta ,\\sin \\theta )} is the solution ( x ( θ ) , y ( θ ) ) {\\displaystyle (x(\\theta ),y(\\theta ))} to the two-dimensional system of differential equations y ′ ( θ ) = x ( θ ) {\\displaystyle y'(\\theta )=x(\\theta )} and x ′ ( θ ) = − y ( θ ) {\\displaystyle x'(\\theta )=-y(\\theta )} with the initial conditions y ( 0 ) = 0 {\\displaystyle y(0)=0} and x ( 0 ) = 1 {\\displaystyle x(0)=1} . One could interpret the unit circle in the above definitions as defining the phase space trajectory of the differential equation with the given initial conditions. It can be interpreted as a phase space trajectory of the system of differential equations y ′ ( θ ) = x ( θ ) {\\displaystyle y'(\\theta )=x(\\theta )} and x ′ ( θ ) = − y ( θ ) {\\displaystyle x'(\\theta )=-y(\\theta )} starting from the initial conditions y ( 0 ) = 0 {\\displaystyle y(0)=0} and x ( 0 ) = 1 {\\displaystyle x(0)=1} . ==== Integral and the usage in mensuration ==== Their area under a curve can be obtained by using the integral with a certain bounded interval. Their antiderivatives are: ∫ sin ⁡ ( x ) d x = − cos ⁡ ( x ) + C ∫ cos ⁡ ( x ) d x = sin ⁡ ( x ) + C , {\\displaystyle \\int \\sin(x)\\,dx=-\\cos(x)+C\\qquad \\int \\cos(x)\\,dx=\\sin(x)+C,} where C {\\displaystyle C} denotes the constant of integration. These antiderivatives may be applied to compute the mensuration properties of both sine and cosine functions' curves with a given interval. For example, the arc length of the sine curve between 0 {\\displaystyle 0} and t {\\displaystyle t} is ∫ 0 t 1 + cos 2 ⁡ ( x ) d x = 2 E ⁡ ( t , 1 2 ) , {\\displaystyle \\int _{0}^{t}\\!{\\sqrt {1+\\cos ^{2}(x)}}\\,dx={\\sqrt {2}}\\operatorname {E} \\left(t,{\\frac {1}{\\sqrt {2}}}\\right),} where E ⁡ ( φ , k ) {\\displaystyle \\operatorname {E} (\\varphi ,k)} is the incomplete elliptic integral of the second kind with modulus k {\\displaystyle k} . It cannot be expressed using elementary functions. In the case of a full period, its arc length is L = 4 2 π 3 Γ ( 1 / 4 ) 2 + Γ ( 1 / 4 ) 2 2 π = 2 π ϖ + 2 ϖ ≈ 7.6404 … {\\displaystyle L={\\frac {4{\\sqrt {2\\pi ^{3}}}}{\\Gamma (1/4)^{2}}}+{\\frac {\\Gamma (1/4)^{2}}{\\sqrt {2\\pi }}}={\\frac {2\\pi }{\\varpi }}+2\\varpi \\approx 7.6404\\ldots } where Γ {\\displaystyle \\Gamma } is the gamma function and ϖ {\\displaystyle \\varpi } is the lemniscate constant. ==== Inverse functions ==== The inverse function of sine is arcsine or inverse sine, denoted as \"arcsin\", \"asin\", or sin − 1 {\\displaystyle \\sin ^{-1}} . The inverse function of cosine is arccosine, denoted as \"arccos\", \"acos\", or cos − 1 {\\displaystyle \\cos ^{-1}} . As sine and cosine are not injective, their inverses are not exact inverse functions, but partial inverse functions. For example, sin ⁡ ( 0 ) = 0 {\\displaystyle \\sin(0)=0} , but also sin ⁡ ( π ) = 0 {\\displaystyle \\sin(\\pi )=0} , sin ⁡ ( 2 π ) = 0 {\\displaystyle \\sin(2\\pi )=0} , and so on. It follows that the arcsine function is multivalued: arcsin ⁡ ( 0 ) = 0 {\\displaystyle \\arcsin(0)=0} , but also arcsin ⁡ ( 0 ) = π {\\displaystyle \\arcsin(0)=\\pi } , arcsin ⁡ ( 0 ) = 2 π {\\displaystyle \\arcsin(0)=2\\pi } , and so on. When only one value is desired, the function may be restricted to its principal branch. With this restriction, for each x {\\displaystyle x} in the domain, the expression arcsin ⁡ ( x ) {\\displaystyle \\arcsin(x)} will evaluate only to a single value, called its principal value. The standard range of principal values for arcsin is from − π 2 {\\textstyle -{\\frac {\\pi }{2}}} to π 2 {\\textstyle {\\frac {\\pi }{2}}} , and the standard range for arccos is from 0 {\\displaystyle 0} to π {\\displaystyle \\pi } . The inverse function of both sine and cosine are defined as: θ = arcsin ⁡ ( opposite hypotenuse ) = arccos ⁡ ( adjacent hypotenuse ) , {\\displaystyle \\theta =\\arcsin \\left({\\frac {\\text{opposite}}{\\text{hypotenuse}}}\\right)=\\arccos \\left({\\frac {\\text{adjacent}}{\\text{hypotenuse}}}\\right),} where for some integer k {\\displaystyle k} , sin ⁡ ( y ) = x ⟺ y = arcsin ⁡ ( x ) + 2 π k , or y = π − arcsin ⁡ ( x ) + 2 π k cos ⁡ ( y ) = x ⟺ y = arccos ⁡ ( x ) + 2 π k , or y = − arccos ⁡ ( x ) + 2 π k {\\displaystyle {\\begin{aligned}\\sin(y)=x\\iff &y=\\arcsin(x)+2\\pi k,{\\text{ or }}\\\\&y=\\pi -\\arcsin(x)+2\\pi k\\\\\\cos(y)=x\\iff &y=\\arccos(x)+2\\pi k,{\\text{ or }}\\\\&y=-\\arccos(x)+2\\pi k\\end{aligned}}} By definition, both functions satisfy the equations: sin ⁡ ( arcsin ⁡ ( x ) ) = x cos ⁡ ( arccos ⁡ ( x ) ) = x {\\displaystyle \\sin(\\arcsin(x))=x\\qquad \\cos(\\arccos(x))=x} and arcsin ⁡ ( sin ⁡ ( θ ) ) = θ for − π 2 ≤ θ ≤ π 2 arccos ⁡ ( cos ⁡ ( θ ) ) = θ for 0 ≤ θ ≤ π {\\displaystyle {\\begin{aligned}\\arcsin(\\sin(\\theta ))=\\theta \\quad &{\\text{for}}\\quad -{\\frac {\\pi }{2}}\\leq \\theta \\leq {\\frac {\\pi }{2}}\\\\\\arccos(\\cos(\\theta ))=\\theta \\quad &{\\text{for}}\\quad 0\\leq \\theta \\leq \\pi \\end{aligned}}} ==== Other identities ==== According to Pythagorean theorem, the squared hypotenuse is the sum of two squared legs of a right triangle. Dividing the formula on both sides with squared hypotenuse resulting in the Pythagorean trigonometric identity, the sum of a squared sine and a squared cosine equals 1: sin 2 ⁡ ( θ ) + cos 2 ⁡ ( θ ) = 1. {\\displaystyle \\sin ^{2}(\\theta )+\\cos ^{2}(\\theta )=1.} Sine and cosine satisfy the following double-angle formulas: sin ⁡ ( 2 θ ) = 2 sin ⁡ ( θ ) cos ⁡ ( θ ) , cos ⁡ ( 2 θ ) = cos 2 ⁡ ( θ ) − sin 2 ⁡ ( θ ) = 2 cos 2 ⁡ ( θ ) − 1 = 1 − 2 sin 2 ⁡ ( θ ) {\\displaystyle {\\begin{aligned}\\sin(2\\theta )&=2\\sin(\\theta )\\cos(\\theta ),\\\\\\cos(2\\theta )&=\\cos ^{2}(\\theta )-\\sin ^{2}(\\theta )\\\\&=2\\cos ^{2}(\\theta )-1\\\\&=1-2\\sin ^{2}(\\theta )\\end{aligned}}} The cosine double angle formula implies that sin2 and cos2 are, themselves, shifted and scaled sine waves. Specifically, sin 2 ⁡ ( θ ) = 1 − cos ⁡ ( 2 θ ) 2 cos 2 ⁡ ( θ ) = 1 + cos ⁡ ( 2 θ ) 2 {\\displaystyle \\sin ^{2}(\\theta )={\\frac {1-\\cos(2\\theta )}{2}}\\qquad \\cos ^{2}(\\theta )={\\frac {1+\\cos(2\\theta )}{2}}} The graph shows both sine and sine squared functions, with the sine in blue and the sine squared in red. Both graphs have the same shape but with different ranges of values and different periods. Sine squared has only positive values, but twice the number of periods. === Series and polynomials === Both sine and cosine functions can be defined by using a Taylor series, a power series involving the higher-order derivatives. As mentioned in § Continuity and differentiation, the derivative of sine is cosine and that the derivative of cosine is the negative of sine. This means the successive derivatives of sin ⁡ ( x ) {\\displaystyle \\sin(x)} are cos ⁡ ( x ) {\\displaystyle \\cos(x)} , − sin ⁡ ( x ) {\\displaystyle -\\sin(x)} , − cos ⁡ ( x ) {\\displaystyle -\\cos(x)} , sin ⁡ ( x ) {\\displaystyle \\sin(x)} , continuing to repeat those four functions. The ( 4 n + k ) {\\displaystyle (4n+k)} -th derivative, evaluated at the point 0: sin ( 4 n + k ) ⁡ ( 0 ) = { 0 when k = 0 1 when k = 1 0 when k = 2 − 1 when k = 3 {\\displaystyle \\sin ^{(4n+k)}(0)={\\begin{cases}0&{\\text{when }}k=0\\\\1&{\\text{when }}k=1\\\\0&{\\text{when }}k=2\\\\-1&{\\text{when }}k=3\\end{cases}}} where the superscript represents repeated differentiation. This implies the following Taylor series expansion at x = 0 {\\displaystyle x=0} . One can then use the theory of Taylor series to show that the following identities hold for all real numbers x {\\displaystyle x} —where x {\\displaystyle x} is the angle in radians. More generally, for all complex numbers: sin ⁡ ( x ) = x − x 3 3 ! + x 5 5 ! − x 7 7 ! + ⋯ = ∑ n = 0 ∞ ( − 1 ) n ( 2 n + 1 ) ! x 2 n + 1 {\\displaystyle {\\begin{aligned}\\sin(x)&=x-{\\frac {x^{3}}{3!}}+{\\frac {x^{5}}{5!}}-{\\frac {x^{7}}{7!}}+\\cdots \\\\&=\\sum _{n=0}^{\\infty }{\\frac {(-1)^{n}}{(2n+1)!}}x^{2n+1}\\end{aligned}}} Taking the derivative of each term gives the Taylor series for cosine: cos ⁡ ( x ) = 1 − x 2 2 ! + x 4 4 ! − x 6 6 ! + ⋯ = ∑ n = 0 ∞ ( − 1 ) n ( 2 n ) ! x 2 n {\\displaystyle {\\begin{aligned}\\cos(x)&=1-{\\frac {x^{2}}{2!}}+{\\frac {x^{4}}{4!}}-{\\frac {x^{6}}{6!}}+\\cdots \\\\&=\\sum _{n=0}^{\\infty }{\\frac {(-1)^{n}}{(2n)!}}x^{2n}\\end{aligned}}} Both sine and cosine functions with multiple angles may appear as their linear combination, resulting in a polynomial. Such a polynomial is known as the trigonometric polynomial. The trigonometric polynomial's ample applications may be acquired in its interpolation, and its extension of a periodic function known as the Fourier series. Let a n {\\displaystyle a_{n}} and b n {\\displaystyle b_{n}} be any coefficients, then the trigonometric polynomial of a degree N {\\displaystyle N} —denoted as T ( x ) {\\displaystyle T(x)} —is defined as: T ( x ) = a 0 + ∑ n = 1 N a n cos ⁡ ( n x ) + ∑ n = 1 N b n sin ⁡ ( n x ) . {\\displaystyle T(x)=a_{0}+\\sum _{n=1}^{N}a_{n}\\cos(nx)+\\sum _{n=1}^{N}b_{n}\\sin(nx).} The trigonometric series can be defined similarly analogous to the trigonometric polynomial, its infinite inversion. Let A n {\\displaystyle A_{n}} and B n {\\displaystyle B_{n}} be any coefficients, then the trigonometric series can be defined as: 1 2 A 0 + ∑ n = 1 ∞ A n cos ⁡ ( n x ) + B n sin ⁡ ( n x ) . {\\displaystyle {\\frac {1}{2}}A_{0}+\\sum _{n=1}^{\\infty }A_{n}\\cos(nx)+B_{n}\\sin(nx).} In the case of a Fourier series with a given integrable function f {\\displaystyle f} , the coefficients of a trigonometric series are: A n = 1 π ∫ 0 2 π f ( x ) cos ⁡ ( n x ) d x , B n = 1 π ∫ 0 2 π f ( x ) sin ⁡ ( n x ) d x . {\\displaystyle {\\begin{aligned}A_{n}&={\\frac {1}{\\pi }}\\int _{0}^{2\\pi }f(x)\\cos(nx)\\,dx,\\\\B_{n}&={\\frac {1}{\\pi }}\\int _{0}^{2\\pi }f(x)\\sin(nx)\\,dx.\\end{aligned}}} == Complex numbers relationship == === Complex exponential function definitions === Both sine and cosine can be extended further via complex number, a set of numbers composed of both real and imaginary numbers. For real number θ {\\displaystyle \\theta } , the definition of both sine and cosine functions can be extended in a complex plane in terms of an exponential function as follows: sin ⁡ ( θ ) = e i θ − e − i θ 2 i , cos ⁡ ( θ ) = e i θ + e − i θ 2 , {\\displaystyle {\\begin{aligned}\\sin(\\theta )&={\\frac {e^{i\\theta }-e^{-i\\theta }}{2i}},\\\\\\cos(\\theta )&={\\frac {e^{i\\theta }+e^{-i\\theta }}{2}},\\end{aligned}}} Alternatively, both functions can be defined in terms of Euler's formula: e i θ = cos ⁡ ( θ ) + i sin ⁡ ( θ ) , e − i θ = cos ⁡ ( θ ) − i sin ⁡ ( θ ) . {\\displaystyle {\\begin{aligned}e^{i\\theta }&=\\cos(\\theta )+i\\sin(\\theta ),\\\\e^{-i\\theta }&=\\cos(\\theta )-i\\sin(\\theta ).\\end{aligned}}} When plotted on the complex plane, the function e i x {\\displaystyle e^{ix}} for real values of x {\\displaystyle x} traces out the unit circle in the complex plane. Both sine and cosine functions may be simplified to the imaginary and real parts of e i θ {\\displaystyle e^{i\\theta }} as: sin ⁡ θ = Im ⁡ ( e i θ ) , cos ⁡ θ = Re ⁡ ( e i θ ) . {\\displaystyle {\\begin{aligned}\\sin \\theta &=\\operatorname {Im} (e^{i\\theta }),\\\\\\cos \\theta &=\\operatorname {Re} (e^{i\\theta }).\\end{aligned}}} When z = x + i y {\\displaystyle z=x+iy} for real values x {\\displaystyle x} and y {\\displaystyle y} , where i = − 1 {\\displaystyle i={\\sqrt {-1}}} , both sine and cosine functions can be expressed in terms of real sines, cosines, and hyperbolic functions as: sin ⁡ z = sin ⁡ x cosh ⁡ y + i cos ⁡ x sinh ⁡ y , cos ⁡ z = cos ⁡ x cosh ⁡ y − i sin ⁡ x sinh ⁡ y . {\\displaystyle {\\begin{aligned}\\sin z&=\\sin x\\cosh y+i\\cos x\\sinh y,\\\\\\cos z&=\\cos x\\cosh y-i\\sin x\\sinh y.\\end{aligned}}} === Polar coordinates === Sine and cosine are used to connect the real and imaginary parts of a complex number with its polar coordinates ( r , θ ) {\\displaystyle (r,\\theta )} : z = r ( cos ⁡ ( θ ) + i sin ⁡ ( θ ) ) , {\\displaystyle z=r(\\cos(\\theta )+i\\sin(\\theta )),} and the real and imaginary parts are Re ⁡ ( z ) = r cos ⁡ ( θ ) , Im ⁡ ( z ) = r sin ⁡ ( θ ) , {\\displaystyle {\\begin{aligned}\\operatorname {Re} (z)&=r\\cos(\\theta ),\\\\\\operatorname {Im} (z)&=r\\sin(\\theta ),\\end{aligned}}} where r {\\displaystyle r} and θ {\\displaystyle \\theta } represent the magnitude and angle of the complex number z {\\displaystyle z} . For any real number θ {\\displaystyle \\theta } , Euler's formula in terms of polar coordinates is stated as z = r e i θ {\\textstyle z=re^{i\\theta }} . === Complex arguments === Applying the series definition of the sine and cosine to a complex argument, z, gives: sin ⁡ ( z ) = ∑ n = 0 ∞ ( − 1 ) n ( 2 n + 1 ) ! z 2 n + 1 = e i z − e − i z 2 i = sinh ⁡ ( i z ) i = − i sinh ⁡ ( i z ) cos ⁡ ( z ) = ∑ n = 0 ∞ ( − 1 ) n ( 2 n ) ! z 2 n = e i z + e − i z 2 = cosh ⁡ ( i z ) {\\displaystyle {\\begin{aligned}\\sin(z)&=\\sum _{n=0}^{\\infty }{\\frac {(-1)^{n}}{(2n+1)!}}z^{2n+1}\\\\&={\\frac {e^{iz}-e^{-iz}}{2i}}\\\\&={\\frac {\\sinh \\left(iz\\right)}{i}}\\\\&=-i\\sinh \\left(iz\\right)\\\\\\cos(z)&=\\sum _{n=0}^{\\infty }{\\frac {(-1)^{n}}{(2n)!}}z^{2n}\\\\&={\\frac {e^{iz}+e^{-iz}}{2}}\\\\&=\\cosh(iz)\\\\\\end{aligned}}} where sinh and cosh are the hyperbolic sine and cosine. These are entire functions. It is also sometimes useful to express the complex sine and cosine functions in terms of the real and imaginary parts of its argument: sin ⁡ ( x + i y ) = sin ⁡ ( x ) cos ⁡ ( i y ) + cos ⁡ ( x ) sin ⁡ ( i y ) = sin ⁡ ( x ) cosh ⁡ ( y ) + i cos ⁡ ( x ) sinh ⁡ ( y ) cos ⁡ ( x + i y ) = cos ⁡ ( x ) cos ⁡ ( i y ) − sin ⁡ ( x ) sin ⁡ ( i y ) = cos ⁡ ( x ) cosh ⁡ ( y ) − i sin ⁡ ( x ) sinh ⁡ ( y ) {\\displaystyle {\\begin{aligned}\\sin(x+iy)&=\\sin(x)\\cos(iy)+\\cos(x)\\sin(iy)\\\\&=\\sin(x)\\cosh(y)+i\\cos(x)\\sinh(y)\\\\\\cos(x+iy)&=\\cos(x)\\cos(iy)-\\sin(x)\\sin(iy)\\\\&=\\cos(x)\\cosh(y)-i\\sin(x)\\sinh(y)\\\\\\end{aligned}}} ==== Partial fraction and product expansions of complex sine ==== Using the partial fraction expansion technique in complex analysis, one can find that the infinite series ∑ n = − ∞ ∞ ( − 1 ) n z − n = 1 z − 2 z ∑ n = 1 ∞ ( − 1 ) n n 2 − z 2 {\\displaystyle \\sum _{n=-\\infty }^{\\infty }{\\frac {(-1)^{n}}{z-n}}={\\frac {1}{z}}-2z\\sum _{n=1}^{\\infty }{\\frac {(-1)^{n}}{n^{2}-z^{2}}}} both converge and are equal to π sin ⁡ ( π z ) {\\textstyle {\\frac {\\pi }{\\sin(\\pi z)}}} . Similarly, one can show that π 2 sin 2 ⁡ ( π z ) = ∑ n = − ∞ ∞ 1 ( z − n ) 2 . {\\displaystyle {\\frac {\\pi ^{2}}{\\sin ^{2}(\\pi z)}}=\\sum _{n=-\\infty }^{\\infty }{\\frac {1}{(z-n)^{2}}}.} Using product expansion technique, one can derive sin ⁡ ( π z ) = π z ∏ n = 1 ∞ ( 1 − z 2 n 2 ) . {\\displaystyle \\sin(\\pi z)=\\pi z\\prod _{n=1}^{\\infty }\\left(1-{\\frac {z^{2}}{n^{2}}}\\right).} ==== Usage of complex sine ==== sin(z) is found in the functional equation for the Gamma function, Γ ( s ) Γ ( 1 − s ) = π sin ⁡ ( π s ) , {\\displaystyle \\Gamma (s)\\Gamma (1-s)={\\pi \\over \\sin(\\pi s)},} which in turn is found in the functional equation for the Riemann zeta-function, ζ ( s ) = 2 ( 2 π ) s − 1 Γ ( 1 − s ) sin ⁡ ( π 2 s ) ζ ( 1 − s ) . {\\displaystyle \\zeta (s)=2(2\\pi )^{s-1}\\Gamma (1-s)\\sin \\left({\\frac {\\pi }{2}}s\\right)\\zeta (1-s).} As a holomorphic function, sin z is a 2D solution of Laplace's equation: Δ u ( x 1 , x 2 ) = 0. {\\displaystyle \\Delta u(x_{1},x_{2})=0.} The complex sine function is also related to the level curves of pendulums. === Complex graphs === == Background == === Etymology === The word sine is derived, indirectly, from the Sanskrit word jyā 'bow-string' or more specifically its synonym jīvá (both adopted from Ancient Greek χορδή 'string; chord'), due to visual similarity between the arc of a circle with its corresponding chord and a bow with its string (see jyā, koti-jyā and utkrama-jyā; sine and chord are closely related in a circle of unit diameter, see Ptolemy’s Theorem). This was transliterated in Arabic as jība, which is meaningless in that language and written as jb (جب). Since Arabic is written without short vowels, jb was interpreted as the homograph jayb (جيب), which means 'bosom', 'pocket', or 'fold'. When the Arabic texts of Al-Battani and al-Khwārizmī were translated into Medieval Latin in the 12th century by Gerard of Cremona, he used the Latin equivalent sinus (which also means 'bay' or 'fold', and more specifically 'the hanging fold of a toga over the breast'). Gerard was probably not the first scholar to use this translation; Robert of Chester appears to have preceded him and there is evidence of even earlier usage. The English form sine was introduced in Thomas Fale's 1593 Horologiographia. The word cosine derives from an abbreviation of the Latin complementi sinus 'sine of the complementary angle' as cosinus in Edmund Gunter's Canon triangulorum (1620), which also includes a similar definition of cotangens. === History === While the early study of trigonometry can be traced to antiquity, the trigonometric functions as they are in use today were developed in the medieval period. The chord function was discovered by Hipparchus of Nicaea (180–125 BCE) and Ptolemy of Roman Egypt (90–165 CE). The sine and cosine functions are closely related to the jyā and koṭi-jyā functions used in Indian astronomy during the Gupta period (Aryabhatiya and Surya Siddhanta), via translation from Sanskrit to Arabic and then from Arabic to Latin. All six trigonometric functions in current use were known in Islamic mathematics by the 9th century, as was the law of sines, used in solving triangles. Al-Khwārizmī (c. 780–850) produced tables of sines, cosines and tangents. Muhammad ibn Jābir al-Harrānī al-Battānī (853–929) discovered the reciprocal functions of secant and cosecant, and produced the first table of cosecants for each degree from 1° to 90°. In the early 17th-century, the French mathematician Albert Girard published the first use of the abbreviations sin, cos, and tan; these were further promulgated by Euler (see below). The Opus palatinum de triangulis of Georg Joachim Rheticus, a student of Copernicus, was probably the first in Europe to define trigonometric functions directly in terms of right triangles instead of circles, with tables for all six trigonometric functions; this work was finished by Rheticus' student Valentin Otho in 1596. In a paper published in 1682, Leibniz proved that sin x is not an algebraic function of x. Roger Cotes computed the derivative of sine in his Harmonia Mensurarum (1722). Leonhard Euler's Introductio in analysin infinitorum (1748) was mostly responsible for establishing the analytic treatment of trigonometric functions in Europe, also defining them as infinite series and presenting \"Euler's formula\", as well as the near-modern abbreviations sin., cos., tang., cot., sec., and cosec. == Software implementations == There is no standard algorithm for calculating sine and cosine. IEEE 754, the most widely used standard for the specification of reliable floating-point computation, does not address calculating trigonometric functions such as sine. The reason is that no efficient algorithm is known for computing sine and cosine with a specified accuracy, especially for large inputs. Algorithms for calculating sine may be balanced for such constraints as speed, accuracy, portability, or range of input values accepted. This can lead to different results for different algorithms, especially for special circumstances such as very large inputs, e.g. sin(1022). A common programming optimization, used especially in 3D graphics, is to pre-calculate a table of sine values, for example one value per degree, then for values in-between pick the closest pre-calculated value, or linearly interpolate between the 2 closest values to approximate it. This allows results to be looked up from a table rather than being calculated in real time. With modern CPU architectures this method may offer no advantage. The CORDIC algorithm is commonly used in scientific calculators. The sine and cosine functions, along with other trigonometric functions, are widely available across programming languages and platforms. In computing, they are typically abbreviated to sin and cos. Some CPU architectures have a built-in instruction for sine, including the Intel x87 FPUs since the 80387. In programming languages, sin and cos are typically either a built-in function or found within the language's standard math library. For example, the C standard library defines sine functions within math.h: sin(double), sinf(float), and sinl(long double). The parameter of each is a floating point value, specifying the angle in radians. Each function returns the same data type as it accepts. Many other trigonometric functions are also defined in math.h, such as for cosine, arc sine, and hyperbolic sine (sinh). Similarly, Python defines math.sin(x) and math.cos(x) within the built-in math module. Complex sine and cosine functions are also available within the cmath module, e.g. cmath.sin(z). CPython's math functions call the C math library, and use a double-precision floating-point format. === Turns based implementations === Some software libraries provide implementations of sine and cosine using the input angle in half-turns, a half-turn being an angle of 180 degrees or π {\\displaystyle \\pi } radians. Representing angles in turns or half-turns has accuracy advantages and efficiency advantages in some cases. These functions are called sinpi and cospi in MATLAB, OpenCL, R, Julia, CUDA, and ARM. For example, sinpi(x) would evaluate to sin ⁡ ( π x ) , {\\displaystyle \\sin(\\pi x),} where x is expressed in half-turns, and consequently the final input to the function, πx can be interpreted in radians by sin. The accuracy advantage stems from the ability to perfectly represent key angles like full-turn, half-turn, and quarter-turn losslessly in binary floating-point or fixed-point. In contrast, representing 2 π {\\displaystyle 2\\pi } , π {\\displaystyle \\pi } , and π 2 {\\textstyle {\\frac {\\pi }{2}}} in binary floating-point or binary scaled fixed-point always involves a loss of accuracy since irrational numbers cannot be represented with finitely many binary digits. Turns also have an accuracy advantage and efficiency advantage for computing modulo to one period. Computing modulo 1 turn or modulo 2 half-turns can be losslessly and efficiently computed in both floating-point and fixed-point. For example, computing modulo 1 or modulo 2 for a binary point scaled fixed-point value requires only a bit shift or bitwise AND operation. In contrast, computing modulo π 2 {\\textstyle {\\frac {\\pi }{2}}} involves inaccuracies in representing π 2 {\\textstyle {\\frac {\\pi }{2}}} . For applications involving angle sensors, the sensor typically provides angle measurements in a form directly compatible with turns or half-turns. For example, an angle sensor may count from 0 to 4096 over one complete revolution. If half-turns are used as the unit for angle, then the value provided by the sensor directly and losslessly maps to a fixed-point data type with 11 bits to the right of the binary point. In contrast, if radians are used as the unit for storing the angle, then the inaccuracies and cost of multiplying the raw sensor integer by an approximation to π 2048 {\\textstyle {\\frac {\\pi }{2048}}} would be incurred. == See also == == References == === Footnotes === === Citations === === Works cited === == External links == Media related to Sine function at Wikimedia Commons"
+  },
+  "chunks": [
+    {
+      "id": "sineandcosine_942c1204_c0000",
+      "article_id": "sineandcosine_942c1204",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 947,
+      "content": "In mathematics, sine and cosine are trigonometric functions of an angle. The sine and cosine of an acute angle are defined in the context of a right triangle: for the specified angle, its sine is the ratio of the length of the side opposite that angle to the length of the longest side of the triangle (the hypotenuse), and the cosine is the ratio of the length of the adjacent leg to that of the hypotenuse. For an angle θ {\\displaystyle \\theta } , the sine and cosine functions are denoted as sin ⁡ ( θ ) {\\displaystyle \\sin(\\theta )} and cos ⁡ ( θ ) {\\displaystyle \\cos(\\theta )} . The definitions of sine and cosine have been extended to any real value in terms of the lengths of certain line segments in a unit circle. More modern definitions express the sine and cosine as infinite series, or as the solutions of certain differential equations, allowing their extension to arbitrary positive and negative values and even to complex numbers.",
+      "char_count": 946,
+      "token_estimate": 236,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0001",
+      "article_id": "sineandcosine_942c1204",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 947,
+      "end_char": 1298,
+      "content": "The sine and cosine functions are commonly used to model periodic phenomena such as sound and light waves, the position and velocity of harmonic oscillators, sunlight intensity and day length, and average temperature variations throughout the year. They can be traced to the jyā and koṭi-jyā functions used in Indian astronomy during the Gupta period.",
+      "char_count": 351,
+      "token_estimate": 87,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0002",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Right-angled triangle definition ==",
+      "heading_path": "== = Right-angled triangle definition ==",
+      "start_char": 1369,
+      "end_char": 2206,
+      "content": "== = Right-angled triangle definition === To define the sine and cosine of an acute angle α {\\displaystyle \\alpha } , start with a right triangle that contains an angle of measure α {\\displaystyle \\alpha } ; in the accompanying figure, angle α {\\displaystyle \\alpha } in a right triangle A B C {\\displaystyle ABC} is the angle of interest. The three sides of the triangle are named as follows: The opposite side is the side opposite to the angle of interest; in this case, it is a {\\displaystyle a} . The hypotenuse is the side opposite the right angle; in this case, it is h {\\displaystyle h} . The hypotenuse is always the longest side of a right-angled triangle. The adjacent side is the remaining side; in this case, it is b {\\displaystyle b} . It forms a side of (and is adjacent to) both the angle of interest and the right angle.",
+      "char_count": 836,
+      "token_estimate": 209,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0003",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Right-angled triangle definition ==",
+      "heading_path": "== = Right-angled triangle definition ==",
+      "start_char": 2206,
+      "end_char": 3130,
+      "content": "Once such a triangle is chosen, the sine of the angle is equal to the length of the opposite side divided by the length of the hypotenuse, and the cosine of the angle is equal to the length of the adjacent side divided by the length of the hypotenuse: sin ⁡ ( α ) = opposite hypotenuse , cos ⁡ ( α ) = adjacent hypotenuse . {\\displaystyle \\sin(\\alpha )={\\frac {\\text{opposite}}{\\text{hypotenuse}}},\\qquad \\cos(\\alpha )={\\frac {\\text{adjacent}}{\\text{hypotenuse}}}.} The other trigonometric functions of the angle can be defined similarly; for example, the tangent is the ratio between the opposite and adjacent sides or equivalently the ratio between the sine and cosine functions. The reciprocal of sine is cosecant, which gives the ratio of the hypotenuse length to the length of the opposite side. Similarly, the reciprocal of cosine is secant, which gives the ratio of the hypotenuse length to that of the adjacent side.",
+      "char_count": 924,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0004",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Right-angled triangle definition ==",
+      "heading_path": "== = Right-angled triangle definition ==",
+      "start_char": 3131,
+      "end_char": 3910,
+      "content": "The cotangent function is the ratio between the adjacent and opposite sides, a reciprocal of a tangent function. These functions can be formulated as: tan ⁡ ( θ ) = sin ⁡ ( θ ) cos ⁡ ( θ ) = opposite adjacent , cot ⁡ ( θ ) = 1 tan ⁡ ( θ ) = adjacent opposite , csc ⁡ ( θ ) = 1 sin ⁡ ( θ ) = hypotenuse opposite , sec ⁡ ( θ ) = 1 cos ⁡ ( θ ) = hypotenuse adjacent . {\\displaystyle {\\begin{aligned}\\tan(\\theta )&={\\frac {\\sin(\\theta )}{\\cos(\\theta )}}={\\frac {\\text{opposite}}{\\text{adjacent}}},\\\\\\cot(\\theta )&={\\frac {1}{\\tan(\\theta )}}={\\frac {\\text{adjacent}}{\\text{opposite}}},\\\\\\csc(\\theta )&={\\frac {1}{\\sin(\\theta )}}={\\frac {\\text{hypotenuse}}{\\text{opposite}}},\\\\\\sec(\\theta )&={\\frac {1}{\\cos(\\theta )}}={\\frac {\\textrm {hypotenuse}}{\\textrm {adjacent}}}.\\end{aligned}}}",
+      "char_count": 779,
+      "token_estimate": 194,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0005",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Special angle measures ==",
+      "heading_path": "== = Special angle measures ==",
+      "start_char": 3901,
+      "end_char": 4791,
+      "content": "== = Special angle measures === As stated, the values sin ⁡ ( α ) {\\displaystyle \\sin(\\alpha )} and cos ⁡ ( α ) {\\displaystyle \\cos(\\alpha )} appear to depend on the choice of a right triangle containing an angle of measure α {\\displaystyle \\alpha } . However, this is not the case as all such triangles are similar, and so the ratios are the same for each of them. For example, each leg of the 45-45-90 right triangle is 1 unit, and its hypotenuse is 2 {\\displaystyle {\\sqrt {2}}} ; therefore, sin ⁡ 45 ∘ = cos ⁡ 45 ∘ = 2 2 {\\textstyle \\sin 45^{\\circ }=\\cos 45^{\\circ }={\\frac {\\sqrt {2}}{2}}} . The following table shows the special value of each input for both sine and cosine with the domain between 0 < α < π 2 {\\textstyle 0<\\alpha <{\\frac {\\pi }{2}}} . The input in this table provides various unit systems such as degree, radian, and so on. The angles other than those five can be obtained by using a calculator.",
+      "char_count": 919,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0006",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Laws ==",
+      "heading_path": "== = Laws ==",
+      "start_char": 4803,
+      "end_char": 5718,
+      "content": "== = Laws === The law of sines is useful for computing the lengths of the unknown sides in a triangle if two angles and one side are known. Given a triangle A B C {\\displaystyle ABC} with sides a {\\displaystyle a} , b {\\displaystyle b} , and c {\\displaystyle c} , and angles opposite those sides α {\\displaystyle \\alpha } , β {\\displaystyle \\beta } , and γ {\\displaystyle \\gamma } , the law states, sin ⁡ α a = sin ⁡ β b = sin ⁡ γ c . {\\displaystyle {\\frac {\\sin \\alpha }{a}}={\\frac {\\sin \\beta }{b}}={\\frac {\\sin \\gamma }{c}}.} This is equivalent to the equality of the first three expressions below: a sin ⁡ α = b sin ⁡ β = c sin ⁡ γ = 2 R , {\\displaystyle {\\frac {a}{\\sin \\alpha }}={\\frac {b}{\\sin \\beta }}={\\frac {c}{\\sin \\gamma }}=2R,} where R {\\displaystyle R} is the triangle's circumradius. The law of cosines is useful for computing the length of an unknown side if two other sides and an angle are known.",
+      "char_count": 914,
+      "token_estimate": 228,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0007",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Laws ==",
+      "heading_path": "== = Laws ==",
+      "start_char": 5718,
+      "end_char": 5996,
+      "content": "The law states, a 2 + b 2 − 2 a b cos ⁡ ( γ ) = c 2 {\\displaystyle a^{2}+b^{2}-2ab\\cos(\\gamma )=c^{2}} In the case where γ = π / 2 {\\displaystyle \\gamma =\\pi /2} from which cos ⁡ ( γ ) = 0 {\\displaystyle \\cos(\\gamma )=0} , the resulting equation becomes the Pythagorean theorem.",
+      "char_count": 278,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0008",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Vector definition ==",
+      "heading_path": "== = Vector definition ==",
+      "start_char": 6010,
+      "end_char": 6688,
+      "content": "== = Vector definition === The cross product and dot product are operations on two vectors in Euclidean vector space. The sine and cosine functions can be defined in terms of the cross product and dot product. If a {\\displaystyle \\mathbb {a} } and b {\\displaystyle \\mathbb {b} } are vectors, and θ {\\displaystyle \\theta } is the angle between a {\\displaystyle \\mathbb {a} } and b {\\displaystyle \\mathbb {b} } , then sine and cosine can be defined as: sin ⁡ ( θ ) = | a × b | | a | | b | , cos ⁡ ( θ ) = a ⋅ b | a | | b | . {\\displaystyle {\\begin{aligned}\\sin(\\theta )&={\\frac {|\\mathbb {a} \\times \\mathbb {b} |}{|a||b|}},\\\\\\cos(\\theta )&={\\frac {\\mathbb {a} \\cdot \\mathbb {b} }{|a||b|}}.\\end{aligned}}}",
+      "char_count": 702,
+      "token_estimate": 175,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0009",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Unit circle definition ==",
+      "heading_path": "== = Unit circle definition ==",
+      "start_char": 6746,
+      "end_char": 7476,
+      "content": "== = Unit circle definition === The sine and cosine functions may also be defined in a more general way by using unit circle, a circle of radius one centered at the origin ( 0 , 0 ) {\\displaystyle (0,0)} , formulated as the equation of x 2 + y 2 = 1 {\\displaystyle x^{2}+y^{2}=1} in the Cartesian coordinate system. Let a line through the origin intersect the unit circle, making an angle of θ {\\displaystyle \\theta } with the positive half of the x {\\displaystyle x} -axis. The x {\\displaystyle x} - and y {\\displaystyle y} -coordinates of this point of intersection are equal to cos ⁡ ( θ ) {\\displaystyle \\cos(\\theta )} and sin ⁡ ( θ ) {\\displaystyle \\sin(\\theta )} , respectively; that is, sin ⁡ ( θ ) = y , cos ⁡ ( θ ) = x .",
+      "char_count": 729,
+      "token_estimate": 182,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0010",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Unit circle definition ==",
+      "heading_path": "== = Unit circle definition ==",
+      "start_char": 7476,
+      "end_char": 8094,
+      "content": "{\\displaystyle \\sin(\\theta )=y,\\qquad \\cos(\\theta )=x.} This definition is consistent with the right-angled triangle definition of sine and cosine when 0 < θ < π 2 {\\textstyle 0<\\theta <{\\frac {\\pi }{2}}} because the length of the hypotenuse of the unit circle is always 1; mathematically speaking, the sine of an angle equals the opposite side of the triangle, which is simply the y {\\displaystyle y} -coordinate. A similar argument can be made for the cosine function to show that the cosine of an angle when 0 < θ < π 2 {\\textstyle 0<\\theta <{\\frac {\\pi }{2}}} , even under the new definition using the unit circle.",
+      "char_count": 618,
+      "token_estimate": 154,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0011",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Series and polynomials ==",
+      "heading_path": "== = Series and polynomials ==",
+      "start_char": 8095,
+      "end_char": 9044,
+      "content": "== = Series and polynomials === Both sine and cosine functions can be defined by using a Taylor series, a power series involving the higher-order derivatives. As mentioned in § Continuity and differentiation, the derivative of sine is cosine and that the derivative of cosine is the negative of sine. This means the successive derivatives of sin ⁡ ( x ) {\\displaystyle \\sin(x)} are cos ⁡ ( x ) {\\displaystyle \\cos(x)} , − sin ⁡ ( x ) {\\displaystyle -\\sin(x)} , − cos ⁡ ( x ) {\\displaystyle -\\cos(x)} , sin ⁡ ( x ) {\\displaystyle \\sin(x)} , continuing to repeat those four functions. The ( 4 n + k ) {\\displaystyle (4n+k)} -th derivative, evaluated at the point 0: sin ( 4 n + k ) ⁡ ( 0 ) = { 0 when k = 0 1 when k = 1 0 when k = 2 − 1 when k = 3 {\\displaystyle \\sin ^{(4n+k)}(0)={\\begin{cases}0&{\\text{when }}k=0\\\\1&{\\text{when }}k=1\\\\0&{\\text{when }}k=2\\\\-1&{\\text{when }}k=3\\end{cases}}} where the superscript represents repeated differentiation.",
+      "char_count": 948,
+      "token_estimate": 237,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0012",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Series and polynomials ==",
+      "heading_path": "== = Series and polynomials ==",
+      "start_char": 9044,
+      "end_char": 9781,
+      "content": "This implies the following Taylor series expansion at x = 0 {\\displaystyle x=0} . One can then use the theory of Taylor series to show that the following identities hold for all real numbers x {\\displaystyle x} —where x {\\displaystyle x} is the angle in radians. More generally, for all complex numbers: sin ⁡ ( x ) = x − x 3 3 ! + x 5 5 ! − x 7 7 ! + ⋯ = ∑ n = 0 ∞ ( − 1 ) n ( 2 n + 1 ) ! x 2 n + 1 {\\displaystyle {\\begin{aligned}\\sin(x)&=x-{\\frac {x^{3}}{3!}}+{\\frac {x^{5}}{5!}}-{\\frac {x^{7}}{7!}}+\\cdots \\\\&=\\sum _{n=0}^{\\infty }{\\frac {(-1)^{n}}{(2n+1)!}}x^{2n+1}\\end{aligned}}} Taking the derivative of each term gives the Taylor series for cosine: cos ⁡ ( x ) = 1 − x 2 2 ! + x 4 4 ! − x 6 6 ! + ⋯ = ∑ n = 0 ∞ ( − 1 ) n ( 2 n ) !",
+      "char_count": 737,
+      "token_estimate": 184,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0013",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Series and polynomials ==",
+      "heading_path": "== = Series and polynomials ==",
+      "start_char": 9782,
+      "end_char": 10585,
+      "content": "x 2 n {\\displaystyle {\\begin{aligned}\\cos(x)&=1-{\\frac {x^{2}}{2!}}+{\\frac {x^{4}}{4!}}-{\\frac {x^{6}}{6!}}+\\cdots \\\\&=\\sum _{n=0}^{\\infty }{\\frac {(-1)^{n}}{(2n)!}}x^{2n}\\end{aligned}}} Both sine and cosine functions with multiple angles may appear as their linear combination, resulting in a polynomial. Such a polynomial is known as the trigonometric polynomial. The trigonometric polynomial's ample applications may be acquired in its interpolation, and its extension of a periodic function known as the Fourier series. Let a n {\\displaystyle a_{n}} and b n {\\displaystyle b_{n}} be any coefficients, then the trigonometric polynomial of a degree N {\\displaystyle N} —denoted as T ( x ) {\\displaystyle T(x)} —is defined as: T ( x ) = a 0 + ∑ n = 1 N a n cos ⁡ ( n x ) + ∑ n = 1 N b n sin ⁡ ( n x ) .",
+      "char_count": 803,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0014",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Series and polynomials ==",
+      "heading_path": "== = Series and polynomials ==",
+      "start_char": 10586,
+      "end_char": 11456,
+      "content": "{\\displaystyle T(x)=a_{0}+\\sum _{n=1}^{N}a_{n}\\cos(nx)+\\sum _{n=1}^{N}b_{n}\\sin(nx).} The trigonometric series can be defined similarly analogous to the trigonometric polynomial, its infinite inversion. Let A n {\\displaystyle A_{n}} and B n {\\displaystyle B_{n}} be any coefficients, then the trigonometric series can be defined as: 1 2 A 0 + ∑ n = 1 ∞ A n cos ⁡ ( n x ) + B n sin ⁡ ( n x ) . {\\displaystyle {\\frac {1}{2}}A_{0}+\\sum _{n=1}^{\\infty }A_{n}\\cos(nx)+B_{n}\\sin(nx).} In the case of a Fourier series with a given integrable function f {\\displaystyle f} , the coefficients of a trigonometric series are: A n = 1 π ∫ 0 2 π f ( x ) cos ⁡ ( n x ) d x , B n = 1 π ∫ 0 2 π f ( x ) sin ⁡ ( n x ) d x . {\\displaystyle {\\begin{aligned}A_{n}&={\\frac {1}{\\pi }}\\int _{0}^{2\\pi }f(x)\\cos(nx)\\,dx,\\\\B_{n}&={\\frac {1}{\\pi }}\\int _{0}^{2\\pi }f(x)\\sin(nx)\\,dx.\\end{aligned}}}",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0015",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Complex exponential function definitions ==",
+      "heading_path": "== = Complex exponential function definitions ==",
+      "start_char": 11510,
+      "end_char": 12245,
+      "content": "== = Complex exponential function definitions === Both sine and cosine can be extended further via complex number, a set of numbers composed of both real and imaginary numbers. For real number θ {\\displaystyle \\theta } , the definition of both sine and cosine functions can be extended in a complex plane in terms of an exponential function as follows: sin ⁡ ( θ ) = e i θ − e − i θ 2 i , cos ⁡ ( θ ) = e i θ + e − i θ 2 , {\\displaystyle {\\begin{aligned}\\sin(\\theta )&={\\frac {e^{i\\theta }-e^{-i\\theta }}{2i}},\\\\\\cos(\\theta )&={\\frac {e^{i\\theta }+e^{-i\\theta }}{2}},\\end{aligned}}} Alternatively, both functions can be defined in terms of Euler's formula: e i θ = cos ⁡ ( θ ) + i sin ⁡ ( θ ) , e − i θ = cos ⁡ ( θ ) − i sin ⁡ ( θ ) .",
+      "char_count": 734,
+      "token_estimate": 183,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0016",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Complex exponential function definitions ==",
+      "heading_path": "== = Complex exponential function definitions ==",
+      "start_char": 12245,
+      "end_char": 13226,
+      "content": "{\\displaystyle {\\begin{aligned}e^{i\\theta }&=\\cos(\\theta )+i\\sin(\\theta ),\\\\e^{-i\\theta }&=\\cos(\\theta )-i\\sin(\\theta ).\\end{aligned}}} When plotted on the complex plane, the function e i x {\\displaystyle e^{ix}} for real values of x {\\displaystyle x} traces out the unit circle in the complex plane. Both sine and cosine functions may be simplified to the imaginary and real parts of e i θ {\\displaystyle e^{i\\theta }} as: sin ⁡ θ = Im ⁡ ( e i θ ) , cos ⁡ θ = Re ⁡ ( e i θ ) . {\\displaystyle {\\begin{aligned}\\sin \\theta &=\\operatorname {Im} (e^{i\\theta }),\\\\\\cos \\theta &=\\operatorname {Re} (e^{i\\theta }).\\end{aligned}}} When z = x + i y {\\displaystyle z=x+iy} for real values x {\\displaystyle x} and y {\\displaystyle y} , where i = − 1 {\\displaystyle i={\\sqrt {-1}}} , both sine and cosine functions can be expressed in terms of real sines, cosines, and hyperbolic functions as: sin ⁡ z = sin ⁡ x cosh ⁡ y + i cos ⁡ x sinh ⁡ y , cos ⁡ z = cos ⁡ x cosh ⁡ y − i sin ⁡ x sinh ⁡ y .",
+      "char_count": 981,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0017",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Polar coordinates ==",
+      "heading_path": "== = Polar coordinates ==",
+      "start_char": 13327,
+      "end_char": 14078,
+      "content": "== = Polar coordinates === Sine and cosine are used to connect the real and imaginary parts of a complex number with its polar coordinates ( r , θ ) {\\displaystyle (r,\\theta )} : z = r ( cos ⁡ ( θ ) + i sin ⁡ ( θ ) ) , {\\displaystyle z=r(\\cos(\\theta )+i\\sin(\\theta )),} and the real and imaginary parts are Re ⁡ ( z ) = r cos ⁡ ( θ ) , Im ⁡ ( z ) = r sin ⁡ ( θ ) , {\\displaystyle {\\begin{aligned}\\operatorname {Re} (z)&=r\\cos(\\theta ),\\\\\\operatorname {Im} (z)&=r\\sin(\\theta ),\\end{aligned}}} where r {\\displaystyle r} and θ {\\displaystyle \\theta } represent the magnitude and angle of the complex number z {\\displaystyle z} . For any real number θ {\\displaystyle \\theta } , Euler's formula in terms of polar coordinates is stated as z = r e i θ {\\textstyle z=re^{i\\theta }} .",
+      "char_count": 775,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0018",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Complex arguments ==",
+      "heading_path": "== = Complex arguments ==",
+      "start_char": 14103,
+      "end_char": 14826,
+      "content": "== = Complex arguments === Applying the series definition of the sine and cosine to a complex argument, z, gives: sin ⁡ ( z ) = ∑ n = 0 ∞ ( − 1 ) n ( 2 n + 1 ) ! z 2 n + 1 = e i z − e − i z 2 i = sinh ⁡ ( i z ) i = − i sinh ⁡ ( i z ) cos ⁡ ( z ) = ∑ n = 0 ∞ ( − 1 ) n ( 2 n ) ! z 2 n = e i z + e − i z 2 = cosh ⁡ ( i z ) {\\displaystyle {\\begin{aligned}\\sin(z)&=\\sum _{n=0}^{\\infty }{\\frac {(-1)^{n}}{(2n+1)!}}z^{2n+1}\\\\&={\\frac {e^{iz}-e^{-iz}}{2i}}\\\\&={\\frac {\\sinh \\left(iz\\right)}{i}}\\\\&=-i\\sinh \\left(iz\\right)\\\\\\cos(z)&=\\sum _{n=0}^{\\infty }{\\frac {(-1)^{n}}{(2n)!}}z^{2n}\\\\&={\\frac {e^{iz}+e^{-iz}}{2}}\\\\&=\\cosh(iz)\\\\\\end{aligned}}} where sinh and cosh are the hyperbolic sine and cosine. These are entire functions.",
+      "char_count": 722,
+      "token_estimate": 180,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0019",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Complex arguments ==",
+      "heading_path": "== = Complex arguments ==",
+      "start_char": 14826,
+      "end_char": 15429,
+      "content": "It is also sometimes useful to express the complex sine and cosine functions in terms of the real and imaginary parts of its argument: sin ⁡ ( x + i y ) = sin ⁡ ( x ) cos ⁡ ( i y ) + cos ⁡ ( x ) sin ⁡ ( i y ) = sin ⁡ ( x ) cosh ⁡ ( y ) + i cos ⁡ ( x ) sinh ⁡ ( y ) cos ⁡ ( x + i y ) = cos ⁡ ( x ) cos ⁡ ( i y ) − sin ⁡ ( x ) sin ⁡ ( i y ) = cos ⁡ ( x ) cosh ⁡ ( y ) − i sin ⁡ ( x ) sinh ⁡ ( y ) {\\displaystyle {\\begin{aligned}\\sin(x+iy)&=\\sin(x)\\cos(iy)+\\cos(x)\\sin(iy)\\\\&=\\sin(x)\\cosh(y)+i\\cos(x)\\sinh(y)\\\\\\cos(x+iy)&=\\cos(x)\\cos(iy)-\\sin(x)\\sin(iy)\\\\&=\\cos(x)\\cosh(y)-i\\sin(x)\\sinh(y)\\\\\\end{aligned}}}",
+      "char_count": 603,
+      "token_estimate": 150,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0020",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Etymology ==",
+      "heading_path": "== = Etymology ==",
+      "start_char": 15463,
+      "end_char": 16399,
+      "content": "== = Etymology === The word sine is derived, indirectly, from the Sanskrit word jyā 'bow-string' or more specifically its synonym jīvá (both adopted from Ancient Greek χορδή 'string; chord'), due to visual similarity between the arc of a circle with its corresponding chord and a bow with its string (see jyā, koti-jyā and utkrama-jyā; sine and chord are closely related in a circle of unit diameter, see Ptolemy’s Theorem). This was transliterated in Arabic as jība, which is meaningless in that language and written as jb (جب). Since Arabic is written without short vowels, jb was interpreted as the homograph jayb (جيب), which means 'bosom', 'pocket', or 'fold'. When the Arabic texts of Al-Battani and al-Khwārizmī were translated into Medieval Latin in the 12th century by Gerard of Cremona, he used the Latin equivalent sinus (which also means 'bay' or 'fold', and more specifically 'the hanging fold of a toga over the breast').",
+      "char_count": 935,
+      "token_estimate": 233,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0021",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Etymology ==",
+      "heading_path": "== = Etymology ==",
+      "start_char": 16399,
+      "end_char": 16856,
+      "content": "Gerard was probably not the first scholar to use this translation; Robert of Chester appears to have preceded him and there is evidence of even earlier usage. The English form sine was introduced in Thomas Fale's 1593 Horologiographia. The word cosine derives from an abbreviation of the Latin complementi sinus 'sine of the complementary angle' as cosinus in Edmund Gunter's Canon triangulorum (1620), which also includes a similar definition of cotangens.",
+      "char_count": 457,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0022",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = History ==",
+      "heading_path": "== = History ==",
+      "start_char": 16855,
+      "end_char": 17793,
+      "content": "== = History === While the early study of trigonometry can be traced to antiquity, the trigonometric functions as they are in use today were developed in the medieval period. The chord function was discovered by Hipparchus of Nicaea (180–125 BCE) and Ptolemy of Roman Egypt (90–165 CE). The sine and cosine functions are closely related to the jyā and koṭi-jyā functions used in Indian astronomy during the Gupta period (Aryabhatiya and Surya Siddhanta), via translation from Sanskrit to Arabic and then from Arabic to Latin. All six trigonometric functions in current use were known in Islamic mathematics by the 9th century, as was the law of sines, used in solving triangles. Al-Khwārizmī (c. 780–850) produced tables of sines, cosines and tangents. Muhammad ibn Jābir al-Harrānī al-Battānī (853–929) discovered the reciprocal functions of secant and cosecant, and produced the first table of cosecants for each degree from 1° to 90°.",
+      "char_count": 937,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0023",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = History ==",
+      "heading_path": "== = History ==",
+      "start_char": 17793,
+      "end_char": 18786,
+      "content": "In the early 17th-century, the French mathematician Albert Girard published the first use of the abbreviations sin, cos, and tan; these were further promulgated by Euler (see below). The Opus palatinum de triangulis of Georg Joachim Rheticus, a student of Copernicus, was probably the first in Europe to define trigonometric functions directly in terms of right triangles instead of circles, with tables for all six trigonometric functions; this work was finished by Rheticus' student Valentin Otho in 1596. In a paper published in 1682, Leibniz proved that sin x is not an algebraic function of x. Roger Cotes computed the derivative of sine in his Harmonia Mensurarum (1722). Leonhard Euler's Introductio in analysin infinitorum (1748) was mostly responsible for establishing the analytic treatment of trigonometric functions in Europe, also defining them as infinite series and presenting \"Euler's formula\", as well as the near-modern abbreviations sin., cos., tang., cot., sec., and cosec.",
+      "char_count": 993,
+      "token_estimate": 248,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0024",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== Software implementations ==",
+      "heading_path": "== Software implementations ==",
+      "start_char": 18802,
+      "end_char": 19764,
+      "content": "== Software implementations == There is no standard algorithm for calculating sine and cosine. IEEE 754, the most widely used standard for the specification of reliable floating-point computation, does not address calculating trigonometric functions such as sine. The reason is that no efficient algorithm is known for computing sine and cosine with a specified accuracy, especially for large inputs. Algorithms for calculating sine may be balanced for such constraints as speed, accuracy, portability, or range of input values accepted. This can lead to different results for different algorithms, especially for special circumstances such as very large inputs, e.g. sin(1022). A common programming optimization, used especially in 3D graphics, is to pre-calculate a table of sine values, for example one value per degree, then for values in-between pick the closest pre-calculated value, or linearly interpolate between the 2 closest values to approximate it.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0025",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== Software implementations ==",
+      "heading_path": "== Software implementations ==",
+      "start_char": 19764,
+      "end_char": 20686,
+      "content": "This allows results to be looked up from a table rather than being calculated in real time. With modern CPU architectures this method may offer no advantage. The CORDIC algorithm is commonly used in scientific calculators. The sine and cosine functions, along with other trigonometric functions, are widely available across programming languages and platforms. In computing, they are typically abbreviated to sin and cos. Some CPU architectures have a built-in instruction for sine, including the Intel x87 FPUs since the 80387. In programming languages, sin and cos are typically either a built-in function or found within the language's standard math library. For example, the C standard library defines sine functions within math.h: sin(double), sinf(float), and sinl(long double). The parameter of each is a floating point value, specifying the angle in radians. Each function returns the same data type as it accepts.",
+      "char_count": 922,
+      "token_estimate": 230,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0026",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== Software implementations ==",
+      "heading_path": "== Software implementations ==",
+      "start_char": 20687,
+      "end_char": 21091,
+      "content": "Many other trigonometric functions are also defined in math.h, such as for cosine, arc sine, and hyperbolic sine (sinh). Similarly, Python defines math.sin(x) and math.cos(x) within the built-in math module. Complex sine and cosine functions are also available within the cmath module, e.g. cmath.sin(z). CPython's math functions call the C math library, and use a double-precision floating-point format.",
+      "char_count": 404,
+      "token_estimate": 101,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0027",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Turns based implementations ==",
+      "heading_path": "== = Turns based implementations ==",
+      "start_char": 21097,
+      "end_char": 21898,
+      "content": "== = Turns based implementations === Some software libraries provide implementations of sine and cosine using the input angle in half-turns, a half-turn being an angle of 180 degrees or π {\\displaystyle \\pi } radians. Representing angles in turns or half-turns has accuracy advantages and efficiency advantages in some cases. These functions are called sinpi and cospi in MATLAB, OpenCL, R, Julia, CUDA, and ARM. For example, sinpi(x) would evaluate to sin ⁡ ( π x ) , {\\displaystyle \\sin(\\pi x),} where x is expressed in half-turns, and consequently the final input to the function, πx can be interpreted in radians by sin. The accuracy advantage stems from the ability to perfectly represent key angles like full-turn, half-turn, and quarter-turn losslessly in binary floating-point or fixed-point.",
+      "char_count": 800,
+      "token_estimate": 200,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0028",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Turns based implementations ==",
+      "heading_path": "== = Turns based implementations ==",
+      "start_char": 21898,
+      "end_char": 22841,
+      "content": "In contrast, representing 2 π {\\displaystyle 2\\pi } , π {\\displaystyle \\pi } , and π 2 {\\textstyle {\\frac {\\pi }{2}}} in binary floating-point or binary scaled fixed-point always involves a loss of accuracy since irrational numbers cannot be represented with finitely many binary digits. Turns also have an accuracy advantage and efficiency advantage for computing modulo to one period. Computing modulo 1 turn or modulo 2 half-turns can be losslessly and efficiently computed in both floating-point and fixed-point. For example, computing modulo 1 or modulo 2 for a binary point scaled fixed-point value requires only a bit shift or bitwise AND operation. In contrast, computing modulo π 2 {\\textstyle {\\frac {\\pi }{2}}} involves inaccuracies in representing π 2 {\\textstyle {\\frac {\\pi }{2}}} . For applications involving angle sensors, the sensor typically provides angle measurements in a form directly compatible with turns or half-turns.",
+      "char_count": 943,
+      "token_estimate": 235,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "sineandcosine_942c1204_c0029",
+      "article_id": "sineandcosine_942c1204",
+      "section": "== = Turns based implementations ==",
+      "heading_path": "== = Turns based implementations ==",
+      "start_char": 22842,
+      "end_char": 23332,
+      "content": "For example, an angle sensor may count from 0 to 4096 over one complete revolution. If half-turns are used as the unit for angle, then the value provided by the sensor directly and losslessly maps to a fixed-point data type with 11 bits to the right of the binary point. In contrast, if radians are used as the unit for storing the angle, then the inaccuracies and cost of multiplying the raw sensor integer by an approximation to π 2048 {\\textstyle {\\frac {\\pi }{2048}}} would be incurred.",
+      "char_count": 490,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 7,
+    "items": [
+      {
+        "question": "Which mathematician's 1748 work was largely responsible for establishing the analytic treatment of trigonometric functions in Europe?",
+        "answer": "Leonhard Euler's \"Introductio in analysin infinitorum\" (1748) was mostly responsible for establishing the analytic treatment of trigonometric functions in Europe.",
+        "related_chunk_ids": [
+          "sineandcosine_942c1204_c0023"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "sineandcosine_942c1204_c0023"
+        ]
+      },
+      {
+        "question": "What information is provided about == = Complex exponential function definitions ==?",
+        "answer": "The text provides information about == = Complex exponential function definitions == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "sineandcosine_942c1204_c0016"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "sineandcosine_942c1204_c0016"
+        ]
+      },
+      {
+        "question": "What information is provided about == Software implementations ==?",
+        "answer": "The text provides information about == Software implementations == as described in the relevant chunks.",
+        "related_chunk_ids": [
+          "sineandcosine_942c1204_c0024"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "sineandcosine_942c1204_c0024"
+        ]
+      },
+      {
+        "question": "How are the sine and cosine of an acute angle defined in a right triangle, using the terms 'opposite side', 'adjacent side', and 'hypotenuse'?",
+        "answer": "In a right triangle, the sine of a specified acute angle is the ratio of the length of the opposite side to the length of the hypotenuse. The cosine of the angle is the ratio of the length of the adjacent side to the length of the hypotenuse. The hypotenuse is the side opposite the right angle and is always the longest side of the triangle.",
+        "related_chunk_ids": [
+          "sineandcosine_942c1204_c0000",
+          "sineandcosine_942c1204_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "sineandcosine_942c1204_c0002",
+          "sineandcosine_942c1204_c0000"
+        ]
+      },
+      {
+        "question": "What is the value of the tangent of a 45-degree angle, and how is this value derived from its relationship with sine and cosine?",
+        "answer": "The tangent of a 45-degree angle is 1. This is calculated using the definition of tangent as the ratio of sine to cosine. For a 45-degree angle, both the sine and cosine are equal to √2/2. Therefore, tan(45°) = sin(45°)/cos(45°) = (√2/2) / (√2/2) = 1.",
+        "related_chunk_ids": [
+          "sineandcosine_942c1204_c0003",
+          "sineandcosine_942c1204_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "sineandcosine_942c1204_c0005",
+          "sineandcosine_942c1204_c0003"
+        ]
+      },
+      {
+        "question": "What are the two different mathematical contexts described for defining or applying the sine and cosine functions?",
+        "answer": "The sine and cosine functions are described in two different contexts. First, in trigonometry, they are used in the Law of Sines and the Law of Cosines to compute unknown side lengths and angles in a triangle. Second, in Euclidean vector space, they are defined in terms of the dot product and cross product of two vectors to describe the angle between them.",
+        "related_chunk_ids": [
+          "sineandcosine_942c1204_c0006",
+          "sineandcosine_942c1204_c0007",
+          "sineandcosine_942c1204_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "sineandcosine_942c1204_c0008",
+          "sineandcosine_942c1204_c0006",
+          "sineandcosine_942c1204_c0007"
+        ]
+      },
+      {
+        "question": "What are the sine and cosine functions, and for what types of phenomena are they commonly used as models?",
+        "answer": "Sine and cosine are trigonometric functions of an angle, initially defined within a right triangle. The sine is the ratio of the length of the side opposite the angle to the hypotenuse, and the cosine is the ratio of the adjacent leg to the hypotenuse. These definitions have been extended to all real and even complex numbers. They are commonly used to model periodic phenomena such as sound and light waves, the position and velocity of harmonic oscillators, and yearly variations in sunlight intensity, day length, and average temperature.",
+        "related_chunk_ids": [
+          "sineandcosine_942c1204_c0000",
+          "sineandcosine_942c1204_c0001"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "sineandcosine_942c1204_c0001",
+          "sineandcosine_942c1204_c0000"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:48.063Z",
+    "content_format": "markdown",
+    "total_chunks": 30,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

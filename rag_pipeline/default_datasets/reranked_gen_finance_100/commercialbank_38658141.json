@@ -1,0 +1,186 @@
+{
+  "article": {
+    "id": "commercialbank_38658141",
+    "title": "Commercial bank",
+    "url": "https://en.wikipedia.org/wiki/Commercial_bank",
+    "lang": "en",
+    "created_at": "2025-07-30T14:06:57.743772",
+    "content": "---\nid: commercialbank_38658141\nurl: https://en.wikipedia.org/wiki/Commercial_bank\ntitle: Commercial bank\nlang: en\ncreated_at: '2025-07-30T14:01:41.140216'\nchecksum: 893af9a5cb0c95f78ffc1fcc746143a02cc80033d80f6df640ff3da53635c873\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 794\n  char_count: 5178\n  num_chunks: 8\n  original_chunks: 12\n  filtered_out: 4\n  num_sections: 0\n---\nA commercial bank is a financial institution that accepts deposits from the public and gives loans to its clients for the purposes of consumption and investment to make a profit. It can also refer to a bank or a division of a larger bank that deals with wholesale banking to corporations or large or middle-sized businesses, to differentiate from retail banks and investment banks. Commercial banks include private sector banks and public sector banks. However, central banks function differently from commercial banks, despite a common misconception known as the \"bank analogy\". Unlike commercial banks, central banks are not primarily focused on generating profits and cannot become insolvent in the same way as commercial banks in a fiat currency system. == History == The name bank derives from the Italian word banco 'desk/bench', used during the Italian Renaissance era by Florentine bankers, who used to carry out their transactions on a desk covered by a green tablecloth. However, traces of banking activity can be found even in ancient times. In the United States, the term commercial bank was often used to distinguish it from an investment bank due to differences in bank regulation. After the Great Depression, through the Glass–Steagall Act, the U.S. Congress required that commercial banks only engage in banking activities, whereas investment banks were limited to capital market activities. This separation was mostly repealed in 1999 by the Gramm–Leach–Bliley Act. == Role == The general role of commercial banks is to provide financial services to the general public and business, ensuring economic and social stability and sustainable growth of the economy. In this respect, credit creation is the most significant function of commercial banks. While sanctioning a loan to a customer, they do not provide cash to the borrower. Instead, they open a deposit account from which the borrower can withdraw. In other words, while sanctioning a loan, they automatically create deposits === Primary functions === Commercial banks accept various types of deposits from the public especially from its clients, including saving account deposits and fixed deposits. These deposits are returned whenever the customer demands it after a certain time period. Commercial banks provide loans and advances of various forms, Such as [overdraft] facility, cash credit, bill discounting, money call, etc. They also give demand and term loans to all types of clients against proper security. They also act as trustees for wills of their customers etc. The function of credit creation is generated on the basis of credit and payment intermediary. Commercial banks use the deposits they absorb to make loans. On the basis of check circulation and transfer settlement, the loans are converted into derivative deposits. To a certain extent, the derivative funds of are increased by interval times the original deposits which greatly improves the driving force of commercial banks to serve the economic development. Regulations In most countries, commercial banks are heavily regulated and this is typically done by a country's central bank. They will impose a number of conditions on the banks that they regulate such as keeping bank reserves and to maintain minimum capital requirements. They also require some capital == Services by product == Commercial banks generally provide a number of services to its clients; these can be split into core banking services such as deposits, loans, and other services which are related to payment systems and other financial services. === Core products and services === Accepting money on various types of Deposit accounts Lending money by overdraft, and loans both secured and unsecured. Providing transaction accounts Cash management Treasury management Private equity financing Issuing Bank drafts and Bank cheques Processing payments via telegraphic transfer, EFTPOS, internet banking, or other payment methods. === Other functions === Along with core products and services, commercial banks perform several secondary functions. The secondary functions of commercial banks can be divided into agency functions and utility functions. Agency functions include: To collect and clear cheques, dividends, and interest warrant To make payments of rent, insurance premium To deal in foreign exchange transactions To purchase and sell securities To act as the trustee, attorney, correspondent and executor To accept tax proceeds and tax returns Utility functions include: To provide safe deposit boxes to customers To provide money transfer facility To issue traveler's cheques To act as referees To accept various bills for payment: phone bills, gas bills, water bills To provide various cards such as credit cards and debit cards == See also == Assets and Liabilities of Commercial Banks in the United States Financial risk management § Commercial and retail banking Glass–Steagall legislation Investment banking Mortgage constant Retail bank Universal bank == References == == Further reading == == External links == \"Commercial Banks Directory and Guidelines\". Commercial Banks. Archived from the original on 2014-01-08. Retrieved 19 July 2025."
+  },
+  "chunks": [
+    {
+      "id": "commercialbank_38658141_c0000",
+      "article_id": "commercialbank_38658141",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 758,
+      "content": "A commercial bank is a financial institution that accepts deposits from the public and gives loans to its clients for the purposes of consumption and investment to make a profit. It can also refer to a bank or a division of a larger bank that deals with wholesale banking to corporations or large or middle-sized businesses, to differentiate from retail banks and investment banks. Commercial banks include private sector banks and public sector banks. However, central banks function differently from commercial banks, despite a common misconception known as the \"bank analogy\". Unlike commercial banks, central banks are not primarily focused on generating profits and cannot become insolvent in the same way as commercial banks in a fiat currency system.",
+      "char_count": 757,
+      "token_estimate": 189,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commercialbank_38658141_c0001",
+      "article_id": "commercialbank_38658141",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 771,
+      "end_char": 1483,
+      "content": "== History == The name bank derives from the Italian word banco 'desk/bench', used during the Italian Renaissance era by Florentine bankers, who used to carry out their transactions on a desk covered by a green tablecloth. However, traces of banking activity can be found even in ancient times. In the United States, the term commercial bank was often used to distinguish it from an investment bank due to differences in bank regulation. After the Great Depression, through the Glass–Steagall Act, the U.S. Congress required that commercial banks only engage in banking activities, whereas investment banks were limited to capital market activities. This separation was mostly repealed in 1999 by the Gramm–Leach–Bliley Act.",
+      "char_count": 724,
+      "token_estimate": 181,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commercialbank_38658141_c0002",
+      "article_id": "commercialbank_38658141",
+      "section": "== Role ==",
+      "heading_path": "== Role ==",
+      "start_char": 1493,
+      "end_char": 1999,
+      "content": "== Role == The general role of commercial banks is to provide financial services to the general public and business, ensuring economic and social stability and sustainable growth of the economy. In this respect, credit creation is the most significant function of commercial banks. While sanctioning a loan to a customer, they do not provide cash to the borrower. Instead, they open a deposit account from which the borrower can withdraw. In other words, while sanctioning a loan, they automatically create deposits",
+      "char_count": 515,
+      "token_estimate": 128,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commercialbank_38658141_c0003",
+      "article_id": "commercialbank_38658141",
+      "section": "== = Primary functions ==",
+      "heading_path": "== = Primary functions ==",
+      "start_char": 2024,
+      "end_char": 2840,
+      "content": "== = Primary functions === Commercial banks accept various types of deposits from the public especially from its clients, including saving account deposits and fixed deposits. These deposits are returned whenever the customer demands it after a certain time period. Commercial banks provide loans and advances of various forms, Such as [overdraft] facility, cash credit, bill discounting, money call, etc. They also give demand and term loans to all types of clients against proper security. They also act as trustees for wills of their customers etc. The function of credit creation is generated on the basis of credit and payment intermediary. Commercial banks use the deposits they absorb to make loans. On the basis of check circulation and transfer settlement, the loans are converted into derivative deposits.",
+      "char_count": 815,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commercialbank_38658141_c0004",
+      "article_id": "commercialbank_38658141",
+      "section": "== = Primary functions ==",
+      "heading_path": "== = Primary functions ==",
+      "start_char": 2840,
+      "end_char": 3339,
+      "content": "To a certain extent, the derivative funds of are increased by interval times the original deposits which greatly improves the driving force of commercial banks to serve the economic development. Regulations In most countries, commercial banks are heavily regulated and this is typically done by a country's central bank. They will impose a number of conditions on the banks that they regulate such as keeping bank reserves and to maintain minimum capital requirements. They also require some capital",
+      "char_count": 499,
+      "token_estimate": 124,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commercialbank_38658141_c0005",
+      "article_id": "commercialbank_38658141",
+      "section": "== Services by product ==",
+      "heading_path": "== Services by product ==",
+      "start_char": 3340,
+      "end_char": 3570,
+      "content": "== Services by product == Commercial banks generally provide a number of services to its clients; these can be split into core banking services such as deposits, loans, and other services which are related to payment systems and other financial services.",
+      "char_count": 254,
+      "token_estimate": 63,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commercialbank_38658141_c0006",
+      "article_id": "commercialbank_38658141",
+      "section": "== = Core products and services ==",
+      "heading_path": "== = Core products and services ==",
+      "start_char": 3604,
+      "end_char": 3952,
+      "content": "== = Core products and services === Accepting money on various types of Deposit accounts Lending money by overdraft, and loans both secured and unsecured. Providing transaction accounts Cash management Treasury management Private equity financing Issuing Bank drafts and Bank cheques Processing payments via telegraphic transfer, EFTPOS, internet banking, or other payment methods.",
+      "char_count": 381,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "commercialbank_38658141_c0007",
+      "article_id": "commercialbank_38658141",
+      "section": "== = Other functions ==",
+      "heading_path": "== = Other functions ==",
+      "start_char": 3975,
+      "end_char": 4765,
+      "content": "== = Other functions === Along with core products and services, commercial banks perform several secondary functions. The secondary functions of commercial banks can be divided into agency functions and utility functions. Agency functions include: To collect and clear cheques, dividends, and interest warrant To make payments of rent, insurance premium To deal in foreign exchange transactions To purchase and sell securities To act as the trustee, attorney, correspondent and executor To accept tax proceeds and tax returns Utility functions include: To provide safe deposit boxes to customers To provide money transfer facility To issue traveler's cheques To act as referees To accept various bills for payment: phone bills, gas bills, water bills To provide various cards such as credit cards and debit cards",
+      "char_count": 812,
+      "token_estimate": 203,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 5,
+    "items": [
+      {
+        "question": "How do commercial banks facilitate the function of credit creation?",
+        "answer": "Commercial banks create credit by using the deposits they absorb from the public to make loans. Based on check circulation and transfer settlement, these loans are then converted into derivative deposits.",
+        "related_chunk_ids": [
+          "commercialbank_38658141_c0003"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "commercialbank_38658141_c0003"
+        ]
+      },
+      {
+        "question": "What are the two categories that the secondary functions of commercial banks are divided into?",
+        "answer": "The secondary functions of commercial banks are divided into agency functions and utility functions.",
+        "related_chunk_ids": [
+          "commercialbank_38658141_c0007"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "commercialbank_38658141_c0007"
+        ]
+      },
+      {
+        "question": "What are the key differences between a commercial bank and a central bank?",
+        "answer": "A commercial bank's primary purpose is to make a profit and it can become insolvent. In contrast, a central bank is not primarily focused on generating profits and cannot become insolvent in the same way as commercial banks within a fiat currency system.",
+        "related_chunk_ids": [
+          "commercialbank_38658141_c0000"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "commercialbank_38658141_c0000"
+        ]
+      },
+      {
+        "question": "How was the distinction between commercial and investment banks legally enforced in the United States, and what later changed this regulation?",
+        "answer": "In the United States, the distinction between commercial and investment banks was legally enforced by the Glass–Steagall Act, passed after the Great Depression. This act mandated that commercial banks could only engage in banking activities, while investment banks were restricted to capital market activities. This legal separation was largely repealed in 1999 by the Gramm–Leach–Bliley Act.",
+        "related_chunk_ids": [
+          "commercialbank_38658141_c0000",
+          "commercialbank_38658141_c0001"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "commercialbank_38658141_c0001",
+          "commercialbank_38658141_c0000"
+        ]
+      },
+      {
+        "question": "How do commercial banks utilize customer deposits, and what regulatory constraints are placed on this activity?",
+        "answer": "Commercial banks use the deposits they accept from the public, such as savings and fixed deposits, to provide various forms of loans and advances. This activity is heavily regulated, typically by a country's central bank, which imposes conditions like requiring banks to keep reserves and maintain minimum capital requirements.",
+        "related_chunk_ids": [
+          "commercialbank_38658141_c0003",
+          "commercialbank_38658141_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "commercialbank_38658141_c0003",
+          "commercialbank_38658141_c0004"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:26.475Z",
+    "content_format": "markdown",
+    "total_chunks": 8,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

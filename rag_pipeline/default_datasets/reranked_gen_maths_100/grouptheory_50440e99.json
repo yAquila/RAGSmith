@@ -1,0 +1,634 @@
+{
+  "article": {
+    "id": "grouptheory_50440e99",
+    "title": "Group theory",
+    "url": "https://en.wikipedia.org/wiki/Group_theory",
+    "lang": "en",
+    "created_at": "2025-07-31T06:30:54.022704",
+    "content": "---\nid: grouptheory_50440e99\nurl: https://en.wikipedia.org/wiki/Group_theory\ntitle: Group theory\nlang: en\ncreated_at: '2025-07-31T06:25:36.871854'\nchecksum: fb0c98d776782c3c417499900862c5abf6300c125a25e3e89edf9e8cf671282e\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 4889\n  char_count: 30942\n  num_chunks: 37\n  original_chunks: 47\n  filtered_out: 10\n  num_sections: 0\n---\nIn abstract algebra, group theory studies the algebraic structures known as groups. The concept of a group is central to abstract algebra: other well-known algebraic structures, such as rings, fields, and vector spaces, can all be seen as groups endowed with additional operations and axioms. Groups recur throughout mathematics, and the methods of group theory have influenced many parts of algebra. Linear algebraic groups and Lie groups are two branches of group theory that have experienced advances and have become subject areas in their own right. Various physical systems, such as crystals and the hydrogen atom, and three of the four known fundamental forces in the universe, may be modelled by symmetry groups. Thus group theory and the closely related representation theory have many important applications in physics, chemistry, and materials science. Group theory is also central to public key cryptography. The early history of group theory dates from the 19th century. One of the most important mathematical achievements of the 20th century was the collaborative effort, taking up more than 10,000 journal pages and mostly published between 1960 and 2004, that culminated in a complete classification of finite simple groups. == History == Group theory has three main historical sources: number theory, the theory of algebraic equations, and geometry. The number-theoretic strand was begun by Leonhard Euler, and developed by Gauss's work on modular arithmetic and additive and multiplicative groups related to quadratic fields. Early results about permutation groups were obtained by Lagrange, Ruffini, and Abel in their quest for general solutions of polynomial equations of high degree. Évariste Galois coined the term \"group\" and established a connection, now known as Galois theory, between the nascent theory of groups and field theory. In geometry, groups first became important in projective geometry and, later, non-Euclidean geometry. Felix Klein's Erlangen program proclaimed group theory to be the organizing principle of geometry. Galois, in the 1830s, was the first to employ groups to determine the solvability of polynomial equations. Arthur Cayley and Augustin Louis Cauchy pushed these investigations further by creating the theory of permutation groups. The second historical source for groups stems from geometrical situations. In an attempt to come to grips with possible geometries (such as euclidean, hyperbolic or projective geometry) using group theory, Felix Klein initiated the Erlangen programme. Sophus Lie, in 1884, started using groups (now called Lie groups) attached to analytic problems. Thirdly, groups were, at first implicitly and later explicitly, used in algebraic number theory. The different scope of these early sources resulted in different notions of groups. The theory of groups was unified starting around 1880. Since then, the impact of group theory has been ever growing, giving rise to the birth of abstract algebra in the early 20th century, representation theory, and many more influential spin-off domains. The classification of finite simple groups is a vast body of work from the mid 20th century, classifying all the finite simple groups. == Main classes of groups == The range of groups being considered has gradually expanded from finite permutation groups and special examples of matrix groups to abstract groups that may be specified through a presentation by generators and relations. === Permutation groups === The first class of groups to undergo a systematic study was permutation groups. Given any set X and a collection G of bijections of X into itself (known as permutations) that is closed under compositions and inverses, G is a group acting on X. If X consists of n elements and G consists of all permutations, G is the symmetric group Sn; in general, any permutation group G is a subgroup of the symmetric group of X. An early construction due to Cayley exhibited any group as a permutation group, acting on itself (X = G) by means of the left regular representation. In many cases, the structure of a permutation group can be studied using the properties of its action on the corresponding set. For example, in this way one proves that for n ≥ 5, the alternating group An is simple, i.e. does not admit any proper normal subgroups. This fact plays a key role in the impossibility of solving a general algebraic equation of degree n ≥ 5 in radicals. === Matrix groups === The next important class of groups is given by matrix groups, or linear groups. Here G is a set consisting of invertible matrices of given order n over a field K that is closed under the products and inverses. Such a group acts on the n-dimensional vector space Kn by linear transformations. This action makes matrix groups conceptually similar to permutation groups, and the geometry of the action may be usefully exploited to establish properties of the group G. === Transformation groups === Permutation groups and matrix groups are special cases of transformation groups: groups that act on a certain space X preserving its inherent structure. In the case of permutation groups, X is a set; for matrix groups, X is a vector space. The concept of a transformation group is closely related with the concept of a symmetry group: transformation groups frequently consist of all transformations that preserve a certain structure. The theory of transformation groups forms a bridge connecting group theory with differential geometry. A long line of research, originating with Lie and Klein, considers group actions on manifolds by homeomorphisms or diffeomorphisms. The groups themselves may be discrete or continuous. === Abstract groups === Most groups considered in the first stage of the development of group theory were \"concrete\", having been realized through numbers, permutations, or matrices. It was not until the late nineteenth century that the idea of an abstract group began to take hold, where \"abstract\" means that the nature of the elements are ignored in such a way that two isomorphic groups are considered as the same group. A typical way of specifying an abstract group is through a presentation by generators and relations, G = ⟨ S | R ⟩ . {\\displaystyle G=\\langle S|R\\rangle .} A significant source of abstract groups is given by the construction of a factor group, or quotient group, G/H, of a group G by a normal subgroup H. Class groups of algebraic number fields were among the earliest examples of factor groups, of much interest in number theory. If a group G is a permutation group on a set X, the factor group G/H is no longer acting on X; but the idea of an abstract group permits one not to worry about this discrepancy. The change of perspective from concrete to abstract groups makes it natural to consider properties of groups that are independent of a particular realization, or in modern language, invariant under isomorphism, as well as the classes of group with a given such property: finite groups, periodic groups, simple groups, solvable groups, and so on. Rather than exploring properties of an individual group, one seeks to establish results that apply to a whole class of groups. The new paradigm was of paramount importance for the development of mathematics: it foreshadowed the creation of abstract algebra in the works of Hilbert, Emil Artin, Emmy Noether, and mathematicians of their school. === Groups with additional structure === An important elaboration of the concept of a group occurs if G is endowed with additional structure, notably, of a topological space, differentiable manifold, or algebraic variety. If the multiplication and inversion of the group are compatible with this structure, that is, they are continuous, smooth or regular (in the sense of algebraic geometry) maps, then G is a topological group, a Lie group, or an algebraic group. The presence of extra structure relates these types of groups with other mathematical disciplines and means that more tools are available in their study. Topological groups form a natural domain for abstract harmonic analysis, whereas Lie groups (frequently realized as transformation groups) are the mainstays of differential geometry and unitary representation theory. Certain classification questions that cannot be solved in general can be approached and resolved for special subclasses of groups. Thus, compact connected Lie groups have been completely classified. There is a fruitful relation between infinite abstract groups and topological groups: whenever a group Γ can be realized as a lattice in a topological group G, the geometry and analysis pertaining to G yield important results about Γ. A comparatively recent trend in the theory of finite groups exploits their connections with compact topological groups (profinite groups): for example, a single p-adic analytic group G has a family of quotients which are finite p-groups of various orders, and properties of G translate into the properties of its finite quotients. == Branches of group theory == === Finite group theory === During the twentieth century, mathematicians investigated some aspects of the theory of finite groups in great depth, especially the local theory of finite groups and the theory of solvable and nilpotent groups. As a consequence, the complete classification of finite simple groups was achieved, meaning that all those simple groups from which all finite groups can be built are now known. During the second half of the twentieth century, mathematicians such as Chevalley and Steinberg also increased our understanding of finite analogs of classical groups, and other related groups. One such family of groups is the family of general linear groups over finite fields. Finite groups often occur when considering symmetry of mathematical or physical objects, when those objects admit just a finite number of structure-preserving transformations. The theory of Lie groups, which may be viewed as dealing with \"continuous symmetry\", is strongly influenced by the associated Weyl groups. These are finite groups generated by reflections which act on a finite-dimensional Euclidean space. The properties of finite groups can thus play a role in subjects such as theoretical physics and chemistry. === Representation of groups === Saying that a group G acts on a set X means that every element of G defines a bijective map on the set X in a way compatible with the group structure. When X has more structure, it is useful to restrict this notion further: a representation of G on a vector space V is a group homomorphism: ρ : G → GL ⁡ ( V ) , {\\displaystyle \\rho :G\\to \\operatorname {GL} (V),} where GL(V) consists of the invertible linear transformations of V. In other words, to every group element g is assigned an automorphism ρ(g) such that ρ(g) ∘ ρ(h) = ρ(gh) for any h in G. This definition can be understood in two directions, both of which give rise to whole new domains of mathematics. On the one hand, it may yield new information about the group G: often, the group operation in G is abstractly given, but via ρ, it corresponds to the multiplication of matrices, which is very explicit. On the other hand, given a well-understood group acting on a complicated object, this simplifies the study of the object in question. For example, if G is finite, it is known that V above decomposes into irreducible parts (see Maschke's theorem). These parts, in turn, are much more easily manageable than the whole V (via Schur's lemma). Given a group G, representation theory then asks what representations of G exist. There are several settings, and the employed methods and obtained results are rather different in every case: representation theory of finite groups and representations of Lie groups are two main subdomains of the theory. The totality of representations is governed by the group's characters. For example, Fourier polynomials can be interpreted as the characters of U(1), the group of complex numbers of absolute value 1, acting on the L2-space of periodic functions. === Lie theory === A Lie group is a group that is also a differentiable manifold, with the property that the group operations are compatible with the smooth structure. Lie groups are named after Sophus Lie, who laid the foundations of the theory of continuous transformation groups. The term groupes de Lie first appeared in French in 1893 in the thesis of Lie's student Arthur Tresse, page 3. Lie groups represent the best-developed theory of continuous symmetry of mathematical objects and structures, which makes them indispensable tools for many parts of contemporary mathematics, as well as for modern theoretical physics. They provide a natural framework for analysing the continuous symmetries of differential equations (differential Galois theory), in much the same way as permutation groups are used in Galois theory for analysing the discrete symmetries of algebraic equations. An extension of Galois theory to the case of continuous symmetry groups was one of Lie's principal motivations. === Combinatorial and geometric group theory === Groups can be described in different ways. Finite groups can be described by writing down the group table consisting of all possible multiplications g • h. A more compact way of defining a group is by generators and relations, also called the presentation of a group. Given any set F of generators { g i } i ∈ I {\\displaystyle \\{g_{i}\\}_{i\\in I}} , the free group generated by F surjects onto the group G. The kernel of this map is called the subgroup of relations, generated by some subset D. The presentation is usually denoted by ⟨ F ∣ D ⟩ . {\\displaystyle \\langle F\\mid D\\rangle .} For example, the group presentation ⟨ a , b ∣ a b a − 1 b − 1 ⟩ {\\displaystyle \\langle a,b\\mid aba^{-1}b^{-1}\\rangle } describes a group which is isomorphic to Z × Z . {\\displaystyle \\mathbb {Z} \\times \\mathbb {Z} .} A string consisting of generator symbols and their inverses is called a word. Combinatorial group theory studies groups from the perspective of generators and relations. It is particularly useful where finiteness assumptions are satisfied, for example finitely generated groups, or finitely presented groups (i.e. in addition the relations are finite). The area makes use of the connection of graphs via their fundamental groups. A fundamental theorem of this area is that every subgroup of a free group is free. There are several natural questions arising from giving a group by its presentation. The word problem asks whether two words are effectively the same group element. By relating the problem to Turing machines, one can show that there is in general no algorithm solving this task. Another, generally harder, algorithmically insoluble problem is the group isomorphism problem, which asks whether two groups given by different presentations are actually isomorphic. For example, the group with presentation ⟨ x , y ∣ x y x y x = e ⟩ , {\\displaystyle \\langle x,y\\mid xyxyx=e\\rangle ,} is isomorphic to the additive group Z of integers, although this may not be immediately apparent. (Writing z = x y {\\displaystyle z=xy} , one has G ≅ ⟨ z , y ∣ z 3 = y ⟩ ≅ ⟨ z ⟩ . {\\displaystyle G\\cong \\langle z,y\\mid z^{3}=y\\rangle \\cong \\langle z\\rangle .} ) Geometric group theory attacks these problems from a geometric viewpoint, either by viewing groups as geometric objects, or by finding suitable geometric objects a group acts on. The first idea is made precise by means of the Cayley graph, whose vertices correspond to group elements and edges correspond to right multiplication in the group. Given two elements, one constructs the word metric given by the length of the minimal path between the elements. A theorem of Milnor and Svarc then says that given a group G acting in a reasonable manner on a metric space X, for example a compact manifold, then G is quasi-isometric (i.e. looks similar from a distance) to the space X. == Connection of groups and symmetry == Given a structured object X of any sort, a symmetry is a mapping of the object onto itself which preserves the structure. This occurs in many cases, for example If X is a set with no additional structure, a symmetry is a bijective map from the set to itself, giving rise to permutation groups. If the object X is a set of points in the plane with its metric structure or any other metric space, a symmetry is a bijection of the set to itself which preserves the distance between each pair of points (an isometry). The corresponding group is called isometry group of X. If instead angles are preserved, one speaks of conformal maps. Conformal maps give rise to Kleinian groups, for example. Symmetries are not restricted to geometrical objects, but include algebraic objects as well. For instance, the equation x 2 − 3 = 0 {\\displaystyle x^{2}-3=0} has the two solutions 3 {\\displaystyle {\\sqrt {3}}} and − 3 {\\displaystyle -{\\sqrt {3}}} . In this case, the group that exchanges the two roots is the Galois group belonging to the equation. Every polynomial equation in one variable has a Galois group, that is a certain permutation group on its roots. The axioms of a group formalize the essential aspects of symmetry. Symmetries form a group: they are closed because if you take a symmetry of an object, and then apply another symmetry, the result will still be a symmetry. The identity keeping the object fixed is always a symmetry of an object. Existence of inverses is guaranteed by undoing the symmetry and the associativity comes from the fact that symmetries are functions on a space, and composition of functions is associative. Frucht's theorem says that every group is the symmetry group of some graph. So every abstract group is actually the symmetries of some explicit object. The saying of \"preserving the structure\" of an object can be made precise by working in a category. Maps preserving the structure are then the morphisms, and the symmetry group is the automorphism group of the object in question. == Applications of group theory == Applications of group theory abound. Almost all structures in abstract algebra are special cases of groups. Rings, for example, can be viewed as abelian groups (corresponding to addition) together with a second operation (corresponding to multiplication). Therefore, group theoretic arguments underlie large parts of the theory of those entities. === Galois theory === Galois theory uses groups to describe the symmetries of the roots of a polynomial (or more precisely the automorphisms of the algebras generated by these roots). The fundamental theorem of Galois theory provides a link between algebraic field extensions and group theory. It gives an effective criterion for the solvability of polynomial equations in terms of the solvability of the corresponding Galois group. For example, S5, the symmetric group in 5 elements, is not solvable which implies that the general quintic equation cannot be solved by radicals in the way equations of lower degree can. The theory, being one of the historical roots of group theory, is still fruitfully applied to yield new results in areas such as class field theory. === Algebraic topology === Algebraic topology is another domain which prominently associates groups to the objects the theory is interested in. There, groups are used to describe certain invariants of topological spaces. They are called \"invariants\" because they are defined in such a way that they do not change if the space is subjected to some deformation. For example, the fundamental group \"counts\" how many paths in the space are essentially different. The Poincaré conjecture, proved in 2002/2003 by Grigori Perelman, is a prominent application of this idea. The influence is not unidirectional, though. For example, algebraic topology makes use of Eilenberg–MacLane spaces which are spaces with prescribed homotopy groups. Similarly algebraic K-theory relies in a way on classifying spaces of groups. Finally, the name of the torsion subgroup of an infinite group shows the legacy of topology in group theory. === Algebraic geometry === Algebraic geometry likewise uses group theory in many ways. Abelian varieties have been introduced above. The presence of the group operation yields additional information which makes these varieties particularly accessible. They also often serve as a test for new conjectures. (For example the Hodge conjecture (in certain cases).) The one-dimensional case, namely elliptic curves is studied in particular detail. They are both theoretically and practically intriguing. In another direction, toric varieties are algebraic varieties acted on by a torus. Toroidal embeddings have recently led to advances in algebraic geometry, in particular resolution of singularities. === Algebraic number theory === Algebraic number theory makes uses of groups for some important applications. For example, Euler's product formula, ∑ n ≥ 1 1 n s = ∏ p prime 1 1 − p − s , {\\displaystyle {\\begin{aligned}\\sum _{n\\geq 1}{\\frac {1}{n^{s}}}&=\\prod _{p{\\text{ prime}}}{\\frac {1}{1-p^{-s}}},\\\\\\end{aligned}}\\!} captures the fact that any integer decomposes in a unique way into primes. The failure of this statement for more general rings gives rise to class groups and regular primes, which feature in Kummer's treatment of Fermat's Last Theorem. === Harmonic analysis === Analysis on Lie groups and certain other groups is called harmonic analysis. Haar measures, that is, integrals invariant under the translation in a Lie group, are used for pattern recognition and other image processing techniques. === Combinatorics === In combinatorics, the notion of permutation group and the concept of group action are often used to simplify the counting of a set of objects; see in particular Burnside's lemma. === Music === The presence of the 12-periodicity in the circle of fifths yields applications of elementary group theory in musical set theory. Transformational theory models musical transformations as elements of a mathematical group. === Physics === In physics, groups are important because they describe the symmetries which the laws of physics seem to obey. According to Noether's theorem, every continuous symmetry of a physical system corresponds to a conservation law of the system. Physicists are very interested in group representations, especially of Lie groups, since these representations often point the way to the \"possible\" physical theories. Examples of the use of groups in physics include the Standard Model, gauge theory, the Lorentz group, and the Poincaré group. Group theory can be used to resolve the incompleteness of the statistical interpretations of mechanics developed by Willard Gibbs, relating to the summing of an infinite number of probabilities to yield a meaningful solution. === Chemistry and materials science === In chemistry and materials science, point groups are used to classify regular polyhedra, and the symmetries of molecules, and space groups to classify crystal structures. The assigned groups can then be used to determine physical properties (such as chemical polarity and chirality), spectroscopic properties (particularly useful for Raman spectroscopy, infrared spectroscopy, circular dichroism spectroscopy, magnetic circular dichroism spectroscopy, UV/Vis spectroscopy, and fluorescence spectroscopy), and to construct molecular orbitals. Molecular symmetry is responsible for many physical and spectroscopic properties of compounds and provides relevant information about how chemical reactions occur. In order to assign a point group for any given molecule, it is necessary to find the set of symmetry operations present on it. The symmetry operation is an action, such as a rotation around an axis or a reflection through a mirror plane. In other words, it is an operation that moves the molecule such that it is indistinguishable from the original configuration. In group theory, the rotation axes and mirror planes are called \"symmetry elements\". These elements can be a point, line or plane with respect to which the symmetry operation is carried out. The symmetry operations of a molecule determine the specific point group for this molecule. In chemistry, there are five important symmetry operations. They are identity operation (E), rotation operation or proper rotation (Cn), reflection operation (σ), inversion (i) and rotation reflection operation or improper rotation (Sn). The identity operation (E) consists of leaving the molecule as it is. This is equivalent to any number of full rotations around any axis. This is a symmetry of all molecules, whereas the symmetry group of a chiral molecule consists of only the identity operation. An identity operation is a characteristic of every molecule even if it has no symmetry. Rotation around an axis (Cn) consists of rotating the molecule around a specific axis by a specific angle. It is rotation through the angle 360°/n, where n is an integer, about a rotation axis. For example, if a water molecule rotates 180° around the axis that passes through the oxygen atom and between the hydrogen atoms, it is in the same configuration as it started. In this case, n = 2, since applying it twice produces the identity operation. In molecules with more than one rotation axis, the Cn axis having the largest value of n is the highest order rotation axis or principal axis. For example in boron trifluoride (BF3), the highest order of rotation axis is C3, so the principal axis of rotation is C3. In the reflection operation (σ) many molecules have mirror planes, although they may not be obvious. The reflection operation exchanges left and right, as if each point had moved perpendicularly through the plane to a position exactly as far from the plane as when it started. When the plane is perpendicular to the principal axis of rotation, it is called σh (horizontal). Other planes, which contain the principal axis of rotation, are labeled vertical (σv) or dihedral (σd). Inversion (i ) is a more complex operation. Each point moves through the center of the molecule to a position opposite the original position and as far from the central point as where it started. Many molecules that seem at first glance to have an inversion center do not; for example, methane and other tetrahedral molecules lack inversion symmetry. To see this, hold a methane model with two hydrogen atoms in the vertical plane on the right and two hydrogen atoms in the horizontal plane on the left. Inversion results in two hydrogen atoms in the horizontal plane on the right and two hydrogen atoms in the vertical plane on the left. Inversion is therefore not a symmetry operation of methane, because the orientation of the molecule following the inversion operation differs from the original orientation. And the last operation is improper rotation or rotation reflection operation (Sn) requires rotation of 360°/n, followed by reflection through a plane perpendicular to the axis of rotation. === Cryptography === Very large groups of prime order constructed in elliptic curve cryptography serve for public-key cryptography. Cryptographical methods of this kind benefit from the flexibility of the geometric objects, hence their group structures, together with the complicated structure of these groups, which make the discrete logarithm very hard to calculate. One of the earliest encryption protocols, Caesar's cipher, may also be interpreted as a (very easy) group operation. Most cryptographic schemes use groups in some way. In particular Diffie–Hellman key exchange uses finite cyclic groups. So the term group-based cryptography refers mostly to cryptographic protocols that use infinite non-abelian groups such as a braid group. == See also == List of group theory topics Examples of groups Bass-Serre theory == Notes == == References == Borel, Armand (1991), Linear algebraic groups, Graduate Texts in Mathematics, vol. 126 (2nd ed.), Berlin, New York: Springer-Verlag, doi:10.1007/978-1-4612-0941-6, ISBN 978-0-387-97370-8, MR 1102012 Carter, Nathan C. (2009), Visual group theory, Classroom Resource Materials Series, Mathematical Association of America, ISBN 978-0-88385-757-1, MR 2504193 Cannon, John J. (1969), \"Computers in group theory: A survey\", Communications of the ACM, 12: 3–12, doi:10.1145/362835.362837, MR 0290613, S2CID 18226463 Frucht, R. (1939), \"Herstellung von Graphen mit vorgegebener abstrakter Gruppe\", Compositio Mathematica, 6: 239–50, ISSN 0010-437X, archived from the original on 2008-12-01 Golubitsky, Martin; Stewart, Ian (2006), \"Nonlinear dynamics of networks: the groupoid formalism\", Bull. Amer. Math. Soc. (N.S.), 43 (3): 305–364, doi:10.1090/S0273-0979-06-01108-6, MR 2223010 Shows the advantage of generalising from group to groupoid. Judson, Thomas W. (1997), Abstract Algebra: Theory and Applications An introductory undergraduate text in the spirit of texts by Gallian or Herstein, covering groups, rings, integral domains, fields and Galois theory. Free downloadable PDF with open-source GFDL license. Kleiner, Israel (1986), \"The evolution of group theory: a brief survey\", Mathematics Magazine, 59 (4): 195–215, doi:10.2307/2690312, ISSN 0025-570X, JSTOR 2690312, MR 0863090 La Harpe, Pierre de (2000), Topics in geometric group theory, University of Chicago Press, ISBN 978-0-226-31721-2 Livio, M. (2005), The Equation That Couldn't Be Solved: How Mathematical Genius Discovered the Language of Symmetry, Simon & Schuster, ISBN 0-7432-5820-7 Conveys the practical value of group theory by explaining how it points to symmetries in physics and other sciences. Mumford, David (1970), Abelian varieties, Oxford University Press, ISBN 978-0-19-560528-0, OCLC 138290 Ronan M., 2006. Symmetry and the Monster. Oxford University Press. ISBN 0-19-280722-6. For lay readers. Describes the quest to find the basic building blocks for finite groups. Rotman, Joseph (1994), An introduction to the theory of groups, New York: Springer-Verlag, ISBN 0-387-94285-8 A standard contemporary reference. Schupp, Paul E.; Lyndon, Roger C. (2001), Combinatorial group theory, Berlin, New York: Springer-Verlag, ISBN 978-3-540-41158-1 Scott, W. R. (1987) , Group Theory, New York: Dover, ISBN 0-486-65377-3 Inexpensive and fairly readable, but somewhat dated in emphasis, style, and notation. Shatz, Stephen S. (1972), Profinite groups, arithmetic, and geometry, Princeton University Press, ISBN 978-0-691-08017-8, MR 0347778 Weibel, Charles A. (1994), An introduction to homological algebra, Cambridge Studies in Advanced Mathematics, vol. 38, Cambridge University Press, ISBN 978-0-521-55987-4, MR 1269324, OCLC 36131259 == External links == History of the abstract group concept Burnside, William (1911), \"Groups, Theory of\" , in Chisholm, Hugh (ed.), Encyclopædia Britannica, vol. 12 (11th ed.), Cambridge University Press, pp. 626–636 This is a detailed exposition of contemporaneous understanding of Group Theory by an early researcher in the field."
+  },
+  "chunks": [
+    {
+      "id": "grouptheory_50440e99_c0000",
+      "article_id": "grouptheory_50440e99",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 983,
+      "content": "In abstract algebra, group theory studies the algebraic structures known as groups. The concept of a group is central to abstract algebra: other well-known algebraic structures, such as rings, fields, and vector spaces, can all be seen as groups endowed with additional operations and axioms. Groups recur throughout mathematics, and the methods of group theory have influenced many parts of algebra. Linear algebraic groups and Lie groups are two branches of group theory that have experienced advances and have become subject areas in their own right. Various physical systems, such as crystals and the hydrogen atom, and three of the four known fundamental forces in the universe, may be modelled by symmetry groups. Thus group theory and the closely related representation theory have many important applications in physics, chemistry, and materials science. Group theory is also central to public key cryptography. The early history of group theory dates from the 19th century.",
+      "char_count": 982,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0001",
+      "article_id": "grouptheory_50440e99",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 983,
+      "end_char": 1239,
+      "content": "One of the most important mathematical achievements of the 20th century was the collaborative effort, taking up more than 10,000 journal pages and mostly published between 1960 and 2004, that culminated in a complete classification of finite simple groups.",
+      "char_count": 256,
+      "token_estimate": 64,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0002",
+      "article_id": "grouptheory_50440e99",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 1253,
+      "end_char": 2178,
+      "content": "== History == Group theory has three main historical sources: number theory, the theory of algebraic equations, and geometry. The number-theoretic strand was begun by Leonhard Euler, and developed by Gauss's work on modular arithmetic and additive and multiplicative groups related to quadratic fields. Early results about permutation groups were obtained by Lagrange, Ruffini, and Abel in their quest for general solutions of polynomial equations of high degree. Évariste Galois coined the term \"group\" and established a connection, now known as Galois theory, between the nascent theory of groups and field theory. In geometry, groups first became important in projective geometry and, later, non-Euclidean geometry. Felix Klein's Erlangen program proclaimed group theory to be the organizing principle of geometry. Galois, in the 1830s, was the first to employ groups to determine the solvability of polynomial equations.",
+      "char_count": 924,
+      "token_estimate": 231,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0003",
+      "article_id": "grouptheory_50440e99",
+      "section": "== History ==",
+      "heading_path": "== History ==",
+      "start_char": 2178,
+      "end_char": 3085,
+      "content": "Arthur Cayley and Augustin Louis Cauchy pushed these investigations further by creating the theory of permutation groups. The second historical source for groups stems from geometrical situations. In an attempt to come to grips with possible geometries (such as euclidean, hyperbolic or projective geometry) using group theory, Felix Klein initiated the Erlangen programme. Sophus Lie, in 1884, started using groups (now called Lie groups) attached to analytic problems. Thirdly, groups were, at first implicitly and later explicitly, used in algebraic number theory. The different scope of these early sources resulted in different notions of groups. The theory of groups was unified starting around 1880. Since then, the impact of group theory has been ever growing, giving rise to the birth of abstract algebra in the early 20th century, representation theory, and many more influential spin-off domains.",
+      "char_count": 907,
+      "token_estimate": 226,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0004",
+      "article_id": "grouptheory_50440e99",
+      "section": "== Main classes of groups ==",
+      "heading_path": "== Main classes of groups ==",
+      "start_char": 3236,
+      "end_char": 3459,
+      "content": "== Main classes of groups == The range of groups being considered has gradually expanded from finite permutation groups and special examples of matrix groups to abstract groups that may be specified through a presentation by generators and relations.",
+      "char_count": 250,
+      "token_estimate": 62,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0005",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Permutation groups ==",
+      "heading_path": "== = Permutation groups ==",
+      "start_char": 3485,
+      "end_char": 4435,
+      "content": "== = Permutation groups === The first class of groups to undergo a systematic study was permutation groups. Given any set X and a collection G of bijections of X into itself (known as permutations) that is closed under compositions and inverses, G is a group acting on X. If X consists of n elements and G consists of all permutations, G is the symmetric group Sn; in general, any permutation group G is a subgroup of the symmetric group of X. An early construction due to Cayley exhibited any group as a permutation group, acting on itself (X = G) by means of the left regular representation. In many cases, the structure of a permutation group can be studied using the properties of its action on the corresponding set. For example, in this way one proves that for n ≥ 5, the alternating group An is simple, i.e. does not admit any proper normal subgroups. This fact plays a key role in the impossibility of solving a general algebraic equation of degree n ≥ 5 in radicals.",
+      "char_count": 975,
+      "token_estimate": 243,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0006",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Matrix groups ==",
+      "heading_path": "== = Matrix groups ==",
+      "start_char": 4456,
+      "end_char": 4923,
+      "content": "== = Matrix groups === The next important class of groups is given by matrix groups, or linear groups. Here G is a set consisting of invertible matrices of given order n over a field K that is closed under the products and inverses. Such a group acts on the n-dimensional vector space Kn by linear transformations. This action makes matrix groups conceptually similar to permutation groups, and the geometry of the action may be usefully exploited to establish properties of the group G.",
+      "char_count": 487,
+      "token_estimate": 121,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0007",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Transformation groups ==",
+      "heading_path": "== = Transformation groups ==",
+      "start_char": 4952,
+      "end_char": 5676,
+      "content": "== = Transformation groups === Permutation groups and matrix groups are special cases of transformation groups: groups that act on a certain space X preserving its inherent structure. In the case of permutation groups, X is a set; for matrix groups, X is a vector space. The concept of a transformation group is closely related with the concept of a symmetry group: transformation groups frequently consist of all transformations that preserve a certain structure. The theory of transformation groups forms a bridge connecting group theory with differential geometry. A long line of research, originating with Lie and Klein, considers group actions on manifolds by homeomorphisms or diffeomorphisms. The groups themselves may be discrete or continuous.",
+      "char_count": 752,
+      "token_estimate": 188,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0008",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Abstract groups ==",
+      "heading_path": "== = Abstract groups ==",
+      "start_char": 5699,
+      "end_char": 6556,
+      "content": "== = Abstract groups === Most groups considered in the first stage of the development of group theory were \"concrete\", having been realized through numbers, permutations, or matrices. It was not until the late nineteenth century that the idea of an abstract group began to take hold, where \"abstract\" means that the nature of the elements are ignored in such a way that two isomorphic groups are considered as the same group. A typical way of specifying an abstract group is through a presentation by generators and relations, G = ⟨ S | R ⟩ . {\\displaystyle G=\\langle S|R\\rangle .} A significant source of abstract groups is given by the construction of a factor group, or quotient group, G/H, of a group G by a normal subgroup H. Class groups of algebraic number fields were among the earliest examples of factor groups, of much interest in number theory.",
+      "char_count": 856,
+      "token_estimate": 214,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0009",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Abstract groups ==",
+      "heading_path": "== = Abstract groups ==",
+      "start_char": 6556,
+      "end_char": 7423,
+      "content": "If a group G is a permutation group on a set X, the factor group G/H is no longer acting on X; but the idea of an abstract group permits one not to worry about this discrepancy. The change of perspective from concrete to abstract groups makes it natural to consider properties of groups that are independent of a particular realization, or in modern language, invariant under isomorphism, as well as the classes of group with a given such property: finite groups, periodic groups, simple groups, solvable groups, and so on. Rather than exploring properties of an individual group, one seeks to establish results that apply to a whole class of groups. The new paradigm was of paramount importance for the development of mathematics: it foreshadowed the creation of abstract algebra in the works of Hilbert, Emil Artin, Emmy Noether, and mathematicians of their school.",
+      "char_count": 867,
+      "token_estimate": 216,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0010",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Finite group theory ==",
+      "heading_path": "== = Finite group theory ==",
+      "start_char": 9061,
+      "end_char": 9935,
+      "content": "== = Finite group theory === During the twentieth century, mathematicians investigated some aspects of the theory of finite groups in great depth, especially the local theory of finite groups and the theory of solvable and nilpotent groups. As a consequence, the complete classification of finite simple groups was achieved, meaning that all those simple groups from which all finite groups can be built are now known. During the second half of the twentieth century, mathematicians such as Chevalley and Steinberg also increased our understanding of finite analogs of classical groups, and other related groups. One such family of groups is the family of general linear groups over finite fields. Finite groups often occur when considering symmetry of mathematical or physical objects, when those objects admit just a finite number of structure-preserving transformations.",
+      "char_count": 873,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0011",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Finite group theory ==",
+      "heading_path": "== = Finite group theory ==",
+      "start_char": 9935,
+      "end_char": 10281,
+      "content": "The theory of Lie groups, which may be viewed as dealing with \"continuous symmetry\", is strongly influenced by the associated Weyl groups. These are finite groups generated by reflections which act on a finite-dimensional Euclidean space. The properties of finite groups can thus play a role in subjects such as theoretical physics and chemistry.",
+      "char_count": 346,
+      "token_estimate": 86,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0012",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Representation of groups ==",
+      "heading_path": "== = Representation of groups ==",
+      "start_char": 10287,
+      "end_char": 11189,
+      "content": "== = Representation of groups === Saying that a group G acts on a set X means that every element of G defines a bijective map on the set X in a way compatible with the group structure. When X has more structure, it is useful to restrict this notion further: a representation of G on a vector space V is a group homomorphism: ρ : G → GL ⁡ ( V ) , {\\displaystyle \\rho :G\\to \\operatorname {GL} (V),} where GL(V) consists of the invertible linear transformations of V. In other words, to every group element g is assigned an automorphism ρ(g) such that ρ(g) ∘ ρ(h) = ρ(gh) for any h in G. This definition can be understood in two directions, both of which give rise to whole new domains of mathematics. On the one hand, it may yield new information about the group G: often, the group operation in G is abstractly given, but via ρ, it corresponds to the multiplication of matrices, which is very explicit.",
+      "char_count": 901,
+      "token_estimate": 225,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0013",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Representation of groups ==",
+      "heading_path": "== = Representation of groups ==",
+      "start_char": 11189,
+      "end_char": 12077,
+      "content": "On the other hand, given a well-understood group acting on a complicated object, this simplifies the study of the object in question. For example, if G is finite, it is known that V above decomposes into irreducible parts (see Maschke's theorem). These parts, in turn, are much more easily manageable than the whole V (via Schur's lemma). Given a group G, representation theory then asks what representations of G exist. There are several settings, and the employed methods and obtained results are rather different in every case: representation theory of finite groups and representations of Lie groups are two main subdomains of the theory. The totality of representations is governed by the group's characters. For example, Fourier polynomials can be interpreted as the characters of U(1), the group of complex numbers of absolute value 1, acting on the L2-space of periodic functions.",
+      "char_count": 888,
+      "token_estimate": 222,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0014",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Lie theory ==",
+      "heading_path": "== = Lie theory ==",
+      "start_char": 12064,
+      "end_char": 13047,
+      "content": "== = Lie theory === A Lie group is a group that is also a differentiable manifold, with the property that the group operations are compatible with the smooth structure. Lie groups are named after Sophus Lie, who laid the foundations of the theory of continuous transformation groups. The term groupes de Lie first appeared in French in 1893 in the thesis of Lie's student Arthur Tresse, page 3. Lie groups represent the best-developed theory of continuous symmetry of mathematical objects and structures, which makes them indispensable tools for many parts of contemporary mathematics, as well as for modern theoretical physics. They provide a natural framework for analysing the continuous symmetries of differential equations (differential Galois theory), in much the same way as permutation groups are used in Galois theory for analysing the discrete symmetries of algebraic equations. An extension of Galois theory to the case of continuous symmetry groups was one of Lie's principal motivations.",
+      "char_count": 1000,
+      "token_estimate": 250,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0015",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Combinatorial and geometric group theory ==",
+      "heading_path": "== = Combinatorial and geometric group theory ==",
+      "start_char": 13095,
+      "end_char": 14026,
+      "content": "== = Combinatorial and geometric group theory === Groups can be described in different ways. Finite groups can be described by writing down the group table consisting of all possible multiplications g • h. A more compact way of defining a group is by generators and relations, also called the presentation of a group. Given any set F of generators { g i } i ∈ I {\\displaystyle \\{g_{i}\\}_{i\\in I}} , the free group generated by F surjects onto the group G. The kernel of this map is called the subgroup of relations, generated by some subset D. The presentation is usually denoted by ⟨ F ∣ D ⟩ . {\\displaystyle \\langle F\\mid D\\rangle .} For example, the group presentation ⟨ a , b ∣ a b a − 1 b − 1 ⟩ {\\displaystyle \\langle a,b\\mid aba^{-1}b^{-1}\\rangle } describes a group which is isomorphic to Z × Z . {\\displaystyle \\mathbb {Z} \\times \\mathbb {Z} .} A string consisting of generator symbols and their inverses is called a word.",
+      "char_count": 930,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0016",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Combinatorial and geometric group theory ==",
+      "heading_path": "== = Combinatorial and geometric group theory ==",
+      "start_char": 14026,
+      "end_char": 14922,
+      "content": "Combinatorial group theory studies groups from the perspective of generators and relations. It is particularly useful where finiteness assumptions are satisfied, for example finitely generated groups, or finitely presented groups (i.e. in addition the relations are finite). The area makes use of the connection of graphs via their fundamental groups. A fundamental theorem of this area is that every subgroup of a free group is free. There are several natural questions arising from giving a group by its presentation. The word problem asks whether two words are effectively the same group element. By relating the problem to Turing machines, one can show that there is in general no algorithm solving this task. Another, generally harder, algorithmically insoluble problem is the group isomorphism problem, which asks whether two groups given by different presentations are actually isomorphic.",
+      "char_count": 896,
+      "token_estimate": 224,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0017",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Combinatorial and geometric group theory ==",
+      "heading_path": "== = Combinatorial and geometric group theory ==",
+      "start_char": 14923,
+      "end_char": 15757,
+      "content": "For example, the group with presentation ⟨ x , y ∣ x y x y x = e ⟩ , {\\displaystyle \\langle x,y\\mid xyxyx=e\\rangle ,} is isomorphic to the additive group Z of integers, although this may not be immediately apparent. (Writing z = x y {\\displaystyle z=xy} , one has G ≅ ⟨ z , y ∣ z 3 = y ⟩ ≅ ⟨ z ⟩ . {\\displaystyle G\\cong \\langle z,y\\mid z^{3}=y\\rangle \\cong \\langle z\\rangle .} ) Geometric group theory attacks these problems from a geometric viewpoint, either by viewing groups as geometric objects, or by finding suitable geometric objects a group acts on. The first idea is made precise by means of the Cayley graph, whose vertices correspond to group elements and edges correspond to right multiplication in the group. Given two elements, one constructs the word metric given by the length of the minimal path between the elements.",
+      "char_count": 834,
+      "token_estimate": 208,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0018",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Combinatorial and geometric group theory ==",
+      "heading_path": "== = Combinatorial and geometric group theory ==",
+      "start_char": 15758,
+      "end_char": 15980,
+      "content": "A theorem of Milnor and Svarc then says that given a group G acting in a reasonable manner on a metric space X, for example a compact manifold, then G is quasi-isometric (i.e. looks similar from a distance) to the space X.",
+      "char_count": 222,
+      "token_estimate": 55,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0019",
+      "article_id": "grouptheory_50440e99",
+      "section": "== Connection of groups and symmetry ==",
+      "heading_path": "== Connection of groups and symmetry ==",
+      "start_char": 15972,
+      "end_char": 16795,
+      "content": "== Connection of groups and symmetry == Given a structured object X of any sort, a symmetry is a mapping of the object onto itself which preserves the structure. This occurs in many cases, for example If X is a set with no additional structure, a symmetry is a bijective map from the set to itself, giving rise to permutation groups. If the object X is a set of points in the plane with its metric structure or any other metric space, a symmetry is a bijection of the set to itself which preserves the distance between each pair of points (an isometry). The corresponding group is called isometry group of X. If instead angles are preserved, one speaks of conformal maps. Conformal maps give rise to Kleinian groups, for example. Symmetries are not restricted to geometrical objects, but include algebraic objects as well.",
+      "char_count": 822,
+      "token_estimate": 205,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0020",
+      "article_id": "grouptheory_50440e99",
+      "section": "== Connection of groups and symmetry ==",
+      "heading_path": "== Connection of groups and symmetry ==",
+      "start_char": 16795,
+      "end_char": 17723,
+      "content": "For instance, the equation x 2 − 3 = 0 {\\displaystyle x^{2}-3=0} has the two solutions 3 {\\displaystyle {\\sqrt {3}}} and − 3 {\\displaystyle -{\\sqrt {3}}} . In this case, the group that exchanges the two roots is the Galois group belonging to the equation. Every polynomial equation in one variable has a Galois group, that is a certain permutation group on its roots. The axioms of a group formalize the essential aspects of symmetry. Symmetries form a group: they are closed because if you take a symmetry of an object, and then apply another symmetry, the result will still be a symmetry. The identity keeping the object fixed is always a symmetry of an object. Existence of inverses is guaranteed by undoing the symmetry and the associativity comes from the fact that symmetries are functions on a space, and composition of functions is associative. Frucht's theorem says that every group is the symmetry group of some graph.",
+      "char_count": 928,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0021",
+      "article_id": "grouptheory_50440e99",
+      "section": "== Connection of groups and symmetry ==",
+      "heading_path": "== Connection of groups and symmetry ==",
+      "start_char": 17724,
+      "end_char": 18029,
+      "content": "So every abstract group is actually the symmetries of some explicit object. The saying of \"preserving the structure\" of an object can be made precise by working in a category. Maps preserving the structure are then the morphisms, and the symmetry group is the automorphism group of the object in question.",
+      "char_count": 305,
+      "token_estimate": 76,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0022",
+      "article_id": "grouptheory_50440e99",
+      "section": "== Applications of group theory ==",
+      "heading_path": "== Applications of group theory ==",
+      "start_char": 18025,
+      "end_char": 18373,
+      "content": "== Applications of group theory == Applications of group theory abound. Almost all structures in abstract algebra are special cases of groups. Rings, for example, can be viewed as abelian groups (corresponding to addition) together with a second operation (corresponding to multiplication). Therefore, group theoretic arguments underlie large parts of the theory of those entities.",
+      "char_count": 381,
+      "token_estimate": 95,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0023",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Galois theory ==",
+      "heading_path": "== = Galois theory ==",
+      "start_char": 18394,
+      "end_char": 19143,
+      "content": "== = Galois theory === Galois theory uses groups to describe the symmetries of the roots of a polynomial (or more precisely the automorphisms of the algebras generated by these roots). The fundamental theorem of Galois theory provides a link between algebraic field extensions and group theory. It gives an effective criterion for the solvability of polynomial equations in terms of the solvability of the corresponding Galois group. For example, S5, the symmetric group in 5 elements, is not solvable which implies that the general quintic equation cannot be solved by radicals in the way equations of lower degree can. The theory, being one of the historical roots of group theory, is still fruitfully applied to yield new results in areas such as class field theory.",
+      "char_count": 769,
+      "token_estimate": 192,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0024",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Algebraic topology ==",
+      "heading_path": "== = Algebraic topology ==",
+      "start_char": 19169,
+      "end_char": 20062,
+      "content": "== = Algebraic topology === Algebraic topology is another domain which prominently associates groups to the objects the theory is interested in. There, groups are used to describe certain invariants of topological spaces. They are called \"invariants\" because they are defined in such a way that they do not change if the space is subjected to some deformation. For example, the fundamental group \"counts\" how many paths in the space are essentially different. The Poincaré conjecture, proved in 2002/2003 by Grigori Perelman, is a prominent application of this idea. The influence is not unidirectional, though. For example, algebraic topology makes use of Eilenberg–MacLane spaces which are spaces with prescribed homotopy groups. Similarly algebraic K-theory relies in a way on classifying spaces of groups. Finally, the name of the torsion subgroup of an infinite group shows the legacy of topology in group theory.",
+      "char_count": 918,
+      "token_estimate": 229,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0025",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Algebraic geometry ==",
+      "heading_path": "== = Algebraic geometry ==",
+      "start_char": 20088,
+      "end_char": 20760,
+      "content": "== = Algebraic geometry === Algebraic geometry likewise uses group theory in many ways. Abelian varieties have been introduced above. The presence of the group operation yields additional information which makes these varieties particularly accessible. They also often serve as a test for new conjectures. (For example the Hodge conjecture (in certain cases).) The one-dimensional case, namely elliptic curves is studied in particular detail. They are both theoretically and practically intriguing. In another direction, toric varieties are algebraic varieties acted on by a torus. Toroidal embeddings have recently led to advances in algebraic geometry, in particular resolution of singularities.",
+      "char_count": 697,
+      "token_estimate": 174,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0026",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Algebraic number theory ==",
+      "heading_path": "== = Algebraic number theory ==",
+      "start_char": 20791,
+      "end_char": 21319,
+      "content": "== = Algebraic number theory === Algebraic number theory makes uses of groups for some important applications. For example, Euler's product formula, ∑ n ≥ 1 1 n s = ∏ p prime 1 1 − p − s , {\\displaystyle {\\begin{aligned}\\sum _{n\\geq 1}{\\frac {1}{n^{s}}}&=\\prod _{p{\\text{ prime}}}{\\frac {1}{1-p^{-s}}},\\\\\\end{aligned}}\\!} captures the fact that any integer decomposes in a unique way into primes. The failure of this statement for more general rings gives rise to class groups and regular primes, which feature in Kummer's treatment of Fermat's Last Theorem.",
+      "char_count": 558,
+      "token_estimate": 139,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0027",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Harmonic analysis ==",
+      "heading_path": "== = Harmonic analysis ==",
+      "start_char": 21344,
+      "end_char": 21577,
+      "content": "== = Harmonic analysis === Analysis on Lie groups and certain other groups is called harmonic analysis. Haar measures, that is, integrals invariant under the translation in a Lie group, are used for pattern recognition and other image processing techniques.",
+      "char_count": 257,
+      "token_estimate": 64,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0028",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Combinatorics ==",
+      "heading_path": "== = Combinatorics ==",
+      "start_char": 21598,
+      "end_char": 21779,
+      "content": "== = Combinatorics === In combinatorics, the notion of permutation group and the concept of group action are often used to simplify the counting of a set of objects; see in particular Burnside's lemma.",
+      "char_count": 201,
+      "token_estimate": 50,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0029",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Music ==",
+      "heading_path": "== = Music ==",
+      "start_char": 21792,
+      "end_char": 22015,
+      "content": "== = Music === The presence of the 12-periodicity in the circle of fifths yields applications of elementary group theory in musical set theory. Transformational theory models musical transformations as elements of a mathematical group.",
+      "char_count": 235,
+      "token_estimate": 58,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0030",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Physics ==",
+      "heading_path": "== = Physics ==",
+      "start_char": 22030,
+      "end_char": 22790,
+      "content": "== = Physics === In physics, groups are important because they describe the symmetries which the laws of physics seem to obey. According to Noether's theorem, every continuous symmetry of a physical system corresponds to a conservation law of the system. Physicists are very interested in group representations, especially of Lie groups, since these representations often point the way to the \"possible\" physical theories. Examples of the use of groups in physics include the Standard Model, gauge theory, the Lorentz group, and the Poincaré group. Group theory can be used to resolve the incompleteness of the statistical interpretations of mechanics developed by Willard Gibbs, relating to the summing of an infinite number of probabilities to yield a meaningful solution.",
+      "char_count": 774,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0031",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Chemistry and materials science ==",
+      "heading_path": "== = Chemistry and materials science ==",
+      "start_char": 22829,
+      "end_char": 23703,
+      "content": "== = Chemistry and materials science === In chemistry and materials science, point groups are used to classify regular polyhedra, and the symmetries of molecules, and space groups to classify crystal structures. The assigned groups can then be used to determine physical properties (such as chemical polarity and chirality), spectroscopic properties (particularly useful for Raman spectroscopy, infrared spectroscopy, circular dichroism spectroscopy, magnetic circular dichroism spectroscopy, UV/Vis spectroscopy, and fluorescence spectroscopy), and to construct molecular orbitals. Molecular symmetry is responsible for many physical and spectroscopic properties of compounds and provides relevant information about how chemical reactions occur. In order to assign a point group for any given molecule, it is necessary to find the set of symmetry operations present on it.",
+      "char_count": 873,
+      "token_estimate": 218,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0032",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Chemistry and materials science ==",
+      "heading_path": "== = Chemistry and materials science ==",
+      "start_char": 23703,
+      "end_char": 24598,
+      "content": "The symmetry operation is an action, such as a rotation around an axis or a reflection through a mirror plane. In other words, it is an operation that moves the molecule such that it is indistinguishable from the original configuration. In group theory, the rotation axes and mirror planes are called \"symmetry elements\". These elements can be a point, line or plane with respect to which the symmetry operation is carried out. The symmetry operations of a molecule determine the specific point group for this molecule. In chemistry, there are five important symmetry operations. They are identity operation (E), rotation operation or proper rotation (Cn), reflection operation (σ), inversion (i) and rotation reflection operation or improper rotation (Sn). The identity operation (E) consists of leaving the molecule as it is. This is equivalent to any number of full rotations around any axis.",
+      "char_count": 895,
+      "token_estimate": 223,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0033",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Chemistry and materials science ==",
+      "heading_path": "== = Chemistry and materials science ==",
+      "start_char": 24599,
+      "end_char": 25527,
+      "content": "This is a symmetry of all molecules, whereas the symmetry group of a chiral molecule consists of only the identity operation. An identity operation is a characteristic of every molecule even if it has no symmetry. Rotation around an axis (Cn) consists of rotating the molecule around a specific axis by a specific angle. It is rotation through the angle 360°/n, where n is an integer, about a rotation axis. For example, if a water molecule rotates 180° around the axis that passes through the oxygen atom and between the hydrogen atoms, it is in the same configuration as it started. In this case, n = 2, since applying it twice produces the identity operation. In molecules with more than one rotation axis, the Cn axis having the largest value of n is the highest order rotation axis or principal axis. For example in boron trifluoride (BF3), the highest order of rotation axis is C3, so the principal axis of rotation is C3.",
+      "char_count": 928,
+      "token_estimate": 232,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0034",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Chemistry and materials science ==",
+      "heading_path": "== = Chemistry and materials science ==",
+      "start_char": 25528,
+      "end_char": 26509,
+      "content": "In the reflection operation (σ) many molecules have mirror planes, although they may not be obvious. The reflection operation exchanges left and right, as if each point had moved perpendicularly through the plane to a position exactly as far from the plane as when it started. When the plane is perpendicular to the principal axis of rotation, it is called σh (horizontal). Other planes, which contain the principal axis of rotation, are labeled vertical (σv) or dihedral (σd). Inversion (i ) is a more complex operation. Each point moves through the center of the molecule to a position opposite the original position and as far from the central point as where it started. Many molecules that seem at first glance to have an inversion center do not; for example, methane and other tetrahedral molecules lack inversion symmetry. To see this, hold a methane model with two hydrogen atoms in the vertical plane on the right and two hydrogen atoms in the horizontal plane on the left.",
+      "char_count": 981,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0035",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Chemistry and materials science ==",
+      "heading_path": "== = Chemistry and materials science ==",
+      "start_char": 26510,
+      "end_char": 27006,
+      "content": "Inversion results in two hydrogen atoms in the horizontal plane on the right and two hydrogen atoms in the vertical plane on the left. Inversion is therefore not a symmetry operation of methane, because the orientation of the molecule following the inversion operation differs from the original orientation. And the last operation is improper rotation or rotation reflection operation (Sn) requires rotation of 360°/n, followed by reflection through a plane perpendicular to the axis of rotation.",
+      "char_count": 496,
+      "token_estimate": 124,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "grouptheory_50440e99_c0036",
+      "article_id": "grouptheory_50440e99",
+      "section": "== = Cryptography ==",
+      "heading_path": "== = Cryptography ==",
+      "start_char": 26988,
+      "end_char": 27713,
+      "content": "== = Cryptography === Very large groups of prime order constructed in elliptic curve cryptography serve for public-key cryptography. Cryptographical methods of this kind benefit from the flexibility of the geometric objects, hence their group structures, together with the complicated structure of these groups, which make the discrete logarithm very hard to calculate. One of the earliest encryption protocols, Caesar's cipher, may also be interpreted as a (very easy) group operation. Most cryptographic schemes use groups in some way. In particular Diffie–Hellman key exchange uses finite cyclic groups. So the term group-based cryptography refers mostly to cryptographic protocols that use infinite non-abelian groups such as a braid group.",
+      "char_count": 744,
+      "token_estimate": 186,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "When and in what publication did the term 'groupes de Lie' first appear in French?",
+        "answer": "The term 'groupes de Lie' first appeared in French in 1893 on page 3 of the thesis by Arthur Tresse, a student of Sophus Lie.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0014"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0014"
+        ]
+      },
+      {
+        "question": "In which fields does group theory and its related representation theory have significant applications?",
+        "answer": "Group theory and representation theory have many important applications in physics, chemistry, materials science, and public key cryptography.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0000"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0000"
+        ]
+      },
+      {
+        "question": "What is the label for a reflection plane that is perpendicular to the principal axis of rotation?",
+        "answer": "A reflection plane that is perpendicular to the principal axis of rotation is called σh (horizontal).",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0034"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0034"
+        ]
+      },
+      {
+        "question": "Provide a historical overview of group theory, from its origins in the 19th century to a major achievement in the 20th century.",
+        "answer": "The early history of group theory dates to the 19th century and has three primary sources: number theory, the theory of algebraic equations, and geometry. Évariste Galois coined the term \"group\" in the 1830s and used groups to determine the solvability of polynomial equations. A major mathematical achievement of the 20th century was the complete classification of finite simple groups, a collaborative effort mostly published between 1960 and 2004.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0000",
+          "grouptheory_50440e99_c0001",
+          "grouptheory_50440e99_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0002",
+          "grouptheory_50440e99_c0001",
+          "grouptheory_50440e99_c0000"
+        ]
+      },
+      {
+        "question": "How did the study of permutation groups serve as a foundation for the broader field of group theory?",
+        "answer": "Permutation groups were one of the earliest historical sources for group theory, with their theory being developed by Arthur Cayley and Augustin Louis Cauchy. They were the first class of groups to undergo systematic study, and an early construction by Cayley demonstrated that any group can be represented as a permutation group. The field of group theory later expanded from these initial finite permutation groups to encompass more abstract groups.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0003",
+          "grouptheory_50440e99_c0004",
+          "grouptheory_50440e99_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0005",
+          "grouptheory_50440e99_c0003",
+          "grouptheory_50440e99_c0004"
+        ]
+      },
+      {
+        "question": "How do matrix groups relate to the concepts of transformation groups and abstract groups?",
+        "answer": "Matrix groups are a special case of transformation groups, which act on a space while preserving its structure; specifically, matrix groups act on a vector space. In contrast to abstract groups, where the nature of the elements is ignored, matrix groups are considered \"concrete\" groups because they are realized through specific elements (matrices), a focus of study before the concept of abstract groups became prominent.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0006",
+          "grouptheory_50440e99_c0007",
+          "grouptheory_50440e99_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0007",
+          "grouptheory_50440e99_c0006",
+          "grouptheory_50440e99_c0008"
+        ]
+      },
+      {
+        "question": "Following its origins in the 19th century, what was a major collaborative achievement in group theory during the 20th century?",
+        "answer": "A major achievement in group theory during the 20th century was the complete classification of finite simple groups. This was a collaborative effort that took up over 10,000 journal pages and was mostly published between 1960 and 2004.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0000",
+          "grouptheory_50440e99_c0001"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0001",
+          "grouptheory_50440e99_c0000"
+        ]
+      },
+      {
+        "question": "Summarize the three main historical sources of group theory and identify the key mathematicians associated with each area.",
+        "answer": "Group theory's three main historical sources are number theory, the theory of algebraic equations, and geometry. The number theory strand was started by Leonhard Euler and developed by Gauss. The theory of algebraic equations involved early work on permutation groups by Lagrange, Ruffini, and Abel. Évariste Galois later coined the term \"group\" and established Galois theory, and these investigations were pushed further by Arthur Cayley and Augustin Louis Cauchy who created the theory of permutation groups. In geometry, Felix Klein's Erlangen program proclaimed group theory as the organizing principle for geometries like projective and non-Euclidean.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0002",
+          "grouptheory_50440e99_c0003"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0002",
+          "grouptheory_50440e99_c0003"
+        ]
+      },
+      {
+        "question": "How did the concept of an abstract group affect the study of factor groups derived from permutation groups?",
+        "answer": "Factor groups are a significant source of abstract groups. When a permutation group G acts on a set X, its factor group G/H no longer acts on that set. The concept of an abstract group allows mathematicians to ignore this discrepancy and study the properties of the factor group itself, independent of its original realization or action on a set.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0008",
+          "grouptheory_50440e99_c0009"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0009",
+          "grouptheory_50440e99_c0008"
+        ]
+      },
+      {
+        "question": "How are finite groups relevant to the study of both discrete and continuous symmetry?",
+        "answer": "Finite groups are applied to study discrete symmetry when considering mathematical or physical objects that have a finite number of structure-preserving transformations. They are also relevant to continuous symmetry through their connection to Lie groups; specifically, finite groups known as Weyl groups, which are generated by reflections, strongly influence the theory of Lie groups, which deals with continuous symmetry.",
+        "related_chunk_ids": [
+          "grouptheory_50440e99_c0010",
+          "grouptheory_50440e99_c0011"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "grouptheory_50440e99_c0011",
+          "grouptheory_50440e99_c0010"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:36:46.067Z",
+    "content_format": "markdown",
+    "total_chunks": 37,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

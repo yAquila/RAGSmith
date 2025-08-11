@@ -1,0 +1,424 @@
+{
+  "article": {
+    "id": "liquidityrisk_ec0951f2",
+    "title": "Liquidity risk",
+    "url": "https://en.wikipedia.org/wiki/Liquidity_risk",
+    "lang": "en",
+    "created_at": "2025-07-30T14:07:23.776040",
+    "content": "---\nid: liquidityrisk_ec0951f2\nurl: https://en.wikipedia.org/wiki/Liquidity_risk\ntitle: Liquidity risk\nlang: en\ncreated_at: '2025-07-30T14:01:51.705904'\nchecksum: c754fae7e4c8a4c544c31557a0445328e3e426770c35560ad0c3ee43e7070297\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 2155\n  char_count: 13500\n  num_chunks: 22\n  original_chunks: 32\n  filtered_out: 10\n  num_sections: 0\n---\nLiquidity risk is a financial risk that for a certain period of time a given financial asset, security or commodity cannot be traded quickly enough in the market without impacting the market price. == Types == Market liquidity – An asset cannot be sold due to lack of liquidity in the market – essentially a sub-set of market risk. This can be accounted for by: Widening bid–ask spread Making explicit liquidity reserves Lengthening holding period for value at risk (VaR) calculations Funding liquidity – Risk that liabilities: Cannot be met when they fall due Can only be met at an uneconomic price Can be name-specific or systemic == Causes == Liquidity risk arises from situations in which a party interested in trading an asset cannot do it because nobody in the market wants to trade for that asset. Liquidity risk becomes particularly important to parties who are about to hold or currently hold an asset, since it affects their ability to trade. Manifestation of liquidity risk is very different from a drop of price to zero. In case of a drop of an asset's price to zero, the market is saying that the asset is worthless. However, if one party cannot find another party interested in trading the asset, this can potentially be only a problem of the market participants with finding each other. This is why liquidity risk is usually found to be higher in emerging markets or low-volume markets. Liquidity risk is financial risk due to uncertain liquidity. An institution might lose liquidity if its credit rating falls, it experiences sudden unexpected cash outflows, or some other event causes counterparties to avoid trading with or lending to the institution. A firm is also exposed to liquidity risk if markets on which it depends are subject to loss of liquidity. Market and funding liquidity risks compound each other as it is difficult to sell when other investors face funding problems and it is difficult to get funding when the collateral is hard to sell. Liquidity risk also tends to compound other risks. If a trading organization has a position in an illiquid asset, its limited ability to liquidate that position at short notice will compound its market risk. Suppose a firm has offsetting cash flows with two different counterparties on a given day. If the counterparty that owes it a payment defaults, the firm will have to raise cash from other sources to make its payment. Should it be unable to do so, it too will default. Here, liquidity risk is compounding credit risk. A position can be hedged against market risk but still entail liquidity risk. This is true in the above credit risk example—the two payments are offsetting, so they entail credit risk but not market risk. Another example is the 1993 Metallgesellschaft debacle. Futures contracts were used to hedge an over-the-counter finance (OTC) obligation. It is debatable whether the hedge was effective from a market risk standpoint, but it was the liquidity crisis caused by staggering margin calls on the futures that forced Metallgesellschaft to unwind the positions. Accordingly, liquidity risk has to be managed in addition to market, credit and other risks. Because of its tendency to compound other risks, it is difficult or impossible to isolate liquidity risk. In all but the simplest of circumstances, comprehensive metrics of liquidity risk do not exist. Certain techniques of asset liability management can be applied to assessing liquidity risk. A simple test for liquidity risk is to look at future net cash flows on a day-by-day basis. Any day that has a sizeable negative net cash flow is of concern. Such an analysis can be supplemented with stress testing. Look at net cash flows on a day-to-day basis assuming that an important counterparty defaults. Analyses such as these cannot easily take into account contingent cash flows, such as cash flows from derivatives or mortgage-backed securities. If an organization's cash flows are largely contingent, liquidity risk may be assessed using some form of scenario analysis. A general approach using scenario analysis might entail the following high-level steps: Construct multiple scenarios for market movements and defaults over a given period of time Assess day-to-day cash flows under each scenario. Because balance sheets differ so significantly from one organization to the next, there is little standardization in how such analyses are implemented. Regulators are primarily concerned about systemic implications of liquidity risk. == Pricing == Risk-averse investors naturally require higher expected return as compensation for liquidity risk. The liquidity-adjusted CAPM pricing model therefore states that, the higher an asset's market-liquidity risk, the higher its required return. A common method for estimating the upper bound for a security illiquidity discount is by using a Lookback option, where the premia is equal to the difference between the maximum value of a security during a restricted trading period and its value at the end of the period. When the method is extended for corporate debt it is shown that liquidity risk increases with a bond credit risk. == Measures of liquidity risk == === Liquidity gap === Culp defines the liquidity gap as the net liquid assets of a firm. The excess value of the firm's liquid assets over its volatile liabilities. A company with a negative liquidity gap should focus on their cash balances and possible unexpected changes in their values. As a static measure of liquidity risk, it gives no indication of how the gap would change with an increase in the firm's marginal funding cost. === Elasticity === Culp denotes the change of net of assets over funded liabilities that occurs when the liquidity premium on the bank's marginal funding cost rises by a small amount as the liquidity risk elasticity. For banks this would be measured as a spread over Libor, for nonfinancial the LRE would be measured as a spread over commercial paper rates. Problems with the use of liquidity risk elasticity are that it assumes parallel changes in funding spread across all maturities and that it is only accurate for small changes in funding spreads. == Measures of asset liquidity == === Bid–ask spread === The bid–ask spread is used by market participants as an asset liquidity measure. To compare different products the ratio of the spread to the product's bid price can be used. The smaller the ratio the more liquid the asset is. This spread is composed of operational, administrative, and processing costs as well as the compensation required for the possibility of trading with a more informed trader. === Market depth === Hachmeister refers to market depth as the amount of an asset that can be bought and sold at various bid–ask spreads. Slippage is related to the concept of market depth. Knight and Satchell mention a flow trader needs to consider the effect of executing a large order on the market and to adjust the bid–ask to spread accordingly. They calculate the liquidity cost as the difference of the execution price and the initial execution price. === Immediacy === Immediacy refers to the time needed to successfully trade a certain amount of an asset at a prescribed cost. === Resilience === Hachmeister identifies the fourth dimension of liquidity as the speed with which prices return to former levels after a large transaction. Unlike the other measures, resilience can only be determined over a period of time, i.e., resilience is the capacity to recover. == Management == === Liquidity-adjusted value at risk === Liquidity-adjusted VAR incorporates exogenous liquidity risk into Value at Risk. It can be defined at VAR + ELC (Exogenous Liquidity Cost). The ELC is the worst expected half-spread at a particular confidence level. Another adjustment, introduced in the 1970s with a regulatory precursor to today's VAR measures, is to consider VAR over the period of time needed to liquidate the portfolio. VAR can be calculated over this time period. The BIS mentions \"... a number of institutions are exploring the use of liquidity adjusted VAR, in which the holding periods in the risk assessment are adjusted by the length of time required to unwind positions.\" === Liquidity at risk === Alan Greenspan (1999) discusses management of foreign exchange reserves and suggested a measure called liquidity at risk. A country's liquidity position under a range of possible outcomes for relevant financial variables (exchange rates, commodity prices, credit spreads, etc.) is considered. It might be possible to express a standard in terms of the probabilities of different outcomes. For example, an acceptable debt structure could have an average maturity—averaged over estimated distributions for relevant financial variables—in excess of a certain limit. In addition, countries could be expected to hold sufficient liquid reserves to ensure that they could avoid new borrowing for one year with a certain ex ante probability, such as 95 percent of the time. === Scenario analysis-based contingency plans === The FDIC discuss liquidity risk management and write \"Contingency funding plans should incorporate events that could rapidly affect an institution’s liquidity, including a sudden inability to securitize assets, tightening of collateral requirements or other restrictive terms associated with secured borrowings, or the loss of a large depositor or counterparty.\" Greenspan's liquidity at risk concept is an example of scenario-based liquidity risk management. === Diversification of liquidity providers === If several liquidity providers are on call, then if any of those providers increases its costs of supplying liquidity, the impact of this is reduced. The American Academy of Actuaries wrote \"While a company is in good financial shape, it may wish to establish durable, ever green (i.e., always available) liquidity lines of credit. The credit issuer should have an appropriately high credit rating to increase the chances that the resources will be there when needed.\" === Derivatives === Bhaduri, Meissner and Youn discuss five derivatives created specifically for hedging liquidity risk.: Withdrawal option: a put of the illiquid underlying at the market price. Bermudan-style return put option: right to put the option at a specified strike. Return swap: swap the underlying's return for LIBOR paid periodically. Return swaption: option to enter into the return swap. Liquidity option: \"knock-in\" barrier option, where the barrier is a liquidity metric. == Case studies == === Amaranth Advisors LLC – 2006 === Amaranth Advisors lost roughly $6bn in the natural gas futures market in September 2006. Amaranth had taken a concentrated, leveraged, and undiversified position in its natural gas strategy. Amaranth's positions were staggeringly large, representing around 10% of the global market in natural gas futures. Chin Carini notes that firms need to manage liquidity risk explicitly. The inability to sell a futures contract at or near the latest quoted price is related to one's concentration in the security. In Amaranth's case, the concentration was far too high and there were no natural counterparties when they needed to unwind the positions. Chin Carini (2006) argues that part of the loss Amaranth incurred was due to asset illiquidity. Regression analysis on the 3 week return on natural gas future contracts from August 31, 2006 to September 21, 2006 against the excess open interest suggested that contracts whose open interest was much higher on August 31, 2006 than the historical normalized value, experienced larger negative returns. === Northern Rock – 2007 === Northern Rock suffered from funding liquidity risk in September 2007 following the subprime crisis. The firm suffered from liquidity issues despite being solvent at the time, because maturing loans and deposits could not be renewed in the short-term money markets. In response, the FSA now places greater supervisory focus on liquidity risk especially with regard to \"high-impact retail firms\". === LTCM – 1998 === Long-Term Capital Management (LTCM) was bailed out by a consortium of 14 banks in 1998 after being caught in a cash-flow crisis when economic shocks resulted in excessive mark-to-market losses and margin calls. The fund suffered from a combination of funding and asset liquidity issues. The asset liquidity issue arose from LTCM's failure to account for liquidity becoming more valuable, as it did following the crisis. Since much of its balance sheet was exposed to liquidity risk premium, its short positions would increase in price relative to its long positions. This was essentially a massive, unhedged exposure to a single risk factor. LTCM had been aware of funding liquidity risk. Indeed, they estimated that in times of severe stress, cuts on AAA-rated commercial mortgages would increase from 2% to 10%, and similarly for other securities. In response to this, LTCM had negotiated long-term financing with margins fixed for several weeks on many of their collateralized loans. Due to an escalating liquidity spiral, LTCM could ultimately not fund its positions in spite of its numerous measures to control funding risk. == See also == Liquidity (disambiguation) Deposit risk Treasury management == References == == Further reading == == External links == Papers about Liquidity Risk on DefaultRisk.com Bank Liquidity Requirements: An Introduction and Overview by Douglas J. Elliott, The Brookings Institution Data related to Liquidity risk at Wikidata"
+  },
+  "chunks": [
+    {
+      "id": "liquidityrisk_ec0951f2_c0000",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 198,
+      "content": "Liquidity risk is a financial risk that for a certain period of time a given financial asset, security or commodity cannot be traded quickly enough in the market without impacting the market price.",
+      "char_count": 197,
+      "token_estimate": 49,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0001",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== Types ==",
+      "heading_path": "== Types ==",
+      "start_char": 209,
+      "end_char": 633,
+      "content": "== Types == Market liquidity – An asset cannot be sold due to lack of liquidity in the market – essentially a sub-set of market risk. This can be accounted for by: Widening bid–ask spread Making explicit liquidity reserves Lengthening holding period for value at risk (VaR) calculations Funding liquidity – Risk that liabilities: Cannot be met when they fall due Can only be met at an uneconomic price Can be name-specific or systemic",
+      "char_count": 434,
+      "token_estimate": 108,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0002",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== Causes ==",
+      "heading_path": "== Causes ==",
+      "start_char": 645,
+      "end_char": 1475,
+      "content": "== Causes == Liquidity risk arises from situations in which a party interested in trading an asset cannot do it because nobody in the market wants to trade for that asset. Liquidity risk becomes particularly important to parties who are about to hold or currently hold an asset, since it affects their ability to trade. Manifestation of liquidity risk is very different from a drop of price to zero. In case of a drop of an asset's price to zero, the market is saying that the asset is worthless. However, if one party cannot find another party interested in trading the asset, this can potentially be only a problem of the market participants with finding each other. This is why liquidity risk is usually found to be higher in emerging markets or low-volume markets. Liquidity risk is financial risk due to uncertain liquidity.",
+      "char_count": 829,
+      "token_estimate": 207,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0003",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== Causes ==",
+      "heading_path": "== Causes ==",
+      "start_char": 1475,
+      "end_char": 2460,
+      "content": "An institution might lose liquidity if its credit rating falls, it experiences sudden unexpected cash outflows, or some other event causes counterparties to avoid trading with or lending to the institution. A firm is also exposed to liquidity risk if markets on which it depends are subject to loss of liquidity. Market and funding liquidity risks compound each other as it is difficult to sell when other investors face funding problems and it is difficult to get funding when the collateral is hard to sell. Liquidity risk also tends to compound other risks. If a trading organization has a position in an illiquid asset, its limited ability to liquidate that position at short notice will compound its market risk. Suppose a firm has offsetting cash flows with two different counterparties on a given day. If the counterparty that owes it a payment defaults, the firm will have to raise cash from other sources to make its payment. Should it be unable to do so, it too will default.",
+      "char_count": 985,
+      "token_estimate": 246,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0004",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== Causes ==",
+      "heading_path": "== Causes ==",
+      "start_char": 2461,
+      "end_char": 3457,
+      "content": "Here, liquidity risk is compounding credit risk. A position can be hedged against market risk but still entail liquidity risk. This is true in the above credit risk example—the two payments are offsetting, so they entail credit risk but not market risk. Another example is the 1993 Metallgesellschaft debacle. Futures contracts were used to hedge an over-the-counter finance (OTC) obligation. It is debatable whether the hedge was effective from a market risk standpoint, but it was the liquidity crisis caused by staggering margin calls on the futures that forced Metallgesellschaft to unwind the positions. Accordingly, liquidity risk has to be managed in addition to market, credit and other risks. Because of its tendency to compound other risks, it is difficult or impossible to isolate liquidity risk. In all but the simplest of circumstances, comprehensive metrics of liquidity risk do not exist. Certain techniques of asset liability management can be applied to assessing liquidity risk.",
+      "char_count": 996,
+      "token_estimate": 249,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0005",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== Causes ==",
+      "heading_path": "== Causes ==",
+      "start_char": 3458,
+      "end_char": 4419,
+      "content": "A simple test for liquidity risk is to look at future net cash flows on a day-by-day basis. Any day that has a sizeable negative net cash flow is of concern. Such an analysis can be supplemented with stress testing. Look at net cash flows on a day-to-day basis assuming that an important counterparty defaults. Analyses such as these cannot easily take into account contingent cash flows, such as cash flows from derivatives or mortgage-backed securities. If an organization's cash flows are largely contingent, liquidity risk may be assessed using some form of scenario analysis. A general approach using scenario analysis might entail the following high-level steps: Construct multiple scenarios for market movements and defaults over a given period of time Assess day-to-day cash flows under each scenario. Because balance sheets differ so significantly from one organization to the next, there is little standardization in how such analyses are implemented.",
+      "char_count": 961,
+      "token_estimate": 240,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0006",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== Pricing ==",
+      "heading_path": "== Pricing ==",
+      "start_char": 4503,
+      "end_char": 5132,
+      "content": "== Pricing == Risk-averse investors naturally require higher expected return as compensation for liquidity risk. The liquidity-adjusted CAPM pricing model therefore states that, the higher an asset's market-liquidity risk, the higher its required return. A common method for estimating the upper bound for a security illiquidity discount is by using a Lookback option, where the premia is equal to the difference between the maximum value of a security during a restricted trading period and its value at the end of the period. When the method is extended for corporate debt it is shown that liquidity risk increases with a bond credit risk.",
+      "char_count": 641,
+      "token_estimate": 160,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0007",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Liquidity gap ==",
+      "heading_path": "== = Liquidity gap ==",
+      "start_char": 5186,
+      "end_char": 5600,
+      "content": "== = Liquidity gap === Culp defines the liquidity gap as the net liquid assets of a firm. The excess value of the firm's liquid assets over its volatile liabilities. A company with a negative liquidity gap should focus on their cash balances and possible unexpected changes in their values. As a static measure of liquidity risk, it gives no indication of how the gap would change with an increase in the firm's marginal funding cost.",
+      "char_count": 434,
+      "token_estimate": 108,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0008",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Elasticity ==",
+      "heading_path": "== = Elasticity ==",
+      "start_char": 5618,
+      "end_char": 6154,
+      "content": "== = Elasticity === Culp denotes the change of net of assets over funded liabilities that occurs when the liquidity premium on the bank's marginal funding cost rises by a small amount as the liquidity risk elasticity. For banks this would be measured as a spread over Libor, for nonfinancial the LRE would be measured as a spread over commercial paper rates. Problems with the use of liquidity risk elasticity are that it assumes parallel changes in funding spread across all maturities and that it is only accurate for small changes in funding spreads.",
+      "char_count": 553,
+      "token_estimate": 138,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0009",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Bid–ask spread ==",
+      "heading_path": "== = Bid–ask spread ==",
+      "start_char": 6210,
+      "end_char": 6613,
+      "content": "== = Bid–ask spread === The bid–ask spread is used by market participants as an asset liquidity measure. To compare different products the ratio of the spread to the product's bid price can be used. The smaller the ratio the more liquid the asset is. This spread is composed of operational, administrative, and processing costs as well as the compensation required for the possibility of trading with a more informed trader.",
+      "char_count": 424,
+      "token_estimate": 106,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0010",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Market depth ==",
+      "heading_path": "== = Market depth ==",
+      "start_char": 6633,
+      "end_char": 7073,
+      "content": "== = Market depth === Hachmeister refers to market depth as the amount of an asset that can be bought and sold at various bid–ask spreads. Slippage is related to the concept of market depth. Knight and Satchell mention a flow trader needs to consider the effect of executing a large order on the market and to adjust the bid–ask to spread accordingly. They calculate the liquidity cost as the difference of the execution price and the initial execution price.",
+      "char_count": 459,
+      "token_estimate": 114,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0011",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Resilience ==",
+      "heading_path": "== = Resilience ==",
+      "start_char": 7219,
+      "end_char": 7489,
+      "content": "== = Resilience === Hachmeister identifies the fourth dimension of liquidity as the speed with which prices return to former levels after a large transaction. Unlike the other measures, resilience can only be determined over a period of time, i.e., resilience is the capacity to recover.",
+      "char_count": 287,
+      "token_estimate": 71,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0012",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Liquidity-adjusted value at risk ==",
+      "heading_path": "== = Liquidity-adjusted value at risk ==",
+      "start_char": 7546,
+      "end_char": 8198,
+      "content": "== = Liquidity-adjusted value at risk === Liquidity-adjusted VAR incorporates exogenous liquidity risk into Value at Risk. It can be defined at VAR + ELC (Exogenous Liquidity Cost). The ELC is the worst expected half-spread at a particular confidence level. Another adjustment, introduced in the 1970s with a regulatory precursor to today's VAR measures, is to consider VAR over the period of time needed to liquidate the portfolio. VAR can be calculated over this time period. The BIS mentions \"... a number of institutions are exploring the use of liquidity adjusted VAR, in which the holding periods in the risk assessment are adjusted by the length of time required to unwind positions.\"",
+      "char_count": 691,
+      "token_estimate": 172,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0013",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Liquidity at risk ==",
+      "heading_path": "== = Liquidity at risk ==",
+      "start_char": 8223,
+      "end_char": 8991,
+      "content": "== = Liquidity at risk === Alan Greenspan (1999) discusses management of foreign exchange reserves and suggested a measure called liquidity at risk. A country's liquidity position under a range of possible outcomes for relevant financial variables (exchange rates, commodity prices, credit spreads, etc.) is considered. It might be possible to express a standard in terms of the probabilities of different outcomes. For example, an acceptable debt structure could have an average maturity—averaged over estimated distributions for relevant financial variables—in excess of a certain limit. In addition, countries could be expected to hold sufficient liquid reserves to ensure that they could avoid new borrowing for one year with a certain ex ante probability, such as 95 percent of the time.",
+      "char_count": 792,
+      "token_estimate": 198,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0014",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Scenario analysis-based contingency plans ==",
+      "heading_path": "== = Scenario analysis-based contingency plans ==",
+      "start_char": 9040,
+      "end_char": 9502,
+      "content": "== = Scenario analysis-based contingency plans === The FDIC discuss liquidity risk management and write \"Contingency funding plans should incorporate events that could rapidly affect an institution’s liquidity, including a sudden inability to securitize assets, tightening of collateral requirements or other restrictive terms associated with secured borrowings, or the loss of a large depositor or counterparty.\" Greenspan's liquidity at risk concept is an example of scenario-based liquidity risk management.",
+      "char_count": 510,
+      "token_estimate": 127,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0015",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Diversification of liquidity providers ==",
+      "heading_path": "== = Diversification of liquidity providers ==",
+      "start_char": 9548,
+      "end_char": 10019,
+      "content": "== = Diversification of liquidity providers === If several liquidity providers are on call, then if any of those providers increases its costs of supplying liquidity, the impact of this is reduced. The American Academy of Actuaries wrote \"While a company is in good financial shape, it may wish to establish durable, ever green (i.e., always available) liquidity lines of credit. The credit issuer should have an appropriately high credit rating to increase the chances that the resources will be there when needed.\"",
+      "char_count": 516,
+      "token_estimate": 129,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0016",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Derivatives ==",
+      "heading_path": "== = Derivatives ==",
+      "start_char": 10038,
+      "end_char": 10508,
+      "content": "== = Derivatives === Bhaduri, Meissner and Youn discuss five derivatives created specifically for hedging liquidity risk.: Withdrawal option: a put of the illiquid underlying at the market price. Bermudan-style return put option: right to put the option at a specified strike. Return swap: swap the underlying's return for LIBOR paid periodically. Return swaption: option to enter into the return swap. Liquidity option: \"knock-in\" barrier option, where the barrier is a liquidity metric.",
+      "char_count": 488,
+      "token_estimate": 122,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0017",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Amaranth Advisors LLC – 2006 ==",
+      "heading_path": "== = Amaranth Advisors LLC – 2006 ==",
+      "start_char": 10563,
+      "end_char": 11339,
+      "content": "== = Amaranth Advisors LLC – 2006 === Amaranth Advisors lost roughly $6bn in the natural gas futures market in September 2006. Amaranth had taken a concentrated, leveraged, and undiversified position in its natural gas strategy. Amaranth's positions were staggeringly large, representing around 10% of the global market in natural gas futures. Chin Carini notes that firms need to manage liquidity risk explicitly. The inability to sell a futures contract at or near the latest quoted price is related to one's concentration in the security. In Amaranth's case, the concentration was far too high and there were no natural counterparties when they needed to unwind the positions. Chin Carini (2006) argues that part of the loss Amaranth incurred was due to asset illiquidity.",
+      "char_count": 775,
+      "token_estimate": 193,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0018",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Amaranth Advisors LLC – 2006 ==",
+      "heading_path": "== = Amaranth Advisors LLC – 2006 ==",
+      "start_char": 11339,
+      "end_char": 11642,
+      "content": "Regression analysis on the 3 week return on natural gas future contracts from August 31, 2006 to September 21, 2006 against the excess open interest suggested that contracts whose open interest was much higher on August 31, 2006 than the historical normalized value, experienced larger negative returns.",
+      "char_count": 303,
+      "token_estimate": 75,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0019",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = Northern Rock – 2007 ==",
+      "heading_path": "== = Northern Rock – 2007 ==",
+      "start_char": 11635,
+      "end_char": 12032,
+      "content": "== = Northern Rock – 2007 === Northern Rock suffered from funding liquidity risk in September 2007 following the subprime crisis. The firm suffered from liquidity issues despite being solvent at the time, because maturing loans and deposits could not be renewed in the short-term money markets. In response, the FSA now places greater supervisory focus on liquidity risk especially with regard to \"high-impact retail firms\".",
+      "char_count": 424,
+      "token_estimate": 106,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0020",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = LTCM – 1998 ==",
+      "heading_path": "== = LTCM – 1998 ==",
+      "start_char": 12051,
+      "end_char": 12922,
+      "content": "== = LTCM – 1998 === Long-Term Capital Management (LTCM) was bailed out by a consortium of 14 banks in 1998 after being caught in a cash-flow crisis when economic shocks resulted in excessive mark-to-market losses and margin calls. The fund suffered from a combination of funding and asset liquidity issues. The asset liquidity issue arose from LTCM's failure to account for liquidity becoming more valuable, as it did following the crisis. Since much of its balance sheet was exposed to liquidity risk premium, its short positions would increase in price relative to its long positions. This was essentially a massive, unhedged exposure to a single risk factor. LTCM had been aware of funding liquidity risk. Indeed, they estimated that in times of severe stress, cuts on AAA-rated commercial mortgages would increase from 2% to 10%, and similarly for other securities.",
+      "char_count": 870,
+      "token_estimate": 217,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "liquidityrisk_ec0951f2_c0021",
+      "article_id": "liquidityrisk_ec0951f2",
+      "section": "== = LTCM – 1998 ==",
+      "heading_path": "== = LTCM – 1998 ==",
+      "start_char": 12922,
+      "end_char": 13201,
+      "content": "In response to this, LTCM had negotiated long-term financing with margins fixed for several weeks on many of their collateralized loans. Due to an escalating liquidity spiral, LTCM could ultimately not fund its positions in spite of its numerous measures to control funding risk.",
+      "char_count": 279,
+      "token_estimate": 69,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 9,
+    "items": [
+      {
+        "question": "What specific event in 1993 is mentioned as an example of a liquidity crisis forcing a company to unwind its positions?",
+        "answer": "The 1993 Metallgesellschaft debacle, where a liquidity crisis caused by staggering margin calls on futures contracts forced the company to unwind its positions.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0004"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0004"
+        ]
+      },
+      {
+        "question": "How many banks were part of the consortium that bailed out Long-Term Capital Management (LTCM) in 1998?",
+        "answer": "A consortium of 14 banks bailed out Long-Term Capital Management (LTCM) in 1998.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0020"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0020"
+        ]
+      },
+      {
+        "question": "Who suggested the measure called \"liquidity at risk\" for managing foreign exchange reserves?",
+        "answer": "Alan Greenspan suggested the measure called \"liquidity at risk\" in 1999.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0013"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0013"
+        ]
+      },
+      {
+        "question": "What is liquidity risk, what is its primary cause, and what are its two main types?",
+        "answer": "Liquidity risk is a financial risk where an asset cannot be traded quickly enough without impacting its market price. It is primarily caused by a situation where a party interested in trading an asset cannot find a counterparty in the market willing to trade. The two main types of liquidity risk are market liquidity, where an asset cannot be sold due to a lack of liquidity in the market, and funding liquidity, which is the risk that liabilities cannot be met when they fall due or can only be met at an uneconomic price.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0000",
+          "liquidityrisk_ec0951f2_c0001",
+          "liquidityrisk_ec0951f2_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0002",
+          "liquidityrisk_ec0951f2_c0000",
+          "liquidityrisk_ec0951f2_c0001"
+        ]
+      },
+      {
+        "question": "Explain how liquidity risk can compound both credit and market risks, and describe the analytical techniques suggested for assessing these situations.",
+        "answer": "Liquidity risk can compound credit risk, for instance, if a counterparty who owes a firm money defaults, the firm may be unable to raise cash to meet its own obligations, leading to its own default. It can also compound market risk, such as when a firm holds an illiquid asset it cannot sell quickly, or when large margin calls on futures contracts used for hedging create a liquidity crisis, as seen in the Metallgesellschaft case. To assess these risks, one can use stress testing, which involves analyzing daily net cash flows under the assumption of a major counterparty default. For more complex situations with contingent cash flows, scenario analysis is recommended, which involves modeling day-to-day cash flows under various scenarios of market movements and defaults.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0003",
+          "liquidityrisk_ec0951f2_c0004",
+          "liquidityrisk_ec0951f2_c0005"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0004",
+          "liquidityrisk_ec0951f2_c0003",
+          "liquidityrisk_ec0951f2_c0005"
+        ]
+      },
+      {
+        "question": "How does the concept of liquidity risk elasticity address the limitations of using the liquidity gap as a measure of liquidity risk?",
+        "answer": "The liquidity gap is a static measure of a firm's net liquid assets and does not indicate how the gap would change with an increase in the firm's marginal funding cost. Liquidity risk elasticity addresses this limitation by measuring the change in the net of assets over funded liabilities that occurs when the liquidity premium on the firm's marginal funding cost rises, thus providing a dynamic measure of risk.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0007",
+          "liquidityrisk_ec0951f2_c0008"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0008",
+          "liquidityrisk_ec0951f2_c0007"
+        ]
+      },
+      {
+        "question": "How does liquidity risk compound other financial risks, such as market and credit risk, according to the provided text?",
+        "answer": "Liquidity risk can compound other risks by exacerbating their negative effects. For market risk, if an organization holds an illiquid asset, its inability to sell that position quickly will compound its market risk. For credit risk, if a firm has offsetting cash flows and the counterparty that owes it money defaults (credit risk), the firm must find cash from other sources. If it is unable to raise the funds due to liquidity issues, it too will default, thus compounding the initial credit risk. The Metallgesellschaft debacle is another example, where a liquidity crisis from margin calls forced the unwinding of positions, compounding market risk.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0003",
+          "liquidityrisk_ec0951f2_c0004"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0004",
+          "liquidityrisk_ec0951f2_c0003"
+        ]
+      },
+      {
+        "question": "How does the regression analysis on natural gas futures from late 2006 support the explanation for Amaranth Advisors' losses?",
+        "answer": "Amaranth Advisors held a massive, concentrated position in natural gas futures, which created asset illiquidity. A regression analysis covering the period of Amaranth's collapse (August 31 to September 21, 2006) provides evidence for this, showing that contracts with unusually high open interest experienced larger negative returns. This suggests that Amaranth's concentration, which contributed to the high open interest, was a key factor in their inability to unwind positions without incurring significant losses.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0017",
+          "liquidityrisk_ec0951f2_c0018"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0017",
+          "liquidityrisk_ec0951f2_c0018"
+        ]
+      },
+      {
+        "question": "What specific measure did Long-Term Capital Management take in response to its awareness of funding liquidity risk, and what was the ultimate outcome of this action?",
+        "answer": "In response to its awareness of funding liquidity risk, Long-Term Capital Management (LTCM) negotiated long-term financing with margins that were fixed for several weeks on many of its collateralized loans. Despite this measure, LTCM ultimately could not fund its positions due to an escalating liquidity spiral.",
+        "related_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0020",
+          "liquidityrisk_ec0951f2_c0021"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "liquidityrisk_ec0951f2_c0021",
+          "liquidityrisk_ec0951f2_c0020"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-31T06:15:26.074Z",
+    "content_format": "markdown",
+    "total_chunks": 22,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}
