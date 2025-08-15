@@ -2,7 +2,7 @@ networks:
   rag_pipeline_network:
 
 x-ollama: &service-ollama
-  image: ollama/ollama:latest
+  image: ollama/ollama:0.9.0
   container_name: ollama-gpu-3
   networks: ['rag_pipeline_network']
   restart: unless-stopped
@@ -65,7 +65,7 @@ services:
     restart: unless-stopped
     volumes:
       - .:/app
-      - rag_pipeline_reranker_cache:/root/.cache/rag_pipeline/reranker_models  # Persistent cache for reranker models
+      - ./rag_pipeline_reranker_cache:/root/.cache/rag_pipeline/reranker_models  # Persistent cache for reranker models
     depends_on:
       - qdrant2
       - ollama-gpu-3

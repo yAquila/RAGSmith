@@ -4,3 +4,4 @@ qdrant_storage/
 pre_embedding_data/
 __pycache__/
 .env
+rag_pipeline_reranker_cache/
