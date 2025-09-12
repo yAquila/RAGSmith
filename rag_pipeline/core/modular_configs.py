@@ -22,7 +22,7 @@ class PreEmbeddingConfig(BaseModel):
     add_headers: bool = False
     header_template: str = "Document Section: {title}\nContext: {context}\n\n"
     header_generation_strategy: str = "semantic"  # Options: "semantic", "query_aware", "structural"
-    header_generation_model: str = "gemma3:4b"
+    header_generation_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
     header_provider: str = "ollama"  # Options: "ollama", "gemini"
     header_max_length: int = 50
     header_min_relevance_score: float = 0.7
@@ -43,7 +43,7 @@ class PreEmbeddingConfig(BaseModel):
     # HyPE (Hypothetical Passage Embeddings) settings
     num_hype_questions: int = 3
     hype_prompt: str = PRE_EMBEDDING_PROMPTS["hype"]
-    hype_model: str = "gemma3:4b"
+    hype_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
 
 class QueryExpansionConfig(BaseModel):
     """Configuration for query expansion/refinement techniques"""
@@ -58,7 +58,7 @@ class QueryExpansionConfig(BaseModel):
 
     # Simple Multi-Query settings
     num_expanded_queries: int = 3
-    model: str = "gemma3:4b"
+    model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
     prompt: str = QUERY_EXPANSION_PROMPTS["simple_multi_query"]
 
     # RAG Fusion settings
@@ -82,7 +82,7 @@ class QueryExpansionConfig(BaseModel):
     refinement_keyword_extraction_prompt: str = QUERY_EXPANSION_PROMPTS["refinement_keyword_extraction"]
 
     refinement_strategy: str = "clarification"  # Options: "clarification", "rephrasing", "keyword_extraction"
-    refinement_model: str = "gemma3:4b"
+    refinement_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
     refinement_temperature: float = 0.1
     refinement_max_tokens: int = 1000
 
@@ -126,7 +126,7 @@ class RetrievalConfig(BaseModel):
     graph_rag_neo4j_password: str = "admin123"
     graph_rag_ollama_embedding_url: str = "http://ollama-gpu-3:11435/api/embeddings"
     graph_rag_embedding_model: str = "mxbai-embed-large"
-    graph_rag_ollama_model: str = "gemma3:12b"
+    graph_rag_ollama_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
 
     # HyperGraph settings
     hypergraph_retrieval_method: str = "basic"  # Options: "basic", "expansion"
@@ -138,7 +138,7 @@ class RetrievalConfig(BaseModel):
     hypergraph_neo4j_user: str = "neo4j"
     hypergraph_neo4j_password: str = "admin123"
     hypergraph_ollama_embedding_url: str = "http://ollama-gpu-3:11435/api/embeddings"
-    hypergraph_ollama_model: str = "gemma3:12b"
+    hypergraph_ollama_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
     hypergraph_embedding_model: str = "mxbai-embed-large"
     hypergraph_min_entities: int = 2
 
@@ -212,13 +212,13 @@ class PassageCompressConfig(BaseModel):
     technique: str = "none"  # Options: "none", "tree_summarize", "long_context", "multi_llm_ensemble", "multi_llm_fusion", "window_replacement", "step_back"
     
     # Tree Summarize settings
-    tree_summarize_model: str = "gemma3:4b"
+    tree_summarize_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
     tree_summarize_prompt: str = PASSAGE_COMPRESS_PROMPTS["tree_summarize_prompt"]
     max_fan_in: int = 3
     
     # LLM Summarize settings
     provider: str = "ollama"
-    llm_summarize_model: str = "gemma3:4b"
+    llm_summarize_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
     llm_summarize_prompt: str = PASSAGE_COMPRESS_PROMPTS["llm_summarize_prompt"]
     llm_summarize_max_tokens: int = 500
     llm_summarize_temperature: float = 0.1
@@ -248,7 +248,7 @@ class GeneratorConfig(BaseModel):
     name: str = ""
     enabled: bool = True
     technique: str = "llm"  # Options: "llm", "multi_llm"
-    model: str = "gemma3:4b"  # CURRENTLY IMPLEMENTED: supports ollama and gemini models
+    model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"  # CURRENTLY IMPLEMENTED: supports ollama and gemini models
 
     # Multi-LLM settings
     models: List[str] = []
@@ -282,7 +282,7 @@ class PostGenerationConfig(BaseModel):
     
     # Reflection and Revising settings
     provider: str = "ollama"
-    reflection_revising_model: str = "gemma3:4b"
+    reflection_revising_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
     max_revisions: int = 2
     
     # # Quality checks
@@ -321,7 +321,7 @@ class ModularRAGConfig(BaseModel):
     # Evaluation settings
     enable_evaluation: bool = True
     evaluation_metrics: List[str] = ["recall", "precision", "f1", "semantic_similarity", "llm_score"]
-    llm_eval_model: str = "gemma3:4b"
+    llm_eval_model: str = "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
     save_eval_cases: bool = False
     
     # Dataset settings

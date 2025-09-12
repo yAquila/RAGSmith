@@ -280,7 +280,7 @@ class RAGEvaluator:
         """Use LLM to evaluate generated answer quality"""
         try:
             eval_prompt = f"""Evaluate the following LLM response against the ground truth and return a score between 0 and 1. 
-Consider accuracy, completeness, and relevance. Return ONLY a JSON response with the score.
+Consider accuracy, completeness, and relevance. Return ONLY a JSON response with the score. DO NOT GIVE ANY ADDITIONAL INFORMATION ONLY SCORE.
 
 LLM Response: {generated_answer}
 
@@ -291,11 +291,11 @@ Return format: {{"score": 0.85}}"""
             # Patch: Use Gemini or Ollama based on model name
             from rag_pipeline.util.api.gemini_client import GeminiUtil
             from rag_pipeline.util.api.ollama_client import OllamaUtil
-            model = getattr(self.global_config, 'llm_eval_model', None) or getattr(self.config_dict.get('generator', None), 'model', 'gemma3:4b')
+            model = getattr(self.global_config, 'llm_eval_model', None) or getattr(self.config_dict.get('generator', None), 'model', 'alibayram/Qwen3-30B-A3B-Instruct-2507:latest')
             if model.lower().startswith("gemini"):
                 response = GeminiUtil.get_gemini_response(model, eval_prompt)
             else:
-                response = OllamaUtil.get_ollama_response(model, eval_prompt)
+                response = OllamaUtil.get_ollama_response(model, eval_prompt, is_eval=True)
             
             if isinstance(response, dict):
                 response_text = response.get('response', '')

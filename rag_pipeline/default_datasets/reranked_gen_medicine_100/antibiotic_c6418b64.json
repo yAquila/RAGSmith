@@ -634,19 +634,8 @@
     }
   ],
   "questions": {
-    "total_questions": 10,
+    "total_questions": 6,
     "items": [
-      {
-        "question": "What information is provided about == Resistance ==?",
-        "answer": "The text provides information about == Resistance == as described in the relevant chunks.",
-        "related_chunk_ids": [
-          "antibiotic_c6418b64_c0026"
-        ],
-        "category": "LONG_ANSWER",
-        "reranked_relative_chunk_ids": [
-          "antibiotic_c6418b64_c0026"
-        ]
-      },
       {
         "question": "What is the mechanism by which antibiotics such as metronidazole and tinidazole cause a disulfiram-like reaction with alcohol?",
         "answer": "Antibiotics like metronidazole and tinidazole cause a disulfiram-like chemical reaction with alcohol by inhibiting the enzyme acetaldehyde dehydrogenase, which is responsible for alcohol's breakdown. This inhibition can result in side effects such as vomiting, nausea, and shortness of breath.",
@@ -656,17 +645,6 @@
         "category": "INTERPRETATION",
         "reranked_relative_chunk_ids": [
           "antibiotic_c6418b64_c0015"
-        ]
-      },
-      {
-        "question": "What information is provided about Lead?",
-        "answer": "The text provides information about Lead as described in the relevant chunks.",
-        "related_chunk_ids": [
-          "antibiotic_c6418b64_c0003"
-        ],
-        "category": "LONG_ANSWER",
-        "reranked_relative_chunk_ids": [
-          "antibiotic_c6418b64_c0003"
         ]
       },
       {
@@ -683,21 +661,6 @@
         ]
       },
       {
-        "question": "What information is provided about Lead?",
-        "answer": "The text provides information about Lead as described in the relevant chunks.",
-        "related_chunk_ids": [
-          "antibiotic_c6418b64_c0003",
-          "antibiotic_c6418b64_c0004",
-          "antibiotic_c6418b64_c0005"
-        ],
-        "category": "LONG_ANSWER",
-        "reranked_relative_chunk_ids": [
-          "antibiotic_c6418b64_c0003",
-          "antibiotic_c6418b64_c0005",
-          "antibiotic_c6418b64_c0004"
-        ]
-      },
-      {
         "question": "How does the approach to antibiotic treatment, including the type of therapy and route of administration, differ between a suspected, non-severe infection and a known, severe systemic infection?",
         "answer": "For a suspected infection where the pathogen is unknown, empiric therapy is used, involving a broad-spectrum antibiotic. In non-severe cases, this is typically taken by mouth. In contrast, for a known, severe, deep-seated systemic infection, definitive therapy is initiated with a narrow-spectrum antibiotic targeting the identified pathogen, and it is administered intravenously or by injection.",
         "related_chunk_ids": [
@@ -708,23 +671,6 @@
         "reranked_relative_chunk_ids": [
           "antibiotic_c6418b64_c0008",
           "antibiotic_c6418b64_c0006"
-        ]
-      },
-      {
-        "question": "What information is provided about Lead?",
-        "answer": "The text provides information about Lead as described in the relevant chunks.",
-        "related_chunk_ids": [
-          "antibiotic_c6418b64_c0000",
-          "antibiotic_c6418b64_c0001",
-          "antibiotic_c6418b64_c0002",
-          "antibiotic_c6418b64_c0003"
-        ],
-        "category": "LONG_ANSWER",
-        "reranked_relative_chunk_ids": [
-          "antibiotic_c6418b64_c0003",
-          "antibiotic_c6418b64_c0002",
-          "antibiotic_c6418b64_c0000",
-          "antibiotic_c6418b64_c0001"
         ]
       },
       {

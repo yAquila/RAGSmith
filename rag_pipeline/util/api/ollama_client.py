@@ -46,21 +46,28 @@ class OllamaUtil:
         pass
 
     @staticmethod
-    def get_ollama_response(model, prompt):
+    def get_ollama_response(model, prompt, is_eval=False, system_prompt="ANSWER ONLY THE QUESTION YOU ARE ASKED AS CONCISE AS POSSIBLE."):
         """
         Get response from Ollama model.
         Returns a dict with keys: response, prompt_tokens, eval_count, tps
         """
-        # Use environment variable or fallback to default
-        ollama_api_url = os.getenv("OLLAMA_API_URL", "http://ollama-gpu-3:11435/api")
-        url = f"{ollama_api_url}/generate"
-        
         payload = {
             "model": model,
             "prompt": prompt,
             "verbose": True,
+            "system": system_prompt,
+            #"think":"low",
             "stream": False  # Set to False for a single response
         }
+        # Use environment variable or fallback to default
+        if is_eval:
+            ollama_api_url = os.getenv("OLLAMA_API_URL2", "http://rag-pipeline-ollama-gpu-2:11434/api")
+            payload["think"] = "low"
+        else :
+            ollama_api_url = os.getenv("OLLAMA_API_URL", "http://rag-pipeline-ollama-gpu:11434/api")
+        url = f"{ollama_api_url}/generate"
+        
+        
         headers = {'Content-Type': 'application/json'}
 
         try:
@@ -87,6 +94,7 @@ class OllamaUtil:
                 logger.warning(f"Cannot calculate TPS - eval_count: {eval_count}, eval_duration: {eval_duration}")
             
             response_text = data.get("response")
+            if is_eval: logger.info(f"Response text: {response_text}")
             # Remove <think>...</think> sections from the response, if present
             import re
             if response_text:
@@ -107,7 +115,7 @@ class OllamaUtil:
             }
         except requests.exceptions.RequestException as e:
             logger.error(f"Error connecting to Ollama server: {e}")
-            logger.error("Please ensure Ollama is running and the model is pulled.")
+            logger.error(f"Please ensure Ollama is running and the model: {model} is pulled.")
             return None 
         except Exception as e:
             logger.error(f"Error getting Ollama response: {e}")

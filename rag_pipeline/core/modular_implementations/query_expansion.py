@@ -63,7 +63,7 @@ class SimpleMultiQuery(QueryExpansionComponent):
         expanded_queries = []
         llm_token_count = {}
         num_expanded_queries = self.config.get("num_expanded_queries", 3)
-        model = self.config.get("model", "gemma3:4b")
+        model = self.config.get("model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         
         prompt = self.config.get("prompt", "")
         response = self.client.get_ollama_response(model, prompt.format(query=query, num_expanded_queries=num_expanded_queries))
@@ -182,7 +182,7 @@ class HyDE(SimpleMultiQuery):
         """Generate documents using HyDE (Hypothetical Document Embeddings)"""
         expanded_queries = []
         llm_token_count = {}
-        model = self.config.get("model", "gemma3:4b")
+        model = self.config.get("model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         total_prompt_tokens = 0
         total_eval_count = 0
         num_expanded_queries = self.config.get("num_expanded_queries", 3)
@@ -282,7 +282,7 @@ class SimpleQueryRefinement(QueryExpansionComponent):
         # Get configuration parameters
         prompt_template = self.config.get("refinement_clarification_prompt", "")
         strategy = self.config.get("refinement_strategy", "clarification")
-        model = self.config.get("refinement_model", "gemma3:4b")
+        model = self.config.get("refinement_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         temperature = self.config.get("refinement_temperature", 0.1)
         max_tokens = self.config.get("refinement_max_tokens", 100)
         

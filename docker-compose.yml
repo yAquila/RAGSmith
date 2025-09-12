@@ -2,94 +2,48 @@ networks:
   rag_pipeline_network:
 
 x-ollama: &service-ollama
-  image: ollama/ollama:0.9.0
-  container_name: ollama-gpu-3
+  image: ollama/ollama
+  container_name: rag-pipeline-ollama-gpu
   networks: ['rag_pipeline_network']
   restart: unless-stopped
   ports:
     - 11435:11434
   volumes:
-    - ./ollama_storage_3:/root/.ollama
+    - ./ollama_storage_rag_pipeline:/root/.ollama
 
 services:
-  # postgres:
-  #   image: postgres:16-alpine
-  #   networks: ['rag_pipeline_network']
-  #   environment:
-  #     POSTGRES_USER: user
-  #     POSTGRES_PASSWORD: password
-  #     POSTGRES_DB: ollama_chat
-  #   ports:
-  #     - "5432:5432"
-  #   volumes:
-  #     - ./postgresql_storage/:/var/lib/postgresql/data
-  
-  # backend:
-  #   build:
-  #     context: ./backend
-  #     dockerfile: Dockerfile
-  #   container_name: backend
-  #   networks: ['rag_pipeline_network']
-  #   volumes:
-  #     - ./backend:/app
-  #     - benchmark_uploads:/tmp/benchmark_uploads
-  #     - benchmark_history:/app/data/history
-  #   ports:
-  #     - "8000:8000"
-  #   environment:
-  #     - DATABASE_URL=postgresql://user:password@postgres:5432/ollama_chat
-  #     - OLLAMA_API_URL=http://ollama-gpu:11434/api
-  #     - QDRANT_URL=http://qdrant:6333
-
-  # frontend:
-  #   build:
-  #     context: ./frontend
-  #     dockerfile: Dockerfile
-  #   container_name: frontend
-  #   networks: ['rag_pipeline_network']
-  #   volumes:
-  #     - ./frontend:/app
-  #     - /app/node_modules
-  #   ports:
-  #     - "5173:5173"
-  #   environment:
-  #     - ENVIRONMENT=development
-  #     - REACT_APP_API_URL=http://localhost:8000
 
   rag_pipeline:
-    build:
-      context: ./rag_pipeline
-      dockerfile: Dockerfile
-    container_name: rag_pipeline
+    image: rag_pipeline_deneme_rag_pipeline
+    container_name: rag-pipeline
     networks: ['rag_pipeline_network']
     restart: unless-stopped
     volumes:
       - .:/app
-      - ./rag_pipeline_reranker_cache:/root/.cache/rag_pipeline/reranker_models  # Persistent cache for reranker models
+      - ./rag_pipeline_reranker_cache  # Persistent cache for reranker models
     depends_on:
-      - qdrant2
-      - ollama-gpu-3
+      - qdrant
+      - rag-pipeline-ollama-gpu
     ports:
       - 8060:8060
     environment:
-      - QDRANT_URL=http://qdrant2:6333
-      - OLLAMA_API_URL=http://ollama-gpu-3:11434/api
+      - QDRANT_URL=http://rag-pipeline-qdrant:6333
+      - OLLAMA_API_URL=http://rag-pipeline-ollama-gpu:11434/api
+      - OLLAMA_API_URL2=http://rag-pipeline-ollama-gpu-2:11434/api
       - GEMINI_API_KEY=AIzaSyDK4g-vjiopNs4hP1pVEOgrn4iZWgoTkS0
     deploy:
       resources:
         reservations:
           devices:
             - driver: nvidia
-              device_ids: ['2']  # GPU for reranker acceleration - change if using different GPU
+              device_ids: ['0']  # GPU for reranker acceleration - change if using different GPU
               capabilities: [gpu]
     # Uncomment to test GPU and cache setup:
     # command: ["python", "test_docker_setup.py"]
 
   genetic_search_rag:
-    build:
-      context: ./genetic_search_for_rag_pipeline
-      dockerfile: Dockerfile
-    container_name: genetic_search_rag
+    image: rag_pipeline_deneme_genetic_search_rag
+    container_name: rag-pipeline-genetic-search-rag
     networks: ['rag_pipeline_network']
     restart: unless-stopped
     volumes:
@@ -102,24 +56,24 @@ services:
       - GA_RESULTS_DIR=/app/results  # Directory for saving optimization results
       - CACHE_FILE_PATH=/app/results/rag_evaluation_cache.json  # Persistent cache file path
 
-  qdrant2:
-    image: qdrant/qdrant
-    container_name: qdrant2
+  qdrant:
+    image: airs_qdrant_server
+    container_name: rag-pipeline-qdrant
     networks: ['rag_pipeline_network']
     restart: unless-stopped
     ports:
-      - 6335:6333
+      - "6335:6333"
     volumes:
       - rag_pipeline_qdrant_storage:/qdrant/storage
       
-  ollama-gpu-3:
+  rag-pipeline-ollama-gpu:
     <<: *service-ollama
-    container_name: ollama-gpu-3
+    container_name: rag-pipeline-ollama-gpu
     networks: ['rag_pipeline_network']
     ports:
       - "11435:11434"
     volumes:
-      - ./ollama_storage_3:/root/.ollama
+      - ./ollama_storage_rag_pipeline:/root/.ollama
     logging:
       driver: "none"
     deploy:
@@ -127,12 +81,33 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              device_ids: ['3', '4']
+              device_ids: ['1']
               capabilities: [gpu]
+
+  rag-pipeline-ollama-gpu-2:
+    image: ollama/ollama
+    container_name: rag-pipeline-ollama-gpu-2
+    networks: ['rag_pipeline_network']
+    restart: unless-stopped
+    ports:
+      - "11436:11434"
+    volumes:
+      - ./ollama_storage_rag_pipeline:/root/.ollama
+    logging:
+      driver: "none"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['2', '3']
+              capabilities: [gpu]
+
+
 
   neo4j:
     image: neo4j:latest
-    container_name: neo4j
+    container_name: rag-pipeline-neo4j
     networks: ['rag_pipeline_network']
     restart: unless-stopped
     ports:
@@ -147,14 +122,11 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              device_ids: ['4']
+              device_ids: ['0']
               capabilities: [gpu]
 
 volumes:
-  ollama_storage_3:
-  #postgresql_storage:
+  ollama_storage_rag_pipeline:
   rag_pipeline_qdrant_storage:
   rag_pipeline_reranker_cache:
   neo4j_storage:
-  #benchmark_uploads:  # Volume for temporary dataset uploads
-  #benchmark_history:  # Volume for persistent benchmark run history

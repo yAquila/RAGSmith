@@ -387,7 +387,7 @@
     }
   ],
   "questions": {
-    "total_questions": 10,
+    "total_questions": 9,
     "items": [
       {
         "question": "What is the underlying cause of Cushing's disease?",
@@ -448,21 +448,6 @@
           "endocrinesystem_862e18bb_c0004",
           "endocrinesystem_862e18bb_c0003",
           "endocrinesystem_862e18bb_c0002"
-        ]
-      },
-      {
-        "question": "What information is provided about == = Glands ==?",
-        "answer": "The text provides information about == = Glands == as described in the relevant chunks.",
-        "related_chunk_ids": [
-          "endocrinesystem_862e18bb_c0005",
-          "endocrinesystem_862e18bb_c0006",
-          "endocrinesystem_862e18bb_c0007"
-        ],
-        "category": "LONG_ANSWER",
-        "reranked_relative_chunk_ids": [
-          "endocrinesystem_862e18bb_c0006",
-          "endocrinesystem_862e18bb_c0007",
-          "endocrinesystem_862e18bb_c0005"
         ]
       },
       {

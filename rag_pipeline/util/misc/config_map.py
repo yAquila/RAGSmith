@@ -13,7 +13,7 @@ PRE_EMBEDDING_CONFIGS = {
         technique="contextual_chunk_headers",
         add_headers=True,
         header_generation_strategy="semantic",
-        header_generation_model="gemma3:4b",
+        header_generation_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         header_provider="ollama",
         header_max_length=50,
     ),
@@ -22,7 +22,7 @@ PRE_EMBEDDING_CONFIGS = {
         enabled=True,
         technique="hype",
         num_hype_questions=3,
-        hype_model="gemma3:4b",
+        hype_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
     ),
     "pre-embedding_parent_document_retriever": PreEmbeddingConfig(
         name="pre_embedding_parent_document_retriever",
@@ -107,7 +107,7 @@ QUERY_EXPANSION_CONFIGS = {
         technique="simple_query_refinement",
         provider="ollama",
         refinement_strategy="clarification",
-        refinement_model="gemma3:4b",
+        refinement_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
     ),
     "query-expansion_refinement_rephrasing": QueryExpansionConfig(
         name="simple_query_refinement_rephrasing",
@@ -115,7 +115,7 @@ QUERY_EXPANSION_CONFIGS = {
         technique="simple_query_refinement",
         provider="ollama",
         refinement_strategy="rephrasing",
-        refinement_model="gemma3:4b",
+        refinement_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
     ),
 }
 
@@ -128,14 +128,6 @@ RETRIEVAL_CONFIGS = {
         embedding_model="mxbai-embed-large",
         similarity_metric="cosine"
     ),
-    "retrieval-vector_nomic": RetrievalConfig(
-        name="vector_nomic",
-        enabled=True,
-        technique="simple_vector_rag",
-        top_k=10,
-        embedding_model="nomic-embed-text",
-        similarity_metric="cosine"
-    ),
     "retrieval-keyword_bm25": RetrievalConfig(
         name="keyword_bm25",
         enabled=True,
@@ -146,6 +138,22 @@ RETRIEVAL_CONFIGS = {
         remove_stopwords=True,
         apply_stemming=False,
         use_advanced_tokenization=False
+    ),
+    "retrieval-graph_rag": RetrievalConfig(
+        name="graph_rag",
+        enabled=True,
+        technique="graph_rag",
+        top_k=10,
+        embedding_model="mxbai-embed-large",
+        similarity_metric="cosine"
+    ),
+    "retrieval-hypergraph_rag": RetrievalConfig(
+        name="hypergraph_rag",
+        enabled=True,
+        technique="hypergraph_rag",
+        top_k=10,
+        embedding_model="mxbai-embed-large",
+        similarity_metric="cosine"
     ),
     "retrieval-hybrid_vector_keyword_cc": RetrievalConfig(
         name="hybrid_vector_keyword_cc",
@@ -238,14 +246,14 @@ PASSAGE_RERANK_CONFIGS = {
         enabled=True,
         technique="llm_rerank",
         llm_rerank_top_k=5,
-        llm_rerank_model="gemma3:4b",
+        llm_rerank_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
     ),
     "passage-rerank_cellm_parallel_rerank": PassageRerankConfig(
         name="cellm_parallel_rerank",
         enabled=True,
         technique="cellm_parallel_rerank",
         ce_model="BAAI/bge-reranker-v2-m3",
-        llm_model="gemma3:4b",
+        llm_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         top_k=5,
         parallel_ensemble_method="weighted",
         ce_weight=0.7,
@@ -306,7 +314,7 @@ PASSAGE_COMPRESS_CONFIGS = {
         enabled=True,
         technique="llm_summarize",
         provider="ollama",
-        llm_summarize_model="gemma3:4b",
+        llm_summarize_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         llm_summarize_max_tokens=500,
         llm_summarize_temperature=0.1,
     ),
@@ -315,16 +323,16 @@ PASSAGE_COMPRESS_CONFIGS = {
         enabled=True,
         technique="tree_summarize",
         provider="ollama",
-        tree_summarize_model="gemma3:4b",
+        tree_summarize_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         max_fan_in=3
     ),
-    "passage-compress_llm_lingua": PassageCompressConfig(
-        name="llm_lingua",
-        enabled=True,
-        technique="llm_lingua",
-        llm_lingua_model="microsoft/llmlingua-2-xlm-roberta-large-meetingbank",
-        llm_lingua_compression_rate=0.33
-    )   
+    # "passage-compress_llm_lingua": PassageCompressConfig(
+    #     name="llm_lingua",
+    #     enabled=True,
+    #     technique="llm_lingua",
+    #     llm_lingua_model="microsoft/llmlingua-2-xlm-roberta-large-meetingbank",
+    #     llm_lingua_compression_rate=0.33
+    # )   
 }
 
 PROMPT_MAKER_CONFIGS = {
@@ -348,36 +356,28 @@ PROMPT_MAKER_CONFIGS = {
 }
 
 GENERATOR_CONFIGS = {
-    "generator_llama3.2:1b": GeneratorConfig(
-        name="llama3.2:1b",
+    "generator_gemma3:27b": GeneratorConfig(
+        name="gemma3:27b",
         enabled=True,
         technique="llm",
-        model="llama3.2:1b",
+        model="gemma3:27b",
         provider="ollama",
         max_tokens=1000
     ),
-    "generator_gemma3:4b": GeneratorConfig(
-        name="gemma3:4b",
+    "generator_alibayram/Qwen3-30B-A3B-Instruct-2507:latest": GeneratorConfig(
+        name="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         enabled=True,
         technique="llm",
-        model="gemma3:4b",
+        model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         provider="ollama",
         max_tokens=1000
     ),
-    "generator_gemma3:12b": GeneratorConfig(
-        name="gemma3:12b",
-        enabled=True,
-        technique="llm",
-        model="gemma3:12b",
-        provider="ollama",
-        max_tokens=1000
-    ),
-    "generator_multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemma3:12b": GeneratorConfig(
-        name="multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemma3:12b",
+    "generator_multi_llm_gemma3:27b-alibayram/Qwen3-30B-A3B-Instruct-2507:latest-Ensemble:alibayram/Qwen3-30B-A3B-Instruct-2507:latest": GeneratorConfig(
+        name="multi_llm_gemma3:27b-alibayram/Qwen3-30B-A3B-Instruct-2507:latest-Ensemble:alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         enabled=True,
         technique="multi_llm",
-        models=["llama3.2:1b", "gemma3:4b"],
-        ensemble_llm_model="gemma3:12b",
+        models=["gemma3:27b", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"],
+        ensemble_llm_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
     )
 }
 
@@ -392,7 +392,7 @@ POST_GENERATION_CONFIGS = {
         enabled=True,
         technique="reflection_revising",
         provider="ollama",
-        reflection_revising_model="gemma3:4b",
+        reflection_revising_model="alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         max_revisions=2
     )
 }

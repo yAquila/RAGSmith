@@ -70,7 +70,7 @@ class ReflectionRevising(PostGenerationComponent):
         """
 
         response = self.client.get_ollama_response(
-            self.config.get("reflection_revising_model", "gemma3:4b"), 
+            self.config.get("reflection_revising_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"), 
             reflection_prompt
         )
         
@@ -90,7 +90,7 @@ class ReflectionRevising(PostGenerationComponent):
         """
 
         response = self.client.get_ollama_response(
-            self.config.get("reflection_revising_model", "gemma3:4b"), 
+            self.config.get("reflection_revising_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"), 
             enhanced_prompt
         )
         
@@ -137,7 +137,7 @@ class ReflectionRevising(PostGenerationComponent):
                 break
         
         llm_token_count = {}
-        model = self.config.get("reflection_revising_model", "gemma3:4b")
+        model = self.config.get("reflection_revising_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         llm_token_count[model] = {"in": total_prompt_tokens, "out": total_eval_count}
         result = PostGenerationResult(
             text=current_answer,
