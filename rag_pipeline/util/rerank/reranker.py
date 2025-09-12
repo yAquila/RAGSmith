@@ -29,7 +29,7 @@ class RerankerUtil:
         
         # Set up model caching directory
         if cache_dir is None:
-            cache_dir = os.path.join(os.path.expanduser("~"), ".cache", "rag_pipeline", "reranker_models")
+            cache_dir = "rag_pipeline_reranker_cache"
         self.cache_dir = cache_dir
         os.makedirs(self.cache_dir, exist_ok=True)
         
@@ -166,7 +166,7 @@ def get_reranker(model_name: str = 'BAAI/bge-reranker-v2-m3', cache_dir: Optiona
     need_new_instance = (
         _reranker_instance is None or 
         _reranker_instance.model_name != model_name or
-        _reranker_instance.cache_dir != (cache_dir or os.path.join(os.path.expanduser("~"), ".cache", "rag_pipeline", "reranker_models")) or
+        _reranker_instance.cache_dir != (cache_dir or "rag_pipeline_reranker_cache") or
         _reranker_instance.force_cpu != force_cpu
     )
     

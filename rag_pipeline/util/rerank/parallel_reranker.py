@@ -15,7 +15,7 @@ class ParallelRerankerUtil:
     
     def __init__(self, 
                  ce_model: str = 'BAAI/bge-reranker-v2-m3',
-                 llm_model: str = 'llama3.2:1b',
+                 llm_model: str = 'alibayram/Qwen3-30B-A3B-Instruct-2507:latest',
                  ensemble_method: str = "weighted",
                  ce_weight: float = 0.7,
                  llm_weight: float = 0.3,

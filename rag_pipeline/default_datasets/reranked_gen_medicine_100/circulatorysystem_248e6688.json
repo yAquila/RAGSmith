@@ -425,17 +425,6 @@
         ]
       },
       {
-        "question": "What information is provided about == History ==?",
-        "answer": "The text provides information about == History == as described in the relevant chunks.",
-        "related_chunk_ids": [
-          "circulatorysystem_248e6688_c0025"
-        ],
-        "category": "LONG_ANSWER",
-        "reranked_relative_chunk_ids": [
-          "circulatorysystem_248e6688_c0025"
-        ]
-      },
-      {
         "question": "Compare the blood circulatory system and the lymphatic system in vertebrates, highlighting their key differences in structure, the fluid they transport, and their functional relationship.",
         "answer": "In vertebrates, the lymphatic system is a complementary, secondary system to the blood circulatory system. The primary structural difference is that the blood circulatory system is a closed system, where blood is always contained within the heart and blood vessels, while the lymphatic system is an open system. The blood circulatory system circulates blood—a fluid containing plasma, cells, and platelets—to transport oxygen and nutrients. In contrast, the lymphatic system circulates lymph, which is excess plasma filtered from blood capillaries, and its main function is to return this fluid to the blood circulation, preventing the blood from becoming depleted of fluid. The circulation of lymph is also much slower than that of blood.",
         "related_chunk_ids": [

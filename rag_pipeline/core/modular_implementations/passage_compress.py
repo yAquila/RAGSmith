@@ -47,7 +47,7 @@ class TreeSummarize(PassageCompressComponent):
 
     def summarize_chunk(self, text: str) -> Tuple[str, int, int]:
         prompt = self.config.get("tree_summarize_prompt", "")
-        response = self.client.get_ollama_response(self.config.get("tree_summarize_model", "gemma3:4b"), prompt.format(context_str=text))
+        response = self.client.get_ollama_response(self.config.get("tree_summarize_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"), prompt.format(context_str=text))
         if isinstance(response, dict):
             return response.get('response', '').strip(), response.get('prompt_tokens', 0), response.get('eval_count', 0)
         else:
@@ -66,7 +66,7 @@ class TreeSummarize(PassageCompressComponent):
         current_metadatas = doc_metadatas
 
         llm_token_count = {}
-        model = self.config.get("llm_summarize_model", "gemma3:4b")
+        model = self.config.get("llm_summarize_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         total_prompt_tokens = 0.0
         total_eval_count = 0.0
 
@@ -136,7 +136,7 @@ class LLMSummarizeEachChunk(PassageCompressComponent):
         """Compress documents using LLM"""
         compressed_documents = []
         llm_token_count = {}
-        model = self.config.get("llm_summarize_model", "gemma3:4b")
+        model = self.config.get("llm_summarize_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         total_prompt_tokens = 0
         total_eval_count = 0
         
@@ -173,7 +173,7 @@ class LLMLinguaCompress(PassageCompressComponent):
     def _setup_client(self):
         """Setup the appropriate LLM client"""
         from llmlingua import PromptCompressor
-        self.llm_lingua = PromptCompressor(model_name=self.config.get("llm_lingua_model", "microsoft/llmlingua-2-xlm-roberta-large-meetingbank"), use_llmlingua2=True)
+        self.llm_lingua = PromptCompressor(model_name=self.config.get("llm_lingua_model", "microsoft/llmlingua-2-xlm-roberta-large-meetingbank"), use_llmlingua2=False)
 
     
     async def compress_passages(self, documents: List[Document], query: Query) -> PassageCompressResult:

@@ -31,7 +31,7 @@ class RAGDataset:
             folder_path = os.path.join(
                 "rag_pipeline",
                 "default_datasets",
-                "reranked_gen_programming_5"
+                "military_10"
             )
         
         try:
@@ -104,7 +104,7 @@ class RAGDataset:
             folder_path = os.path.join(
                 "rag_pipeline",
                 "default_datasets",
-                "reranked_gen_programming_5"
+                "military_10"
             )
         
         try:
@@ -242,7 +242,7 @@ class RAGDataset:
             folder_path = os.path.join(
                 "rag_pipeline",
                 "default_datasets",
-                "reranked_gen_programming_5"
+                "military_10"
             )
         
         # Construct the JSON file path
@@ -286,7 +286,7 @@ class RAGDataset:
             folder_path = os.path.join(
                 "rag_pipeline",
                 "default_datasets",
-                "reranked_gen_programming_5"
+                "military_10"
             )
         
         # Construct the JSON file path
@@ -323,7 +323,7 @@ class RAGDataset:
             folder_path = os.path.join(
                 "rag_pipeline",
                 "default_datasets",
-                "reranked_gen_programming_5"
+                "military_10"
             )
         
         # Extract article_id from chunk_id (e.g., "captheorem_82c03c20_c0000" -> "captheorem_82c03c20")

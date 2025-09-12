@@ -95,8 +95,8 @@ class MultiLLMGenerator(GeneratorComponent):
     
     def _setup_client(self):
         """Setup the appropriate LLM client"""
-        models = self.config.get("models", ["llama3.2:1b", "gemma3:4b"])
-        ensemble_llm_model = self.config.get("ensemble_llm_model", "gemma3:4b")
+        models = self.config.get("models", ["gemma3:27b", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"])
+        ensemble_llm_model = self.config.get("ensemble_llm_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         if ensemble_llm_model.lower().startswith("gemini"):
             from rag_pipeline.util.api.gemini_client import GeminiUtil
             self.clients[ensemble_llm_model] = GeminiUtil
@@ -117,7 +117,7 @@ class MultiLLMGenerator(GeneratorComponent):
         Generate answers using multiple LLMs. 
         Returns a list of tuples: (generated_text, prompt_tokens, eval_count, model_name)
         """
-        models = self.config.get("models", ["llama3.2:1b", "gemma3:4b"])
+        models = self.config.get("models", ["gemma3:27b", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"])
         results = []
         llm_token_count = {}
         for model in models:
@@ -194,14 +194,14 @@ You are a response synthesizer. Your task is to create one high-quality final an
 
 """
         ensemble_prompt = ensemble_prompt.format(original_prompt_with_context=original_prompt_with_context)
-        ensemble_llm_client = self.clients[self.config.get("ensemble_llm_model", "gemma3:4b")]
-        if self.config.get("ensemble_llm_model", "gemma3:4b").lower().startswith("gemini"):
-            ensemble_llm_response = ensemble_llm_client.get_gemini_response(self.config.get("ensemble_llm_model", "gemma3:4b"), ensemble_prompt)
+        ensemble_llm_client = self.clients[self.config.get("ensemble_llm_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")]
+        if self.config.get("ensemble_llm_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest").lower().startswith("gemini"):
+            ensemble_llm_response = ensemble_llm_client.get_gemini_response(self.config.get("ensemble_llm_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"), ensemble_prompt)
         else:
-            ensemble_llm_response = ensemble_llm_client.get_ollama_response(self.config.get("ensemble_llm_model", "gemma3:4b"), ensemble_prompt)
+            ensemble_llm_response = ensemble_llm_client.get_ollama_response(self.config.get("ensemble_llm_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"), ensemble_prompt)
         logger.debug(f"Ensemble LLM prompt: {ensemble_prompt}")
         logger.debug(f"Ensemble LLM response: {ensemble_llm_response}")
-        ensemble_model = self.config.get("ensemble_llm_model", "gemma3:4b")
+        ensemble_model = self.config.get("ensemble_llm_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         if isinstance(ensemble_llm_response, dict):
             ensemble_llm_generated_text = ensemble_llm_response.get('response', '')
             ensemble_llm_prompt_tokens = float(ensemble_llm_response.get('prompt_tokens', len(ensemble_prompt.split())))

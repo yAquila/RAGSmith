@@ -20,7 +20,6 @@ from pydantic import BaseModel
 import uvicorn
 
 from rag_pipeline.core import ModularRAGPipeline, ModularRAGConfig
-from rag_pipeline.configs.basic_modular_config import get_basic_config   
 from rag_pipeline.util.misc.config_map import CONFIG_MAP
 
 logging.basicConfig(
@@ -97,7 +96,7 @@ def parse_config(config_dict: Dict[str, str] = None):
     Parse the config file and return a ModularRAGConfig object
     """
     config = ModularRAGConfig(
-        run_name="retrieval - gemma3:4b",
+        run_name="retrieval - alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         save_eval_cases=False,
         enable_logging=True,
         log_level="INFO",
@@ -118,7 +117,7 @@ def parse_config(config_dict: Dict[str, str] = None):
         # Dataset/global settings
         dataset_path=None,
         qdrant_collection_hash=None,
-        max_test_cases=3,
+        max_test_cases=100,
         test_case_offset=0,
         eval_batch_size=1,
         parallel_execution=True,
@@ -138,9 +137,10 @@ def parse_config(config_dict: Dict[str, str] = None):
             'semantic_similarity': 0.5
         },
         overall_weights={
-            'retrieval': 0.3,
-            'generation': 0.7
-        }
+            'retrieval': 0.5,
+            'generation': 0.5
+        },
+        llm_eval_model='gpt-oss:120B'
     )
     return config
 
@@ -160,7 +160,7 @@ async def run_rag_evaluation():
         "passage-augment": "passage-augment_none",
         "passage-compress": "passage-compress_none",
         "prompt-maker": "prompt-maker_simple_listing",
-        "generator": "generator_gemma3:4b",
+        "generator": "generator_alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         "post-generation": "post-generation_none",
     }
 
@@ -417,63 +417,6 @@ def _format_detailed_metrics(aggregated_metrics) -> str:
         lines.append(f"  Avg Evaluation Times: Retrieval={retr_eval_time:.3f}s, Generation={gen_eval_time:.3f}s")
     
     return "\n".join(lines)
-
-def run_super_quick_test():
-    """Run a super quick test to verify pipeline works (30 seconds max)"""
-    
-    logger.info("Running super quick test...")
-    
-    config = RAGConfig(
-        embedding_models=["nomic-embed-text"],  # Only 1 embedding model
-        llm_models=["llama3.2:1b"],             # Only fastest LLM model
-        eval_llm_model="llama3.2:1b",          # Use fastest model for evaluation
-        retrieval_k=2,                         # Only 2 retrieved docs
-        rerank_model=None,                     # Disable reranking for speed
-        test_with_and_without_reranking=False, # Not applicable when rerank_model is None
-        rerank_cache_dir=None,                 # Use default cache directory
-        rerank_force_cpu=False,                # Use GPU if available
-        eval_batch_size=1,                     # Process 1 at a time
-        max_test_cases=1,                      # Only test 1 case
-        
-        # Parallel reranking settings
-        enable_parallel_reranking=False,
-        rerank_ensemble_method="weighted",
-        ce_rerank_weight=0.7,
-        llm_rerank_weight=0.3,
-    )
-    
-    pipeline = RAGPipeline(config)
-    return asyncio.run(pipeline.run_evaluation())
-
-def run_quick_test():
-    """Run a quick test with minimal models and test cases"""
-    
-    logger.info("Running quick test...")
-    
-    config = RAGConfig(
-        embedding_models=["nomic-embed-text"],  # Only 1 embedding model
-        llm_models=["llama3.2:1b"],             # Only 1 LLM model (fastest)
-        eval_llm_model="llama3.2:1b",          # Use fastest model for evaluation
-        retrieval_k=5,                         # Fewer retrieved docs
-        rerank_model="BAAI/bge-reranker-v2-m3", # Enable cross-encoder reranking for testing
-        test_with_and_without_reranking=True,  # Test both with and without cross-encoder reranking
-        rerank_cache_dir=None,                 # Use default cache directory
-        rerank_force_cpu=False,                # Use GPU if available
-        llm_rerank_model="gemma3:4b",       # Enable LLM reranking for testing
-        test_with_and_without_llm_reranking=True,  # Test both with and without LLM reranking
-        eval_batch_size=1,                     # Smaller batches
-        max_test_cases=2,                      # Only test first 2 cases
-        
-        # Parallel reranking settings
-        enable_parallel_reranking=True,
-        rerank_ensemble_method="weighted",
-        ce_rerank_weight=0.7,
-        llm_rerank_weight=0.3,
-    )
-    
-    pipeline = RAGPipeline(config)
-    return asyncio.run(pipeline.run_evaluation())
-
 
 
 def main():

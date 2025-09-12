@@ -39,7 +39,7 @@ class SimilarityThresholdFilter(PassageFilterComponent):
         min_passages = self.config.get("min_passages", 1)
         max_passages = self.config.get("max_passages", 10)
         
-        logger.info(f"Docs have scores: {[doc.score for doc in documents]}")
+        logger.debug(f"Docs have scores: {[doc.score for doc in documents]}")
         # Filter by threshold
         filtered = [doc for doc in documents if (doc.score or 0.0) >= threshold]
         

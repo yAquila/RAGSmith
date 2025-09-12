@@ -146,7 +146,7 @@ class CELLM_ParallelRerank(PassageRerankComponent):
             
             # Get reranker configuration
             ce_model = self.config.get("ce_model", "BAAI/bge-reranker-v2-m3")
-            llm_model = self.config.get("llm_model", "gemma3:4b")
+            llm_model = self.config.get("llm_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
             ensemble_method = self.config.get("parallel_ensemble_method", "weighted")
             ce_weight = self.config.get("ce_weight", 0.7)
             llm_weight = self.config.get("llm_weight", 0.3)

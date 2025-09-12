@@ -69,6 +69,7 @@ class GeminiUtil:
             Dict containing response text and metrics, or None if error occurred
         """
         try:
+            logger.info("Gemini CALISIYOR!!!")
             client = GeminiUtil.get_client()
             
             # Map common model names to Gemini model names
@@ -152,6 +153,7 @@ class GeminiUtil:
             List of available model names
         """
         try:
+            logger.info("GEMINI CALISTI -1 : ")
             client = GeminiUtil.get_client()
             models = client.list_models()
             
