@@ -143,6 +143,28 @@ rag_pipeline_deneme/
 - NVIDIA GPU with CUDA support
 - nvidia-docker runtime
 
+### 0. Configure API Keys (Important!)
+
+⚠️ **Security Note**: Never commit API keys to version control!
+
+The repository uses environment variables for sensitive credentials. Create a `.env` file in the root directory:
+
+```bash
+# Create .env file
+cat > .env << 'EOF'
+# Google Gemini API Key (optional, only if using Gemini models)
+# Get your key from: https://makersuite.google.com/app/apikey
+GEMINI_API_KEY=your-actual-gemini-api-key-here
+
+# Other configurations (already set in docker-compose.yml)
+QDRANT_URL=http://rag-pipeline-qdrant:6333
+OLLAMA_API_URL=http://rag-pipeline-ollama-gpu:11434/api
+OLLAMA_API_URL2=http://rag-pipeline-ollama-gpu-2:11434/api
+EOF
+```
+
+**Note**: The `.env` file is already in `.gitignore` and will not be committed. The `docker-compose.yml` now references `${GEMINI_API_KEY}` from your environment.
+
 ### 1. Start All Services
 
 ```bash
@@ -772,14 +794,16 @@ docker-compose down
 
 ### Key Environment Variables
 
-Set in `docker-compose.yml`:
+Set in `docker-compose.yml` or `.env` file:
 - `RAG_PIPELINE_URL`: URL of RAG evaluation API (default: http://rag_pipeline:8060)
 - `OLLAMA_API_URL`: Primary Ollama server URL
 - `OLLAMA_API_URL2`: Secondary Ollama server URL
 - `QDRANT_URL`: Vector database URL
-- `GEMINI_API_KEY`: Google Gemini API key (optional)
+- `GEMINI_API_KEY`: Google Gemini API key (optional, set in `.env` file)
 - `CACHE_FILE_PATH`: Path for GA evaluation cache
 - `GA_RESULTS_DIR`: Directory for saving optimization results
+
+**Security Best Practice**: Store sensitive values like `GEMINI_API_KEY` in a `.env` file (already in `.gitignore`), not in `docker-compose.yml`.
 
 ---
 
