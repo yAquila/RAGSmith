@@ -6,6 +6,24 @@ by interfacing with an external RAG evaluation API. The evaluator takes
 a combination of component selections and returns a performance score.
 """
 
+"""
+# backup
+"retrieval": [
+                "retrieval-vector_mxbai",
+                "retrieval-keyword_bm25",
+                "retrieval-graph_rag",
+                "retrieval-hypergraph_rag",
+                "retrieval-hybrid_vector_keyword_cc",
+                "retrieval-hybrid_vector_graph_simply",
+                "retrieval-hybrid_graph_hypergraph_simply",
+                "retrieval-hybrid_vector_graph_hypergraph_simply",
+                "retrieval-hybrid_vector_keyword_graph_simply",
+                "retrieval-hybrid_vector_keyword_hypergraph_simply",
+                "retrieval-hybrid_vector_keyword_graph_hypergraph_simply"
+            ],
+
+"""
+
 import requests
 import json
 import time
@@ -79,33 +97,29 @@ class RAGPipelineEvaluator:
         self.component_options = {
             "pre-embedding": [
                 "pre-embedding_none",
-                # "pre-embedding_contextual_chunk_headers",
-                # "pre-embedding_hype",
+                "pre-embedding_contextual_chunk_headers",
+                "pre-embedding_hype",
                 "pre-embedding_parent_document_retriever"
             ],
             "query-expansion": [
                 "query-expansion_none",
                 "query-expansion_simple_multi_query_cc_dbsf", 
-                # "query-expansion_simple_multi_query_borda",
-                # "query-expansion_rag_fusion",
+                "query-expansion_simple_multi_query_borda",
+                "query-expansion_rag_fusion",
                 "query-expansion_decomposition_cc",
-                # "query-expansion_hyde_cc",
-                # "query-expansion_step_back_prompting_cc",
-                # "query-expansion_graph_as_qe_cc",
+                "query-expansion_hyde_cc",
+                "query-expansion_step_back_prompting_cc",
+                "query-expansion_graph_as_qe_cc",
                 "query-expansion_refinement_clarification",
                 "query-expansion_refinement_rephrasing"
             ],
             "retrieval": [
                 "retrieval-vector_mxbai",
-                # "retrieval-vector_nomic",
                 "retrieval-keyword_bm25",
+                "retrieval-graph_rag",
                 "retrieval-hybrid_vector_keyword_cc",
-                # "retrieval-hybrid_vector_graph_simply",
-                # "retrieval-hybrid_graph_hypergraph_simply",
-                # "retrieval-hybrid_vector_graph_hypergraph_simply",
-                # "retrieval-hybrid_vector_keyword_graph_simply",
-                # "retrieval-hybrid_vector_keyword_hypergraph_simply",
-                # "retrieval-hybrid_vector_keyword_graph_hypergraph_simply"
+                "retrieval-hybrid_vector_graph_simply",
+                "retrieval-hybrid_vector_keyword_graph_simply"
             ],
             "passage-rerank": [
                 "passage-rerank_none",
@@ -120,13 +134,13 @@ class RAGPipelineEvaluator:
             "passage-augment": [
                 "passage-augment_none",
                 "passage-augment_prev_next_augmenter",
-                # "passage-augment_relevant_segment_extractor"
+                "passage-augment_relevant_segment_extractor"
             ],
             "passage-compress": [
                 "passage-compress_none",
-                # "passage-compress_llm_summarize",
-                # "passage-compress_tree_summarize",
-                "passage-compress_llm_lingua"
+                "passage-compress_llm_summarize",
+                "passage-compress_tree_summarize",
+                # "passage-compress_llm_lingua"
             ],
             "prompt-maker": [
                 "prompt-maker_simple_listing",
@@ -134,10 +148,9 @@ class RAGPipelineEvaluator:
                 "prompt-maker_long_context_reorder_2"
             ],
             "generator": [
-                "generator_llama3.2:1b",
-                "generator_gemma3:4b",
-                # "generator_gemma3:12b",
-                # "generator_multi_llm_llama3.2:1b-gemma3:4b-Ensemble:gemma3:12b"
+                # "generator_gemma3:27b",
+                "generator_alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
+                #"generator_multi_llm_gemma3:27b-alibayram/Qwen3-30B-A3B-Instruct-2507:latest-Ensemble:alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
             ],
             "post-generation": [
                 "post-generation_none",

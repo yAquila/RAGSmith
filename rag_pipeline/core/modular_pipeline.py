@@ -309,8 +309,6 @@ class ModularRAGPipeline:
             
             # Step 9: Generation
             generated_answer = ""
-            gen_prompt_tokens = 0
-            gen_eval_count = 0
             step_start = time.time()
             if "generator" in self.components:
                 if prompt:
@@ -508,14 +506,12 @@ class ModularRAGPipeline:
             logger.debug(f"  - {combo}")
 
         all_results = []
-        logger.info(f"Technique combos: {technique_combos}")
+        logger.debug(f"Technique combos: {technique_combos}")
         for combo in technique_combos:
             combo_name = ModularRAGPipeline.build_combo_name(combo)
             pipeline = ModularRAGPipeline.from_config_combo(combo, global_config)
             batch_size = global_config.eval_batch_size
-            logger.info(f"SELAMCANIMBENAMCANIM")
             evaluator = RAGEvaluator(combo, global_config)
-            logger.info(f"SELAMCANIMBENAMCANIM")
 
             pre_embedding_result = await pipeline.perform_pre_embedding(documents)
             documents = pre_embedding_result["documents"]

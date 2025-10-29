@@ -1,0 +1,279 @@
+{
+  "article": {
+    "id": "datastructure_06e53c54",
+    "title": "Data structure",
+    "url": "https://en.wikipedia.org/wiki/Data_structure",
+    "lang": "en",
+    "created_at": "2025-07-30T06:49:11.595216",
+    "content": "---\nid: datastructure_06e53c54\nurl: https://en.wikipedia.org/wiki/Data_structure\ntitle: Data structure\nlang: en\ncreated_at: '2025-07-30T06:45:38.782026'\nchecksum: ff590a8356043de1f14db39214b3e308368dcee8093787fded3be4237f121df1\noptions:\n  chunk_size: 1000\n  chunk_overlap: 200\n  split_strategy: header_aware\n  total_questions: 10\n  llm_model: gemini-2.5-pro\nstats:\n  word_count: 1394\n  char_count: 9127\n  num_chunks: 10\n  original_chunks: 15\n  filtered_out: 5\n  num_sections: 0\n---\nIn computer science, a data structure is a data organization and storage format that is usually chosen for efficient access to data. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data, i.e., it is an algebraic structure about data. == Usage == Data structures serve as the basis for abstract data types (ADT). The ADT defines the logical form of the data type. The data structure implements the physical form of the data type. Different types of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. For example, relational databases commonly use B-tree indexes for data retrieval, while compiler implementations usually use hash tables to look up identifiers. Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms. Some formal design methods and programming languages emphasize data structures, rather than algorithms, as the key organizing factor in software design. Data structures can be used to organize the storage and retrieval of information stored in both main memory and secondary memory. == Implementation == Data structures can be implemented using a variety of programming languages and techniques, but they all share the common goal of efficiently organizing and storing data. Data structures are generally based on the ability of a computer to fetch and store data at any place in its memory, specified by a pointer—a bit string, representing a memory address, that can be itself stored in memory and manipulated by the program. Thus, the array and record data structures are based on computing the addresses of data items with arithmetic operations, while the linked data structures are based on storing addresses of data items within the structure itself. This approach to data structuring has profound implications for the efficiency and scalability of algorithms. For instance, the contiguous memory allocation in arrays facilitates rapid access and modification operations, leading to optimized performance in sequential data processing scenarios. The implementation of a data structure usually requires writing a set of procedures that create and manipulate instances of that structure. The efficiency of a data structure cannot be analyzed separately from those operations. This observation motivates the theoretical concept of an abstract data type, a data structure that is defined indirectly by the operations that may be performed on it, and the mathematical properties of those operations (including their space and time cost). A landmark 1989 study showed how ordinary pointer-based structures can be transformed into persistent data structures – versions that preserve and share earlier states after updates without asymptotically increasing time or space costs. == Examples == There are numerous types of data structures, generally built upon simpler primitive data types. Well known examples are: An array is a number of elements in a specific order, typically all of the same type (depending on the language, individual elements may either all be forced to be the same type, or may be of almost any type). Elements are accessed using an integer index to specify which element is required. Typical implementations allocate contiguous memory words for the elements of arrays (but this is not always a necessity). Arrays may be fixed-length or resizable. A linked list (also just called list) is a linear collection of data elements of any type, called nodes, where each node has itself a value, and points to the next node in the linked list. The principal advantage of a linked list over an array is that values can always be efficiently inserted and removed without relocating the rest of the list. Certain other operations, such as random access to a certain element, are however slower on lists than on arrays. A record (also called tuple or struct) is an aggregate data structure. A record is a value that contains other values, typically in fixed number and sequence and typically indexed by names. The elements of records are usually called fields or members. In the context of object-oriented programming, records are known as plain old data structures to distinguish them from objects. Hash tables, also known as hash maps, are data structures that provide fast retrieval of values based on keys. They use a hashing function to map keys to indexes in an array, allowing for constant-time access in the average case. Hash tables are commonly used in dictionaries, caches, and database indexing. However, hash collisions can occur, which can impact their performance. Techniques like chaining and open addressing are employed to handle collisions. Graphs are collections of nodes connected by edges, representing relationships between entities. Graphs can be used to model social networks, computer networks, and transportation networks, among other things. They consist of vertices (nodes) and edges (connections between nodes). Graphs can be directed or undirected, and they can have cycles or be acyclic. Graph traversal algorithms include breadth-first search and depth-first search. Stacks and queues are abstract data types that can be implemented using arrays or linked lists. A stack has two primary operations: push (adds an element to the top of the stack) and pop (removes the topmost element from the stack), that follow the Last In, First Out (LIFO) principle. Queues have two main operations: enqueue (adds an element to the rear of the queue) and dequeue (removes an element from the front of the queue) that follow the First In, First Out (FIFO) principle. Trees represent a hierarchical organization of elements. A tree consists of nodes connected by edges, with one node being the root and all other nodes forming subtrees. Trees are widely used in various algorithms and data storage scenarios. Binary trees (particularly heaps), AVL trees, and B-trees are some popular types of trees. They enable efficient and optimal searching, sorting, and hierarchical representation of data. A trie, or prefix tree, is a special type of tree used to efficiently retrieve strings. In a trie, each node represents a character of a string, and the edges between nodes represent the characters that connect them. This structure is especially useful for tasks like autocomplete, spell-checking, and creating dictionaries. Tries allow for quick searches and operations based on string prefixes. == Language support == Most assembly languages and some low-level languages, such as BCPL (Basic Combined Programming Language), lack built-in support for data structures. On the other hand, many high-level programming languages and some higher-level assembly languages, such as MASM, have special syntax or other built-in support for certain data structures, such as records and arrays. For example, the C (a direct descendant of BCPL) and Pascal languages support structs and records, respectively, in addition to vectors (one-dimensional arrays) and multi-dimensional arrays. Most programming languages feature some sort of library mechanism that allows data structure implementations to be reused by different programs. Modern languages usually come with standard libraries that implement the most common data structures. Examples are the C++ Standard Template Library, the Java Collections Framework, and the Microsoft .NET Framework. Modern languages also generally support modular programming, the separation between the interface of a library module and its implementation. Some provide opaque data types that allow clients to hide implementation details. Object-oriented programming languages, such as C++, Java, and Smalltalk, typically use classes for this purpose. Many known data structures have concurrent versions which allow multiple computing threads to access a single concrete instance of a data structure simultaneously. == See also == == References == == Bibliography == Peter Brass, Advanced Data Structures, Cambridge University Press, 2008, ISBN 978-0521880374 Donald Knuth, The Art of Computer Programming, vol. 1. Addison-Wesley, 3rd edition, 1997, ISBN 978-0201896831 Dinesh Mehta and Sartaj Sahni, Handbook of Data Structures and Applications, Chapman and Hall/CRC Press, 2004, ISBN 1584884355 Niklaus Wirth, Algorithms and Data Structures, Prentice Hall, 1985, ISBN 978-0130220059 == Further reading == Open Data Structures by Pat Morin G. H. Gonnet and R. Baeza-Yates, Handbook of Algorithms and Data Structures - in Pascal and C, second edition, Addison-Wesley, 1991, ISBN 0-201-41607-7 Ellis Horowitz and Sartaj Sahni, Fundamentals of Data Structures in Pascal, Computer Science Press, 1984, ISBN 0-914894-94-3 == External links == Descriptions from the Dictionary of Algorithms and Data Structures Data structures course An Examination of Data Structures from .NET perspective Schaffer, C. Data Structures and Algorithm Analysis"
+  },
+  "chunks": [
+    {
+      "id": "datastructure_06e53c54_c0000",
+      "article_id": "datastructure_06e53c54",
+      "section": "Lead",
+      "heading_path": "Lead",
+      "start_char": 0,
+      "end_char": 340,
+      "content": "In computer science, a data structure is a data organization and storage format that is usually chosen for efficient access to data. More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data, i.e., it is an algebraic structure about data.",
+      "char_count": 339,
+      "token_estimate": 84,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0001",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Usage ==",
+      "heading_path": "== Usage ==",
+      "start_char": 351,
+      "end_char": 1331,
+      "content": "== Usage == Data structures serve as the basis for abstract data types (ADT). The ADT defines the logical form of the data type. The data structure implements the physical form of the data type. Different types of data structures are suited to different kinds of applications, and some are highly specialized to specific tasks. For example, relational databases commonly use B-tree indexes for data retrieval, while compiler implementations usually use hash tables to look up identifiers. Data structures provide a means to manage large amounts of data efficiently for uses such as large databases and internet indexing services. Usually, efficient data structures are key to designing efficient algorithms. Some formal design methods and programming languages emphasize data structures, rather than algorithms, as the key organizing factor in software design. Data structures can be used to organize the storage and retrieval of information stored in both main memory and secondary memory.",
+      "char_count": 990,
+      "token_estimate": 247,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0002",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Implementation ==",
+      "heading_path": "== Implementation ==",
+      "start_char": 1351,
+      "end_char": 2320,
+      "content": "== Implementation == Data structures can be implemented using a variety of programming languages and techniques, but they all share the common goal of efficiently organizing and storing data. Data structures are generally based on the ability of a computer to fetch and store data at any place in its memory, specified by a pointer—a bit string, representing a memory address, that can be itself stored in memory and manipulated by the program. Thus, the array and record data structures are based on computing the addresses of data items with arithmetic operations, while the linked data structures are based on storing addresses of data items within the structure itself. This approach to data structuring has profound implications for the efficiency and scalability of algorithms. For instance, the contiguous memory allocation in arrays facilitates rapid access and modification operations, leading to optimized performance in sequential data processing scenarios.",
+      "char_count": 968,
+      "token_estimate": 242,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0003",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Implementation ==",
+      "heading_path": "== Implementation ==",
+      "start_char": 2320,
+      "end_char": 3043,
+      "content": "The implementation of a data structure usually requires writing a set of procedures that create and manipulate instances of that structure. The efficiency of a data structure cannot be analyzed separately from those operations. This observation motivates the theoretical concept of an abstract data type, a data structure that is defined indirectly by the operations that may be performed on it, and the mathematical properties of those operations (including their space and time cost). A landmark 1989 study showed how ordinary pointer-based structures can be transformed into persistent data structures – versions that preserve and share earlier states after updates without asymptotically increasing time or space costs.",
+      "char_count": 723,
+      "token_estimate": 180,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0004",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 3038,
+      "end_char": 3977,
+      "content": "== Examples == There are numerous types of data structures, generally built upon simpler primitive data types. Well known examples are: An array is a number of elements in a specific order, typically all of the same type (depending on the language, individual elements may either all be forced to be the same type, or may be of almost any type). Elements are accessed using an integer index to specify which element is required. Typical implementations allocate contiguous memory words for the elements of arrays (but this is not always a necessity). Arrays may be fixed-length or resizable. A linked list (also just called list) is a linear collection of data elements of any type, called nodes, where each node has itself a value, and points to the next node in the linked list. The principal advantage of a linked list over an array is that values can always be efficiently inserted and removed without relocating the rest of the list.",
+      "char_count": 938,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0005",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 3977,
+      "end_char": 4930,
+      "content": "Certain other operations, such as random access to a certain element, are however slower on lists than on arrays. A record (also called tuple or struct) is an aggregate data structure. A record is a value that contains other values, typically in fixed number and sequence and typically indexed by names. The elements of records are usually called fields or members. In the context of object-oriented programming, records are known as plain old data structures to distinguish them from objects. Hash tables, also known as hash maps, are data structures that provide fast retrieval of values based on keys. They use a hashing function to map keys to indexes in an array, allowing for constant-time access in the average case. Hash tables are commonly used in dictionaries, caches, and database indexing. However, hash collisions can occur, which can impact their performance. Techniques like chaining and open addressing are employed to handle collisions.",
+      "char_count": 953,
+      "token_estimate": 238,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0006",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 4931,
+      "end_char": 5912,
+      "content": "Graphs are collections of nodes connected by edges, representing relationships between entities. Graphs can be used to model social networks, computer networks, and transportation networks, among other things. They consist of vertices (nodes) and edges (connections between nodes). Graphs can be directed or undirected, and they can have cycles or be acyclic. Graph traversal algorithms include breadth-first search and depth-first search. Stacks and queues are abstract data types that can be implemented using arrays or linked lists. A stack has two primary operations: push (adds an element to the top of the stack) and pop (removes the topmost element from the stack), that follow the Last In, First Out (LIFO) principle. Queues have two main operations: enqueue (adds an element to the rear of the queue) and dequeue (removes an element from the front of the queue) that follow the First In, First Out (FIFO) principle. Trees represent a hierarchical organization of elements.",
+      "char_count": 981,
+      "token_estimate": 245,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0007",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Examples ==",
+      "heading_path": "== Examples ==",
+      "start_char": 5913,
+      "end_char": 6679,
+      "content": "A tree consists of nodes connected by edges, with one node being the root and all other nodes forming subtrees. Trees are widely used in various algorithms and data storage scenarios. Binary trees (particularly heaps), AVL trees, and B-trees are some popular types of trees. They enable efficient and optimal searching, sorting, and hierarchical representation of data. A trie, or prefix tree, is a special type of tree used to efficiently retrieve strings. In a trie, each node represents a character of a string, and the edges between nodes represent the characters that connect them. This structure is especially useful for tasks like autocomplete, spell-checking, and creating dictionaries. Tries allow for quick searches and operations based on string prefixes.",
+      "char_count": 766,
+      "token_estimate": 191,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0008",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Language support ==",
+      "heading_path": "== Language support ==",
+      "start_char": 6688,
+      "end_char": 7628,
+      "content": "== Language support == Most assembly languages and some low-level languages, such as BCPL (Basic Combined Programming Language), lack built-in support for data structures. On the other hand, many high-level programming languages and some higher-level assembly languages, such as MASM, have special syntax or other built-in support for certain data structures, such as records and arrays. For example, the C (a direct descendant of BCPL) and Pascal languages support structs and records, respectively, in addition to vectors (one-dimensional arrays) and multi-dimensional arrays. Most programming languages feature some sort of library mechanism that allows data structure implementations to be reused by different programs. Modern languages usually come with standard libraries that implement the most common data structures. Examples are the C++ Standard Template Library, the Java Collections Framework, and the Microsoft .NET Framework.",
+      "char_count": 939,
+      "token_estimate": 234,
+      "token_start": null,
+      "token_end": null
+    },
+    {
+      "id": "datastructure_06e53c54_c0009",
+      "article_id": "datastructure_06e53c54",
+      "section": "== Language support ==",
+      "heading_path": "== Language support ==",
+      "start_char": 7628,
+      "end_char": 8128,
+      "content": "Modern languages also generally support modular programming, the separation between the interface of a library module and its implementation. Some provide opaque data types that allow clients to hide implementation details. Object-oriented programming languages, such as C++, Java, and Smalltalk, typically use classes for this purpose. Many known data structures have concurrent versions which allow multiple computing threads to access a single concrete instance of a data structure simultaneously.",
+      "char_count": 500,
+      "token_estimate": 125,
+      "token_start": null,
+      "token_end": null
+    }
+  ],
+  "questions": {
+    "total_questions": 10,
+    "items": [
+      {
+        "question": "What data structure is commonly used by relational databases for data retrieval?",
+        "answer": "Relational databases commonly use B-tree indexes for data retrieval.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0001"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0001"
+        ]
+      },
+      {
+        "question": "What principle do the operations of a stack follow?",
+        "answer": "The operations of a stack follow the Last In, First Out (LIFO) principle.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0006"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0006"
+        ]
+      },
+      {
+        "question": "What is the fundamental difference in how linked data structures and array/record structures handle memory addresses?",
+        "answer": "Array and record data structures compute the addresses of data items using arithmetic operations, while linked data structures store the addresses of data items within the structure itself.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0002"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0002"
+        ]
+      },
+      {
+        "question": "What are some examples of modern language standard libraries that implement common data structures?",
+        "answer": "Examples of standard libraries that implement common data structures include the C++ Standard Template Library, the Java Collections Framework, and the Microsoft .NET Framework.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0008"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0008"
+        ]
+      },
+      {
+        "question": "According to the text, what is the primary purpose for which a data structure is chosen in computer science?",
+        "answer": "A data structure is usually chosen for efficient access to data.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0000"
+        ],
+        "category": "FACTUAL",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0000"
+        ]
+      },
+      {
+        "question": "What is the motivation behind the theoretical concept of an abstract data type?",
+        "answer": "The concept of an abstract data type is motivated by the observation that a data structure's efficiency cannot be analyzed separately from the operations performed on it. Therefore, an abstract data type defines a structure indirectly by its operations and their mathematical properties, including space and time costs.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0003"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0003"
+        ]
+      },
+      {
+        "question": "Explain how the fundamental implementation of data structures, involving pointers and memory addresses, supports their role in creating efficient algorithms.",
+        "answer": "Data structures are defined as a format for organizing data for efficient access, which is key to designing efficient algorithms. Their implementation is based on a computer's ability to use pointers (memory addresses) to fetch and store data. This leads to structures like arrays, which use arithmetic operations to compute data addresses, facilitating rapid access due to contiguous memory allocation. Another approach is linked structures, which store addresses of data items within the structure itself. By providing these mechanisms for organizing the storage and retrieval of information in memory, data structures enable the efficient management of large amounts of data, which is crucial for the performance and scalability of algorithms.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0000",
+          "datastructure_06e53c54_c0001",
+          "datastructure_06e53c54_c0002"
+        ],
+        "category": "LONG_ANSWER",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0002",
+          "datastructure_06e53c54_c0001",
+          "datastructure_06e53c54_c0000"
+        ]
+      },
+      {
+        "question": "How do the descriptions of arrays and linked lists exemplify the concept of an abstract data type, which is defined by its operations and their costs?",
+        "answer": "The concept of an abstract data type is that a data structure is defined by its operations and their associated efficiency. Arrays and linked lists illustrate this through their differing performance characteristics. A linked list's operations allow for efficient insertion and removal of elements, which is its primary advantage over an array. Conversely, an array's operations provide fast random access to elements using an integer index, an operation that is slower on linked lists. These distinct costs for different operations define the two data structures and the trade-offs involved in choosing between them.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0003",
+          "datastructure_06e53c54_c0004",
+          "datastructure_06e53c54_c0005"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0003",
+          "datastructure_06e53c54_c0004",
+          "datastructure_06e53c54_c0005"
+        ]
+      },
+      {
+        "question": "How is the fundamental implementation of a data structure, based on pointers and memory addresses, related to the method used to analyze its efficiency?",
+        "answer": "The fundamental implementation of a data structure relies on using pointers to manage memory addresses, such as computing addresses for arrays or storing addresses within linked structures. This implementation requires a set of procedures or operations to manipulate the structure. The efficiency of the data structure is not analyzed in isolation but is directly tied to the performance (space and time cost) of these specific operations, leading to the theoretical concept of an abstract data type, which is defined by its operations rather than its underlying implementation.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0002",
+          "datastructure_06e53c54_c0003"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0003",
+          "datastructure_06e53c54_c0002"
+        ]
+      },
+      {
+        "question": "Based on the text, give examples of how fundamental data structures like arrays, linked lists, and trees serve as the basis for other, more specialized data structures.",
+        "answer": "The provided text shows that stacks and queues can be implemented using arrays or linked lists. Hash tables use an array, where a hashing function maps keys to indices within the array for fast retrieval. Additionally, a trie, which is used for efficient string operations, is described as a special type of tree.",
+        "related_chunk_ids": [
+          "datastructure_06e53c54_c0004",
+          "datastructure_06e53c54_c0005",
+          "datastructure_06e53c54_c0006",
+          "datastructure_06e53c54_c0007"
+        ],
+        "category": "INTERPRETATION",
+        "reranked_relative_chunk_ids": [
+          "datastructure_06e53c54_c0004",
+          "datastructure_06e53c54_c0006",
+          "datastructure_06e53c54_c0007",
+          "datastructure_06e53c54_c0005"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "export_date": "2025-07-30T10:37:32.315Z",
+    "content_format": "markdown",
+    "total_chunks": 10,
+    "description": "Complete article dataset including content, chunks, and generated questions"
+  }
+}

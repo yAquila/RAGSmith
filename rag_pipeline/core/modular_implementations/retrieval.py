@@ -59,7 +59,7 @@ class SimpleVectorRAG(RetrievalComponent):
                     dataset_path = os.path.join(
                         "rag_pipeline",
                         "default_datasets",
-                        "reranked_gen_programming_5"
+                        "military_10"
                     )
                 
                 # Generate hash from the folder
@@ -144,7 +144,7 @@ class KeywordSearchBM25(RetrievalComponent):
                 dataset_path = os.path.join(
                     "rag_pipeline",
                     "default_datasets",
-                    "reranked_gen_programming_5"
+                    "military_10"
                 )
             
             # Generate hash from the folder
@@ -920,7 +920,7 @@ class GraphRAG(RetrievalComponent):
         """Extract relations using Ollama LLM (via OllamaUtil)"""
         from rag_pipeline.util.api.ollama_client import OllamaUtil
 
-        ollama_model = self.config.get("graph_rag_ollama_model", "gemma3:12b")
+        ollama_model = self.config.get("graph_rag_ollama_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         
         prompt = f"""
 You are an expert relation extraction system.
@@ -1278,7 +1278,7 @@ class HyperGraphRAG(RetrievalComponent):
         """Extract hyperedge relations using LLM (via OllamaUtil)"""
         from rag_pipeline.util.api.ollama_client import OllamaUtil
 
-        ollama_model = self.config.get("hypergraph_ollama_model", "gemma3:12b")
+        ollama_model = self.config.get("hypergraph_ollama_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         
         prompt = f"""
 You are an advanced hypergraph relation extraction system.

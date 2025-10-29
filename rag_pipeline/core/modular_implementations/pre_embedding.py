@@ -101,7 +101,7 @@ class ContextualChunkHeaders(PreEmbeddingComponent):
             logger.info(f"ContextualChunkHeaders: Generating header for content: {content[:100]}...")
             
             prompt = self._generate_header_prompt(content)
-            model = self.config.get("header_generation_model", "gemma3:4b")
+            model = self.config.get("header_generation_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
             provider = self.config.get("header_provider", "ollama")
             
             logger.info(f"ContextualChunkHeaders: Using model {model} with provider {provider}")
@@ -200,7 +200,7 @@ class ContextualChunkHeaders(PreEmbeddingComponent):
         logger.info(f"ContextualChunkHeaders: Token counts - Input: {total_prompt_tokens}, Output: {total_output_tokens}")
         
         llm_token_count = {}
-        model = self.config.get("header_generation_model", "gemma3:4b")
+        model = self.config.get("header_generation_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         llm_token_count[model] = {"in": total_prompt_tokens, "out": total_output_tokens}
         result = PreEmbeddingResult(
             documents=documents_with_headers,
@@ -245,9 +245,9 @@ class HyPE(PreEmbeddingComponent):
         for doc in documents:
             prompt = self.config.get("hype_prompt", "").format(num_hype_questions=self.config.get("num_hype_questions", 3), document=doc.content)
             if self.config.get("provider", "ollama").lower() == "ollama":
-                response = self.client.get_ollama_response(self.config.get("hype_model", "gemma3:4b"), prompt)
+                response = self.client.get_ollama_response(self.config.get("hype_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"), prompt)
             elif self.config.get("provider", "ollama").lower() == "gemini":
-                response = self.client.get_gemini_response(self.config.get("hype_model", "gemma3:4b"), prompt)
+                response = self.client.get_gemini_response(self.config.get("hype_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"), prompt)
             else:
                 raise ValueError(f"Unsupported provider: {self.config.get('provider', 'ollama')}")
             logger.info(f"HyPE response: {response}")
@@ -272,7 +272,7 @@ class HyPE(PreEmbeddingComponent):
                     metadata=new_metadata
                 ))
         llm_token_count = {}
-        model = self.config.get("hype_model", "gemma3:4b")
+        model = self.config.get("hype_model", "alibayram/Qwen3-30B-A3B-Instruct-2507:latest")
         llm_token_count[model] = {"in": total_prompt_tokens, "out": total_eval_count}
         logger.info(f"Documents to embed[:2]: {documents_to_embed[:2]}")
         result = PreEmbeddingResult(

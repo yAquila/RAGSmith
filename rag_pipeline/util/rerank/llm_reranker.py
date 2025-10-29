@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 class LLMRerankerUtil:
     """Utility class for reranking documents using LLM models via Ollama"""
     
-    def __init__(self, model_name: str = 'llama3.2:1b', max_tokens: int = 2048, temperature: float = 0.1):
+    def __init__(self, model_name: str = 'alibayram/Qwen3-30B-A3B-Instruct-2507:latest', max_tokens: int = 2048, temperature: float = 0.1):
         """
         Initialize the LLM reranker
         
@@ -266,7 +266,7 @@ RANKING:"""
 # Global instance for efficient model reuse across the entire pipeline
 _llm_reranker_instance = None
 
-def get_llm_reranker(model_name: str = 'llama3.2:1b', max_tokens: int = 2048, temperature: float = 0.1) -> LLMRerankerUtil:
+def get_llm_reranker(model_name: str = 'alibayram/Qwen3-30B-A3B-Instruct-2507:latest', max_tokens: int = 2048, temperature: float = 0.1) -> LLMRerankerUtil:
     """Get a singleton LLM reranker instance for efficient model reuse"""
     global _llm_reranker_instance
     

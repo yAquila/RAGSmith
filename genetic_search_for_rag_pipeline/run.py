@@ -15,7 +15,7 @@ from typing import Dict, Any
 from genetic_algorithm import GeneticAlgorithm
 from config import GAConfig
 from rag_evaluator import RAGPipelineEvaluator
-from selection import TournamentSelection, RouletteWheelSelection, RankSelection
+from selection import TournamentSelection, RouletteWheelSelection, RankSelection, EliteSelection
 from crossover import UniformCrossover, SinglePointCrossover, MultiPointCrossover
 from mutation import AdaptiveMutation, RandomMutation, CategoricalMutation
 
@@ -255,7 +255,7 @@ def run_rag_optimization_basic(api_endpoint: str = "http://rag_pipeline:8060/api
     # Configure genetic algorithm
     config = GAConfig(
         category_sizes=category_sizes,
-        population_size=10,           # Smaller population for faster testing
+        population_size=20,           # Smaller population for faster testing
         generations=3,               # Fewer generations for initial testing
         crossover_rate=0.8,
         mutation_rate=0.1,
@@ -374,20 +374,21 @@ def run_rag_optimization_comprehensive(api_endpoint: str = "http://rag_pipeline:
     # Configure genetic algorithm for comprehensive search
     config = GAConfig(
         category_sizes=category_sizes,
-        population_size=50,           # Larger population
-        generations=30,               # More generations
+        population_size=16,           # Larger population
+        generations=20,               # More generations
         crossover_rate=0.8,
         mutation_rate=0.08,           # Lower mutation rate for convergence
         elitism_count=5,              # Keep more elite individuals
-        selection_method=TournamentSelection(tournament_size=4),
+        # selection_method=TournamentSelection(tournament_size=4),
+        selection_method=EliteSelection(),
         crossover_method=UniformCrossover(probability=0.6),
         mutation_method=AdaptiveMutation(
             base_mutation_rate=0.08,
             min_mutation_rate=0.01,
             max_mutation_rate=0.2
         ),
-        convergence_threshold=10,     # More patience for convergence
-        target_fitness=0.98,          # Higher target
+        convergence_threshold=100,     # More patience for convergence
+        target_fitness=1.0,          # Higher target
         verbose=True,
         track_statistics=True,
         random_seed=42
