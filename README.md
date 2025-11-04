@@ -1,6 +1,12 @@
-# RAG Pipeline with Genetic Algorithm Optimization
+# RAGSmith: RAG Pipeline with Genetic Algorithm Optimization
+
+[![arXiv](https://img.shields.io/badge/arXiv-2511.01386-b31b1b.svg)](https://arxiv.org/abs/2511.01386)
 
 A comprehensive system for evaluating and optimizing Retrieval-Augmented Generation (RAG) pipelines using genetic algorithms. This project combines a modular RAG evaluation framework with an intelligent optimization engine to automatically discover the best RAG component configurations.
+
+> **📄 Paper**: [RAGSmith: A Framework for Finding the Optimal Composition of Retrieval-Augmented Generation Methods Across Datasets](https://arxiv.org/abs/2511.01386)  
+> **Authors**: Muhammed Yusuf Kartal, Suha Kagan Kose, Korhan Sevinç, Burak Aktas  
+> **Published**: November 2025, arXiv:2511.01386
 
 ## 🎯 Overview
 
@@ -10,6 +16,17 @@ This project consists of two main components:
 2. **Genetic Algorithm Optimizer**: An intelligent search system that finds optimal RAG configurations automatically
 
 The genetic algorithm communicates with the RAG pipeline API to evaluate different component combinations and progressively discovers better configurations through evolutionary optimization.
+
+### 📊 Key Results from the Paper
+
+Our [research](https://arxiv.org/abs/2511.01386) demonstrates that RAGSmith:
+
+- **Outperforms naive RAG** by **+3.8% on average** across six Wikipedia-derived domains (Mathematics, Law, Finance, Medicine, Defense Industry, Computer Science)
+- Achieves gains ranging from **+1.2% to +6.9%** across different domains
+- Delivers up to **+12.5% improvement in retrieval** and **+7.5% in generation** metrics
+- Discovers a **robust backbone**: vector retrieval + post-generation reflection/revision, augmented by domain-dependent choices
+- Explores only **~0.2% of the search space** (~100 candidates) to find optimal configurations
+- **Never selects passage compression** across all evaluated domains
 
 ### How It Works
 
@@ -81,8 +98,8 @@ The genetic algorithm communicates with the RAG pipeline API to evaluate differe
 
 ### Key Benefits
 
-- **Automated Discovery**: No manual testing of 381,024 configurations
-- **Intelligent Search**: GA explores promising regions of search space
+- **Automated Discovery**: No manual testing of hundreds of thousands of configurations
+- **Intelligent Search**: GA explores promising regions of search space efficiently
 - **Persistent Caching**: Previously evaluated configurations are cached
 - **Parallel Evaluation**: Multiple GPUs for faster optimization
 - **Comprehensive Results**: Detailed markdown reports with evolution statistics
@@ -298,7 +315,9 @@ The modular pipeline consists of 10 configurable stages, each with multiple impl
 - **none**: No post-processing
 - **reflection_revising**: Self-reflection and iterative revision
 
-**Total Search Space**: 4 × 9 × 11 × 4 × 2 × 3 × 3 × 3 × 3 × 2 = **381,024 possible configurations**
+**Total Search Space**: 4 × 9 × 11 × 4 × 2 × 3 × 3 × 3 × 3 × 2 = **513,216 possible configurations**
+
+> **Note**: The [paper](https://arxiv.org/abs/2511.01386) reports 46,080 feasible configurations after applying domain-specific constraints and feasibility filtering. Moreover some techniques like those related to Hyper Graph were not a part of the research due to resource and time constraints. The number above represents the theoretical full combinatorial space before constraints.
 
 ## 🔧 Manual Testing
 
@@ -734,27 +753,20 @@ This project is designed for research and experimentation. Feel free to:
 - Improve caching and performance
 - Add support for new LLM providers
 
-## 📄 License
-
-This project is provided as-is for research and educational purposes.
-
-## 🙋 Support
-
-For questions or issues:
-
-1. Check the troubleshooting section
-2. Review the detailed component READMEs
-3. Examine the example configurations
-4. Check Docker logs for error details
-
 ## 🔬 Citation
 
-If you use this system in your research, please cite:
+If you use this system in your research, please cite our paper:
 
-```
-RAG Pipeline with Genetic Algorithm Optimization
-A modular framework for evaluating and optimizing Retrieval-Augmented Generation systems
-https://github.com/your-repo/rag_pipeline_deneme
+```bibtex
+@misc{kartal2025ragsmith,
+      title={RAGSmith: A Framework for Finding the Optimal Composition of Retrieval-Augmented Generation Methods Across Datasets}, 
+      author={Muhammed Yusuf Kartal and Suha Kagan Kose and Korhan Sevinç and Burak Aktas},
+      year={2025},
+      eprint={2511.01386},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2511.01386}
+}
 ```
 
 ## 📋 Quick Reference
@@ -811,8 +823,8 @@ Set in `docker-compose.yml` or `.env` file:
 
 **Version**: 1.0.0
 
-**Last Updated**: October 2025
+**Last Updated**: November 2025
 
-## License
+---
 
-This project is open source and available under the [MIT License](LICENSE). 
+*This project is open source and available under the [MIT License](LICENSE).* 
