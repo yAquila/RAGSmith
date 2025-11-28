@@ -111,7 +111,59 @@ The system is built with a modular architecture:
 
 ## 📊 Configuration Options
 
-### Basic Parameters
+### YAML Configuration (Recommended)
+
+Configuration is now centralized in `gen_search_config.yml` in the project root:
+
+```yaml
+genetic_algorithm:
+  # Population settings
+  population_size: 50
+  generations: 100
+  
+  # Genetic operator probabilities
+  crossover_rate: 0.8
+  mutation_rate: 0.1
+  elitism_count: 2
+  
+  # Selection method (tournament, roulette_wheel, rank, elite)
+  selection:
+    method: "tournament"
+    tournament_size: 3
+  
+  # Crossover method (single_point, multi_point, uniform, order, segment)
+  crossover:
+    method: "single_point"
+    num_points: 2
+    probability: 0.5
+  
+  # Mutation method (random, adaptive, categorical, swap, inversion)
+  mutation:
+    method: "random"
+    base_mutation_rate: 0.1
+    min_mutation_rate: 0.01
+    max_mutation_rate: 0.5
+  
+  # Termination criteria
+  convergence_threshold: 20
+  target_fitness: null  # Set to a value (0-1) to stop early
+  
+  # Runtime settings
+  random_seed: null  # Set for reproducibility
+  verbose: true
+
+# Search space - available RAG techniques
+search_space:
+  pre-embedding:
+    - "pre-embedding_none"
+    - "pre-embedding_contextual_chunk_headers"
+  retrieval:
+    - "retrieval-vector_mxbai"
+    - "retrieval-hybrid_vector_keyword_cc"
+  # ... more categories
+```
+
+### Python Configuration (Programmatic)
 
 ```python
 config = GAConfig(
@@ -556,17 +608,40 @@ Environment variables for containerized deployment:
 - `LOG_LEVEL`: Logging level (default: info)
 - `PYTHONUNBUFFERED`: Python output buffering (default: 1)
 
+### Using the Configuration Loader
+
+The genetic search now uses a centralized configuration loader:
+
+```python
+# Load configuration from gen_search_config.yml
+from config_loader import load_config, get_search_space_as_component_options, get_api_endpoint
+
+config = load_config()
+
+# Access settings
+print(f"Dataset: {config.dataset.path}")
+print(f"API: {get_api_endpoint(config)}")
+print(f"Population: {config.genetic_algorithm.population_size}")
+
+# Get search space for evaluator
+component_options = get_search_space_as_component_options(config)
+```
+
 ### RAG Pipeline Evaluator Template
 
 The system includes a specialized `RAGPipelineEvaluator` for optimizing RAG (Retrieval-Augmented Generation) pipelines:
 
 ```python
-from rag_evaluator import RAGPipelineEvaluator, create_rag_evaluator
+from rag_evaluator import RAGPipelineEvaluator
 
-# Create evaluator that calls your RAG evaluation API
-evaluator = create_rag_evaluator(
+# Create evaluator - automatically loads from gen_search_config.yml
+evaluator = RAGPipelineEvaluator()
+
+# Or with explicit settings
+evaluator = RAGPipelineEvaluator(
     api_endpoint="https://your-rag-service.com/api/evaluate",
-    timeout=300
+    timeout=300,
+    use_yaml_config=False  # Disable YAML loading
 )
 
 # Use with genetic algorithm

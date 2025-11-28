@@ -27,8 +27,13 @@ a combination of component selections and returns a performance score.
 import requests
 import json
 import time
+import sys
+import os
 from typing import List, Dict, Any, Optional
 import logging
+
+# Add parent directory to path for config_loader import
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -45,25 +50,53 @@ class RAGPipelineEvaluator:
     """
     
     def __init__(self, 
-                 api_endpoint: str = "http://example.com/api/evaluate",
-                 timeout: int = 15000,
+                 api_endpoint: str = None,
+                 timeout: int = None,
                  max_retries: int = 3,
                  enable_cache: bool = True,
                  cache_file_path: str = "/app/results/rag_evaluation_cache.json",
-                 auto_save_cache: bool = True):
+                 auto_save_cache: bool = True,
+                 config_path: str = None,
+                 use_yaml_config: bool = True):
         """
         Initialize the RAG pipeline evaluator.
         
         Args:
-            api_endpoint: URL of the external RAG evaluation API
-            timeout: Request timeout in seconds
+            api_endpoint: URL of the external RAG evaluation API (overrides YAML config)
+            timeout: Request timeout in seconds (overrides YAML config)
             max_retries: Maximum number of retry attempts
             enable_cache: Whether to enable evaluation caching
             cache_file_path: Path to persistent cache file
             auto_save_cache: Whether to automatically save cache after each evaluation
+            config_path: Path to gen_search_config.yml file
+            use_yaml_config: Whether to load search space from YAML config
         """
-        self.api_endpoint = api_endpoint
-        self.timeout = timeout
+        # Try to load config from YAML
+        self._yaml_config = None
+        if use_yaml_config:
+            try:
+                from config_loader import load_config, get_search_space_as_component_options, get_api_endpoint
+                self._yaml_config = load_config(config_path)
+                logger.info(f"✅ Loaded configuration from gen_search_config.yml")
+            except Exception as e:
+                logger.warning(f"⚠️ Could not load YAML config: {e}. Using defaults.")
+        
+        # Set API endpoint (parameter overrides YAML config)
+        if api_endpoint is not None:
+            self.api_endpoint = api_endpoint
+        elif self._yaml_config is not None:
+            self.api_endpoint = get_api_endpoint(self._yaml_config)
+        else:
+            self.api_endpoint = "http://example.com/api/evaluate"
+        
+        # Set timeout (parameter overrides YAML config)
+        if timeout is not None:
+            self.timeout = timeout
+        elif self._yaml_config is not None:
+            self.timeout = self._yaml_config.api.timeout
+        else:
+            self.timeout = 15000
+        
         self.max_retries = max_retries
         self.enable_cache = enable_cache
         self.cache_file_path = cache_file_path
@@ -93,70 +126,74 @@ class RAGPipelineEvaluator:
             9: "post-generation"      
         }
         
-        # Component selections mapping (customize based on your actual components)
-        self.component_options = {
-            "pre-embedding": [
-                "pre-embedding_none",
-                "pre-embedding_contextual_chunk_headers",
-                "pre-embedding_hype",
-                "pre-embedding_parent_document_retriever"
-            ],
-            "query-expansion": [
-                "query-expansion_none",
-                "query-expansion_simple_multi_query_cc_dbsf", 
-                "query-expansion_simple_multi_query_borda",
-                "query-expansion_rag_fusion",
-                "query-expansion_decomposition_cc",
-                "query-expansion_hyde_cc",
-                "query-expansion_step_back_prompting_cc",
-                "query-expansion_graph_as_qe_cc",
-                "query-expansion_refinement_clarification",
-                "query-expansion_refinement_rephrasing"
-            ],
-            "retrieval": [
-                "retrieval-vector_mxbai",
-                "retrieval-keyword_bm25",
-                "retrieval-graph_rag",
-                "retrieval-hybrid_vector_keyword_cc",
-                "retrieval-hybrid_vector_graph_simply",
-                "retrieval-hybrid_vector_keyword_graph_simply"
-            ],
-            "passage-rerank": [
-                "passage-rerank_none",
-                "passage-rerank_ce_rerank_bge",
-                "passage-rerank_llm_rerank_gemma", 
-                "passage-rerank_cellm_parallel_rerank"
-            ],
-            "passage-filter": [
-                "passage-filter_simple_threshold",
-                "passage-filter_similarity_threshold"
-            ],
-            "passage-augment": [
-                "passage-augment_none",
-                "passage-augment_prev_next_augmenter",
-                "passage-augment_relevant_segment_extractor"
-            ],
-            "passage-compress": [
-                "passage-compress_none",
-                "passage-compress_llm_summarize",
-                "passage-compress_tree_summarize",
-                # "passage-compress_llm_lingua"
-            ],
-            "prompt-maker": [
-                "prompt-maker_simple_listing",
-                "prompt-maker_long_context_reorder_1", 
-                "prompt-maker_long_context_reorder_2"
-            ],
-            "generator": [
-                # "generator_gemma3:27b",
-                "generator_alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
-                #"generator_multi_llm_gemma3:27b-alibayram/Qwen3-30B-A3B-Instruct-2507:latest-Ensemble:alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
-            ],
-            "post-generation": [
-                "post-generation_none",
-                "post-generation_reflection_revising"
-            ]
-        }
+        # Load component options from YAML config or use defaults
+        if self._yaml_config is not None:
+            self.component_options = get_search_space_as_component_options(self._yaml_config)
+            logger.info(f"📋 Loaded search space from YAML config:")
+            for category, options in self.component_options.items():
+                logger.info(f"   {category}: {len(options)} options")
+        else:
+            # Fallback to hardcoded defaults
+            self.component_options = {
+                "pre-embedding": [
+                    "pre-embedding_none",
+                    "pre-embedding_contextual_chunk_headers",
+                    "pre-embedding_hype",
+                    "pre-embedding_parent_document_retriever"
+                ],
+                "query-expansion": [
+                    "query-expansion_none",
+                    "query-expansion_simple_multi_query_cc_dbsf", 
+                    "query-expansion_simple_multi_query_borda",
+                    "query-expansion_rag_fusion",
+                    "query-expansion_decomposition_cc",
+                    "query-expansion_hyde_cc",
+                    "query-expansion_step_back_prompting_cc",
+                    "query-expansion_graph_as_qe_cc",
+                    "query-expansion_refinement_clarification",
+                    "query-expansion_refinement_rephrasing"
+                ],
+                "retrieval": [
+                    "retrieval-vector_mxbai",
+                    "retrieval-keyword_bm25",
+                    "retrieval-graph_rag",
+                    "retrieval-hybrid_vector_keyword_cc",
+                    "retrieval-hybrid_vector_graph_simply",
+                    "retrieval-hybrid_vector_keyword_graph_simply"
+                ],
+                "passage-rerank": [
+                    "passage-rerank_none",
+                    "passage-rerank_ce_rerank_bge",
+                    "passage-rerank_llm_rerank_gemma", 
+                    "passage-rerank_cellm_parallel_rerank"
+                ],
+                "passage-filter": [
+                    "passage-filter_simple_threshold",
+                    "passage-filter_similarity_threshold"
+                ],
+                "passage-augment": [
+                    "passage-augment_none",
+                    "passage-augment_prev_next_augmenter",
+                    "passage-augment_relevant_segment_extractor"
+                ],
+                "passage-compress": [
+                    "passage-compress_none",
+                    "passage-compress_llm_summarize",
+                    "passage-compress_tree_summarize",
+                ],
+                "prompt-maker": [
+                    "prompt-maker_simple_listing",
+                    "prompt-maker_long_context_reorder_1", 
+                    "prompt-maker_long_context_reorder_2"
+                ],
+                "generator": [
+                    "generator_alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
+                ],
+                "post-generation": [
+                    "post-generation_none",
+                    "post-generation_reflection_revising"
+                ]
+            }
     
     def _ensure_cache_directory(self) -> None:
         """Ensure the cache directory exists."""

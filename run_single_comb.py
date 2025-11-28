@@ -5,6 +5,8 @@ Run evaluation for a single RAG pipeline configuration.
 This script sends an evaluation request to the RAG Evaluation API
 for testing specific combinations of RAG techniques.
 
+Configuration can be loaded from gen_search_config.yml in the project root.
+
 Usage:
     python run_single_comb.py [OPTIONS]
 
@@ -24,6 +26,9 @@ Examples:
 
     # List all available options
     python run_single_comb.py --list-options
+
+    # List options from YAML config
+    python run_single_comb.py --list-options --use-yaml-config
 """
 
 import argparse
@@ -33,7 +38,27 @@ import requests
 from typing import Dict, Any, Optional
 
 
-# Available configuration options for each stage
+def load_yaml_config():
+    """Try to load configuration from gen_search_config.yml"""
+    try:
+        from config_loader import load_config, get_search_space_as_component_options, get_api_endpoint
+        config = load_config()
+        return config
+    except Exception as e:
+        return None
+
+
+def get_options_from_yaml():
+    """Get available options from YAML config."""
+    config = load_yaml_config()
+    if config is None:
+        return None
+    
+    from config_loader import get_search_space_as_component_options
+    return get_search_space_as_component_options(config)
+
+
+# Available configuration options for each stage (fallback defaults)
 AVAILABLE_OPTIONS = {
     "pre-embedding": [
         "pre-embedding_none",
@@ -117,17 +142,36 @@ DEFAULT_CONFIG = {
 }
 
 
-def list_available_options():
+def list_available_options(use_yaml: bool = False):
     """Print all available configuration options."""
     print("\n" + "=" * 60)
     print("AVAILABLE CONFIGURATION OPTIONS")
+    
+    options_source = "from gen_search_config.yml" if use_yaml else "(hardcoded defaults)"
+    print(f"{options_source}")
     print("=" * 60)
     
-    for stage, options in AVAILABLE_OPTIONS.items():
+    # Try to load from YAML if requested
+    options = AVAILABLE_OPTIONS
+    if use_yaml:
+        yaml_options = get_options_from_yaml()
+        if yaml_options:
+            options = yaml_options
+            print("\n✅ Loaded options from gen_search_config.yml")
+        else:
+            print("\n⚠️ Could not load YAML config, using defaults")
+    
+    for stage, stage_options in options.items():
         print(f"\n{stage}:")
-        for option in options:
-            default_marker = " (default)" if option == DEFAULT_CONFIG[stage] else ""
+        for option in stage_options:
+            default_marker = " (default)" if option == DEFAULT_CONFIG.get(stage, "") else ""
             print(f"  - {option}{default_marker}")
+    
+    # Show total combinations
+    total = 1
+    for stage_options in options.values():
+        total *= len(stage_options)
+    print(f"\n📊 Total possible combinations: {total:,}")
     
     print("\n" + "=" * 60)
 
@@ -291,6 +335,11 @@ Examples:
         action="store_true",
         help="Only validate the configuration without running evaluation"
     )
+    parser.add_argument(
+        "--use-yaml-config", 
+        action="store_true",
+        help="Load options and API settings from gen_search_config.yml"
+    )
     
     # Pipeline configuration stages
     parser.add_argument(
@@ -358,8 +407,28 @@ Examples:
     
     # Handle --list-options
     if args.list_options:
-        list_available_options()
+        list_available_options(use_yaml=args.use_yaml_config)
         return 0
+    
+    # Load YAML config if requested
+    yaml_config = None
+    host = args.host
+    port = args.port
+    timeout = args.timeout
+    
+    if args.use_yaml_config:
+        yaml_config = load_yaml_config()
+        if yaml_config:
+            print("✅ Using settings from gen_search_config.yml")
+            # Override host/port/timeout from YAML if not explicitly set on command line
+            if args.host == "localhost":  # default value, may be overridden by YAML
+                host = yaml_config.api.host
+            if args.port == 8060:  # default value
+                port = yaml_config.api.port
+            if args.timeout == 3600:  # default value
+                timeout = yaml_config.api.timeout
+        else:
+            print("⚠️ Could not load YAML config, using command line args")
     
     # Build configuration from arguments
     config = {
@@ -375,7 +444,14 @@ Examples:
         "post-generation": args.post_generation,
     }
     
-    # Validate configuration
+    # Get available options for validation (from YAML or defaults)
+    available_options = AVAILABLE_OPTIONS
+    if args.use_yaml_config and yaml_config:
+        yaml_options = get_options_from_yaml()
+        if yaml_options:
+            available_options = yaml_options
+    
+    # Validate configuration against available options
     if not validate_config(config):
         print("\n❌ Configuration validation failed.")
         print("   Use --list-options to see available options.")
@@ -388,9 +464,9 @@ Examples:
     # Run evaluation
     result = run_evaluation(
         config=config,
-        host=args.host,
-        port=args.port,
-        timeout=args.timeout
+        host=host,
+        port=port,
+        timeout=timeout
     )
     
     if result is None:

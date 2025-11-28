@@ -19,18 +19,28 @@ A clean, extensible evaluation pipeline for Retrieval-Augmented Generation (RAG)
 rag_pipeline/
 ├── core/                    # Core RAG pipeline components
 │   ├── models.py           # Data models (RAGConfig, Results, etc.)
-│   ├── components.py       # Retrieval & Generation components
+│   ├── modular_framework.py # Base component interfaces
+│   ├── modular_pipeline.py # Pipeline orchestration
+│   ├── modular_configs.py  # Configuration management
 │   ├── evaluator.py        # Evaluation logic
 │   ├── dataset.py          # Dataset loading and management
-│   ├── pipeline.py         # Main pipeline orchestrator
-│   └── __init__.py         # Package exports
-├── util/                   # Utility modules (reused from original)
-│   ├── api/               # API clients (Ollama)
+│   └── modular_implementations/ # Component implementations
+│       ├── pre_embedding.py
+│       ├── query_expansion.py
+│       ├── retrieval.py
+│       └── ... (10 component types)
+├── util/                   # Utility modules
+│   ├── api/               # API clients (Ollama, Gemini)
 │   ├── vectorstore/       # Vector store implementations
+│   ├── rerank/            # Reranking utilities
 │   └── comparison/        # Semantic comparison utilities
-├── default_datasets/      # Default test datasets
-├── main.py               # Simple entry point
-└── requirements.txt      # Minimal dependencies
+├── default_datasets/      # Default test datasets (6 domains)
+├── main.py               # FastAPI server entry point
+└── requirements.txt      # Python dependencies
+
+# Configuration loaded from project root:
+../gen_search_config.yml   # Centralized configuration
+../config_loader.py        # Configuration parser
 ```
 
 ### Key Classes
@@ -147,6 +157,41 @@ python main.py --quick
 
 ## 🔧 Configuration
 
+### Centralized YAML Configuration
+
+The RAG pipeline now loads configuration from `gen_search_config.yml` in the project root:
+
+```yaml
+# Dataset settings
+dataset:
+  path: "rag_pipeline/default_datasets/military_10"
+
+# API settings  
+api:
+  host: "localhost"
+  port: 8060
+  timeout: 3600
+
+# Evaluation weights
+evaluation:
+  retrieval_weights:
+    recall_at_k: 0.25
+    map_score: 0.25
+    ndcg_at_k: 0.25
+    mrr: 0.25
+  generation_weights:
+    llm_score: 0.5
+    semantic_similarity: 0.5
+  overall_weights:
+    retrieval: 0.5
+    generation: 0.5
+  llm_eval_model: "gpt-oss:120B"
+```
+
+### Python Configuration (Advanced)
+
+For programmatic configuration:
+
 ```python
 RAGConfig(
     # Models to test
@@ -181,7 +226,7 @@ RAGConfig(
     max_test_cases=None,  # Use all test cases
     
     # Dataset settings
-    dataset_path=None  # Use default dataset
+    dataset_path=None  # Loads from YAML config if None
 )
 ```
 

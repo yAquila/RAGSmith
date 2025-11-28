@@ -8,11 +8,15 @@ This refactored version provides:
 - Extensible architecture for adding new RAG techniques
 - Comprehensive evaluation metrics
 - Efficient batch processing
+
+Configuration can be loaded from gen_search_config.yml in the project root.
 """
 
 import asyncio
 import logging
 import time
+import sys
+import os
 from typing import List, Optional, Dict, Any
 
 from fastapi import FastAPI, HTTPException
@@ -22,11 +26,35 @@ import uvicorn
 from rag_pipeline.core import ModularRAGPipeline, ModularRAGConfig
 from rag_pipeline.util.misc.config_map import CONFIG_MAP
 
+# Add parent directory to path for config_loader import
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+
+# Global variable to store loaded YAML config
+_yaml_config = None
+
+
+def load_yaml_config():
+    """Load configuration from gen_search_config.yml"""
+    global _yaml_config
+    if _yaml_config is not None:
+        return _yaml_config
+    
+    try:
+        from config_loader import load_config
+        _yaml_config = load_config()
+        logger.info("✅ Loaded configuration from gen_search_config.yml")
+        logger.info(f"📁 Dataset path: {_yaml_config.dataset.path}")
+        return _yaml_config
+    except Exception as e:
+        logger.warning(f"⚠️ Could not load YAML config: {e}. Using defaults.")
+        return None
 
 # FastAPI app
 app = FastAPI(title="RAG Evaluation API", version="1.0.0")
@@ -93,8 +121,42 @@ async def evaluate_endpoint(request: EvaluationRequest) -> Dict[str, Any]:
 
 def parse_config(config_dict: Dict[str, str] = None):
     """
-    Parse the config file and return a ModularRAGConfig object
+    Parse the config file and return a ModularRAGConfig object.
+    
+    Configuration values are loaded from gen_search_config.yml when available.
     """
+    # Load YAML config for dataset path and evaluation weights
+    yaml_config = load_yaml_config()
+    
+    # Get dataset path from YAML config or use default
+    dataset_path = None
+    if yaml_config is not None:
+        dataset_path = yaml_config.dataset.path
+        logger.info(f"📁 Using dataset path from YAML config: {dataset_path}")
+    
+    # Get evaluation weights from YAML config or use defaults
+    if yaml_config is not None:
+        retrieval_weights = yaml_config.evaluation.retrieval_weights
+        generation_weights = yaml_config.evaluation.generation_weights
+        overall_weights = yaml_config.evaluation.overall_weights
+        llm_eval_model = yaml_config.evaluation.llm_eval_model
+    else:
+        retrieval_weights = {
+            'recall_at_k': 0.25,
+            'map_score': 0.25,
+            'ndcg_at_k': 0.25,
+            'mrr': 0.25
+        }
+        generation_weights = {
+            'llm_score': 0.5,
+            'semantic_similarity': 0.5
+        }
+        overall_weights = {
+            'retrieval': 0.5,
+            'generation': 0.5
+        }
+        llm_eval_model = 'gpt-oss:120B'
+    
     config = ModularRAGConfig(
         run_name="retrieval - alibayram/Qwen3-30B-A3B-Instruct-2507:latest",
         save_eval_cases=False,
@@ -114,8 +176,8 @@ def parse_config(config_dict: Dict[str, str] = None):
         post_generation=[CONFIG_MAP["post-generation"][config_dict["post-generation"]]],
 
 
-        # Dataset/global settings
-        dataset_path=None,
+        # Dataset/global settings (from YAML config)
+        dataset_path=dataset_path,
         qdrant_collection_hash=None,
         max_test_cases=100,
         test_case_offset=0,
@@ -125,22 +187,11 @@ def parse_config(config_dict: Dict[str, str] = None):
         cache_enabled=True,
 
 
-        # Evaluation settings
-        retrieval_weights={
-            'recall_at_k': 0.25,
-            'map_score': 0.25,
-            'ndcg_at_k': 0.25,
-            'mrr': 0.25
-        },
-        generation_weights={
-            'llm_score': 0.5,
-            'semantic_similarity': 0.5
-        },
-        overall_weights={
-            'retrieval': 0.5,
-            'generation': 0.5
-        },
-        llm_eval_model='gpt-oss:120B'
+        # Evaluation settings (from YAML config)
+        retrieval_weights=retrieval_weights,
+        generation_weights=generation_weights,
+        overall_weights=overall_weights,
+        llm_eval_model=llm_eval_model
     )
     return config
 
@@ -436,13 +487,19 @@ def main():
     if len(sys.argv) > 1:
         arg = sys.argv[1]
         
+        # Get port from YAML config or use default
+        yaml_config = load_yaml_config()
+        port = 8060  # Default port
+        if yaml_config is not None:
+            port = yaml_config.api.port
+        
         # if arg == "--server":
             # Start FastAPI server for genetic algorithm evaluation
-        logger.info("Starting RAG Evaluation API server...")
+        logger.info(f"Starting RAG Evaluation API server on port {port}...")
         uvicorn.run(
             "rag_pipeline.main:app",
             host="0.0.0.0",
-            port=8060,
+            port=port,
             reload=False,
             log_level="info"
         )

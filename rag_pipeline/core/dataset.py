@@ -1,6 +1,7 @@
 import pandas as pd
 import logging
 import os
+import sys
 import json
 import ast
 from typing import List, Optional, Dict
@@ -8,7 +9,25 @@ from pathlib import Path
 
 from .models import RAGTestCase, RAGDocument
 
+# Add parent directories to path for config_loader import
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+
 logger = logging.getLogger(__name__)
+
+
+def get_default_dataset_path() -> str:
+    """Get the default dataset path from YAML config or use hardcoded fallback."""
+    try:
+        from config_loader import load_config
+        config = load_config()
+        if config and config.dataset.path:
+            return config.dataset.path
+    except Exception as e:
+        logger.debug(f"Could not load dataset path from YAML config: {e}")
+    
+    # Fallback to hardcoded default
+    return os.path.join("rag_pipeline", "default_datasets", "military_10")
 
 class RAGDataset:
     """Handles loading and managing RAG evaluation datasets"""
@@ -27,12 +46,8 @@ class RAGDataset:
         elif self.dataset_path:
             folder_path = self.dataset_path
         else:
-            # Use default dataset folder
-            folder_path = os.path.join(
-                "rag_pipeline",
-                "default_datasets",
-                "military_10"
-            )
+            # Use default dataset folder from YAML config
+            folder_path = get_default_dataset_path()
         
         try:
             logger.info(f"Loading test cases from folder: {folder_path}")
@@ -100,12 +115,8 @@ class RAGDataset:
         elif self.dataset_path:
             folder_path = self.dataset_path
         else:
-            # Use default dataset folder
-            folder_path = os.path.join(
-                "rag_pipeline",
-                "default_datasets",
-                "military_10"
-            )
+            # Use default dataset folder from YAML config
+            folder_path = get_default_dataset_path()
         
         try:
             logger.info(f"Loading documents from folder: {folder_path}")
@@ -238,12 +249,8 @@ class RAGDataset:
         if dataset_folder:
             folder_path = dataset_folder
         else:
-            # Use default dataset folder
-            folder_path = os.path.join(
-                "rag_pipeline",
-                "default_datasets",
-                "military_10"
-            )
+            # Use default dataset folder from YAML config
+            folder_path = get_default_dataset_path()
         
         # Construct the JSON file path
         json_file_path = os.path.join(folder_path, f"{article_id}.json")
@@ -282,12 +289,8 @@ class RAGDataset:
         if dataset_folder:
             folder_path = dataset_folder
         else:
-            # Use default dataset folder
-            folder_path = os.path.join(
-                "rag_pipeline",
-                "default_datasets",
-                "military_10"
-            )
+            # Use default dataset folder from YAML config
+            folder_path = get_default_dataset_path()
         
         # Construct the JSON file path
         json_file_path = os.path.join(folder_path, f"{article_id}.json")
@@ -319,12 +322,8 @@ class RAGDataset:
         if dataset_folder:
             folder_path = dataset_folder
         else:
-            # Use default dataset folder
-            folder_path = os.path.join(
-                "rag_pipeline",
-                "default_datasets",
-                "military_10"
-            )
+            # Use default dataset folder from YAML config
+            folder_path = get_default_dataset_path()
         
         # Extract article_id from chunk_id (e.g., "captheorem_82c03c20_c0000" -> "captheorem_82c03c20")
         article_id = chunk_id.rsplit('_', 1)[0] if '_' in chunk_id else chunk_id

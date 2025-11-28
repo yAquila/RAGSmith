@@ -107,7 +107,10 @@ Our [research](https://arxiv.org/abs/2511.01386) demonstrates that RAGSmith:
 ## 📦 Project Structure
 
 ```
-rag_pipeline_deneme/
+RAGSmith/
+├── gen_search_config.yml           # 🆕 Centralized configuration file
+├── config_loader.py                # 🆕 Configuration parser utility
+├── run_single_comb.py              # 🆕 Single evaluation script
 ├── rag_pipeline/                    # RAG evaluation system
 │   ├── core/                        # Core pipeline components
 │   │   ├── modular_framework.py    # Base component interfaces
@@ -145,6 +148,7 @@ rag_pipeline_deneme/
 │   ├── mutation.py                 # Mutation operators
 │   ├── rag_evaluator.py            # RAG API integration
 │   ├── run.py                      # Optimization runner
+│   ├── run_optimization.py         # Alternative optimization runner
 │   ├── api.py                      # Optional REST API
 │   ├── Dockerfile                  # Container definition
 │   └── requirements.txt            # Python dependencies
@@ -323,7 +327,28 @@ The modular pipeline consists of 10 configurable stages, each with multiple impl
 
 ### Test a Single Configuration
 
-You can test specific RAG configurations manually using curl:
+You can test specific RAG configurations using the `run_single_comb.py` script:
+
+```bash
+# List available options (from gen_search_config.yml)
+python run_single_comb.py --list-options --use-yaml-config
+
+# Test with default configuration
+python run_single_comb.py --use-yaml-config
+
+# Test with specific components
+python run_single_comb.py --use-yaml-config \
+  --retrieval "retrieval-hybrid_vector_keyword_cc" \
+  --passage-rerank "passage-rerank_ce_rerank_bge"
+
+# Validate configuration without running
+python run_single_comb.py --use-yaml-config --validate-only
+
+# Test from inside Docker
+docker exec -it rag-pipeline python /app/run_single_comb.py --use-yaml-config
+```
+
+Alternatively, use curl:
 
 ```bash
 # From host machine (replace with your server IP if remote)
@@ -370,6 +395,36 @@ The response will include:
 
 ## 🎛️ Configuration
 
+### Centralized Configuration (gen_search_config.yml)
+
+All configuration is now centralized in `gen_search_config.yml` in the project root. This file controls:
+- Dataset path and settings
+- API endpoint configuration
+- Genetic algorithm parameters
+- Search space (available RAG techniques)
+- Evaluation weights
+- Output settings
+
+```yaml
+# Example: Change dataset
+dataset:
+  path: "rag_pipeline/default_datasets/finance_10"  # Change domain here
+
+# Example: Change GA parameters
+genetic_algorithm:
+  population_size: 100
+  generations: 200
+  crossover_rate: 0.85
+  mutation_rate: 0.15
+
+# Example: Change evaluation weights
+evaluation:
+  overall_weights:
+    retrieval: 0.3
+    generation: 0.7
+  llm_eval_model: "gpt-oss:120B"
+```
+
 ### Changing the Dataset
 
 The system includes multiple test datasets in `rag_pipeline/default_datasets/`:
@@ -380,62 +435,66 @@ The system includes multiple test datasets in `rag_pipeline/default_datasets/`:
 - `military_10`: Military domain (default)
 - `programming_10`: Programming domain
 
-The default dataset is `military_10`. To change it:
-1. Edit `rag_pipeline/core/dataset.py`
-2. Find `"military_10"` (appears in 3 locations: lines 34, 107, and other default locations)
-3. Replace with your desired dataset name (e.g., `"finance_10"`, `"law_10"`, etc.)
+**To change the dataset**, edit `gen_search_config.yml`:
 
-### Limiting Test Cases
-
-To reduce evaluation time, limit the number of test cases:
-
-Edit `rag_pipeline/main.py` in the `parse_config()` method under the `# Dataset/global settings` section:
-
-```python
-max_test_cases=100  # Change this value
+```yaml
+dataset:
+  path: "rag_pipeline/default_datasets/law_10"  # Change to your desired domain
 ```
 
 ### Changing the LLM Evaluator Model
 
-The LLM evaluator (judge) model can be changed in `rag_pipeline/main.py` in the `parse_config()` method:
+Edit `gen_search_config.yml`:
 
-```python
-# Around line 144 in main.py
-llm_eval_model='gpt-oss:120B'  # Change to your desired model
+```yaml
+evaluation:
+  llm_eval_model: "alibayram/Qwen3-30B-A3B-Instruct-2507:latest"  # Your desired model
 ```
-
-Current default is `gpt-oss:120B`. You can change it to any Ollama model (e.g., `alibayram/Qwen3-30B-A3B-Instruct-2507:latest`, `gemma3:27b`, etc.)
-
-### Changing the Generator LLM
-
-To change the main generation LLM:
-1. Search for `alibayram/Qwen3-30B-A3B-Instruct-2507:latest` in the codebase
-2. Replace with your desired Ollama model name
-3. Ensure the model is available in your Ollama instance
 
 ### Genetic Algorithm Parameters
 
-Edit `genetic_search_for_rag_pipeline/run.py` to adjust optimization parameters:
+Edit `gen_search_config.yml`:
 
-```python
-# Quick mode
-config = GAConfig(
-    category_sizes=category_sizes,
-    population_size=20,      # Number of candidates per generation
-    generations=3,           # Number of generations
-    crossover_rate=0.8,      # Probability of crossover
-    mutation_rate=0.1,       # Probability of mutation
-    elitism_count=2          # Best individuals preserved
-)
+```yaml
+genetic_algorithm:
+  population_size: 50        # Number of candidates per generation
+  generations: 100           # Maximum generations
+  crossover_rate: 0.8        # Probability of crossover
+  mutation_rate: 0.1         # Probability of mutation
+  elitism_count: 2           # Best individuals preserved
+  convergence_threshold: 20  # Stop if no improvement for N generations
+  
+  # Selection method (tournament, roulette_wheel, rank, elite)
+  selection:
+    method: "tournament"
+    tournament_size: 3
+  
+  # Crossover method (single_point, multi_point, uniform, order, segment)
+  crossover:
+    method: "uniform"
+    probability: 0.6
+  
+  # Mutation method (random, adaptive, categorical, swap, inversion)
+  mutation:
+    method: "adaptive"
+    base_mutation_rate: 0.1
+    min_mutation_rate: 0.01
+    max_mutation_rate: 0.5
+```
 
-# Comprehensive mode
-config = GAConfig(
-    population_size=16,
-    generations=20,
-    crossover_rate=0.8,
-    mutation_rate=0.1,
-    elitism_count=2
-)
+### Search Space Configuration
+
+Customize which RAG techniques to include in the search:
+
+```yaml
+search_space:
+  pre-embedding:
+    - "pre-embedding_none"
+    - "pre-embedding_contextual_chunk_headers"
+  retrieval:
+    - "retrieval-vector_mxbai"
+    - "retrieval-hybrid_vector_keyword_cc"
+  # ... add/remove techniques as needed
 ```
 
 ## 🐳 Docker Configuration
@@ -796,13 +855,45 @@ nvidia-smi
 docker-compose down
 ```
 
-### File Locations to Modify
+### Configuration File
 
-- **Change dataset**: `rag_pipeline/core/dataset.py` (search for `"military_10"`)
-- **Change test case limit**: `rag_pipeline/main.py` line ~121 (`max_test_cases=100`)
-- **Change LLM evaluator**: `rag_pipeline/main.py` line ~144 (`llm_eval_model='gpt-oss:120B'`)
-- **Change generator LLM**: Search for `alibayram/Qwen3-30B-A3B-Instruct-2507:latest` across codebase
-- **GA optimization params**: `genetic_search_for_rag_pipeline/run.py` (population_size, generations)
+All settings are centralized in `gen_search_config.yml`:
+
+```yaml
+# Dataset
+dataset:
+  path: "rag_pipeline/default_datasets/military_10"
+
+# API
+api:
+  host: "localhost"
+  port: 8060
+
+# Genetic Algorithm
+genetic_algorithm:
+  population_size: 50
+  generations: 100
+  # ... more settings
+
+# Search Space (available techniques)
+search_space:
+  pre-embedding: [...]
+  retrieval: [...]
+  # ... more categories
+
+# Evaluation
+evaluation:
+  llm_eval_model: "gpt-oss:120B"
+  # ... weights
+```
+
+### File Locations
+
+- **All configuration**: `gen_search_config.yml` (centralized)
+- **Config loader**: `config_loader.py` (parsing utilities)
+- **RAG evaluation API**: `rag_pipeline/main.py`
+- **GA optimization**: `genetic_search_for_rag_pipeline/run.py`
+- **Single evaluation script**: `run_single_comb.py`
 
 ### Key Environment Variables
 

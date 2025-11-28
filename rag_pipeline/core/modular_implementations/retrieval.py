@@ -10,7 +10,24 @@ from rag_pipeline.core.modular_framework import (
 )
 from rag_pipeline.util.retrieval_utils.combination_utils import HybridUtils
 
+# Add parent directories to path for config_loader import
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+
 logger = logging.getLogger(__name__)
+
+
+def get_default_dataset_path() -> str:
+    """Get the default dataset path from YAML config or use hardcoded fallback."""
+    try:
+        from config_loader import load_config
+        config = load_config()
+        if config and config.dataset.path:
+            return config.dataset.path
+    except Exception as e:
+        logger.debug(f"Could not load dataset path from YAML config: {e}")
+    
+    # Fallback to hardcoded default
+    return os.path.join("rag_pipeline", "default_datasets", "military_10")
 
 class RetrievalResult(TypedDict):
     documents: List[Document]
@@ -53,14 +70,10 @@ class SimpleVectorRAG(RetrievalComponent):
                 from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_folder
                 import os
 
-                # Use dataset path from config or default
+                # Use dataset path from config or YAML default
                 dataset_path = self.config.get("dataset_path")
                 if not dataset_path:
-                    dataset_path = os.path.join(
-                        "rag_pipeline",
-                        "default_datasets",
-                        "military_10"
-                    )
+                    dataset_path = get_default_dataset_path()
                 
                 # Generate hash from the folder
                 dataset_hash = generate_dataset_hash_from_folder(dataset_path)
@@ -138,14 +151,10 @@ class KeywordSearchBM25(RetrievalComponent):
         try:
             from rag_pipeline.util.vectorstore.dataset_utils import generate_dataset_hash_from_folder
             
-            # Use dataset path from config or default
+            # Use dataset path from config or YAML default
             dataset_path = self.config.get("dataset_path")
             if not dataset_path:
-                dataset_path = os.path.join(
-                    "rag_pipeline",
-                    "default_datasets",
-                    "military_10"
-                )
+                dataset_path = get_default_dataset_path()
             
             # Generate hash from the folder
             dataset_hash = generate_dataset_hash_from_folder(dataset_path)

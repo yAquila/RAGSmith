@@ -1,0 +1,224 @@
+# =============================================================================
+# RAGSmith Genetic Search Configuration
+# =============================================================================
+# This file defines all parameters for the genetic algorithm optimization
+# of RAG pipeline configurations.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Dataset Configuration
+# -----------------------------------------------------------------------------
+dataset:
+  # Path to the evaluation dataset (relative to project root)
+  path: "rag_pipeline/default_datasets/military_10"
+  
+  # Available dataset domains:
+  #   - finance_10
+  #   - law_10
+  #   - maths_10
+  #   - medicine_10
+  #   - military_10
+  #   - programming_10
+
+
+# -----------------------------------------------------------------------------
+# API Configuration
+# -----------------------------------------------------------------------------
+api:
+  # RAG Pipeline evaluation API settings
+  host: "localhost"
+  port: 8060
+  timeout: 3600  # Request timeout in seconds
+
+
+# -----------------------------------------------------------------------------
+# Genetic Algorithm Parameters
+# -----------------------------------------------------------------------------
+genetic_algorithm:
+  # Population settings
+  population_size: 50          # Number of individuals in each generation
+  generations: 100             # Maximum number of generations to run
+  
+  # Genetic operator probabilities
+  crossover_rate: 0.8          # Probability of crossover between parents (0.0-1.0)
+  mutation_rate: 0.1           # Base probability of mutation per gene (0.0-1.0)
+  elitism_count: 2             # Number of best individuals to preserve each generation
+  
+  # Selection method configuration
+  # Options: tournament, roulette_wheel, rank, elite
+  selection:
+    method: "tournament"
+    # Tournament-specific settings
+    tournament_size: 3
+    # Rank-specific settings (only used if method is "rank")
+    selection_pressure: 2.0    # Range: 1.0-2.0
+  
+  # Crossover method configuration
+  # Options: single_point, multi_point, uniform, order, segment
+  crossover:
+    method: "single_point"
+    # Multi-point specific settings
+    num_points: 2
+    # Uniform crossover settings
+    probability: 0.5
+    # Segment crossover settings
+    num_segments: 3
+  
+  # Mutation method configuration
+  # Options: random, adaptive, categorical, swap, inversion, composite
+  mutation:
+    method: "random"
+    # Adaptive mutation settings
+    base_mutation_rate: 0.1
+    min_mutation_rate: 0.01
+    max_mutation_rate: 0.5
+    # Categorical mutation settings
+    force_change: true
+    multi_gene_probability: 0.3
+  
+  # Termination criteria
+  convergence_threshold: 20    # Stop if no improvement for N generations
+  target_fitness: null         # Stop if this fitness is reached (null = disabled)
+  
+  # Runtime settings
+  random_seed: null            # Set for reproducibility (null = random)
+  verbose: true                # Print progress information
+  
+  # Statistics tracking
+  track_statistics: true
+  statistics_interval: 1       # Record statistics every N generations
+
+
+# -----------------------------------------------------------------------------
+# Search Space Definition
+# -----------------------------------------------------------------------------
+# Each family lists the available technique options.
+# The genetic algorithm will search through combinations of these options.
+# -----------------------------------------------------------------------------
+search_space:
+  
+  # Pre-Embedding Techniques
+  # Techniques applied before document embedding
+  pre-embedding:
+    - "pre-embedding_none"
+    - "pre-embedding_contextual_chunk_headers"
+    - "pre-embedding_hype"
+    - "pre-embedding_parent_document_retriever"
+  
+  # Query Expansion Techniques
+  # Techniques to expand or reformulate the user query
+  query-expansion:
+    - "query-expansion_none"
+    - "query-expansion_simple_multi_query_cc_dbsf"
+    - "query-expansion_simple_multi_query_borda"
+    - "query-expansion_rag_fusion"
+    - "query-expansion_decomposition_cc"
+    - "query-expansion_hyde_cc"
+    - "query-expansion_step_back_prompting_cc"
+    - "query-expansion_graph_as_qe_cc"
+    - "query-expansion_refinement_clarification"
+    - "query-expansion_refinement_rephrasing"
+  
+  # Retrieval Techniques
+  # Core retrieval methods (vector, keyword, hybrid, graph-based)
+  retrieval:
+    - "retrieval-vector_mxbai"
+    - "retrieval-keyword_bm25"
+    - "retrieval-graph_rag"
+    - "retrieval-hypergraph_rag"
+    - "retrieval-hybrid_vector_keyword_cc"
+    - "retrieval-hybrid_vector_graph_simply"
+    - "retrieval-hybrid_graph_hypergraph_simply"
+    - "retrieval-hybrid_vector_graph_hypergraph_simply"
+    - "retrieval-hybrid_vector_keyword_graph_simply"
+    - "retrieval-hybrid_vector_keyword_hypergraph_simply"
+    - "retrieval-hybrid_vector_keyword_graph_hypergraph_simply"
+  
+  # Passage Reranking Techniques
+  # Techniques to reorder retrieved passages by relevance
+  passage-rerank:
+    - "passage-rerank_none"
+    - "passage-rerank_ce_rerank_bge"
+    - "passage-rerank_llm_rerank_gemma"
+    - "passage-rerank_cellm_parallel_rerank"
+  
+  # Passage Filtering Techniques
+  # Techniques to filter out low-relevance passages
+  passage-filter:
+    - "passage-filter_simple_threshold"
+    - "passage-filter_similarity_threshold"
+  
+  # Passage Augmentation Techniques
+  # Techniques to add context to retrieved passages
+  passage-augment:
+    - "passage-augment_none"
+    - "passage-augment_prev_next_augmenter"
+    - "passage-augment_relevant_segment_extractor"
+  
+  # Passage Compression Techniques
+  # Techniques to compress or summarize passages
+  passage-compress:
+    - "passage-compress_none"
+    - "passage-compress_llm_summarize"
+    - "passage-compress_tree_summarize"
+  
+  # Prompt Making Techniques
+  # Techniques for constructing the final prompt
+  prompt-maker:
+    - "prompt-maker_simple_listing"
+    - "prompt-maker_long_context_reorder_1"
+    - "prompt-maker_long_context_reorder_2"
+  
+  # Generator Models
+  # LLM models for answer generation
+  generator:
+    - "generator_gemma3:27b"
+    - "generator_alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
+    - "generator_multi_llm_gemma3:27b-alibayram/Qwen3-30B-A3B-Instruct-2507:latest-Ensemble:alibayram/Qwen3-30B-A3B-Instruct-2507:latest"
+  
+  # Post-Generation Techniques
+  # Techniques applied after initial answer generation
+  post-generation:
+    - "post-generation_none"
+    - "post-generation_reflection_revising"
+
+
+# -----------------------------------------------------------------------------
+# Evaluation Weights (for fitness calculation)
+# -----------------------------------------------------------------------------
+evaluation:
+  # Retrieval metric weights (must sum to 1.0)
+  retrieval_weights:
+    recall_at_k: 0.25
+    map_score: 0.25
+    ndcg_at_k: 0.25
+    mrr: 0.25
+  
+  # Generation metric weights (must sum to 1.0)
+  generation_weights:
+    llm_score: 0.5
+    semantic_similarity: 0.5
+  
+  # Overall score weights (must sum to 1.0)
+  overall_weights:
+    retrieval: 0.5
+    generation: 0.5
+  
+  # LLM model for evaluation (judge model)
+  llm_eval_model: "gpt-oss:120B"
+
+
+# -----------------------------------------------------------------------------
+# Logging and Output
+# -----------------------------------------------------------------------------
+output:
+  # Save best configurations to file
+  save_best_configs: true
+  best_configs_file: "best_rag_configs.json"
+  
+  # Save full evolution history
+  save_evolution_history: true
+  evolution_history_file: "evolution_history.json"
+  
+  # Logging level: DEBUG, INFO, WARNING, ERROR
+  log_level: "INFO"

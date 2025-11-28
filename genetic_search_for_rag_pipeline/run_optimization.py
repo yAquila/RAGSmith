@@ -3,19 +3,36 @@ RAG Pipeline Optimization Script
 ===============================
 
 Production-ready script to optimize your RAG pipeline using genetic algorithms.
-Configure your components and API endpoint, then run optimization.
+Configuration is loaded from gen_search_config.yml.
 
 Usage:
     python run_optimization.py
 """
 
+import os
+import sys
 from typing import List, Dict, Any, Optional
+
+# Add parent directory to path for config_loader import
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
 from genetic_algorithm import GeneticAlgorithm
 from config import GAConfig
 from rag_evaluator import RAGPipelineEvaluator
 from selection import TournamentSelection, RouletteWheelSelection, EliteSelection
 from crossover import SinglePointCrossover, UniformCrossover, MultiPointCrossover
 from mutation import RandomMutation, AdaptiveMutation, CategoricalMutation
+
+
+def load_yaml_config():
+    """Load configuration from gen_search_config.yml"""
+    try:
+        from config_loader import load_config, get_search_space_as_component_options, get_api_endpoint
+        config = load_config()
+        return config
+    except Exception as e:
+        print(f"⚠️ Could not load YAML config: {e}. Using defaults.")
+        return None
 
 
 def run_rag_optimization(
@@ -255,29 +272,47 @@ def get_production_config():
 
 def main():
     """
-    Main execution function. Customize this for your specific use case.
+    Main execution function. Configuration is loaded from gen_search_config.yml.
     """
     
     print("🧬 RAG Pipeline Genetic Algorithm Optimizer")
     print("=" * 50)
     
-    # =================================================================
-    # 🚨 CONFIGURE THIS SECTION FOR YOUR USE CASE
-    # =================================================================
+    # Load configuration from YAML file
+    yaml_config = load_yaml_config()
     
-    # 1. Your RAG evaluation API endpoint
-    API_ENDPOINT = "http://localhost:8080/api/evaluate"  # 👈 CHANGE THIS
+    if yaml_config is not None:
+        try:
+            from config_loader import get_search_space_as_component_options, get_api_endpoint
+            
+            # Get configuration from YAML
+            API_ENDPOINT = get_api_endpoint(yaml_config)
+            COMPONENTS = get_search_space_as_component_options(yaml_config)
+            
+            CONFIG = {
+                "population_size": yaml_config.genetic_algorithm.population_size,
+                "generations": yaml_config.genetic_algorithm.generations,
+                "crossover_rate": yaml_config.genetic_algorithm.crossover_rate,
+                "mutation_rate": yaml_config.genetic_algorithm.mutation_rate,
+                "elitism_count": yaml_config.genetic_algorithm.elitism_count,
+                "convergence_threshold": yaml_config.genetic_algorithm.convergence_threshold,
+                "target_fitness": yaml_config.genetic_algorithm.target_fitness * 100 if yaml_config.genetic_algorithm.target_fitness else None,  # Convert 0-1 to 0-100
+                "verbose": yaml_config.genetic_algorithm.verbose
+            }
+            
+            print(f"✅ Configuration loaded from gen_search_config.yml")
+        except Exception as e:
+            print(f"⚠️ Error parsing YAML config: {e}. Using fallback.")
+            API_ENDPOINT = "http://rag_pipeline:8060/api/evaluate"
+            COMPONENTS = get_comprehensive_rag_components()
+            CONFIG = get_production_config()
+    else:
+        # Fallback to hardcoded defaults
+        API_ENDPOINT = "http://rag_pipeline:8060/api/evaluate"
+        COMPONENTS = get_comprehensive_rag_components()
+        CONFIG = get_production_config()
     
-    # 2. Choose your component set (minimal for testing, comprehensive for production)
-    COMPONENTS = get_comprehensive_rag_components()  # or get_minimal_rag_components()
-    
-    # 3. Choose optimization configuration (quick for testing, production for real use)
-    CONFIG = get_production_config()  # or get_quick_config()
-    
-    # =================================================================
-    # RUN OPTIMIZATION
-    # =================================================================
-    
+    # Run optimization
     try:
         print(f"🎯 Starting optimization...")
         print(f"📡 API Endpoint: {API_ENDPOINT}")

@@ -4,20 +4,26 @@ RAG Pipeline Genetic Algorithm Optimization
 
 This script runs genetic algorithm optimization to find the best RAG pipeline
 configuration by communicating with the RAG evaluation API.
+
+Configuration is loaded from gen_search_config.yml in the project root.
 """
 
 import time
 import logging
 import os
+import sys
 from datetime import datetime
-from typing import Dict, Any
+from typing import Dict, Any, Optional
+
+# Add parent directory to path for config_loader import
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from genetic_algorithm import GeneticAlgorithm
 from config import GAConfig
 from rag_evaluator import RAGPipelineEvaluator
 from selection import TournamentSelection, RouletteWheelSelection, RankSelection, EliteSelection
-from crossover import UniformCrossover, SinglePointCrossover, MultiPointCrossover
-from mutation import AdaptiveMutation, RandomMutation, CategoricalMutation
+from crossover import UniformCrossover, SinglePointCrossover, MultiPointCrossover, SegmentCrossover
+from mutation import AdaptiveMutation, RandomMutation, CategoricalMutation, SwapMutation, InversionMutation
 
 # Configure logging
 logging.basicConfig(
@@ -27,12 +33,99 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def create_rag_evaluator(api_endpoint: str = "http://rag_pipeline:8060/api/evaluate") -> RAGPipelineEvaluator:
+def load_yaml_config():
+    """Load configuration from gen_search_config.yml"""
+    try:
+        from config_loader import load_config
+        config = load_config()
+        logger.info("✅ Loaded configuration from gen_search_config.yml")
+        return config
+    except Exception as e:
+        logger.warning(f"⚠️ Could not load YAML config: {e}. Using defaults.")
+        return None
+
+
+def create_selection_method(config):
+    """Create selection method from YAML config."""
+    if config is None:
+        return TournamentSelection(tournament_size=3)
+    
+    selection_config = config.genetic_algorithm.selection
+    method = selection_config.method.lower()
+    
+    if method == "tournament":
+        return TournamentSelection(tournament_size=selection_config.tournament_size)
+    elif method == "roulette_wheel":
+        return RouletteWheelSelection()
+    elif method == "rank":
+        return RankSelection(selection_pressure=selection_config.selection_pressure)
+    elif method == "elite":
+        return EliteSelection()
+    else:
+        logger.warning(f"Unknown selection method: {method}. Using tournament.")
+        return TournamentSelection(tournament_size=3)
+
+
+def create_crossover_method(config):
+    """Create crossover method from YAML config."""
+    if config is None:
+        return UniformCrossover(probability=0.6)
+    
+    crossover_config = config.genetic_algorithm.crossover
+    method = crossover_config.method.lower()
+    
+    if method == "single_point":
+        return SinglePointCrossover()
+    elif method == "multi_point":
+        return MultiPointCrossover(num_points=crossover_config.num_points)
+    elif method == "uniform":
+        return UniformCrossover(probability=crossover_config.probability)
+    elif method == "segment":
+        return SegmentCrossover(num_segments=crossover_config.num_segments)
+    else:
+        logger.warning(f"Unknown crossover method: {method}. Using uniform.")
+        return UniformCrossover(probability=0.5)
+
+
+def create_mutation_method(config):
+    """Create mutation method from YAML config."""
+    if config is None:
+        return AdaptiveMutation(base_mutation_rate=0.1)
+    
+    mutation_config = config.genetic_algorithm.mutation
+    method = mutation_config.method.lower()
+    ga_config = config.genetic_algorithm
+    
+    if method == "random":
+        return RandomMutation(mutation_rate=ga_config.mutation_rate)
+    elif method == "adaptive":
+        return AdaptiveMutation(
+            base_mutation_rate=mutation_config.base_mutation_rate,
+            min_mutation_rate=mutation_config.min_mutation_rate,
+            max_mutation_rate=mutation_config.max_mutation_rate
+        )
+    elif method == "categorical":
+        return CategoricalMutation(
+            mutation_rate=ga_config.mutation_rate,
+            force_change=mutation_config.force_change,
+            multi_gene_probability=mutation_config.multi_gene_probability
+        )
+    elif method == "swap":
+        return SwapMutation(mutation_rate=ga_config.mutation_rate)
+    elif method == "inversion":
+        return InversionMutation(mutation_rate=ga_config.mutation_rate)
+    else:
+        logger.warning(f"Unknown mutation method: {method}. Using adaptive.")
+        return AdaptiveMutation(base_mutation_rate=0.1)
+
+
+def create_rag_evaluator(api_endpoint: str = None, yaml_config = None) -> RAGPipelineEvaluator:
     """
     Create and configure the RAG pipeline evaluator with real API endpoint and persistent caching.
     
     Args:
-        api_endpoint: URL of the RAG evaluation API
+        api_endpoint: URL of the RAG evaluation API (optional, overrides YAML config)
+        yaml_config: Optional pre-loaded YAML config object
         
     Returns:
         Configured RAGPipelineEvaluator instance with persistent cache
@@ -40,17 +133,34 @@ def create_rag_evaluator(api_endpoint: str = "http://rag_pipeline:8060/api/evalu
     # Get cache file path from environment or use default
     cache_file_path = os.environ.get("CACHE_FILE_PATH", "/app/results/rag_evaluation_cache.json")
     
+    # Determine API endpoint
+    if api_endpoint is None and yaml_config is not None:
+        from config_loader import get_api_endpoint
+        api_endpoint = get_api_endpoint(yaml_config)
+    elif api_endpoint is None:
+        api_endpoint = "http://rag_pipeline:8060/api/evaluate"
+    
+    # Get timeout from YAML config
+    timeout = 12000
+    if yaml_config is not None:
+        timeout = yaml_config.api.timeout
+    
     # Create evaluator with real API endpoint and persistent caching enabled
+    # Search space will be loaded from YAML config automatically
     evaluator = RAGPipelineEvaluator(
         api_endpoint=api_endpoint,
-        timeout=12000,  # 12 seconds timeout for RAG evaluation
+        timeout=timeout,
         max_retries=5,   # Increased retries for robustness
         enable_cache=True,  # Enable caching for efficiency
         cache_file_path=cache_file_path,  # Persistent cache file
-        auto_save_cache=True  # Auto-save cache after each evaluation
+        auto_save_cache=True,  # Auto-save cache after each evaluation
+        use_yaml_config=True  # Load search space from YAML
     )
     
-    logger.info(f"🔧 RAG Evaluator configured with persistent cache: {cache_file_path}")
+    logger.info(f"🔧 RAG Evaluator configured:")
+    logger.info(f"   API Endpoint: {api_endpoint}")
+    logger.info(f"   Timeout: {timeout}s")
+    logger.info(f"   Cache File: {cache_file_path}")
     
     return evaluator
 
@@ -235,12 +345,14 @@ This optimization explored the following RAG pipeline components:
         return ""
 
 
-def run_rag_optimization_basic(api_endpoint: str = "http://rag_pipeline:8060/api/evaluate") -> Dict[str, Any]:
+def run_rag_optimization_basic(api_endpoint: str = None) -> Dict[str, Any]:
     """
     Run basic RAG pipeline optimization using genetic algorithm.
     
+    Configuration is loaded from gen_search_config.yml.
+    
     Args:
-        api_endpoint: URL of the RAG evaluation API
+        api_endpoint: URL of the RAG evaluation API (optional, overrides YAML config)
         
     Returns:
         Optimization results
@@ -248,27 +360,58 @@ def run_rag_optimization_basic(api_endpoint: str = "http://rag_pipeline:8060/api
     logger.info("🚀 Starting RAG Pipeline Optimization with Genetic Algorithm")
     logger.info("=" * 70)
     
-    # Create RAG evaluator
-    evaluator = create_rag_evaluator(api_endpoint)
+    # Load YAML configuration
+    yaml_config = load_yaml_config()
+    
+    # Create RAG evaluator (will load search space from YAML)
+    evaluator = create_rag_evaluator(api_endpoint, yaml_config)
     category_sizes = calculate_category_sizes(evaluator)
     
-    # Configure genetic algorithm
-    config = GAConfig(
-        category_sizes=category_sizes,
-        population_size=20,           # Smaller population for faster testing
-        generations=3,               # Fewer generations for initial testing
-        crossover_rate=0.8,
-        mutation_rate=0.1,
-        elitism_count=3,
-        selection_method=TournamentSelection(tournament_size=3),
-        crossover_method=UniformCrossover(probability=0.6),
-        mutation_method=AdaptiveMutation(base_mutation_rate=0.1),
-        convergence_threshold=5,      # Stop if no improvement for 5 generations
-        target_fitness=0.95,          # Stop if we reach 95% fitness
-        verbose=True,
-        track_statistics=True,
-        random_seed=42
-    )
+    # Get API endpoint for logging
+    if api_endpoint is None and yaml_config is not None:
+        from config_loader import get_api_endpoint
+        api_endpoint = get_api_endpoint(yaml_config)
+    elif api_endpoint is None:
+        api_endpoint = "http://rag_pipeline:8060/api/evaluate"
+    
+    # Configure genetic algorithm from YAML or use basic defaults
+    if yaml_config is not None:
+        ga_cfg = yaml_config.genetic_algorithm
+        # For basic mode, use smaller values
+        config = GAConfig(
+            category_sizes=category_sizes,
+            population_size=min(20, ga_cfg.population_size),
+            generations=min(3, ga_cfg.generations),
+            crossover_rate=ga_cfg.crossover_rate,
+            mutation_rate=ga_cfg.mutation_rate,
+            elitism_count=min(3, ga_cfg.elitism_count),
+            selection_method=create_selection_method(yaml_config),
+            crossover_method=create_crossover_method(yaml_config),
+            mutation_method=create_mutation_method(yaml_config),
+            convergence_threshold=min(5, ga_cfg.convergence_threshold),
+            target_fitness=0.95,
+            verbose=ga_cfg.verbose,
+            track_statistics=ga_cfg.track_statistics,
+            random_seed=ga_cfg.random_seed
+        )
+    else:
+        # Fallback to hardcoded defaults
+        config = GAConfig(
+            category_sizes=category_sizes,
+            population_size=20,
+            generations=3,
+            crossover_rate=0.8,
+            mutation_rate=0.1,
+            elitism_count=3,
+            selection_method=TournamentSelection(tournament_size=3),
+            crossover_method=UniformCrossover(probability=0.6),
+            mutation_method=AdaptiveMutation(base_mutation_rate=0.1),
+            convergence_threshold=5,
+            target_fitness=0.95,
+            verbose=True,
+            track_statistics=True,
+            random_seed=42
+        )
     
     logger.info(f"Configuration:")
     logger.info(f"  Population size: {config.population_size}")
@@ -354,12 +497,14 @@ def run_rag_optimization_basic(api_endpoint: str = "http://rag_pipeline:8060/api
         raise
 
 
-def run_rag_optimization_comprehensive(api_endpoint: str = "http://rag_pipeline:8060/api/evaluate") -> Dict[str, Any]:
+def run_rag_optimization_comprehensive(api_endpoint: str = None) -> Dict[str, Any]:
     """
     Run comprehensive RAG pipeline optimization with larger population and more generations.
     
+    Configuration is loaded from gen_search_config.yml.
+    
     Args:
-        api_endpoint: URL of the RAG evaluation API
+        api_endpoint: URL of the RAG evaluation API (optional, overrides YAML config)
         
     Returns:
         Optimization results
@@ -367,32 +512,61 @@ def run_rag_optimization_comprehensive(api_endpoint: str = "http://rag_pipeline:
     logger.info("🚀 Starting COMPREHENSIVE RAG Pipeline Optimization")
     logger.info("=" * 70)
     
-    # Create RAG evaluator
-    evaluator = create_rag_evaluator(api_endpoint)
+    # Load YAML configuration
+    yaml_config = load_yaml_config()
+    
+    # Create RAG evaluator (will load search space from YAML)
+    evaluator = create_rag_evaluator(api_endpoint, yaml_config)
     category_sizes = calculate_category_sizes(evaluator)
     
-    # Configure genetic algorithm for comprehensive search
-    config = GAConfig(
-        category_sizes=category_sizes,
-        population_size=16,           # Larger population
-        generations=20,               # More generations
-        crossover_rate=0.8,
-        mutation_rate=0.08,           # Lower mutation rate for convergence
-        elitism_count=5,              # Keep more elite individuals
-        # selection_method=TournamentSelection(tournament_size=4),
-        selection_method=EliteSelection(),
-        crossover_method=UniformCrossover(probability=0.6),
-        mutation_method=AdaptiveMutation(
-            base_mutation_rate=0.08,
-            min_mutation_rate=0.01,
-            max_mutation_rate=0.2
-        ),
-        convergence_threshold=100,     # More patience for convergence
-        target_fitness=1.0,          # Higher target
-        verbose=True,
-        track_statistics=True,
-        random_seed=42
-    )
+    # Get API endpoint for logging
+    if api_endpoint is None and yaml_config is not None:
+        from config_loader import get_api_endpoint
+        api_endpoint = get_api_endpoint(yaml_config)
+    elif api_endpoint is None:
+        api_endpoint = "http://rag_pipeline:8060/api/evaluate"
+    
+    # Configure genetic algorithm from YAML config
+    if yaml_config is not None:
+        ga_cfg = yaml_config.genetic_algorithm
+        config = GAConfig(
+            category_sizes=category_sizes,
+            population_size=ga_cfg.population_size,
+            generations=ga_cfg.generations,
+            crossover_rate=ga_cfg.crossover_rate,
+            mutation_rate=ga_cfg.mutation_rate,
+            elitism_count=ga_cfg.elitism_count,
+            selection_method=create_selection_method(yaml_config),
+            crossover_method=create_crossover_method(yaml_config),
+            mutation_method=create_mutation_method(yaml_config),
+            convergence_threshold=ga_cfg.convergence_threshold,
+            target_fitness=ga_cfg.target_fitness,
+            verbose=ga_cfg.verbose,
+            track_statistics=ga_cfg.track_statistics,
+            random_seed=ga_cfg.random_seed
+        )
+    else:
+        # Fallback to hardcoded defaults for comprehensive search
+        config = GAConfig(
+            category_sizes=category_sizes,
+            population_size=16,
+            generations=20,
+            crossover_rate=0.8,
+            mutation_rate=0.08,
+            elitism_count=5,
+            selection_method=EliteSelection(),
+            crossover_method=UniformCrossover(probability=0.6),
+            mutation_method=AdaptiveMutation(
+                base_mutation_rate=0.08,
+                min_mutation_rate=0.01,
+                max_mutation_rate=0.2
+            ),
+            convergence_threshold=100,
+            target_fitness=1.0,
+            verbose=True,
+            track_statistics=True,
+            random_seed=42
+        )
     
     logger.info(f"Configuration:")
     logger.info(f"  Population size: {config.population_size}")
@@ -500,29 +674,40 @@ def run_rag_optimization_comprehensive(api_endpoint: str = "http://rag_pipeline:
 
 def main():
     """Main entry point for RAG optimization."""
-    import sys
     
     if len(sys.argv) > 1:
         arg = sys.argv[1]
         
-        # API endpoint (can be overridden)
-        api_endpoint = "http://rag_pipeline:8060/api/evaluate"
+        # API endpoint can be overridden via command line (optional)
+        api_endpoint = None
         if len(sys.argv) > 2:
             api_endpoint = sys.argv[2]
         
+        # Load YAML config for display
+        yaml_config = load_yaml_config()
+        
         if arg == "--basic":
             logger.info("Running BASIC RAG optimization...")
+            if yaml_config:
+                logger.info(f"📁 Dataset: {yaml_config.dataset.path}")
             results = run_rag_optimization_basic(api_endpoint)
             
         elif arg == "--comprehensive":
             logger.info("Running COMPREHENSIVE RAG optimization...")
+            if yaml_config:
+                logger.info(f"📁 Dataset: {yaml_config.dataset.path}")
+                logger.info(f"🧬 Population: {yaml_config.genetic_algorithm.population_size}")
+                logger.info(f"🔄 Generations: {yaml_config.genetic_algorithm.generations}")
             results = run_rag_optimization_comprehensive(api_endpoint)
             
         elif arg == "--test":
             # Quick test to verify API connectivity
             logger.info("Testing API connectivity...")
-            evaluator = create_rag_evaluator(api_endpoint)
-            test_candidate = [0, 0, 0, 0, 0, 0, 0, 0, 1, 0]  # Simple test configuration
+            evaluator = create_rag_evaluator(api_endpoint, yaml_config)
+            
+            # Create test candidate with first option from each category
+            num_categories = len(evaluator.component_categories)
+            test_candidate = [0] * num_categories
             
             try:
                 score = evaluator.evaluate(test_candidate)
@@ -539,29 +724,64 @@ def main():
                 logger.error(f"❌ API test failed: {e}")
                 logger.error("Make sure the RAG pipeline server is running:")
                 logger.error("  python main.py --server")
+        
+        elif arg == "--show-config":
+            # Display current configuration
+            if yaml_config:
+                print("\n🔧 Current Configuration (from gen_search_config.yml)")
+                print("=" * 60)
+                print(f"\n📁 Dataset: {yaml_config.dataset.path}")
+                print(f"\n🌐 API:")
+                print(f"   Host: {yaml_config.api.host}")
+                print(f"   Port: {yaml_config.api.port}")
+                print(f"   Timeout: {yaml_config.api.timeout}s")
+                print(f"\n🧬 Genetic Algorithm:")
+                ga = yaml_config.genetic_algorithm
+                print(f"   Population Size: {ga.population_size}")
+                print(f"   Generations: {ga.generations}")
+                print(f"   Crossover Rate: {ga.crossover_rate}")
+                print(f"   Mutation Rate: {ga.mutation_rate}")
+                print(f"   Elitism Count: {ga.elitism_count}")
+                print(f"   Selection Method: {ga.selection.method}")
+                print(f"   Crossover Method: {ga.crossover.method}")
+                print(f"   Mutation Method: {ga.mutation.method}")
+                print(f"\n🔍 Search Space:")
+                from config_loader import get_search_space_as_component_options, get_category_sizes
+                options = get_search_space_as_component_options(yaml_config)
+                sizes = get_category_sizes(yaml_config)
+                for category, opts in options.items():
+                    print(f"   {category}: {len(opts)} options")
+                total = 1
+                for s in sizes:
+                    total *= s
+                print(f"\n📊 Total Combinations: {total:,}")
+            else:
+                print("❌ Could not load configuration from gen_search_config.yml")
                 
         else:
             print("Usage:")
             print("  python run.py --test [api_endpoint]         # Test API connectivity")
             print("  python run.py --basic [api_endpoint]        # Basic optimization (fast)")
             print("  python run.py --comprehensive [api_endpoint] # Comprehensive optimization (slow)")
+            print("  python run.py --show-config                 # Display current configuration")
             print("")
-            print("Default API endpoint: http://rag_pipeline:8060/api/evaluate")
+            print("Configuration is loaded from gen_search_config.yml")
+            print("API endpoint can optionally be overridden via command line.")
             print("")
             print("Examples:")
             print("  python run.py --test")
-            print("  python run.py --basic")
+            print("  python run.py --show-config")
             print("  python run.py --comprehensive")
-            print("  python run.py --basic http://rag_pipeline:8060/api/evaluate")
     else:
         print("🧬 RAG Pipeline Genetic Algorithm Optimization")
         print("=" * 50)
+        print("Configuration is loaded from gen_search_config.yml")
+        print("")
         print("Usage:")
         print("  python run.py --test [api_endpoint]         # Test API connectivity")
         print("  python run.py --basic [api_endpoint]        # Basic optimization (fast)")
         print("  python run.py --comprehensive [api_endpoint] # Comprehensive optimization (slow)")
-        print("")
-        print("Default API endpoint: http://rag_pipeline:8060/api/evaluate")
+        print("  python run.py --show-config                 # Display current configuration")
         print("")
         print("Make sure the RAG pipeline server is running:")
         print("  python main.py --server")
